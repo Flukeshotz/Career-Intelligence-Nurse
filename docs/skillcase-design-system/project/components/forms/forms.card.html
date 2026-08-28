@@ -1,0 +1,24 @@
+<!-- @dsCard group="Components" viewport="700x300" name="Forms — input, tooltip, help" subtitle="Input field types and states, tooltip arrows, payment icons" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script>document.write('<script src="../../_ds_bundle.js?v='+Date.now()+'"><\/script>')</script>
+<style>body{margin:0;padding:16px;background:#fff;font-family:var(--sc-font-ui)}.row{display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap}.col{display:flex;flex-direction:column;gap:12px;width:300px}.lbl{font-size:10px;color:var(--sc-ink-400);text-transform:uppercase;letter-spacing:.04em}</style></head>
+<body><div id="root"></div><script type="text/babel">
+const { InputField, Tooltip, HelpIcon, PaymentMethodIcon } = window.SkillcaseDesignSystem_a27963;
+const App = () => (<div className="row">
+  <div className="col"><span className="lbl">Input field</span>
+    <InputField size="md" state="placeholder" text1="Email" text3="you@hospital.de"/>
+    <InputField size="md" state="filled" text1="Email" text3="anna@charite.de"/>
+    <InputField size="md" state="disabled" text1="Email"/>
+    <InputField size="md" destructive={true} text1="Email" text4="Enter a valid address."/>
+  </div>
+  <div className="col"><span className="lbl">Tooltip / help / payment</span>
+    <Tooltip/>
+    <HelpIcon/>
+    <div style={{display:'flex',gap:8}}><PaymentMethodIcon size="md"/><PaymentMethodIcon size="sm"/></div>
+  </div>
+</div>);
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script></body></html>

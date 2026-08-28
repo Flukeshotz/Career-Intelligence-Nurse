@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Select screen" description="The row-select skeleton: back bar, optional hero, ListRow list, optional gate. Explains 10+ audited surfaces including the A1/A2 fork." -->
+<helmet>
+<script src="./ds-base.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box}body{margin:0;background:#f4f5f7}</style>
+</helmet>
+<div style="width:390px;height:780px;margin:0 auto;display:flex;flex-direction:column;background:#fff;overflow:hidden;position:relative;font-family:'Poppins',sans-serif">
+
+  <div style="align-self:stretch;padding:10px 16px;background:#fff;flex:none">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <button type="button" style="display:inline-flex;align-items:center;gap:8px;background:none;border:0;padding:2px;cursor:pointer;font:inherit;outline:none;border-radius:6px" style-focus="box-shadow:0 0 0 2px #fff,0 0 0 4px #002856">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f172a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+        <span style="color:#0f172a;font-size:14px;font-weight:600;line-height:24px">Back</span>
+      </button>
+      <span style="color:#535862;font-size:14px;font-weight:600;line-height:24px">{{ section }}</span>
+    </div>
+  </div>
+
+  <div style="flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:16px;padding:0 0 24px">
+
+    <sc-if value="{{ showHero }}" hint-placeholder-val="{{ true }}">
+      <div style="padding:8px 16px 0">
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:6px">
+          <h1 style="margin:0;font-size:30px;line-height:38px;font-weight:600;color:#002856">A1</h1>
+          <span style="font-size:16px;font-weight:600;color:#002856">German Language Level</span>
+        </div>
+        <p style="margin:0;font-size:12px;color:#000;opacity:.7">Continue your German learning journey</p>
+      </div>
+    </sc-if>
+
+    <div style="padding:0 16px;display:flex;flex-direction:column;gap:6px">
+      <h2 style="margin:0;color:#082f49;font-size:16px;font-weight:600;line-height:20px">{{ heading }}</h2>
+      <p style="margin:0;color:#535862;font-size:12px;line-height:18px">{{ subheading }}</p>
+    </div>
+
+    <div style="padding:0 16px;display:flex;flex-direction:column;gap:10px">
+      <sc-for list="{{ rows }}" as="row" hint-placeholder-count="5">
+        <x-import component-from-global-scope="SkillcaseDesignSystem_a27963.ListRow" title="{{ row.title }}" hover="{{ row.hover }}" disabled="{{ row.locked }}" hint-size="100%,68px">
+          <div style="display:flex;align-items:center;gap:6px;margin-top:2px">
+            <span style="padding:2px 8px;background:rgba(0,0,0,.05);border-radius:40px;color:#535862;font-size:11px;font-weight:500">{{ row.level }}</span>
+            <span style="color:#535862;font-size:11px">{{ row.meta }}</span>
+          </div>
+        </x-import>
+      </sc-for>
+    </div>
+
+    <sc-if value="{{ showGate }}" hint-placeholder-val="{{ true }}">
+      <div style="margin:8px 16px 0;padding:16px;background:rgba(0,0,0,.05);border-radius:12px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#535862" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg>
+        <span style="color:#082f49;font-size:13px;font-weight:600;line-height:18px">{{ gateTitle }}</span>
+        <span style="color:#535862;font-size:11.5px;line-height:17px">{{ gateBody }}</span>
+        <button type="button" style="margin-top:2px;min-height:44px;padding:10px 20px;border-radius:8px;border:0;background:#edb843;color:#002856;font-size:13px;font-weight:600;font-family:inherit;cursor:pointer;outline:none" style-focus="box-shadow:0 0 0 2px #fff,0 0 0 4px #002856">{{ gateCta }}</button>
+      </div>
+    </sc-if>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390,&quot;height&quot;:780},&quot;section&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Exam papers&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;chaptered&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Structure&quot;},&quot;showHero&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Structure&quot;},&quot;hoverTreatment&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;lift&quot;,&quot;border&quot;],&quot;default&quot;:&quot;lift&quot;,&quot;tsType&quot;:&quot;'lift' | 'border'&quot;,&quot;section&quot;:&quot;Structure&quot;},&quot;lockLastRows&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:2,&quot;min&quot;:0,&quot;max&quot;:5,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Structure&quot;},&quot;showGate&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Gate&quot;},&quot;heading&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Choose a paper&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;subheading&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Tap any row to begin.&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const chaptered = this.props.chaptered ?? false;
+    const hover = this.props.hoverTreatment ?? 'lift';
+    const lockLast = this.props.lockLastRows ?? 2;
+    const base = chaptered
+      ? [
+          { title: 'Chapter 1 — Begrüßung', level: 'A1', meta: '8/8 done' },
+          { title: 'Chapter 2 — Familie', level: 'A1', meta: '5/8 done' },
+          { title: 'Chapter 3 — Im Café', level: 'A1', meta: '0/8 done' },
+          { title: 'Chapter 4 — Einkaufen', level: 'A1', meta: 'Locked' },
+          { title: 'Chapter 5 — Wohnen', level: 'A1', meta: 'Locked' },
+        ]
+      : [
+          { title: 'TELC B1 — Modelltest 3', level: 'B1', meta: 'Medium · 4 sections' },
+          { title: 'Goethe B1 — Übungssatz 01', level: 'B1', meta: 'Easy · 4 sections' },
+          { title: 'TELC B1 — Modelltest 4', level: 'B1', meta: 'Hard · 4 sections' },
+          { title: 'Goethe B1 — Übungssatz 02', level: 'B1', meta: 'Medium · 4 sections' },
+          { title: 'TELC B1 — Modelltest 5', level: 'B1', meta: 'Medium · 4 sections' },
+        ];
+    const n = base.length;
+    return {
+      section: this.props.section ?? 'Exam papers',
+      heading: this.props.heading ?? (chaptered ? 'Chapters' : 'Choose a paper'),
+      subheading: this.props.subheading ?? 'Tap any row to begin.',
+      showHero: this.props.showHero ?? chaptered,
+      showGate: this.props.showGate ?? false,
+      gateTitle: this.props.gateTitle ?? 'Daily free limit reached',
+      gateBody: this.props.gateBody ?? 'You have used all 3 free attempts today. Upgrade for unlimited practice.',
+      gateCta: this.props.gateCta ?? 'Upgrade',
+      rows: base.map((r, i) => ({ ...r, hover, locked: i >= n - lockLast })),
+    };
+  }
+}
+</script>
+</body>
+</html>

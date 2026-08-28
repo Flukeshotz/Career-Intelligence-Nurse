@@ -1,0 +1,69 @@
+<!-- @dsCard group="App" viewport="390x844" name="Onboarding — level & occupation" subtitle="Maya bubble, lettered choices with Recommended badge, gold Next / white Back" -->
+<!doctype html><html><head><meta charset="utf-8"><title>Skillcase — onboarding</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script>document.write('<script src="../../_ds_bundle.js?v='+Date.now()+'"><\/script>')</script>
+<style>html,body{margin:0;background:#fff}#root{width:390px;height:844px;overflow:hidden}*{-webkit-font-smoothing:antialiased}button:active{transform:scale(.995)}
+/* SD-003 — focus ring at the kit layer. The token is validated for both themes. */
+button:focus-visible,a:focus-visible,[tabindex]:focus-visible{box-shadow:var(--ui-focus-ring);outline:none;border-radius:inherit}
+</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const NS = () => window.SkillcaseDesignSystem_a27963 || {};
+const A = '../../assets/img/';
+
+const STEPS = [
+  { q: 'What is your current German level?', bubble: 'What is your current German level?', label: 'Select your German level', options: [
+    ['A', 'A1 - Beginner', '(I know a few words)'],
+    ['B', 'A2 - Elementary', '(I understand basic sentences)'],
+    ['C', 'B1 - Intermediate', '(I can have simple conversations)'],
+    ['D', 'B2 - Upper Intermediate', '(I can speak fairly confidently)'],
+  ]},
+  { q: 'What do you do?', bubble: 'What do you do?', label: 'Select your current occupation', options: [
+    ['A', 'Student (learning nursing)'],
+    ['B', 'Professional nurse'],
+    ['C', 'Healthcare support staff'],
+    ['D', 'Other'],
+  ]},
+  { q: 'Select your preference', bubble: 'Wonderful! You already know some German. Would you like to practice German or continue learning it.', label: 'Select your preference', options: [
+    ['A', 'Practice my German', null, 'Recommended'],
+    ['B', 'Continue learning German'],
+  ]},
+];
+
+function App(){
+  const { ChoiceRow, MayaBubble } = NS();
+  const [step, setStep] = React.useState(0);
+  const [picked, setPicked] = React.useState({});
+  if (!ChoiceRow) return <div style={{padding:24,fontSize:13,color:'#717680'}}>Loading design system…</div>;
+  const s = STEPS[step];
+  const sel = picked[step];
+  return (<div style={{width:390,height:844,display:'flex',flexDirection:'column',overflow:'hidden',background:'linear-gradient(180deg,#CFE3FF 0%,#E4EFFF 100%)',fontFamily:"'Poppins',sans-serif"}}>
+    <div style={{height:72,background:'#fff',borderBottom:'1px solid #EFEFEF',display:'flex',alignItems:'center',padding:'0 12px 0 16px',flex:'none'}}>
+      <span style={{width:119,height:17,background:'#083262',WebkitMaskImage:`url(../../assets/logo/skillcase-wordmark.svg)`,maskImage:`url(../../assets/logo/skillcase-wordmark.svg)`,WebkitMaskSize:'contain',maskSize:'contain',WebkitMaskRepeat:'no-repeat',maskRepeat:'no-repeat'}}/>
+    </div>
+    <div style={{padding:'14px 16px 8px',flex:'none'}}>
+      <MayaBubble text={s.bubble} image={A+'maya/maya-wave-head.png'} avatarSize={120} bubbleWidth={190}/>
+    </div>
+    <div style={{flex:1,minHeight:0,background:'#fff',borderRadius:'24px 24px 0 0',padding:'24px 16px 32px',display:'flex',flexDirection:'column',justifyContent:'space-between'}}>
+      <div style={{display:'flex',flexDirection:'column',gap:16}}>
+        <span style={{fontWeight:500,fontSize:17,color:'#000'}}>{s.label}</span>
+        <div style={{display:'flex',flexDirection:'column',gap:8}}>
+          {s.options.map(([l,label,hint,badge])=>(
+            <ChoiceRow key={l} letter={l} label={label} hint={hint} badge={badge}
+              state={sel===l?'selected':'default'}
+              onClick={()=>setPicked(p=>({...p,[step]:l}))}/>
+          ))}
+        </div>
+      </div>
+      <div style={{display:'flex',flexDirection:'column',gap:10}}>
+        <button disabled={!sel} onClick={()=>setStep(n=>Math.min(STEPS.length-1,n+1))} style={{height:48,borderRadius:8,border:'none',background:sel?'#EDB843':'#E2E2E2',color:sel?'#083262':'rgba(24,29,39,.4)',fontFamily:"'Inter',sans-serif",fontWeight:600,fontSize:16,cursor:sel?'pointer':'default'}}>Next</button>
+        <button disabled={step===0} onClick={()=>setStep(n=>Math.max(0,n-1))} style={{height:48,borderRadius:8,background:'#fff',border:'1px solid #DBDBDB',color:step===0?'rgba(8,50,98,.35)':'#083262',fontFamily:"'Inter',sans-serif",fontWeight:600,fontSize:16,cursor:step===0?'default':'pointer'}}>Back</button>
+      </div>
+    </div>
+  </div>);
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script></body></html>

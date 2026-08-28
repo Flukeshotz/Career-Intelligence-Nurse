@@ -1,0 +1,164 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Closing the coverage gap</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+:root{--ink:#002856;--mute:#5b6472;--line:#dfe5ec;--navy:#002856;--gold:#eec139;--green:#166534;--rose:#b91c1c;--wash:#f6f8fb}
+*{box-sizing:border-box}
+html,body{margin:0;background:#fff;color:var(--ink);font-family:var(--font-family,system-ui,sans-serif);-webkit-font-smoothing:antialiased}
+body{max-width:1180px;margin:0 auto;padding:56px 40px 96px;font-size:15px;line-height:1.62}
+a{color:#1e5fbf}a:hover{color:#002856}
+h1{font-size:38px;line-height:1.12;letter-spacing:-.02em;margin:0 0 10px}
+.lede{font-size:17px;color:var(--mute);max-width:76ch;margin:0 0 8px;text-wrap:pretty}
+.stamp{font-size:12px;color:var(--mute);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;margin:26px 0 44px;display:flex;flex-wrap:wrap;gap:8px 26px}
+h2{font-size:13px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--navy);margin:56px 0 6px;padding-bottom:8px;border-bottom:2px solid var(--navy)}
+h2 .n{color:var(--gold);margin-right:10px}
+h3{font-size:20px;margin:34px 0 4px;letter-spacing:-.01em}
+h4{font-size:14px;margin:22px 0 2px;color:var(--navy)}
+h3 code{font-size:15px;background:var(--wash);border:1px solid var(--line);border-radius:5px;padding:2px 7px;font-weight:600;color:var(--navy)}
+p{margin:10px 0;text-wrap:pretty}
+.note{font-size:14px;color:var(--mute);margin:2px 0 14px}
+table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:13px}
+th,td{text-align:left;vertical-align:top;padding:8px 11px;border-bottom:1px solid var(--line)}
+th{background:var(--wash);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);font-weight:700;white-space:nowrap}
+td code,p code,li code,dd code{background:var(--wash);border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:12px;color:var(--navy)}
+dl{margin:14px 0;display:grid;grid-template-columns:180px 1fr;gap:0}
+dl>dt{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--mute);font-weight:700;padding:9px 14px 9px 0;border-top:1px solid var(--line)}
+dl>dd{margin:0;padding:9px 0;border-top:1px solid var(--line)}
+dl>dt:first-of-type,dl>dd:first-of-type{border-top:none}
+.tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:99px;white-space:nowrap}
+.ok{background:#dcfce7;color:var(--green)}
+.gap{background:#fee2e2;color:var(--rose)}
+.part{background:#fef3c7;color:#92400e}
+.clar{background:#e0e7ff;color:#3730a3}
+.neu{background:#eef1f5;color:#414651}
+.callout{border-left:3px solid var(--gold);background:#fffdf5;padding:14px 18px;margin:20px 0;font-size:14px}
+.callout strong{color:var(--navy)}
+ul,ol{margin:10px 0;padding-left:22px}
+li{margin:5px 0;text-wrap:pretty}
+.flow{background:var(--wash);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:18px 0;font-size:14px;line-height:2}
+.flow b{color:var(--navy)}
+.flow .arrow{color:var(--gold);font-weight:700;padding:0 6px}
+.states{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12.5px;font-family:ui-monospace,monospace;color:var(--navy)}
+.states span{background:#fff;border:1px solid var(--line);border-radius:5px;padding:2px 8px}
+.states i{color:var(--gold);font-style:normal;font-weight:700}
+.verdict{border:2px solid var(--navy);border-radius:14px;padding:22px 26px;margin:24px 0}
+.verdict b{display:block;font-size:26px;letter-spacing:-.02em;color:var(--navy);margin-bottom:6px}
+</style></head><body>
+<h1>Closing the coverage gap</h1>
+<p class="lede">Phase 5. The four surfaces the consolidation report named as unvalidated — Profile, Content, Scholarship and A1/A2 content — traced against the code. The readiness answer was <em>ALMOST, and the boundary is the audit line</em>. This moves the line. It also overturns two things phase 4 asserted.</p>
+<div class="stamp"><span><strong>Date</strong> 27 Aug 2026</span><span><strong>Surfaces traced</strong> 4 areas, ~40 files</span><span><strong>Components extracted</strong> 1</span><span><strong>New defects</strong> 4</span><span><strong>No screens built</strong></span></div>
+
+<h2><span class="n">0</span>What the gap was hiding</h2>
+<div class="callout">
+<p><strong>1. The most reused composition in the product was invisible for four phases.</strong> One list row — <code>w-full p-3 bg-white rounded-xl border border-zinc-200 flex gap-3</code> — carries exam select, paper select, describe-speak topics, read &amp; listen topics and sources, video courses, video lists and notes. <strong>Ten-plus surfaces across six features.</strong> Every prior audit walked past it because within any one surface it reads as "that screen's list". It only became visible when Content was traced and the identical markup turned up in features with nothing else in common. Now extracted as <code>ListRow</code>.</p>
+<p><strong>2. Scholarship is not an exam variant — it is a proctored assessment system.</strong> Tab-switch detection, a three-strike violation counter that auto-closes the attempt, a <em>server-authoritative</em> timer polled by heartbeat, one attempt only, and results withheld until an administrator releases them. Nothing else in SkillCase does any of this. Phase 4 listed System C as "unknown" and guessed it was a funnel reusing the shell. That guess was wrong in kind, not just in detail.</p>
+<p><strong>3. Profile is not a profile.</strong> It is a 1,753-line screen with two tabs, and the second one calls <code>jobScreeningApi</code> — the job pipeline's document endpoints. Document upload, PDF preview and deletion live in <em>both</em> the pipeline and the account area against the same backend. <code>UploadRow</code> and <code>DocumentReader</code> are therefore cross-system components that the system had filed under Jobs.</p>
+<p><strong>4. "Content" is not a system.</strong> Video courses, news/read-listen, notes and short stories share a list row and a gate hook and nothing else — no shared model, no shared progress concept, no shared result. Phase 4 declined to promote Content for lack of evidence. The evidence now exists and it says the same thing: <strong>do not promote it.</strong></p>
+</div>
+
+<h2><span class="n">1</span>Scholarship — the system nobody had read</h2>
+<p><code>pages/scholarship/</code> is three files: <code>ScholarshipHome</code>, <code>ScholarshipExamPage</code>, <code>ScholarshipResult</code>. The behaviour in the middle one has no precedent anywhere else in the product.</p>
+<h4>Proctoring</h4>
+<dl>
+<dt>Violation detection</dt><dd><code>visibilitychange</code> on web (the comment notes native uses a different event, and that registering both would double-count). Leaving the exam screen fires <code>triggerWarning("Left the exam screen", awayMs)</code>.</dd>
+<dt>Strike model</dt><dd>Server-counted. <code>recordWarning</code> returns the authoritative <code>warning_count</code>; at 3 the client calls <code>handleAutoSubmit("warnings")</code> and the attempt closes with status <code>auto_warnings</code>.</dd>
+<dt>Warning surface</dt><dd>A modal with three dots that fill red as strikes accrue, and the line "{3 − n} warning(s) remaining". Strikes survive a reload — the modal reappears on mount if <code>warning_count &gt; 0</code>.</dd>
+<dt>Timer</dt><dd><strong>Server-authoritative.</strong> A local countdown for display, reconciled against <code>getTimeRemaining</code>; a <code>expired</code> flag in any response force-submits. This is materially stronger than the B1 exams' <code>localStorage</code> expiry timestamp.</dd>
+<dt>Urgency</dt><dd><code>isUrgent = remainingSeconds &lt; 300</code>. <strong>The scholarship exam has the time-remaining feedback the B1 exams lack</strong> — the phase 3 report proposed it as a design gap; it already exists, five minutes out, in the system nobody had read.</dd>
+</dl>
+<h4>States, and why they are new</h4>
+<div class="states"><span>not_started</span><i>·</i><span>in_progress</span><i>·</i><span>completed — results withheld</span><i>·</i><span>completed — released</span><i>·</i><span>warned_out</span><i>·</i><span>auto_closed</span><i>·</i><span>blocked</span></div>
+<p>Four of those have no equivalent elsewhere. <strong>"Results awaited"</strong> is a completed assessment whose score exists and is deliberately not shown — the product's only instance of a withheld result. <strong>warned_out / auto_closed</strong> is a terminal failure state reached by conduct rather than performance, with an admin-contact hint and no retry. And the hub expresses all of them through the mascot — <code>mayaWave</code>, <code>mayaSmiling</code>, <code>mayaThumbsup</code>, <code>mayaSad</code> — which is the first evidence in the product of <strong>Maya carrying state</strong> rather than instruction.</p>
+<div class="callout"><p><strong>Consequence for the system.</strong> The three-exam architecture (D-010) is confirmed and strengthened: System C shares primitives with A and B and nothing above them, exactly as recorded. But the reason is now known rather than assumed — it is a proctored, one-attempt, externally-released assessment, which is a different product from a practice paper. The Maya-as-state finding also reopens the mascot question (D-014) with new evidence: there are now four registers, not three.</p></div>
+
+<h2><span class="n">2</span>Profile — two products in one file</h2>
+<p>1,753 lines, two tabs, and a domain nobody had written down.</p>
+<table>
+<tr><th>Tab</th><th>Contains</th><th>System it belongs to</th></tr>
+<tr><td><code>profile</code></td><td>Avatar upload, personal details, <strong>qualification / experience / gender</strong> enums, plan card (Premium / Trial with days-left / Free), transactions link, logout</td><td>Account + Payments</td></tr>
+<tr><td><code>documents</code></td><td>Resume and certificate upload (PDF only), additional documents (PDF/DOC/DOCX/PNG/JPG), in-app PDF preview via <code>react-pdf</code>, delete — all against <code>jobScreeningApi</code></td><td><strong>Jobs</strong></td></tr>
+</table>
+<p>The qualification list — GNM Nursing, BSc Nursing, Post Basic BSc, MSc, ANM, Physiotherapist, Doctors, Pharmacists, Dentists — is the clearest statement of the product's actual audience found in any file so far. <strong>SkillCase is a German-language and placement product for Indian healthcare professionals.</strong> That was implicit in the job pipeline; here it is an enum.</p>
+<h4>Findings</h4>
+<ul>
+<li><strong>Document handling is cross-system.</strong> <code>UploadRow</code>, <code>DocumentReader</code> and the upload/preview/delete triple serve both the pipeline and the account area against one API. Reclassified from Jobs-only to cross-system in the component map.</li>
+<li><strong>The plan card is a fourth entitlement surface.</strong> Premium / Trial-with-days-left / Free-with-upsell. It overlaps <code>PlanSummaryCard</code> and <code>FeatureStatusChip</code> without using either. <span class="tag part">Investigate</span></li>
+<li><strong><code>CustomSelect</code> exists to avoid native OS dropdowns</strong> ("No OS native blue menus"). A deliberate product decision, and the system has no select component at all. <span class="tag gap">Genuine gap</span></li>
+<li><strong>Icon imports are defensive</strong> — <code>LucideIcons.FileCheck || LucideIcons.FileText || LucideIcons.File</code>, repeated fifteen times. Evidence that the icon set is unstable, which is DS-3 with a concrete cost.</li>
+</ul>
+
+<h2><span class="n">3</span>Content — four features, one row</h2>
+<table>
+<tr><th>Feature</th><th>Files</th><th>Model</th><th>Shares</th></tr>
+<tr><td>Video courses</td><td><code>CourseSelectPage</code>, <code>VideoListPage</code>, <code>VideoPlayerPage</code></td><td>Course → videos, per-video resume position, progress buckets, completion</td><td>ListRow, gate hook</td></tr>
+<tr><td>News / Read &amp; Listen</td><td><code>NewsHome</code>, <code>NewsPage</code>, <code>NewsArticleReader</code>, <code>VideoReader</code> + selects</td><td>Topic → article/video → comprehension questions → success</td><td>ListRow, TTS</td></tr>
+<tr><td>Notes</td><td><code>NotesListPage</code>, <code>NotePreviewPage</code></td><td>Flat list → preview</td><td>ListRow</td></tr>
+<tr><td>Short stories</td><td><code>ShortStoryHome</code>, <code>StoryPage</code></td><td>Story with its own progress bar</td><td>—</td></tr>
+</table>
+<p>No shared data model, no shared progress concept, no shared completion surface. The video player alone owns resume-position persistence, progress bucketing and a custom scrub bar that exist nowhere else.</p>
+<p><strong>Verdict: not a product system.</strong> It is four features that happen to be browsable. Promoting it would create an architecture with nothing inside it.</p>
+<h4>A second gating API</h4>
+<p>Content uses <code>useUsageLimitGate("ALL", "video_courses")</code>; the exams use <code>useUsageLimitModule("B1", "exams")</code>. Two hooks, two shapes, one concept. The system had seen only the second. <span class="tag part">Recorded as debt, not resolved</span></p>
+
+<h2><span class="n">4</span>A1/A2 content — the fork is total</h2>
+<p>Phase 1 found the ten <em>Select</em> screens were one template forked in two. The content screens are the same story at larger scale: six module types — flashcard, grammar, listening, reading, speaking, test — mirrored file-for-file across both levels, with <code>A1</code>/<code>A2</code> prefixes and shared hooks (<code>useTextToSpeech</code> from <code>pronounce/</code>).</p>
+<table>
+<tr><th>Module</th><th>A1</th><th>A2</th><th>Divergence</th></tr>
+<tr><td>Flashcard</td><td>Flashcard, Select, Quiz</td><td>Flashcard, Select, Quiz</td><td>Mirror</td></tr>
+<tr><td>Grammar</td><td>Explanation, Practice, Select</td><td>Explanation, Practice, Select</td><td>Mirror</td></tr>
+<tr><td>Listening</td><td>Content, Select</td><td>Content, Select</td><td>Mirror</td></tr>
+<tr><td>Reading</td><td>Reading, Select</td><td>Reading, Select</td><td>Mirror</td></tr>
+<tr><td>Speaking</td><td>Speaking, Select</td><td>Speaking, Select, <strong>+ hooks/</strong></td><td>A2 extracted its hooks; A1 did not</td></tr>
+<tr><td>Test</td><td>Level, Questions, Select — <strong>results rendered inline</strong></td><td>Level, Questions, Select, <strong>TestResults.jsx</strong></td><td><span class="tag gap">A2's <code>A2TestResults.jsx</code> is a 0-byte empty file</span></td></tr>
+</table>
+<div class="callout"><p><strong><code>A2TestResults.jsx</code> is empty.</strong> Zero bytes. Someone began extracting the test-results screen from the A2 fork and stopped. A1 still renders its results inline at the foot of <code>A1TestQuestions.jsx</code>. This is the clearest single artefact of the fork being an accident rather than a decision — and it is a dead file in the repository. Recorded as a defect.</p></div>
+<p>An <strong>eighth scoring rule</strong> also surfaces here: the A1/A2 test posts answers and reads back <code>res.data?.passed</code> — a server-computed boolean. The product does have a pass/fail concept; it lives on the server, for one module type, and no client screen states its threshold. That sharpens the open question rather than answering it.</p>
+
+<h2><span class="n">5</span>What was extracted, and what was not</h2>
+<p class="note">Same threshold as phase 3: verbatim duplication across three or more shipped surfaces. One candidate cleared it, by a wide margin.</p>
+<table>
+<tr><th>Extracted</th><th>Copies</th><th>Spread</th></tr>
+<tr><td><code>ListRow</code></td><td>10+</td><td>Exams, describe-speak, read &amp; listen, video courses, notes — six features</td></tr>
+</table>
+<table>
+<tr><th>Considered, not extracted</th><th>Why</th></tr>
+<tr><td>Violation / warning modal</td><td>One surface. Unique to the proctored system.</td></tr>
+<tr><td>"Results awaited" card</td><td>One surface, and it encodes a product policy (external release) rather than a UI idea.</td></tr>
+<tr><td>Plan card (Profile)</td><td>Overlaps <code>PlanSummaryCard</code>. Investigate before building a fourth entitlement surface.</td></tr>
+<tr><td>Document upload block</td><td><code>UploadRow</code> already covers it — the finding is that its <em>classification</em> was wrong, not that a component is missing.</td></tr>
+<tr><td><code>CustomSelect</code></td><td>A real gap, but it is a form primitive the system should <em>design</em>, not port from a 1,753-line screen. Recorded as debt.</td></tr>
+<tr><td>Video scrub bar</td><td>One surface, genuinely screen-specific.</td></tr>
+</table>
+
+<h2><span class="n">6</span>What this changes in the system</h2>
+<table>
+<tr><th>Phase 4 said</th><th>Phase 5 finds</th><th>Action</th></tr>
+<tr><td>Content may deserve promotion once audited</td><td>Four unrelated features</td><td><span class="tag ok">Confirmed — do not promote</span></td></tr>
+<tr><td>Profile unaudited; probably account surfaces</td><td>Account + a second copy of the jobs document flow</td><td><span class="tag part">Reclassify document components as cross-system</span></td></tr>
+<tr><td>Scholarship: "own funnel, own shell chrome"</td><td>A proctored assessment system with six states nothing else has</td><td><span class="tag gap">Guess was wrong in kind — D-010 rewritten with evidence</span></td></tr>
+<tr><td>Exams lack time-remaining feedback (proposed extension)</td><td>Scholarship already ships it at 5 minutes</td><td><span class="tag part">Reframe: not a new design, a missing port</span></td></tr>
+<tr><td>Maya has three registers, probably one component</td><td>Four — the fourth carries <em>state</em>, not voice</td><td><span class="tag part">D-014 reopened with new evidence</span></td></tr>
+<tr><td>Seven scoring rules</td><td>Eight — server-side <code>passed</code> on A1/A2 tests</td><td><span class="tag part">Recorded</span></td></tr>
+<tr><td>One gating concept</td><td>Two hooks with different shapes</td><td><span class="tag part">New debt</span></td></tr>
+</table>
+
+<h2><span class="n">7</span>Revised readiness</h2>
+<div class="verdict"><b>Still ALMOST — but for a different reason</b>
+<p>The audit line is now closed. Every product surface named in phase 4's unknown list has been traced, and the system covers them: the components exist or their absence is recorded, the states are mapped, the divergences are documented. <strong>Coverage is no longer what holds readiness back.</strong></p>
+<p>What holds it back is what phase 4 already scored lowest and this phase did not touch: <strong>accessibility is still undefined</strong> (2/10), and <strong>there is still one template</strong> (3/10), so screen production remains assembly rather than instantiation. Phase 5 raises coverage confidence; it does not raise those.</p>
+<p class="note" style="margin-bottom:0">Maturity moves from <strong>5.5</strong> to <strong>6.0</strong> — components 7→8 (<code>ListRow</code> plus corrected classifications), cross-product consistency 4→5 (the divergences are now known rather than latent). Nothing else moved, because nothing else was worked on.</p></div>
+
+<h2><span class="n">8</span>Still unknown</h2>
+<dl>
+<dt>Not audited</dt><dd>Admin and authoring surfaces (<code>admin/</code>, <code>B1AdminPage</code>, add/delete set pages) · interview tools (11 files) · marketing and public pages (<code>startNow/</code>, landing, terms) · events · resume builder</dd>
+<dt>Deliberately out of scope</dt><dd>The marketing and admin surfaces are not the learner-facing product. They should be declared out of the design system's scope by decision rather than left as an implicit gap — that is a call for you, not me.</dd>
+<dt>Partially traced</dt><dd><code>ExamPage</code> (generic exam taking, ~2,000 lines) · <code>ScholarshipResult</code> · the A1/A2 content screens were compared structurally, not line by line as the Select templates were</dd>
+<dt>Unchanged</dt><dd>Anything server-side. Marking, entitlement rules, how <code>passed</code> is computed.</dd>
+</dl>
+
+<h2><span class="n">9</span>Recommended next step</h2>
+<p class="note">Unchanged from phase 4, and this phase reinforces it.</p>
+<div class="callout"><p><strong>Wire the semantic token tier.</strong> <code>ListRow</code> made the case concrete: one composition repeated across six features, and every copy hard-codes <code>#e4e4e7</code>, <code>#002856</code> and <code>12px</code> independently. That is exactly the class of divergence a semantic tier prevents structurally rather than by discipline — and it is why the two hover treatments could diverge without anyone noticing.</p>
+<p>The alternative worth naming: <strong>declare marketing and admin out of scope</strong> first. It is a five-minute decision that permanently bounds the system, and until it is made every future audit inherits an open-ended backlog.</p></div>
+<p class="note">Decisions updated in <code>guidelines/decisions.md</code>. Four new defects in <code>guidelines/defects.md</code>.</p>
+
+</body></html>

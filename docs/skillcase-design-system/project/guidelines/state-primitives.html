@@ -1,0 +1,133 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>State primitives — evidence &amp; validation</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+:root{--ink:#002856;--mute:#5b6472;--line:#dfe5ec;--navy:#002856;--gold:#eec139;--green:#166534;--rose:#b91c1c;--wash:#f6f8fb}
+*{box-sizing:border-box}
+html,body{margin:0;background:#fff;color:var(--ink);font-family:var(--font-family,system-ui,sans-serif);-webkit-font-smoothing:antialiased}
+body{max-width:1180px;margin:0 auto;padding:56px 40px 96px;font-size:15px;line-height:1.62}
+a{color:#1e5fbf}a:hover{color:#002856}
+h1{font-size:38px;line-height:1.12;letter-spacing:-.02em;margin:0 0 10px}
+.lede{font-size:17px;color:var(--mute);max-width:76ch;margin:0 0 8px;text-wrap:pretty}
+.stamp{font-size:12px;color:var(--mute);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;margin:26px 0 44px;display:flex;flex-wrap:wrap;gap:8px 26px}
+h2{font-size:13px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--navy);margin:56px 0 6px;padding-bottom:8px;border-bottom:2px solid var(--navy)}
+h2 .n{color:var(--gold);margin-right:10px}
+h3{font-size:19px;margin:32px 0 4px;letter-spacing:-.01em}
+h3 code{font-size:15px;background:var(--wash);border:1px solid var(--line);border-radius:5px;padding:2px 7px;font-weight:600;color:var(--navy)}
+h4{font-size:15px;margin:22px 0 2px}
+p{margin:10px 0;text-wrap:pretty}
+.note{font-size:14px;color:var(--mute);margin:2px 0 14px}
+table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:13.5px}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{background:var(--wash);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);font-weight:700;white-space:nowrap}
+td code,p code,li code,dd code{background:var(--wash);border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:12.5px;color:var(--navy)}
+dl{margin:14px 0;display:grid;grid-template-columns:150px 1fr;gap:0}
+dl>dt{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--mute);font-weight:700;padding:9px 14px 9px 0;border-top:1px solid var(--line)}
+dl>dd{margin:0;padding:9px 0;border-top:1px solid var(--line)}
+dl>dt:first-of-type,dl>dd:first-of-type{border-top:none}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:99px;white-space:nowrap}
+.ok{background:#dcfce7;color:var(--green)}
+.gap{background:#fee2e2;color:var(--rose)}
+.part{background:#fef3c7;color:#92400e}
+.callout{border-left:3px solid var(--gold);background:#fffdf5;padding:14px 18px;margin:20px 0;font-size:14px}
+.callout strong{color:var(--navy)}
+.hero{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:22px 0}
+.hero div{background:#fff;padding:18px 20px}
+.hero b{display:block;font-size:30px;letter-spacing:-.02em;color:var(--navy);line-height:1.1}
+.hero span{font-size:12px;color:var(--mute);display:block;margin-top:4px}
+ul,ol{margin:10px 0;padding-left:22px}
+li{margin:5px 0;text-wrap:pretty}
+pre{background:var(--wash);border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:12px;overflow-x:auto;margin:12px 0;line-height:1.6}
+</style></head><body>
+
+<h1>State primitives</h1>
+<p class="lede">Phase 1 of the primitives groundwork, run in the required order: <strong>evidence → extract → validate → document</strong>. The brief was explicit that this must not become an uncontrolled component-building exercise, so the discipline here is subtractive — the evidence supports five candidate primitives and I am shipping <strong>two</strong>.</p>
+<div class="stamp"><span><strong>Method</strong> Evidence-first extraction</span><span><strong>Instances catalogued</strong> 70+</span><span><strong>Primitives shipped</strong> 2 (+1 prop)</span><span><strong>Date</strong> 26 Aug 2026</span></div>
+
+<h2><span class="n">1</span>Evidence</h2>
+<p>I catalogued every occurrence of these states across <code>src/pages/</code> before defining anything. The pulse animation alone appears in 70+ places. What matters is not the count but that <strong>the markup is repeated verbatim</strong>, which is what distinguishes a real pattern from a coincidence.</p>
+<div class="hero">
+<div><b>4</b><span>Files with the error block, character-identical</span></div>
+<div><b>4</b><span>Files with the row skeleton, identical</span></div>
+<div><b>5</b><span>Files with the same submitting-button treatment</span></div>
+<div><b>3</b><span>Distinct skeleton families in total</span></div>
+</div>
+
+<h3>The error block</h3>
+<p>Verbatim in <code>ExamSelect</code>, <code>PaperSelect</code>, <code>ExamBlockSelector</code> and <code>DescribeSpeakSelect</code> — same padding, same icon, same type scale, same underlined retry:</p>
+<pre>&lt;div className="w-full text-center py-12 flex flex-col items-center gap-3"&gt;
+  &lt;AlertCircle className="w-6 h-6 text-red-500" /&gt;
+  &lt;p className="text-slate-500 text-xs font-semibold"&gt;Failed to load exams. Please try again.&lt;/p&gt;
+  &lt;button className="text-[#002856] text-xs font-semibold underline underline-offset-2"&gt;Tap to retry&lt;/button&gt;
+&lt;/div&gt;</pre>
+<p>Some failures ship the same block <em>without</em> the retry link — <code>ExamCongratulations</code> ("Failed to load final report."), <code>ExamSpeakingResults</code>, <code>ExamReadingResults</code>, <code>ExamWritingResults</code>. That is a meaningful product decision, not an omission: a results screen whose report failed has nothing useful to re-fetch, so the affordance is withheld rather than offered dead. The primitive therefore makes <code>onRetry</code> optional and renders no button without it.</p>
+
+<h3>The empty block</h3>
+<p>The same frame, one line, no icon: <code>w-full text-center py-12 text-slate-400 text-xs font-semibold</code>. Found in <code>ExamSelect</code>, <code>PaperSelect</code>, <code>ReadListenTopicSelect</code>, <code>DescribeSpeakSelect</code>, <code>NotesListPage</code>, <code>VideoListPage</code>, <code>CourseSelectPage</code>, <code>NewsHome</code>, <code>AllEventsPage</code>.</p>
+<p>Critically, <strong>the copy is different every time</strong> and often branches: <code>VideoListPage</code> distinguishes "No matching videos." from "No videos in this course yet."; <code>NotesListPage</code> and <code>ReadListenTopicSelect</code> do the same. A search-empty state is not a nothing-here state, and the product already knows that. So the primitive takes <code>message</code> with <strong>no default</strong> — a generic fallback would quietly erase a distinction the product makes deliberately.</p>
+
+<h3>The skeletons — three families, not one</h3>
+<table>
+<tr><th>Family</th><th>Shape</th><th>Where</th><th>Decision</th></tr>
+<tr><td>List row</td><td><code>p-4 rounded-xl border-slate-100 bg-slate-50</code>, label opposite a pill</td><td>PaperSelect, ReadListenTopicSelect, DescribeSpeakSelect, interviewSelect</td><td><span class="tag ok">Extracted</span></td></tr>
+<tr><td>List card</td><td><code>p-5 rounded-2xl</code>, icon well + two bars, 2-up grid</td><td>ExamSelect</td><td><span class="tag ok">Extracted</span> — same fill and border, so a variant not a component</td></tr>
+<tr><td>Module chapter row</td><td><code>bg-white border-[#dbdbdb] px-3 py-5</code>, six rows</td><td>ChapterSelectTemplate (A1 + A2)</td><td><span class="tag part">Left local</span></td></tr>
+<tr><td>Single large card</td><td><code>w-[280px] h-[430px] bg-white rounded-[20px] shadow-lg</code></td><td>FlashCard, Pronounce, A1Speaking, A2Speaking (380px)</td><td><span class="tag part">Left local</span></td></tr>
+<tr><td>Reader</td><td><code>h-48 bg-slate-200</code> hero + text bars</td><td>NewsArticleReader, VideoPlayerPage</td><td><span class="tag part">Left local</span></td></tr>
+</table>
+<div class="callout"><p><strong>Why three families were left alone.</strong> The brief's instruction was the smallest primitives the evidence requires. The module-chapter skeleton has a different fill, border colour and row height because it mirrors a different row component; folding it into <code>SkeletonList</code> would mean adding a third variant that shares none of the first two's values — a component with three mutually exclusive appearances is a switch statement, not a primitive. The single-card and reader skeletons have two instances each, which is repetition but not yet a pattern. All three are recorded here so the next person does not mistake omission for oversight.</p></div>
+
+<h3>In-progress states</h3>
+<table>
+<tr><th>State</th><th>Treatment</th><th>Instances</th><th>Decision</th></tr>
+<tr><td>Submitting</td><td><code>isSubmitting ? "animate-pulse bg-blue-500" : brandFill</code></td><td>A1Flashcard, A2Flashcard, B1Flashcard, A1TestQuestions, A2TestQuestions — identical</td><td><span class="tag ok">Prop on <code>AppButton</code></span></td></tr>
+<tr><td>Recording</td><td><code>bg-red-500/10 … animate-pulse</code></td><td>SpeakingStage, ExamSpeakingWorkspace</td><td><span class="tag part">Defer to the scoring kit</span></td></tr>
+<tr><td>TTS speaking</td><td><code>isSpeaking &amp;&amp; "animate-pulse"</code></td><td>ExamReadingWorkspace, ExamReadingResults, NewsArticleReader</td><td><span class="tag part">Belongs on the audio primitive</span></td></tr>
+<tr><td>Timer urgent</td><td><code>bg-red-50 text-red-600 animate-pulse</code></td><td>ExamPage, ScholarshipExamPage</td><td><span class="tag part">Defer to the exam audit</span></td></tr>
+<tr><td>Live indicator</td><td><code>w-1.5 h-1.5 bg-green-700 rounded-full animate-pulse</code></td><td>CallScreen, interview pages</td><td><span class="tag part">Leave local</span></td></tr>
+</table>
+<p>Only the submitting state is both frequent <em>and</em> identical, and it is a state of an existing component rather than a component of its own. It became a <code>busy</code> prop on <code>AppButton</code>. The other four are each tied to a surface I have not yet audited; committing to a shared treatment now would be exactly the speculative generalisation the brief warns against.</p>
+
+<h3>Disabled / locked — a divergence, not a primitive</h3>
+<p>Two different values ship for what looks like the same idea: chapter gating dims to <strong>50%</strong> (<code>ChapterSelectTemplate</code>), a spent usage limit dims to <strong>60%</strong> (<code>ExamSelect</code>). Both add <code>cursor-not-allowed</code>.</p>
+<p><strong>This pass corrected an error in our own documentation.</strong> <code>ChapterRow</code>'s <code>.d.ts</code> previously asserted that chapter locks and usage locks "both render the same". They do not. That claim came from an earlier pass that read one file and generalised; the <code>.d.ts</code> now records the real divergence and flags it as probably accidental. No component was created — a 10% opacity difference between two features is a bug report, not a design-system primitive.</p>
+
+<h2><span class="n">2</span>Extract — what shipped</h2>
+<table>
+<tr><th>Primitive</th><th>Why it earned its place</th><th>What it deliberately does not do</th></tr>
+<tr><td><code>StateMessage</code><br><span class="note">state: empty | error</span></td><td>Four files render the error block character-for-character; nine render the empty block. Both use the same frame, so they are one component.</td><td>No default copy. No icon on empty. No retry unless <code>onRetry</code> is passed.</td></tr>
+<tr><td><code>SkeletonList</code><br><span class="note">variant: row | card</span></td><td>Two shapes sharing fill, border and pulse; four files use the row form verbatim.</td><td>Does not absorb the three other skeleton families. <code>titleWidth</code> stays exposed because production genuinely varies it (144 / 128).</td></tr>
+<tr><td><code>AppButton busy</code></td><td>Five files, identical treatment.</td><td>Does not dim — production replaces the fill with pulsing blue, which is the opposite of the usual disabled convention. Reproduced faithfully rather than "corrected".</td></tr>
+</table>
+<p class="note">Candidates considered and rejected this pass: a loading spinner (no evidence — the product uses skeletons and bare text, never a spinner), a generic <code>Skeleton</code> box primitive (would invite hand-assembly and drift), a <code>LockedOverlay</code> (two divergent values, no shared treatment), and a toast (the product uses <code>react-hot-toast</code> directly — that is a library choice, not a design-system gap).</p>
+
+<h2><span class="n">3</span>Validate against Guided German</h2>
+<p class="note">The required check: do these primitives serve the one fully-audited flow?</p>
+<p><strong>Honest answer: no, and they should not.</strong> This is a negative result worth recording rather than papering over.</p>
+<table>
+<tr><th>Guided German state</th><th>Production markup</th><th>Fits the primitive?</th></tr>
+<tr><td>Lesson loading</td><td><code>&lt;div className="w-full lg-screen-height flex justify-center items-center"&gt;Loading Lesson...&lt;/div&gt;</code></td><td><strong>No.</strong> Full-viewport centred text, no skeleton at all.</td></tr>
+<tr><td>Lesson error / 409 unavailable</td><td>The same full-screen centred frame with the server's message</td><td><strong>No.</strong> Not a list surface; nothing to retry into.</td></tr>
+<tr><td>Home hub journey loading</td><td><code>w-[200px] h-[210px] … bg-white/70 backdrop-blur-sm rounded-[20px]</code></td><td><strong>No.</strong> A journey-card placeholder with its own glassy treatment.</td></tr>
+<tr><td>Disabled CTAs (quiz, unjumble)</td><td><code>bg-neutral-200 text-neutral-400 cursor-not-allowed</code></td><td><strong>No</strong> — and correctly so. <code>LessonFooter</code> already owns this, and it is a grey-out, not the blue busy pulse.</td></tr>
+</table>
+<div class="callout"><p><strong>What the negative result tells us.</strong> The state primitives are <em>list-surface</em> primitives. Guided German is a linear task flow, and it handles its states differently on purpose — a lesson mid-flight has no list to skeleton and no fetch to retry. Forcing the new primitives into it would have been the generic-UI-kit failure mode the brief cautions against.</p>
+<p>So the validation outcome is a scope correction, not a pass: these two primitives serve the <strong>~11 remaining list-and-detail surfaces</strong>, and Guided German's own state gaps (documented in the flow audit) remain a separate job requiring <code>LessonFooter</code> and <code>AudioTapButton</code> changes instead.</p></div>
+
+<h2><span class="n">4</span>Decision log</h2>
+<table>
+<tr><th>Decision</th><th>Evidence</th><th>Confidence</th><th>Impact</th><th>Reversibility</th></tr>
+<tr><td>Empty and error are one component</td><td>Identical frame in production; only content differs</td><td>High</td><td>~11 surfaces</td><td>Easy</td></tr>
+<tr><td><code>message</code> has no default</td><td>Copy differs per surface and branches on search vs nothing-here</td><td>High</td><td>All uses</td><td>Easy</td></tr>
+<tr><td><code>onRetry</code> optional</td><td>Four results screens deliberately omit it</td><td>High</td><td>Error state</td><td>Easy</td></tr>
+<tr><td>Three skeleton families left local</td><td>Different fills, borders, heights; 1–2 instances each</td><td>Medium-high</td><td>Scope</td><td>Easy — extract later if a third instance appears</td></tr>
+<tr><td>Submitting is a prop, not a component</td><td>5 identical instances, all on buttons</td><td>High</td><td><code>AppButton</code></td><td>Easy</td></tr>
+<tr><td>Busy does not dim</td><td>Production replaces the fill with pulsing blue</td><td>High</td><td><code>AppButton</code></td><td>Easy</td></tr>
+<tr><td>Lock opacity divergence escalated, not normalised</td><td>50% vs 60% across two features</td><td>Medium</td><td><code>ChapterRow</code> docs</td><td>Easy</td></tr>
+<tr><td>Guided German excluded from these primitives</td><td>Full-screen text states, not list states</td><td>High</td><td>Validation scope</td><td>Easy</td></tr>
+</table>
+
+<h2><span class="n">5</span>Next — phase 2, same order</h2>
+<p>The scoring kit (<code>ScoreRing</code>, <code>MetricBar</code>, <code>AudioPlayer</code>) run through the same sequence. Its evidence position is already stronger than anything here — those three are <em>already shared</em> between the exams and Describe &amp; Speak in production, so reuse is proven rather than inferred. I will read all four exam results screens and both Describe &amp; Speak screens before defining a single prop, and I expect the same subtractive outcome: fewer primitives than the candidate list suggests.</p>
+<p class="note">One open question for you, surfaced by this pass and not mine to settle: the 50% / 60% lock opacity divergence, and the A2 chapter-numbering bug from the consolidation report, are both engineering escalations. Do you want those collected into a running defects list for the SkillCase team, or left as annotations in the component docs where they were found?</p>
+
+</body></html>

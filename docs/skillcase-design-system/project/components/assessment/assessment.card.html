@@ -1,0 +1,35 @@
+<!-- @dsCard group="Components" viewport="1180x900" name="Assessment / scoring kit" subtitle="ScoreRing, MetricBar, AudioPlayer — already shared across exams and Describe & Speak in production" -->
+<!doctype html><html><head><meta charset="utf-8"><title>Scoring kit</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script>document.write('<script src="../../_ds_bundle.js?v='+Date.now()+'"><\/script>')</script>
+<style>html,body{margin:0;background:#f4f5f7;font-family:var(--font-family)}#root{width:1180px;padding:32px;display:flex;flex-direction:column;gap:24px;box-sizing:border-box}.row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.f{background:#fff;border:1px solid #e6eaf0;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}.h{padding:12px 16px;border-bottom:1px solid #eef1f5}.h b{display:block;font-size:13px;color:#002856}.h span{font-size:11.5px;color:#5b6472;line-height:1.5}.b{padding:20px 16px;flex:1;display:flex;align-items:center;justify-content:center}.warn{background:#fffdf5;border:1px solid #f6e7bd;border-left:3px solid #eec139;border-radius:10px;padding:14px 18px;font-size:13px;color:#002856;line-height:1.6}.warn b{color:#002856}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const NS = window.SkillcaseDesignSystem_a27963;
+const { ScoreRing, MetricBar, AudioPlayer } = NS;
+const F = ({ t, n, children }) => <div className="f"><div className="h"><b>{t}</b><span>{n}</span></div><div className="b">{children}</div></div>;
+const CANON = { good: 70, mid: 40 }, EXAM = { good: 75, mid: 50 };
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.Fragment>
+    <div className="row">
+      <F t="ScoreRing — 160px" n="The results-screen readout. Track #D4D4D8, arc banded, fills from 12 o'clock"><ScoreRing score={82} label="overall writing accuracy" /></F>
+      <F t="ScoreRing — mid band" n="A score of 55 on the canonical 70/40 scale"><ScoreRing score={55} label="overall speaking accuracy" /></F>
+      <F t="ScoreRing — 120px" n="The geometry the exam screens hand-roll instead of reusing"><ScoreRing score={38} label="overall reading accuracy" circleSize={120} strokeWidth={10} /></F>
+    </div>
+    <div className="row">
+      <F t="MetricBar — workspace" n="12px track on zinc-300, normal-weight label"><div style={{width:'100%',display:'flex',flexDirection:'column',gap:12}}><MetricBar label="Grammar" score={88} /><MetricBar label="Vocabulary" score={52} /><MetricBar label="Coherence" score={24} /></div></F>
+      <F t="MetricBar — compact" n="6px track on zinc-200; the success and review form"><div style={{width:'100%',display:'flex',flexDirection:'column',gap:12}}><MetricBar variant="compact" label="Fluency" score={88} /><MetricBar variant="compact" label="Pronunciation" score={52} /><MetricBar variant="compact" label="Accuracy" score={24} /></div></F>
+      <F t="Same score, two scales" n="72 is green at 70/40 and amber at 75/50 — both ship on one exam screen today"><div style={{width:'100%',display:'flex',flexDirection:'column',gap:12}}><MetricBar label="72 — canonical (70/40)" score={72} bands={CANON} /><MetricBar label="72 — exam local (75/50)" score={72} bands={EXAM} /><MetricBar label="45 — canonical" score={45} bands={CANON} /><MetricBar label="45 — exam local" score={45} bands={EXAM} /></div></F>
+    </div>
+    <div className="row">
+      <F t="AudioPlayer — workspace" n="White card, zinc borders, bold label"><AudioPlayer time={37} duration={95} /></F>
+      <F t="AudioPlayer — review" n="Transparent, black/20 border, inline label"><AudioPlayer variant="review" playing time={62} duration={95} /></F>
+      <F t="AudioPlayer — idle" n="Play glyph; amber fill is identical across variants"><AudioPlayer time={0} duration={120} /></F>
+    </div>
+    <div className="warn"><b>Known divergence, deliberately not resolved here.</b> Production has four competing score scales. <code>describe-speak/utils/scoreUtils.js</code> bands at 70/40; <code>ExamWritingResults</code> and <code>ExamSpeakingResults</code> define local helpers at 75/50; every greeting bands at 70/50. Because those exam screens <em>import</em> MetricBar while also using their own helpers, a single results screen renders two scales at once. Whether a pass is 40, 50 or 75 is a product decision, so <code>bands</code> is a prop and the scales are recorded as data in <code>scoreBands.js</code> rather than silently unified.</div>
+  </React.Fragment>
+);
+</script></body></html>

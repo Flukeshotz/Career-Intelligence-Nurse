@@ -1,0 +1,152 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Exam system — behavioural audit</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+:root{--ink:#002856;--mute:#5b6472;--line:#dfe5ec;--navy:#002856;--gold:#eec139;--green:#166534;--rose:#b91c1c;--wash:#f6f8fb}
+*{box-sizing:border-box}
+html,body{margin:0;background:#fff;color:var(--ink);font-family:var(--font-family,system-ui,sans-serif);-webkit-font-smoothing:antialiased}
+body{max-width:1180px;margin:0 auto;padding:56px 40px 96px;font-size:15px;line-height:1.62}
+a{color:#1e5fbf}a:hover{color:#002856}
+h1{font-size:38px;line-height:1.12;letter-spacing:-.02em;margin:0 0 10px}
+.lede{font-size:17px;color:var(--mute);max-width:76ch;margin:0 0 8px;text-wrap:pretty}
+.stamp{font-size:12px;color:var(--mute);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;margin:26px 0 44px;display:flex;flex-wrap:wrap;gap:8px 26px}
+h2{font-size:13px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--navy);margin:56px 0 6px;padding-bottom:8px;border-bottom:2px solid var(--navy)}
+h2 .n{color:var(--gold);margin-right:10px}
+h3{font-size:20px;margin:34px 0 4px;letter-spacing:-.01em}
+h3 code{font-size:15px;background:var(--wash);border:1px solid var(--line);border-radius:5px;padding:2px 7px;font-weight:600;color:var(--navy)}
+p{margin:10px 0;text-wrap:pretty}
+.note{font-size:14px;color:var(--mute);margin:2px 0 14px}
+table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:13.5px}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{background:var(--wash);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);font-weight:700;white-space:nowrap}
+td code,p code,li code{background:var(--wash);border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:12.5px;color:var(--navy)}
+dl{margin:14px 0;display:grid;grid-template-columns:172px 1fr;gap:0}
+dl>dt{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--mute);font-weight:700;padding:9px 14px 9px 0;border-top:1px solid var(--line)}
+dl>dd{margin:0;padding:9px 0;border-top:1px solid var(--line)}
+dl>dt:first-of-type,dl>dd:first-of-type{border-top:none}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:99px;white-space:nowrap}
+.ok{background:#dcfce7;color:var(--green)}
+.gap{background:#fee2e2;color:var(--rose)}
+.part{background:#fef3c7;color:#92400e}
+.clar{background:#e0e7ff;color:#3730a3}
+.flow{background:var(--wash);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:18px 0;font-size:14px;line-height:2}
+.flow b{color:var(--navy)}
+.flow .arrow{color:var(--gold);font-weight:700;padding:0 6px}
+.callout{border-left:3px solid var(--gold);background:#fffdf5;padding:14px 18px;margin:20px 0;font-size:14px}
+.callout strong{color:var(--navy)}
+ul,ol{margin:10px 0;padding-left:22px}
+li{margin:5px 0;text-wrap:pretty}
+.states{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12.5px;font-family:ui-monospace,monospace;color:var(--navy)}
+.states span{background:#fff;border:1px solid var(--line);border-radius:5px;padding:2px 8px}
+.states i{color:var(--gold);font-style:normal;font-weight:700}
+.k{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--mute)}
+</style></head><body>
+<h1>Exam system — behavioural audit</h1>
+<p class="lede">Traced from <code>SkillCase-Frontend-main</code>. The headline finding is structural: <strong>the product does not have an exam system, it has three of them</strong>, mounted on separate route trees, with separate data shapes, separate scoring rules and separate result surfaces. They are not variants of one flow. Any design work that treats "the exam screen" as a single thing will be designing for whichever of the three happened to be in front of it.</p>
+<div class="stamp"><span><strong>Systems</strong> 3</span><span><strong>Routes</strong> 18</span><span><strong>Screens traced</strong> 12 (B1) + 3 (generic) + 1 (scholarship)</span><span><strong>Scoring rules found</strong> 7</span><span><strong>Audit date</strong> 27 Aug 2026</span><span><strong>No screens designed</strong></span></div>
+
+<h2><span class="n">0</span>Five findings that change the design work</h2>
+<div class="callout">
+<p><strong>1. Three exam systems, not one.</strong> <code>/b1/exams/*</code> is the four-section Goethe/TELC paper flow. <code>/exam/:testId</code> is a scheduled single-test flow with teacher marking. <code>/scholarship</code> is a standalone funnel reusing the shell with exam-only chrome. They share a vocabulary ("exam", "score", "review answers") and almost nothing else.</p>
+<p><strong>2. Passing means three different numbers.</strong> The generic exam sets <code>passed = score >= 60</code>. The B1 congratulations screen bands at 75/50. Per-question correctness on writing and speaking is <code>qScore >= 50</code>. Nothing in the codebase reconciles them, and no screen states a pass mark to the learner at all.</p>
+<p><strong>3. Two of the four B1 results screens do not use the shared <code>ScoreRing</code>.</strong> Writing and Speaking import it. Reading and Listening hand-roll a 120px ring with the stroke hardcoded to <code>#0BAA45</code> — green at every score. A learner scoring 12% on Reading sees a green ring; the same 12% on Writing is red.</p>
+<p><strong>4. The timer survives reload, and that is deliberate.</strong> Each section writes an <em>expiry timestamp</em> to <code>localStorage</code> keyed <code>b1_exam_timer_{userId}_{paperId}_{section}</code>, so refreshing does not buy more time. But there is no exit guard anywhere — no <code>beforeunload</code>, no confirmation — so the Back button silently abandons an in-progress timed section while its clock keeps running.</p>
+<p><strong>5. Completion is a server 403, not a client state.</strong> Re-entering a finished paper throws <code>403 { alreadyCompleted }</code>, which three separate screens catch and translate into a redirect to Congratulations. The "already done" case is therefore an <em>error path</em> in the code. It has no loading treatment of its own, and any screen that forgets the catch shows a failure message for a successful outcome.</p>
+</div>
+
+<h2><span class="n">A</span>The three systems</h2>
+<table>
+<tr><th>System</th><th>Route tree</th><th>Shape</th><th>Scoring</th><th>Review</th></tr>
+<tr><td><strong>B1 papers</strong><br><span class="k">Goethe / TELC</span></td><td><code>/b1/exams</code> → <code>/:examType/papers</code> → <code>/papers/:id/dashboard</code> → four section routes, each with <code>/results</code> → <code>/congratulations</code></td><td>Paper → submission → 4 sections → blocks → questions</td><td>Per-section 0–100, auto-marked (R/L) or AI-marked with metrics (W/S)</td><td>Per-section, two levels: flat question list → per-block detail</td></tr>
+<tr><td><strong>Generic exam</strong><br><span class="k">scheduled test</span></td><td><code>/exam/:testId</code> → <code>/take</code> → <code>/result</code></td><td>Test → questions (14+ types, incl. image blocks)</td><td>Single 0–100, <code>passed = score >= 60</code>, some questions <em>teacher-marked</em></td><td>One long list on the result page</td></tr>
+<tr><td><strong>Scholarship</strong><br><span class="k">standalone funnel</span></td><td><code>/scholarship</code> hub → take → result</td><td>Own hub with single-tab switcher and exam progress ring</td><td>Own funnel</td><td>Own result screen</td></tr>
+</table>
+<p class="note"><span class="tag clar">Unknown</span> The scholarship funnel was mapped at the route and shell level only (<code>shellRoutes.js</code>, <code>routeRegistry.js</code>, <code>App.jsx</code>). Its screens were not traced in this pass. Do not treat it as audited.</p>
+
+<h2><span class="n">B</span>B1 paper flow, as the code runs it</h2>
+<div class="flow">
+<b>ExamSelect</b> <span class="arrow">→</span> pick Goethe or TELC<br>
+<b>PaperSelect</b> <span class="arrow">→</span> <code>getB1ExamPapers</code>; each row carries <code>submission_status</code> → <em>continue</em> / <em>done</em> pill<br>
+&nbsp;&nbsp;• tap fires <code>startB1ExamSubmission</code> <em>before</em> navigating — the list row is the mutation<br>
+&nbsp;&nbsp;• <code>403 alreadyCompleted</code> <span class="arrow">→</span> Congratulations · any other failure <span class="arrow">→</span> toast, stay put<br>
+&nbsp;&nbsp;• <code>useUsageLimitModule("B1","exams")</code> locked <span class="arrow">→</span> rows dim to 60% and stop responding, <b>with no explanation shown</b><br>
+<b>ExamBlockSelector</b> (the dashboard) <span class="arrow">→</span> start submission, then fetch section status<br>
+&nbsp;&nbsp;• four tiles, single-select, default <code>reading</code>; completed tiles grey out and gain a green tick<br>
+&nbsp;&nbsp;• the CTA is the whole state machine: <em>Start X Exam</em> / <em>Review X Answers</em> / <em>View Overall Congratulations</em><br>
+<b>Section workspace</b> <span class="arrow">→</span> block-by-block, timer running<br>
+&nbsp;&nbsp;• last block CTA reads <em>Finish X Test</em>; timeout fires the same submit unattended<br>
+<b>Section results</b> <span class="arrow">→</span> score → review list → per-block detail<br>
+<b>Congratulations</b> <span class="arrow">→</span> 2×2 section scorecards, two feedback boxes, Start Next / Reattempt
+</div>
+
+<h3>Section status is the whole model</h3>
+<p>Every navigation decision in the B1 flow reads from one map: <code>sections[].status</code> ∈ <code>not_started</code> | <code>in_progress</code> | <code>completed</code>, plus a submission-level <code>status</code>. There is no partial-section resume state in the UI — a section is open or finished. The dashboard derives "all four complete" client-side by checking the four literals, and the results screens re-derive the same fact independently to decide whether Back goes to the dashboard or to Congratulations.</p>
+<div class="states"><span>not_started</span><i>→</i><span>in_progress</span><i>→</i><span>completed</span><i>⇢</i><span>submission.completed</span><i>⇢</i><span>reset → not_started ×4</span></div>
+
+<h3>Timing and submission <span class="tag ok">Well built</span></h3>
+<dl>
+<dt>Duration source</dt><dd>Server <code>duration_minutes</code> per section; client default 30 min if absent, and the dashboard's total falls back to 120.</dd>
+<dt>Persistence</dt><dd>An absolute expiry timestamp in <code>localStorage</code>, keyed by user + paper + section. Remaining time is recomputed from the clock on mount, so a reload cannot extend a section.</dd>
+<dt>Expiry</dt><dd><code>handleAutoSubmit</code> submits whatever exists and clears the key. Silent — no warning at any threshold.</dd>
+<dt>Guest key</dt><dd>Falls back to the literal <code>"guest"</code>, so two unauthenticated users on one device share a countdown. <span class="tag part">Edge case</span></dd>
+<dt>Exit</dt><dd>None. Back navigates away mid-section with no prompt and no pause. <span class="tag gap">Gap</span></dd>
+</dl>
+
+<h2><span class="n">C</span>Scoring — validated against the code</h2>
+<p class="note">Phase 2 recorded four competing score scales. Tracing the exam system raises it to <strong>seven distinct rules</strong>. All are quoted from source; none has been normalised here.</p>
+<table>
+<tr><th>#</th><th>Rule</th><th>Bands</th><th>Where</th><th>Read</th></tr>
+<tr><td>1</td><td>Canonical colour scale</td><td>70 / 40</td><td><code>describe-speak/utils/scoreUtils.js</code> — <code>getScoreColor</code>, <code>getScoreStrokeColor</code></td><td>The only one shared between features. Reference by usage, not by preference.</td></tr>
+<tr><td>2</td><td>Greeting scale</td><td>70 / 50</td><td>Same file's <code>getScoreGreeting</code>, plus a local re-implementation in each of the four results screens</td><td>Disagrees with rule 1 <em>inside the same utility file</em>. Five copies total.</td></tr>
+<tr><td>3</td><td>Exam metric scale</td><td>75 / 50</td><td><code>ExamWritingResults</code>, <code>ExamSpeakingResults</code> — local <code>getMetricColor</code></td><td>Applied to chrome around <code>MetricBar</code>, which uses rule 1. Two scales on one screen.</td></tr>
+<tr><td>4</td><td>Overall scorecard scale</td><td>75 / 50</td><td><code>ExamCongratulations.getScoreStyle</code></td><td>A section can be green on its own results screen and amber on the summary.</td></tr>
+<tr><td>5</td><td>Per-question correctness</td><td>≥ 50</td><td><code>ExamWritingResults</code>, <code>ExamSpeakingResults</code></td><td>A binary judgement derived from a continuous AI score. Not surfaced as a threshold anywhere.</td></tr>
+<tr><td>6</td><td>Pass / fail</td><td>≥ 60</td><td><code>pages/exam/ExamResult.jsx</code></td><td>The only true pass mark in the product — and it belongs to the system the B1 flow does not use.</td></tr>
+<tr><td>7</td><td>No scale at all</td><td>—</td><td><code>ExamReadingResults</code>, <code>ExamListeningResults</code> — ring stroke fixed at <code>#0BAA45</code></td><td>Green at 0%. The score is stated in text and contradicted by its own ring.</td></tr>
+</table>
+<div class="callout"><p><strong>The scoring kit is validated, with one correction.</strong> <code>ScoreRing</code>, <code>MetricBar</code> and <code>AudioPlayer</code> reproduce production correctly and their <code>bands</code> prop was the right call — the exam audit found three <em>more</em> scales, which a hardcoded scale would have made unreproducible. The correction is to <code>scoreBands.js</code>: it documents three scales and there are seven. Rules 4–7 are now recorded there too. No default changed.</p></div>
+
+<h3>What the scoring kit does <em>not</em> need</h3>
+<p>No new scoring component is justified by this audit. The exam results screens want a ring, bars and a player, and those exist. The 2×2 section scorecard on Congratulations is a single-use layout of four coloured boxes; the correct/incorrect/skipped tally appears twice, in Reading and Listening only. Neither clears the bar. <strong>The gap is a decision, not a component:</strong> until someone rules on the pass mark, any "pass" affordance the system ships would be inventing product behaviour.</p>
+
+<h2><span class="n">D</span>Patterns extracted</h2>
+<p class="note">Evidence rule applied: verbatim duplication across three or more shipped surfaces. Three qualified.</p>
+<table>
+<tr><th>Component</th><th>Copies</th><th>Where</th><th>Note</th></tr>
+<tr><td><code>ExamTimerPill</code></td><td>4</td><td>All four B1 workspaces</td><td>Each also redeclares <code>formatSeconds</code> — eight copies of the formatter ship.</td></tr>
+<tr><td><code>BlockProgressTrack</code></td><td>8</td><td>Four workspaces + four results review modes</td><td>Fill rule is <code>idx &lt;= current</code>: segment 1 is amber on open, so there is no zero state.</td></tr>
+<tr><td><code>DifficultyBadge</code></td><td>5</td><td><code>PaperSelect</code>, Reading + Writing workspaces, Reading + Writing results</td><td>Unrecognised tags fall through to red "hard". Reproduced, flagged as a defect.</td></tr>
+</table>
+
+<h3>Considered and deliberately not extracted</h3>
+<ul>
+<li><strong>Section tile</strong> (the 190px block-selector card). One occurrence. A layout, not a component.</li>
+<li><strong>Correct / incorrect / skipped tally.</strong> Two occurrences, Reading and Listening — the auto-marked sections. Writing and Speaking cannot have one. Extracting it now would imply it belongs to results screens generally, which is false.</li>
+<li><strong>Answer-review option row.</strong> Present in both the B1 and generic systems, but structurally different: B1 has a fixed lettered A–Z model over six question types; the generic exam has fourteen types including image options, ordering, matching pairs, sentence correction, and a teacher-pending state with no verdict at all. Extracting either shape would freeze a difference nobody has decided about. <span class="tag clar">Needs a product ruling first</span></li>
+<li><strong>Score band scale.</strong> A foundation decision, already data in <code>scoreBands.js</code>. Not UI.</li>
+</ul>
+
+<h2><span class="n">E</span>What actually needs to be designed</h2>
+<p class="note">Answering the brief's last line. In priority order, with the reason each is a design problem rather than a bug.</p>
+<table>
+<tr><th>#</th><th>Work</th><th>Why it is design work</th><th>Blocked on</th></tr>
+<tr><td>1</td><td><strong>Exit and resume for a timed section</strong></td><td>The clock runs while the learner is elsewhere and nothing tells them. This is not a missing dialog — it is an unanswered question about whether a section can be paused at all. Needs the interaction defined before any screen.</td><td>Product: is a B1 section pausable?</td></tr>
+<tr><td>2</td><td><strong>Time-remaining feedback</strong></td><td>A silent timer on an assessed section. <code>ExamTimerPill</code> ships proposed <code>warning</code>/<code>critical</code> tones for exactly this, marked as not-in-code.</td><td>Nothing. Testable now.</td></tr>
+<tr><td>3</td><td><strong>The usage-limit lock on <code>PaperSelect</code></strong></td><td>Rows dim to 60% and stop responding with no message. The system already has <code>LockGateCard</code> and <code>FeatureStatusChip</code> for exactly this and neither is used here.</td><td>Nothing. Existing components.</td></tr>
+<tr><td>4</td><td><strong>A stated result verdict</strong></td><td>Seven scoring rules and no screen tells a learner whether they passed. Fixing the rings is engineering; deciding what a score <em>means</em> is design.</td><td>Product: the pass mark.</td></tr>
+<tr><td>5</td><td><strong>Teacher-pending review state</strong></td><td>The generic exam can return <code>is_correct === null</code> — marked later by a human. Today that is a grey box and a sentence. It is a real product state with no designed treatment.</td><td>Nothing, once the generic system is prioritised.</td></tr>
+</table>
+<p>Items 2, 3 and 5 are buildable against the existing system. Items 1 and 4 should not be designed until the product questions are answered — designing them first would be inventing behaviour.</p>
+
+<h2><span class="n">F</span>Confidence</h2>
+<dl>
+<dt>Known</dt><dd>The B1 paper flow end to end: twelve screens read in full, all routes, all statuses, timing, submission, reset, and every scoring rule quoted above.</dd>
+<dt>Partial</dt><dd>The generic <code>/exam</code> system: routes, result screen and question-type inventory read; <code>ExamPage</code> (the taking experience, ~2,000 lines) was surveyed, not traced.</dd>
+<dt>Unknown</dt><dd>The scholarship funnel beyond its routing. Admin/authoring surfaces. Any server-side marking behaviour.</dd>
+<dt>Assumption</dt><dd>That the four B1 sections are always present. The code hardcodes the four literals everywhere, so a three-section paper would break the dashboard — but nothing was found that guarantees the server only sends four.</dd>
+</dl>
+
+<h2><span class="n">G</span>Next</h2>
+<p>The remaining unaudited surfaces are A1/A2 practice modules, profile and content browsing, and the scholarship funnel. None is behaviourally complex in the way the exam system is; breadth-first is defensible for the practice modules, whose chapter templates were already partly read in phase 1. The scholarship funnel needs audit-first treatment — it has its own shell chrome, which means its own navigation model.</p>
+<p class="note">Defects found in this pass are recorded in <code>guidelines/defects.md</code> together with the four from phases 1 and 2. Nothing in this audit was fixed in the codebase; that is not this project's job.</p>
+
+</body></html>

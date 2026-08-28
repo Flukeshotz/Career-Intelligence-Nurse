@@ -1,0 +1,132 @@
+/* Skillcase brand tokens — values transcribed from the Skillcase Learning App Figma file.
+   These override the imported Untitled-UI variable defaults (tokens/fig-tokens.css) for
+   anything brand-facing: the Figma variable collection ships a purple "brand" ramp that
+   the product screens never use. Product truth is below. */
+:root{
+/* ── Core palette (from screen fills) ───────────────────────────── */
+--sc-navy-900:#002856;      /* rgb(0,40,86)   deep navy — headers, dark panels */
+--sc-navy-700:#083262;      /* rgb(8,50,98)   PRIMARY brand navy — logo, body headings */
+--sc-navy-100:#CFE3FF;      /* rgb(207,227,255) journey background top */
+--sc-navy-50:#E4EFFF;       /* rgb(228,239,255) journey background bottom */
+--sc-green-600:#019035;     /* rgb(1,144,53)  success / correct / primary action */
+--sc-green-500:#0BAA45;     /* rgb(11,170,69) lighter green — strokes, fills */
+--sc-yellow-500:#EDB843;    /* rgb(237,184,67) coins, streaks, reward accents */
+--sc-yellow-300:#F7D78E;    /* rgb(247,215,142) reward surfaces */
+--sc-blue-500:#1E76F3;      /* rgb(30,118,243) links, info, selected state */
+--sc-red-500:#EC463A;       /* rgb(236,70,58) incorrect / destructive */
+--sc-slate-600:#455154;     /* rgb(69,81,84)  muted slate fills */
+--sc-slate-700:#3E5155;     /* rgb(62,81,85) */
+
+/* ── Neutrals (from screen fills) ──────────────────────────────── */
+--sc-black:#000000;
+--sc-white:#FFFFFF;
+--sc-ink-900:#181D27;       /* rgb(24,29,39)  primary text */
+--sc-ink-700:#414651;       /* rgb(65,70,81)  secondary text */
+--sc-ink-600:#535862;       /* rgb(83,88,98)  tertiary text */
+--sc-ink-400:#7B7B7B;       /* rgb(123,123,123) placeholder */
+--sc-line-300:#D9D9D9;      /* rgb(217,217,217) */
+--sc-line-200:#DBDBDB;      /* rgb(219,219,219) card stroke */
+--sc-line-100:#EFEFEF;      /* rgb(239,239,239) hairline / header border */
+--sc-surface-100:#F0F0F0;   /* rgb(240,240,240) */
+--sc-surface-muted:#ABABAB; /* rgb(171,171,171) */
+
+/* ── Semantic aliases ─────────────────────────────────────────── */
+--sc-text-primary:var(--sc-navy-700);
+--sc-text-heading:var(--sc-navy-900);
+--sc-text-body:var(--sc-ink-900);
+--sc-text-secondary:var(--sc-ink-600);
+--sc-text-placeholder:var(--sc-ink-400);
+--sc-text-on-dark:var(--sc-white);
+--sc-text-link:var(--sc-blue-500);
+--sc-action-primary:var(--sc-green-600);
+--sc-action-primary-hover:#017A2C;
+--sc-action-secondary:var(--sc-navy-700);
+--sc-state-correct:var(--sc-green-600);
+--sc-state-incorrect:var(--sc-red-500);
+--sc-state-locked:var(--sc-surface-muted);
+--sc-reward:var(--sc-yellow-500);
+--sc-surface-card:var(--sc-white);
+--sc-surface-app:var(--sc-white);
+--sc-border-card:var(--sc-line-200);
+--sc-border-hairline:var(--sc-line-100);
+
+/* ── Gradients / backgrounds ──────────────────────────────────── */
+--sc-bg-journey:linear-gradient(180deg,var(--sc-navy-100) 0%,var(--sc-navy-50) 100%);
+--sc-bg-reward:linear-gradient(180deg,var(--sc-yellow-300) 0%,var(--sc-white) 100%);
+--sc-scrim-dark:rgba(0,0,0,.6);
+
+/* ── Radii (exact values used in the file) ────────────────────── */
+--sc-radius-xs:4px;
+--sc-radius-sm:6px;
+--sc-radius-md:8px;
+--sc-radius-lg:12px;
+--sc-radius-xl:16px;
+--sc-radius-2xl:20px;
+--sc-radius-3xl:24px;
+--sc-radius-pill:200px;
+--sc-radius-full:9999px;
+
+/* ── Shadows ──────────────────────────────────────────────────── */
+--sc-shadow-xs:0 1px 2px rgba(10,13,18,.05);
+--sc-shadow-sm:0 1px 3px rgba(10,13,18,.1),0 1px 2px rgba(10,13,18,.06);
+--sc-shadow-card:0 2px 5px rgba(0,0,0,.2);
+--sc-shadow-coin:0 1px 4px rgba(0,0,0,.4);
+--sc-shadow-lifted:0 4px 16px rgba(0,0,0,.27);
+--sc-shadow-modal:0 8px 24px rgba(10,13,18,.18);
+--sc-inset-hairline:inset 0 0 0 1px rgba(0,0,0,.1);
+
+/* ── Type ─────────────────────────────────────────────────────── */
+--sc-font-display:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;
+--sc-font-ui:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+--sc-font-script:'Inspiration',cursive; /* decorative, 6 uses in source */
+
+--sc-text-2xs:8px;
+--sc-text-xs:10px;
+--sc-text-sm:12px;
+--sc-text-13:13px;   /* Poppins Regular 13 — the app's dominant body size */
+--sc-text-base:14px;
+--sc-text-15:15px;
+--sc-text-md:16px;
+--sc-text-17:17px;
+--sc-text-lg:18px;
+--sc-text-xl:27px;
+--sc-text-2xl:30px;
+--sc-text-3xl:36px;
+--sc-text-4xl:46px;
+
+--sc-weight-regular:400;
+--sc-weight-medium:500;
+--sc-weight-semibold:600;
+--sc-weight-bold:700;
+--sc-weight-extrabold:800;
+
+--sc-leading-tight:100%;
+--sc-leading-snug:1.3;
+--sc-leading-body:1.5;
+
+/* ── Spacing (Figma Spacing/* collection, in px) ─────────────── */
+--sc-space-1:4px;
+--sc-space-2:8px;
+--sc-space-3:12px;
+--sc-space-4:16px;
+--sc-space-5:20px;
+--sc-space-6:24px;
+--sc-space-8:32px;
+--sc-space-10:40px;
+--sc-space-16:64px;
+
+/* ── Motion ───────────────────────────────────────────────────── */
+--sc-ease-standard:cubic-bezier(.4,0,.2,1); /* @kind other */
+--sc-ease-out:cubic-bezier(0,0,.2,1); /* @kind other */
+--sc-dur-fast:120ms; /* @kind other */
+--sc-dur-base:200ms; /* @kind other */
+--sc-dur-slow:320ms; /* @kind other */
+
+/* ── Layout ───────────────────────────────────────────────────── */
+--sc-screen-w:390px;   /* iPhone 13/14 — the app's design width */
+--sc-screen-h:844px;
+--sc-header-h:72px;
+--sc-tabbar-h:72px;
+}
+a{color:var(--sc-text-link);text-decoration:none}
+a:hover{color:var(--sc-navy-700);text-decoration:underline}

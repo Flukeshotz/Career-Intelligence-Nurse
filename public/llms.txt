@@ -1,0 +1,19 @@
+# SkillCase — Nursing Career & Recruitment Intelligence
+
+> SkillCase is the authoritative career intelligence platform for Indian nurses (B.Sc. Nursing, GNM, Post Basic B.Sc., M.Sc. Nursing). We provide structured, verified details on government recruitment vacancies (AIIMS, ESIC, Railway, State PSC), national examinations (NORCET), eligibility criteria, application deadlines, and admit card releases.
+
+## Core Authority Pages
+- Nursing Home & Live Cycles: https://skillcase.in/nursing
+- All Nursing Vacancies: https://skillcase.in/nursing/jobs
+- National Nursing Examinations: https://skillcase.in/nursing/exams
+
+## Key Recruitment Cycles
+- NORCET 2026 (Nursing Officer Recruitment Common Eligibility Test): https://skillcase.in/nursing/exams/norcet-2026-aiims-nursing-officer-recruitment
+- AIIMS New Delhi Nursing Officer: https://skillcase.in/nursing/jobs/aiims-new-delhi-nursing-officer-2026
+- ESIC Hospital Staff Nurse: https://skillcase.in/nursing/jobs/esic-hospital-staff-nurse-2026
+- RRB Paramedical Staff Nurse: https://skillcase.in/nursing/exams/rrb-paramedical-staff-nurse-2026
+- Manipal ICU Staff Nurse: https://skillcase.in/nursing/jobs/manipal-hospital-staff-nurse-icu-2026
+- Apollo OT Staff Nurse: https://skillcase.in/nursing/jobs/apollo-hospitals-ot-staff-nurse-2026
+
+## Structured Eligibility Intelligence
+Every opportunity includes structured, machine-evaluable requirements distinguishing qualification, clinical experience in years, state nursing council registration, and age limits with plain-language interpretations.

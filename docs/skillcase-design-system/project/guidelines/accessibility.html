@@ -1,0 +1,194 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Accessibility foundations</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+:root{--ink:#002856;--mute:#5b6472;--line:#dfe5ec;--navy:#002856;--gold:#eec139;--green:#166534;--rose:#b91c1c;--wash:#f6f8fb}
+*{box-sizing:border-box}
+html,body{margin:0;background:#fff;color:var(--ink);font-family:var(--font-family,system-ui,sans-serif);-webkit-font-smoothing:antialiased}
+body{max-width:1180px;margin:0 auto;padding:56px 40px 96px;font-size:15px;line-height:1.62}
+a{color:#1e5fbf}a:hover{color:#002856}
+h1{font-size:38px;line-height:1.12;letter-spacing:-.02em;margin:0 0 10px}
+.lede{font-size:17px;color:var(--mute);max-width:76ch;margin:0 0 8px;text-wrap:pretty}
+.stamp{font-size:12px;color:var(--mute);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;margin:26px 0 44px;display:flex;flex-wrap:wrap;gap:8px 26px}
+h2{font-size:13px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--navy);margin:56px 0 6px;padding-bottom:8px;border-bottom:2px solid var(--navy)}
+h2 .n{color:var(--gold);margin-right:10px}
+h3{font-size:20px;margin:34px 0 4px;letter-spacing:-.01em}
+h4{font-size:14px;margin:22px 0 2px;color:var(--navy)}
+p{margin:10px 0;text-wrap:pretty}
+.note{font-size:14px;color:var(--mute);margin:2px 0 14px}
+table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:13px}
+th,td{text-align:left;vertical-align:top;padding:8px 11px;border-bottom:1px solid var(--line)}
+th{background:var(--wash);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);font-weight:700;white-space:nowrap}
+td code,p code,li code,dd code{background:var(--wash);border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:12px;color:var(--navy)}
+.num{font-variant-numeric:tabular-nums;text-align:right}
+dl{margin:14px 0;display:grid;grid-template-columns:180px 1fr;gap:0}
+dl>dt{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--mute);font-weight:700;padding:9px 14px 9px 0;border-top:1px solid var(--line)}
+dl>dd{margin:0;padding:9px 0;border-top:1px solid var(--line)}
+dl>dt:first-of-type,dl>dd:first-of-type{border-top:none}
+.tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:99px;white-space:nowrap}
+.ok{background:#dcfce7;color:var(--green)}
+.gap{background:#fee2e2;color:var(--rose)}
+.part{background:#fef3c7;color:#92400e}
+.clar{background:#e0e7ff;color:#3730a3}
+.neu{background:#eef1f5;color:#414651}
+.callout{border-left:3px solid var(--gold);background:#fffdf5;padding:14px 18px;margin:20px 0;font-size:14px}
+.callout strong{color:var(--navy)}
+ul,ol{margin:10px 0;padding-left:22px}
+li{margin:5px 0;text-wrap:pretty}
+.hero{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:22px 0}
+.hero>div{background:var(--wash);border:1px solid var(--line);border-radius:12px;padding:16px 14px}
+.hero b{display:block;font-size:30px;letter-spacing:-.02em;color:var(--navy);line-height:1.1}
+.hero span{display:block;font-size:11.5px;color:var(--mute);margin-top:5px;line-height:1.4}
+.fx{display:flex;gap:22px;flex-wrap:wrap;margin:18px 0}
+.fx>div{border:1px solid var(--line);border-radius:12px;padding:22px 26px;display:flex;flex-direction:column;align-items:center;gap:12px;font-size:11.5px;color:var(--mute)}
+.btn{border:none;border-radius:8px;padding:12px 22px;font-size:14px;font-weight:600;font-family:inherit}
+.verdict{border:2px solid var(--navy);border-radius:14px;padding:22px 26px;margin:24px 0}
+.verdict b{display:block;font-size:26px;letter-spacing:-.02em;color:var(--navy);margin-bottom:6px}
+</style></head><body>
+<h1>Accessibility foundations</h1>
+<p class="lede">Phase 7. The 71 SkillCase components and representative production screens audited against eleven criteria before anything was changed. The system's lowest-scoring dimension, and the first phase in which a value had to be <em>designed</em> rather than read off the product.</p>
+<div class="stamp"><span><strong>Date</strong> 27 Aug 2026</span><span><strong>Components audited</strong> 71</span><span><strong>Contrast pairs measured</strong> 25</span><span><strong>New rules</strong> 4</span><span><strong>Components changed</strong> 4</span><span><strong>No screens redesigned</strong></span></div>
+
+<h2><span class="n">0</span>The three findings</h2>
+<div class="callout">
+<p><strong>1. The components are better than expected, and the reason is luck.</strong> All 55 <code>onClick</code> handlers but four sit on real <code>&lt;button&gt;</code> elements, all 20 <code>&lt;img&gt;</code> carry <code>alt</code>, and — critically — <strong>not one component sets <code>outline: none</code></strong>, so the browser's default focus ring has survived everywhere. Production does the opposite: <code>outline-none</code> appears on essentially every button. The system is accessible here because nobody removed the default, not because anybody specified one.</p>
+<p><strong>2. No single-colour focus ring can work in this product.</strong> Measured against the four surfaces a focused control actually sits on, brand blue fails on the gold CTA (2.34) and production's blue-600 fails on both gold and navy (2.84 / 2.83). This is not a preference to be settled by taste — a dual ring is the only thing that passes, and the measurements are below.</p>
+<p><strong>3. Three semantic colours fail AA, and one of them was introduced by this project last phase.</strong> <code>--ui-text-faint</code> is 2.56:1. It is used for counts and chevrons — including "12 of 20 correct" on results screens. They are faithful reproductions of production values, so they are staged with measured alternates rather than silently corrected.</p>
+</div>
+
+<h2><span class="n">1</span>Audit by criterion</h2>
+<p class="note">Every row classified: <span class="tag ok">correct</span> · <span class="tag part">inconsistent</span> · <span class="tag gap">missing, required</span> · <span class="tag clar">product decision</span> · <span class="tag neu">unknown</span>.</p>
+<table>
+<tr><th>Criterion</th><th>Finding</th><th>Evidence</th><th>Status</th></tr>
+<tr><td><strong>Semantic HTML</strong></td><td>51 of 55 interactive elements are real <code>&lt;button&gt;</code>s</td><td>71 files scanned</td><td><span class="tag ok">Correct</span></td></tr>
+<tr><td><strong>Keyboard navigation</strong></td><td>Four components were clickable <code>&lt;div&gt;</code>s — unreachable by keyboard. Zero <code>tabIndex</code> or <code>onKeyDown</code> anywhere, which is <em>right</em> once everything is a button</td><td><code>ListRow</code>, <code>ChapterRow</code>, <code>ChapterStrip</code>, <code>JobStepCard</code></td><td><span class="tag gap">Fixed this phase</span></td></tr>
+<tr><td><strong>Focus visibility</strong></td><td>No component removes the outline; no component defines one either. Production removes it ~40 times</td><td><code>outline: none</code> → 0 occurrences in the system</td><td><span class="tag gap">Rule created (D-021)</span></td></tr>
+<tr><td><strong>Focus states</strong></td><td>Production has exactly one: <code>focus:ring-2 focus:ring-blue-600</code> on text inputs. Nothing for controls</td><td><code>ExamReadingWorkspace</code> lines 352, 632</td><td><span class="tag part">Inconsistent — fields yes, controls no</span></td></tr>
+<tr><td><strong>Contrast</strong></td><td>22 of 25 measured pairs pass. Three fail; see §3</td><td>Computed, not eyeballed</td><td><span class="tag part">Mostly correct</span></td></tr>
+<tr><td><strong>Target size</strong></td><td><code>AppButton</code> md (44px) and lg (52px) clear the minimum; <strong>sm is 36px</strong>. <code>ExamTimerPill</code> is display-only, so exempt</td><td><code>SIZES</code> in AppButton</td><td><span class="tag clar">Decision needed</span></td></tr>
+<tr><td><strong>Text sizing</strong></td><td>8px captions ship in <code>ScoreRing</code> and <code>DifficultyBadge sm</code>, faithfully reproducing production</td><td>2 components</td><td><span class="tag clar">Decision needed — both are secondary to a visible number</span></td></tr>
+<tr><td><strong>ARIA</strong></td><td>38 aria attributes across 71 files; 2 <code>role</code>. Thin but not wrong — real buttons need less</td><td>Scanned</td><td><span class="tag part">Inconsistent</span></td></tr>
+<tr><td><strong>Disabled vs locked</strong></td><td>Two opacities (.6 and .5) already tokenised separately in phase 6. <strong>Zero <code>aria-disabled</code></strong>: a "locked" row that is visually dimmed but programmatically enabled tells a screen reader nothing</td><td>0 of 71 files</td><td><span class="tag gap">Partly fixed — see §4</span></td></tr>
+<tr><td><strong>Loading / busy</strong></td><td><code>AppButton busy</code> and <code>SkeletonList</code> exist and are visual only — no <code>aria-busy</code>, no live region. A screen reader user gets silence while a section submits</td><td>5 production files use the busy state</td><td><span class="tag gap">Missing, required</span></td></tr>
+<tr><td><strong>Error messaging</strong></td><td><code>StateMessage</code> renders errors as static text. Not announced; "Tap to retry" is the only affordance and is mouse-worded</td><td>4 surfaces</td><td><span class="tag gap">Missing, required</span></td></tr>
+<tr><td><strong>Motion</strong></td><td>Six keyframes, a pulsing busy button, spinners and 500ms score fills. No motion preference respected anywhere</td><td><code>app.css</code>, <code>AppButton</code></td><td><span class="tag gap">Fixed this phase</span></td></tr>
+<tr><td><strong>Screen reader behaviour</strong></td><td>Never tested with an actual screen reader</td><td>—</td><td><span class="tag neu">Unknown</span></td></tr>
+</table>
+
+<h2><span class="n">2</span>The focus ring — how the value was decided</h2>
+<p>The brief asked for <code>--ui-focus-ring</code> to be treated as a real decision and validated for both themes. It was, and the measurement rules out the obvious answers.</p>
+<h4>Candidate single colours, against the surfaces a focused control sits on</h4>
+<table>
+<tr><th>Candidate</th><th class="num">White card</th><th class="num">Gold CTA</th><th class="num">Navy CTA</th><th class="num">Dark page</th><th>Verdict</th></tr>
+<tr><td>Brand blue <code>#1E76F3</code></td><td class="num">4.25</td><td class="num"><strong>2.34</strong></td><td class="num">3.44</td><td class="num">3.87</td><td><span class="tag gap">Fails on gold</span></td></tr>
+<tr><td>Production <code>#2563EB</code></td><td class="num">5.17</td><td class="num"><strong>2.84</strong></td><td class="num"><strong>2.83</strong></td><td class="num">3.18</td><td><span class="tag gap">Fails on gold and navy</span></td></tr>
+</table>
+<h4>The dual ring, and why it works</h4>
+<table>
+<tr><th>Ring part</th><th class="num">White card</th><th class="num">Gold CTA</th><th class="num">Navy CTA</th><th class="num">Sunken wash</th></tr>
+<tr><td>Navy outer <code>#002856</code></td><td class="num">14.60</td><td class="num">8.02</td><td class="num">1.00</td><td class="num">13.05</td></tr>
+<tr><td>White inner <code>#ffffff</code></td><td class="num">1.00</td><td class="num">1.82</td><td class="num"><strong>14.60</strong></td><td class="num">1.12</td></tr>
+</table>
+<p>The pair is self-covering: wherever one ring disappears the other is at maximum contrast, and the two always contrast with each other at 14.60. Dark theme swaps the outer to gold — 9.03 on the dark page, 8.39 on the dark card, where a navy outer would vanish at 1.13.</p>
+<div class="fx">
+<div><button class="btn" style="background:var(--ui-action-primary-bg);color:var(--ui-action-primary-fg);box-shadow:var(--ui-focus-ring)">Primary action</button>gold CTA · navy outer carries it</div>
+<div><button class="btn" style="background:var(--ui-action-dark-bg);color:#fff;box-shadow:var(--ui-focus-ring)">Dark action</button>navy CTA · white inner carries it</div>
+<div style="background:#002856;border-color:#083262;color:#9fb0c9"><button class="btn" style="background:#083262;color:#e6edf7;box-shadow:0 0 0 2px #002856,0 0 0 4px #edb843">Dark theme</button>gold outer</div>
+</div>
+<p class="note">This is the first token in the system whose value is a decision rather than a reading. It is recorded with its measurements in D-021 so it can be argued with rather than merely accepted.</p>
+
+<h2><span class="n">3</span>Contrast — measured</h2>
+<p class="note">25 pairs computed across both themes. Passing values omitted except where they matter. Full set in the phase log.</p>
+<table>
+<tr><th>Role</th><th>Ships</th><th class="num">On white</th><th class="num">On wash</th><th>Used for</th><th>Measured alternate</th></tr>
+<tr><td><code>--ui-text-faint</code></td><td><code>#94a3b8</code></td><td class="num"><strong>2.56</strong></td><td class="num"><strong>2.29</strong></td><td>Counts, chevrons, "n of m correct"</td><td><code>#646e7c</code> — 5.17 / 4.62</td></tr>
+<tr><td><code>--ui-warning-fg</code></td><td><code>#f97316</code></td><td class="num"><strong>2.80</strong></td><td class="num"><strong>2.51</strong></td><td>Mid score band, "continue" pill</td><td><code>#b25210</code> — 5.11 / 4.57</td></tr>
+<tr><td><code>--ui-danger-fg</code></td><td><code>#ef4444</code></td><td class="num"><strong>3.76</strong></td><td class="num">3.37</td><td>Incorrect verdicts, 11px explanations</td><td><code>#c73939</code> — 5.16 / 4.61</td></tr>
+</table>
+<p><code>--ui-danger-fg</code> is the subtle one: 3.76 passes as a UI component or large text, so a red icon or a 20px heading is fine. It is used as <strong>11px explanation text</strong> on review screens, where 4.5 applies. The value is not wrong; its usage is.</p>
+<div class="callout"><p><strong>Not corrected — staged.</strong> Each alternate is the smallest darkening that clears 4.5:1 on both white and the sunken wash, published as <code>--ui-text-faint-aa</code>, <code>--ui-warning-fg-aa</code> and <code>--ui-danger-fg-aa</code> alongside the shipping values. Changing the app's appearance on the strength of a ratio is a product call (D-005, D-023); approving one is now a one-line swap rather than a colour exercise.</p></div>
+<h4>Two graphical-contrast failures worth naming separately</h4>
+<ul>
+<li><strong>The block progress bar.</strong> Amber fill <code>#fcd34d</code> against zinc track <code>#f4f4f5</code> is <strong>1.31:1</strong>. Progress needs 3:1 against adjacent colours; filled and unfilled segments are close to indistinguishable. Present in eight surfaces.</li>
+<li><strong>The hand-rolled exam ring.</strong> <code>#0BAA45</code> at 3.07 passes as a graphical object — but it renders green at every score (a P1 defect already), so its contrast is the least of that component's problems.</li>
+</ul>
+
+<h2><span class="n">4</span>What changed, and what was left alone</h2>
+<h4>Changed — eight components</h4>
+<table>
+<tr><th>Component</th><th>Change</th><th>Validation</th></tr>
+<tr><td><code>ListRow</code></td><td>Renders <code>&lt;button&gt;</code> when interactive; focus ring on <code>:focus-visible</code>; <code>minHeight</code> bound to <code>--ui-target-min</code></td><td>Converted first, checked against its card — pixel-identical, now tabbable</td></tr>
+<tr><td><code>ChapterRow</code></td><td>Same pattern; locked rows get a real <code>disabled</code>. <strong>Checkpoint:</strong> focus ring applied</td><td>Same pattern, applied after validation</td></tr>
+<tr><td><code>ChapterStrip</code></td><td>Same pattern, plus <code>aria-label</code> — the strip's only text is "Ch. 3", which is not a usable name</td><td>Same</td></tr>
+<tr><td><code>JobStepCard</code></td><td><strong>Opposite fix</strong> — removed the wrapper's <code>onClick</code>. It already contained a real button for the same action; converting the wrapper would have nested two interactive elements</td><td>The exception that made the rule worth stating carefully</td></tr>
+<tr><td><code>AppButton</code></td><td><strong>Checkpoint:</strong> focus ring on <code>:focus-visible</code>. It <em>replaces</em> the resting shadow rather than stacking — both occupy <code>box-shadow</code>, and a shadow under the ring dulls it</td><td>Checked on all four variants × both themes: gold (navy outer carries), navy (white inner carries), white secondary, transparent outline</td></tr>
+<tr><td><code>AppTabBar</code></td><td><strong>Checkpoint:</strong> per-slot focus ring. Inert slots (Coins, the dome outside Guided German, dimmed slots when locked) stay <code>&lt;div&gt;</code> and are deliberately not focusable — they are read-outs</td><td>Ring sits on the 8px slot radius over both the <code>#f4f4f6</code> active wash and white; the raised dome's ring clears the arch overhang</td></tr>
+<tr><td><code>AudioTapButton</code></td><td><strong>Checkpoint:</strong> waveform bars marked <code>data-motion-essential</code> (D-025)</td><td>Reduced-motion on: attention rings stop, waveform keeps running while playing</td></tr>
+<tr><td>Six components + 9 docs</td><td><strong>Checkpoint:</strong> phantom navy removed — <code>#172554</code>/<code>#1e3a8a</code>/<code>#0b1f3d</code>/<code>#0f2547</code> → the app's own <code>#002856</code>/<code>#083262</code> (D-024)</td><td>Each of the four values grepped against <code>SkillCase-Frontend-main</code>: zero occurrences</td></tr>
+</table>
+<h4>Final accessibility tokens — four, not seven</h4>
+<p class="note">Three were withdrawn at the checkpoint as plausible numbers rather than readings or standards (D-026). A token is not validated because a component <em>can</em> consume it.</p>
+<table>
+<tr><th>Token</th><th>Value</th><th>Class</th><th>Consumed by</th></tr>
+<tr><td><code>--ui-focus-ring</code></td><td>dual ring, per theme</td><td><strong>New SkillCase design decision</strong> — measured, D-021</td><td>AppButton, AppTabBar, ListRow, ChapterRow, ChapterStrip</td></tr>
+<tr><td><code>--ui-target-min</code></td><td>44px</td><td><strong>Required standard</strong> — platform minimum</td><td>ListRow, ChapterRow, ChapterStrip</td></tr>
+<tr><td><code>--ui-dur-*</code> under reduced motion</td><td>1ms × 3</td><td><strong>Evidence-backed</strong> — six shipped keyframes, pulse, spin</td><td>The global block; <code>MetricBar</code>, <code>SkeletonList</code>, <code>AppButton busy</code>, <code>AudioTapButton</code></td></tr>
+<tr><td><s><code>--ui-focus-ring-width</code></s></td><td><s>4px</s></td><td><strong>Withdrawn</strong> — derived from a composite <code>box-shadow</code>; nothing could consume it meaningfully</td><td>—</td></tr>
+<tr><td><s><code>--ui-focus-ring-offset</code></s></td><td><s>2px</s></td><td><strong>Withdrawn</strong> — same</td><td>—</td></tr>
+<tr><td><s><code>--ui-target-comfortable</code></s></td><td><s>48px</s></td><td><strong>Withdrawn</strong> — invented second tier; production has one target rule</td><td>—</td></tr>
+</table>
+<h4>Reduced-motion verification</h4>
+<table>
+<tr><th>Component</th><th>Motion</th><th>Under reduced motion</th></tr>
+<tr><td><code>ScoreRing</code></td><td><strong>None.</strong> No transition; the arc renders at its final offset</td><td>Unchanged — nothing to clamp. Corrects an earlier report of a "500ms fill"</td></tr>
+<tr><td><code>MetricBar</code></td><td><code>width .5s</code></td><td>Clamped to .01ms — the bar appears at its value</td></tr>
+<tr><td><code>AppButton busy</code></td><td><code>sc-btn-pulse</code>, infinite</td><td>Stopped at one iteration; the blue busy fill still reads as busy, so no state is lost</td></tr>
+<tr><td><code>SkeletonList</code></td><td><code>sc-skeleton-pulse</code>, infinite</td><td>Stopped — static grey blocks. Layout still says "loading"; logged P3 because combined with the missing <code>aria-busy</code> it leaves a screen-reader user with nothing</td></tr>
+<tr><td><code>AudioTapButton</code> rings</td><td><code>scPing</code>, <code>scPulse</code>, infinite</td><td>Stopped — correct, decorative attention motion</td></tr>
+<tr><td><code>AudioTapButton</code> bars</td><td><code>scBar</code>, infinite while playing</td><td><strong>Exempt</strong> (D-025) — stopping them removed the only "is playing" indicator</td></tr>
+</table>
+<h4>New system rules and tokens</h4>
+<dl>
+<dt>Focus</dt><dd><code>--ui-focus-ring</code>, dual, per theme. Never <code>outline: none</code> without a replacement.</dd>
+<dt>Target size</dt><dd><code>--ui-target-min</code> 44px — tokenised so the rule is checkable rather than remembered.</dd>
+<dt>Motion</dt><dd>A <code>prefers-reduced-motion</code> block. Transitions are <em>shortened</em>, not removed — a 0ms transition can make a state change imperceptible, which is its own accessibility problem. Looping decorative animation stops outright; motion carrying state opts out with <code>data-motion-essential</code>.</dd>
+<dt>Contrast</dt><dd>Three <code>-aa</code> alternates, staged.</dd>
+</dl>
+<h4>Deliberately not done</h4>
+<ul>
+<li><strong>No blanket ARIA sweep.</strong> Adding <code>role</code> and <code>aria-label</code> to components that are already real buttons with real text makes them worse, not better. ARIA was added in exactly one place, where the visible text ("Ch. 3") is not a usable name.</li>
+<li><strong>No live-region component.</strong> Announcing busy and error states is genuinely required, but it is a <em>pattern</em> spanning <code>AppButton busy</code>, <code>SkeletonList</code> and <code>StateMessage</code> — and the right shape depends on how screens compose them. Building it now would be guessing. Recorded as the top phase-8 input.</li>
+<li><strong>No contrast corrections applied.</strong> Staged, per above.</li>
+<li><strong>No target-size or text-size changes.</strong> Both are product decisions on faithfully-reproduced values.</li>
+<li><strong>No focus ring on an input.</strong> The checkpoint asked for one and there is no input to put it on: the only field component is the imported Untitled UI <code>InputField</code> sprite, not a SkillCase-authored control. Production already ships a real, consistent focus treatment for fields (<code>focus:ring-2 focus:ring-blue-600</code>) — text fields are the one control class that is <em>not</em> broken today. Recorded as open question 11 rather than forced.</li>
+</ul>
+
+<h2><span class="n">5</span>Defects raised</h2>
+<p class="note">Engineering issues, in <code>guidelines/defects.md</code>. The system-side fixes above do not fix the product.</p>
+<table>
+<tr><th>Severity</th><th>Defect</th></tr>
+<tr><td><strong>P1</strong></td><td>Focus is removed product-wide (<code>outline-none</code>, ~40 instances) with no replacement. The app is not keyboard-operable in any visible sense.</td></tr>
+<tr><td><strong>P2</strong></td><td>Selectable rows are clickable <code>&lt;div&gt;</code>s across ten-plus surfaces — not tabbable, not activatable by keyboard.</td></tr>
+<tr><td><strong>P2</strong></td><td>No <code>prefers-reduced-motion</code> handling anywhere, against six keyframes plus pulse and spin animations.</td></tr>
+<tr><td><strong>P2</strong></td><td>Block progress bar fill-to-track contrast is 1.31:1 — filled and unfilled segments are barely distinguishable. Eight surfaces.</td></tr>
+<tr><td><strong>P3</strong></td><td>Locked and disabled states are visual only; no <code>aria-disabled</code>, so assistive tech is told nothing.</td></tr>
+<tr><td><strong>P3</strong></td><td>Busy and error states are not announced — silence during submission and on failure.</td></tr>
+</table>
+
+<h2><span class="n">6</span>Maturity</h2>
+<div class="verdict"><b>Accessibility 2 → 5 / 10</b>
+<p><strong>What earned it.</strong> The foundations now exist and are validated rather than asserted: a focus rule with measurements behind it, applied to and checked on five real control surfaces across both themes; a target-size rule that is checkable; a motion rule justified by the animations actually shipping and corrected where the rule itself broke a component. Keyboard operability is correct in all 71 components.</p>
+<p><strong>What keeps it at 5.</strong> Three known contrast failures remain live by decision. Nothing has been tested with an actual screen reader. Busy and error states are still silent, which is a real barrier and not a small one. And every fix here is in the design system — <strong>the product is unchanged</strong>, and its P1 focus removal is untouched.</p>
+<p class="note" style="margin-bottom:0">Overall system maturity 6.0 → <strong>6.4</strong>. Accessibility 2→5; components 8 unchanged (the fixes corrected regressions rather than adding capability). The checkpoint did not raise the score: withdrawing three tokens and correcting a phantom colour makes the system more honest, not more capable.</p></div>
+
+<div class="callout"><p><strong>Phase 7 is closed.</strong> What it genuinely established: one measured focus decision applied to five controls; one target rule; one motion rule with a stated exemption test; contrast measured across both themes with three remedies staged; and eight defects raised against the product. What remains provisional: nothing in the token set — the provisional entries were withdrawn rather than promoted. What remains <em>unknown</em>: screen-reader behaviour, which no amount of code reading settles.</p></div>
+
+<h2><span class="n">7</span>Open decisions</h2>
+<ol>
+<li><strong>Approve the three AA colour corrections?</strong> Measured and staged; they change the app's appearance slightly.</li>
+<li><strong>Does <code>AppButton sm</code> stay at 36px?</strong> Either it grows to 44, or it is documented as non-touch-only.</li>
+<li><strong>Do the 8px captions stay?</strong> Both are secondary to a number that is already large and legible — a defensible position, but it should be taken deliberately.</li>
+<li><strong>Is a screen-reader pass in scope?</strong> Until one happens, that row stays <span class="tag neu">unknown</span> and no score above 6 is honest.</li>
+</ol>
+<p class="note">Highest-leverage phase 8 input: the announcement pattern for busy and error states. It spans three existing components and should be designed once, as a pattern, when templates are.</p>
+
+</body></html>

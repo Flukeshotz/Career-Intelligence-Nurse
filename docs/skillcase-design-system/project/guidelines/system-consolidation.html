@@ -1,0 +1,162 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>SkillCase — system consolidation report</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+:root{--ink:#002856;--mute:#5b6472;--line:#dfe5ec;--navy:#002856;--gold:#eec139;--green:#166534;--rose:#b91c1c;--wash:#f6f8fb}
+*{box-sizing:border-box}
+html,body{margin:0;background:#fff;color:var(--ink);font-family:var(--font-family,system-ui,sans-serif);-webkit-font-smoothing:antialiased}
+body{max-width:1180px;margin:0 auto;padding:56px 40px 96px;font-size:15px;line-height:1.62}
+a{color:#1e5fbf}a:hover{color:#002856}
+h1{font-size:38px;line-height:1.12;letter-spacing:-.02em;margin:0 0 10px}
+.lede{font-size:17px;color:var(--mute);max-width:76ch;margin:0 0 8px;text-wrap:pretty}
+.stamp{font-size:12px;color:var(--mute);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;margin:26px 0 44px;display:flex;flex-wrap:wrap;gap:8px 26px}
+h2{font-size:13px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--navy);margin:56px 0 6px;padding-bottom:8px;border-bottom:2px solid var(--navy)}
+h2 .n{color:var(--gold);margin-right:10px}
+h3{font-size:19px;margin:32px 0 4px;letter-spacing:-.01em}
+h3 code,h4 code{font-size:15px;background:var(--wash);border:1px solid var(--line);border-radius:5px;padding:2px 7px;font-weight:600;color:var(--navy)}
+h4{font-size:15px;margin:22px 0 2px}
+p{margin:10px 0;text-wrap:pretty}
+.note{font-size:14px;color:var(--mute);margin:2px 0 14px}
+table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:13.5px}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{background:var(--wash);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);font-weight:700;white-space:nowrap}
+td code,p code,li code,dd code{background:var(--wash);border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:12.5px;color:var(--navy)}
+dl{margin:14px 0;display:grid;grid-template-columns:150px 1fr;gap:0}
+dl>dt{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--mute);font-weight:700;padding:9px 14px 9px 0;border-top:1px solid var(--line)}
+dl>dd{margin:0;padding:9px 0;border-top:1px solid var(--line)}
+dl>dt:first-of-type,dl>dd:first-of-type{border-top:none}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:99px;white-space:nowrap}
+.ok{background:#dcfce7;color:var(--green)}
+.gap{background:#fee2e2;color:var(--rose)}
+.part{background:#fef3c7;color:#92400e}
+.clar{background:#e0e7ff;color:#3730a3}
+.callout{border-left:3px solid var(--gold);background:#fffdf5;padding:14px 18px;margin:20px 0;font-size:14px}
+.callout strong{color:var(--navy)}
+.hero{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:22px 0}
+.hero div{background:#fff;padding:18px 20px}
+.hero b{display:block;font-size:30px;letter-spacing:-.02em;color:var(--navy);line-height:1.1}
+.hero span{font-size:12px;color:var(--mute);display:block;margin-top:4px}
+ul,ol{margin:10px 0;padding-left:22px}
+li{margin:5px 0;text-wrap:pretty}
+.evid{font-size:13px;background:var(--wash);border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:12px 0}
+.evid b{color:var(--navy);font-size:11px;letter-spacing:.07em;text-transform:uppercase}
+</style></head><body>
+
+<h1>System consolidation report</h1>
+<p class="lede">Phase 1 of the operating model: understand and validate before extending. This report does not add screens. It answers one question with evidence — <em>how much of the un-audited product is genuinely new design work, and how much is already covered by the system?</em> The answer changes the plan substantially.</p>
+<div class="stamp"><span><strong>Method</strong> Audit-first, code as behavioural truth</span><span><strong>Scope</strong> The ~30 un-audited surfaces</span><span><strong>Date</strong> 26 Aug 2026</span><span><strong>Status</strong> Findings for approval — nothing built</span></div>
+
+<h2><span class="n">1</span>Headline: the remaining scope was overstated</h2>
+<p>I previously told you roughly 30 surfaces remained. That number counted <em>routes</em>, and routes are a poor proxy for design work. Read against the code, the same territory collapses into a much smaller set of patterns.</p>
+<div class="hero">
+<div><b>~30</b><span>Surfaces I previously quoted</span></div>
+<div><b>10</b><span>Collapse into one existing template</span></div>
+<div><b>9</b><span>Collapse into two exam patterns</span></div>
+<div><b>~11</b><span>Genuinely distinct surfaces left</span></div>
+</div>
+<p>The system is further along than the route count implies, because the product itself is more systematic than the route count implies. Two findings drive this.</p>
+
+<h2><span class="n">2</span>Finding A — the A1/A2 module screens are one template, accidentally forked</h2>
+<div class="evid"><b>Evidence</b><br>
+<code>pages/a1/</code> and <code>pages/a2/</code> are structural mirrors: flashcard, grammar, listening, reading, speaking, test — each with a Select and a Content screen. All ten Select screens render from <code>ChapterSelectTemplate</code>. But there are <strong>two copies of that template</strong>: <code>components/a1/ChapterSelectTemplate.jsx</code> (191 lines) and <code>components/a2/ChapterSelectTemplate.jsx</code> (185 lines).</div>
+<p>I compared them line by line. They are near-identical. The only differences:</p>
+<table>
+<tr><th>Difference</th><th>A1</th><th>A2</th><th>Classification</th></tr>
+<tr><td>Level heading</td><td>Hard-coded <code>A1</code></td><td>Hard-coded <code>A2</code></td><td><span class="tag part">Accidental</span> should be a prop</td></tr>
+<tr><td>Chapter numbering</td><td><code>chapter.module_number || index+1</code></td><td><code>index+1</code> only</td><td><span class="tag gap">Behavioural drift</span> A2 mislabels chapters when the server's numbering is sparse</td></tr>
+<tr><td>Tour anchor id</td><td><code>A1-chapter-list</code></td><td><code>a2-chapter-list</code></td><td><span class="tag part">Accidental</span> casing inconsistency</td></tr>
+<tr><td>Everything else</td><td colspan="2">Identical — 140 px header image, the 30 px level heading, the 50 px-wide chapter progress carousel, the <code>#019035</code>/<code>#edb843</code> fill logic, the badge styles, the six-row skeleton loader</td><td><span class="tag ok">Same</span></td></tr>
+</table>
+<p><strong>Classification: accidental inconsistency, not intentional product behaviour.</strong> The A2 copy is a fork of the A1 file that then drifted. The evidence is that the drift is asymmetric and non-semantic — nobody deliberately decides that A2 should number chapters differently from A1.</p>
+<div class="callout"><p><strong>The design system already covers this.</strong> <code>ModuleTopBar</code>, <code>LevelHero</code>, <code>ChapterStrip</code> and <code>ChapterRow</code> were ported from the A1 template in an earlier pass. All ten Select screens are therefore <em>already representable</em> — they need a <code>level</code> prop, not new design.</p></div>
+<h4>Recommendation</h4>
+<p>Add <code>level</code> to <code>LevelHero</code> (it currently hard-codes its heading, mirroring the source's flaw) and document the module-select pattern as one template with a level parameter. Report the A2 chapter-numbering divergence to engineering as an implementation bug — <strong>do not encode it in the design system</strong>. A design system that faithfully reproduces a copy-paste bug has documented an accident as a rule.</p>
+<dl>
+<dt>Confidence</dt><dd>High — the two files were read and compared directly.</dd>
+<dt>Impact</dt><dd>10 surfaces move from "needs design" to "covered, needs one prop".</dd>
+<dt>Reversibility</dt><dd>Easy.</dd>
+<dt>Needs a human</dt><dd>Yes — the numbering divergence is a product/engineering call, not mine to silently normalise.</dd>
+</dl>
+
+<h2><span class="n">3</span>Finding B — the exam flow is two patterns, not ten screens</h2>
+<div class="evid"><b>Evidence</b><br>
+<code>pages/b1/exams/</code> holds twelve files: <code>ExamSelect</code>, <code>PaperSelect</code>, <code>ExamBlockSelector</code>, <code>ExamCongratulations</code>, and then a strict <code>{Skill}Workspace</code> + <code>{Skill}Results</code> pair for Reading, Writing, Listening and Speaking. The results screens import shared parts from a <em>different</em> feature: <code>ScoreRing</code>, <code>MetricBar</code>, <code>AudioPlayer</code> and <code>OcrModal</code> all come from <code>pages/b1/describe-speak/components/</code>, plus <code>components/b1/UmlautKeyboard</code>.</div>
+<p>So the exam surface decomposes as:</p>
+<table>
+<tr><th>Layer</th><th>Count</th><th>What varies</th></tr>
+<tr><td>Selection chrome</td><td>3</td><td>Exam type → paper → block. Almost certainly one list pattern, three data sources.</td></tr>
+<tr><td><strong>Workspace pattern</strong></td><td>4 instances</td><td>Reading and Listening are question-answering; Writing adds the umlaut keyboard and OCR; Speaking adds recording. Shared spine, four input modes.</td></tr>
+<tr><td><strong>Results pattern</strong></td><td>4 instances</td><td>All four build on <code>ScoreRing</code> + <code>MetricBar</code>. Writing and Speaking add AI feedback; Reading and Listening are objectively marked.</td></tr>
+<tr><td>Terminal</td><td>1</td><td>Congratulations.</td></tr>
+</table>
+<p>Critically, <code>ScoreRing</code> and <code>MetricBar</code> are <strong>already shared between Describe &amp; Speak and the exams</strong> in production. That is not accidental duplication — it is the product's own evidence that a scoring pattern exists and is reused. It is the single strongest candidate for a design-system pattern in the un-audited territory.</p>
+<h4>Recommendation</h4>
+<p>Treat the exam surface as <strong>audit-first</strong> per §24 — the behavioural model is substantial, and I have not yet traced timing, autosave, submission, or how a part-finished paper resumes. But design it as <em>two parameterised patterns plus a scoring kit</em>, not ten screens. Extracting <code>ScoreRing</code>, <code>MetricBar</code> and <code>AudioPlayer</code> first would serve the exams, Describe &amp; Speak, and Speaking practice simultaneously.</p>
+<dl>
+<dt>Confidence</dt><dd>Medium-high on the structure; <strong>low on behaviour</strong> — I have read the imports and file topology, not the workspace internals.</dd>
+<dt>Unknown</dt><dd>Timing/countdown behaviour, autosave, resume-a-paper, partial submission, whether exams are gated by usage limits (<code>useUsageLimitModule</code> appears in <code>ExamSelect</code> and <code>PaperSelect</code>, so probably yes).</dd>
+<dt>Assumption</dt><dd>That the four workspaces share a spine. Plausible from naming and imports; <strong>not verified</strong>. If false, the exam estimate roughly doubles.</dd>
+</dl>
+
+<h2><span class="n">4</span>Revised scope</h2>
+<table>
+<tr><th>Surface</th><th>Real design work</th><th>Status</th></tr>
+<tr><td>A1/A2 module Select ×10</td><td>One template + <code>level</code> prop</td><td><span class="tag ok">Covered</span></td></tr>
+<tr><td>A1/A2 module Content ×10</td><td>Six content types (flashcard, grammar, listening, reading, speaking, test) — level-independent</td><td><span class="tag part">6 patterns, not 10 screens</span></td></tr>
+<tr><td>Exam workspaces ×4</td><td>One pattern, four input modes</td><td><span class="tag gap">Audit-first</span></td></tr>
+<tr><td>Exam results ×4</td><td>One pattern + scoring kit (already shared in prod)</td><td><span class="tag gap">Extract kit first</span></td></tr>
+<tr><td>Exam selection ×3 + congrats</td><td>One list pattern + one terminal</td><td><span class="tag part">Likely trivial</span></td></tr>
+<tr><td>Describe &amp; Speak</td><td>Shares the scoring kit</td><td><span class="tag part">Partly covered by the above</span></td></tr>
+<tr><td>Talk to Maya</td><td>Genuinely distinct — live conversation</td><td><span class="tag gap">Audit-first</span></td></tr>
+<tr><td>Read &amp; Listen (4 screens)</td><td>Distinct content-reader pattern</td><td><span class="tag gap">New</span></td></tr>
+<tr><td>Profile, manage plan, transactions</td><td>Settings/list patterns; upgrade is already built</td><td><span class="tag part">Breadth-first suitable</span></td></tr>
+<tr><td>News, notes, video courses, stories, conversations, events</td><td>All list → detail. Strong candidate for <em>one</em> content-list pattern with variants</td><td><span class="tag part">Consolidation opportunity</span></td></tr>
+<tr><td>Login, sign-up, terms signing</td><td>Form patterns; <code>SignatureModal</code> already exists for terms</td><td><span class="tag part">Partly covered</span></td></tr>
+<tr><td>Support widget, product tour</td><td>Cross-cutting overlays</td><td><span class="tag gap">New — and the tour affects every screen</span></td></tr>
+</table>
+
+<h2><span class="n">5</span>System-level gaps this exposes</h2>
+<p class="note">Reported as gaps per §22, not built.</p>
+<h4>Gap 1 — no loading, empty or error primitives</h4>
+<p><strong>Requirement:</strong> every list surface in the product has a skeleton loader; <code>ChapterSelectTemplate</code> ships a six-row pulsing skeleton, and the lesson flow has bare "Loading Lesson…" text and an error branch including a 409 "not available yet" case. <strong>Existing:</strong> nothing. The system has 86 components and <em>not one</em> loading, empty or error state. <strong>Why insufficient:</strong> these are the most-repeated states in the product and the least designed. <strong>Recommendation:</strong> extract three primitives before adding any new surface — they will be needed by all ~11 remaining ones. <strong>Systemic? Yes. Confidence: high.</strong></p>
+<h4>Gap 2 — the scoring kit is a pattern the system doesn't have</h4>
+<p><strong>Requirement:</strong> <code>ScoreRing</code> + <code>MetricBar</code> + <code>AudioPlayer</code>, already shared across exams and Describe &amp; Speak in production. <strong>Existing:</strong> nothing comparable. <strong>Recommendation:</strong> extract as a pattern. This is the clearest evidence-backed componentisation opportunity in the codebase — reuse is already proven, so §15's bar is met. <strong>Systemic? Yes. Confidence: high.</strong></p>
+<h4>Gap 3 — <code>LevelHero</code> inherits a hard-coded level</h4>
+<p><strong>Requirement:</strong> one heading component serving A1, A2, B1, B2. <strong>Existing:</strong> <code>LevelHero</code>, which reproduces the source's hard-coded string. <strong>Recommendation:</strong> parameterise. <strong>Systemic? Yes. Confidence: high. Reversibility: easy.</strong></p>
+<h4>Gap 4 — the product tour is invisible to the system</h4>
+<p><strong>Requirement:</strong> <code>tourSteps.js</code>, <code>A1ProductTour</code>, <code>A2ProductTour</code>, <code>B1ProductTour</code> and the lesson flow's <code>TapGuideOverlay</code> attach spotlights to anchor ids across many screens. <strong>Existing:</strong> nothing; and the Guided German audit already flagged the intro spotlight as undrawn. <strong>Why it matters:</strong> a tour overlay is a cross-cutting state on screens the system claims to have covered — every "represented" screen has an undocumented second state. <strong>Recommendation:</strong> one overlay primitive plus a documented anchor-id convention. <strong>Systemic? Yes. Confidence: medium</strong> — I have not read the tour engine.</p>
+
+<h2><span class="n">6</span>Decision log</h2>
+<table>
+<tr><th>Decision</th><th>Evidence</th><th>Confidence</th><th>Impact</th><th>Reversibility</th></tr>
+<tr><td>App-specific primitives keep their names</td><td>1:1 map to shipped code; 55 <code>.d.ts</code> notes cite source files</td><td>High</td><td>Whole library</td><td>Moderate</td></tr>
+<tr><td>The two <code>ChapterSelectTemplate</code> copies are an accidental fork</td><td>Direct line-by-line comparison; asymmetric non-semantic drift</td><td>High</td><td>10 surfaces</td><td>Easy</td></tr>
+<tr><td>A2 chapter numbering is a bug, not a rule — escalate, don't encode</td><td>A1 honours <code>module_number</code>, A2 ignores it</td><td>Medium-high</td><td>1 component</td><td>Easy</td></tr>
+<tr><td>Exam surface = 2 patterns + scoring kit</td><td>File topology and shared imports from describe-speak</td><td>Medium</td><td>9 surfaces</td><td>Moderate</td></tr>
+<tr><td>Extract loading/empty/error before new surfaces</td><td>Present in every traced surface; absent from all 86 components</td><td>High</td><td>All future work</td><td>Easy</td></tr>
+<tr><td>Exams get audit-first; profile and content get breadth-first</td><td>§24 — complexity-matched strategy</td><td>Medium</td><td>Sequencing</td><td>Easy</td></tr>
+</table>
+
+<h2><span class="n">7</span>Self-evaluation against the audited flows</h2>
+<p class="note">§38 requires validating the system against known-good cases rather than generating more components. Run against Guided German, the one complete audit.</p>
+<table>
+<tr><th>Question</th><th>Answer</th></tr>
+<tr><td>Did the system reproduce existing UI accurately?</td><td><strong>Mostly.</strong> 15 screens match. Two known errors were caught and fixed only when checked against a real screenshot (the job welcome screen) — meaning fidelity was assumed, not verified, on surfaces without screenshots.</td></tr>
+<tr><td>Did it preserve intentional differences?</td><td><strong>Yes</strong> — three separate verdict surfaces were kept distinct rather than merged into one component with a colour prop.</td></tr>
+<tr><td>Did it miss states?</td><td><strong>Yes, systematically.</strong> The audit found the kit draws end states and omits opening states: disabled CTAs, audio-playing, drag-in-progress, committed turns. The bias is toward the screenshot-worthy state.</td></tr>
+<tr><td>Did it create unnecessary variants?</td><td><strong>No evidence of it.</strong> But <code>LevelHero</code> shows the opposite failure — reproducing a source flaw instead of parameterising.</td></tr>
+<tr><td>Did it correctly identify reusable patterns?</td><td><strong>Partly.</strong> The lesson primitives were extracted well. The scoring kit — reused in production — was missed entirely until this pass.</td></tr>
+</table>
+<p><strong>The lesson for the remaining work:</strong> the system's weakness is not coverage, it is <em>state completeness</em> and <em>verified fidelity</em>. Adding eleven more surfaces at the current standard would multiply that debt. Extracting the three missing state primitives first is the higher-value move.</p>
+
+<h2><span class="n">8</span>Recommended sequence — for approval</h2>
+<ol>
+<li><strong>Extract the state primitives</strong> — loading skeleton, empty state, error state. Needed by every remaining surface. Small, high leverage.</li>
+<li><strong>Extract the scoring kit</strong> — <code>ScoreRing</code>, <code>MetricBar</code>, <code>AudioPlayer</code>. Proven reuse; unblocks exams, Describe &amp; Speak and Speaking practice at once.</li>
+<li><strong>Parameterise <code>LevelHero</code></strong> and document the module-select template. Closes 10 surfaces cheaply.</li>
+<li><strong>Audit the exam flow</strong> properly — workspace behaviour, timing, autosave, resume, submission. Then design two patterns.</li>
+<li><strong>Backfill the missing states</strong> in Guided German from the audit's gap list.</li>
+<li>Then breadth-first on profile and the content surfaces, looking for the one content-list pattern.</li>
+</ol>
+<p class="note"><strong>Awaiting your call on two things I should not decide alone:</strong> whether the A2 chapter-numbering divergence is genuinely a bug (I believe it is, but it is a product judgement), and whether you want step 1–3 done first as I recommend, or the exam audit brought forward because it is the larger business priority.</p>
+
+</body></html>

@@ -1,0 +1,295 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>SkillCase design system — consolidation</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+:root{--ink:#002856;--mute:#5b6472;--line:#dfe5ec;--navy:#002856;--gold:#eec139;--green:#166534;--rose:#b91c1c;--wash:#f6f8fb}
+*{box-sizing:border-box}
+html,body{margin:0;background:#fff;color:var(--ink);font-family:var(--font-family,system-ui,sans-serif);-webkit-font-smoothing:antialiased}
+body{max-width:1180px;margin:0 auto;padding:56px 40px 96px;font-size:15px;line-height:1.62}
+a{color:#1e5fbf}a:hover{color:#002856}
+h1{font-size:38px;line-height:1.12;letter-spacing:-.02em;margin:0 0 10px}
+.lede{font-size:17px;color:var(--mute);max-width:76ch;margin:0 0 8px;text-wrap:pretty}
+.stamp{font-size:12px;color:var(--mute);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;margin:26px 0 44px;display:flex;flex-wrap:wrap;gap:8px 26px}
+h2{font-size:13px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--navy);margin:56px 0 6px;padding-bottom:8px;border-bottom:2px solid var(--navy)}
+h2 .n{color:var(--gold);margin-right:10px}
+h3{font-size:20px;margin:34px 0 4px;letter-spacing:-.01em}
+h4{font-size:14px;margin:22px 0 2px;color:var(--navy);letter-spacing:.01em}
+h3 code{font-size:15px;background:var(--wash);border:1px solid var(--line);border-radius:5px;padding:2px 7px;font-weight:600;color:var(--navy)}
+p{margin:10px 0;text-wrap:pretty}
+.note{font-size:14px;color:var(--mute);margin:2px 0 14px}
+table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:13px}
+th,td{text-align:left;vertical-align:top;padding:8px 11px;border-bottom:1px solid var(--line)}
+th{background:var(--wash);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);font-weight:700;white-space:nowrap}
+td code,p code,li code,dd code{background:var(--wash);border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:12px;color:var(--navy)}
+dl{margin:14px 0;display:grid;grid-template-columns:190px 1fr;gap:0}
+dl>dt{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--mute);font-weight:700;padding:9px 14px 9px 0;border-top:1px solid var(--line)}
+dl>dd{margin:0;padding:9px 0;border-top:1px solid var(--line)}
+dl>dt:first-of-type,dl>dd:first-of-type{border-top:none}
+.tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:99px;white-space:nowrap}
+.ok{background:#dcfce7;color:var(--green)}
+.gap{background:#fee2e2;color:var(--rose)}
+.part{background:#fef3c7;color:#92400e}
+.clar{background:#e0e7ff;color:#3730a3}
+.neu{background:#eef1f5;color:#414651}
+.callout{border-left:3px solid var(--gold);background:#fffdf5;padding:14px 18px;margin:20px 0;font-size:14px}
+.callout strong{color:var(--navy)}
+ul,ol{margin:10px 0;padding-left:22px}
+li{margin:5px 0;text-wrap:pretty}
+.hero{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:22px 0}
+.hero>div{background:var(--wash);border:1px solid var(--line);border-radius:12px;padding:16px 14px}
+.hero b{display:block;font-size:30px;letter-spacing:-.02em;color:var(--navy);line-height:1.1}
+.hero span{display:block;font-size:11.5px;color:var(--mute);margin-top:5px;line-height:1.4}
+.mat{display:grid;grid-template-columns:1fr auto;gap:0 16px;align-items:center;font-size:13.5px;margin:16px 0}
+.mat>div{padding:7px 0;border-top:1px solid var(--line)}
+.mat>div:first-child,.mat>div:nth-child(2){border-top:none}
+.bar{display:flex;align-items:center;gap:10px;min-width:230px}
+.bar i{display:block;height:7px;border-radius:99px;background:var(--navy)}
+.bar u{display:block;height:7px;border-radius:99px;background:#e8edf3;flex:1}
+.bar b{font-size:12px;color:var(--navy);width:38px;text-align:right;font-variant-numeric:tabular-nums}
+.stack{background:var(--wash);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin:18px 0;font-size:14px;line-height:1.9}
+.stack b{color:var(--navy)}
+.stack .lv{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:7px 0;border-top:1px solid var(--line)}
+.stack .lv:first-child{border-top:none}
+.stack .lv span:first-child{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--mute);font-weight:700;padding-top:3px}
+.verdict{border:2px solid var(--navy);border-radius:14px;padding:22px 26px;margin:24px 0}
+.verdict b{display:block;font-size:26px;letter-spacing:-.02em;color:var(--navy);margin-bottom:6px}
+</style></head><body>
+<h1>SkillCase design system — consolidation</h1>
+<p class="lede">Phase 4. No screens were built and no product surface was audited. This report answers one question from the evidence already gathered: <em>what is the actual design system of the SkillCase product?</em> Where the answer is "we do not know", it says so.</p>
+<div class="stamp"><span><strong>Date</strong> 27 Aug 2026</span><span><strong>Method</strong> Code as behavioural truth; Figma as visual reference</span><span><strong>Scope</strong> System definition only</span><span><strong>Nothing refactored in production</strong></span></div>
+
+<h2><span class="n">1</span>Executive summary</h2>
+<p><strong>SkillCase has a real design system, and it is smaller than the component count suggests.</strong> Ninety-three exports resolve to roughly a dozen ideas that recur: a navy hub chrome, a gold primary action, a card-on-wash surface model, a lettered choice row, a status panel, a scored result, and a mascot who speaks. Everything else is those ideas dressed for a product area.</p>
+<p>Three findings shape the phase.</p>
+<div class="callout">
+<p><strong>1. The 838 tokens are 633 tokens.</strong> The figure everyone has been quoting — including earlier reports in this project — is a <em>declaration</em> count. 205 of those declarations are dark-theme redeclarations of names already defined in light. Nothing is wrong; the number was just being read as inventory when it is inventory plus one theme. Corrected throughout below.</p>
+<p><strong>2. Three token layers coexist and none references another.</strong> <code>--colors-*</code> / <code>--component-colors-*</code> (484 light + 205 dark, imported from Untitled UI), <code>--sc-*</code> (102, SkillCase brand), <code>--app-*</code> (47, app geometry and motion). The SkillCase brand values are not wired into the kit's semantic layer — <code>--component-colors-*</code> still points at Untitled UI greys and indigos. Every SkillCase component therefore styles from hex literals or <code>--sc-*</code> directly, bypassing the semantic tier entirely. <strong>This is the single largest structural gap in the system.</strong></p>
+<p><strong>3. The system is ready for some of the product and not for the rest, and the boundary is exactly the audit line.</strong> Guided German, the job pipeline, the payment funnel, the home hub and the B1 exam system can be built from this system today. Profile, content, scholarship and most of A1/A2 cannot, because nobody has read them. The readiness answer is therefore not one word (§12).</p>
+</div>
+
+<h2><span class="n">2</span>Current system inventory</h2>
+<p class="note">Measured 27 Aug 2026, not carried forward. The brief quoted 87 components / 37 cards; both have moved.</p>
+<div class="hero">
+<div><b>633</b><span>Unique tokens<br>(838 declarations)</span></div>
+<div><b>93</b><span>Compiled exports</span></div>
+<div><b>39</b><span>Design-system cards</span></div>
+<div><b>1</b><span>Template<br>(app-screen)</span></div>
+<div><b>11</b><span>Open defects</span></div>
+</div>
+<table>
+<tr><th>Layer</th><th>Count</th><th>Where</th><th>Note</th></tr>
+<tr><td>Untitled UI colour scale</td><td>484 light + 205 dark</td><td><code>tokens/fig-tokens.css</code></td><td>97 are <code>--component-colors-*</code> — a semantic tier SkillCase does not currently consume</td></tr>
+<tr><td>SkillCase brand</td><td>102</td><td><code>tokens/brand.css</code></td><td><code>--sc-navy-900</code>, <code>--sc-green-600</code>, <code>--sc-yellow-500</code>… the values the product actually renders</td></tr>
+<tr><td>App geometry &amp; motion</td><td>47</td><td><code>tokens/app.css</code></td><td>Frame, header, tab bar, radii, gradients, keyframes. Genuinely app-specific and correctly separate</td></tr>
+<tr><td>SkillCase-authored components</td><td>~60</td><td><code>components/{app,lesson,jobs,practice,premium,assessment,exam,state}</code></td><td>Every one traces to a named production file</td></tr>
+<tr><td>Kit-imported primitives &amp; icons</td><td>~33</td><td><code>components/{core,forms,navigation,data-display}</code>, <code>assets/icons</code></td><td>Five are oversized icon sprites — informational, as exported</td></tr>
+</table>
+
+<h2><span class="n">3</span>Canonical hierarchy</h2>
+<div class="stack">
+<div class="lv"><span>Foundations</span><span><b>Colour</b> navy/gold/green triad · <b>Type</b> two families, 15 sizes · <b>Spacing</b> 47 steps · <b>Radius</b> 5 named + 5 app · <b>Elevation</b> 4 shadows · <b>Icons</b> Untitled UI line set + lucide/react-icons in product · <b>Motion</b> 6 keyframes, verbatim from app · <b>Layout</b> 375×844 frame, 16px gutter, fixed chrome heights · <b>Responsive</b> <span class="tag gap">undefined</span></span></div>
+<div class="lv"><span>Tokens</span><span><b>Global</b> <code>--colors-*</code>, <code>--sc-*</code> · <b>Semantic</b> <code>--component-colors-*</code> <span class="tag gap">unwired</span> · <b>Component</b> none authored · <b>Theme</b> <code>:root[data-theme="dark"]</code>, 205 · <b>Data</b> <code>scoreBands.js</code></span></div>
+<div class="lv"><span>Primitives</span><span><code>AppButton</code> · <code>AppBadge</code> · <code>DifficultyBadge</code> · <code>ChoiceRow</code> · <code>CheckItem</code> · <code>WordChip</code> · <code>ExamTimerPill</code> · <code>PlanPill</code> · <code>StateMessage</code> · <code>SkeletonList</code> · kit <code>Tag</code>/<code>InputField</code>/icons</span></div>
+<div class="lv"><span>Components</span><span>~45 SkillCase objects — cards, panels, bars, modals, rows. Each owned by one product system, several shared</span></div>
+<div class="lv"><span>Patterns</span><span>Scored result · Section/step status list · Gate-and-upsell · Mascot address · Timed workspace · Answer review · Booking · Document handling</span></div>
+<div class="lv"><span>Templates</span><span><code>app-screen</code> <span class="tag ok">built</span> · module select <span class="tag part">identified, not built</span> · lesson step, exam workspace, exam results, job step <span class="tag part">evidenced, not built</span></span></div>
+<div class="lv"><span>Product systems</span><span><b>Learning</b> · <b>Jobs</b> · <b>Exams</b> (three sub-systems) · <b>Payments</b> — promoted. <b>Profile</b>, <b>Content</b> — not promoted, no evidence</span></div>
+</div>
+
+<h4>Foundations: what is canonical, and what only looks canonical</h4>
+<table>
+<tr><th>Foundation</th><th>Canonical source</th><th>Confidence</th></tr>
+<tr><td>Colour</td><td><code>--sc-*</code>. Navy <code>#002856</code> is chrome, gold <code>#EDB843</code> is the primary action, green <code>#019035</code>/<code>#0BAA45</code> is success/progress, red <code>#EC463A</code> is error</td><td><span class="tag ok">High</span> — read off the shipping app</td></tr>
+<tr><td>Typography</td><td>Two families with 15 sizes and 14 line-heights from the kit; the product uses a much narrower band (12/14/16/20/24/30px)</td><td><span class="tag part">Medium</span> — kit is wider than usage</td></tr>
+<tr><td>Spacing</td><td>47 steps, 4px base. Product usage clusters at 4/6/8/12/16/20/24</td><td><span class="tag part">Medium</span></td></tr>
+<tr><td>Radius</td><td><code>--app-radius-*</code> is the real set: card 8, media 6, panel 12, pill 200, badge 40</td><td><span class="tag ok">High</span></td></tr>
+<tr><td>Elevation</td><td>4 shadows; the app mostly uses one card shadow and one tab-bar shadow</td><td><span class="tag ok">High</span></td></tr>
+<tr><td>Iconography</td><td><strong>Unresolved.</strong> The kit ships Untitled UI line icons; production imports <code>lucide-react</code>, <code>react-icons/fi</code>, <code>/pi</code>, <code>/ci</code>, <code>/bs</code> — four icon libraries in the exam screens alone</td><td><span class="tag gap">Low</span></td></tr>
+<tr><td>Motion</td><td>6 keyframes lifted verbatim. No duration or easing scale exists</td><td><span class="tag part">Medium</span></td></tr>
+<tr><td>Layout</td><td>375×844 frame, 16px gutter, 44/72/52/88px fixed chrome</td><td><span class="tag ok">High</span></td></tr>
+<tr><td>Responsive</td><td>Production sprinkles <code>lg:</code> overrides ad hoc (<code>max-w-md lg:max-w-none</code>). No rule exists</td><td><span class="tag gap">None</span></td></tr>
+</table>
+<p class="note">No new foundation was created in this phase. Iconography and responsive are recorded as gaps, not filled — filling them would be inventing rules the product has not made.</p>
+
+<h2><span class="n">4</span>Component map</h2>
+<p class="note">Every SkillCase component classified. <em>Uses</em> is contexts in production, not instances. Action vocabulary: Keep · Extend · Document · Local-only · Investigate · Consolidate. Nothing is marked Deprecate — no component in this system is dead.</p>
+
+<h4>Cross-system — the highest-leverage components</h4>
+<table>
+<tr><th>Component</th><th>Category</th><th>Systems</th><th>Uses</th><th>Source</th><th>Conf.</th><th>Action</th></tr>
+<tr><td><code>AppButton</code></td><td>Primitive</td><td>All</td><td>Everywhere</td><td><code>ui/Button.jsx</code></td><td>High</td><td>Keep</td></tr>
+<tr><td><code>AppHeaderBar</code> · <code>AppTabBar</code> · <code>ModeRail</code></td><td>Component</td><td>All hub surfaces</td><td>Shell chrome</td><td><code>NewNavbar</code>, <code>BottomTabBar</code>, <code>TopModeSwitcher</code></td><td>High</td><td>Keep</td></tr>
+<tr><td><code>AppModal</code></td><td>Component</td><td>Payments, Learning, Jobs</td><td>4+</td><td><code>PaywallBlocker</code></td><td>High</td><td>Keep</td></tr>
+<tr><td><code>ScoreRing</code></td><td>Component</td><td>Exams, Learning</td><td>4 (should be 6 — DEF-002)</td><td><code>describe-speak/ScoreRing</code></td><td>High</td><td>Keep</td></tr>
+<tr><td><code>MetricBar</code></td><td>Component</td><td>Exams, Learning</td><td>6</td><td><code>describe-speak/MetricBar</code></td><td>High</td><td>Keep</td></tr>
+<tr><td><code>AudioPlayer</code></td><td>Component</td><td>Exams, Learning</td><td>3</td><td><code>describe-speak/AudioPlayer</code></td><td>High</td><td>Keep</td></tr>
+<tr><td><code>StateMessage</code> · <code>SkeletonList</code></td><td>Primitive</td><td>Exams, Learning, Jobs</td><td>4 · 5</td><td>Repeated markup</td><td>High</td><td>Keep</td></tr>
+<tr><td><code>MayaBubble</code> · <code>MayaPrompt</code> · <code>MayaNote</code></td><td>Pattern members</td><td>Learning, Jobs, Onboarding</td><td>3 contexts</td><td>Frames + <code>MayaDialogueBubble</code></td><td>Medium</td><td><strong>Investigate</strong> — three components for one mascot voice; see §5</td></tr>
+<tr><td><code>FeatureStatusChip</code> · <code>LockGateCard</code></td><td>Component</td><td>Payments, Jobs, Learning</td><td>Entitlement surfaces</td><td><code>ui/FeatureStatusChip</code>, <code>JobsLockedPage</code></td><td>High</td><td><strong>Extend</strong> — unused where needed (DEF-007)</td></tr>
+<tr><td><code>DifficultyBadge</code></td><td>Primitive</td><td>Exams; likely Content</td><td>5</td><td>5 copies of one helper</td><td>High</td><td>Keep</td></tr>
+</table>
+
+<h4>Learning system</h4>
+<table>
+<tr><th>Component</th><th>Category</th><th>Uses</th><th>Conf.</th><th>Action</th></tr>
+<tr><td><code>LessonSheet</code> · <code>LessonProgressBar</code> · <code>LessonFooter</code></td><td>Template parts</td><td>Every lesson screen</td><td>High</td><td>Keep — these are the lesson template's spine</td></tr>
+<tr><td><code>OptionRow</code> · <code>ChoiceRow</code> · <code>WordChip</code></td><td>Primitive</td><td>3 · onboarding+lesson · 2</td><td>High</td><td><strong>Investigate</strong> — <code>OptionRow</code> and <code>ChoiceRow</code> are the same idea in two surfaces (§5)</td></tr>
+<tr><td><code>LessonResultModal</code> · <code>LevelCompleteCard</code></td><td>Component</td><td>2 · 1</td><td>High</td><td>Keep — the audit proved the verdict surfaces deliberately differ</td></tr>
+<tr><td><code>AudioTapButton</code> · <code>ChatBubble</code></td><td>Component</td><td>4 · 1</td><td>High</td><td>Keep · <code>ChatBubble</code> → <strong>Local-only</strong> pending a second use</td></tr>
+<tr><td><code>JourneyCard</code> · <code>LevelLadder</code> · <code>StreakCard</code> · <code>PracticeTile</code> · <code>CourseCard</code></td><td>Component</td><td>Hub surfaces, 1–2 each</td><td>High</td><td>Keep — low reuse but they <em>are</em> the hub's vocabulary</td></tr>
+<tr><td><code>ModuleTopBar</code> · <code>LevelHero</code> · <code>ChapterStrip</code> · <code>ChapterRow</code></td><td>Template parts</td><td>10 module-select screens</td><td>High</td><td><strong>Extend</strong> — <code>LevelHero</code> needs a <code>level</code> prop (§6)</td></tr>
+</table>
+
+<h4>Jobs system</h4>
+<table>
+<tr><th>Component</th><th>Category</th><th>Uses</th><th>Conf.</th><th>Action</th></tr>
+<tr><td><code>StatusPanel</code></td><td>Component</td><td>Most pipeline steps</td><td>High</td><td>Keep — the system's workhorse</td></tr>
+<tr><td><code>StatusChecklist</code> · <code>JobStepCard</code> · <code>JobProgressHeader</code></td><td>Pattern members</td><td>Pipeline-wide</td><td>High</td><td>Keep</td></tr>
+<tr><td><code>SlotPicker</code> · <code>ScheduledCallCard</code> · <code>PointsToRemember</code></td><td>Pattern (booking)</td><td>2 booking flows + reschedules</td><td>High</td><td>Keep — a genuine three-part pattern</td></tr>
+<tr><td><code>UploadRow</code> · <code>DocumentReader</code> · <code>SignatureModal</code></td><td>Pattern (documents)</td><td>2 · 2 · 2</td><td>High</td><td>Keep</td></tr>
+<tr><td><code>DepositGateCard</code> · <code>JobWelcomePanel</code> · <code>JobListingCard</code></td><td>Component</td><td>1 · 1 · 2</td><td>High</td><td><code>DepositGateCard</code> Keep (semantically distinct from the paywall) · others <strong>Local-only</strong></td></tr>
+</table>
+
+<h4>Payments system</h4>
+<table>
+<tr><th>Component</th><th>Category</th><th>Uses</th><th>Conf.</th><th>Action</th></tr>
+<tr><td><code>PaywallPanel</code> · <code>UsageLimitPanel</code> · <code>PremiumPriceCard</code></td><td>Component</td><td>Blocking surfaces</td><td>High</td><td>Keep</td></tr>
+<tr><td><code>PlanSummaryCard</code> · <code>PaymentMethodRow</code> · <code>DarkFeatureList</code></td><td>Component</td><td>Upgrade + trial pages</td><td>High</td><td>Keep</td></tr>
+<tr><td><code>CheckItem</code> · <code>PlanPill</code> · <code>PromoBanner</code></td><td>Primitive / Component</td><td>Many · header · 1</td><td>High</td><td>Keep · <code>PromoBanner</code> <strong>Local-only</strong></td></tr>
+</table>
+
+<h4>Exam system</h4>
+<table>
+<tr><th>Component</th><th>Category</th><th>Uses</th><th>Conf.</th><th>Action</th></tr>
+<tr><td><code>ExamTimerPill</code></td><td>Primitive</td><td>4</td><td>High</td><td>Keep — proposed tones flagged as not-shipped</td></tr>
+<tr><td><code>BlockProgressTrack</code></td><td>Primitive</td><td>8</td><td>High</td><td>Keep</td></tr>
+<tr><td>Section tile</td><td>Screen-specific</td><td>1</td><td>High</td><td><strong>Local-only</strong> — not extracted</td></tr>
+<tr><td>Correct/incorrect/skipped tally</td><td>Pattern candidate</td><td>2 (auto-marked sections only)</td><td>Medium</td><td><strong>Investigate</strong> — deliberately not extracted</td></tr>
+<tr><td>Answer-review row</td><td>Pattern candidate</td><td>2 systems, incompatible shapes</td><td>Low</td><td><strong>Investigate</strong> — blocked on a product ruling (§7)</td></tr>
+</table>
+
+<h2><span class="n">5</span>Variant audit</h2>
+<p class="note">Looking for variant explosion, and for the opposite failure — one idea split across several components because it appeared in several surfaces. SkillCase has almost none of the first and three cases of the second.</p>
+<table>
+<tr><th>Case</th><th>Components</th><th>Reading</th><th>Verdict</th></tr>
+<tr><td>Mascot voice</td><td><code>MayaBubble</code>, <code>MayaPrompt</code>, <code>MayaNote</code></td><td>One character speaking in three registers: onboarding/journey greeting, lesson instruction, pipeline advisory. Visually distinct (bubble with tail · lesson header block · pale strip).</td><td><span class="tag part">Probably one component, three variants</span> — but the three ship different geometry, so merging is a design decision, not a cleanup. Investigate, do not merge.</td></tr>
+<tr><td>Selectable answer row</td><td><code>OptionRow</code>, <code>ChoiceRow</code></td><td>Both are "lettered/labelled row you tap to choose". <code>OptionRow</code> carries correct/incorrect verdicts; <code>ChoiceRow</code> is selection-only (onboarding).</td><td><span class="tag part">Real semantic distinction</span> — verdict state is not a variant of selection. Keep both; document the boundary.</td></tr>
+<tr><td>Gate surfaces</td><td><code>LockGateCard</code>, <code>DepositGateCard</code>, <code>PaywallPanel</code>, <code>UsageLimitPanel</code></td><td>Four "you cannot proceed" surfaces.</td><td><span class="tag ok">Genuinely four things</span> — eligibility, refundable deposit, subscription, rate limit. Different money, different remedy. <strong>Do not merge.</strong></td></tr>
+<tr><td>Score colour bands</td><td>7 rules</td><td>Not variants — competing implementations of one idea.</td><td><span class="tag gap">Debt</span> — see §7</td></tr>
+<tr><td><code>MetricBar</code>, <code>AudioPlayer</code> variants</td><td><code>workspace</code> / <code>compact</code> / <code>review</code></td><td>Density differences tied to context, both observed in production.</td><td><span class="tag ok">Correct</span></td></tr>
+</table>
+
+<h2><span class="n">6</span>State architecture</h2>
+<p class="note">The mandatory distinction. A state is <strong>global</strong> only where the visual treatment, interaction and semantics are shared — not where the word recurs.</p>
+<table>
+<tr><th>State</th><th>Level</th><th>Evidence</th><th>Status</th></tr>
+<tr><td>Loading</td><td><strong>Global primitive</strong></td><td><code>SkeletonList</code> — 5 surfaces, identical markup. Two skeletons deliberately excluded as surface-local.</td><td><span class="tag ok">Settled</span></td></tr>
+<tr><td>Empty</td><td><strong>Global primitive</strong></td><td><code>StateMessage</code> — the centred <code>py-12</code> block, verbatim in 4 select screens.</td><td><span class="tag ok">Settled</span></td></tr>
+<tr><td>Error</td><td><strong>Global primitive</strong></td><td>Same component. Icon + line + "Tap to retry".</td><td><span class="tag ok">Settled</span></td></tr>
+<tr><td>Busy</td><td><strong>Component state</strong></td><td><code>AppButton busy</code> — 5 production files.</td><td><span class="tag ok">Settled</span></td></tr>
+<tr><td>Disabled</td><td><strong>Component state</strong></td><td>Present, but opacity is 50% in one place and 60% in another (DEF-008).</td><td><span class="tag part">Inconsistent</span></td></tr>
+<tr><td>Locked</td><td><strong>Pattern state</strong></td><td>Four different remedies (§5). The <em>lock</em> is shared; the <em>explanation</em> is not.</td><td><span class="tag part">Pattern, not primitive</span></td></tr>
+<tr><td>Selected</td><td><strong>Component state</strong></td><td>Exam section tile, <code>ChoiceRow</code>, <code>OptionRow</code> — three different treatments (navy border · fill · scale+ring).</td><td><span class="tag part">Deliberately local</span></td></tr>
+<tr><td>Correct / Incorrect</td><td><strong>Pattern state</strong></td><td>The Guided German audit proved three verdict surfaces that <em>disagree on purpose</em>. Exams add a fourth (option-level colouring).</td><td><span class="tag gap">Do not unify</span></td></tr>
+<tr><td>Completed</td><td><strong>Pattern state</strong></td><td>Green tick on exam tiles · "done" pill on papers · green fill on chapter strips. Same meaning, three renderings.</td><td><span class="tag part">Candidate</span> — needs a ruling before extraction</td></tr>
+<tr><td>In progress</td><td><strong>Pattern state</strong></td><td>"continue" pill · amber chapter fill · <code>in_progress</code> section status.</td><td><span class="tag part">Candidate</span></td></tr>
+<tr><td>Active</td><td><strong>Surface behaviour</strong></td><td>Tab bar, mode rail, block progress — no shared treatment.</td><td><span class="tag neu">Not systemic</span></td></tr>
+<tr><td>Playing / Recording / Paused</td><td><strong>Component state</strong></td><td><code>AudioPlayer</code>, <code>AudioTapButton</code>, speaking workspace. Owned by their components.</td><td><span class="tag ok">Correctly local</span></td></tr>
+<tr><td>Expired</td><td><strong>Unknown</strong></td><td>Timer expiry auto-submits silently. There is no expired <em>state</em> in the UI — only a consequence.</td><td><span class="tag clar">Unknown</span></td></tr>
+<tr><td>Pending</td><td><strong>Surface behaviour</strong></td><td>Only the generic exam's teacher-marked <code>is_correct === null</code>. One occurrence, undesigned.</td><td><span class="tag clar">Needs design (§10)</span></td></tr>
+</table>
+<div class="callout"><p><strong>Three of fifteen states are global.</strong> That ratio is the finding, not a shortfall. Loading, empty and error are genuinely the same everywhere because they carry no product meaning. Correct, locked and completed carry a great deal of product meaning, and the product has deliberately said different things with them. A system that flattened those would be less accurate than the product it describes.</p></div>
+
+<h2><span class="n">7</span>Scoring architecture</h2>
+<p>Validated across two phases and revised by the exam audit. <strong>Seven scoring rules exist.</strong> The architecture is: components carry no scale; scales are data; the choice of scale is the caller's.</p>
+<table>
+<tr><th>Piece</th><th>Purpose</th><th>Props / variants</th><th>Status</th></tr>
+<tr><td><code>ScoreRing</code></td><td>The headline results readout — circular, arc coloured by band, percentage and label inside</td><td><code>score</code>, <code>label</code>, <code>circleSize</code> (160 default / 120 exam), <code>strokeWidth</code></td><td><span class="tag ok">Validated</span></td></tr>
+<tr><td><code>MetricBar</code></td><td>One scored sub-metric with an <code>n/100</code> readout and filled track</td><td><code>label</code>, <code>score</code>, <code>bands</code>, <code>variant</code>: <code>workspace</code> 12px / <code>compact</code> 6px</td><td><span class="tag ok">Validated</span></td></tr>
+<tr><td><code>AudioPlayer</code></td><td>Recorded-answer playback on speaking workspaces and reviews</td><td><code>variant</code>: <code>workspace</code> / <code>review</code>; states play · playing · replay</td><td><span class="tag ok">Validated</span></td></tr>
+<tr><td><code>scoreBands.js</code></td><td><strong>The source of scoring-band configuration.</strong> Data, not UI — exports are deliberately lower-case so a threshold table is never registered as a component</td><td><code>scoreScales.canonical</code> 70/40 · <code>.greeting</code> 70/50 · <code>.examMetric</code> 75/50 · <code>.scorecard</code> 75/50, plus three non-colour rules recorded in comments</td><td><span class="tag ok">Validated</span></td></tr>
+</table>
+<p>The exam audit is what proved the architecture right: it found three scales beyond the four already known. A component with a baked-in scale could not have reproduced them. <strong>No universal scale has been created and none should be</strong> until the product decides what a pass is (DEF-004).</p>
+
+<h2><span class="n">8</span>Exam architecture</h2>
+<p>Three distinct product systems, correctly represented as three. What they share is chrome, not behaviour.</p>
+<table>
+<tr><th></th><th>System A — B1 papers</th><th>System B — scheduled test</th><th>System C — scholarship</th></tr>
+<tr><td><strong>Route</strong></td><td><code>/b1/exams/*</code></td><td><code>/exam/:testId</code></td><td><code>/scholarship</code></td></tr>
+<tr><td><strong>Model</strong></td><td>Paper → submission → 4 sections → blocks</td><td>Test → questions (14+ types)</td><td>Own funnel + shell chrome</td></tr>
+<tr><td><strong>Marking</strong></td><td>Auto (R/L) + AI with metrics (W/S)</td><td>Auto + <strong>human teacher</strong></td><td><span class="tag clar">Unknown</span></td></tr>
+<tr><td><strong>Verdict</strong></td><td>Per-section %, no pass mark</td><td><code>passed = score >= 60</code></td><td><span class="tag clar">Unknown</span></td></tr>
+<tr><td><strong>Shared with the others</strong></td><td colspan="3"><code>ExamTimerPill</code>, <code>BlockProgressTrack</code>, <code>DifficultyBadge</code>, <code>StateMessage</code>, <code>SkeletonList</code>, <code>AppButton</code>, the scoring kit. <strong>Nothing above the primitive tier is shared</strong> — the answer-review row, the results layout and the completion surface all differ structurally.</td></tr>
+</table>
+<p class="note">System C was mapped at route and shell level only. It is listed for completeness, not because it has been audited.</p>
+
+<h2><span class="n">9</span>Design-system debt</h2>
+<p class="note">Separated by kind, because the owner differs. Engineering defects live in <code>guidelines/defects.md</code> and are referenced here by number, not duplicated.</p>
+<h4>Design-system debt <span class="tag neu">ours to fix</span></h4>
+<table>
+<tr><th>#</th><th>Debt</th><th>Impact</th></tr>
+<tr><td>DS-1</td><td><strong>The semantic token tier is unwired.</strong> 97 <code>--component-colors-*</code> tokens still resolve to Untitled UI values; SkillCase components use <code>--sc-*</code> or hex literals. There is no layer where "primary action" is a name.</td><td><strong>High</strong> — blocks theming, dark mode and any consumer-project adherence check</td></tr>
+<tr><td>DS-2</td><td>No component-token tier at all. Component styling is inline literals.</td><td>Medium</td></tr>
+<tr><td>DS-3</td><td>Iconography undefined — the kit's line set versus four icon libraries in production.</td><td>Medium</td></tr>
+<tr><td>DS-4</td><td>No motion scale (durations, easings) — only 6 verbatim keyframes.</td><td>Low</td></tr>
+<tr><td>DS-5</td><td>No responsive rules; production <code>lg:</code> overrides are ad hoc.</td><td>Medium</td></tr>
+<tr><td>DS-6</td><td>Accessibility requirements are not defined for any component. No focus-visible spec, no contrast audit, no touch-target rule, no ARIA guidance.</td><td><strong>High</strong></td></tr>
+<tr><td>DS-7</td><td>Only one template exists. Five more are evidenced and unbuilt.</td><td>Medium</td></tr>
+<tr><td>DS-8</td><td><code>LevelHero</code> hard-codes its level heading, mirroring the source's flaw.</td><td>Low — one prop</td></tr>
+</table>
+<h4>Engineering defects <span class="tag neu">theirs to fix</span></h4>
+<p>Eleven open, three P1, in <code>guidelines/defects.md</code>. Summary only: two P1s are contradictory score feedback (competing scales; always-green rings), the third is the missing exit guard on a timed section.</p>
+<h4>Product ambiguity <span class="tag neu">needs a decision</span></h4>
+<ul>
+<li>What is a pass? Seven rules, no stated mark.</li>
+<li>Is a B1 exam section pausable?</li>
+<li>Should A1 and A2 number chapters identically? (The fork says no; nobody decided that.)</li>
+<li>Is "completed" one visual idea or three?</li>
+</ul>
+<h4>Documentation issues</h4>
+<ul>
+<li>The "838 tokens" figure was propagated across three reports before this phase caught it.</li>
+<li><code>guidelines/</code> now holds five long-form documents with no index.</li>
+</ul>
+
+<h2><span class="n">10</span>Unknown / unvalidated</h2>
+<p class="note">Explicit, and not filled with assumptions.</p>
+<dl>
+<dt>Not audited at all</dt><dd>Profile and account surfaces · Content/library browsing · Scholarship funnel screens · Talk to Maya (live conversation) · Read &amp; Listen readers · B1 flashcard · admin/authoring surfaces</dd>
+<dt>Partially audited</dt><dd>A1/A2 modules — the ten Select screens are understood via the forked template; the ten Content screens are not. The generic <code>/exam</code> system — routes, result screen and question inventory read; <code>ExamPage</code> surveyed, not traced.</dd>
+<dt>Assumptions, labelled</dt><dd>That every B1 paper has exactly four sections (the code hardcodes the four literals; nothing guarantees the server agrees). That the mascot's three components are one idea. That <code>DifficultyBadge</code> will be needed by Content.</dd>
+<dt>Never verified</dt><dd>Anything server-side: marking logic, entitlement rules, how scores are computed before they reach the client.</dd>
+<dt>Figma coverage</dt><dd>163 kit variables against 633 system tokens. The kit is a visual reference for a subset of the product and has never been treated as complete.</dd>
+</dl>
+
+<h2><span class="n">11</span>Maturity</h2>
+<p class="note">Scored against "can this reliably generate the rest of the product", not against how much work has been done. Deliberately not inflated.</p>
+<div class="mat">
+<div>Foundations — colour, radius, layout and elevation are solid and evidenced; iconography and responsive are undefined</div><div class="bar"><i style="width:126px"></i><u></u><b>7/10</b></div>
+<div>Tokens — complete inventory, correct separation of app geometry, but the semantic tier is unwired (DS-1)</div><div class="bar"><i style="width:108px"></i><u></u><b>6/10</b></div>
+<div>Components — excellent provenance and honest scoping; API depth and prop coherence are uneven</div><div class="bar"><i style="width:126px"></i><u></u><b>7/10</b></div>
+<div>States — three global primitives are right and proven; twelve more states are classified but only partly validated</div><div class="bar"><i style="width:108px"></i><u></u><b>6/10</b></div>
+<div>Patterns — eight identified, none formalised as a documented composition with rules</div><div class="bar"><i style="width:72px"></i><u></u><b>4/10</b></div>
+<div>Templates — one built, five evidenced and unbuilt</div><div class="bar"><i style="width:54px"></i><u></u><b>3/10</b></div>
+<div>Accessibility — essentially undefined. No focus, contrast, target-size or ARIA specification anywhere</div><div class="bar"><i style="width:36px"></i><u></u><b>2/10</b></div>
+<div>Documentation — 39 cards, five audits, a defect register, a governance model; the system's strongest dimension</div><div class="bar"><i style="width:144px"></i><u></u><b>8/10</b></div>
+<div>Cross-product consistency — seven scoring rules, a forked template, three renderings of "completed"</div><div class="bar"><i style="width:72px"></i><u></u><b>4/10</b></div>
+<div>Engineering alignment — every component names its production file; the system reproduces the app rather than an ideal of it</div><div class="bar"><i style="width:144px"></i><u></u><b>8/10</b></div>
+</div>
+<div class="verdict"><b>Overall 5.5 / 10</b>
+<p>A well-evidenced, honestly-scoped system with a thin upper layer. The three largest gaps, in order: <strong>accessibility is undefined</strong> (2/10 — and no amount of provenance compensates for it), <strong>templates barely exist</strong> (3/10, so every new screen is still assembled by hand), and <strong>the semantic token tier is unwired</strong> (DS-1, which is what keeps components on hex literals and makes consistency a matter of discipline rather than structure).</p>
+<p class="note" style="margin-bottom:0">The score is deliberately not averaged upward by the two 8s. Documentation and engineering alignment are the dimensions that make a system trustworthy; they are not the dimensions that make it productive.</p></div>
+
+<h2><span class="n">12</span>Readiness</h2>
+<div class="verdict"><b>ALMOST — and the boundary is the audit line</b>
+<p><strong>Yes, for audited territory.</strong> A new screen in Guided German, the job pipeline, the payment funnel, the home hub or the B1 exam system can be built from this system now. The components exist, they trace to production, their states are known and their divergences are documented. Someone unfamiliar with the product would produce something recognisably SkillCase.</p>
+<p><strong>No, for the rest.</strong> Profile, content, scholarship and the A1/A2 content screens have not been read. Building them from this system would mean inventing product behaviour, which is precisely what the operating model forbids.</p>
+<p><strong>Two gaps make even the "yes" conditional.</strong> Accessibility is undefined, so any screen produced now inherits an unspecified accessibility posture. And with one template, screen production is still assembly rather than instantiation — which means consistency depends on whoever is assembling.</p></div>
+
+<h2><span class="n">13</span>Recommended next phase</h2>
+<p class="note">One step only. Not executed.</p>
+<div class="callout"><p><strong>Wire the semantic token tier.</strong> Author the missing layer that maps SkillCase brand values onto named roles — <code>--sc-action-primary</code>, <code>--sc-surface-card</code>, <code>--sc-text-secondary</code>, <code>--sc-border-subtle</code> and so on — sourced from <code>--sc-*</code> and consumed by every component in place of hex literals.</p>
+<p>It is the highest-leverage move because it is the only one that improves four dimensions at once: tokens (DS-1), cross-product consistency (a colour becomes a decision made once), components (DS-2 disappears), and dark theme (205 dark declarations currently have nothing SkillCase-side to override). It is bounded — one stylesheet and a mechanical pass over ~60 components — and it is not blocked on any product decision, unlike the pass mark or the pause question.</p>
+<p>The two obvious alternatives are weaker right now. <em>Accessibility</em> scores lowest but is a specification exercise that will need to be applied to components anyway — cheaper after the token pass, not before. <em>Templates</em> would raise productivity most, but building templates on hex literals bakes the debt into the thing everything else is generated from.</p></div>
+<p class="note">Decisions from all four phases are recorded in <code>guidelines/decisions.md</code>. Defects remain in <code>guidelines/defects.md</code>.</p>
+
+</body></html>

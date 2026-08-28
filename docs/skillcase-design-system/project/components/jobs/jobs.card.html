@@ -1,0 +1,26 @@
+<!-- @dsCard group="Components" viewport="900x1080" name="Job pipeline parts" subtitle="Progress ring header, timeline step card in all four states, refundable deposit gate" -->
+<!doctype html><html><head><meta charset="utf-8"><title>Job pipeline parts</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script>document.write('<script src="../../_ds_bundle.js?v='+Date.now()+'"><\/script>')</script>
+<style>html,body{margin:0;background:linear-gradient(180deg,#e0f2fe,#dbeafe);font-family:var(--font-family)}#root{width:900px;padding:28px 24px;box-sizing:border-box;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const { JobProgressHeader, JobStepCard, DepositGateCard } = window.SkillcaseDesignSystem_a27963;
+const A = '../../assets/img/';
+ReactDOM.createRoot(document.getElementById('root')).render(<React.Fragment>
+  <div>
+    <JobProgressHeader completed={3} total={8} nextStep="sign the terms of agreement" />
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <JobStepCard index={1} title="Welcome" description="Welcome to the skillcase job process." status="done" />
+      <JobStepCard index={2} title="Profile completion" description="Upload your CV and language certification documents." status="done" />
+      <JobStepCard index={3} title="Interview attempt" description="Complete the assigned Skillcase speaking and video interview." status="review" />
+      <JobStepCard index={4} title="Registration form" description="Please review the agreement. It explains how we'll work together during your placement." status="pending" />
+      <JobStepCard index={5} title="Review pending" description="Our recruitment partners will evaluate your profile details." status="locked" last />
+    </div>
+  </div>
+  <DepositGateCard mascot={A + 'maya/mayaSmiling.webp'} />
+</React.Fragment>);
+</script></body></html>

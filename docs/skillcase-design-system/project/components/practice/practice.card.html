@@ -1,0 +1,32 @@
+<!-- @dsCard group="Components" viewport="440x900" name="Module select chrome" subtitle="One template drives every module's chapter list, at every level" -->
+<!doctype html><html><head><meta charset="utf-8"><title>Module select chrome</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script>document.write('<script src="../../_ds_bundle.js?v='+Date.now()+'"><\/script>')</script>
+<style>html,body{margin:0;background:#fff;font-family:var(--font-family)}#root{width:440px;padding:0}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const { ModuleTopBar, LevelHero, ChapterStrip, ChapterRow } = window.SkillcaseDesignSystem_a27963;
+const A = '../../assets/img/';
+const chapters = [
+  { number: 1, completed: 12, total: 12, name: 'Greetings & Introductions' },
+  { number: 2, completed: 7, total: 14, name: 'Numbers & Time' },
+  { number: 3, completed: 0, total: 10, name: 'Food & Drink' },
+  { number: 4, completed: 0, total: 0, locked: true, name: 'Module 4' },
+  { number: 5, completed: 0, total: 0, locked: true, name: 'Module 5' },
+  { number: 6, completed: 0, total: 0, locked: true, name: 'Module 6' },
+];
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <div style={{ width: 440, background: '#fff' }}>
+    <ModuleTopBar title="Flashcards" onBack={() => {}} />
+    <LevelHero level="A1" subtitle="Build A1 vocabulary with image-first memory cards" image={A + 'headerBackground.webp'}>
+      <ChapterStrip chapters={chapters} />
+    </LevelHero>
+    <div style={{ padding: '0 16px 20px', display: 'flex', flexDirection: 'column', gap: 12 }}>
+      {chapters.slice(0, 4).map(c => <ChapterRow key={c.number} name={c.name} completed={c.completed} total={c.total} locked={c.locked} />)}
+    </div>
+  </div>
+);
+</script></body></html>

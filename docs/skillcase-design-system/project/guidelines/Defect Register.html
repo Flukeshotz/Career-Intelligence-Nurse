@@ -1,0 +1,287 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>SkillCase — Defect Register</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="../doc-page.js"></script>
+<style>
+:root{--ink:#002856;--body:#26313d;--mute:#5f6b78;--line:#dde4ec;--hair:#eef2f6;--gold:#eec139;--p1:#b91c1c;--p2:#b45309;--p3:#5f6b78;--wash:#f7f9fc}
+*{box-sizing:border-box}
+doc-page{font-family:'Poppins',system-ui,sans-serif;color:var(--body);font-size:10.5pt;line-height:1.58}
+h1{font-size:29pt;line-height:1.08;letter-spacing:-.022em;color:var(--ink);margin:0 0 10px;font-weight:700}
+.sub{font-size:12.5pt;color:var(--mute);margin:0 0 22px;max-width:62ch;text-wrap:pretty}
+h2{font-size:10pt;text-transform:uppercase;letter-spacing:.11em;color:var(--ink);margin:34px 0 14px;padding-bottom:7px;border-bottom:1.5px solid var(--ink);font-weight:600;break-after:avoid}
+h3{font-size:12pt;color:var(--ink);margin:0 0 3px;font-weight:600;letter-spacing:-.01em}
+p{margin:0 0 9px;text-wrap:pretty}
+code{font-family:'IBM Plex Mono',monospace;font-size:9pt;background:var(--wash);border:1px solid var(--line);border-radius:3px;padding:0 4px;color:var(--ink)}
+a{color:#1e5fbf}a:hover{color:var(--ink)}
+.meta{display:flex;gap:18px;flex-wrap:wrap;font-size:8.5pt;color:var(--mute);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:9px 0;margin:0 0 24px}
+.meta b{color:var(--ink);font-weight:600}
+.frame{border:1px solid var(--line);border-left:3px solid var(--gold);background:#fffdf6;padding:14px 18px;margin:0 0 24px;font-size:10pt}
+.frame p{margin:0 0 7px}.frame p:last-child{margin:0}
+.counts{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 26px}
+.count{border:1px solid var(--line);border-radius:8px;padding:12px 14px;background:#fff}
+.count b{display:block;font-size:24pt;line-height:1;letter-spacing:-.03em;color:var(--ink);font-weight:700}
+.count span{font-size:8.5pt;color:var(--mute);display:block;margin-top:4px}
+.count.r b{color:var(--p1)}.count.a b{color:var(--p2)}
+.d{break-inside:avoid;margin:0 0 20px;padding:0 0 0 0}
+.dh{display:flex;align-items:baseline;gap:9px;margin:0 0 2px}
+.id{font-family:'IBM Plex Mono',monospace;font-size:8.5pt;font-weight:500;color:var(--mute);flex:none;padding-top:1px}
+.sev{font-size:7.5pt;font-weight:700;letter-spacing:.07em;padding:2px 7px;border-radius:20px;flex:none;text-transform:uppercase}
+.sev.s1{background:#fee2e2;color:var(--p1)}
+.sev.s2{background:#fef3c7;color:var(--p2)}
+.sev.s3{background:#eef2f6;color:var(--p3)}
+.loc{font-family:'IBM Plex Mono',monospace;font-size:8.5pt;color:var(--mute);margin:0 0 7px;line-height:1.5}
+.tail{font-size:8.5pt;color:var(--mute);margin:7px 0 0;padding-top:6px;border-top:1px solid var(--hair)}
+table{width:100%;border-collapse:collapse;font-size:9pt;margin:10px 0 16px}
+th{text-align:left;font-weight:600;font-size:8pt;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);border-bottom:1px solid var(--ink);padding:6px 10px 6px 0;vertical-align:bottom}
+td{border-bottom:1px solid var(--hair);padding:6px 10px 6px 0;vertical-align:top}
+td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+ul{margin:0 0 10px;padding-left:19px}li{margin-bottom:4px}
+.foot{font-size:8.5pt;color:var(--mute)}
+</style>
+</head><body>
+<doc-page size="a4">
+
+<h1>Defect register</h1>
+<p class="sub">Engineering and product defects found while reverse-engineering the SkillCase learner-facing app into a design system. Twenty-four open, none closed.</p>
+
+<div class="meta"><span><b>Source</b> SkillCase-Frontend-main</span><span><b>Updated</b> 28 August 2026</span><span><b>Phases</b> 1–8</span><span><b>Open</b> 24</span><span><b>Closed</b> 0</span></div>
+
+<div class="counts">
+<div class="count r"><b>4</b><span>P1 · learner harmed</span></div>
+<div class="count a"><b>8</b><span>P2 · significant</span></div>
+<div class="count"><b>12</b><span>P3 · minor</span></div>
+<div class="count"><b>9</b><span>duplication clusters</span></div>
+</div>
+
+<div class="frame">
+<p><b>How to read this.</b> Severity is about the learner, not the code. <b>P1</b> means a user is shown something wrong or contradictory about their own work — not that the code is ugly.</p>
+<p><b>Nothing here has been fixed, and nothing has been silently normalised.</b> Where a defect affects a design-system component, the component reproduces production faithfully and its type definition points back to this register. That is deliberate: the design system documents what ships, and a fix is a decision someone makes, not something an audit performs.</p>
+<p>Every entry names its source file and the phase that found it. Nine duplication clusters are listed at the end — they are not defects themselves, but every P1 is downstream of one.</p>
+</div>
+
+<h2>P1 — a learner is shown something wrong</h2>
+
+<div class="d">
+<div class="dh"><span class="id">DEF-001</span><span class="sev s1">P1</span></div>
+<h3>Two score scales render on one results screen</h3>
+<p class="loc">ExamWritingResults.jsx · ExamSpeakingResults.jsx</p>
+<p>Both screens import <code>MetricBar</code>, which bands at 70/40, while defining local <code>getMetricColor</code> / <code>getScoreColor</code> helpers that band at 75/50. A score of 72 therefore reads green on one row and amber on another — on the same screen, for the same piece of assessed work.</p>
+<p class="tail">Found phase 2. In the design system, <code>bands</code> is a prop; both scales are recorded verbatim in <code>components/assessment/scoreBands.js</code>.</p>
+</div>
+
+<div class="d">
+<div class="dh"><span class="id">DEF-002</span><span class="sev s1">P1</span></div>
+<h3>Reading and Listening result rings are green at every score</h3>
+<p class="loc">ExamReadingResults.jsx · ExamListeningResults.jsx</p>
+<p>Both hand-roll a 120px SVG ring instead of importing the shared <code>ScoreRing</code>, with the progress stroke hardcoded to <code>#0BAA45</code>. A 12% Reading score renders a green ring above the text "12%". The same 12% on Writing renders red, because Writing uses the shared component.</p>
+<p>The fix is mechanical: import <code>ScoreRing</code> with <code>circleSize={120} strokeWidth={10}</code> — exactly the geometry it already supports.</p>
+<p class="tail">Found phase 3.</p>
+</div>
+
+<div class="d">
+<div class="dh"><span class="id">DEF-003</span><span class="sev s1">P1</span></div>
+<h3>No exit guard on a running timed section</h3>
+<p class="loc">All four Exam*Workspace.jsx</p>
+<p>The section timer is an absolute expiry timestamp in <code>localStorage</code>, so it keeps running when the learner navigates away — correct, and deliberate. But Back is an ordinary navigation: no confirmation, no <code>beforeunload</code>, no pause. A learner can leave a timed exam section by accident and lose the time without ever being told the clock was running.</p>
+<p>Partly a product question — whether the clock <i>should</i> pause is a decision. The absence of any prompt at all is a defect regardless of the answer.</p>
+<p class="tail">Found phase 3. See the exam audit, section E1.</p>
+</div>
+
+<div class="d">
+<div class="dh"><span class="id">DEF-004</span><span class="sev s1">P1</span></div>
+<h3>Focus is removed product-wide with no replacement</h3>
+<p class="loc">~40 instances of outline-none across src/pages/</p>
+<p>Essentially every button in the app strips its focus outline and puts nothing back. Text inputs are the exception — they use <code>focus:ring-2 focus:ring-blue-600</code>, which is why the design system's focus rule could be derived from the product rather than invented.</p>
+<p>A keyboard user cannot see where they are. On a timed, assessed exam screen that is not a minor inconvenience.</p>
+<p class="tail">Found phase 7. The design system now ships <code>--ui-focus-ring</code>, validated against every surface a focused control sits on. Adopting it is a mechanical change.</p>
+</div>
+
+<h2>P2 — significant</h2>
+
+<div class="d">
+<div class="dh"><span class="id">DEF-005</span><span class="sev s2">P2</span></div>
+<h3>The four exam results screens have no back control</h3>
+<p class="loc">ExamReadingResults · ExamListeningResults · ExamWritingResults · ExamSpeakingResults</p>
+<p>None of the four has a header back button, a chevron, or any <code>navigate(-1)</code>. The only exit is a single CTA at the very bottom of the page, and it is a <i>forward</i> action — "Start next section", routing to the paper dashboard or congratulations. There is no way back to where the learner came from.</p>
+<p>Worst on Reading, where the results page renders every question with its passage and the learner's answer inline. On a long paper that is several screens of scrolling before any exit appears.</p>
+<p>Every comparable screen has a header back: the four exam <i>workspaces</i> route to the dashboard from their headers, <code>ExamLobby</code> has two back affordances, the payments pages all use <code>navigate(-1)</code>. The four results screens being identical suggests one template copied four times rather than four separate oversights. Each file's <i>error</i> state does offer "Return to Dashboard" — only the success path, the one every learner sees, lacks an exit.</p>
+<p class="tail">Found 28 Aug 2026.</p>
+</div>
+
+<div class="d">
+<div class="dh"><span class="id">DEF-006</span><span class="sev s2">P2</span></div>
+<h3>Selectable rows are clickable <code>&lt;div&gt;</code>s</h3>
+<p class="loc">10+ surfaces across 6 features</p>
+<p>The row extracted as <code>ListRow</code> ships as a bare <code>&lt;div onClick&gt;</code> everywhere: not tabbable, not activatable by Enter or Space, invisible to assistive technology as a control. Exam type select, paper select, describe-speak topics, read &amp; listen, video courses, notes.</p>
+<p class="tail">Found phase 7. The design-system component renders a real <code>&lt;button&gt;</code> with identical visuals.</p>
+</div>
+
+<div class="d">
+<div class="dh"><span class="id">DEF-007</span><span class="sev s2">P2</span></div>
+<h3>No reduced-motion handling</h3>
+<p class="loc">Product-wide</p>
+<p>Six keyframe animations, a pulsing busy button, spinners on every loading control, and no <code>prefers-reduced-motion</code> block anywhere.</p>
+<p class="tail">Found phase 7. The design system now ships one, with a narrow carve-out for motion that carries state. Correction from the phase-7 checkpoint: this was reported as including "500ms score-ring fills". It does not — <code>ScoreRing</code> has no transition and renders its arc at the final offset immediately. <code>MetricBar</code> does animate and is covered.</p>
+</div>
+
+<div class="d">
+<div class="dh"><span class="id">DEF-008</span><span class="sev s2">P2</span></div>
+<h3>Block progress bar has 1.31:1 fill-to-track contrast</h3>
+<p class="loc">8 surfaces — four exam workspaces, four results review modes</p>
+<p>Amber <code>#fcd34d</code> fill against zinc <code>#f4f4f5</code> track. Graphical objects need 3:1 against adjacent colours; filled and unfilled segments are close to indistinguishable. Position in a timed exam is carried entirely by this bar.</p>
+<p class="tail">Found phase 7.</p>
+</div>
+
+<div class="d">
+<div class="dh"><span class="id">DEF-009</span><span class="sev s2">P2</span></div>
+<h3>Seven competing scoring rules, no stated pass mark</h3>
+<p class="loc">Product-wide</p>
+<p>70/40 · 70/50 · 75/50 (metrics) · 75/50 (scorecards) · ≥50 per-question · ≥60 pass/fail · no scale at all. The <code>≥60</code> pass mark exists only in the generic <code>/exam</code> system; the B1 paper flow never states one, <b>so a learner completing a TELC paper is never told whether they passed</b>.</p>
+<p>Whether a pass is 40, 50, 60 or 75 is a product decision. It should be made once and applied everywhere.</p>
+<p class="tail">Found phases 2–3. Enumerated with sources in the exam-system audit, section C.</p>
+</div>
+
+<div class="d">
+<div class="dh"><span class="id">DEF-010</span><span class="sev s2">P2</span></div>
+<h3>Completion is handled as an error path</h3>
+<p class="loc">PaperSelect.jsx · ExamBlockSelector.jsx · ExamCongratulations.jsx</p>
+<p>Re-entering a finished paper returns HTTP <code>403 { alreadyCompleted: true }</code>, which each of three screens catches independently and translates into a redirect. A successful, expected user action travels the failure path. Any screen added later that forgets the catch will show "Failed to load" for a completed exam — and <code>ExamCongratulations</code> already needs a nested try/catch to recover the submission id from the error body.</p>
+<p class="tail">Found phase 3.</p>
+</div>
+
+<div class="d">
+<div class="dh"><span class="id">DEF-011</span><span class="sev s2">P2</span></div>
+<h3><code>A2TestResults.jsx</code> is an empty file</h3>
+<p class="loc">src/pages/a2/test/A2TestResults.jsx</p>
+<p>Zero bytes. Someone began extracting the test-results screen out of the A2 fork and stopped; A1 still renders its results inline at the foot of <code>A1TestQuestions.jsx</code>. A dead file in the repository, and the clearest single artefact that the A1/A2 fork is an accident rather than a decision.</p>
+<p class="tail">Found phase 5.</p>
+</div>
+
+<div class="d">
+<div class="dh"><span class="id">DEF-012</span><span class="sev s2">P2</span></div>
+<h3>A2 ignores <code>module_number</code></h3>
+<p class="loc">components/a2/ChapterSelectTemplate</p>
+<p>Chapters mislabel when server numbering is sparse.</p>
+<p class="tail">Found phase 1.</p>
+</div>
+
+<h2>P3 — minor</h2>
+
+<div class="d">
+<div class="dh"><span class="id">DEF-013</span><span class="sev s3">P3</span></div>
+<h3>Busy and error states are not announced</h3>
+<p class="loc">AppButton busy (5 files) · SkeletonList · StateMessage</p>
+<p>No <code>aria-busy</code>, no live region. A screen-reader user submitting an exam section gets silence, and a failed load announces nothing at all.</p>
+<p class="tail">Found phase 7. Deliberately not fixed in the design system: the right shape is a pattern spanning three components and depends on how screens compose them.</p>
+</div>
+
+<div class="d">
+<div class="dh"><span class="id">DEF-014</span><span class="sev s3">P3</span></div>
+<h3>Locked and disabled states are visual only</h3>
+<p class="loc">Product-wide</p>
+<p>Dimming to 50% or 60% and dropping the click handler tells assistive technology nothing — the control still reads as enabled. No <code>aria-disabled</code> anywhere in the components or surfaces sampled.</p>
+<p class="tail">Found phase 7. Partly addressed in the design system: converted rows carry a real <code>disabled</code> attribute.</p>
+</div>
+
+<div class="d">
+<div class="dh"><span class="id">DEF-015</span><span class="sev s3">P3</span></div>
+<h3>Skeleton loading is silent once motion is reduced</h3>
+<p class="loc">components/state/SkeletonList</p>
+<p>With <code>prefers-reduced-motion</code> the pulse stops and the skeleton becomes a static grey block. Layout still communicates "content is coming" — but combined with the missing <code>aria-busy</code> (DEF-013) a reduced-motion screen-reader user gets no loading signal at all. The fix is the ARIA one, not more motion.</p>
+<p class="tail">Found phase 7 checkpoint.</p>
+</div>
+
+<div class="d">
+<div class="dh"><span class="id">DEF-016</span><span class="sev s3">P3</span></div>
+<h3>Usage lock on <code>PaperSelect</code> explains nothing</h3>
+<p class="loc">PaperSelect.jsx</p>
+<p>When <code>useUsageLimitModule("B1","exams")</code> reports locked, paper rows drop to 60% opacity and stop responding. No message, no upsell, no chip. The system already ships <code>LockGateCard</code> and <code>FeatureStatusChip</code> for this exact case.</p>
+<p class="tail">Found phase 3.</p>
+</div>
+
+<div class="d">
+<div class="dh"><span class="id">DEF-017</span><span class="sev s3">P3</span></div>
+<h3>Unrecognised difficulty tags render as "hard"</h3>
+<p class="loc">Five copies of getDifficultyBadgeStyle across src/pages/b1/exams/</p>
+<p>A three-way fallthrough: <code>easy</code>, then <code>medium</code>/<code>intermediate</code>, then <i>everything else</i> → red. A typo, a German-language tag, or a new difficulty level all read to the learner as the hardest paper.</p>
+<p class="tail">Found phase 3. Reproduced as-is by <code>components/exam/DifficultyBadge</code>, which documents the behaviour rather than fixing it.</p>
+</div>
+
+<div class="d">
+<div class="dh"><span class="id">DEF-018</span><span class="sev s3">P3</span></div>
+<h3>Colour bands at 40 but greeting bands at 50 in one file</h3>
+<p class="loc">describe-speak/utils/scoreUtils.js</p>
+<p><code>getScoreColor</code> and <code>getScoreStrokeColor</code> band at 70/40; <code>getScoreGreeting</code>, directly beneath them, bands at 70/50. So a 45 is greeted as "Keep practicing!" while its ring is amber, not red.</p>
+<p class="tail">Found phase 2.</p>
+</div>
+
+<div class="d">
+<div class="dh"><span class="id">DEF-019</span><span class="sev s3">P3</span></div>
+<h3>Lock opacity is 50% in one place and 60% in another</h3>
+<p class="loc">ChapterSelectTemplate vs ExamSelect</p>
+<p class="tail">Found phase 1.</p>
+</div>
+
+<div class="d">
+<div class="dh"><span class="id">DEF-020</span><span class="sev s3">P3</span></div>
+<h3>Two usage-limit hooks with different shapes</h3>
+<p class="loc">useUsageLimitModule(level, feature) vs useUsageLimitGate("ALL", feature)</p>
+<p>The exams use the first, the content surfaces the second. One concept, two APIs, two call shapes. Neither is wrong; they should not both exist.</p>
+<p class="tail">Found phase 5.</p>
+</div>
+
+<div class="d">
+<div class="dh"><span class="id">DEF-021</span><span class="sev s3">P3</span></div>
+<h3>The shared list row ships two disagreeing hover treatments</h3>
+<p class="loc">10+ surfaces across 6 features</p>
+<p>The same row markup lifts on hover (<code>hover:shadow-md hover:scale-[1.01]</code>) on the B1 learning surfaces and darkens its border to navy on the content surfaces. Invisible until the row was seen as one thing.</p>
+<p class="tail">Found phase 5. Reproduced as-is by <code>components/core/ListRow</code>, which documents the divergence rather than picking a winner.</p>
+</div>
+
+<div class="d">
+<div class="dh"><span class="id">DEF-022</span><span class="sev s3">P3</span></div>
+<h3>The Figma semantic aliases contradict the shipping app</h3>
+<p class="loc">tokens/brand.css</p>
+<p><code>--sc-action-primary: var(--sc-green-600)</code> (#019035) against <code>AppButton</code>'s shipping gold #edb843 on navy #002856. Two further aliases in the same block disagree with observed usage.</p>
+<p>Neither side was changed. Escalated as a product/brand question: <b>is the Figma alias stale, or is the app off-brand?</b></p>
+<p class="tail">Found phase 6. The design system's canonical roles live in <code>tokens/semantic.css</code> under <code>--ui-*</code>.</p>
+</div>
+
+<div class="d">
+<div class="dh"><span class="id">DEF-023</span><span class="sev s3">P3</span></div>
+<h3>Defensive icon imports throughout Profile</h3>
+<p class="loc">src/pages/ProfilePage.jsx</p>
+<p>Fifteen instances of <code>LucideIcons.X || LucideIcons.Y || LucideIcons.Z</code>. The code does not trust its own icon set to contain the icons it asks for. Not user-visible; concrete evidence that iconography is undefined as a foundation.</p>
+<p class="tail">Found phase 5.</p>
+</div>
+
+<div class="d">
+<div class="dh"><span class="id">DEF-024</span><span class="sev s3">P3</span></div>
+<h3>Shared timer key for unauthenticated users</h3>
+<p class="loc">All four Exam*Workspace.jsx</p>
+<p><code>b1_exam_timer_${user?.user_id || "guest"}_...</code> — two signed-out users on one device share a countdown. Low impact, trivially fixed.</p>
+<p class="tail">Found phase 3.</p>
+</div>
+
+<h2>Duplication — the cause, not the symptom</h2>
+<p>Not user-visible on their own, and not counted as defects. Listed because <b>every P1 above is downstream of one of them</b>.</p>
+<table>
+<tr><th>Duplicated</th><th class="n">Copies</th><th>Where</th></tr>
+<tr><td><code>formatSeconds</code></td><td class="n">8</td><td>four exam workspaces, four results screens</td></tr>
+<tr><td>Segmented block progress bar</td><td class="n">8</td><td>same</td></tr>
+<tr><td><code>getDifficultyBadgeStyle</code></td><td class="n">5</td><td>PaperSelect, two workspaces, two results</td></tr>
+<tr><td><code>getGreeting</code> / <code>getScoreGreeting</code></td><td class="n">5</td><td>scoreUtils + four results screens</td></tr>
+<tr><td>Hand-rolled score ring</td><td class="n">2</td><td>Reading, Listening results</td></tr>
+<tr><td>Section-status literals</td><td class="n">6+</td><td>dashboard, congratulations, each results screen</td></tr>
+<tr><td>Selectable list row</td><td class="n">10+</td><td>exams, describe-speak, read &amp; listen, video courses, notes</td></tr>
+<tr><td>A1/A2 module screens</td><td class="n">2×15</td><td>six module types mirrored across both levels</td></tr>
+<tr><td>Document upload / preview / delete</td><td class="n">2</td><td>job pipeline and Profile, against one API</td></tr>
+</table>
+<p>The first three are now single components in <code>components/exam/</code>; the list row is <code>components/core/ListRow</code>. The section-status literals are the reason a three-section paper would break the dashboard. The A1/A2 mirror is the accidental fork recorded in the decision log.</p>
+
+<h2>Status</h2>
+<p><b>Closed: none.</b> Nothing in this register has been actioned in the codebase. The design system reproduces each affected behaviour faithfully and points back here.</p>
+<p class="foot">Canonical source: <code>guidelines/defects.md</code>. Defects in the design system's own screen kits are tracked separately in <code>guidelines/screen-defects.md</code> — 15 open, 3 P1 — and are not included here.</p>
+
+</doc-page>
+</body></html>

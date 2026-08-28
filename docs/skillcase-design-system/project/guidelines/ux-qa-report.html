@@ -1,0 +1,185 @@
+<!-- @dsCard group="Guidelines" viewport="1180x1600" name="UX QA report — run 1" subtitle="All screen kits and templates, 11 UX checks + 4 system checks" -->
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>UX QA report — run 1</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+:root{--ink:#002856;--mute:#5b6472;--line:#dfe5ec;--navy:#002856;--gold:#eec139;--green:#166534;--rose:#b91c1c;--amber:#92400e;--wash:#f6f8fb}
+*{box-sizing:border-box}
+html,body{margin:0;background:#fff;color:var(--ink);font-family:var(--font-family,system-ui,sans-serif);-webkit-font-smoothing:antialiased}
+body{max-width:1180px;margin:0 auto;padding:56px 40px 96px;font-size:15px;line-height:1.62}
+a{color:#1e5fbf}a:hover{color:#002856}
+h1{font-size:38px;line-height:1.12;letter-spacing:-.02em;margin:0 0 10px}
+.lede{font-size:17px;color:var(--mute);max-width:76ch;margin:0 0 8px;text-wrap:pretty}
+h2{font-size:15px;text-transform:uppercase;letter-spacing:.09em;margin:44px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px}
+h2 .n{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:6px;background:var(--navy);color:#fff;font-size:11px;letter-spacing:0}
+h3{font-size:17px;margin:26px 0 4px;letter-spacing:-.01em}
+p{margin:0 0 12px;text-wrap:pretty}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 18px}
+th{text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);border-bottom:1px solid var(--line);padding:7px 10px 7px 0;vertical-align:bottom}
+td{border-bottom:1px solid #eef1f5;padding:8px 10px 8px 0;vertical-align:top}
+code{background:var(--wash);border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:12px;font-family:ui-monospace,monospace}
+ul,ol{margin:0 0 14px;padding-left:22px}li{margin-bottom:5px}
+.tag{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:2px 7px;border-radius:20px;white-space:nowrap}
+.p1{background:#fee2e2;color:var(--rose)}
+.p2{background:#fef3c7;color:var(--amber)}
+.p3{background:#eef1f5;color:#414651}
+.ok{background:#dcfce7;color:var(--green)}
+.callout{border-left:3px solid var(--gold);background:#fffdf5;padding:14px 18px;margin:20px 0;font-size:14px}
+.bad{border-left:3px solid var(--rose);background:#fff5f5;padding:14px 18px;margin:20px 0;font-size:14px}
+.finding{border:1px solid var(--line);border-radius:10px;padding:16px 20px 6px;margin:14px 0}
+.finding h4{margin:0 0 2px;font-size:15px}
+.meta{font-size:11.5px;color:var(--mute);margin:0 0 10px;display:flex;gap:14px;flex-wrap:wrap}
+.meta b{color:var(--ink);font-weight:600}
+.stamp{display:flex;gap:26px;flex-wrap:wrap;font-size:12px;color:var(--mute);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;margin:20px 0 8px}
+.score{display:flex;align-items:baseline;gap:8px;margin:4px 0 16px}
+.score b{font-size:34px;letter-spacing:-.02em}
+.score span{color:var(--mute);font-size:14px}
+</style>
+</head><body>
+
+<h1>UX QA report — run 1</h1>
+<p class="lede">The first pass of the <a href="agent-pipeline.html">UX QA persona</a> across every screen the design system currently holds: five screen kits and four templates. Eleven UX checks and four system checks. Findings only — nothing here was fixed in this pass, by design.</p>
+
+<div class="stamp"><span><strong>Date</strong> 27 Aug 2026</span><span><strong>Scope</strong> 5 kits · 4 templates · ~40 screens</span><span><strong>Findings</strong> 12</span><span><strong>P1</strong> 3</span></div>
+
+<h2><span class="n">1</span>The headline</h2>
+<div class="bad">
+<p><strong>The design system's screen kits are less accessible than the product they reproduce.</strong></p>
+<p>Production carries <code>aria-label</code> on its modals, nav, lesson back button, pronunciation controls and loading skeletons — <code>StreakLeaderboardModal</code>, <code>UsageLimitModal</code>, <code>TrialEndedModal</code>, <code>NewNavbar</code>, <code>ProgressBar</code>, <code>GrammarScreen</code>, <code>ExerciseLayoutSkeleton</code> and a dozen more. Across all five kits in <code>ui_kits/</code> there is <b>not one</b>.</p>
+<p>This is the single most important finding of the run, because it inverts the usual assumption. The kits were built to be faithful to production; on labelling they were faithless in the wrong direction, and every screen generated from them would inherit the loss. It is our defect, not the app's.</p>
+</div>
+
+<h2><span class="n">2</span>Screen inventory and per-kit result</h2>
+<table>
+<tr><th>Surface</th><th>Screens</th><th>Tokens</th><th>DS components</th><th>Labelling</th><th>Focus</th><th>Result</th></tr>
+<tr><td><b>exam-flow</b></td><td>8</td><td><span class="tag ok">full</span></td><td><span class="tag ok">yes</span></td><td><span class="tag p1">none</span></td><td><span class="tag p2">partial</span></td><td>Best kit in the system</td></tr>
+<tr><td><b>lesson-flow</b></td><td>12</td><td><span class="tag p2">mixed</span></td><td><span class="tag ok">yes</span></td><td><span class="tag p1">none</span></td><td><span class="tag p2">partial</span></td><td>Raw hex in decorative blocks</td></tr>
+<tr><td><b>job-flow</b></td><td>9</td><td><span class="tag p1">raw hex</span></td><td><span class="tag p2">mixed</span></td><td><span class="tag p1">none</span></td><td><span class="tag p1">absent</span></td><td>Local <code>Cta</code> duplicates AppButton</td></tr>
+<tr><td><b>premium-flow</b></td><td>6</td><td><span class="tag p1">raw hex</span></td><td><span class="tag p2">mixed</span></td><td><span class="tag p1">none</span></td><td><span class="tag p1">absent</span></td><td>Two local CTA components</td></tr>
+<tr><td><b>mobile-app</b></td><td>~5</td><td><span class="tag p1">raw hex</span></td><td><span class="tag p2">mixed</span></td><td><span class="tag p1">none</span></td><td><span class="tag p1">absent</span></td><td>Non-semantic modal; oldest kit</td></tr>
+<tr><td><b>templates/</b> (4)</td><td>4</td><td><span class="tag ok">full</span></td><td><span class="tag ok">yes</span></td><td><span class="tag p2">partial</span></td><td><span class="tag ok">applied</span></td><td>Compliant; the newest work</td></tr>
+</table>
+<div class="callout"><p><strong>The gradient is chronological, and that is the good news.</strong> Kit quality tracks build order exactly: the oldest surface (<code>mobile-app</code>) is raw hex and hand-rolled controls, the newest (<code>exam-flow</code>, the templates) is fully tokenised with the focus ring applied. The system did not fail — it arrived after the early kits were built, and they were never retrofitted. Everything below is backfill, not redesign.</p></div>
+
+<h2><span class="n">3</span>Findings</h2>
+
+<div class="finding">
+<h4>QA-001 — No accessible name on any icon-only control, in any kit</h4>
+<p class="meta"><span class="tag p1">P1</span><span><b>Class</b> Design-system debt</span><span><b>Owner</b> UI Creation</span><span><b>Check</b> Semantic HTML / ARIA</span></p>
+<p>Back, close, mute, play and Listen buttons render an SVG and nothing else. A screen reader announces "button". Production labels most of these; the kits label none. Affects all five kits.</p>
+</div>
+
+<div class="finding">
+<h4>QA-002 — Modal built from <code>div onClick</code>, bypassing AppModal</h4>
+<p class="meta"><span class="tag p1">P1</span><span><b>Class</b> Design-system debt</span><span><b>Owner</b> UI Creation</span><span><b>Check</b> Keyboard navigation</span></p>
+<p><code>mobile-app/HomeScreen.jsx:84</code> — the streak leaderboard backdrop is a clickable <code>&lt;div&gt;</code>. No <code>role="dialog"</code>, no Escape handler, no focus trap, no return of focus on close. It cannot be dismissed by keyboard at all. <code>AppModal</code> exists and handles every one of these. Production's own <code>StreakLeaderboardModal</code> is better than this reproduction.</p>
+</div>
+
+<div class="finding">
+<h4>QA-003 — Focus ring not applied below the component layer</h4>
+<p class="meta"><span class="tag p1">P1</span><span><b>Class</b> Design-system debt</span><span><b>Owner</b> UI Creation</span><span><b>Check</b> Focus visibility</span></p>
+<p>Phase 7 put <code>--ui-focus-ring</code> on AppButton, AppTabBar, ListRow, ChapterRow and TextField. Kit-local controls — <code>AmberCta</code>, <code>GhostCta</code>, <code>Cta</code>, HomeScreen's continue button, every icon button — have no focus treatment at all, so keyboard users lose their place the moment they leave a DS component. This is the kit-layer half of the production defect already recorded in <code>defects.md</code>.</p>
+</div>
+
+<div class="finding">
+<h4>QA-004 — Icon controls at 28×28, against a 44px system minimum</h4>
+<p class="meta"><span class="tag p2">P2</span><span><b>Class</b> Product / design decision</span><span><b>Owner</b> PM + Steward</span><span><b>Check</b> Target size</span></p>
+<p>HomeScreen back and close, premium-flow back, exam-flow Listen: all 28px. <code>--ui-target-min</code> is 44px. <b>The kits are correct — they reproduce production geometry faithfully.</b> So this is not a kit defect; it is an unresolved conflict between the system rule and the shipped app, and it needs a decision rather than a fix. Options: enlarge the hit area without changing the visual box (invisible padding, the usual answer), change the token, or scope the token to new surfaces only.</p>
+</div>
+
+<div class="finding">
+<h4>QA-005 — Four local CTA components duplicating AppButton</h4>
+<p class="meta"><span class="tag p2">P2</span><span><b>Class</b> Design-system debt</span><span><b>Owner</b> Steward</span><span><b>Check</b> Component adherence</span></p>
+<p><code>AmberCta</code> and <code>GhostCta</code> (premium-flow), <code>Cta</code> with a navy/amber variant (job-flow), and an inline gradient button (HomeScreen). All four reimplement what <code>AppButton</code> already does, and each carries its own hardcoded gradient — which is how a palette drifts. Exactly the pattern the Steward persona exists to stop.</p>
+</div>
+
+<div class="finding">
+<h4>QA-006 — Raw hex in three kits while a semantic layer exists</h4>
+<p class="meta"><span class="tag p2">P2</span><span><b>Class</b> Design-system debt</span><span><b>Owner</b> UI Creation</span><span><b>Check</b> Token adherence</span></p>
+<p><code>#002856</code>, <code>#5b6472</code>, <code>#fcd34d</code>, <code>#fde68a</code> literal throughout job-flow, premium-flow and mobile-app. exam-flow proves the alternative works: it is written entirely in <code>var(--ui-*)</code>. Mechanical to retrofit, and it is what makes the dark theme reachable for these surfaces.</p>
+</div>
+
+<div class="finding">
+<h4>QA-007 — No kit renders an error or validation state</h4>
+<p class="meta"><span class="tag p2">P2</span><span><b>Class</b> State completeness</span><span><b>Owner</b> PM</span><span><b>Check</b> Error / validation messaging</span></p>
+<p>Across ~40 screens: no failed upload, no rejected form field, no network error, no payment decline. The job pipeline has six document uploads and not one shows a rejection. The system has error primitives; no screen exercises them. Until a brief enumerates these states, the system's error handling is theoretical.</p>
+</div>
+
+<div class="finding">
+<h4>QA-008 — 10px text in the exam timer</h4>
+<p class="meta"><span class="tag p2">P2</span><span><b>Class</b> Product / design decision</span><span><b>Owner</b> PM</span><span><b>Check</b> Text sizing</span></p>
+<p><code>ExamScreens.jsx:203</code> — the HH/MM/SS unit labels are 10px. Reproduces production. It is the smallest type in the product, on the most time-pressured screen in the product. The value beneath it is 20px and legible, which mitigates but does not resolve it.</p>
+</div>
+
+<div class="finding">
+<h4>QA-009 — 11px labels are the default for form and meta text</h4>
+<p class="meta"><span class="tag p3">P3</span><span><b>Class</b> Documentation issue</span><span><b>Owner</b> Steward</span><span><b>Check</b> Text sizing</span></p>
+<p>Field labels, back-bar text and eyebrow captions sit at 11px across job-flow and lesson-flow, matching production. Legible, but the type scale does not currently say whether 11px is a sanctioned floor or an accident. Document the floor either way.</p>
+</div>
+
+<div class="finding">
+<h4>QA-010 — Screen titles as <code>div</code> in some kits, <code>h2</code> in others</h4>
+<p class="meta"><span class="tag p3">P3</span><span><b>Class</b> Design-system debt</span><span><b>Owner</b> UI Creation</span><span><b>Check</b> Semantic HTML</span></p>
+<p>job-flow uses real <code>&lt;h2&gt;</code> for every screen title. mobile-app and premium-flow use styled <code>&lt;div&gt;</code>. No screen in any kit has a document-level <code>&lt;h1&gt;</code>, so the heading outline starts at level 2 or does not exist.</p>
+</div>
+
+<div class="finding">
+<h4>QA-011 — Kit-level transitions do not check reduced motion</h4>
+<p class="meta"><span class="tag p3">P3</span><span><b>Class</b> Design-system debt</span><span><b>Owner</b> UI Creation</span><span><b>Check</b> Motion</span></p>
+<p>ScoreRing, MetricBar and AppButton's busy state all honour <code>prefers-reduced-motion</code> (verified in phase 7). Transitions written inline in the kits — progress-bar width, sheet slide-up — do not. Low impact: the durations are short and none loop.</p>
+</div>
+
+<div class="finding">
+<h4>QA-012 — <code>✕</code> as a close glyph</h4>
+<p class="meta"><span class="tag p3">P3</span><span><b>Class</b> Design-system debt</span><span><b>Owner</b> UI Creation</span><span><b>Check</b> Semantic HTML</span></p>
+<p><code>HomeScreen.jsx:88</code> uses the literal character. Screen readers read it as "multiplication x" or skip it. Every other close control in the system is an SVG. One-character fix, listed for completeness.</p>
+</div>
+
+<h2><span class="n">4</span>What passed</h2>
+<ul>
+<li><b>Semantic buttons.</b> Real <code>&lt;button type="button"&gt;</code> almost everywhere an action exists — the modal backdrop (QA-002) is the exception, not the rule.</li>
+<li><b>Disabled vs locked is genuinely distinguished.</b> Onboarding's Next uses the real <code>disabled</code> attribute with a grey treatment; locked premium content uses the paywall pattern with an explanation and a route forward. Two different meanings, two different treatments, no conflation. This was a system rule defined in phase 7 and the kits already honour it.</li>
+<li><b>Loading and busy states exist and are distinct</b> — skeletons for page load, in-button spinners for submit.</li>
+<li><b>Contrast on the primary surfaces.</b> Navy on white, ink on gold, white on navy all clear AA. The three known AA failures are measured, staged and awaiting your decision — unchanged by this run.</li>
+<li><b>The templates are clean.</b> All four use tokens, DS components and the focus ring. The pipeline's output layer is in better shape than its historical input.</li>
+</ul>
+
+<h2><span class="n">5</span>What could not be checked</h2>
+<p>Three of the eleven checks cannot be completed by reading markup, and are recorded as <b>not run</b> rather than passed:</p>
+<ul>
+<li><b>Screen-reader traversal.</b> Needs NVDA or VoiceOver on a real device. This is the reason accessibility maturity is capped at 5/10 and will stay capped.</li>
+<li><b>Real keyboard traversal order.</b> Tab order can be reasoned about statically; it cannot be verified statically.</li>
+<li><b>Touch accuracy on device.</b> 28px is a measurement; whether it is a problem for the actual user population is a device test.</li>
+</ul>
+
+<h2><span class="n">6</span>Routing</h2>
+<table>
+<tr><th>Class</th><th>Findings</th><th>Goes to</th></tr>
+<tr><td>Design-system debt</td><td>QA-001, 002, 003, 005, 006, 010, 011, 012</td><td>Steward → UI Creation backfill</td></tr>
+<tr><td>Product / design decision</td><td>QA-004, 008</td><td>You — the 44px conflict and the 10px timer</td></tr>
+<tr><td>State completeness</td><td>QA-007</td><td>PM — error states need briefing before they can be built</td></tr>
+<tr><td>Documentation issue</td><td>QA-009</td><td>Steward — type-scale floor</td></tr>
+<tr><td>Engineering defect</td><td>none new</td><td><code>defects.md</code> unchanged at 26</td></tr>
+</table>
+<p class="lede" style="font-size:14px">No new entries in <a href="defects.md">defects.md</a>: every finding in this run is against design-system artefacts, not against <code>SkillCase-Frontend-main</code>. That is worth stating plainly — the audit found the system's own work wanting, not the product's.</p>
+
+<h2><span class="n">7</span>Score</h2>
+<div class="score"><b>6.1</b><span>/ 10 — screen-layer quality, run 1</span></div>
+<table>
+<tr><th>Dimension</th><th></th><th>Note</th></tr>
+<tr><td>Semantic structure</td><td><b>6</b></td><td>Buttons right, headings inconsistent, one non-semantic modal</td></tr>
+<tr><td>Keyboard</td><td><b>4</b></td><td>Focus ring stops at the component boundary; one unreachable modal</td></tr>
+<tr><td>Labelling</td><td><b>2</b></td><td>Zero across five kits, below the product itself</td></tr>
+<tr><td>Contrast</td><td><b>8</b></td><td>Sound; three known failures staged</td></tr>
+<tr><td>Target size</td><td><b>5</b></td><td>Conflict with production, not carelessness</td></tr>
+<tr><td>Token adherence</td><td><b>6</b></td><td>Newest kits full, oldest raw hex</td></tr>
+<tr><td>Component adherence</td><td><b>7</b></td><td>Four local duplicates</td></tr>
+<tr><td>State completeness</td><td><b>5</b></td><td>No error state rendered anywhere</td></tr>
+<tr><td>Motion</td><td><b>8</b></td><td>Components correct, kit transitions unguarded</td></tr>
+<tr><td>Provenance</td><td><b>9</b></td><td>Every screen traceable to a production file</td></tr>
+</table>
+
+<h2><span class="n">8</span>Recommended next action</h2>
+<p><b>One backfill pass over the three oldest kits — labelling, focus, tokens — before any new screen is built.</b> QA-001, 003 and 006 are the same retrofit touching the same lines, and they are mechanical. Doing them now costs one pass; doing them after the next surface is built costs two, and every screen produced in between inherits the gap.</p>
+<p>QA-004 and QA-008 wait for you: they change how the shipped app looks, so they are not the pipeline's to decide.</p>
+
+</body></html>

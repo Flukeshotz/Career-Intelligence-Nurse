@@ -1,0 +1,53 @@
+<!-- @dsCard group="Components" viewport="700x460" name="App — production primitives" subtitle="The 16 the shipping app renders: shell, hub surfaces, paywall" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script>document.write('<script src="../../_ds_bundle.js?v='+Date.now()+'"><\/script>')</script>
+<style>body{margin:0;padding:16px;background:#fff;font-family:var(--font-family)}.g{display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap;margin-bottom:18px}.lbl{font-size:10px;color:var(--color-text-muted);width:100%;text-transform:uppercase;letter-spacing:.06em;font-weight:600}.navy{background:#002856;border-radius:8px;overflow:hidden;width:390px}</style></head>
+<body><div id="root"></div><script type="text/babel">
+const NS = window.SkillcaseDesignSystem_a27963;
+const { AppButton, AppBadge, CheckItem, FeatureStatusChip, PlanPill, AppHeaderBar, ModeRail, AppTabBar, JourneyCard, PracticeTile, CourseCard, PromoBanner, StreakCard } = NS;
+const A = '../../assets/img/';
+const App = () => (<>
+  <div className="g"><span className="lbl">AppButton</span>
+    <AppButton variant="primary">Continue</AppButton>
+    <AppButton variant="dark">Go Premium</AppButton>
+    <AppButton variant="secondary">Maybe later</AppButton>
+    <AppButton variant="outline">Manage plan</AppButton>
+    <AppButton variant="primary" disabled>Disabled</AppButton>
+    <AppButton size="sm">sm</AppButton><AppButton size="lg" rounded>lg pill</AppButton>
+  </div>
+  <div className="g"><span className="lbl">Badges, entitlement chips, check items, plan pill</span>
+    <AppBadge variant="success" dot>Active</AppBadge>
+    <AppBadge variant="warning">Trial</AppBadge>
+    <AppBadge variant="neutral">Locked</AppBadge>
+    <FeatureStatusChip status="unlimited"/><FeatureStatusChip status="premium"/><FeatureStatusChip status="capped" used={2} limit={3}/>
+    <div style={{width:200}}><CheckItem>Unlimited flashcard practice</CheckItem></div>
+    <span style={{background:'#002856',padding:6,borderRadius:8,display:'inline-flex',gap:8}}>
+      <PlanPill plan="free"/><PlanPill plan="trial" daysLeft={5}/><PlanPill plan="premium"/>
+    </span>
+  </div>
+  <div className="g"><span className="lbl">Hub surfaces</span>
+    <JourneyCard image={A+'geothe.webp'}/>
+    <div style={{display:'flex',gap:10}}>
+      <PracticeTile image={A+'book.webp'}/>
+      <PracticeTile title="Grammar" caption="Learn chapter-wise grammar in A1" image={A+'telc.webp'}/>
+    </div>
+    <div style={{width:320,display:'flex',flexDirection:'column',gap:12}}>
+      <CourseCard image={A+'geothe.webp'}/>
+      <PromoBanner image={A+'maya/mayaStanding.webp'}/>
+      <StreakCard streak={4} todayPoints={12} dailyGoal={20}/>
+    </div>
+  </div>
+  <div className="g"><span className="lbl">Shell — navbar, mode switcher, tab bar</span>
+    <div className="navy">
+      <AppHeaderBar showAdmin/>
+      <ModeRail activeIndex={1} items={[{line1:'Guided',line2:'German',image:A+'maya/mayaSmiling.webp'},{line1:'German',line2:'Practice',image:A+'book.webp'},{line1:'German',line2:'Classes',image:A+'class.webp'}]}/>
+      <div style={{background:'#fff',height:12}}/>
+      <AppTabBar ringProgress={.62} coins={280} streakDays={0} icons={{home:A+'home.webp',jobs:A+'bag.webp',ring:A+'recapGermanFlag.webp',coins:A+'coin.png',streak:A+'trial.webp'}}/>
+    </div>
+  </div>
+</>);
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script></body></html>

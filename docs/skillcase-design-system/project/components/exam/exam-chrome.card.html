@@ -1,0 +1,29 @@
+<!-- @dsCard group="Components" viewport="1180x620" name="Exam chrome" subtitle="ExamTimerPill, BlockProgressTrack, DifficultyBadge — the three pieces duplicated across every exam surface" -->
+<!doctype html><html><head><meta charset="utf-8"><title>Exam chrome</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script>document.write('<script src="../../_ds_bundle.js?v='+Date.now()+'"><\/script>')</script>
+<style>html,body{margin:0;background:#f4f5f7;font-family:var(--font-family)}#root{width:1180px;padding:32px;display:flex;flex-direction:column;gap:24px;box-sizing:border-box}.row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.f{background:#fff;border:1px solid #e6eaf0;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}.h{padding:12px 16px;border-bottom:1px solid #eef1f5}.h b{display:block;font-size:13px;color:#002856}.h span{font-size:11.5px;color:#5b6472;line-height:1.5}.b{padding:22px 18px;flex:1;display:flex;align-items:center;justify-content:center;gap:10px}.warn{background:#fffdf5;border:1px solid #f6e7bd;border-left:3px solid #eec139;border-radius:10px;padding:14px 18px;font-size:13px;color:#002856;line-height:1.6}.warn b{color:#002856}.warn code{background:#f6f8fb;border:1px solid #dfe5ec;border-radius:4px;padding:1px 5px;font-size:12px}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const NS = window.SkillcaseDesignSystem_a27963;
+const { ExamTimerPill, BlockProgressTrack, DifficultyBadge } = NS;
+const F = ({ t, n, children }) => <div className="f"><div className="h"><b>{t}</b><span>{n}</span></div><div className="b">{children}</div></div>;
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.Fragment>
+    <div className="row">
+      <F t="ExamTimerPill — shipped" n="The only state production has: neutral, whatever the time left"><div style={{display:'flex',gap:10}}><ExamTimerPill seconds={1745} /><ExamTimerPill seconds={62} /><ExamTimerPill seconds={7} /></div></F>
+      <F t="ExamTimerPill — proposed tones" n="Not in the code. Offered because a silent countdown on an assessed section is a gap worth testing"><div style={{display:'flex',gap:10}}><ExamTimerPill seconds={300} tone="warning" /><ExamTimerPill seconds={41} tone="critical" /></div></F>
+      <F t="DifficultyBadge" n="md (12px) on content headers, sm (8px) in the paper list"><div style={{display:'flex',flexDirection:'column',gap:10,alignItems:'center'}}><div style={{display:'flex',gap:8}}><DifficultyBadge level="Easy" /><DifficultyBadge level="Medium" /><DifficultyBadge level="Hard" /></div><div style={{display:'flex',gap:8}}><DifficultyBadge size="sm" level="Easy" /><DifficultyBadge size="sm" level="Intermediate" /><DifficultyBadge size="sm" level="Schwer" /></div></div></F>
+    </div>
+    <div className="row">
+      <F t="BlockProgressTrack — start" n="Segment 1 is already amber: the fill rule is idx <= current, so there is no empty state"><div style={{width:'100%'}}><BlockProgressTrack count={5} current={0} /></div></F>
+      <F t="BlockProgressTrack — mid" n="Block 3 of 5 in a workspace"><div style={{width:'100%'}}><BlockProgressTrack count={5} current={2} /></div></F>
+      <F t="BlockProgressTrack — review" n="The same bar reused on results screens for position in a review list, not progress"><div style={{width:'100%'}}><BlockProgressTrack count={8} current={7} /></div></F>
+    </div>
+    <div className="warn"><b>Why these three and nothing else.</b> Each is duplicated verbatim across surfaces that already ship: the timer pill four times, the progress track eight, the difficulty helper five. The exam block tile, the correct/incorrect/skipped tally and the lettered answer-review row were all considered and <em>not</em> extracted — one appears once, and the other two differ structurally between the B1 and generic exam systems. Extracting them would freeze a difference nobody has decided about. See <code>guidelines/exam-system-audit.html</code>.</div>
+  </React.Fragment>
+);
+</script></body></html>

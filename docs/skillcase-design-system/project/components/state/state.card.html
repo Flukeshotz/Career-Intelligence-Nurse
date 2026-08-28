@@ -1,0 +1,23 @@
+<!-- @dsCard group="Components" viewport="1180x760" name="State primitives" subtitle="Loading, empty and error — extracted from repeated production markup, not invented" -->
+<!doctype html><html><head><meta charset="utf-8"><title>State primitives</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script>document.write('<script src="../../_ds_bundle.js?v='+Date.now()+'"><\/script>')</script>
+<style>html,body{margin:0;background:#f4f5f7;font-family:var(--font-family)}#root{width:1180px;padding:32px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;box-sizing:border-box}.f{background:#fff;border:1px solid #e6eaf0;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}.h{padding:12px 16px;border-bottom:1px solid #eef1f5}.h b{display:block;font-size:13px;color:#002856}.h span{font-size:11.5px;color:#5b6472;line-height:1.5}.b{padding:20px 16px;flex:1;display:flex;align-items:center}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const { StateMessage, SkeletonList } = window.SkillcaseDesignSystem_a27963;
+const F = ({ t, n, children }) => <div className="f"><div className="h"><b>{t}</b><span>{n}</span></div><div className="b">{children}</div></div>;
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.Fragment>
+    <F t="Loading — row" n="PaperSelect, ReadListenTopicSelect, DescribeSpeakSelect, interviewSelect"><SkeletonList variant="row" count={4} /></F>
+    <F t="Loading — card" n="ExamSelect, 2-up at sm and above"><SkeletonList variant="card" count={4} columns={2} titleWidth={128} /></F>
+    <F t="Empty" n="Copy is always surface-specific — there is no default"><StateMessage message="No exams configured yet. Check back soon." /></F>
+    <F t="Error + retry" n="Red circle, then a navy underline that re-runs the fetch"><StateMessage state="error" message="Failed to load exams. Please try again." onRetry={() => {}} /></F>
+    <F t="Error, no retry" n="Terminal failures omit the affordance rather than offer a dead link"><StateMessage state="error" message="Failed to load final report." /></F>
+    <F t="Busy CTA" n="AppButton busy — the isSubmitting pulse from 5 production files"><div style={{width:'100%',display:'flex',flexDirection:'column',gap:10}}><window.SkillcaseDesignSystem_a27963.AppButton fullWidth>Submit</window.SkillcaseDesignSystem_a27963.AppButton><window.SkillcaseDesignSystem_a27963.AppButton fullWidth busy>Submitting…</window.SkillcaseDesignSystem_a27963.AppButton></div></F>
+  </React.Fragment>
+);
+</script></body></html>

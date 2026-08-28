@@ -1,0 +1,97 @@
+<!-- @dsCard group="Foundations" viewport="1180x1500" name="Coverage gaps" subtitle="What is audited, what has screens, and what has neither" -->
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Coverage gaps</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+:root{--ink:#002856;--mute:#5b6472;--line:#dfe5ec;--navy:#002856;--gold:#eec139;--green:#166534;--rose:#b91c1c;--wash:#f6f8fb}
+*{box-sizing:border-box}
+html,body{margin:0;background:#fff;color:var(--ink);font-family:var(--font-family,system-ui,sans-serif);-webkit-font-smoothing:antialiased}
+body{max-width:1180px;margin:0 auto;padding:56px 40px 96px;font-size:15px;line-height:1.62}
+a{color:#1e5fbf}a:hover{color:#002856}
+h1{font-size:38px;line-height:1.12;letter-spacing:-.02em;margin:0 0 10px}
+.lede{font-size:17px;color:var(--mute);max-width:76ch;margin:0 0 8px;text-wrap:pretty}
+h2{font-size:15px;text-transform:uppercase;letter-spacing:.09em;margin:44px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px}
+h2 .n{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:6px;background:var(--navy);color:#fff;font-size:11px;letter-spacing:0}
+h4{font-size:14px;margin:22px 0 8px}
+p{margin:0 0 12px;text-wrap:pretty}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 18px}
+th{text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);border-bottom:1px solid var(--line);padding:7px 10px 7px 0;vertical-align:bottom}
+td{border-bottom:1px solid #eef1f5;padding:8px 10px 8px 0;vertical-align:top}
+code{background:var(--wash);border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:12px;font-family:ui-monospace,monospace}
+.tag{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:2px 7px;border-radius:20px;white-space:nowrap}
+.ok{background:#dcfce7;color:var(--green)}
+.part{background:#fef3c7;color:#92400e}
+.gap{background:#fee2e2;color:var(--rose)}
+.neu{background:#eef1f5;color:#414651}
+.callout{border-left:3px solid var(--gold);background:#fffdf5;padding:14px 18px;margin:20px 0;font-size:14px}
+.callout strong{color:var(--navy)}
+.verdict{border:1px solid var(--line);border-left:3px solid var(--navy);background:var(--wash);padding:16px 20px;margin:22px 0}
+.verdict b{display:block;font-size:16px;margin-bottom:6px}
+.note{font-size:13px;color:var(--mute)}
+ul,ol{margin:0 0 14px;padding-left:22px}
+li{margin-bottom:5px}
+.stamp{display:flex;gap:26px;flex-wrap:wrap;font-size:12px;color:var(--mute);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;margin:20px 0 8px}
+</style>
+</head><body>
+
+<h1>Coverage gaps</h1>
+<p class="lede">Three different things have been conflated in earlier reports: a surface being <em>audited</em>, its parts existing as <em>components</em>, and it having <em>screens</em>. This separates them, so "what's missing" has one answer. <strong>Updated after the phase-8 build:</strong> the exam gap and two of three template gaps are closed.</p>
+
+<div class="stamp"><span><strong>Date</strong> 28 Aug 2026</span><span><strong>Screen kits</strong> 7</span><span><strong>Components</strong> 96</span><span><strong>Templates</strong> 3 of 4</span><span><strong>Tokens</strong> 925</span></div>
+
+<h2><span class="n">0</span>The exam answer</h2>
+<div class="callout">
+<p><strong>The exam system has no screens, and that was deliberate — but stale.</strong> At phase 3 the instruction was explicit: "do not create exam screens yet. The output should be the behavioural map + reusable pattern extraction + validated scoring system." That was delivered — the three-system architecture (D-010), the scoring kit, and <code>ExamTimerPill</code> / <code>BlockProgressTrack</code> / <code>DifficultyBadge</code> as an <em>Exam chrome</em> components card.</p>
+<p>The hold was never lifted, which left the largest audited surface in the product as the only one with no screens. <strong>Closed in phase 8:</strong> all eight screens now exist in <code>ui_kits/exam-flow/</code> — four workspaces and four results — built against the new task template, and they established a fourth colour context in the process (D-030).</p>
+</div>
+
+<h2><span class="n">1</span>Surface coverage</h2>
+<table>
+<tr><th>Surface</th><th>Audited</th><th>Components</th><th>Screens</th><th>Where</th></tr>
+<tr><td><strong>App shell / home hub</strong></td><td><span class="tag ok">deep</span></td><td><span class="tag ok">yes</span></td><td><span class="tag ok">yes</span></td><td><code>ui_kits/mobile-app/index.html</code>, <code>levels.html</code></td></tr>
+<tr><td><strong>Guided German lessons</strong></td><td><span class="tag ok">deep</span></td><td><span class="tag ok">yes</span></td><td><span class="tag ok">yes</span></td><td><code>ui_kits/lesson-flow/</code> — every screen type</td></tr>
+<tr><td><strong>Job pipeline</strong></td><td><span class="tag ok">deep</span></td><td><span class="tag ok">yes</span></td><td><span class="tag ok">yes</span></td><td><code>ui_kits/job-flow/</code> — all 21 screens</td></tr>
+<tr><td><strong>Freemium → trial → premium</strong></td><td><span class="tag ok">deep</span></td><td><span class="tag ok">yes</span></td><td><span class="tag ok">yes</span></td><td><code>ui_kits/premium-flow/</code></td></tr>
+<tr><td><strong>Onboarding</strong></td><td><span class="tag ok">deep</span></td><td><span class="tag ok">yes</span></td><td><span class="tag ok">yes</span></td><td><code>ui_kits/mobile-app/onboarding.html</code></td></tr>
+<tr><td><strong>Exam — B1 four-section papers</strong></td><td><span class="tag ok">deep</span></td><td><span class="tag ok">yes</span></td><td><span class="tag ok">yes</span></td><td><code>ui_kits/exam-flow/</code> — all 8 screens</td></tr>
+<tr><td><strong>Exam — <code>/exam/:testId</code> proctored</strong></td><td><span class="tag ok">deep</span></td><td><span class="tag part">chrome only</span></td><td><span class="tag gap">none</span></td><td>Teacher-marked flow; has urgency treatment B1 lacks</td></tr>
+<tr><td><strong>Scholarship tests</strong></td><td><span class="tag part">mapped</span></td><td><span class="tag gap">none</span></td><td><span class="tag gap">none</span></td><td>Phase 5 found it is its own product system, not an exam variant</td></tr>
+<tr><td><strong>A1/A2 module &amp; chapter select</strong></td><td><span class="tag ok">deep</span></td><td><span class="tag ok">yes</span></td><td><span class="tag part">component card only</span></td><td><code>practice.card.html</code> shows the chrome, not a screen flow</td></tr>
+<tr><td><strong>Recap / daily goal / streak</strong></td><td><span class="tag part">mapped</span></td><td><span class="tag part">StreakCard only</span></td><td><span class="tag gap">none</span></td><td><code>RecapScreen</code>, <code>DailyGoalModal</code>, <code>StreakLeaderboardModal</code> unbuilt</td></tr>
+<tr><td><strong>Profile &amp; account</strong></td><td><span class="tag part">mapped</span></td><td><span class="tag gap">none</span></td><td><span class="tag gap">none</span></td><td>Phase 5 traced routes; no state-level audit</td></tr>
+<tr><td><strong>Content library</strong></td><td><span class="tag part">mapped</span></td><td><span class="tag part">ListRow covers rows</span></td><td><span class="tag gap">none</span></td><td>Stays a feature collection, not a product system (D-015)</td></tr>
+<tr><td>Admin · interview tools · marketing</td><td><span class="tag neu">out of scope</span></td><td>—</td><td>—</td><td>D-019. Not a gap</td></tr>
+</table>
+
+<h2><span class="n">2</span>System-layer gaps</h2>
+<table>
+<tr><th>Gap</th><th>Severity</th><th>Note</th></tr>
+<tr><td><strong>1 of 4 canonical templates unbuilt</strong></td><td><span class="tag part">medium</span></td><td>Task and select templates shipped in phase 8. Only the <strong>lesson</strong> template remains — and it is a retrofit, since the Guided German screens already exist</td></tr>
+<tr><td><s>Exam screens (8)</s></td><td><span class="tag ok">closed</span></td><td>Built in phase 8 against the task template, which validated it on the hardest case in the product</td></tr>
+<tr><td><s>Busy/error announcement pattern</s></td><td><span class="tag ok">closed</span></td><td><code>LiveRegion</code> — one region per screen, owned by the template (D-028). Wired into the task template and the exam writing screen</td></tr>
+<tr><td><s>No SkillCase text input</s></td><td><span class="tag ok">closed</span></td><td><code>TextField</code> — extracted from six surfaces, keeps production's working blue focus ring (D-029)</td></tr>
+<tr><td><strong>No screen-reader validation</strong></td><td><span class="tag part">medium</span></td><td>Keeps accessibility at 5/10 and cannot be closed by reading code</td></tr>
+<tr><td><strong>Three AA contrast failures live</strong></td><td><span class="tag part">medium</span></td><td>Measured and staged with <code>-aa</code> alternates. Awaiting your approval (D-023)</td></tr>
+<tr><td><strong>26 defects unactioned</strong></td><td><span class="tag part">medium</span></td><td>Register is complete; nothing has been fixed in the codebase. Includes 4 P1s</td></tr>
+<tr><td>Maya: 4 components for 1 character</td><td><span class="tag neu">low</span></td><td>Needs a product decision, not a component (D-014, reopened)</td></tr>
+<tr><td>Dark theme undesigned</td><td><span class="tag neu">low</span></td><td>Intentional — the product has no dark theme (D-004)</td></tr>
+</table>
+
+<h2><span class="n">3</span>What phase 8 built, and what is left</h2>
+<div class="callout">
+<p><strong>Phase 8 shipped:</strong> the task template, the select template, <code>LiveRegion</code>, <code>TextField</code>, and all eight exam screens. Building the template and its hardest instances together was the right call — the exam surface exercised timed sections, block progress, two scoring models and answer review, and forced the template to be honest about all four.</p>
+<p><strong>It also exposed a colour context the system had not separated:</strong> exam surfaces pair sky-950 headings with a blue-950 CTA, and <em>Review Answers</em> is navy one screen away from that CTA. Recorded as D-030. There are four contexts, not two.</p>
+</div>
+<ol>
+<li><strong>Lesson template</strong> — the last of the four. A retrofit: Guided German screens exist, so the template should reproduce them exactly rather than reinterpret them.</li>
+<li><strong>Recap / daily goal / streak</strong> — three modals with real production sources, currently unbuilt. The smallest remaining screen gap.</li>
+<li><strong>Screen-reader pass</strong> — the only thing keeping accessibility below 6, and the only gap that cannot be closed by reading code.</li>
+<li><strong>The three AA colour corrections</strong> — measured, staged, awaiting one decision.</li>
+</ol>
+<p class="note">Still not in scope: scholarship, Profile and Content screens until their state machines are traced. Building from a route map rather than an implementation is how the wrong template gets baked in.</p>
+
+<div class="verdict"><b>Honest summary</b>
+<p><strong>KNOWN:</strong> seven surfaces have screens and are audited to state level — the exam system included, as of phase 8. Foundations, 925 tokens, 96 components, the pattern layer and three of four templates are complete and traceable. Four colour contexts are explicit and tokenised.</p>
+<p><strong>KNOWN GAP:</strong> the lesson template (a retrofit), the recap/streak modals, and 26 recorded defects none of which have been actioned in the codebase.</p>
+<p class="note" style="margin-bottom:0"><strong>UNKNOWN:</strong> screen-reader behaviour; the scholarship state machine; whether Profile and Content need anything the three templates do not already provide. <strong>The system can now generate new screens in every audited surface</strong> — which was the goal, and is a different claim from "the application is fully audited", which remains false.</p></div>
+
+</body></html>

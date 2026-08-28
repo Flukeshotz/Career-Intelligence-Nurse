@@ -1,0 +1,124 @@
+<!-- @dsCard group="Foundations" viewport="1180x1400" name="Phase 8 — patterns & templates" subtitle="The canonical set, derived from audited evidence" -->
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Phase 8 — patterns & templates</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+:root{--ink:#002856;--mute:#5b6472;--line:#dfe5ec;--navy:#002856;--gold:#eec139;--green:#166534;--rose:#b91c1c;--wash:#f6f8fb}
+*{box-sizing:border-box}
+html,body{margin:0;background:#fff;color:var(--ink);font-family:var(--font-family,system-ui,sans-serif);-webkit-font-smoothing:antialiased}
+body{max-width:1180px;margin:0 auto;padding:56px 40px 96px;font-size:15px;line-height:1.62}
+a{color:#1e5fbf}a:hover{color:#002856}
+h1{font-size:38px;line-height:1.12;letter-spacing:-.02em;margin:0 0 10px}
+.lede{font-size:17px;color:var(--mute);max-width:76ch;margin:0 0 8px;text-wrap:pretty}
+h2{font-size:15px;text-transform:uppercase;letter-spacing:.09em;margin:44px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px}
+h2 .n{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:6px;background:var(--navy);color:#fff;font-size:11px;letter-spacing:0}
+h4{font-size:14px;margin:22px 0 8px}
+p{margin:0 0 12px;text-wrap:pretty}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 18px}
+th{text-align:left;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute);border-bottom:1px solid var(--line);padding:7px 10px 7px 0;vertical-align:bottom}
+td{border-bottom:1px solid #eef1f5;padding:8px 10px 8px 0;vertical-align:top}
+code{background:var(--wash);border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:12px;font-family:ui-monospace,monospace}
+.tag{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:2px 7px;border-radius:20px;white-space:nowrap}
+.ok{background:#dcfce7;color:var(--green)}
+.prob{background:#dbeafe;color:#1e40af}
+.emg{background:#fef3c7;color:#92400e}
+.surf{background:#ede9fe;color:#5b21b6}
+.neu{background:#eef1f5;color:#414651}
+.callout{border-left:3px solid var(--gold);background:#fffdf5;padding:14px 18px;margin:20px 0;font-size:14px}
+.callout strong{color:var(--navy)}
+.verdict{border:1px solid var(--line);border-left:3px solid var(--navy);background:var(--wash);padding:16px 20px;margin:22px 0}
+.verdict b{display:block;font-size:16px;margin-bottom:6px}
+.note{font-size:13px;color:var(--mute)}
+ul,ol{margin:0 0 14px;padding-left:22px}
+li{margin-bottom:5px}
+.stamp{display:flex;gap:26px;flex-wrap:wrap;font-size:12px;color:var(--mute);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;margin:20px 0 8px}
+</style>
+</head><body>
+
+<h1>Phase 8 — patterns and templates</h1>
+<p class="lede">The smallest set of canonical templates that explains the audited evidence, and the pattern layer beneath them. Analysis first: this document decides what should exist before anything is built.</p>
+
+<div class="stamp"><span><strong>Date</strong> 27 Aug 2026</span><span><strong>Components</strong> 88</span><span><strong>Tokens</strong> 920</span><span><strong>Cards</strong> 41</span><span><strong>Templates built</strong> 1</span></div>
+
+<h2><span class="n">0</span>What phase 8 must resolve</h2>
+<div class="callout">
+<p><strong>The system has 88 components and one template.</strong> That ratio is the current bottleneck: a designer starting a new screen has every part and no shape. Five templates were evidenced across phases 1–5, but building five independently would repeat the A1/A2 fork at the template layer — which is exactly the defect D-007 records. So the question is not "build the five", it is <strong>how few templates explain the evidence</strong>.</p>
+<p>The answer below is <strong>three</strong>, plus the one that already exists.</p>
+</div>
+
+<h2><span class="n">1</span>Pattern map</h2>
+<p class="note">A pattern is a recurring composition of components, not a component. Classified <span class="tag ok">proven</span> (3+ surfaces, shared behaviour) · <span class="tag prob">probable</span> (2 surfaces) · <span class="tag emg">emerging</span> (1 surface, likely to recur) · <span class="tag surf">surface-specific</span> (keep local).</p>
+<table>
+<tr><th>Pattern</th><th>Components</th><th>Surfaces</th><th>Reuse evidence</th><th>Status</th></tr>
+<tr><td><strong>Back-bar + title</strong></td><td><code>ListRow</code> ancestors, <code>ModuleTopBar</code></td><td>~20</td><td>Identical <code>ChevronLeft</code> + <code>text-slate-900</code> label on every B1 workspace, result, and select screen; <code>BackNavigation.jsx</code> in A1/A2</td><td><span class="tag ok">proven</span></td></tr>
+<tr><td><strong>Row-select list</strong></td><td><code>ListRow</code>, <code>DifficultyBadge</code>, <code>AppBadge</code></td><td>10+</td><td>D-017. Exam type, paper, describe-speak, read-listen topics and sources, video courses, notes</td><td><span class="tag ok">proven</span></td></tr>
+<tr><td><strong>Score summary</strong></td><td><code>ScoreRing</code>, <code>MetricBar</code>, <code>scoreBands</code></td><td>7</td><td>Four exam results + describe-speak + job progress + trial. Multiple band models (D-009)</td><td><span class="tag ok">proven</span></td></tr>
+<tr><td><strong>Answer review</strong></td><td><code>OptionRow</code>, <code>ListRow</code>, <code>AudioPlayer</code></td><td>4</td><td>Reading, listening, writing, speaking results all render chosen-vs-correct with dimmed alternatives</td><td><span class="tag ok">proven</span></td></tr>
+<tr><td><strong>Usage-limit gate</strong></td><td><code>UsageLimitPanel</code>, <code>PremiumPriceCard</code>, <code>FeatureStatusChip</code></td><td>5+</td><td>Two hooks with different shapes (defects.md P3) — the pattern is proven, its API is not</td><td><span class="tag ok">proven</span></td></tr>
+<tr><td><strong>Eligibility lock</strong></td><td><code>LockGateCard</code>, <code>AppTabBar</code> dimmed slots</td><td>3</td><td>Jobs gate for A1/A2, chapter lock, scholarship gate. Distinct from usage limit: permanent, not temporary</td><td><span class="tag ok">proven</span></td></tr>
+<tr><td><strong>Chaptered progress</strong></td><td><code>ChapterRow</code>, <code>ChapterStrip</code>, <code>LevelHero</code></td><td>2</td><td>A1 and A2 module select — the accidental fork (D-007)</td><td><span class="tag prob">probable</span></td></tr>
+<tr><td><strong>Timed section</strong></td><td><code>ExamTimerPill</code>, <code>BlockProgressTrack</code></td><td>4+</td><td>Four exam workspaces; scholarship adds <code>isUrgent</code> under 300s that B1 lacks</td><td><span class="tag prob">probable</span></td></tr>
+<tr><td><strong>Document upload + read</strong></td><td><code>UploadRow</code>, <code>DocumentReader</code>, <code>SignatureModal</code></td><td>2</td><td>Phase 5: cross-system, not Jobs-only (D-016)</td><td><span class="tag prob">probable</span></td></tr>
+<tr><td><strong>Audio prompt + record</strong></td><td><code>AudioTapButton</code>, <code>AudioPlayer</code></td><td>2</td><td>Describe-speak, exam speaking. Guided German uses <code>WaveformIcon</code> instead — a third variant, not yet reconciled</td><td><span class="tag emg">emerging</span></td></tr>
+<tr><td><strong>Maya dialogue</strong></td><td><code>MayaBubble</code>, <code>MayaPrompt</code>, <code>ChatBubble</code>, <code>MayaNote</code></td><td>4</td><td>Four components for one character across lesson, jobs, premium. D-014 reopened this; still unresolved</td><td><span class="tag emg">emerging</span></td></tr>
+<tr><td><strong>Payment step</strong></td><td><code>PlanSummaryCard</code>, <code>PaymentMethodRow</code>, <code>DepositGateCard</code></td><td>2</td><td>Upgrade and job deposit. Same shape, different semantics (subscription vs one-off)</td><td><span class="tag emg">emerging</span></td></tr>
+<tr><td>Drag-and-drop word build</td><td><code>WordChip</code>, droppable slots</td><td>1</td><td>Unjumble only. Real interaction complexity, no second instance</td><td><span class="tag surf">surface-specific</span></td></tr>
+<tr><td>Streak leaderboard</td><td><code>StreakCard</code> + modal</td><td>1</td><td>One 1300-line production file. Keep local until a second surface asks</td><td><span class="tag surf">surface-specific</span></td></tr>
+</table>
+
+<h2><span class="n">2</span>Template map — three, not five</h2>
+<p>The five "evidenced templates" from earlier phases collapse once the pattern layer is explicit. Four of them share one skeleton and differ only in which patterns fill the body.</p>
+<table>
+<tr><th>Template</th><th>Explains</th><th>Skeleton</th><th>Varies by</th><th>Status</th></tr>
+<tr><td><strong>App screen</strong><br><span class="note">exists</span></td><td>Home hub, practice hub, jobs lobby, profile</td><td><code>AppHeaderBar</code> → scroll body → <code>AppTabBar</code></td><td>Mode switcher present/absent; tab-bar slot locking</td><td><span class="tag ok">built</span></td></tr>
+<tr><td><strong>Task screen</strong></td><td>Exam workspaces (×4), describe-speak workspace, A1/A2 test, reading/video readers, <em>and</em> the four exam <em>results</em> screens</td><td>Back-bar + title → optional timer/progress → content well → footer action</td><td>Timed vs untimed; question vs review body; single vs blocked progress</td><td><span class="tag ok">canonical</span></td></tr>
+<tr><td><strong>Select screen</strong></td><td>Exam type, paper, block, describe-speak, read-listen topics + sources, A1/A2 chapter select</td><td>Back-bar + title → optional hero/strip → row-select list → optional gate</td><td>Hero present/absent; chaptered vs flat; lock treatment</td><td><span class="tag ok">canonical</span></td></tr>
+<tr><td><strong>Lesson screen</strong></td><td>All 12 Guided German lesson screens</td><td>Blue page gradient → progress bar → Maya/prompt → interaction zone → dual footer</td><td>Interaction type (vocab, quiz, match, unjumble, conversation, grammar)</td><td><span class="tag ok">canonical</span></td></tr>
+</table>
+
+<div class="callout">
+<p><strong>Why "task screen" absorbs the results screens.</strong> Earlier phases counted workspace and results as two templates because they feel different. Structurally they are the same: back-bar, a well, a footer action. What changes is the body pattern — <em>question</em> versus <em>answer review</em> — and the body is a pattern slot, not a template. Making them one template is what stops the eighth results screen from forking.</p>
+<p><strong>Why the lesson screen stays separate.</strong> It is the one case where the difference is not the body but the <em>context</em>: a different page surface, a different ink (D-024b), a different footer grammar (two buttons, gold primary). Forcing it into "task screen" would either flatten the Guided German identity or bloat the task template with a mode flag that changes everything. Two templates is the honest count.</p>
+</div>
+
+<h4>A1/A2 recorded explicitly</h4>
+<p>A1 and A2 module select are <strong>one configuration of the select screen</strong>, differing only in <code>module_number</code> handling — and A2 ignores it (defects.md P2). The two near-identical production implementations should conceptually be one template. <strong>Production code is not merged by this document</strong>; the design system expresses one template and the fork is recorded as debt (D-007).</p>
+
+<h2><span class="n">3</span>What phase 8 should build, in order</h2>
+<ol>
+<li><strong>The announcement pattern first.</strong> Busy and error states are silent across <code>AppButton busy</code>, <code>SkeletonList</code> and <code>StateMessage</code> (defects.md P3, and the phase-7 accessibility gap). Its shape depends on how a screen composes them — which is exactly what a template decides. Building it inside the first template, rather than before or after, is the only way to get it right once.</li>
+<li><strong>Task screen.</strong> Highest leverage: it explains 14+ audited surfaces, and it is where the timer, block progress and review patterns land.</li>
+<li><strong>Select screen.</strong> Second: 10+ surfaces, and it retires the A1/A2 fork at the design layer.</li>
+<li><strong>Lesson screen.</strong> Last of the three, because Guided German is the most fully audited surface and least at risk of drifting while it waits.</li>
+</ol>
+<p class="note">Not in phase 8: the Maya consolidation (needs a product decision, not a template), the payment step (two surfaces with genuinely different semantics — wait for a third), and the scholarship urgency port (open question 7).</p>
+
+<h2><span class="n">4</span>Maturity after phase 7</h2>
+<div class="verdict"><b>Overall 6.4 / 10 — unchanged by the phase-7 checkpoint</b>
+<table style="margin:10px 0 0">
+<tr><th>Dimension</th><th>Score</th><th>Note</th></tr>
+<tr><td>Foundations</td><td>8</td><td>Colour, type, spacing, radius all traced to code</td></tr>
+<tr><td>Tokens</td><td>8</td><td>920, semantic tier complete; the two-blue distinction now tokenised (D-024b)</td></tr>
+<tr><td>Components</td><td>8</td><td>88, each traceable to a production file</td></tr>
+<tr><td>States</td><td>7</td><td>Taxonomy done; announcement layer missing</td></tr>
+<tr><td>Patterns</td><td>6</td><td>Mapped above — first time they are explicit</td></tr>
+<tr><td>Templates</td><td>3</td><td>1 of 4 canonical built</td></tr>
+<tr><td>Accessibility</td><td>5</td><td>Foundations validated; no screen-reader pass</td></tr>
+<tr><td>Documentation</td><td>8</td><td>27 decisions, 24 defects, 11 guideline docs</td></tr>
+<tr><td>Cross-product consistency</td><td>6</td><td>Guided German vs shell now understood as intentional, not drift</td></tr>
+<tr><td>Engineering alignment</td><td>5</td><td>Nothing in defects.md has been actioned in the codebase</td></tr>
+</table>
+<p style="margin:12px 0 0"><strong>Largest gap:</strong> templates. Everything else is at 5–8; templates at 3 is what makes the system a parts bin rather than a generator.</p>
+</div>
+
+<h2><span class="n">5</span>Readiness</h2>
+<div class="verdict"><b>ALMOST — ready for screen production in the three audited systems only</b>
+<p>Guided German, the B1 exam system and the job pipeline are audited deeply enough that a new screen in them can be generated from this system with confidence. Profile, content and scholarship are mapped but not traced to state level.</p>
+<p class="note" style="margin-bottom:0"><strong>KNOWN:</strong> foundations, tokens, components, the pattern layer, three colour contexts. <strong>UNKNOWN:</strong> screen-reader behaviour, scholarship state machine, whether the Maya variants are one component. <strong>ASSUMPTION:</strong> that the three templates above cover surfaces in the unaudited areas — untested, and the first Profile screen will test it.</p></div>
+
+<h2><span class="n">6</span>A note on method</h2>
+<div class="callout">
+<p>Phase 7 closed with a self-inflicted defect worth carrying forward: a colour was declared absent from the codebase on the strength of a hex grep, in a Tailwind codebase where most colours never appear as hex. Nine files were changed on that one bad premise before the user caught it (D-024, withdrawn).</p>
+<p><strong>The rule this establishes for phase 8:</strong> evidence is a resolved class name or a read file, never the absence of a string. And no sweep wider than the evidence that justified it.</p>
+</div>
+
+</body></html>

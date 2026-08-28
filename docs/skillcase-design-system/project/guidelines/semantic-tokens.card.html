@@ -1,0 +1,51 @@
+<!-- @dsCard group="Foundations" viewport="1180x760" name="Semantic tier" subtitle="The --ui-* role layer: what a colour is FOR, bound to 59 components in phase 6" -->
+<!doctype html><html><head><meta charset="utf-8"><title>Semantic tier</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+html,body{margin:0;background:#f4f5f7;font-family:var(--font-family)}
+#root{width:1180px;padding:32px;display:flex;flex-direction:column;gap:22px;box-sizing:border-box}
+.grp{background:#fff;border:1px solid #e6eaf0;border-radius:14px;overflow:hidden}
+.grp>h3{margin:0;padding:12px 18px;border-bottom:1px solid #eef1f5;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#002856}
+.sw{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.s{display:flex;gap:12px;align-items:center;padding:14px 18px;border-right:1px solid #f2f5f9;border-bottom:1px solid #f2f5f9;min-width:0}
+.c{width:38px;height:38px;border-radius:8px;border:1px solid rgba(0,0,0,.08);flex-shrink:0}
+.t{min-width:0}
+.t b{display:block;font-size:11.5px;color:#002856;font-family:ui-monospace,monospace;overflow:hidden;text-overflow:ellipsis}
+.t span{display:block;font-size:11px;color:#5b6472;margin-top:2px;line-height:1.4}
+.warn{background:#fffdf5;border:1px solid #f6e7bd;border-left:3px solid #eec139;border-radius:10px;padding:14px 18px;font-size:13px;color:#002856;line-height:1.65}
+.warn b{color:#002856}
+.warn code{background:#f6f8fb;border:1px solid #dfe5ec;border-radius:4px;padding:1px 5px;font-size:12px}
+.warn table{width:100%;border-collapse:collapse;margin:10px 0 2px;font-size:12.5px}
+.warn td{padding:5px 10px 5px 0;border-bottom:1px solid #f0e6cc;vertical-align:top}
+</style></head><body><div id="root">
+<div class="grp"><h3>Surface</h3><div class="sw">
+<div class="s"><div class="c" style="background:var(--ui-surface-card)"></div><div class="t"><b>--ui-surface-card</b><span>Every card and row</span></div></div>
+<div class="s"><div class="c" style="background:var(--ui-surface-sunken)"></div><div class="t"><b>--ui-surface-sunken</b><span>The black/5 wash behind results</span></div></div>
+<div class="s"><div class="c" style="background:var(--ui-surface-inverse)"></div><div class="t"><b>--ui-surface-inverse</b><span>Navy chrome</span></div></div>
+<div class="s"><div class="c" style="background:var(--ui-surface-info)"></div><div class="t"><b>--ui-surface-info</b><span>Icon wells on list rows</span></div></div>
+</div></div>
+<div class="grp"><h3>Text</h3><div class="sw">
+<div class="s"><div class="c" style="background:var(--ui-text-primary)"></div><div class="t"><b>--ui-text-primary</b><span>Headings</span></div></div>
+<div class="s"><div class="c" style="background:var(--ui-text-body)"></div><div class="t"><b>--ui-text-body</b><span>Row titles, questions</span></div></div>
+<div class="s"><div class="c" style="background:var(--ui-text-secondary)"></div><div class="t"><b>--ui-text-secondary</b><span>Supporting copy</span></div></div>
+<div class="s"><div class="c" style="background:var(--ui-text-faint)"></div><div class="t"><b>--ui-text-faint</b><span>Counts, chevrons</span></div></div>
+</div></div>
+<div class="grp"><h3>Action &mdash; gold is primary, navy is its ink</h3><div class="sw">
+<div class="s"><div class="c" style="background:var(--ui-action-primary-bg)"></div><div class="t"><b>--ui-action-primary-bg</b><span>The main CTA</span></div></div>
+<div class="s"><div class="c" style="background:var(--ui-action-dark-bg)"></div><div class="t"><b>--ui-action-dark-bg</b><span>Exam and lesson CTAs</span></div></div>
+<div class="s"><div class="c" style="background:var(--ui-action-busy-bg)"></div><div class="t"><b>--ui-action-busy-bg</b><span>Pulsing submit, 5 files</span></div></div>
+<div class="s"><div class="c" style="background:var(--ui-border-strong)"></div><div class="t"><b>--ui-border-strong</b><span>Selected / hovered</span></div></div>
+</div></div>
+<div class="grp"><h3>Feedback &amp; progress</h3><div class="sw">
+<div class="s"><div class="c" style="background:var(--ui-success-fg)"></div><div class="t"><b>--ui-success-fg</b><span>Correct, completed</span></div></div>
+<div class="s"><div class="c" style="background:var(--ui-warning-fg)"></div><div class="t"><b>--ui-warning-fg</b><span>Mid band, in progress</span></div></div>
+<div class="s"><div class="c" style="background:var(--ui-danger-fg)"></div><div class="t"><b>--ui-danger-fg</b><span>Incorrect, error</span></div></div>
+<div class="s"><div class="c" style="background:var(--ui-progress-fill)"></div><div class="t"><b>--ui-progress-fill</b><span>Amber block progress</span></div></div>
+</div></div>
+<div class="warn"><b>Two things this tier deliberately does not hide.</b>
+<table>
+<tr><td style="width:220px"><code>--ui-opacity-disabled</code> .6<br><code>--ui-opacity-locked</code> .5</td><td>Production ships two opacities for what looks like one idea. They are tokenised <em>separately and named for their cause</em>, because a rate limit and an eligibility gate may genuinely differ. A tier that averaged them would have buried a live question.</td></tr>
+<tr><td><code>--ui-focus-ring</code></td><td><strong>The only value here that is not evidence.</strong> No focus treatment exists in production. Defined so components have something to bind; phase 7 owns the rule.</td></tr>
+</table>
+<p style="margin:10px 0 0"><b>And one contradiction it exposes.</b> <code>brand.css</code> already carried a Figma-derived alias block in which <code>--sc-action-primary</code> is green <code>#019035</code>. The shipping <code>AppButton</code> renders gold <code>#edb843</code> on navy. Per D-001 the code wins &mdash; but per D-005 a token is never silently rewritten, so the Figma aliases are untouched and flagged for a human. That disagreement had been sitting in the system since phase 1, invisible, because nothing consumed either value.</p></div>
+</div></body></html>

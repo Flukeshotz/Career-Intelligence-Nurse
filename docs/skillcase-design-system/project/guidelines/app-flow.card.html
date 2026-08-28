@@ -1,0 +1,69 @@
+<!-- @dsCard group="Foundations" viewport="1240x1010" name="App flow — where each screen goes" subtitle="Read from src/App.jsx, BottomTabBar, TopModeSwitcher, NewNavbar and LandingPage" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css"><style>
+body{margin:0;padding:30px 34px;font-family:var(--font-family);background:var(--color-bg-secondary);color:#0f172a;width:1240px;box-sizing:border-box}
+h2{margin:0 0 4px;font-size:13px;font-weight:700;color:#002856;letter-spacing:.02em;text-transform:uppercase}
+.sub{font-size:11px;color:#5b6472;margin:0 0 12px}
+section{margin-bottom:26px}
+.grid{display:grid;gap:12px}
+.card{background:#fff;border-radius:10px;padding:14px 16px;box-shadow:var(--shadow-sm)}
+.slot{font-size:14px;font-weight:700;color:#002856;margin-bottom:5px}
+.dest{font-size:11.5px;line-height:17px;color:#3f4854}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;background:#eef2f8;padding:1px 5px;border-radius:4px;color:#0055d4}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:10px;overflow:hidden;box-shadow:var(--shadow-sm)}
+th{font-size:10px;text-transform:uppercase;letter-spacing:.05em;color:#7a838f;text-align:left;padding:10px 14px;background:#f7f9fc;font-weight:700}
+td{font-size:11.5px;line-height:17px;padding:11px 14px;border-top:1px solid #eef1f5;vertical-align:top;color:#3f4854}
+td.lv{font-weight:700;color:#002856;font-size:13px;white-space:nowrap}
+.note{font-size:11px;color:#5b6472;margin-top:10px;line-height:17px}
+a{color:#0055d4}a:hover{color:#002856}
+</style></head><body>
+
+<section>
+<h2>Bottom bar — the five slots</h2>
+<p class="sub">One bar on every shell route. Only three slots navigate.</p>
+<div class="grid" style="grid-template-columns:repeat(5,1fr)">
+  <div class="card"><div class="slot">Home</div><div class="dest">Always <code>/</code>. The German Practice hub <em>is</em> the home screen — there is no separate home.</div></div>
+  <div class="card"><div class="slot">Jobs</div><div class="dest">A1/A2 → <code>/jobs</code> (locked gate). B1/B2 → <code>/job-screening</code>, and the tap also persists <code>lg_preferred_mode = job_screening</code>.</div></div>
+  <div class="card"><div class="slot">Centre arch</div><div class="dest">Not a tab. A raised dome with the German flag and a two-line caption. Tappable only in Guided German → <code>/learn-german/recap</code>; inert elsewhere.</div></div>
+  <div class="card"><div class="slot">Coins</div><div class="dest">Read-out only, synced from <code>/user/me</code>. Never navigates.</div></div>
+  <div class="card"><div class="slot">Streak</div><div class="dest">Fires <code>openLeaderboard</code> — opens the streak leaderboard sheet. Not a route.</div></div>
+</div>
+<p class="note">Header: the level title is a brand link back to the active hub; the 28px avatar goes to <code>/profile</code>. On <code>/scholarship</code> every slot but Home greys out.</p>
+</section>
+
+<section>
+<h2>Top mode switcher — who gets which tabs</h2>
+<p class="sub">Derived from the route, not from stored state. Active tab melts into the page colour below it.</p>
+<div class="grid" style="grid-template-columns:repeat(3,1fr)">
+  <div class="card"><div class="slot">Below B1</div><div class="dest">Guided German <code>/learn-german</code> · German Practice <code>/</code> · German Classes <code>/video-courses</code> (behind the <code>german_classes</code> flag).</div></div>
+  <div class="card"><div class="slot">B1 &amp; B2</div><div class="dest">Two tabs only: Job Preparation <code>/</code> · German Jobs <code>/job-screening</code>. No Guided German, no Classes.</div></div>
+  <div class="card"><div class="slot">Scholarship</div><div class="dest">One static tab, "Scholarship Exam". The candidate cannot leave the funnel from the chrome.</div></div>
+</div>
+</section>
+
+<section>
+<h2>Level branching</h2>
+<p class="sub"><code>isB1PracticeLevel()</code> collapses B1 and B2 into one surface — B2 users are even shown "B1 German Level".</p>
+<table>
+<thead><tr><th style="width:58px">Level</th><th style="width:150px">Switcher</th><th>Practice hub tiles</th><th style="width:190px">Centre arch</th><th style="width:150px">Jobs tab</th></tr></thead>
+<tbody>
+<tr><td class="lv">A1</td><td>3 tabs</td><td>Flashcards · Grammar · Listening · Speaking · Reading · Test · News → <code>/a1/*</code></td><td>"Your A1 progress"</td><td><code>/jobs</code> gate</td></tr>
+<tr><td class="lv">A2</td><td>3 tabs</td><td>Same six skills with A2 copy · News → <code>/a2/*</code></td><td>"Your A2 progress"</td><td><code>/jobs</code> gate</td></tr>
+<tr><td class="lv">B1</td><td>2 tabs</td><td>Flashcards · Reading &amp; Listening · Describe &amp; Speak · TELC &amp; GOETHE Exam Papers · Talk to Maya · News → <code>/b1/*</code></td><td>"Your B1 progress"</td><td><code>/job-screening</code> pipeline</td></tr>
+<tr><td class="lv">B2</td><td>2 tabs</td><td>Identical to B1</td><td>"Your B1 progress"</td><td><code>/job-screening</code> pipeline</td></tr>
+</tbody>
+</table>
+<p class="note">Guided German is one journey shared by all non-B1 levels; its arch caption is "German words learnt" and German Classes shows "Course status". A1 users on the legacy content set see the old tile list plus a "Switch to New A1" banner until they migrate.</p>
+</section>
+
+<section>
+<h2>Redirects that decide the landing screen</h2>
+<p class="sub">Evaluated on <code>/</code> before anything renders.</p>
+<div class="grid" style="grid-template-columns:repeat(4,1fr)">
+  <div class="card"><div class="slot">scholarship</div><div class="dest">mode = scholarship → <code>/scholarship</code></div></div>
+  <div class="card"><div class="slot">job screening</div><div class="dest">Non-B1 candidate → <code>/job-screening</code>, and every other route is blocked</div></div>
+  <div class="card"><div class="slot">learn</div><div class="dest">mode = learn → <code>/learn-german</code></div></div>
+  <div class="card"><div class="slot">otherwise</div><div class="dest">The practice hub renders in place</div></div>
+</div>
+</section>
+
+</body></html>

@@ -1,0 +1,36 @@
+<!-- @dsCard group="App" viewport="1300x1010" name="Jobs — gate, pipeline, deposit" subtitle="Where the Jobs tab lands: /jobs for A1/A2, the pipeline lobby for B1/B2, and the refundable deposit step" -->
+<!doctype html><html><head><meta charset="utf-8"><title>Skillcase — jobs surfaces</title>
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script>document.write('<script src="../../_ds_bundle.js?v='+Date.now()+'"><\/script>')</script>
+<style>html,body{margin:0;background:#f4f5f7;font-family:var(--font-family)}#root{width:1300px;padding:28px 0 36px}*{-webkit-font-smoothing:antialiased}
+/* SD-003 — focus ring at the kit layer. The token is validated for both themes. */
+button:focus-visible,a:focus-visible,[tabindex]:focus-visible{box-shadow:var(--ui-focus-ring);outline:none;border-radius:inherit}
+</style>
+</head><body><div id="root"></div>
+<script type="text/babel" src="appModel.jsx"></script>
+<script type="text/babel" src="HomeScreen.jsx"></script>
+<script type="text/babel">
+function Frame({ title, note, level, deposit }) {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 12, width: 390 }}>
+      <div>
+        <div style={{ fontSize: 20, fontWeight: 700, color: '#002856' }}>{title}</div>
+        <div style={{ fontSize: 12, lineHeight: '17px', color: '#5b6472', minHeight: 34, textWrap: 'pretty' }}>{note}</div>
+      </div>
+      <div style={{ borderRadius: 20, overflow: 'hidden', boxShadow: '0 18px 44px rgba(8,50,98,.16)', background: '#fff' }}>
+        <AppScreen level={level} initialSurface="jobs" height={800} deposit={deposit} />
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <div style={{ display: 'flex', gap: 32, justifyContent: 'center' }}>
+    <Frame level="A1" title="/jobs — A1 & A2" note="The gate replaces the whole shell: its own white back-header, no mode switcher. Teaser cards below are inert." />
+    <Frame level="B1" title="/job-screening — B1 & B2" note="The lobby. Stays inside the navy shell, because B1/B2 users own the Job Preparation ⇄ German Jobs switcher. Titles come from the server's steps_config." />
+    <Frame level="B1" deposit title="paywall step" note="A refundable ₹10,000 security deposit. It is filtered out of the checklist and replaces the whole pipeline until paid — not the premium subscription paywall." />
+  </div>
+);
+</script></body></html>

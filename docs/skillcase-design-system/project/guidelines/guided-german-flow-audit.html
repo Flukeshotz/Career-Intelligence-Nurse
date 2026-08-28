@@ -1,0 +1,260 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Guided German — flow audit</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+:root{--ink:#002856;--mute:#5b6472;--line:#dfe5ec;--navy:#002856;--gold:#eec139;--green:#166534;--rose:#b91c1c;--wash:#f6f8fb}
+*{box-sizing:border-box}
+html,body{margin:0;background:#fff;color:var(--ink);font-family:var(--font-family,system-ui,sans-serif);-webkit-font-smoothing:antialiased}
+body{max-width:1180px;margin:0 auto;padding:56px 40px 96px;font-size:15px;line-height:1.62}
+a{color:#1e5fbf}a:hover{color:#002856}
+h1{font-size:38px;line-height:1.12;letter-spacing:-.02em;margin:0 0 10px}
+.lede{font-size:17px;color:var(--mute);max-width:76ch;margin:0 0 8px;text-wrap:pretty}
+.stamp{font-size:12px;color:var(--mute);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;margin:26px 0 44px;display:flex;flex-wrap:wrap;gap:8px 26px}
+h2{font-size:13px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--navy);margin:56px 0 6px;padding-bottom:8px;border-bottom:2px solid var(--navy)}
+h2 .n{color:var(--gold);margin-right:10px}
+h3{font-size:20px;margin:34px 0 4px;letter-spacing:-.01em}
+h3 code{font-size:15px;background:var(--wash);border:1px solid var(--line);border-radius:5px;padding:2px 7px;font-weight:600;color:var(--navy)}
+p{margin:10px 0;text-wrap:pretty}
+.note{font-size:14px;color:var(--mute);margin:2px 0 14px}
+table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:13.5px}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{background:var(--wash);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);font-weight:700;white-space:nowrap}
+td code,p code,li code{background:var(--wash);border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:12.5px;color:var(--navy)}
+dl{margin:14px 0;display:grid;grid-template-columns:172px 1fr;gap:0}
+dl>dt{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--mute);font-weight:700;padding:9px 14px 9px 0;border-top:1px solid var(--line)}
+dl>dd{margin:0;padding:9px 0;border-top:1px solid var(--line)}
+dl>dt:first-of-type,dl>dd:first-of-type{border-top:none}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:99px;white-space:nowrap}
+.ok{background:#dcfce7;color:var(--green)}
+.gap{background:#fee2e2;color:var(--rose)}
+.part{background:#fef3c7;color:#92400e}
+.clar{background:#e0e7ff;color:#3730a3}
+.flow{background:var(--wash);border:1px solid var(--line);border-radius:12px;padding:20px 22px;margin:18px 0;font-size:14px;line-height:2}
+.flow b{color:var(--navy)}
+.flow .arrow{color:var(--gold);font-weight:700;padding:0 6px}
+.callout{border-left:3px solid var(--gold);background:#fffdf5;padding:14px 18px;margin:20px 0;font-size:14px}
+.callout strong{color:var(--navy)}
+ul,ol{margin:10px 0;padding-left:22px}
+li{margin:5px 0;text-wrap:pretty}
+.states{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12.5px;font-family:ui-monospace,monospace;color:var(--navy)}
+.states span{background:#fff;border:1px solid var(--line);border-radius:5px;padding:2px 8px}
+.states i{color:var(--gold);font-style:normal;font-weight:700}
+</style></head><body>
+
+<h1>Guided German — behavioural flow audit</h1>
+<p class="lede">Traced from <code>SkillCase-Frontend-main</code>, not from the design kit. The controller is <code>src/pages/learnGerman/lesson/NewLessonFlow.jsx</code> (1,744 lines); it walks a server-supplied <code>screens[]</code> array and each entry's <code>type</code> selects one of twelve layouts. Nothing below is inferred from the kit's static screens.</p>
+<div class="stamp"><span><strong>Route</strong> /learn-german/lesson/:chapterId</span><span><strong>Screen types</strong> 12</span><span><strong>User-facing states</strong> 41</span><span><strong>Audit date</strong> 26 Aug 2026</span></div>
+
+<h2><span class="n">0</span>Five findings that change the design work</h2>
+<div class="callout">
+<p><strong>1. There is no <code>fill_blank</code> screen type.</strong> Fill-in-the-blank ships as a <code>quiz</code> whose <code>question</code> carries the gap and whose <code>image</code> is omitted. It is <strong>multiple choice, never a text input</strong> — there is no keyboard, no free-text validation, no input field anywhere in the lesson flow. Designing a typed-input blank would invent an interaction the product does not have.</p>
+<p><strong>2. Incorrect is not "correct in red".</strong> Three different verdict surfaces exist, and they disagree on purpose. <code>QuizResultModal</code> reveals the right answer on correct and withholds it on incorrect. <code>DragResultModal</code> renders <em>only</em> the modal that applies and its correct headline is "Excellent!", not "Correct!". <code>conversation</code> has <strong>no modal at all</strong> — the verdict is inline on the option row.</p>
+<p><strong>3. The conversation is self-advancing.</strong> No Check button, no CTA. Tapping a correct reply auto-advances after 1,000 ms; tapping a wrong one shakes the row and clears the selection after 600 ms. A correct answer locks the row set against further taps.</p>
+<p><strong>4. <code>outro</code> never renders as its own step in the normal path.</strong> <code>handleNext</code> intercepts it: when the <em>next</em> screen is an outro, the level-complete modal opens over the <em>current</em> screen and the outro layout is skipped. It only renders when it is the current screen after a back-navigation.</p>
+<p><strong>5. Progress excludes <code>intro</code> and <code>scenario</code>.</strong> Both are removed from the denominator <em>and</em> hide the progress bar entirely (<code>showProgressBar</code>). The kit currently draws a progress bar on both.</p>
+</div>
+
+<h2><span class="n">A</span>Complete lesson flow, as the code runs it</h2>
+<p class="note">The sequence is data-driven — the server supplies the array — but the controller imposes hard structure on top of it. This is the canonical shape, with the controller's rules named.</p>
+<div class="flow">
+<b>Entry</b> <span class="arrow">→</span> <code>GET</code> lesson config <span class="arrow">→</span> branch on <code>user_status</code><br>
+&nbsp;&nbsp;• <code>completed</code> + not review mode <span class="arrow">→</span> level-complete modal immediately, flow never starts<br>
+&nbsp;&nbsp;• <code>in_progress</code> with <code>0 &lt; user_screens_completed &lt; total</code> <span class="arrow">→</span> resume at that index, all prior marked answered<br>
+&nbsp;&nbsp;• otherwise <span class="arrow">→</span> index 0<br>
+<b>intro</b> <span class="arrow">→</span> <b>scenario</b> (×n) <span class="arrow">→</span> <b>vocab</b> (×n) <span class="arrow">→</span> <b>grammar</b> (×n) <span class="arrow">→</span> <b>quiz</b> / <b>listen_choose</b> / <b>match_following</b> / <b>match_image</b> / <b>unjumble</b> (interleaved, ×n) <span class="arrow">→</span> <b>conversation_intro</b> <span class="arrow">→</span> <b>conversation</b> (×n, contiguous block) <span class="arrow">→</span> <em>[outro intercepted]</em> <span class="arrow">→</span> <b>Level Complete modal</b> <span class="arrow">→</span> <code>/learn-german</code> with <code>autoStartNext</code>
+</div>
+<p><strong>Back navigation is not symmetric with forward.</strong> <code>resolvePrevIndex</code> skips every <code>scenario</code> on the way back but keeps <code>intro</code> reachable, and from any <code>conversation</code> turn it rewinds past the <em>whole contiguous conversation block</em> rather than one turn. Returning forward from <code>conversation_intro</code> then jumps straight back to the turn you left, via <code>conversationResumeIndex</code>.</p>
+<p><strong>Solved work is remembered across back-navigation.</strong> <code>hydrateStateForScreen</code> restores from three maps: <code>solvedOptionSelections</code> (quiz, listen_choose, conversation), <code>solvedMatchFollowingMap</code> (matched pair ids), <code>solvedDragScreensMap</code> (placed items + slot statuses, and it re-enters the <code>correct</code> drag state). A revisited solved screen is <em>not</em> blank — the design must cover a pre-filled revisit state.</p>
+
+<h2><span class="n">B</span>Screen-by-screen behavioural map</h2>
+
+<h3>1 · <code>intro</code> — level / chapter opening</h3>
+<p class="note">Implemented in <code>screens/IntroScreen.jsx</code>. This is the answer to "intro to level/chapter" — there is no separate level-intro screen type.</p>
+<dl>
+<dt>What the user sees</dt><dd>The scene photo full-bleed (falls back to a hard-coded Cloudinary bakery image when <code>screen.image</code> is absent), and one <code>bg-black/50</code> card, max-width 300 px, holding: <code>screen.level</code> ("Level 1") at 16 px white/90, the <em>lesson</em> title at 24 px bold (from <code>lessonData.title</code>, not the screen), Maya's bubble, Maya at 168 px, and Continue. <strong>No description field and no progress information</strong> — the progress bar is suppressed here.</dd>
+<dt>Entry condition</dt><dd>Screen index 0 of a fresh or non-resumed lesson.</dd>
+<dt>Interaction</dt><dd>Continue only. Tapping the page does nothing on intro (unlike scenario/outro).</dd>
+<dt>Typing / audio</dt><dd><code>MayaDialogueBubble</code> typewrites the line and simultaneously speaks it via <code>useMayaTTS</code>, firing a light haptic <em>per character</em>. A mute/replay waveform button sits at the bubble's top-right corner.</dd>
+<dt>CTA</dt><dd>"Continue" + arrow, amber gradient, <code>#eec139</code> border. <strong>Always enabled</strong> — it does not wait for the typewriter.</dd>
+<dt>After CTA</dt><dd><code>handleNext</code> → next index. Maya and the bubble travel to the next screen as shared layout elements (<code>layoutId="mayaMascot"</code>, <code>"dialogBubble"</code>, <code>"lessonBg"</code>) — 550 ms on the image, 450 ms on the bubble.</dd>
+<dt>Guided-tour state</dt><dd>When <code>getLgGuideStage() === CHAPTER_CLICK_DONE</code>, a spotlight overlay (<code>TapGuideOverlay</code>) appears over the Continue button 1 s after the dialogue finishes. This is a distinct visual state the kit does not have.</dd>
+<dt>Kit status</dt><dd><span class="tag part">Partial</span> Layout is right; the kit draws a progress bar that the app hides, and has no tour-spotlight state.</dd>
+</dl>
+
+<h3>2 · <code>scenario</code> — the situation</h3>
+<p class="note"><code>screens/LessonScenarioScreen.jsx</code>. Several may run back to back.</p>
+<dl>
+<dt>What the user sees</dt><dd>Photo filling the upper area (rounded 16, shadow); beneath it a <code>bg-black/5</code> well, min-height 140 px, with an inner shadow. Maya sits at <code>left:-8px; bottom:0</code>, 110 px wide, overflowing the well. Her bubble is inset 95 px from the left with a rotated-square tail. Continue below.</dd>
+<dt>Entry / progress</dt><dd>Follows intro. Progress bar hidden and excluded from the denominator.</dd>
+<dt>Dialogue queue</dt><dd><code>screen.dialogues[]</code>, advanced by <code>dialogueIndex</code>. <strong>Tapping anywhere on the screen advances it</strong> (the root div carries the handler) — as does Continue. Falls back to <code>"..."</code> if the array is empty.</dd>
+<dt>Skip?</dt><dd>No skip. The user must step through every line, but there is no wait — advancing mid-typewriter is allowed, so tapping fast is the de-facto skip.</dd>
+<dt>CTA</dt><dd>"Continue". Always enabled. On the last line it leaves the screen; before that it advances the queue.</dd>
+<dt>Ends</dt><dd>Last line + Continue → <code>onGuidedCompleteTap</code> → <code>handleNext</code>.</dd>
+<dt>Kit status</dt><dd><span class="tag part">Partial</span> Built, but only the first queue position, and again with a progress bar the app suppresses.</dd>
+</dl>
+
+<h3>3 · <code>vocab</code> — one word</h3>
+<dl>
+<dt>Sees</dt><dd>Photo 192 px in the white sheet, a 48 px tap-to-listen button, the German word at 22 px, the translation at 16 px grey, plus the optional amber "Did you know?" note.</dd>
+<dt>Audio</dt><dd>Tap plays the German word through AWS Polly (<code>speakWord</code>). While idle the button carries two sonar rings (<code>animate-ping</code> + <code>animate-pulse</code>) and a <code>handtap.webp</code> overlay pulsing 1→0.94→1 on a 1.5 s loop; both vanish while <code>isSpeaking</code>. Polly failure falls back to browser <code>speechSynthesis</code> at <code>de-DE</code>.</dd>
+<dt>CTA</dt><dd>"Next", always enabled. No validation — vocab is exposition.</dd>
+<dt>Kit status</dt><dd><span class="tag ok">Represented</span> Idle state only; the <em>speaking</em> state (rings and hand gone, waveform animating) is not drawn.</dd>
+</dl>
+
+<h3>4 · <code>grammar</code> — the rule</h3>
+<dl>
+<dt>Sees</dt><dd>80 px hero audio button, the form at 46 px, its meaning at 34 px, then the rule in an outlined markdown card.</dd>
+<dt>Note</dt><dd>Grammar screens carry <code>german</code>/<code>word</code> + <code>english</code>/<code>meaning</code> pairs, so <code>navigateToLearnGermanHome</code> uses them as the word list when a lesson has no <code>vocab</code> screens at all.</dd>
+<dt>CTA</dt><dd>"Got it!", always enabled.</dd>
+<dt>Kit status</dt><dd><span class="tag ok">Represented</span></dd>
+</dl>
+
+<h3>5 · <code>quiz</code> — multiple choice (incl. fill-in-the-blank)</h3>
+<p class="note"><code>screens/QuizScreen.jsx</code>. <strong>Multiple choice only.</strong> Options are <code>screen.options[]</code>, lettered A–D by a <code>LETTERS</code> constant that supports a maximum of four.</p>
+<div class="states"><span>initial</span><i>→</i><span>option_selected</span><i>→</i><span>checked: correct</span><i>|</i><span>checked: incorrect</span><i>→</i><span>retry (same screen)</span></div>
+<dl>
+<dt>Two data variants</dt><dd><strong>With image:</strong> photo at h-48/h-52 above the question. <strong>Without image</strong> (<code>screen.image</code> absent, or present but failed — <code>imgError</code>): the block is simply not rendered and the question rises to the top of the sheet. This second variant is how fill-in-the-blank ships, so the photo cannot give the answer away.</dd>
+<dt>Question</dt><dd>Rendered as text <em>and</em> spoken: a 40 px waveform button beside it plays <code>question</code> through Polly, with the same sonar-ring + handtap idle treatment.</dd>
+<dt>Option states</dt><dd>Unselected: white, <code>zinc-200</code> border, grey letter well. Selected: <code>bg-blue-100</code>, <code>#1E76F3</code> border, blue-200 letter well, blue-600 label. <strong>Only one selected state — no per-option correct/incorrect colouring on this screen type.</strong> The verdict lives entirely in the modal.</dd>
+<dt>CTA</dt><dd>"Check" + arrow. Disabled (grey <code>bg-gray-200</code>) while <code>selectedOption === null</code>; amber gradient once any option is picked. "Prev" takes 2/5 width when <code>canGoPrev</code>.</dd>
+<dt>Validation</dt><dd><code>handleCheckQuiz</code>: <code>correctOptionIndexes.includes(sel)</code> when the array exists, else <code>sel === correctOptionIndex</code>. Sets <code>quizState</code> to <code>correct</code> or <code>incorrect</code>; medium haptic on correct, heavy on incorrect.</dd>
+<dt>Retry</dt><dd>Unlimited. Dismissing the incorrect modal returns to the question with the wrong option <em>still selected</em> — the learner changes it and checks again. <strong>No penalty, no attempt counter, no effect on progress.</strong></dd>
+<dt>Kit status</dt><dd><span class="tag ok">Represented</span> Both variants and both verdicts are now drawn. The <em>disabled-Check</em> initial state is not.</dd>
+</dl>
+
+<h3>6 · <code>listen_choose</code> — hear &amp; answer</h3>
+<p class="note"><code>screens/ListenAndChooseScreen.jsx</code>. Same validation path as quiz; different affordances.</p>
+<div class="states"><span>audio_unplayed</span><i>→</i><span>audio_playing</span><i>→</i><span>option_selected</span><i>→</i><span>correct</span><i>|</i><span>incorrect</span><i>|</i><span>skipped</span></div>
+<dl>
+<dt>Sees</dt><dd>"Tap to listen" at 16 px black/50 above a 52 px rounded-2xl waveform button. <strong>No image, ever.</strong> The question sits <em>below</em> the player, then A–D options.</dd>
+<dt>Audio</dt><dd>Plays <code>screen.audioText</code>, not the question text. Replayable any number of times; guarded by <code>if (!isSpeaking)</code> so taps during playback are ignored rather than restarting.</dd>
+<dt>Option states</dt><dd>Selected is a lighter treatment than quiz: <code>bg-blue-600/5</code> with <code>#1E76F3</code> outline and a <code>rounded</code> (not <code>rounded-lg</code>) letter well.</dd>
+<dt>Escape hatch</dt><dd>"Can't listen now" — a slate-300 text button <em>above</em> the CTA row. It calls <code>onSkip</code>, which logs <code>question_skipped</code> with <code>reason_code: "cannot_listen_now"</code>, records the answer as incorrect for analytics (<code>listen_choose_skipped</code>), and advances. <strong>The learner is not shown a verdict and is not blocked.</strong></dd>
+<dt>CTA</dt><dd>"Check", disabled until an option is picked. Audio need <em>not</em> have been played.</dd>
+<dt>Kit status</dt><dd><span class="tag ok">Represented</span> Missing the playing state and the skip's silent-advance path.</dd>
+</dl>
+
+<h3>7 · <code>match_following</code> — two columns</h3>
+<dl>
+<dt>Interaction</dt><dd>Tap-to-pair, not drag. Tapping one side sets <code>selectedLeft</code>/<code>selectedRight</code>; tapping the other resolves immediately against <code>leftItem.matchId</code>. <strong>There is no Check step</strong> — each pair is judged on the second tap.</dd>
+<dt>Correct pair</dt><dd>Medium haptic, id pushed to <code>matchedPairs</code>, <code>recentMatch</code> set for a 600 ms celebration, then cleared. Matched rows are locked out of further taps.</dd>
+<dt>Incorrect pair</dt><dd>Heavy haptic, <code>wrongPair</code> set for 600 ms (shake + rose), selection cleared, <strong>and nothing is remembered</strong> — the learner simply tries again. No modal, no counter.</dd>
+<dt>CTA</dt><dd>"Next". <code>handleNext</code> hard-returns while <code>matchedPairs.length &lt; leftItems.length</code>, so the button is inert until every pair is solved.</dd>
+<dt>Kit status</dt><dd><span class="tag part">Partial</span> All four row states are drawn on one static screen; the 600 ms transient nature of <code>wrongPair</code>/<code>recentMatch</code> is not expressed, and the kit implies a Check step that does not exist.</dd>
+</dl>
+
+<h3>8 · <code>match_image</code> — drag onto the picture</h3>
+<div class="states"><span>empty</span><i>→</i><span>dragging</span><i>→</i><span>placed</span><i>→</i><span>checked: correct (locked)</span><i>|</i><span>checked: incorrect</span></div>
+<dl>
+<dt>Interaction</dt><dd>dnd-kit. Bank → slot places into the <em>hovered</em> slot specifically. Slot → slot always <strong>swaps</strong> (the displaced word returns to the source slot). Dropping outside a slot returns a placed word to the bank; a bank word released in open space auto-places into the first empty slot. Tapping a bank word does the same.</dd>
+<dt>Correct-slot lock</dt><dd>Three separate guards refuse to move a word out of, or into, a slot already confirmed <code>correct</code>. Partial credit is durable.</dd>
+<dt>Check</dt><dd><code>checkDragQuiz</code> stamps every slot <code>correct</code>/<code>incorrect</code>/<code>null</code> and sets <code>dragQuizState</code>. Unplaced slots count as wrong.</dd>
+<dt>Verdict</dt><dd><code>DragResultModal</code> — <strong>green headline is "Excellent!", CTA "Continue"</strong>; incorrect is "Incorrect!" with <code>screen.incorrectFeedback</code> and "Try again". Only the applicable modal mounts.</dd>
+<dt>Kit status</dt><dd><span class="tag part">Partial</span> One placed row is drawn. The drag overlay (white pill, blue outline, 1.05 scale), the hovered-slot tint, the swap and the correct-lock are absent — as is <code>DragResultModal</code> itself, which the kit substitutes with the quiz modal.</dd>
+</dl>
+
+<h3>9 · <code>unjumble</code> — jumbled words</h3>
+<p class="note"><code>screens/UnjumbleScreen.jsx</code>, 471 lines, its own self-contained dnd-kit context and its own verdict state. The existing interaction is sound; it should not be redesigned.</p>
+<dl>
+<dt>Available words</dt><dd><code>screen.items[]</code> in a centred wrapping bank, min-height 52 px. A word already in the sentence is replaced in the bank by a <strong>greyed placeholder at 50% opacity</strong> that holds its slot — the bank never reflows.</dd>
+<dt>Placing</dt><dd>Tap appends to the sentence's next position; drag can drop anywhere outside the bank and also appends. Both refuse once <code>sentenceItems.length === slots.length</code>.</dd>
+<dt>Ordering</dt><dd>Placed chips are <code>useSortable</code> — dragging one over another reorders live via <code>arrayMove</code> with a horizontal strategy. The sentence wraps across underlined rows computed by a width-estimating algorithm (<code>label.length * 8 + 56</code>, clamped 72–170 px) against a <code>ResizeObserver</code>.</dd>
+<dt>Removing</dt><dd>Tap a placed chip, or drag it back to the bank zone (which tints <code>bg-blue-50/60</code> on hover). <strong>Either action clears every slot status</strong> — the whole answer returns to unjudged.</dd>
+<dt>Chip states</dt><dd>Placed: white, zinc-300 outline. Correct: <code>emerald-100/50</code>, green-700 outline and text, plus a 14 px green tick. Incorrect: <code>rose-200/40</code>, red-500 outline and text, plus a red cross. Bank chips are smaller (<code>py-2</code> vs <code>py-1.5</code>) and never coloured.</dd>
+<dt>CTA</dt><dd>"Check", disabled until <em>all</em> slots are filled. Grades each position against <code>matchId</code>, so the learner sees exactly which words are misplaced — then <code>DragResultModal</code> opens on top.</dd>
+<dt>Retry</dt><dd>Modal → "Try again" → <code>idle</code>. The per-chip green/red marks stay visible, so the learner corrects only what is wrong. Interaction is frozen while the modal is up (<code>if (dragQuizState !== "idle") return</code>).</dd>
+<dt>Kit status</dt><dd><span class="tag part">Partial</span> The graded state is drawn. Missing: bank placeholders, the drag overlay, the bank-hover tint, and <code>DragResultModal</code>.</dd>
+</dl>
+
+<h3>10 · <code>conversation_intro</code> — character handover</h3>
+<dl>
+<dt>Sees</dt><dd>Maya top-left at 88 px with a 210 px bubble; below, the scene rises with rounded top corners. Once Maya finishes, the character's bubble fades in at <code>bottom:55%</code>, inset <code>left:40%</code>. A 176 px <code>mix-blend-multiply</code> gradient darkens the base so the buttons read.</dd>
+<dt>Dialogue</dt><dd><code>screen.dialogues[]</code>, else <code>screen.mayaDialogue</code>. Advanced by tapping the bubble — <strong>only after the current line has finished typing</strong> (<code>if (!currentDialogueFinished) return</code>).</dd>
+<dt>CTA lock</dt><dd>This is the one screen with a genuinely gated CTA. Mid-queue it reads "Continue" and needs <code>currentDialogueFinished</code>; on the last line it becomes <strong>"Start Conversation"</strong> and needs <code>characterDialogueFinished</code> — i.e. Jacob's line must finish typing too. Disabled styling: <code>bg-zinc-200</code>, <code>text-zinc-400</code>, <code>cursor-not-allowed</code>, and the arrow greys with it.</dd>
+<dt>After CTA</dt><dd>Normally the next index. But if the user had reached a conversation turn and come back, <code>conversationResumeIndex</code> sends them straight to that turn instead of restarting the block.</dd>
+<dt>Kit status</dt><dd><span class="tag part">Partial</span> Final unlocked state is drawn; the disabled state — the more common one — is not.</dd>
+</dl>
+
+<h3>11 · <code>conversation</code> — the roleplay</h3>
+<p class="note"><code>screens/ConversationScreen.jsx</code>. Each turn is its <em>own</em> screen in the array; the transcript is reconstructed, not stored. This is the most under-represented screen in the kit.</p>
+<div class="states"><span>turn_open</span><i>→</i><span>reply_correct (1s, auto-advance)</span><i>|</i><span>reply_wrong (600ms, self-clears)</span><i>→</i><span>turn_committed</span><i>→</i><span>completed_fallback</span></div>
+<dl>
+<dt>Who speaks</dt><dd>The character (<code>characterDialogue</code>, optional <code>englishMeaning</code>) in an <code>#E4EFFF</code> bubble on the left with a 32 px white→orange-300 gradient avatar; the learner on the right in white. Page background <code>#D4E5FF</code>, no sheet, header floats over it with a 65 px + safe-area inset.</dd>
+<dt>History</dt><dd><code>conversationHistory</code> walks <em>backwards</em> from the current index while <code>type === "conversation"</code> and stops at the first non-conversation screen. Past turns replay the learner's actual pick from <code>conversationSelections</code>, falling back to the lowest correct index.</dd>
+<dt>Audio</dt><dd>Auto-speaks the current turn's line on mount unless muted — the only screen that speaks without a tap. Every bubble carries its own waveform button; the three-way handler is genuinely tri-state: muted → unmute and play; playing <em>this</em> bubble → mute and stop; otherwise → play. Mute is a global preference (<code>ttsMutePreference</code>) shared across bubbles and screens.</dd>
+<dt>Answering</dt><dd>Options sit in a 75%-wide white card headed by <code>screen.question</code> ("Select the correct reply"). <strong>No Check button and no CTA.</strong> Correct tap: emerald fill, green outline, <code>CheckCircle2</code>, 1.02 scale, medium haptic, then <code>onNext(idx)</code> after 1,000 ms. Wrong tap: rose fill, red outline, <code>XCircle</code>, a 5-px shake keyframe, heavy haptic, and the selection self-clears after 600 ms. Once a correct answer is registered the whole set is locked.</dd>
+<dt>Correctness</dt><dd><code>getCorrectIndexSet</code> accepts <code>correctOptionIndexes[]</code> or legacy <code>correctOptionIndex</code>, and <strong>defaults to <code>{0}</code></strong> when neither is present.</dd>
+<dt>Committed turn</dt><dd>Once <code>conversationSelections[index]</code> exists the option card is replaced by the learner's reply as a plain past bubble.</dd>
+<dt>End of block</dt><dd>If the final turn is the last screen, or the next is an <code>outro</code>, <code>showConversationCompletedFallback</code> renders a "Completed" amber button (plus Prev) inline in the transcript, which goes to <code>/learn-german</code>.</dd>
+<dt>Kit status</dt><dd><span class="tag gap">Needs design</span> The kit draws one open turn with a generic selected row. Missing: the correct/wrong inline verdicts, the committed turn, the avatar, per-bubble audio and its three states, the English meaning line, and the Completed fallback.</dd>
+</dl>
+
+<h3>12 · <code>outro</code> — Maya's sign-off</h3>
+<dl>
+<dt>When it renders</dt><dd>Rarely. <code>handleNext</code> intercepts an upcoming outro and opens the level-complete modal over the current screen instead. The layout is reachable only by landing on it directly.</dd>
+<dt>Sees</dt><dd>Progress forced to 1. A centred bubble above Maya at 224 px, and "tap to continue" in blue-900/40 while lines remain.</dd>
+<dt>Kit status</dt><dd><span class="tag ok">Represented</span></dd>
+</dl>
+
+<h2><span class="n">C</span>The three verdict surfaces</h2>
+<p class="note">These are not one component with a colour prop. Confirmed distinct in code.</p>
+<table>
+<tr><th>Surface</th><th>Used by</th><th>Correct</th><th>Incorrect</th><th>Answer revealed?</th></tr>
+<tr><td><code>QuizResultModal</code></td><td>quiz, listen_choose</td><td><code>bg-green-50</code>, green-600 tick disc, "Correct!", bold answer + "<em>X</em> is the right answer", CTA "Next"</td><td><code>bg-red-50</code>, red-500 cross disc, "Incorrect!", "<em>X</em> is not the right answer", CTA "Try again" (closes, does not advance)</td><td><strong>Correct only.</strong> Incorrect withholds it.</td></tr>
+<tr><td><code>DragResultModal</code></td><td>match_image, unjumble</td><td>"<strong>Excellent!</strong>", <code>correctFeedback</code> ("Perfect sentence!"), CTA "Continue"; the ✕ also advances</td><td>"Incorrect!", <code>incorrectFeedback</code>, CTA "Try again"</td><td>Never — per-chip green/red marks do the teaching instead.</td></tr>
+<tr><td>Inline option row</td><td>conversation</td><td>Emerald row, <code>CheckCircle2</code>, 1.02 scale, auto-advance after 1 s</td><td>Rose row, <code>XCircle</code>, shake, self-clears after 600 ms</td><td>Never — retry is immediate and silent.</td></tr>
+<tr><td>Transient row state</td><td>match_following</td><td><code>recentMatch</code> 600 ms, then faded-matched</td><td><code>wrongPair</code> 600 ms shake, then forgotten</td><td>No modal at all.</td></tr>
+</table>
+<p><strong>Retry is unlimited and costless everywhere.</strong> No attempt counter, no score, no lives, no effect on <code>progressRatio</code> or on coins. The only place a wrong answer is recorded is analytics (<code>quiz_answered</code> with <code>is_correct</code>).</p>
+
+<h2><span class="n">D</span>Level complete</h2>
+<dl>
+<dt>Trigger</dt><dd><code>handleNext</code> when the next screen is an <code>outro</code> or the array is exhausted. Sets <code>levelComplete</code> and calls <code>persistComplete</code> — which is idempotent, guarded by a promise ref.</dd>
+<dt>Headline</dt><dd>"Level Complete!" at 24 px, then Maya's line from <code>getCompletionDialogue(lessonData, screen)</code>, typewritten, in a bubble with a two-layer CSS triangle tail. Maya sits in two concentric discs (240 px white/40, 160 px white) and springs up with <code>bounce: 0.4</code>.</dd>
+<dt>Statistics</dt><dd>A yellow-200→orange-400 card with a <code>outline-4 outline-yellow-50</code> inset ring. Three possible rows: <strong>Coins</strong> (<code>+coinsAwarded</code> from the server, bar 80%), <strong>Days Streak</strong> (<code>+1</code>, bar 92%), <strong>German words learnt</strong> (<code>+vocabCount</code>, bar 75%). Bars are <strong>decorative fixed widths, not real percentages.</strong></dd>
+<dt>Streak behaviour</dt><dd><code>streakUpdated</code> is true only when this is the first lesson completed today. <strong>When false the streak row is omitted entirely</strong> — the card renders with two rows and the words row inherits the earlier animation delay. This is a real second layout, not a greyed row.</dd>
+<dt>Icon bubbles</dt><dd>28 px white discs with a 2 px orange-300 border, animating <code>left: 0% → barWidth</code> over 1.1 s and poking out of the track (<code>overflow-visible</code>). Haptics fire progressively as each bar fills — light below 34%, medium to 67%, then heavy.</dd>
+<dt>Word count</dt><dd>Number of <code>vocab</code> screens; falls back to <code>grammar</code> screens, then to <code>lessonData.vocab_words.length</code>, then to 4. Four sample words are cached to <code>sessionStorage</code> for the home screen's recap animation.</dd>
+<dt>CTA</dt><dd>"Start next lesson", navy pill. Goes to <code>/learn-german</code> with <code>autoStartNext: true</code>, so the home hub plays its recap animation and <strong>auto-starts the next lesson</strong>. The ✕ merely closes the modal, leaving the learner on the lesson's last screen.</dd>
+<dt>Side effects</dt><dd>Coins added to the Redux user; <code>lgLessonComplete</code> and <code>skillcase:coins-updated</code> window events fire so the navbar ring and tab bar refetch.</dd>
+<dt>Kit status</dt><dd><span class="tag part">Partial</span> Built with all three rows. The <strong>no-streak two-row variant</strong> is not drawn, and the streak icon is a stand-in (the app loads it from Cloudinary, so it is not in <code>public/</code>).</dd>
+</dl>
+
+<h2><span class="n">E</span>Existing vs missing</h2>
+<table>
+<tr><th>Screen / state</th><th>Classification</th><th>Reusable components</th></tr>
+<tr><td><code>intro</code></td><td><span class="tag part">Partial</span> remove progress bar</td><td><code>LessonProgressBar</code>, <code>LessonFooter</code></td></tr>
+<tr><td><code>intro</code> + tour spotlight</td><td><span class="tag gap">New design</span></td><td>needs a <code>TapGuideOverlay</code> primitive</td></tr>
+<tr><td><code>scenario</code></td><td><span class="tag part">Partial</span> queue position 2..n</td><td><code>MayaPrompt</code>, <code>LessonFooter</code></td></tr>
+<tr><td><code>vocab</code> / <code>grammar</code></td><td><span class="tag ok">Represented</span></td><td><code>LessonSheet</code>, <code>AudioTapButton</code></td></tr>
+<tr><td>audio <em>playing</em> state (all screens)</td><td><span class="tag gap">New design</span></td><td><code>AudioTapButton</code> needs a <code>playing</code> prop</td></tr>
+<tr><td><code>quiz</code>, both image variants</td><td><span class="tag ok">Represented</span></td><td><code>OptionRow</code>, <code>LessonSheet</code></td></tr>
+<tr><td>disabled-Check initial state</td><td><span class="tag gap">New design</span></td><td><code>LessonFooter</code> already takes <code>disabled</code></td></tr>
+<tr><td><code>listen_choose</code></td><td><span class="tag ok">Represented</span></td><td><code>AudioTapButton</code>, <code>OptionRow</code></td></tr>
+<tr><td><code>match_following</code> transients</td><td><span class="tag part">Partial</span></td><td><code>OptionRow</code> (has all four states)</td></tr>
+<tr><td><code>match_image</code> drag states + lock</td><td><span class="tag gap">New design</span></td><td><code>WordChip</code>; needs slot + overlay parts</td></tr>
+<tr><td><code>unjumble</code> bank placeholders, overlay</td><td><span class="tag gap">New design</span></td><td><code>WordChip</code> needs a <code>placeholder</code> state</td></tr>
+<tr><td><code>DragResultModal</code> (both states)</td><td><span class="tag gap">Missing entirely</span></td><td>distinct from <code>LessonResultModal</code></td></tr>
+<tr><td><code>conversation_intro</code> locked CTA</td><td><span class="tag part">Partial</span></td><td>—</td></tr>
+<tr><td><code>conversation</code> — 5 of 6 states</td><td><span class="tag gap">Needs design</span></td><td><code>ChatBubble</code> needs avatar, meaning, audio</td></tr>
+<tr><td>Level complete, no-streak variant</td><td><span class="tag gap">New design</span></td><td><code>LevelCompleteCard</code> already takes <code>streakUpdated</code></td></tr>
+<tr><td>Solved-screen revisit (3 kinds)</td><td><span class="tag gap">New design</span></td><td>—</td></tr>
+<tr><td><code>LeaveLessonModal</code></td><td><span class="tag gap">Missing entirely</span></td><td><code>AppModal</code></td></tr>
+<tr><td>Loading / error / 409 unavailable</td><td><span class="tag gap">Missing entirely</span></td><td>—</td></tr>
+<tr><td>Completed-lesson re-entry &amp; review mode</td><td><span class="tag clar">Needs clarification</span></td><td>—</td></tr>
+</table>
+
+<h2><span class="n">F</span>Gaps to design, in priority order</h2>
+<ol>
+<li><strong>Conversation turn states</strong> — correct, wrong-with-shake, and committed. Five of six states are undrawn and this is the lesson's climax.</li>
+<li><strong>DragResultModal</strong>, both states. A second verdict component with its own copy ("Excellent!" / "Continue"), currently misrepresented by the quiz modal.</li>
+<li><strong>Disabled CTA states</strong> — <code>quiz</code>, <code>listen_choose</code>, <code>unjumble</code> and <code>conversation_intro</code> all open disabled. Today the kit only shows the enabled end state.</li>
+<li><strong>Audio playing state</strong> — one change to <code>AudioTapButton</code> (rings and handtap gone, waveform animating) that corrects six screens at once.</li>
+<li><strong>Level complete without a streak</strong> — the genuine two-row card.</li>
+<li><strong>Drag mechanics</strong> — drag overlay, hovered-slot tint, bank placeholder, correct-slot lock.</li>
+<li><strong>Solved-screen revisit</strong> — pre-filled quiz, matched pairs, locked drag placements.</li>
+<li><strong>LeaveLessonModal</strong>, plus loading, error and the 409 "not available yet" screens.</li>
+<li><strong>Progress-bar suppression</strong> on <code>intro</code>/<code>scenario</code> — a correction, not an addition.</li>
+</ol>
+<p class="note">Two behavioural questions I cannot answer from the code alone: whether a completed lesson re-entered from the hub should land on the level-complete modal (current behaviour) or on a reviewable transcript; and whether <code>isReviewMode</code> deserves its own visible chrome, since it currently suppresses analytics and completion but looks identical to a first run.</p>
+
+</body></html>

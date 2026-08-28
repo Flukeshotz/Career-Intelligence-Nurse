@@ -1,0 +1,158 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Scoring kit — evidence &amp; divergence</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+:root{--ink:#002856;--mute:#5b6472;--line:#dfe5ec;--navy:#002856;--gold:#eec139;--green:#166534;--rose:#b91c1c;--wash:#f6f8fb}
+*{box-sizing:border-box}
+html,body{margin:0;background:#fff;color:var(--ink);font-family:var(--font-family,system-ui,sans-serif);-webkit-font-smoothing:antialiased}
+body{max-width:1180px;margin:0 auto;padding:56px 40px 96px;font-size:15px;line-height:1.62}
+a{color:#1e5fbf}a:hover{color:#002856}
+h1{font-size:38px;line-height:1.12;letter-spacing:-.02em;margin:0 0 10px}
+.lede{font-size:17px;color:var(--mute);max-width:76ch;margin:0 0 8px;text-wrap:pretty}
+.stamp{font-size:12px;color:var(--mute);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:10px 0;margin:26px 0 44px;display:flex;flex-wrap:wrap;gap:8px 26px}
+h2{font-size:13px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--navy);margin:56px 0 6px;padding-bottom:8px;border-bottom:2px solid var(--navy)}
+h2 .n{color:var(--gold);margin-right:10px}
+h3{font-size:19px;margin:32px 0 4px;letter-spacing:-.01em}
+h3 code{font-size:15px;background:var(--wash);border:1px solid var(--line);border-radius:5px;padding:2px 7px;font-weight:600;color:var(--navy)}
+h4{font-size:15px;margin:22px 0 2px}
+p{margin:10px 0;text-wrap:pretty}
+.note{font-size:14px;color:var(--mute);margin:2px 0 14px}
+table{width:100%;border-collapse:collapse;margin:16px 0 8px;font-size:13.5px}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{background:var(--wash);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);font-weight:700;white-space:nowrap}
+td code,p code,li code,dd code{background:var(--wash);border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:12.5px;color:var(--navy)}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:99px;white-space:nowrap}
+.ok{background:#dcfce7;color:var(--green)}
+.gap{background:#fee2e2;color:var(--rose)}
+.part{background:#fef3c7;color:#92400e}
+.callout{border-left:3px solid var(--gold);background:#fffdf5;padding:14px 18px;margin:20px 0;font-size:14px}
+.callout strong{color:var(--navy)}
+.hero{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:22px 0}
+.hero div{background:#fff;padding:18px 20px}
+.hero b{display:block;font-size:30px;letter-spacing:-.02em;color:var(--navy);line-height:1.1}
+.hero span{font-size:12px;color:var(--mute);display:block;margin-top:4px}
+ul,ol{margin:10px 0;padding-left:22px}
+li{margin:5px 0;text-wrap:pretty}
+pre{background:var(--wash);border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:12px;overflow-x:auto;margin:12px 0;line-height:1.6}
+.sw{display:inline-block;width:11px;height:11px;border-radius:3px;vertical-align:-1px;margin-right:6px;border:1px solid rgba(0,0,0,.12)}
+</style></head><body>
+
+<h1>Scoring kit</h1>
+<p class="lede">Phase 2, same order as phase 1: evidence → extract → validate → document. Three components shipped — and the pass turned up something more consequential than the components themselves. The reusable parts were never the problem; <strong>the score scale underneath them is forked four ways</strong>, and one results screen renders two of those scales at the same time.</p>
+<div class="stamp"><span><strong>Method</strong> Evidence-first extraction</span><span><strong>Components shipped</strong> 3</span><span><strong>Score scales found</strong> 4</span><span><strong>Date</strong> 26 Aug 2026</span></div>
+
+<h2><span class="n">1</span>Evidence — reuse was already proven</h2>
+<p>Unlike the state primitives, this kit did not need inference. Production already shares these three across two features: the exam results screens import them from <code>pages/b1/describe-speak/components/</code>, a sibling feature's folder. That import path is itself the evidence — someone reached across a feature boundary rather than copy-paste, which is the strongest signal a design system can get.</p>
+<table>
+<tr><th>Component</th><th>Defined in</th><th>Imported by</th></tr>
+<tr><td><code>ScoreRing</code></td><td>describe-speak/components</td><td>ExamWritingResults, ExamSpeakingResults</td></tr>
+<tr><td><code>MetricBar</code></td><td>describe-speak/components</td><td>ExamWritingResults, ExamSpeakingResults</td></tr>
+<tr><td><code>AudioPlayer</code></td><td>describe-speak/components</td><td>ExamSpeakingWorkspace, ExamSpeakingResults</td></tr>
+<tr><td><code>OcrModal</code></td><td>describe-speak/components</td><td>ExamWritingWorkspace</td></tr>
+<tr><td><code>UmlautKeyboard</code></td><td>components/b1</td><td>ExamWritingWorkspace</td></tr>
+</table>
+<p class="note"><code>OcrModal</code> and <code>UmlautKeyboard</code> are equally shared but belong to the <em>writing input</em> problem rather than the scoring problem. They are deferred to the exam audit, where their behaviour can be traced properly — extracting a handwriting-OCR modal without understanding its states would be guesswork.</p>
+
+<h2><span class="n">2</span>The finding — four score scales</h2>
+<p>Both shared components colour themselves by score band. Tracing where those bands come from produced this:</p>
+<div class="hero">
+<div><b>70 / 40</b><span>describe-speak <code>scoreUtils.js</code> — the shared one</span></div>
+<div><b>75 / 50</b><span>Exam results screens' local helpers</span></div>
+<div><b>70 / 50</b><span>Every greeting, including scoreUtils' own</span></div>
+<div><b>3</b><span>Different mid-tone colours for one band</span></div>
+</div>
+
+<h3>Scale 1 — the shared definition</h3>
+<pre>// describe-speak/utils/scoreUtils.js
+getScoreColor(score)        &gt;= 70 green · &gt;= 40 orange/amber · else red
+getScoreStrokeColor(score)  &gt;= 70 #16A34A · &gt;= 40 #F59E0B · else #EF4444
+getScoreGreeting(score)     &gt;= 70 "Good job" · &gt;= 50 "Well done!" · else "Keep practicing!"</pre>
+<p>Note the internal inconsistency already present here: colour bands at <strong>40</strong>, greeting bands at <strong>50</strong>. A score of 45 is coloured as mid-tier but greeted as bottom-tier by the same utility file.</p>
+
+<h3>Scale 2 — the exam fork</h3>
+<pre>// ExamWritingResults.jsx (and ExamSpeakingResults.jsx, identically)
+getMetricColor(val)      &gt;= 75 bg-green-600 · &gt;= 50 bg-amber-300 · else bg-red-500
+getMetricTextColor(val)  &gt;= 75 text-green-700 · &gt;= 50 text-orange-500 · else text-red-500</pre>
+<p>These screens define their own helpers locally — <em>while importing <code>MetricBar</code>, which uses scale 1</em>. They also hand-roll their own score ring (<code>size = 120</code>, <code>strokeWidth = 10</code>, circumference maths duplicated inline) alongside importing <code>ScoreRing</code>.</p>
+
+<div class="callout">
+<p><strong>The visible consequence.</strong> On a single exam results screen today:</p>
+<ul>
+<li>A score of <strong>72</strong> renders <span class="sw" style="background:#16a34a"></span>green in the imported <code>MetricBar</code> and <span class="sw" style="background:#fcd34d"></span>amber in the surrounding chrome.</li>
+<li>A score of <strong>45</strong> renders <span class="sw" style="background:#fcd34d"></span>amber in <code>MetricBar</code> and <span class="sw" style="background:#ef4444"></span>red in the chrome.</li>
+</ul>
+<p>Two contradictory verdicts on the same number, in the same viewport. The scoring kit card demonstrates this side by side.</p>
+</div>
+
+<h3>The mid-tone is three colours</h3>
+<table>
+<tr><th>Element</th><th>Value</th><th>Swatch</th></tr>
+<tr><td><code>MetricBar</code> label text</td><td><code>text-orange-400</code> #FB923C</td><td><span class="sw" style="background:#fb923c"></span>orange-400</td></tr>
+<tr><td><code>MetricBar</code> bar fill</td><td><code>bg-amber-300</code> #FCD34D</td><td><span class="sw" style="background:#fcd34d"></span>amber-300</td></tr>
+<tr><td><code>ScoreRing</code> arc</td><td>#F59E0B</td><td><span class="sw" style="background:#f59e0b"></span>amber-500</td></tr>
+<tr><td>Exam local text</td><td><code>text-orange-500</code> #F97316</td><td><span class="sw" style="background:#f97316"></span>orange-500</td></tr>
+</table>
+<p>Four values for one semantic band. Some of this is defensible — a thin arc and a text label legitimately need different weights of the same hue — but orange-400 versus orange-500 for the same role in two files is not a considered decision.</p>
+
+<h2><span class="n">3</span>Classification</h2>
+<table>
+<tr><th>Difference</th><th>Category</th><th>Reasoning</th></tr>
+<tr><td>Exam bands 75/50 vs shared 70/40</td><td><span class="tag clar" style="background:#e0e7ff;color:#3730a3">Unknown — needs product input</span></td><td>Could be deliberate: an exam pass mark reasonably differs from a practice-feedback threshold. But then it should be named and shared, not redefined locally in two files.</td></tr>
+<tr><td>Colour bands 40 vs greeting bands 50 <em>within</em> scoreUtils</td><td><span class="tag gap">Accidental</span></td><td>One file, two thresholds, no plausible intent.</td></tr>
+<tr><td>orange-400 vs orange-500 for the same role</td><td><span class="tag gap">Accidental</span></td><td>Adjacent shades in different files; no functional difference.</td></tr>
+<tr><td>Hand-rolled 120px ring beside an imported <code>ScoreRing</code></td><td><span class="tag part">Legacy</span></td><td>The shared component didn't expose size when the exam screen was written; it does now.</td></tr>
+<tr><td>amber bar + orange text in <code>MetricBar</code></td><td><span class="tag ok">Intentional</span></td><td>A 6–12px bar needs more saturation than 12px text to read at the same weight. Preserved.</td></tr>
+</table>
+<p><strong>I have not resolved the 75/50 question.</strong> Whether a pass is 40, 50 or 75 is a product decision about assessment, not a styling choice, and picking one to make the system tidy would be exactly the failure the operating model warns against.</p>
+
+<h2><span class="n">4</span>Extract — what shipped, and the one structural choice</h2>
+<p>The scale is extracted as <strong>data</strong> in <code>scoreBands.js</code>, not baked into the components:</p>
+<pre>SCORE_BANDS.canonical   { good: 70, mid: 40 }   // describe-speak, the shared one
+SCORE_BANDS.examMetric  { good: 75, mid: 50 }   // the exam fork, recorded verbatim
+SCORE_BANDS.greeting    { good: 70, mid: 50 }   // greetings everywhere</pre>
+<p>Every component takes <code>bands</code>, defaulting to <code>canonical</code>. This is the whole point of the pass: any screen can be reproduced faithfully <em>today</em>, and when the product decides on one scale, the change is one object rather than six files.</p>
+<table>
+<tr><th>Component</th><th>Variants</th><th>Faithful to</th></tr>
+<tr><td><code>ScoreRing</code></td><td>Any size; 160/12 default, 120/10 for the exam geometry</td><td>#D4D4D8 track, -90° rotation, 500ms ease-out, 8px caption clamped to 80px</td></tr>
+<tr><td><code>MetricBar</code></td><td><code>workspace</code> 12px on zinc-300 · <code>compact</code> 6px on zinc-200</td><td>Both variants' exact weights, line-heights and the 42/31px radii</td></tr>
+<tr><td><code>AudioPlayer</code></td><td><code>workspace</code> white card · <code>review</code> transparent</td><td>48px slate button, amber fill in both, 75ms track transition</td></tr>
+</table>
+<p class="note">Rejected this pass: a <code>ScoreSummary</code> composite wrapping ring + bars (the four results screens arrange them differently enough that a composite would need to expose everything it encapsulated); a <code>ScoreBadge</code> (the difficulty badges in <code>ExamWritingResults</code> use the same palette for a different semantic — difficulty, not score — and conflating them would be a category error); and a greeting component (one line of text is not a component).</p>
+
+<h2><span class="n">5</span>Validate</h2>
+<table>
+<tr><th>Surface</th><th>Reproducible with the kit?</th></tr>
+<tr><td>Describe &amp; Speak workspace + success</td><td><span class="tag ok">Yes</span> — this is the source; ring at 160, bars at both variants, player in both forms.</td></tr>
+<tr><td>Exam writing / speaking results</td><td><span class="tag ok">Yes, including the divergence</span> — pass <code>bands={SCORE_BANDS.examMetric}</code> for the chrome and leave <code>MetricBar</code> on canonical to reproduce today's screen exactly, or set both to one scale to preview the fix.</td></tr>
+<tr><td>Exam reading / listening results</td><td><span class="tag part">Partly</span> — these are objectively marked and use greetings plus per-question review, which I have not yet traced. The ring and bars apply; the review list does not exist yet.</td></tr>
+<tr><td>Guided German</td><td><span class="tag gap">No, correctly</span> — the lesson flow has no scores. <code>LevelCompleteCard</code>'s stat bars look superficially similar but are <em>decorative fixed widths</em> (80% / 92% / 75%), not score-driven. Unifying them would encode a false relationship.</td></tr>
+</table>
+<p>The Guided German negative repeats phase 1's lesson and is worth stating plainly: two things that look alike are not the same component when one is data-driven and the other is ornament.</p>
+
+<h2><span class="n">6</span>Decision log</h2>
+<table>
+<tr><th>Decision</th><th>Evidence</th><th>Confidence</th><th>Impact</th><th>Reversibility</th></tr>
+<tr><td>Extract all three components</td><td>Already imported across feature boundaries in production</td><td>High</td><td>Exams, Describe &amp; Speak, Speaking practice</td><td>Easy</td></tr>
+<tr><td>Score bands are data, not constants</td><td>Four competing versions exist; the correct one is a product decision</td><td>High</td><td>All scored surfaces</td><td>Easy</td></tr>
+<tr><td>Default to describe-speak's 70/40</td><td>It is the only version actually shared between features</td><td>Medium</td><td>Defaults</td><td>Easy</td></tr>
+<tr><td>Do not resolve 75/50</td><td>Assessment thresholds are product policy</td><td>High</td><td>Escalation</td><td>n/a</td></tr>
+<tr><td>Parameterise ring geometry</td><td>Exam screens hand-roll 120/10 because size wasn't exposed</td><td>High</td><td>Removes a duplicate</td><td>Easy</td></tr>
+<tr><td>Preserve amber-bar / orange-text pairing</td><td>Legible weight difference at 6–12px</td><td>Medium</td><td><code>MetricBar</code></td><td>Easy</td></tr>
+<tr><td>Defer <code>OcrModal</code> and <code>UmlautKeyboard</code></td><td>Shared, but writing-input concerns with untraced states</td><td>High</td><td>Exam audit scope</td><td>Easy</td></tr>
+<tr><td>Keep <code>LevelCompleteCard</code> bars separate</td><td>Decorative fixed widths, not scores</td><td>High</td><td>Avoids a false abstraction</td><td>Easy</td></tr>
+</table>
+
+<h2><span class="n">7</span>Escalations now open</h2>
+<p class="note">Three defects found across phases 1 and 2. All are engineering/product calls, not design-system changes, and none has been silently normalised.</p>
+<table>
+<tr><th>#</th><th>Defect</th><th>Where</th><th>Severity</th></tr>
+<tr><td>1</td><td>Two score scales render on one results screen (72 reads green and amber simultaneously)</td><td>ExamWritingResults, ExamSpeakingResults</td><td><strong>P1</strong> — visibly contradictory feedback on assessed work</td></tr>
+<tr><td>2</td><td>A2 ignores <code>module_number</code>, so chapters mislabel when server numbering is sparse</td><td>components/a2/ChapterSelectTemplate</td><td><strong>P2</strong></td></tr>
+<tr><td>3</td><td>Lock opacity is 50% for chapter gating, 60% for usage limits</td><td>ChapterSelectTemplate vs ExamSelect</td><td><strong>P3</strong></td></tr>
+<tr><td>4</td><td>Colour bands at 40 but greeting bands at 50 inside one utility file</td><td>describe-speak/utils/scoreUtils.js</td><td><strong>P3</strong></td></tr>
+</table>
+<p>Defect 1 is the one worth acting on soon — it is not cosmetic. A learner shown amber for a 72 on one row and green for the same 72 on another has been given two different verdicts on their own work.</p>
+
+<h2><span class="n">8</span>Next</h2>
+<p>Phase 3 is the exam audit, and phase 2 has sharpened what it needs to answer: the four workspaces' input modes, timing and autosave, submission and resume, the per-question review lists on the results screens, and whether the 75/50 threshold is policy or accident. The scoring kit means that audit can now focus on <em>behaviour</em> rather than re-deriving visual structure.</p>
+
+</body></html>
