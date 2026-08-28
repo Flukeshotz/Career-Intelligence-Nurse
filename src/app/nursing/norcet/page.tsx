@@ -18,9 +18,12 @@ import {
 import { EligibilitySection } from '@/components/opportunity/EligibilitySection';
 import { TrackButton } from '@/components/opportunity/TrackButton';
 import { ShareButtons } from '@/components/opportunity/ShareButtons';
+import MayaCard from '@/components/maya/MayaCard';
 import { INITIAL_REQUIREMENTS } from '@/lib/data';
+import { DETAILED_EXAM_INTELLIGENCE } from '@/lib/exam-syllabus-data';
 
 const NORCET_REQUIREMENTS = INITIAL_REQUIREMENTS.filter((r) => r.examId === 'exam-norcet-2026');
+const NORCET_INTEL = DETAILED_EXAM_INTELLIGENCE['exam-norcet-2026'];
 
 const TIMELINE_STEPS = [
   {
@@ -54,7 +57,7 @@ const TIMELINE_STEPS = [
 ];
 
 export default function NorcetHubPage() {
-  const [activeTab, setActiveTab] = useState<'overview' | 'eligibility' | 'timeline' | 'pattern' | 'guidance'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'eligibility' | 'timeline' | 'pattern' | 'syllabus' | 'guidance'>('overview');
 
   return (
     <div className="wide-container mobile-safe-bottom" style={{ paddingTop: '20px' }}>
@@ -144,7 +147,36 @@ export default function NorcetHubPage() {
         </div>
       </div>
 
-      {/* ── 2. Navigation Tabs ── */}
+      {/* ── 2. Contextual Maya Card ── */}
+      <div style={{ marginBottom: '20px' }}>
+        <MayaCard
+          title="Confused about AIIMS NORCET 2026?"
+          pageContext="norcet"
+          opportunity={{
+            id: 'exam-norcet-2026',
+            title: 'AIIMS NORCET 2026',
+            organisation: 'AIIMS New Delhi & Participating Central Hospitals',
+            type: 'exam',
+            vacancies: 2218,
+            applicationDeadline: '2026-08-13',
+            examDate: '2026-09-12',
+            admitCardDate: '2026-09-09',
+            salaryRaw: 'Pay Level 7 (₹44,900 - ₹1,42,400)',
+            qualification: 'B.Sc. Nursing (0 exp) or GNM + 2 yrs in 50-bed hospital',
+            officialNotificationUrl: 'https://www.aiimsexams.ac.in/advertisement/6a6350f7e5a81c4267f4ff04',
+            lastVerified: '2026-08-28',
+            requirements: NORCET_REQUIREMENTS,
+          }}
+          suggestedPrompts={[
+            'Am I eligible for NORCET with GNM?',
+            'What is the Stage 1 vs Stage 2 syllabus?',
+            'How is negative marking calculated?',
+            'What should I study first?'
+          ]}
+        />
+      </div>
+
+      {/* ── 3. Navigation Tabs ── */}
       <div
         style={{
           display: 'flex',
@@ -160,7 +192,8 @@ export default function NorcetHubPage() {
           { id: 'eligibility', label: 'Check My Eligibility' },
           { id: 'timeline', label: 'Cycle Dates' },
           { id: 'pattern', label: 'Exam Pattern' },
-          { id: 'guidance', label: 'Revision Tips' },
+          { id: 'syllabus', label: 'Full Course Syllabus' },
+          { id: 'guidance', label: 'Revision Tips & FAQs' },
         ].map((tab) => (
           <button
             key={tab.id}
@@ -374,7 +407,54 @@ export default function NorcetHubPage() {
         </div>
       )}
 
-      {/* ── TAB 5: GUIDANCE (Bite-Sized Bullet Points) ── */}
+      {/* ── TAB 5: SYLLABUS (Full Course Breakdown) ── */}
+      {activeTab === 'syllabus' && (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', maxWidth: '860px' }}>
+          <div className="sc-card" style={{ padding: '22px' }}>
+            <h2 style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--sc-navy-900)', marginBottom: '6px' }}>
+              AIIMS NORCET Official Course Syllabus
+            </h2>
+            <p style={{ fontSize: '0.82rem', color: 'var(--sc-ink-600)', marginBottom: '16px' }}>
+              Structured subject-wise syllabus aligned with the Indian Nursing Council (INC) curriculum and AIIMS examination blueprint:
+            </p>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+              {NORCET_INTEL.syllabusModules.map((mod, i) => (
+                <div
+                  key={i}
+                  style={{
+                    background: 'var(--sc-surface-secondary)',
+                    borderRadius: 'var(--radius-md)',
+                    padding: '14px 16px',
+                    border: '1px solid var(--sc-line-200)',
+                  }}
+                >
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px', flexWrap: 'wrap', gap: '6px' }}>
+                    <div style={{ fontSize: '0.94rem', fontWeight: 800, color: 'var(--sc-navy-900)' }}>
+                      {mod.subject}
+                    </div>
+                    {mod.questionCount && (
+                      <span style={{ background: 'var(--sc-navy-100)', color: 'var(--sc-navy-900)', padding: '2px 8px', borderRadius: 'var(--radius-pill)', fontSize: '0.72rem', fontWeight: 700 }}>
+                        {mod.questionCount}
+                      </span>
+                    )}
+                  </div>
+
+                  <ul style={{ paddingLeft: '18px', margin: 0, fontSize: '0.82rem', color: 'var(--sc-ink-700)', lineHeight: 1.6 }}>
+                    {mod.highYieldTopics.map((topic, ti) => (
+                      <li key={ti} style={{ marginBottom: '4px' }}>
+                        {topic}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── TAB 6: GUIDANCE & FAQS ── */}
       {activeTab === 'guidance' && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', maxWidth: '820px' }}>
           <div style={{ background: 'var(--sc-yellow-50)', border: '1px solid #fde68a', borderRadius: 'var(--radius-md)', padding: '12px 16px', fontSize: '0.82rem', color: '#92400e' }}>
@@ -396,6 +476,26 @@ export default function NorcetHubPage() {
               <div style={{ padding: '10px 12px', background: 'var(--sc-surface-secondary)', borderRadius: 'var(--radius-sm)' }}>
                 <strong>3. Clinical Safety & Hospital Protocols:</strong> BMW Rules 2016, infection control, BLS/ACLS algorithms.
               </div>
+            </div>
+          </div>
+
+          {/* Frequently Asked Questions */}
+          <div className="sc-card" style={{ padding: '20px' }}>
+            <h3 style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--sc-navy-900)', marginBottom: '12px' }}>
+              Frequently Asked Questions (Official AIIMS Rules)
+            </h3>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              {NORCET_INTEL.frequentlyAskedQuestions.map((faq, fi) => (
+                <div key={fi} style={{ padding: '12px 14px', background: 'var(--sc-surface-secondary)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--sc-line-200)' }}>
+                  <div style={{ fontSize: '0.86rem', fontWeight: 800, color: 'var(--sc-navy-900)', marginBottom: '4px' }}>
+                    Q: {faq.question}
+                  </div>
+                  <div style={{ fontSize: '0.80rem', color: 'var(--sc-ink-700)', lineHeight: 1.55 }}>
+                    {faq.answer}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

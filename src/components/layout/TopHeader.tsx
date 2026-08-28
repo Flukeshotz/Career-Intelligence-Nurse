@@ -2,13 +2,17 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ShieldCheck, Compass, Briefcase, GraduationCap, RefreshCw, User } from 'lucide-react';
+import { ShieldCheck, Compass, Briefcase, GraduationCap, RefreshCw, User, MessageSquare } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
 import { getTrackedOpportunities } from '@/lib/user-store';
+
+const MayaPanel = dynamic(() => import('@/components/maya/MayaPanel'), { ssr: false });
 
 export function TopHeader() {
   const pathname = usePathname();
   const [trackedCount, setTrackedCount] = useState(0);
+  const [mayaOpen, setMayaOpen] = useState(false);
 
   useEffect(() => {
     const items = getTrackedOpportunities();
@@ -163,9 +167,37 @@ export function TopHeader() {
           </Link>
         </nav>
 
-        {/* Right Action: Verified Trust Badge */}
+        {/* Right Action: Verified Trust Badge & Ask Maya */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <button
+            type="button"
+            onClick={() => setMayaOpen(true)}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px',
+              padding: '6px 14px',
+              borderRadius: '200px',
+              background: 'linear-gradient(135deg, #019035 0%, #0baa45 100%)',
+              color: '#ffffff',
+              fontSize: '0.80rem',
+              fontWeight: 700,
+              border: 'none',
+              cursor: 'pointer',
+              boxShadow: '0 2px 8px rgba(1, 144, 53, 0.35)',
+              transition: 'transform 0.12s ease',
+            }}
+          >
+            <img
+              src="/maya-smiling.webp"
+              alt="Maya"
+              style={{ width: '22px', height: '22px', borderRadius: '50%', objectFit: 'cover', objectPosition: 'top' }}
+            />
+            <span>Ask Maya</span>
+          </button>
+
           <div
+            className="desktop-only-badge"
             style={{
               display: 'flex',
               alignItems: 'center',
@@ -180,10 +212,16 @@ export function TopHeader() {
             }}
           >
             <ShieldCheck size={15} color="#0baa45" />
-            <span>Official Verified Sources</span>
+            <span>Official Sources</span>
           </div>
         </div>
       </div>
+
+      <MayaPanel
+        isOpen={mayaOpen}
+        onClose={() => setMayaOpen(false)}
+        pageContext="general"
+      />
     </header>
   );
 }

@@ -447,3 +447,396 @@ select:focus-visible {
   }
 }
 
+/* ═══════════════════════════════════════════
+   MAYA — SkillCase Career Intelligence Layer
+   ═══════════════════════════════════════════ */
+
+/* Maya trigger button */
+.maya-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, var(--sc-navy-700) 0%, var(--sc-navy-900) 100%);
+  color: var(--sc-white);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-ui);
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  min-height: var(--touch-target-min);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 2px 12px rgba(0, 40, 86, 0.25);
+  text-decoration: none;
+}
+
+.maya-trigger:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 40, 86, 0.32);
+}
+
+.maya-trigger:active {
+  transform: translateY(0);
+}
+
+.maya-trigger-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  background: rgba(255,255,255,0.15);
+}
+
+/* Maya contextual card (inline on page) */
+.maya-card {
+  background: linear-gradient(135deg, var(--sc-navy-900) 0%, #0a1f3d 100%);
+  border-radius: var(--radius-xl);
+  padding: 16px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 4px 16px rgba(0, 40, 86, 0.2);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.maya-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 40, 86, 0.28);
+}
+
+.maya-card-avatar {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  object-position: top;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+}
+
+.maya-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.maya-card-label {
+  font-size: 0.70rem;
+  font-weight: 800;
+  color: var(--sc-yellow-300);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 2px;
+  font-family: var(--font-ui);
+}
+
+.maya-card-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--sc-white);
+  margin-bottom: 6px;
+  font-family: var(--font-display);
+}
+
+.maya-card-prompts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.maya-prompt-chip {
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: rgba(255,255,255,0.85);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 0.74rem;
+  font-weight: 500;
+  font-family: var(--font-ui);
+  cursor: pointer;
+  transition: background 0.12s ease;
+  white-space: nowrap;
+}
+
+.maya-prompt-chip:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+/* Maya slide-up drawer overlay */
+.maya-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1000;
+  display: flex;
+  align-items: flex-end;
+  animation: mayaOverlayIn 0.22s ease;
+}
+
+@keyframes mayaOverlayIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.maya-drawer {
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  background: var(--sc-white);
+  border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+  padding: 0 0 calc(16px + env(safe-area-inset-bottom, 0px));
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: mayaDrawerIn 0.3s cubic-bezier(0.32, 0.72, 0, 1);
+  box-shadow: 0 -8px 40px rgba(0, 40, 86, 0.18);
+}
+
+@keyframes mayaDrawerIn {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.maya-drawer-handle {
+  width: 40px;
+  height: 4px;
+  background: var(--sc-line-300);
+  border-radius: 2px;
+  margin: 12px auto 0;
+}
+
+.maya-drawer-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px 0;
+}
+
+.maya-drawer-avatar {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  background: var(--sc-navy-50);
+  flex-shrink: 0;
+}
+
+.maya-drawer-identity {
+  flex: 1;
+}
+
+.maya-drawer-name {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--sc-navy-900);
+  font-family: var(--font-display);
+}
+
+.maya-drawer-role {
+  font-size: 0.75rem;
+  color: var(--sc-ink-600);
+  font-family: var(--font-ui);
+}
+
+.maya-close-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--sc-surface-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sc-ink-600);
+  cursor: pointer;
+  border: none;
+  flex-shrink: 0;
+  transition: background 0.12s ease;
+}
+
+.maya-close-btn:hover {
+  background: var(--sc-line-200);
+}
+
+/* Confidence badge */
+.maya-confidence {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 0.70rem;
+  font-weight: 700;
+  font-family: var(--font-ui);
+  margin: 12px 20px 0;
+}
+
+.maya-confidence.verified {
+  background: var(--sc-green-50);
+  color: var(--sc-green-600);
+}
+
+.maya-confidence.needs_info {
+  background: var(--sc-yellow-50);
+  color: #92400e;
+}
+
+.maya-confidence.not_verified {
+  background: var(--sc-red-50);
+  color: #dc2626;
+}
+
+/* Maya message */
+.maya-message {
+  font-family: var(--font-ui);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--sc-ink-900);
+  padding: 12px 20px 0;
+}
+
+/* Citation */
+.maya-citation {
+  font-size: 0.72rem;
+  color: var(--sc-ink-400);
+  font-family: var(--font-ui);
+  padding: 6px 20px 0;
+}
+
+.maya-citation a {
+  color: var(--sc-blue-500);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Quick actions */
+.maya-quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 14px 20px 0;
+}
+
+.maya-action-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: var(--font-ui);
+  cursor: pointer;
+  border: none;
+  min-height: 40px;
+  transition: all 0.12s ease;
+  text-decoration: none;
+}
+
+.maya-action-chip.primary {
+  background: var(--sc-navy-700);
+  color: var(--sc-white);
+}
+
+.maya-action-chip.primary:hover {
+  background: var(--sc-navy-900);
+}
+
+.maya-action-chip.secondary {
+  background: var(--sc-surface-secondary);
+  color: var(--sc-ink-700);
+  border: 1px solid var(--sc-line-200);
+}
+
+.maya-action-chip.secondary:hover {
+  background: var(--sc-line-200);
+}
+
+/* Maya input */
+.maya-input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px 4px;
+  border-top: 1px solid var(--sc-line-100);
+  margin-top: 16px;
+}
+
+.maya-input {
+  flex: 1;
+  background: var(--sc-surface-secondary);
+  border: 1px solid var(--sc-line-200);
+  border-radius: var(--radius-pill);
+  padding: 10px 16px;
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  color: var(--sc-ink-900);
+  outline: none;
+  min-height: 44px;
+  transition: border-color 0.15s ease;
+}
+
+.maya-input:focus {
+  border-color: var(--sc-navy-600);
+  background: var(--sc-white);
+}
+
+.maya-input::placeholder {
+  color: var(--sc-ink-400);
+}
+
+.maya-send-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--sc-navy-700);
+  color: var(--sc-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  flex-shrink: 0;
+  transition: background 0.12s ease, transform 0.1s ease;
+}
+
+.maya-send-btn:hover {
+  background: var(--sc-navy-900);
+}
+
+.maya-send-btn:active {
+  transform: scale(0.95);
+}
+
+.maya-send-btn:disabled {
+  background: var(--sc-line-300);
+  cursor: not-allowed;
+}
+
+/* Loading dots */
+.maya-loading {
+  display: flex;
+  gap: 5px;
+  padding: 16px 20px;
+  align-items: center;
+}
+
+.maya-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--sc-navy-600);
+  animation: mayaDot 1.2s ease-in-out infinite;
+}
+
+.maya-dot:nth-child(2) { animation-delay: 0.2s; }
+.maya-dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes mayaDot {
+  0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
+  30% { transform: translateY(-6px); opacity: 1; }
+}
+
+
