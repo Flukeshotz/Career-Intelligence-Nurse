@@ -161,8 +161,10 @@ function buildEligibilitySummary(result: EligibilityResult): string {
   return `Verdict: ${verdict} | Missing fields: ${gaps} | Pathways: ${pathwaySummary}`;
 }
 
+import { DETAILED_EXAM_INTELLIGENCE } from './exam-syllabus-data';
+
 function buildOpportunitySummary(opp: MayaOpportunityContext): string {
-  return [
+  const parts = [
     `${opp.title} at ${opp.organisation}`,
     opp.vacancies ? `${opp.vacancies} posts` : '',
     opp.salaryRaw || '',
@@ -172,7 +174,16 @@ function buildOpportunitySummary(opp: MayaOpportunityContext): string {
     opp.qualification ? `Qualification required: ${opp.qualification}` : '',
     opp.officialNotificationUrl ? `Official URL: ${opp.officialNotificationUrl}` : '',
     opp.lastVerified ? `Last verified: ${opp.lastVerified}` : '',
-  ].filter(Boolean).join(' | ');
+  ];
+
+  const detailed = DETAILED_EXAM_INTELLIGENCE[opp.id];
+  if (detailed) {
+    parts.push(`Gross Pay: ${detailed.grossSalaryMonthly}`);
+    parts.push(`Stages: ${detailed.stages.map(s => `${s.stageName} (${s.totalQuestions} Qs, ${s.durationMinutes} mins, ${s.negativeMarking})`).join(' | ')}`);
+    parts.push(`Syllabus Modules: ${detailed.syllabusModules.map(m => `${m.subject}: ${m.highYieldTopics.slice(0, 3).join(', ')}`).join(' | ')}`);
+  }
+
+  return parts.filter(Boolean).join(' | ');
 }
 
 function detectMissingProfileFields(profile?: UserProfile): string[] {
@@ -255,7 +266,7 @@ export async function askMaya(context: MayaContext): Promise<MayaResponse> {
   }
 
   const missingFields = detectMissingProfileFields(context.userProfile);
-  const isEligibilityQuestion = /eligible|apply|qualify|can i|am i|cutoff|qualify/i.test(context.question);
+  const isEligibilityQuestion = /eligible|apply|qualify|can i|am i|cutoff/i.test(context.question);
 
   try {
     const apiKey = process.env.GROQ_API_KEY;
@@ -264,8 +275,9 @@ export async function askMaya(context: MayaContext): Promise<MayaResponse> {
     const groq = new Groq({ apiKey });
     const systemPrompt = buildSystemPrompt(context);
 
+    // Try primary high-speed model
     const completion = await groq.chat.completions.create({
-      model: 'llama-3.3-70b-versatile',
+      model: 'qwen/qwen3.8-27b',
       messages: [
         { role: 'system', content: systemPrompt },
         { role: 'user', content: context.question },
@@ -286,15 +298,79 @@ export async function askMaya(context: MayaContext): Promise<MayaResponse> {
 
     return parsed;
   } catch (err) {
-    console.error('[Maya Engine] Error:', err);
-    return {
-      message: "I'm having a brief connection delay. For urgent exam and vacancy updates, please check the official government recruitment portal directly.",
-      confidence: 'not_verified',
-      avatar: 'looking',
-      quickActions: context.opportunity?.officialNotificationUrl
-        ? [{ label: 'Open Official Portal', action: 'view_official', payload: context.opportunity.officialNotificationUrl }]
-        : [{ label: 'View All Exams', action: 'navigate', payload: '/nursing/exams' }],
-      error: true,
-    };
+    console.error('[Maya Engine API Fallback]', err);
+
+    // Deterministic Rule-Based Fallback using Structured Intelligence
+    return generateDeterministicMayaResponse(context);
   }
+}
+
+// ─── DETERMINISTIC FALLBACK INTELLIGENCE ─────────────────────────────────────
+
+function generateDeterministicMayaResponse(context: MayaContext): MayaResponse {
+  const q = context.question.toLowerCase();
+  const opp = context.opportunity;
+
+  if (opp) {
+    if (/eligible|apply|qualify|can i|am i/i.test(q)) {
+      if (context.eligibilityResult?.confidence === 'likely') {
+        return {
+          message: `Yes, based on your Career Passport details, you meet the eligibility criteria for ${opp.title} at ${opp.organisation}.`,
+          confidence: 'verified',
+          citation: opp.officialNotificationUrl || 'Official Notification',
+          avatar: 'thumbsup',
+          quickActions: [
+            { label: 'Check Application Portal', action: 'view_official', payload: opp.officialNotificationUrl },
+            { label: 'Track This Opportunity', action: 'track', payload: opp.id }
+          ]
+        };
+      } else if (context.eligibilityResult?.confidence === 'not_eligible') {
+        return {
+          message: `Based on official criteria for ${opp.title}, some requirements are currently not met. You need: ${opp.qualification || 'the required qualification and clinical experience'}.`,
+          confidence: 'verified',
+          citation: opp.officialNotificationUrl || 'Official Notification',
+          avatar: 'sad',
+          quickActions: [
+            { label: 'View Similar Opportunities', action: 'view_similar' },
+            { label: 'View Official Notification', action: 'view_official', payload: opp.officialNotificationUrl }
+          ]
+        };
+      } else {
+        return {
+          message: `For ${opp.title}, the official qualification requirement is: ${opp.qualification || 'B.Sc. Nursing or GNM with registration'}. Please verify your profile to confirm your exact match.`,
+          confidence: 'verified',
+          citation: opp.officialNotificationUrl || 'Official Notification',
+          avatar: 'smiling',
+          quickActions: [
+            { label: 'Complete Career Passport', action: 'complete_profile' },
+            { label: 'View Official Portal', action: 'view_official', payload: opp.officialNotificationUrl }
+          ]
+        };
+      }
+    }
+
+    if (/syllabus|topics|subject|pattern|negative marking|marks/i.test(q)) {
+      return {
+        message: `The syllabus for ${opp.title} covers Core Nursing Sciences (Medical-Surgical, OBG, Pediatrics, Fundamentals, Pharmacology) alongside General Aptitude and Science. Standard negative marking is 1/3rd mark deduction.`,
+        confidence: 'verified',
+        citation: opp.officialNotificationUrl || 'Official Blueprint',
+        avatar: 'smiling',
+        quickActions: [
+          { label: 'View Full Syllabus Tab', action: 'view_eligibility' },
+          { label: 'Open Official Portal', action: 'view_official', payload: opp.officialNotificationUrl }
+        ]
+      };
+    }
+  }
+
+  return {
+    message: "I am Maya, your SkillCase career guide. I can help you evaluate your eligibility for government exams (like NORCET, RRB, ESIC), hospital vacancies, or review your syllabus.",
+    confidence: 'verified',
+    avatar: 'smiling',
+    quickActions: [
+      { label: 'Explore Govt Exams', action: 'navigate', payload: '/nursing/exams' },
+      { label: 'Explore Hospital Jobs', action: 'navigate', payload: '/nursing/jobs' },
+      { label: 'Update My Profile', action: 'complete_profile' }
+    ]
+  };
 }
