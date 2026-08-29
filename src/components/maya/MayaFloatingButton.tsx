@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { Sparkles, MessageCircle } from 'lucide-react';
 
@@ -8,6 +9,18 @@ const MayaPanel = dynamic(() => import('@/components/maya/MayaPanel'), { ssr: fa
 
 export function MayaFloatingButton() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Suppress floating FAB on detail pages with bottom action docks (they already have an inline MayaCard)
+  const isDetailPage =
+    pathname?.includes('/nursing/exams/') ||
+    pathname?.includes('/nursing/jobs/') ||
+    pathname === '/nursing/norcet' ||
+    pathname?.startsWith('/admin');
+
+  if (isDetailPage) {
+    return null;
+  }
 
   return (
     <>
