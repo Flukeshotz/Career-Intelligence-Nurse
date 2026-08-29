@@ -8,6 +8,7 @@ import { EligibilitySection } from '@/components/opportunity/EligibilitySection'
 import { TrustPanel } from '@/components/opportunity/TrustPanel';
 import { ShareButtons } from '@/components/opportunity/ShareButtons';
 import { TrackButton } from '@/components/opportunity/TrackButton';
+import { StructuredHighlights } from '@/components/opportunity/StructuredHighlights';
 
 export const revalidate = 3600;
 
@@ -218,24 +219,7 @@ export default async function JobDetailPage({
 
         {/* Right Column: Opportunity Summary & Trust Panel */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-          <div className="sc-card" style={{ padding: '20px' }}>
-            <h2 style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--sc-navy-900)', marginBottom: '8px' }}>
-              Key Opportunity Highlights
-            </h2>
-            <div
-              style={{
-                fontSize: '0.86rem',
-                color: 'var(--sc-ink-700)',
-                lineHeight: 1.55,
-                background: 'var(--sc-surface-secondary)',
-                padding: '12px 14px',
-                borderRadius: 'var(--radius-sm)',
-                border: '1px solid var(--sc-line-200)',
-              }}
-            >
-              {job.descriptionSimple}
-            </div>
-          </div>
+          <StructuredHighlights descriptionSimple={job.descriptionSimple} />
 
           {/* Linked Government Examination Banner */}
           {linkedExam && (
