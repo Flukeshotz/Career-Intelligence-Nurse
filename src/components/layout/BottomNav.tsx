@@ -2,20 +2,13 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, Briefcase, GraduationCap, RefreshCw, Search } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import { getTrackedOpportunities } from '@/lib/user-store';
+import { Home, Briefcase, GraduationCap, Plane, Search } from 'lucide-react';
+import { useState } from 'react';
 import { GlobalSearchModal } from './GlobalSearchModal';
 
 export function BottomNav() {
   const pathname = usePathname();
-  const [trackedCount, setTrackedCount] = useState(0);
   const [searchOpen, setSearchOpen] = useState(false);
-
-  useEffect(() => {
-    const items = getTrackedOpportunities();
-    setTrackedCount(items.length);
-  }, [pathname]);
 
   const isActive = (path: string) => {
     if (path === '/nursing') {
@@ -49,13 +42,19 @@ export function BottomNav() {
             position: 'relative',
           }}
         >
-          <div style={{
-            width: '44px', height: '44px', borderRadius: '14px',
-            background: 'var(--sc-navy-700)',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            boxShadow: '0 4px 14px rgba(8,50,98,0.30)',
-            marginTop: '-10px',
-          }}>
+          <div
+            style={{
+              width: '44px',
+              height: '44px',
+              borderRadius: '14px',
+              background: 'var(--sc-navy-700)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: '0 4px 14px rgba(8,50,98,0.30)',
+              marginTop: '-10px',
+            }}
+          >
             <Search size={20} color="#ffffff" />
           </div>
           <span style={{ color: 'var(--sc-navy-700)', fontWeight: 700, marginTop: '-2px' }}>Find</span>
@@ -66,30 +65,9 @@ export function BottomNav() {
           <span>Jobs</span>
         </Link>
 
-        <Link href="/cycles" className={`sc-tab-item ${isActive('/cycles') ? 'active' : ''}`} style={{ position: 'relative' }}>
-          <RefreshCw size={22} color={isActive('/cycles') ? '#083262' : '#64748b'} />
-          <span>Tracked</span>
-          {trackedCount > 0 && (
-            <span
-              style={{
-                position: 'absolute',
-                top: '4px',
-                right: '8px',
-                background: '#019035',
-                color: '#ffffff',
-                fontSize: '0.60rem',
-                fontWeight: 800,
-                width: '16px',
-                height: '16px',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-            >
-              {trackedCount}
-            </span>
-          )}
+        <Link href="/nursing/abroad" className={`sc-tab-item ${isActive('/nursing/abroad') ? 'active' : ''}`}>
+          <Plane size={22} color={isActive('/nursing/abroad') ? '#083262' : '#64748b'} />
+          <span>Abroad</span>
         </Link>
       </nav>
 
