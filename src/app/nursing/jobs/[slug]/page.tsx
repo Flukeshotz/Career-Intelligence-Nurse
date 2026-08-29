@@ -119,15 +119,9 @@ export default async function JobDetailPage({
 
       {/* ── 1. WHAT IS THIS? (Hero Intelligence Card) ── */}
       <div className="sc-card" style={{ padding: '26px', marginBottom: '24px' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '12px', marginBottom: '14px' }}>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-            <span className={isGov ? 'badge-govt' : 'badge-private'}>
-              {isGov ? '🏛️ Central / State Govt' : '🏥 NABH Private Hospital'}
-            </span>
-            <span className="badge-verified">
-              ✓ Verified Live Opportunity
-            </span>
-          </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.74rem', fontWeight: 700, color: 'var(--sc-navy-700)', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '8px' }}>
+          <span>{isGov ? 'Central / State Government' : 'NABH Multi-Speciality Hospital'}</span>
+          <span style={{ color: '#16a34a', fontSize: '0.70rem', fontWeight: 600 }}>● Verified Live Vacancy</span>
         </div>
 
         <h1 style={{ fontSize: '1.55rem', fontWeight: 800, color: 'var(--sc-navy-900)', lineHeight: 1.3, marginBottom: '6px' }}>

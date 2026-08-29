@@ -136,40 +136,12 @@ export default async function ExamDetailPage({
           boxShadow: '0 4px 14px rgba(6, 30, 56, 0.15)',
         }}
       >
-        {/* Top Badges Row */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '8px', marginBottom: '10px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-            <span style={{ fontSize: '0.68rem', fontWeight: 800, background: 'rgba(255,255,255,0.12)', color: '#93c5fd', padding: '2px 8px', borderRadius: '4px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-              🎯 {detailed?.officialCadre || 'National Exam'}
-            </span>
-            <span style={{ fontSize: '0.68rem', fontWeight: 800, background: 'rgba(34,197,94,0.2)', color: '#86efac', padding: '2px 8px', borderRadius: '4px' }}>
-              ✓ Verified
-            </span>
+        {/* Clean Eyebrow Header */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.72rem', fontWeight: 700, color: '#93c5fd', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+            <span>{exam.organisation.includes('AIIMS') ? 'Central Govt · AIIMS' : exam.organisation.includes('Railway') ? 'Central Govt · Railways' : 'Government Recruitment'}</span>
+            <span style={{ color: '#4ade80', fontSize: '0.68rem', fontWeight: 600 }}>● Verified Notice</span>
           </div>
-
-          {exam.applicationUrl && (
-            <a
-              href={exam.applicationUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '4px',
-                background: '#edb843',
-                color: '#002856',
-                padding: '4px 10px',
-                borderRadius: '6px',
-                fontWeight: 800,
-                fontSize: '0.72rem',
-                textDecoration: 'none',
-                flexShrink: 0,
-              }}
-            >
-              <span>Apply Portal</span>
-              <ExternalLink size={11} />
-            </a>
-          )}
         </div>
 
         {/* Title & Organization */}
