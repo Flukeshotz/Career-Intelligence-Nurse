@@ -6,22 +6,22 @@ import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Upload, AlertCircle, ChevronRight, Search, FileText, Download, Sparkles, Filter } from 'lucide-react';
 import { INITIAL_JOBS, INITIAL_EXAMS } from '@/lib/mock-data';
-import { EXAM_PAPERS, ExamPaper, getAllPapers } from '@/lib/pyq-mock-data';
-import { getTrackedOpportunities, getUserProfile, UserProfile } from '@/lib/user-store';
+import { EXAM_PAPERS, ExamPaper } from '@/lib/pyq-mock-data';
+import { getUserProfile, UserProfile } from '@/lib/user-store';
 import { JobCard } from '@/components/opportunity/JobCard';
 import { ExamCard } from '@/components/opportunity/ExamCard';
 import { PyqCard } from '@/components/opportunity/PyqCard';
 import { ResumeUploadModal } from '@/components/profile/ResumeUploadModal';
 import { OfficialPortalsDirectory } from '@/components/opportunity/OfficialPortalsDirectory';
 
-type Tab = 'exams' | 'jobs' | 'pyq' | 'portals' | 'norcet';
+type Tab = 'exams' | 'jobs' | 'pyq' | 'portals';
 type Qualification = 'all' | 'bsc' | 'gnm' | 'admissions';
 
-const QUAL_OPTIONS: { id: Qualification; label: string; emoji: string; desc: string }[] = [
-  { id: 'all', emoji: '⭐', label: 'All Nurses', desc: 'All 50 national & state opportunities' },
-  { id: 'bsc', emoji: '🩺', label: 'B.Sc. Nursing', desc: '0 Exp required for central Level 7 posts' },
-  { id: 'gnm', emoji: '📋', label: 'GNM Diploma', desc: 'RRB (0 Exp) & NORCET (2 Yr in 50-bed)' },
-  { id: 'admissions', emoji: '🎓', label: '10+2 / Entrances', desc: 'NEET, AIIMS B.Sc., WBJEE & state CNET' },
+const QUAL_OPTIONS: { id: Qualification; label: string; emoji: string }[] = [
+  { id: 'all', emoji: '⭐', label: 'All' },
+  { id: 'bsc', emoji: '🩺', label: 'B.Sc. Nursing' },
+  { id: 'gnm', emoji: '📋', label: 'GNM Diploma' },
+  { id: 'admissions', emoji: '🎓', label: '10+2 / Entrances' },
 ];
 
 export default function NursingGateway() {
@@ -86,245 +86,195 @@ export default function NursingGateway() {
   const TABS: { id: Tab; emoji: string; label: string; count?: number }[] = [
     { id: 'exams', emoji: '🏛️', label: 'Govt Exams', count: filteredExams.length },
     { id: 'jobs', emoji: '🏥', label: 'Hospital Jobs', count: filteredJobs.length },
-    { id: 'pyq', emoji: '📝', label: 'PYQ & Mocks', count: EXAM_PAPERS.length },
-    { id: 'portals', emoji: '🌐', label: 'Official Portals' },
-    { id: 'norcet', emoji: '⚡', label: 'NORCET Hub' },
+    { id: 'pyq', emoji: '📄', label: 'PYQs & Mocks', count: EXAM_PAPERS.length },
+    { id: 'portals', emoji: '🌐', label: 'Official Portals', count: 50 },
   ];
 
   return (
-    <div style={{ background: '#f8fafc', minHeight: '100vh' }}>
+    <div style={{ background: '#f8fafc', minHeight: '100vh', paddingBottom: '90px' }}>
 
-      {/* ── 1. CLEAN APP HERO (Non-sticky, spacious, elegant) ── */}
-      <div
-        style={{
-          background: 'linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%)',
-          borderBottom: '1px solid #e2e8f0',
-          padding: '24px 16px 16px',
-        }}
-      >
-        <div style={{ maxWidth: '960px', margin: '0 auto' }}>
+      {/* ── 1. CLEAN APP HERO (Zero Clutter) ── */}
+      <div style={{ background: '#ffffff', borderBottom: '1px solid #e2e8f0', padding: '16px 16px 12px' }}>
+        <div style={{ maxWidth: '860px', margin: '0 auto' }}>
           
-          {/* Clean Header Bar */}
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
-            <h1 style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--sc-navy-900)', letterSpacing: '-0.02em', margin: 0 }}>
-              {profile?.fullName ? `Welcome, ${profile.fullName}` : 'Nursing Gateway'}
-            </h1>
+          {/* Top Bar: Title + Qualification Switcher */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+            <div>
+              <h1 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0f172a', letterSpacing: '-0.02em', margin: 0 }}>
+                {profile?.fullName ? `Hello, ${profile.fullName}` : 'Nursing Opportunities'}
+              </h1>
+              <div style={{ fontSize: '0.74rem', color: '#64748b', marginTop: '2px' }}>
+                50 Central &amp; State Exams • 23 Hospital Vacancies
+              </div>
+            </div>
 
-            <span style={{ fontSize: '0.72rem', fontWeight: 700, padding: '3px 8px', borderRadius: '100px', background: '#e6f4ea', color: '#137333' }}>
-              🟢 50 Exams · 23 Jobs Live
-            </span>
+            {/* Micro Eligibility Check button */}
+            {!profile && (
+              <button
+                type="button"
+                onClick={() => setIsResumeModalOpen(true)}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '5px',
+                  padding: '6px 12px',
+                  borderRadius: '100px',
+                  background: 'var(--sc-navy-50)',
+                  color: 'var(--sc-navy-700)',
+                  border: '1px solid var(--sc-navy-100)',
+                  fontSize: '0.74rem',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                }}
+              >
+                <Upload size={12} />
+                <span>Auto-Match CV</span>
+              </button>
+            )}
           </div>
 
-          {/* Urgent Notification Chip */}
-          <div
+          {/* Urgent NORCET 2026 Highlight Bar */}
+          <Link
+            href="/nursing/norcet"
             style={{
-              background: '#fffbeb',
-              border: '1px solid #fde68a',
-              borderRadius: '12px',
-              padding: '10px 14px',
+              textDecoration: 'none',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
-              gap: '10px',
-              marginBottom: '16px',
+              background: '#fffbeb',
+              border: '1px solid #fde68a',
+              borderRadius: '10px',
+              padding: '8px 12px',
+              marginBottom: '12px',
             }}
           >
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px', minWidth: 0 }}>
-              <AlertCircle size={16} color="#b45309" style={{ flexShrink: 0 }} />
-              <div style={{ fontSize: '0.80rem', color: '#92400e', fontWeight: 600, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                <strong>NORCET 2026:</strong> Stage 1 CBT on <strong>12 Sep 2026</strong> · 2,218 Posts
+              <span style={{ fontSize: '0.9rem' }}>⚡</span>
+              <div style={{ fontSize: '0.78rem', color: '#92400e', fontWeight: 700, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                <strong>AIIMS NORCET 2026:</strong> Stage 1 CBT on <strong>12 Sep</strong> (2,218 Posts)
               </div>
             </div>
-            <Link
-              href="/nursing/norcet"
-              style={{
-                fontSize: '0.75rem',
-                fontWeight: 800,
-                color: '#002856',
-                background: '#edb843',
-                padding: '5px 10px',
-                borderRadius: '6px',
-                whiteSpace: 'nowrap',
-                textDecoration: 'none',
-              }}
-            >
-              Roadmap →
-            </Link>
-          </div>
+            <span style={{ fontSize: '0.72rem', fontWeight: 800, color: '#b45309', display: 'flex', alignItems: 'center', gap: '2px', flexShrink: 0 }}>
+              Hub <ChevronRight size={13} />
+            </span>
+          </Link>
 
-          {/* Qualification Persona Switcher (Segmented, calm pills) */}
-          <div>
-            <div style={{ fontSize: '0.70rem', fontWeight: 800, color: 'var(--sc-ink-400)', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '6px' }}>
-              Filter by Your Qualification
-            </div>
-            <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', paddingBottom: '4px' }}>
-              {QUAL_OPTIONS.map(q => (
-                <button
-                  key={q.id}
-                  type="button"
-                  onClick={() => setQualification(q.id)}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '5px',
-                    padding: '7px 14px',
-                    borderRadius: '100px',
-                    fontSize: '0.80rem',
-                    fontWeight: qualification === q.id ? 800 : 600,
-                    background: qualification === q.id ? 'var(--sc-navy-700)' : '#ffffff',
-                    color: qualification === q.id ? '#ffffff' : 'var(--sc-ink-700)',
-                    border: qualification === q.id ? '1.5px solid var(--sc-navy-700)' : '1.5px solid #cbd5e1',
-                    cursor: 'pointer',
-                    transition: 'all 0.12s ease',
-                    whiteSpace: 'nowrap',
-                    flexShrink: 0,
-                    boxShadow: qualification === q.id ? '0 2px 8px rgba(8,50,98,0.15)' : '0 1px 2px rgba(0,0,0,0.03)',
-                  }}
-                >
-                  <span>{q.emoji}</span>
-                  <span>{q.label}</span>
-                </button>
-              ))}
-            </div>
-            {qualification !== 'all' && (
-              <div style={{ fontSize: '0.75rem', color: 'var(--sc-ink-600)', marginTop: '6px' }}>
-                ℹ️ {QUAL_OPTIONS.find(q => q.id === qualification)?.desc}
-              </div>
-            )}
+          {/* Qualification Filter Strip */}
+          <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', paddingBottom: '2px' }}>
+            {QUAL_OPTIONS.map(q => (
+              <button
+                key={q.id}
+                type="button"
+                onClick={() => setQualification(q.id)}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '4px',
+                  padding: '5px 12px',
+                  borderRadius: '100px',
+                  fontSize: '0.76rem',
+                  fontWeight: qualification === q.id ? 800 : 600,
+                  background: qualification === q.id ? 'var(--sc-navy-700)' : '#f1f5f9',
+                  color: qualification === q.id ? '#ffffff' : '#475569',
+                  border: qualification === q.id ? '1px solid var(--sc-navy-700)' : '1px solid #e2e8f0',
+                  cursor: 'pointer',
+                  whiteSpace: 'nowrap',
+                  flexShrink: 0,
+                  transition: 'all 0.12s ease',
+                }}
+              >
+                <span>{q.emoji}</span>
+                <span>{q.label}</span>
+              </button>
+            ))}
           </div>
         </div>
       </div>
 
-      {/* ── 2. STICKY SLIM TAB BAR ── */}
+      {/* ── 2. CLEAN HORIZONTAL TAB BAR (Zero Text Overlap, No Smashed Layout) ── */}
       <div
         style={{
           background: '#ffffff',
-          borderBottom: '1.5px solid #e2e8f0',
+          borderBottom: '1px solid #e2e8f0',
           position: 'sticky',
-          top: '64px',
+          top: '60px',
           zIndex: 40,
-          boxShadow: '0 2px 6px rgba(0,0,0,0.02)',
+          boxShadow: '0 2px 4px rgba(0,0,0,0.02)',
         }}
       >
-        <div style={{ maxWidth: '960px', margin: '0 auto', display: 'flex', overflowX: 'auto' }}>
-          {TABS.map(tab => (
-            <button
-              key={tab.id}
-              type="button"
-              onClick={() => setActiveTab(tab.id)}
-              style={{
-                flex: 1,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: '6px',
-                padding: '12px 14px',
-                background: 'none',
-                border: 'none',
-                borderBottom: activeTab === tab.id ? '3px solid var(--sc-navy-700)' : '3px solid transparent',
-                cursor: 'pointer',
-                transition: 'all 0.12s ease',
-                whiteSpace: 'nowrap',
-                minWidth: '90px',
-              }}
-            >
-              <span style={{ fontSize: '0.92rem' }}>{tab.emoji}</span>
-              <span
+        <div
+          style={{
+            maxWidth: '860px',
+            margin: '0 auto',
+            display: 'flex',
+            gap: '8px',
+            overflowX: 'auto',
+            padding: '8px 16px',
+            scrollbarWidth: 'none',
+          }}
+        >
+          {TABS.map(tab => {
+            const isSelected = activeTab === tab.id;
+            return (
+              <button
+                key={tab.id}
+                type="button"
+                onClick={() => setActiveTab(tab.id)}
                 style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  padding: '8px 14px',
+                  borderRadius: '100px',
                   fontSize: '0.80rem',
-                  fontWeight: activeTab === tab.id ? 800 : 600,
-                  color: activeTab === tab.id ? 'var(--sc-navy-700)' : 'var(--sc-ink-600)',
+                  fontWeight: isSelected ? 800 : 600,
+                  background: isSelected ? '#0f172a' : '#f8fafc',
+                  color: isSelected ? '#ffffff' : '#334155',
+                  border: isSelected ? '1px solid #0f172a' : '1px solid #e2e8f0',
+                  cursor: 'pointer',
+                  whiteSpace: 'nowrap',
+                  flexShrink: 0,
+                  transition: 'all 0.12s ease',
                 }}
               >
-                {tab.label}
-              </span>
-              {tab.count !== undefined && (
-                <span
-                  style={{
-                    fontSize: '0.68rem',
-                    fontWeight: 800,
-                    background: activeTab === tab.id ? 'var(--sc-navy-700)' : '#f1f5f9',
-                    color: activeTab === tab.id ? '#ffffff' : 'var(--sc-ink-600)',
-                    padding: '1px 6px',
-                    borderRadius: '100px',
-                  }}
-                >
-                  {tab.count}
-                </span>
-              )}
-            </button>
-          ))}
+                <span>{tab.emoji}</span>
+                <span>{tab.label}</span>
+                {tab.count !== undefined && (
+                  <span
+                    style={{
+                      fontSize: '0.68rem',
+                      fontWeight: 800,
+                      padding: '1px 6px',
+                      borderRadius: '100px',
+                      background: isSelected ? 'rgba(255,255,255,0.2)' : '#e2e8f0',
+                      color: isSelected ? '#ffffff' : '#475569',
+                    }}
+                  >
+                    {tab.count}
+                  </span>
+                )}
+              </button>
+            );
+          })}
         </div>
       </div>
 
-      {/* ── 3. CONTENT FEED (Spacious, Zero Clutter) ── */}
-      <div style={{ maxWidth: '960px', margin: '0 auto', padding: '20px 16px 80px' }}>
+      {/* ── 3. CONTENT FEED (Spacious & Clean) ── */}
+      <div style={{ maxWidth: '860px', margin: '0 auto', padding: '16px 16px 0' }}>
 
-        {/* Quick Upload CTA (clean card) */}
-        {!profile && (
-          <div
-            style={{
-              background: 'linear-gradient(135deg, #002856 0%, #0d2f5e 100%)',
-              borderRadius: '14px',
-              padding: '16px 20px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              gap: '14px',
-              marginBottom: '20px',
-              color: '#ffffff',
-            }}
-          >
-            <div>
-              <div style={{ fontSize: '0.68rem', fontWeight: 800, color: '#edb843', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-                Instant Eligibility Engine
-              </div>
-              <div style={{ fontSize: '0.94rem', fontWeight: 800, marginTop: '2px' }}>
-                Check Your Eligibility Across All 50 Exams
-              </div>
-              <div style={{ fontSize: '0.76rem', color: '#cbd5e1', marginTop: '2px' }}>
-                Upload your CV to verify GNM vs B.Sc. rules in 2 seconds.
-              </div>
-            </div>
-
-            <button
-              type="button"
-              onClick={() => setIsResumeModalOpen(true)}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '6px',
-                padding: '9px 14px',
-                borderRadius: '8px',
-                background: '#ffffff',
-                color: 'var(--sc-navy-900)',
-                fontWeight: 700,
-                fontSize: '0.80rem',
-                border: 'none',
-                cursor: 'pointer',
-                flexShrink: 0,
-                whiteSpace: 'nowrap',
-              }}
-            >
-              <Upload size={14} />
-              <span>Upload CV</span>
-            </button>
-          </div>
-        )}
-
-        {/* ── TAB 1: GOVT RECRUITMENT EXAMS ── */}
+        {/* ── TAB 1: GOVT EXAMS ── */}
         {activeTab === 'exams' && (
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
-              <div style={{ fontSize: '0.84rem', fontWeight: 800, color: 'var(--sc-navy-900)' }}>
-                National & State Recruitment Exams ({filteredExams.length})
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+              <div style={{ fontSize: '0.84rem', fontWeight: 800, color: '#0f172a' }}>
+                All Recruitment Exams ({filteredExams.length})
               </div>
-              <Link href="/nursing/exams" style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--sc-navy-700)', textDecoration: 'none' }}>
-                Full Catalog →
+              <Link href="/nursing/exams" style={{ fontSize: '0.76rem', fontWeight: 700, color: 'var(--sc-navy-700)', textDecoration: 'none' }}>
+                Filters &amp; Search →
               </Link>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {filteredExams.map(exam => (
                 <ExamCard key={exam.id} exam={exam} />
               ))}
@@ -335,16 +285,16 @@ export default function NursingGateway() {
         {/* ── TAB 2: HOSPITAL JOBS ── */}
         {activeTab === 'jobs' && (
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
-              <div style={{ fontSize: '0.84rem', fontWeight: 800, color: 'var(--sc-navy-900)' }}>
-                Verified Hospital & Staff Nurse Vacancies ({filteredJobs.length})
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
+              <div style={{ fontSize: '0.84rem', fontWeight: 800, color: '#0f172a' }}>
+                Hospital &amp; Clinical Vacancies ({filteredJobs.length})
               </div>
-              <Link href="/nursing/jobs" style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--sc-navy-700)', textDecoration: 'none' }}>
-                Full Directory →
+              <Link href="/nursing/jobs" style={{ fontSize: '0.76rem', fontWeight: 700, color: 'var(--sc-navy-700)', textDecoration: 'none' }}>
+                All Hospitals →
               </Link>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {filteredJobs.map(job => (
                 <JobCard key={job.id} job={job} />
               ))}
@@ -352,29 +302,26 @@ export default function NursingGateway() {
           </div>
         )}
 
-        {/* ── TAB 3: PREVIOUS YEARS QUESTION PAPERS & MOCKS (NEW!) ── */}
+        {/* ── TAB 3: PREVIOUS YEAR PAPERS & MOCKS (100% IN-APP) ── */}
         {activeTab === 'pyq' && (
           <div>
-            <div style={{ marginBottom: '16px' }}>
-              <div style={{ fontSize: '0.72rem', fontWeight: 800, color: 'var(--sc-blue-600)', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '2px' }}>
-                Official Papers & Practice
+            <div style={{ marginBottom: '12px' }}>
+              <div style={{ fontSize: '0.86rem', fontWeight: 800, color: '#0f172a' }}>
+                Verified Previous Year Papers &amp; Mock Tests ({filteredPapers.length})
               </div>
-              <h2 style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--sc-navy-900)' }}>
-                Previous Years Papers (PYQs) &amp; Mock Tests
-              </h2>
-              <p style={{ fontSize: '0.80rem', color: 'var(--sc-ink-600)', marginTop: '2px' }}>
-                Download real official question papers with verified answer keys for AIIMS NORCET, RRB, ESIC, DSSSB, MNS, and state PSCs.
-              </p>
+              <div style={{ fontSize: '0.74rem', color: '#64748b', marginTop: '2px' }}>
+                Download real official examination booklets with verified answer keys directly in-app.
+              </div>
             </div>
 
-            {/* PYQ Filters */}
-            <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', paddingBottom: '12px', marginBottom: '8px' }}>
+            {/* Quick Sector Filters for PYQs */}
+            <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', paddingBottom: '10px', marginBottom: '6px' }}>
               {[
                 { id: 'all', label: 'All Exams' },
-                { id: 'norcet', label: 'NORCET (Stage 1 & 2)' },
-                { id: 'rrb', label: 'RRB Staff Nurse' },
-                { id: 'esic', label: 'UPSC ESIC' },
-                { id: 'dsssb', label: 'DSSSB Delhi' },
+                { id: 'norcet', label: 'NORCET' },
+                { id: 'rrb', label: 'RRB' },
+                { id: 'esic', label: 'ESIC' },
+                { id: 'dsssb', label: 'DSSSB' },
                 { id: 'mns', label: 'MNS Army' },
                 { id: 'state', label: 'State PSCs' },
               ].map(f => (
@@ -383,12 +330,12 @@ export default function NursingGateway() {
                   type="button"
                   onClick={() => setPyqExamFilter(f.id)}
                   style={{
-                    padding: '6px 12px',
+                    padding: '5px 10px',
                     borderRadius: '100px',
-                    fontSize: '0.75rem',
+                    fontSize: '0.74rem',
                     fontWeight: pyqExamFilter === f.id ? 800 : 600,
                     background: pyqExamFilter === f.id ? 'var(--sc-navy-700)' : '#ffffff',
-                    color: pyqExamFilter === f.id ? '#ffffff' : 'var(--sc-ink-700)',
+                    color: pyqExamFilter === f.id ? '#ffffff' : '#334155',
                     border: pyqExamFilter === f.id ? '1px solid var(--sc-navy-700)' : '1px solid #cbd5e1',
                     cursor: 'pointer',
                     whiteSpace: 'nowrap',
@@ -400,162 +347,26 @@ export default function NursingGateway() {
               ))}
             </div>
 
-            {/* Type selector (All / PYQ / Mock) */}
-            <div style={{ display: 'flex', gap: '6px', marginBottom: '16px' }}>
-              {[
-                { id: 'all', label: 'All Formats' },
-                { id: 'pyq', label: '📄 Official PYQ Papers' },
-                { id: 'mock', label: '🎯 Full Mock Tests' },
-              ].map(t => (
-                <button
-                  key={t.id}
-                  type="button"
-                  onClick={() => setPyqTypeFilter(t.id as any)}
-                  style={{
-                    padding: '5px 10px',
-                    borderRadius: '6px',
-                    fontSize: '0.72rem',
-                    fontWeight: pyqTypeFilter === t.id ? 800 : 600,
-                    background: pyqTypeFilter === t.id ? '#eef5ff' : 'transparent',
-                    color: pyqTypeFilter === t.id ? 'var(--sc-navy-700)' : 'var(--sc-ink-600)',
-                    border: pyqTypeFilter === t.id ? '1px solid var(--sc-navy-600)' : '1px solid transparent',
-                    cursor: 'pointer',
-                  }}
-                >
-                  {t.label}
-                </button>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+              {filteredPapers.map(paper => (
+                <PyqCard key={paper.id} paper={paper} />
               ))}
-            </div>
-
-            {/* Papers List */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              {filteredPapers.length === 0 ? (
-                <div style={{ textAlign: 'center', padding: '36px 16px', color: 'var(--sc-ink-600)' }}>
-                  <FileText size={32} color="#94a3b8" style={{ marginBottom: '8px' }} />
-                  <div style={{ fontWeight: 700 }}>No papers match this filter</div>
-                  <button onClick={() => { setPyqExamFilter('all'); setPyqTypeFilter('all'); }} style={{ color: 'var(--sc-navy-700)', fontWeight: 700, background: 'none', border: 'none', cursor: 'pointer', marginTop: '6px' }}>
-                    Reset Filters →
-                  </button>
-                </div>
-              ) : (
-                filteredPapers.map(paper => (
-                  <PyqCard key={paper.id} paper={paper} />
-                ))
-              )}
             </div>
           </div>
         )}
 
-        {/* ── TAB 4: OFFICIAL PORTALS DIRECTORY ── */}
+        {/* ── TAB 4: OFFICIAL PORTALS ── */}
         {activeTab === 'portals' && (
           <div>
-            <div style={{ marginBottom: '16px' }}>
-              <div style={{ fontSize: '0.72rem', fontWeight: 800, color: 'var(--sc-green-600)', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '2px' }}>
-                Zero Redirects · Verified .gov.in Gateways
+            <div style={{ marginBottom: '12px' }}>
+              <div style={{ fontSize: '0.86rem', fontWeight: 800, color: '#0f172a' }}>
+                Verified Official Government Portals (50)
               </div>
-              <h2 style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--sc-navy-900)' }}>
-                Official Government Recruitment Portals
-              </h2>
-              <p style={{ fontSize: '0.80rem', color: 'var(--sc-ink-600)', marginTop: '2px' }}>
-                1-tap direct access to official recruitment boards across India.
-              </p>
+              <div style={{ fontSize: '0.74rem', color: '#64748b' }}>
+                Direct access to official examination portals with zero third-party redirects.
+              </div>
             </div>
             <OfficialPortalsDirectory />
-          </div>
-        )}
-
-        {/* ── TAB 5: NORCET AUTHORITY HUB ── */}
-        {activeTab === 'norcet' && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-            <div
-              style={{
-                background: 'linear-gradient(135deg, var(--sc-navy-900) 0%, #0d2f5e 100%)',
-                borderRadius: '16px',
-                padding: '24px',
-                color: '#ffffff',
-              }}
-            >
-              <div style={{ fontSize: '0.70rem', fontWeight: 800, color: '#edb843', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '4px' }}>
-                Flagship National Examination
-              </div>
-              <h2 style={{ fontSize: '1.4rem', fontWeight: 800, lineHeight: 1.25, marginBottom: '8px' }}>
-                AIIMS NORCET 2026 Authority Hub
-              </h2>
-              <p style={{ fontSize: '0.84rem', color: '#cbd5e1', marginBottom: '18px' }}>
-                2,218 Nursing Officer Posts across AIIMS New Delhi & 20+ participating AIIMS. 7th CPC Pay Level 7.
-              </p>
-
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))', gap: '8px', marginBottom: '18px' }}>
-                {[
-                  { v: '2,218', l: 'Vacancies' },
-                  { v: '12 Sep 2026', l: 'Stage 1 CBT' },
-                  { v: '₹78k–₹85k', l: 'Gross / Month' },
-                  { v: '160 MCQs', l: 'Stage 2 Mains' },
-                ].map(c => (
-                  <div key={c.l} style={{ background: 'rgba(255,255,255,0.08)', borderRadius: '10px', padding: '10px 12px' }}>
-                    <div style={{ fontSize: '0.95rem', fontWeight: 800, color: '#ffffff' }}>{c.v}</div>
-                    <div style={{ fontSize: '0.68rem', color: '#94a3b8', marginTop: '2px' }}>{c.l}</div>
-                  </div>
-                ))}
-              </div>
-
-              <Link
-                href="/nursing/norcet"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '8px',
-                  background: '#edb843',
-                  color: '#002856',
-                  padding: '12px 18px',
-                  borderRadius: '10px',
-                  fontWeight: 800,
-                  fontSize: '0.88rem',
-                  textDecoration: 'none',
-                }}
-              >
-                <span>Open Full NORCET Blueprint</span>
-                <ArrowRight size={15} />
-              </Link>
-            </div>
-
-            {/* Key Jump Links */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-              {[
-                { href: '/nursing/norcet#eligibility', emoji: '✅', title: 'Eligibility Evaluator', desc: 'B.Sc. (0 exp) vs GNM (2 yr in 50-bed)' },
-                { href: '/nursing/norcet#syllabus', emoji: '📚', title: 'Subject Syllabus & Weightages', desc: 'MSN, OBG, Peds, Community, Pharmacology breakdown' },
-                { href: '/nursing/norcet#pattern', emoji: '🎯', title: 'Two-Tier Exam Pattern', desc: 'Stage 1 (100 MCQs) & Stage 2 (160 Clinical MCQs)' },
-                { href: 'https://www.aiimsexams.ac.in', emoji: '🏛️', title: 'Official AIIMS Exam Portal', desc: 'aiimsexams.ac.in — notices, admit cards, results' },
-              ].map(item => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  target={item.href.startsWith('http') ? '_blank' : undefined}
-                  rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  style={{ textDecoration: 'none' }}
-                >
-                  <div
-                    style={{
-                      background: '#ffffff',
-                      borderRadius: '12px',
-                      border: '1.5px solid #e2e8f0',
-                      padding: '14px 16px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '12px',
-                    }}
-                  >
-                    <span style={{ fontSize: '1.4rem' }}>{item.emoji}</span>
-                    <div style={{ flex: 1, minWidth: 0 }}>
-                      <div style={{ fontSize: '0.88rem', fontWeight: 800, color: 'var(--sc-navy-900)' }}>{item.title}</div>
-                      <div style={{ fontSize: '0.75rem', color: 'var(--sc-ink-600)', marginTop: '2px' }}>{item.desc}</div>
-                    </div>
-                    <ChevronRight size={16} color="var(--sc-ink-400)" />
-                  </div>
-                </Link>
-              ))}
-            </div>
           </div>
         )}
       </div>
