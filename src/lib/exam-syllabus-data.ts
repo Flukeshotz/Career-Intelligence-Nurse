@@ -859,6 +859,69 @@ export const DETAILED_EXAM_INTELLIGENCE: Record<string, DetailedExamInfo> = {
         answer: 'Yes, GNM candidates with 2 years clinical experience in a minimum 50-bedded hospital and active state council registration are eligible.'
       }
     ]
+  },
+
+  // ─── 12. UPUMS SAIFAI NURSING OFFICER CBT EXAM ─────────────────────────────
+  'exam-up-upums-nurse-2026': {
+    examId: 'exam-up-upums-nurse-2026',
+    officialCadre: 'Nursing Officer (Group B, UP State Cadre)',
+    payMatrixLevel: '7th CPC Pay Matrix Level 7',
+    basicPay: '₹44,900 – ₹1,42,400',
+    grossSalaryMonthly: '₹75,000 – ₹82,000 / month',
+    ageLimitDetails: '18 to 40 Years as on closing date',
+    ageRelaxations: 'SC/ST/OBC (UP Domicile): 5 Years | PwBD: 15 Years | Ex-Servicemen: 3 Years',
+    stages: [
+      {
+        stageName: 'Computer Based Test (CBT)',
+        totalQuestions: 200,
+        totalMarks: 600,
+        durationMinutes: 180,
+        mode: 'CBT (Online)',
+        negativeMarking: '1/3rd (1 mark out of 3) deducted per wrong answer',
+        qualifyingMarks: 'UR/EWS/OBC: 50% (300 Marks) | SC/ST: 45% (270 Marks)',
+        description: 'Single centralized 3-hour Computer Based Test consisting of 200 MCQs carrying 3 marks each (Total 600 Marks).',
+        sections: [
+          { name: 'Core Nursing Subjects (B.Sc./GNM Level)', questions: 170, marks: 510 },
+          { name: 'General English, GK, Reasoning & Math', questions: 30, marks: 90 }
+        ]
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Core Nursing Sciences (170 Questions / 510 Marks)',
+        weightagePercent: 85,
+        highYieldTopics: [
+          'Basic Sciences: Anatomy, Physiology, Microbiology, Biochemistry, Nutrition',
+          'Clinical Sciences: Medical-Surgical Nursing, Pharmacology, Community Health Nursing',
+          'Specialties: Midwifery & Gynaecological Nursing, Child Health / Pediatric Nursing, Mental Health Nursing',
+          'Professional Skills: Nursing Education, Research, Biostatistics & Administration'
+        ]
+      },
+      {
+        subject: 'General Knowledge, English & Aptitude (30 Questions / 90 Marks)',
+        weightagePercent: 15,
+        highYieldTopics: [
+          'General English: Grammar, vocabulary, active/passive voice, sentence completion',
+          'General Knowledge & Current Affairs: National events, health schemes, UP state overview',
+          'Reasoning & Basic Mathematics: Series, coding-decoding, percentage, ratio & proportion'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Focus heavily on the 170 core nursing questions carrying 510 marks.',
+      'Practice 3-hour full-length mocks to build stamina for 200 questions.'
+    ],
+    selectionSteps: [
+      'Step 1: 3-Hour Online CBT Examination (600 Marks)',
+      'Step 2: Merit Rank List & Normalization (if multi-shift)',
+      'Step 3: Document Verification at UPUMS Saifai Campus'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Can other state candidates apply for UPUMS Saifai Nursing Officer?',
+        answer: 'Yes, candidates from all Indian states can apply under the Unreserved (UR) category provided they have valid registration with INC or State Nursing Council.'
+      }
+    ]
   }
 };
 
