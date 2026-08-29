@@ -12,6 +12,7 @@ export interface QuestionItem {
   correctOption: 'A' | 'B' | 'C' | 'D';
   rationale: string;
   imageHint?: string;
+  imageUrl?: string;
 }
 
 export interface FullPaperData {

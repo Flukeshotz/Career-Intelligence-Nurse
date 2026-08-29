@@ -507,9 +507,49 @@ export function PaperViewerModal({ paper, isOpen, onClose, initialMode = 'study'
                       </span>
                     </div>
 
-                    <div style={{ fontSize: '0.90rem', fontWeight: 700, color: '#0f172a', lineHeight: 1.45, marginBottom: '12px' }}>
+                    <div style={{ fontSize: '0.90rem', fontWeight: 700, color: '#0f172a', lineHeight: 1.45, marginBottom: '10px' }}>
                       {q.question}
                     </div>
+
+                    {/* Question Reference Diagram with SkillCase Watermark */}
+                    {q.imageUrl && (
+                      <div
+                        style={{
+                          position: 'relative',
+                          margin: '8px 0 12px 0',
+                          borderRadius: '8px',
+                          overflow: 'hidden',
+                          border: '1px solid #e2e8f0',
+                          background: '#f8fafc',
+                          maxWidth: '440px',
+                        }}
+                      >
+                        <img
+                          src={q.imageUrl}
+                          alt={`Question ${q.qNo} reference diagram`}
+                          style={{ width: '100%', height: 'auto', display: 'block' }}
+                        />
+                        <div
+                          style={{
+                            position: 'absolute',
+                            bottom: '6px',
+                            right: '8px',
+                            background: 'rgba(8, 50, 98, 0.88)',
+                            color: '#ffffff',
+                            padding: '2px 8px',
+                            borderRadius: '4px',
+                            fontSize: '0.62rem',
+                            fontWeight: 800,
+                            letterSpacing: '0.04em',
+                            backdropFilter: 'blur(4px)',
+                            boxShadow: '0 2px 4px rgba(0,0,0,0.25)',
+                            pointerEvents: 'none',
+                          }}
+                        >
+                          SkillCase Official PYQ
+                        </div>
+                      </div>
+                    )}
 
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '10px' }}>
                       {q.options.map((opt) => {
@@ -689,9 +729,49 @@ export function PaperViewerModal({ paper, isOpen, onClose, initialMode = 'study'
                   </div>
 
                   {/* Question Text */}
-                  <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: '#0f172a', lineHeight: 1.45, marginBottom: '20px' }}>
+                  <h4 style={{ fontSize: '1.05rem', fontWeight: 700, color: '#0f172a', lineHeight: 1.45, marginBottom: '14px' }}>
                     Q{currentQuestion.qNo}. {currentQuestion.question}
                   </h4>
+
+                  {/* Question Reference Diagram with SkillCase Watermark */}
+                  {currentQuestion.imageUrl && (
+                    <div
+                      style={{
+                        position: 'relative',
+                        margin: '10px 0 16px 0',
+                        borderRadius: '10px',
+                        overflow: 'hidden',
+                        border: '1px solid #e2e8f0',
+                        background: '#f8fafc',
+                        maxWidth: '520px',
+                      }}
+                    >
+                      <img
+                        src={currentQuestion.imageUrl}
+                        alt={`Question ${currentQuestion.qNo} reference diagram`}
+                        style={{ width: '100%', height: 'auto', display: 'block' }}
+                      />
+                      <div
+                        style={{
+                          position: 'absolute',
+                          bottom: '8px',
+                          right: '10px',
+                          background: 'rgba(8, 50, 98, 0.90)',
+                          color: '#ffffff',
+                          padding: '3px 9px',
+                          borderRadius: '4px',
+                          fontSize: '0.66rem',
+                          fontWeight: 800,
+                          letterSpacing: '0.04em',
+                          backdropFilter: 'blur(4px)',
+                          boxShadow: '0 2px 5px rgba(0,0,0,0.25)',
+                          pointerEvents: 'none',
+                        }}
+                      >
+                        SkillCase Official CBT Exam
+                      </div>
+                    </div>
+                  )}
 
                   {/* 4 Interactive Options */}
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '20px' }}>
