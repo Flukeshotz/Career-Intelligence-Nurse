@@ -100,52 +100,57 @@ export function PyqCard({ paper }: { paper: ExamPaper }) {
           </span>
         </div>
 
-        {/* Row 4: Actions */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '4px', paddingTop: '8px', borderTop: '1px solid #f1f5f9' }}>
+        {/* Row 4: Actions (Pixel-Perfect Symmetrical Grid) */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginTop: '6px', paddingTop: '10px', borderTop: '1px solid #f1f5f9' }}>
           <button
             type="button"
             onClick={() => setIsViewerOpen(true)}
             style={{
-              flex: 1,
+              height: '38px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               gap: '6px',
-              background: 'var(--sc-navy-700)',
+              background: 'var(--sc-navy-900)',
               color: '#ffffff',
-              padding: '8px 12px',
+              padding: '0 12px',
               borderRadius: '8px',
               fontWeight: 700,
               fontSize: '0.78rem',
               border: 'none',
               cursor: 'pointer',
+              whiteSpace: 'nowrap',
               boxShadow: '0 1px 3px rgba(8, 50, 98, 0.15)',
+              transition: 'background 0.12s ease',
             }}
           >
-            <Download size={13} />
-            <span>Download Paper &amp; Key (PDF)</span>
+            <Eye size={14} />
+            <span>Practice &amp; View</span>
           </button>
 
           <button
             type="button"
             onClick={() => setIsViewerOpen(true)}
             style={{
+              height: '38px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: '4px',
-              padding: '7px 10px',
-              borderRadius: '8px',
-              border: '1px solid #cbd5e1',
-              background: '#ffffff',
+              gap: '6px',
+              background: '#f8fafc',
               color: '#334155',
+              padding: '0 12px',
+              borderRadius: '8px',
               fontWeight: 700,
-              fontSize: '0.76rem',
+              fontSize: '0.78rem',
+              border: '1px solid #cbd5e1',
               cursor: 'pointer',
+              whiteSpace: 'nowrap',
+              transition: 'all 0.12s ease',
             }}
           >
-            <Eye size={13} />
-            <span>View In-App</span>
+            <Download size={14} />
+            <span>Download PDF</span>
           </button>
         </div>
       </div>
