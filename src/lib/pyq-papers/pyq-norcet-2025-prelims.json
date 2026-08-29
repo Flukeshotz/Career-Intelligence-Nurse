@@ -1,0 +1,2364 @@
+{
+  "paperId": "pyq-norcet-2025-prelims",
+  "title": "AIIMS NORCET 6 (2024) Official Question Paper & Key",
+  "examName": "AIIMS NORCET",
+  "year": 2024,
+  "shift": "Stage 1 Prelims (12 Apr 2024 / NORCET 6)",
+  "totalMarks": 93,
+  "negativeMarking": "0.33 (1/3rd deduction per incorrect MCQ)",
+  "durationMinutes": 90,
+  "officialKeyNotification": "AIIMS New Delhi Official Master Response Key (2024)",
+  "subjectsSummary": [
+    {
+      "name": "Med-Surg & Critical Care",
+      "count": 35
+    },
+    {
+      "name": "Obstetrics (OBG)",
+      "count": 15
+    },
+    {
+      "name": "Child Health (Pediatrics)",
+      "count": 15
+    },
+    {
+      "name": "Fundamentals & Procedures",
+      "count": 15
+    },
+    {
+      "name": "Pharmacology & Dosage",
+      "count": 10
+    },
+    {
+      "name": "General Aptitude & Reasoning",
+      "count": 10
+    }
+  ],
+  "questions": [
+    {
+      "qNo": 1,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which of these increases absorption of iron except: Generate HTML Link",
+      "options": [
+        {
+          "key": "A",
+          "text": "Aamla"
+        },
+        {
+          "key": "B",
+          "text": "Citrus Fruit"
+        },
+        {
+          "key": "C",
+          "text": "Sprouts"
+        },
+        {
+          "key": "D",
+          "text": "Curd Test Title / ID 640474 Exam Category Exam Select Exam Category"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Created From Date"
+    },
+    {
+      "qNo": 3,
+      "subject": "General Aptitude & Reasoning",
+      "question": "Identify the image:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Harmonic Synergy"
+        },
+        {
+          "key": "B",
+          "text": "Harmonic Scalpel"
+        },
+        {
+          "key": "C",
+          "text": "Defibrillator"
+        },
+        {
+          "key": "D",
+          "text": "Medical Handpiece"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Harmonic Synergy: While Harmonic Synergy is part of the Harmonic device system, it refers to a specific product line and not the scalpel itself. Harmonic Scalpel: The Harmonic Scalpel is a surgical instrument that uses ultrasonic vibrations to cut and coagulate tissue simultaneously. It is widely used in minimally invasive and open surgeries. Defibrillator: A defibrillator is used for cardiac resuscitation by delivering electrical shocks, and its design is entirely different from the device shown. Medical Handpiece: A medical handpiece is a component of various medical devices but does not match the image of the device."
+    },
+    {
+      "qNo": 4,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "Identify the image:",
+      "options": [
+        {
+          "key": "A",
+          "text": "T tube"
+        },
+        {
+          "key": "B",
+          "text": "Irrigation cannula"
+        },
+        {
+          "key": "C",
+          "text": "Foley catheter"
+        },
+        {
+          "key": "D",
+          "text": "Stomach tube"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "T tube: A T tube is a drainage tube used in surgeries like bile duct procedures, but it does not match the design of the image. Irrigation cannula: This is used for flushing or irrigation in surgical or medical procedures and does not resemble the shown device. Copyright © 2026 Adda247 POINTS 0 START TIME T Foley catheter: The Foley catheter is a flexible urinary catheter with an inflatable balloon at one end to hold it in place within the bladder. It is used for urinary drainage. Stomach tube: A stomach tube is used for gastric intubation but has a different design compared to the Foley catheter."
+    },
+    {
+      "qNo": 5,
+      "subject": "Medical-Surgical Nursing",
+      "question": "The instrument given in the picture is used in:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Laryngectomy"
+        },
+        {
+          "key": "B",
+          "text": "Thoracotomy"
+        },
+        {
+          "key": "C",
+          "text": "Cesarean section"
+        },
+        {
+          "key": "D",
+          "text": "Thyroidectomy"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Laryngectomy: This procedure involves the removal of the larynx and typically does not use this specific instrument. Thoracotomy: Thoracotomy, which involves opening the chest cavity, requires different retractors and instruments than the one shown. Cesarean section: While retractors are used in cesarean sections, the instrument shown is not specific to this procedure. Thyroidectomy: The instrument shown is a thyroid retractor, commonly used in thyroidectomy surgeries to provide better exposure of the thyroid gland and surrounding structures."
+    },
+    {
+      "qNo": 6,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "The criteria for low birth weight baby:",
+      "options": [
+        {
+          "key": "A",
+          "text": "2.5 kg"
+        },
+        {
+          "key": "B",
+          "text": "3 kg"
+        },
+        {
+          "key": "C",
+          "text": "1.5 kg"
+        },
+        {
+          "key": "D",
+          "text": "1 kg"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "2.5 kg: According to WHO guidelines, a low birth weight baby is defined as one weighing less than 2.5 kg (2500 grams) at birth, irrespective of gestational age. 3 kg: This weight is within the normal range for a newborn and does not indicate low birth weight. 1.5 kg: Babies weighing less than 1.5 kg are categorized as very low birth weight (VLBW) rather than low birth weight. 1 kg: Babies weighing less than 1 kg are categorized as extremely low birth weight (ELBW) rather than low birth weight."
+    },
+    {
+      "qNo": 7,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "Copper T 380 is effective for how many years as a contraceptive?",
+      "options": [
+        {
+          "key": "A",
+          "text": "3 years"
+        },
+        {
+          "key": "B",
+          "text": "5 years"
+        },
+        {
+          "key": "C",
+          "text": "10 years"
+        },
+        {
+          "key": "D",
+          "text": "7 years"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "3 years: Some hormonal contraceptives, such as implants like Nexplanon, are effective for around 3 years. However, this does not apply to Copper T 380, which is a non-hormonal IUD. 5 years: Hormonal intrauterine devices (IUDs), such as Mirena, are effective for up to 5 years. Copper T 380, being a non-hormonal device, has a much longer duration of effectiveness. 10 years: Copper T 380 is a long-acting, non-hormonal IUD that provides effective contraception for up to 10 years. It works by releasing small amounts of copper into the uterus, which prevents sperm from fertilizing an egg. 7 years: There is no contraceptive IUD, including Copper T 380, specifically designed to be effective for 7 years. This duration does not apply to any major contraceptive devices currently in use."
+    },
+    {
+      "qNo": 8,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "Identify the blade size:",
+      "options": [
+        {
+          "key": "A",
+          "text": "22"
+        },
+        {
+          "key": "B",
+          "text": "23"
+        },
+        {
+          "key": "C",
+          "text": "24"
+        },
+        {
+          "key": "D",
+          "text": "25"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "22: Blade 22 has a broader shape with a curved edge and is commonly used in general surgery, but it does not match the image shown. 23: Blade 23 has a scalpel-like curved shape and is often used in surgical procedures requiring precision cuts. The image matches the design of blade size 23. 24: Blade 24 is larger and wider than the blade shown in the image, typically used for heavy-duty surgical applications. 25: Blade 25 is smaller and more pointed, which does not match the design of the blade shown. Copyright © 2026 Adda247 Q.9 The following instrument is used to detect FHS. Name the instrument: A. Outlet forceps B. Sims speculum C. Fetoscope D. Tenaculum forceps Answer: C Sol: Outlet forceps: These are used during delivery to assist in the extraction of the baby and are unrelated to fetal heart sound (FHS) detection. Sims speculum: This instrument is used in gynecological examinations to visualize the cervix and vagina, not for detecting FHS. Fetoscope: The instrument shown is a fetoscope, a device specifically designed to detect fetal heart sounds (FHS). It amplifies the heartbeat of the fetus and is commonly used during pregnancy checkups. Tenaculum forceps: These are used to hold and manipulate tissues during gynecological surgeries and have no role in FHS detection."
+    },
+    {
+      "qNo": 10,
+      "subject": "Mental Health & Psychiatric Nursing",
+      "question": "Multiple sclerosis is characterized by:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Progressive demyelination in the CNS"
+        },
+        {
+          "key": "B",
+          "text": "Impaired cerebral circulation"
+        },
+        {
+          "key": "C",
+          "text": "Deficiency of the neurotransmitter dopamine and serotonin"
+        },
+        {
+          "key": "D",
+          "text": "Deterioration of the spinal column"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Progressive demyelination in the CNS: Multiple sclerosis is a chronic autoimmune disease characterized by progressive demyelination of nerve fibers in the central nervous system (CNS), disrupting nerve signal transmission. Impaired cerebral circulation: This is seen in conditions like stroke, not in multiple sclerosis. Deficiency of the neurotransmitter dopamine and serotonin: This is associated with neurological disorders like Parkinson's disease or depression, not multiple sclerosis. Deterioration of the spinal column: While multiple sclerosis may affect the spinal cord, the primary pathology is demyelination, not structural deterioration."
+    },
+    {
+      "qNo": 11,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Myasthenia gravis is characterized by:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Systemic infection"
+        },
+        {
+          "key": "B",
+          "text": "Shock"
+        },
+        {
+          "key": "C",
+          "text": "Descending weakness"
+        },
+        {
+          "key": "D",
+          "text": "Ascending weakness"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Ans. (c) Sol. Myasthenia gravis is a chronic autoimmune neuromuscular disorder characterized by descending muscle weakness. The weakness typically begins with the ocular muscles (eyelids and eye movements), then progresses to the facial, bulbar (throat), and limb muscles, affecting muscles higher in the body first and moving downward. It results from autoantibodies targeting acetylcholine receptors at the neuromuscular junction. Explanation of each option: (a) Systemic infection – Incorrect. While infections can worsen symptoms of myasthenia gravis, they are not a defining feature of the disease itself. (b) Shock – Incorrect. Shock is not part of the typical clinical picture of myasthenia gravis and is not directly related to its pathophysiology. (c) Descending weakness – Correct answer. This pattern of weakness is characteristic of myasthenia gravis, starting from muscles of the eyes and face and moving downward. (d) Ascending weakness – Incorrect. Ascending weakness is typically seen in conditions like Guillain-Barré syndrome, not myasthenia gravis."
+    },
+    {
+      "qNo": 12,
+      "subject": "Mental Health & Psychiatric Nursing",
+      "question": "The person states that he is sent by a higher deity (God), he will help us all and guide us to the way to God:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Delusion of grandiosity"
+        },
+        {
+          "key": "B",
+          "text": "Delusion of reference"
+        },
+        {
+          "key": "C",
+          "text": "Delusion of persecution"
+        },
+        {
+          "key": "D",
+          "text": "Delusion of infidelity"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Delusion of grandiosity: This delusion involves an exaggerated belief in one's importance, power, or special mission, such as believing they are sent by God. Delusion of reference: This involves interpreting everyday events or remarks as being directed specifically at oneself, unrelated to the scenario described. Delusion of persecution: This involves a belief that one is being harassed or targeted by others, which does not match the statement given. Delusion of infidelity: This involves irrational suspicion that one's partner is unfaithful, irrelevant to the scenario described."
+    },
+    {
+      "qNo": 13,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Copyright © 2026 Adda247 Deficiency of which vitamin causes defective bone mineralization disorder called rickets?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Vitamin A"
+        },
+        {
+          "key": "B",
+          "text": "Vitamin E"
+        },
+        {
+          "key": "C",
+          "text": "Vitamin B"
+        },
+        {
+          "key": "D",
+          "text": "Vitamin D"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Vitamin A: Deficiency of vitamin A leads to issues like night blindness and xerophthalmia but does not cause rickets. Vitamin E: Deficiency of vitamin E primarily affects the nervous system, causing symptoms like neuropathy, not bone disorders. Vitamin B: Vitamin B deficiency causes conditions like beriberi or anemia, not defective bone mineralization. Vitamin D: Vitamin D deficiency leads to poor calcium and phosphate absorption, resulting in defective bone mineralization and disorders like rickets in children."
+    },
+    {
+      "qNo": 14,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Wernicke's encephalopathy is caused by the deficiency of:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Thiamine"
+        },
+        {
+          "key": "B",
+          "text": "Riboflavin"
+        },
+        {
+          "key": "C",
+          "text": "Vitamin D"
+        },
+        {
+          "key": "D",
+          "text": "Vitamin A"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Thiamine: Wernicke's encephalopathy is caused by a deficiency of thiamine (Vitamin B1), often associated with chronic alcoholism or malnutrition. It leads to confusion, ataxia, and ophthalmoplegia. Riboflavin: Deficiency of riboflavin (Vitamin B2) causes ariboflavinosis, leading to symptoms like sore throat and cracked lips, not Wernicke's encephalopathy. Vitamin D: Vitamin D deficiency results in bone disorders like rickets and osteomalacia, unrelated to neurological conditions like Wernicke's encephalopathy. Vitamin A: Vitamin A deficiency causes vision-related issues such as night blindness, not Wernicke's encephalopathy."
+    },
+    {
+      "qNo": 15,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which vitamin deficiency may cause night blindness?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Vitamin K"
+        },
+        {
+          "key": "B",
+          "text": "Vitamin E"
+        },
+        {
+          "key": "C",
+          "text": "Vitamin C"
+        },
+        {
+          "key": "D",
+          "text": "Vitamin A"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Vitamin K: Deficiency of vitamin K leads to clotting issues, such as bleeding disorders, not night blindness. Vitamin E: Deficiency of vitamin E primarily affects the nervous system and does not cause night blindness. Vitamin C: Vitamin C deficiency causes scurvy, leading to symptoms like bleeding gums and bruising, but not vision problems. Vitamin A: Vitamin A deficiency impairs the production of rhodopsin, a photopigment in the retina, leading to night blindness."
+    },
+    {
+      "qNo": 16,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "Which one of the following anti-tuberculosis drugs cannot be given during pregnancy?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Rifampicin"
+        },
+        {
+          "key": "B",
+          "text": "Ethambutol"
+        },
+        {
+          "key": "C",
+          "text": "Streptomycin"
+        },
+        {
+          "key": "D",
+          "text": "Isoniazid"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Rifampicin: Rifampicin is generally considered safe during pregnancy and is included in standard treatment regimens for tuberculosis. Ethambutol: Ethambutol is also considered safe for use during pregnancy and is a commonly prescribed anti-TB drug. Streptomycin (Correct Option): Streptomycin is contraindicated during pregnancy because it is an aminoglycoside that can cause ototoxicity (hearing loss) in the fetus. Isoniazid: Isoniazid is safe for use during pregnancy, often prescribed with pyridoxine to prevent peripheral neuropathy."
+    },
+    {
+      "qNo": 17,
+      "subject": "General Aptitude & Reasoning",
+      "question": "Clinical manifestations of dehydration include all of the following, EXCEPT:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Dry mouth, eye, and lips"
+        },
+        {
+          "key": "B",
+          "text": "Headache and lightheadedness"
+        },
+        {
+          "key": "C",
+          "text": "Small amounts of dark urine"
+        },
+        {
+          "key": "D",
+          "text": "Dry and brittle nails"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Dry mouth, eye, and lips: These are common signs of dehydration as the body lacks sufficient fluids to maintain moisture in mucous membranes. Headache and lightheadedness: Dehydration can cause a decrease in blood volume and pressure, leading to headache and dizziness. Small amounts of dark urine: Dehydration results in reduced urine output and concentrated, dark-colored urine due to the kidneys conserving water. Dry and brittle nails: Dry and brittle nails are not a typical manifestation of dehydration. These are more commonly associated with nutritional deficiencies or chronic conditions, not acute dehydration."
+    },
+    {
+      "qNo": 18,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Facial features of Addison's disease include:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Moonlike face"
+        },
+        {
+          "key": "B",
+          "text": "Skin hyperpigmentation"
+        },
+        {
+          "key": "C",
+          "text": "Swollen face"
+        },
+        {
+          "key": "D",
+          "text": "Puppy face"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Moonlike face: This is a feature of Cushing's syndrome, not Addison's disease. Skin hyperpigmentation: Addison's disease is associated with increased levels of adrenocorticotropic hormone (ACTH), leading to hyperpigmentation of the skin, particularly in areas exposed to friction. Swollen face: Swelling of the face is not characteristic of Addison's disease but may occur in other conditions like nephrotic syndrome. Puppy face: This term is not related to Addison's disease or any medical condition."
+    },
+    {
+      "qNo": 19,
+      "subject": "Medical-Surgical Nursing",
+      "question": "A patient with anorexia nervosa is taking food correctly as per their diet plan, butCopyright there is no in weight observed. What will be the nursing intervention for the above patient? © increase 2026 Adda247",
+      "options": [
+        {
+          "key": "A",
+          "text": "Observe the patient while taking the meal and after up to 2 hours"
+        },
+        {
+          "key": "B",
+          "text": "Increase the calorie intake of food from 1500 to 2000"
+        },
+        {
+          "key": "C",
+          "text": "Add vitamin tablets to her medications"
+        },
+        {
+          "key": "D",
+          "text": "None of the above"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Observe the patient while taking the meal and after up to 2 hours: This helps identify behaviors like purging or excessive physical activity that may hinder weight gain. Increase the calorie intake of food from 1500 to 2000: While increasing calories is essential, monitoring eating behavior is critical to ensure compliance with the diet. Add vitamin tablets to her medications: Vitamin supplementation is beneficial but does not address the underlying issue of weight gain. None of the above: This is not correct answer."
+    },
+    {
+      "qNo": 20,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "The obstetrical assessment reveals: This is her third pregnancy Her first child was delivered at 38 weeks Her second child was delivered at 34 weeks Calculate the GTPAL Score:",
+      "options": [
+        {
+          "key": "A",
+          "text": "31101"
+        },
+        {
+          "key": "B",
+          "text": "31102"
+        },
+        {
+          "key": "C",
+          "text": "31111"
+        },
+        {
+          "key": "D",
+          "text": "32111"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "G (Gravida): Total number of pregnancies, including the current one. Here, it is the third pregnancy, so G = 3. T (Term): Number of pregnancies delivered at or beyond 37 weeks. Her first child was delivered at 38 weeks, so T = 1. P (Preterm): Number of pregnancies delivered between 20 and 36 weeks. Her second child was delivered at 34 weeks, so P = 1. A (Abortions): Number of pregnancies that ended before 20 weeks. No mention of abortions, so A = 0. L (Living): Number of currently living children. She has two living children, so L = 2. Final GTPAL score = 31102"
+    },
+    {
+      "qNo": 21,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "A standardized test of gross and fine motor skills for adults:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Glasgow Coma Scale"
+        },
+        {
+          "key": "B",
+          "text": "Pain Assessment Scale"
+        },
+        {
+          "key": "C",
+          "text": "Denver Developmental Screening Test"
+        },
+        {
+          "key": "D",
+          "text": "Bruininks Oseretsky Test"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Glasgow Coma Scale: Used to assess the level of consciousness in patients with brain injuries, not motor skills Pain Assessment Scale: Focuses on evaluating pain intensity, not motor skills Denver Developmental Screening Test: Designed to evaluate developmental milestones in children, not adults Bruininks Oseretsky Test: A standardized tool to assess gross and fine motor skills, applicable to children and adults"
+    },
+    {
+      "qNo": 22,
+      "subject": "General Aptitude & Reasoning",
+      "question": "At what time is the insulin peak efficacy if the nurse administered insulin at 9 am?",
+      "options": [
+        {
+          "key": "A",
+          "text": "9:15 am"
+        },
+        {
+          "key": "B",
+          "text": "10:00 am"
+        },
+        {
+          "key": "C",
+          "text": "10:30 am"
+        },
+        {
+          "key": "D",
+          "text": "12:00 pm"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "9:15 am: This is only 15 minutes after administration, which is too soon for the peak effect of short-acting insulin to occur. 10:00 am: At 10:00 am, it has been 1 hour since administration, but short-acting insulin typically peaks 2–4 hours post-administration, so this is still too early. 10:30 am: While closer to the expected peak time, 10:30 am is still on the early side for short-acting insulin to exhibit peak efficacy. 12:00 pm: Short-acting insulin peaks between 2–4 hours after administration. If given at 9:00 am, its peak efficacy occurs around 12:00 pm."
+    },
+    {
+      "qNo": 23,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Infiltration cool and elevated portion at fluid state:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Transudate"
+        },
+        {
+          "key": "B",
+          "text": "Inflammation"
+        },
+        {
+          "key": "C",
+          "text": "Edema"
+        },
+        {
+          "key": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Transudate: Transudate is fluid with low protein content that accumulates due to non-inflammatory conditions like heart failure or hypoalbuminemia. It does not typically present as cool and elevated swelling. Inflammation: Inflammation is characterized by redness, warmth, swelling, and pain due to increased blood flow and immune response, not the cool and elevated nature described. Edema: Edema is the correct answer. It involves fluid accumulation in tissues, often appearing as a cool, elevated swelling in non-inflammatory conditions. Both A and B: Transudate and inflammation have distinct characteristics, and their combination does not describe the cool, elevated infiltration mentioned in the question. Q.24 A nurse is taking care of the patient with fluid electrolyte imbalance. She notices that there is redness around the IV cannula; after touching, she found tenderness and a decrease in IV flow. What is the correct interpretation of the following condition and the action? A. The finding is normal after cannulation, continue the IV flow B. The finding is abnormal, there is sepsis, stop the IV flow and remove cannula C. The finding is abnormal, there is phlebitis, stop the IV flow and remove cannula D. The finding is abnormal, wait for the physician to provide the order Answer: C Sol: The finding is normal after cannulation, continue the IV flow: Redness and tenderness are not normal signs after cannulation. The finding is abnormal, there is sepsis, stop the IV flow and remove cannula: Sepsis involves systemic infection and cannot be confirmed with localized symptoms. The finding is abnormal, there is phlebitis, stop the IV flow and remove cannula: Phlebitis is characterized by redness, tenderness, and reduced IV flow, making this the correct interpretation. The finding is abnormal, wait for the physician to provide the order: Immediate action is required to prevent complications, so waiting for the physician is inappropriate. Copyright © 2026 Adda247 Q.25 What is the correct compression-to-ventilation ratio for infant CPR performed by a single rescuer? A. 3:1 B. 3:2 C. 2:2 D. 30:2 Answer: D Sol: According to the AHA 2020 Guidelines, the correct compression-to-ventilation ratio for infant CPR by a single rescuer is 30 compressions to 2 breaths (30:2). This is the same ratio used for adults and children when only one rescuer is available. The 3:1 ratio applies only to neonatal resuscitation (newborns immediately after birth), not to routine infant CPR. The primary focus is to maintain effective circulation while minimizing interruptions in compressions. Explanation of Each Option: (a) 3:1 – This is used only in neonatal resuscitation, not for standard infant CPR. (b) 3:2 – Not a recommended ratio in any AHA guideline for any age group. (c) 2:2 – Also not a valid or standard ratio in infant or adult CPR. (d) 30:2 – Correct compression-to-ventilation ratio for a single rescuer performing infant CPR."
+    },
+    {
+      "qNo": 26,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "are true about febrile seizure in children except:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Administer PCM as a part of management of febrile seizure"
+        },
+        {
+          "key": "B",
+          "text": "Risk of injury"
+        },
+        {
+          "key": "C",
+          "text": "Cerebral hypoxia is evident"
+        },
+        {
+          "key": "D",
+          "text": "Young age is not a major risk factor"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Administer PCM as a part of management of febrile seizure: Paracetamol (PCM) is administered to control fever, which can help manage febrile seizures. Risk of injury: During a seizure, there is a risk of physical injury due to convulsions. Cerebral hypoxia is evident: In prolonged seizures, there is a potential risk of reduced oxygen supply (cerebral hypoxia) to the brain. Young age is not a major risk factor: Young age, particularly 6 months to 5 years, is one of the major risk factors for febrile seizures. This is why this statement is not true."
+    },
+    {
+      "qNo": 27,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "Identify the given image below:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tenia corporis"
+        },
+        {
+          "key": "B",
+          "text": "Bed sore"
+        },
+        {
+          "key": "C",
+          "text": "Steam burn"
+        },
+        {
+          "key": "D",
+          "text": "Flame burn"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Tenia corporis: A fungal infection (ringworm) characterized by a red, scaly, and ring-like rash, as depicted in the image. This is the correct option. Bed sore: Caused by prolonged pressure on the skin, typically seen in bedridden patients, and does not resemble the lesion in the image. Steam burn: Associated with contact with steam, leading to redness and blistering, which is not evident in the image. Flame burn: Results from exposure to flames, causing charred or deep burns, not consistent with the shown image."
+    },
+    {
+      "qNo": 28,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "A patient on assessment has been found to have hypokalemia. The nurse is assigned to administer which of the following intervention is not done?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Intake-output chart monitoring"
+        },
+        {
+          "key": "B",
+          "text": "Potassium IV solutions should be administered only in well-hydrated patients"
+        },
+        {
+          "key": "C",
+          "text": "Fast intravenous infusion"
+        },
+        {
+          "key": "D",
+          "text": "Potassium infusion administration should be through a large, high-flow vein"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Intake-output chart monitoring: Necessary for monitoring fluid balance and electrolytes in hypokalemia. Potassium IV solutions should be administered only in well-hydrated patients: Ensures safe potassium administration to avoid complications. Fast intravenous infusion: Contraindicated as rapid infusion of potassium can lead to cardiac arrhythmias and is unsafe. Potassium infusion administration should be through a large, high-flow vein: Prevents irritation and ensures proper administration of potassium."
+    },
+    {
+      "qNo": 29,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "A patient has fallen from the rooftop. Spinal injury is suspected. The emergency intervention in such cases includes?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Jaw thrust"
+        },
+        {
+          "key": "B",
+          "text": "Head tilt chin lift"
+        },
+        {
+          "key": "C",
+          "text": "Both A and B"
+        },
+        {
+          "key": "D",
+          "text": "CPR"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Jaw thrust: The jaw thrust maneuver is the preferred method to open the airway in a patient with suspected spinal injuries, as it avoids movement of the cervical spine. Head tilt chin lift: This method is contraindicated in cases of spinal injury because tilting the head can worsen a cervical spine injury. Both A and B: This is incorrect because only the jaw thrust maneuver is safe for maintaining airway patency in patients with suspected spinal injuries. CPR: While CPR is critical for patients without a pulse or breathing, it is not a specific intervention for maintaining the airway in spinal injury cases. Copyright © 2026 Adda247 Q.30 A patient is undergoing blood transfusion and suddenly shows complaints of a transfusion reaction. What will be the priority nursing intervention? A. Stop the infusion and remove the cannula B. Stop the infusion C. Complete the transfusion and administer injection Avil D. None of the above Answer: B Sol: Stop the infusion: The first step in managing a suspected transfusion reaction to prevent further complications. Stop the infusion and remove the cannula: Removal of the cannula is not an immediate priority unless there are severe reactions involving the site. Complete the transfusion and administer injection Avil: Completing the transfusion is dangerous during a reaction. None of the above: This is not correct answer."
+    },
+    {
+      "qNo": 31,
+      "subject": "General Aptitude & Reasoning",
+      "question": "In burn patients, isotonic fluid is given to prevent the risk of:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Renal failure"
+        },
+        {
+          "key": "B",
+          "text": "Inadequate lung perfusion"
+        },
+        {
+          "key": "C",
+          "text": "Hypovolemia"
+        },
+        {
+          "key": "D",
+          "text": "Electrolyte imbalance"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Renal failure: Isotonic fluid prevents hypovolemia, which could indirectly prevent renal failure, but this is not the primary purpose. Inadequate lung perfusion: This is not directly addressed by isotonic fluid administration in burn patients. Hypovolemia: The primary purpose of isotonic fluid is to maintain intravascular volume and prevent hypovolemia due to fluid loss in burns. Electrolyte imbalance: Although isotonic fluids may help stabilize electrolytes, this is not their primary role in burn management."
+    },
+    {
+      "qNo": 32,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Endotracheal tube formula for uncuffed child:",
+      "options": [
+        {
+          "key": "A",
+          "text": "(age in years/3.5) + 4"
+        },
+        {
+          "key": "B",
+          "text": "(age in years/4) + 4"
+        },
+        {
+          "key": "C",
+          "text": "(age in years/4) + 3.5"
+        },
+        {
+          "key": "D",
+          "text": "(age in years/3.5) + 3.5"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "(age in years/3.5) + 4: This is not a standard formula for uncuffed tubes. (age in years/4) + 4: This is the standard formula for determining the size of an uncuffed endotracheal tube in children. (age in years/4) + 3.5: This formula applies to cuffed tubes, not uncuffed tubes. (age in years/3.5) + 3.5: Incorrect and not commonly used in clinical practice."
+    },
+    {
+      "qNo": 33,
+      "subject": "Mental Health & Psychiatric Nursing",
+      "question": "Myocardial stress test provides the following findings in ECG:",
+      "options": [
+        {
+          "key": "A",
+          "text": "ST segment changes"
+        },
+        {
+          "key": "B",
+          "text": "QRS complex changes"
+        },
+        {
+          "key": "C",
+          "text": "P wave depression"
+        },
+        {
+          "key": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "ST segment changes: A common finding during myocardial stress tests, indicating ischemia or strain. QRS complex changes: Can occur during stress tests, such as widened QRS or bundle branch block patterns. P wave depression: This is not a common finding during stress testing and is unrelated to ischemia. Both A and B: Combines the typical findings of ischemia and conduction abnormalities observed during stress testing."
+    },
+    {
+      "qNo": 34,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which of the following food should be avoided when the patient is on MAOI?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Calcium-rich food"
+        },
+        {
+          "key": "B",
+          "text": "Tyramine-containing food"
+        },
+        {
+          "key": "C",
+          "text": "Gluten-rich food"
+        },
+        {
+          "key": "D",
+          "text": "Alanine-containing food"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Calcium-rich food: Safe to consume while on MAOIs and does not interact with the medication. Tyramine-containing food: Can lead to hypertensive crises due to MAOI inhibition of tyramine metabolism. Foods like aged cheese, fermented products, and certain cured meats should be avoided. Gluten-rich food: Does not interfere with MAOIs and is safe unless the patient has gluten intolerance. Alanine-containing food: Not associated with MAOI interactions and is safe to consume."
+    },
+    {
+      "qNo": 35,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "The doctor prescribes a patient to take inhaled beclomethasone and inhaled albuterol for the treatment of asthma. As a nurse, how will you teach the patient to take medications properly?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Beclomethasone first, 5 minutes later Albuterol"
+        },
+        {
+          "key": "B",
+          "text": "Albuterol first, 1 minute later Beclomethasone"
+        },
+        {
+          "key": "C",
+          "text": "Beclomethasone first, 1 minute later Albuterol"
+        },
+        {
+          "key": "D",
+          "text": "Albuterol first, 5 minutes later Beclomethasone"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Beclomethasone first, 5 minutes later Albuterol: Incorrect as beclomethasone, a corticosteroid, should be used after the airway has been opened. Albuterol first, 1 minute later Beclomethasone: Albuterol opens airways, but sufficient time (5 minutes) is needed for full effect before using beclomethasone. Beclomethasone first, 1 minute later Albuterol: This order is incorrect as airway dilation should be prioritized. Albuterol first, 5 minutes later Beclomethasone: Albuterol, a bronchodilator, is given first to open the airways, allowing beclomethasone to penetrate deeper into the lungs effectively. Copyright © 2026 Adda247 Q.36 A nurse has just performed an NG tube insertion procedure. The most accurate method for confirming the NG tube placement is: A. X-ray B. Auscultation C. Observing the patient for coughing, aspiration of content, and pH monitoring D. Dip in a bowl of water Answer: A Sol: X-ray: The gold standard for confirming NG tube placement, ensuring accurate positioning in the stomach and avoiding complications. Auscultation: Involves listening for air sounds in the stomach but is less reliable and not a definitive method. Observing the patient for coughing, aspiration of content, and pH monitoring: While helpful as initial checks, these are not definitive methods for confirming placement. Dip in a bowl of water: Not a recognized or effective method for confirming NG tube placement."
+    },
+    {
+      "qNo": 37,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Calculate the total back and one arm burn percentage:",
+      "options": [
+        {
+          "key": "A",
+          "text": "18 percent"
+        },
+        {
+          "key": "B",
+          "text": "9 percent"
+        },
+        {
+          "key": "C",
+          "text": "27 percent"
+        },
+        {
+          "key": "D",
+          "text": "36 percent"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "18 percent: Incorrect, as this represents the total burn area for the back alone. 9 percent: Represents the total burn area for one arm only, not combined with the back. 27 percent: According to the Rule of Nines, the back accounts for 18% and one arm accounts for 9%, totaling 27%. 36 percent: This is higher than the combined burn area of the back and one arm."
+    },
+    {
+      "qNo": 38,
+      "subject": "General Aptitude & Reasoning",
+      "question": "During peritonitis perforation laparotomy surgery, a central line is administered. What is the most important significance of the central line administration here?",
+      "options": [
+        {
+          "key": "A",
+          "text": "CVP Measurement"
+        },
+        {
+          "key": "B",
+          "text": "Spo2 Measurement"
+        },
+        {
+          "key": "C",
+          "text": "ABG Analysis"
+        },
+        {
+          "key": "D",
+          "text": "Fluid Administration"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "CVP Measurement: Monitoring Central Venous Pressure (CVP) helps assess fluid status and prevent fluid overload during critical surgeries like peritonitis laparotomy. Spo2 Measurement: Measures oxygen saturation and is unrelated to central line use. ABG Analysis: Typically done via arterial blood samples, not through a central line. Fluid Administration: While a central line facilitates fluid administration, the primary purpose here is CVP measurement for fluid balance monitoring."
+    },
+    {
+      "qNo": 39,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Black lung disease is caused by:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Coal dust"
+        },
+        {
+          "key": "B",
+          "text": "Cotton dust"
+        },
+        {
+          "key": "C",
+          "text": "Sugarcane dust"
+        },
+        {
+          "key": "D",
+          "text": "Asbestos fiber"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Coal dust: Prolonged exposure to coal dust causes black lung disease, a form of pneumoconiosis, commonly seen in coal miners. Cotton dust: Causes byssinosis, not black lung disease. Sugarcane dust: Can cause respiratory issues but is unrelated to black lung disease. Asbestos fiber: Causes asbestosis, a different occupational lung disease."
+    },
+    {
+      "qNo": 40,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Identify the given image below:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Naegele's pelvis"
+        },
+        {
+          "key": "B",
+          "text": "Android pelvis"
+        },
+        {
+          "key": "C",
+          "text": "Gynecoid pelvis"
+        },
+        {
+          "key": "D",
+          "text": "Anthropoid pelvis"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Naegele's pelvis: This is a specific type of pelvis characterized by the absence of one sacral ala, giving it an asymmetrical appearance. Android pelvis: Resembles a male-type pelvis, with a heart-shaped inlet, not evident in the image. Gynecoid pelvis: The most common female pelvis type, oval-shaped, ideal for childbirth, but not consistent with the given image. Anthropoid pelvis: Oval-shaped with an elongated anteroposterior diameter, distinct from the depicted structure."
+    },
+    {
+      "qNo": 41,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Winging of scapula after mastectomy is due to damage of which nerve? Copyright © 2026 Adda247",
+      "options": [
+        {
+          "key": "A",
+          "text": "Long thoracic nerve"
+        },
+        {
+          "key": "B",
+          "text": "Brachial nerve"
+        },
+        {
+          "key": "C",
+          "text": "Radial nerve"
+        },
+        {
+          "key": "D",
+          "text": "Femoral nerve"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Long thoracic nerve: This nerve innervates the serratus anterior muscle. Damage to this nerve leads to winging of the scapula, commonly seen after mastectomy. Brachial nerve: The brachial plexus controls the upper limb's movement and sensation, but it does not cause winging of the scapula. Radial nerve: Responsible for motor control of the posterior arm and hand. Damage leads to wrist drop, not scapular winging. Femoral nerve: This nerve innervates the anterior thigh muscles and is unrelated to scapula function."
+    },
+    {
+      "qNo": 42,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "The regular monitoring of blood pressure is under which level of prevention?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Primordial"
+        },
+        {
+          "key": "B",
+          "text": "Primary"
+        },
+        {
+          "key": "C",
+          "text": "Secondary"
+        },
+        {
+          "key": "D",
+          "text": "Tertiary"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Regular BP monitoring is a form of screening for early detection of hypertension. According to Leavell & Clark’s model and Park’s Preventive and Social Medicine, this is secondary prevention, which focuses on identifying disease early and starting treatment to prevent complications. (a) Primordial: Prevents emergence of risk factors before they develop (e.g., promoting healthy lifestyle in children to avoid obesity, smoking, etc.). Not correct here. (b) Primary: Prevents occurrence of disease by controlling risk factors (e.g., salt reduction to prevent hypertension, immunization). Regular BP check is not prevention before onset. (c) Secondary: Early detection and treatment of disease to halt progression (e.g., regular BP monitoring to detect hypertension early). Correct. (d) Tertiary: Focuses on rehabilitation and reducing complications after disease has occurred (e.g., physiotherapy after stroke). Not applicable here."
+    },
+    {
+      "qNo": 43,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "The drug prescription is 20 mcg. Available dose for a drug is 30 mcg/15 ml. How much ml is administered?",
+      "options": [
+        {
+          "key": "A",
+          "text": "10"
+        },
+        {
+          "key": "B",
+          "text": "18"
+        },
+        {
+          "key": "C",
+          "text": "20"
+        },
+        {
+          "key": "D",
+          "text": "25"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "10 ml of the medication is required to administer a dose of 20 mcg. 18 ml: Too high for the given dose and concentration. 20 ml: This would deliver a dose higher than 20 mcg. 25 ml: Exceeds the available volume and would also overdose the patient."
+    },
+    {
+      "qNo": 44,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "An Anganwadi worker assesses the malnutrition status by:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Weight for height"
+        },
+        {
+          "key": "B",
+          "text": "Height for age"
+        },
+        {
+          "key": "C",
+          "text": "Weight for age"
+        },
+        {
+          "key": "D",
+          "text": "Mid-arm circumference"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Weight for height: This measures acute malnutrition and wasting but is not the primary tool for Anganwadi assessments. Height for age: This assesses stunting and chronic malnutrition over time but is not the standard metric used for Anganwadi evaluations. Weight for age: This is the most common measure used by Anganwadi workers to assess malnutrition status in children, combining aspects of both wasting and stunting. Mid-arm circumference: This is primarily used in emergencies for quick malnutrition screening, not as a standard for Anganwadi workers."
+    },
+    {
+      "qNo": 45,
+      "subject": "Community Health Nursing (CHN)",
+      "question": "Most heat-sensitive vaccine is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Measles"
+        },
+        {
+          "key": "B",
+          "text": "DPT"
+        },
+        {
+          "key": "C",
+          "text": "OPV"
+        },
+        {
+          "key": "D",
+          "text": "Hepatitis B"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Measles: While sensitive to heat, it is more stable than OPV under controlled conditions. DPT: Heat-stable compared to OPV, designed for easier transport and storage. OPV: Oral polio vaccine is highly heat-sensitive and requires strict cold chain maintenance to preserve its efficacy. Hepatitis B: Relatively heat-stable compared to OPV."
+    },
+    {
+      "qNo": 46,
+      "subject": "Community Health Nursing (CHN)",
+      "question": "Vaccine that can be frozen and still not lose its potency:",
+      "options": [
+        {
+          "key": "A",
+          "text": "MMR"
+        },
+        {
+          "key": "B",
+          "text": "DPT"
+        },
+        {
+          "key": "C",
+          "text": "TT"
+        },
+        {
+          "key": "D",
+          "text": "OPV"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "MMR: Measles, mumps, and rubella vaccines are freeze-dried, making them stable even after freezing. DPT: Freezing damages DPT vaccines by causing protein denaturation. TT: Freezing can reduce the efficacy of the tetanus toxoid vaccine. OPV: While OPV is heat-sensitive, it can also degrade if repeatedly frozen and thawed."
+    },
+    {
+      "qNo": 47,
+      "subject": "Community Health Nursing (CHN)",
+      "question": "Which is the inactivated whole virion vaccine?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Covaxin"
+        },
+        {
+          "key": "B",
+          "text": "Covishield"
+        },
+        {
+          "key": "C",
+          "text": "Moderna"
+        },
+        {
+          "key": "D",
+          "text": "Sputnik"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Covaxin: This is an inactivated whole virion vaccine, meaning it contains a killed form of the virus that cannot replicate but still triggers an immune response. Covishield: It is a viral vector vaccine based on a modified chimpanzee adenovirus. Moderna: This is an mRNA-based vaccine, not an inactivated virus. Sputnik: Sputnik V is a viral vector vaccine using human adenoviruses, not an inactivated virus."
+    },
+    {
+      "qNo": 48,
+      "subject": "Community Health Nursing (CHN)",
+      "question": "of the following diseases fall under the National Vector Borne Disease Control Program except:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Filaria"
+        },
+        {
+          "key": "B",
+          "text": "Chikungunya"
+        },
+        {
+          "key": "C",
+          "text": "Dengue"
+        },
+        {
+          "key": "D",
+          "text": "Plague"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Filaria: Included in the National Vector Borne Disease Control Program as it is transmitted by mosquitoes. Chikungunya: A mosquito-borne viral disease covered under the program. Dengue: A mosquito-borne viral infection also included in the program. Plague: Not a vector-borne disease as it is transmitted by fleas, not included in the program."
+    },
+    {
+      "qNo": 49,
+      "subject": "General Aptitude & Reasoning",
+      "question": "Which of the following is not included in the surgical safety checklist:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Verify with patient name and procedure to be done"
+        },
+        {
+          "key": "B",
+          "text": "Vital sign"
+        },
+        {
+          "key": "C",
+          "text": "Medications check"
+        },
+        {
+          "key": "D",
+          "text": "Counselling"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Verify with patient name and procedure to be done: A critical step in ensuring patient safety during surgical procedures. Vital sign: This is not correct answer. Medications check: Vital to assess current medications and avoid interactions. Counselling: While important in pre-surgical preparation, it is not part of the surgical safety checklist."
+    },
+    {
+      "qNo": 50,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Used needles are discarded in:",
+      "options": [
+        {
+          "key": "A",
+          "text": "White puncture-proof container"
+        },
+        {
+          "key": "B",
+          "text": "Red puncture-proof container"
+        },
+        {
+          "key": "C",
+          "text": "Black puncture-proof container"
+        },
+        {
+          "key": "D",
+          "text": "Yellow puncture-proof container"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "White puncture-proof container: Specifically designated for disposing of sharps like needles and syringes safely. Red puncture-proof container: Used for biohazard waste, not for sharps. Black puncture-proof container: For disposal of non-hazardous and non-infectious waste. Yellow puncture-proof container: Used for pathological waste like anatomical parts."
+    },
+    {
+      "qNo": 51,
+      "subject": "Community Health Nursing (CHN)",
+      "question": "Rat flea causes which of the following diseases:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Kala azar"
+        },
+        {
+          "key": "B",
+          "text": "Typhus"
+        },
+        {
+          "key": "C",
+          "text": "Sandfly"
+        },
+        {
+          "key": "D",
+          "text": "Louse"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Kala azar: Transmitted by sandflies, not rat fleas. Typhus: Caused by Rickettsia bacteria and transmitted through rat fleas. Sandfly: Incorrect as it is a vector for kala azar, not typhus. Louse: Spreads diseases like trench fever and epidemic typhus but is unrelated to rat fleas."
+    },
+    {
+      "qNo": 52,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Effective way to destroy malaria larvae:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Use of kerosene"
+        },
+        {
+          "key": "B",
+          "text": "Using gambusia fish"
+        },
+        {
+          "key": "C",
+          "text": "Adding chemicals like bleach to the water"
+        },
+        {
+          "key": "D",
+          "text": "Use of spirit"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Use of kerosene: Limited efficacy and environmental concerns make it less favorable. Using gambusia fish: Gambusia fish feed on mosquito larvae, making it an effective biological control method. Adding chemicals like bleach to the water: Not a standard practice for controlling malaria larvae. Use of spirit: Spirit has no role in destroying malaria larvae."
+    },
+    {
+      "qNo": 53,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "To avoid injury to the sciatic nerve during intramuscular administration, which site should be avoided:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ventrogluteal muscle"
+        },
+        {
+          "key": "B",
+          "text": "Vastus lateralis"
+        },
+        {
+          "key": "C",
+          "text": "Musculus deltoideus"
+        },
+        {
+          "key": "D",
+          "text": "Dorsogluteal muscle"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Ventrogluteal muscle: Safe site for intramuscular injections due to fewer nerves and blood vessels. Vastus lateralis: Commonly used in infants and adults, far from the sciatic nerve. Musculus deltoideus: Appropriate for small-volume intramuscular injections in adults. Dorsogluteal muscle: Risky due to the proximity of the sciatic nerve, making it less preferred."
+    },
+    {
+      "qNo": 54,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "The amount of elemental iron in one iron tablet for mothers is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "60 mg"
+        },
+        {
+          "key": "B",
+          "text": "60 g"
+        },
+        {
+          "key": "C",
+          "text": "50 g"
+        },
+        {
+          "key": "D",
+          "text": "50 mg"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "60 mg: Standard elemental iron content in tablets recommended for pregnant and lactating mothers. 60 g: Incorrect as iron content in grams would be excessive and fatal. 50 g: Unrelated to standard medical dosages for iron. 50 mg: Slightly less than the recommended dosage for maternal supplements."
+    },
+    {
+      "qNo": 55,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "To assess the pulse in a child, __________ is the most appropriate site:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Apical"
+        },
+        {
+          "key": "B",
+          "text": "Brachial"
+        },
+        {
+          "key": "C",
+          "text": "Femoral"
+        },
+        {
+          "key": "D",
+          "text": "Carotid"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Apical: The apical site is the most reliable for pulse assessment in children, especially infants and younger kids, as it reflects central circulation. Brachial: Often used in infants for assessing blood pressure but less accurate for pulse. Femoral: Used in emergency situations for quick assessment of circulation but not routinely for pulse. Carotid: More appropriate for adults, less commonly used in children due to potential complications."
+    },
+    {
+      "qNo": 56,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "From the following, which is the appropriate method of holding the baby for breastfeeding:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hold only neck"
+        },
+        {
+          "key": "B",
+          "text": "Hold baby’s lower part"
+        },
+        {
+          "key": "C",
+          "text": "Hold baby in an upright position"
+        },
+        {
+          "key": "D",
+          "text": "Hold baby giving support to the whole body"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Hold only neck: Holding only the neck is unsafe for the baby and may lead to neck strain or injury. It does not provide the stability needed for breastfeeding. Hold baby’s lower part: Supporting only the lower part of the baby’s body is insufficient, as it leaves the head and neck unsupported, potentially affecting the baby’s latch and breastfeeding comfort. Hold baby in an upright position: While upright holding is suitable for burping, it is not ideal for breastfeeding, as it does not allow proper alignment for an effective latch. Hold baby giving support to the whole body: This is the correct way to hold the baby. Providing support to the whole body, including the head, neck, and torso, ensures proper positioning for effective and comfortable breastfeeding."
+    },
+    {
+      "qNo": 57,
+      "subject": "General Aptitude & Reasoning",
+      "question": "Inheritance shown in the diagram depicted in the photograph is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "X-linked dominant"
+        },
+        {
+          "key": "B",
+          "text": "X-linked recessive Copyright © 2026 Adda247"
+        },
+        {
+          "key": "C",
+          "text": "Autosomal dominant"
+        },
+        {
+          "key": "D",
+          "text": "Autosomal recessive"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "X-linked dominant: Affects both males and females, but females are usually more frequently affected. This pattern is not evident in the diagram. X-linked recessive: Typically affects males more than females, as seen in the diagram, where affected males inherit the gene from carrier mothers. Autosomal dominant: Both males and females are equally likely to be affected, and it appears in every generation, which is not observed here. Autosomal recessive: Requires both parents to contribute a recessive allele; this pattern is not consistent with the diagram."
+    },
+    {
+      "qNo": 58,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "Identify the given image below:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tumor of uterus"
+        },
+        {
+          "key": "B",
+          "text": "Vaginitis chlamydia"
+        },
+        {
+          "key": "C",
+          "text": "Herniation"
+        },
+        {
+          "key": "D",
+          "text": "Peptic ulcer"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Tumor of uterus: This would present as a distinct mass, not the inflamed and erythematous appearance seen in the image. Vaginitis chlamydia: The image depicts redness and inflammation consistent with chlamydial vaginitis. Herniation: Herniation involves organ protrusion and does not match the observed characteristics. Peptic ulcer: Typically located in the stomach or duodenum, presenting differently than the genital inflammation shown."
+    },
+    {
+      "qNo": 59,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which of the following is a non-absorbable suture?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Polyester"
+        },
+        {
+          "key": "B",
+          "text": "Vicryl"
+        },
+        {
+          "key": "C",
+          "text": "Monocryl"
+        },
+        {
+          "key": "D",
+          "text": "Chromic catgut"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Polyester: A synthetic, non-absorbable suture commonly used for long-term tissue support. Vicryl: An absorbable suture made of polyglactin, designed to degrade within weeks. Monocryl: An absorbable monofilament suture, often used in soft tissue repairs. Chromic catgut: A natural absorbable suture treated with chromium salts to prolong absorption."
+    },
+    {
+      "qNo": 60,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Normal urine output in 24 hours?",
+      "options": [
+        {
+          "key": "A",
+          "text": "300 ml"
+        },
+        {
+          "key": "B",
+          "text": "500 ml"
+        },
+        {
+          "key": "C",
+          "text": "5 Liters"
+        },
+        {
+          "key": "D",
+          "text": "1.5 Liters"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "300 ml: Indicates oliguria, which is abnormally low urine output. 500 ml: Still considered low and may suggest inadequate kidney function. 5 Liters: This is not correct value. 1.5 Liters: Normal urine output in a healthy adult ranges between 1 to 2 liters per day, typically around 1.5 liters."
+    },
+    {
+      "qNo": 61,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "The nurse had a needle stick injury with a hepatitis B-infected needle. What is the priority nursing action?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Wash puncture site with soap and water"
+        },
+        {
+          "key": "B",
+          "text": "Start PEP treatment immediately"
+        },
+        {
+          "key": "C",
+          "text": "Get a doctor appointment"
+        },
+        {
+          "key": "D",
+          "text": "Collect needle for laboratory check"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Wash puncture site with soap and water: The first and immediate step to reduce viral transmission risk and disinfect the area. Start PEP treatment immediately: Post-exposure prophylaxis (PEP) should be started soon but only after washing the site. Get a doctor appointment: Necessary but not the priority in an emergency situation. Collect needle for laboratory check: While important for infection confirmation, this is secondary to immediate site cleaning."
+    },
+    {
+      "qNo": 62,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "Which of the following factors is a common cause of fatty diarrhoea?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lactose intolerance"
+        },
+        {
+          "key": "B",
+          "text": "Celiac disease"
+        },
+        {
+          "key": "C",
+          "text": "Bacterial and viral infection"
+        },
+        {
+          "key": "D",
+          "text": "Sucrose intolerance"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Lactose intolerance: Leads to diarrhea but not typically fatty; it results in osmotic diarrhea due to undigested lactose. Celiac disease: Gluten intolerance damages intestinal villi, impairing fat absorption, leading to fatty stools. Bacterial and viral infection: Causes watery diarrhea, not fatty stools. Sucrose intolerance: Rarely linked to fatty diarrhea; it causes osmotic diarrhea due to unabsorbed sugars. Copyright © 2026 Adda247 Q.63 The client admitted with angina is given a prescription for nitroglycerine. The client should be instructed to: A. Replenish his supply every 3 months B. Take one every 15 minutes if pain occurs C. Leave the medication in a brown bottle D. Crush the medication and take with water Answer: C Sol: Replenish his supply every 3 months: Important for efficacy but not the most critical instruction here. Take one every 15 minutes if pain occurs: Incorrect, as nitroglycerin is taken every 5 minutes for angina, up to 3 doses, not 15 minutes. Leave the medication in a brown bottle: Nitroglycerin is light-sensitive and should be stored in a brown bottle to maintain effectiveness. Crush the medication and take with water: Nitroglycerin tablets are meant to dissolve under the tongue, not to be crushed or swallowed."
+    },
+    {
+      "qNo": 64,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Contraindication of liver biopsy is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Diabetic condition of the patient"
+        },
+        {
+          "key": "B",
+          "text": "Decreased Activated Partial Thromboplastin Clotting Time"
+        },
+        {
+          "key": "C",
+          "text": "Increased Activated Partial Thromboplastin Clotting Time"
+        },
+        {
+          "key": "D",
+          "text": "Immuno-compromised patient"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Diabetic condition of the patient: Diabetes is not a contraindication for liver biopsy. Decreased Activated Partial Thromboplastin Clotting Time: This indicates normal or improved clotting, not a contraindication. Increased Activated Partial Thromboplastin Clotting Time (Correct Option): Increased clotting time suggests a bleeding risk, making liver biopsy unsafe. Immuno-compromised patient: Not a direct contraindication but requires careful monitoring to prevent infection."
+    },
+    {
+      "qNo": 65,
+      "subject": "Medical-Surgical Nursing",
+      "question": "In the menstrual cycle, lowering of which hormone causes menstruation?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Progesterone"
+        },
+        {
+          "key": "B",
+          "text": "Thyroxine"
+        },
+        {
+          "key": "C",
+          "text": "Estrogen"
+        },
+        {
+          "key": "D",
+          "text": "Follicle stimulating hormone"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Progesterone: Decreased levels of progesterone trigger the shedding of the uterine lining, leading to menstruation. Thyroxine: A thyroid hormone unrelated to menstrual cycle regulation. Estrogen: Declines before ovulation but does not directly cause menstruation. Follicle stimulating hormone: Regulates ovarian follicles but does not influence menstruation directly."
+    },
+    {
+      "qNo": 66,
+      "subject": "Medical-Surgical Nursing",
+      "question": "On auscultation, which finding suggests a right pneumothorax?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bilateral inspiratory and expiratory crackles."
+        },
+        {
+          "key": "B",
+          "text": "Absence of breath sounds in the right thorax."
+        },
+        {
+          "key": "C",
+          "text": "Inspiratory wheezes in the right thorax."
+        },
+        {
+          "key": "D",
+          "text": "Bilateral pleural friction rub."
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Bilateral inspiratory and expiratory crackles: Indicative of fluid in the lungs, such as in pneumonia or pulmonary edema, not pneumothorax. Absence of breath sounds in the right thorax: The hallmark sign of pneumothorax due to air in the pleural space preventing lung expansion. Inspiratory wheezes in the right thorax: Suggests airway narrowing, as seen in asthma or bronchitis, not pneumothorax. Bilateral pleural friction rub: Indicates inflammation of the pleura, often from pleuritis, not a feature of pneumothorax."
+    },
+    {
+      "qNo": 67,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Bone marrow aspiration in children",
+      "options": [
+        {
+          "key": "A",
+          "text": "Posterior Superior iliac crest"
+        },
+        {
+          "key": "B",
+          "text": "Proximal tibia"
+        },
+        {
+          "key": "C",
+          "text": "Sternum"
+        },
+        {
+          "key": "D",
+          "text": "Ribs"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Posterior Superior iliac crest: Preferred site for bone marrow aspiration in children due to its safety and accessibility. Proximal tibia: Sometimes used in infants but less commonly preferred due to higher risks of complications. Sternum: Used more often in adults but avoided in children because of risks of injury to underlying structures. Ribs: Not used for bone marrow aspiration due to structural fragility and proximity to vital organs."
+    },
+    {
+      "qNo": 68,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "At what time period does the child learn about gender identity?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1 year"
+        },
+        {
+          "key": "B",
+          "text": "3 years"
+        },
+        {
+          "key": "C",
+          "text": "8 years"
+        },
+        {
+          "key": "D",
+          "text": "10 years"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "1 year: At this age, children are focused on sensory and motor development, not gender identity. 3 years: By this age, children start to understand and identify their own gender as well as recognize gender differences. 8 years: Gender identity is already established; at this age, children start exploring social roles related to gender. 10 years: By this stage, gender identity is long established, and children may begin exploring broader aspects of personal and social identity."
+    },
+    {
+      "qNo": 69,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which of the following statements correctly describes the proper usage of a mask?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The mask is worn below the nose, leaving the nose exposed."
+        },
+        {
+          "key": "B",
+          "text": "The mask is placed under the chin, making it ineffective. Copyright © 2026 Adda247"
+        },
+        {
+          "key": "C",
+          "text": "The mask is properly positioned, covering both the nose and mouth snugly"
+        },
+        {
+          "key": "D",
+          "text": "All of the above."
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "A mask should completely cover both the nose and mouth, ensuring that there are no gaps for air or droplets to escape or enter. Proper usage of a mask helps reduce the spread of respiratory infections. ​Explanation of Options: (a) Wearing the mask below the nose is ineffective, as it leaves the nose exposed, which is a primary source of respiratory droplets. (b) Placing the mask under the chin is also ineffective, as it does not cover the nose or mouth, rendering it useless. (c) The mask should cover both the nose and mouth completely to ensure maximum protection. (d) \"All of the above\" is incorrect because only option (c) is the correct and proper usage of a mask.​"
+    },
+    {
+      "qNo": 70,
+      "subject": "Medical-Surgical Nursing",
+      "question": "After thyroidectomy carpopedal spasm occurs; this is the result of:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hypercalcemia"
+        },
+        {
+          "key": "B",
+          "text": "Hypocalcemia"
+        },
+        {
+          "key": "C",
+          "text": "Hyperkalemia"
+        },
+        {
+          "key": "D",
+          "text": "Hypokalemia"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Hypercalcemia: This condition refers to high calcium levels and is not related to carpopedal spasm after thyroidectomy. Hypocalcemia: After thyroidectomy, low calcium levels (hypocalcemia) can cause carpopedal spasm due to parathyroid gland disruption. Hyperkalemia: High potassium levels are unrelated to this condition. Hypokalemia: Low potassium levels do not cause carpopedal spasms post-thyroidectomy."
+    },
+    {
+      "qNo": 71,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Pregnancy-induced hypertension is mostly due to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Electrolyte imbalance"
+        },
+        {
+          "key": "B",
+          "text": "Renal dysfunction"
+        },
+        {
+          "key": "C",
+          "text": "Water retention"
+        },
+        {
+          "key": "D",
+          "text": "Family history"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Electrolyte imbalance: Although electrolyte changes may occur during pregnancy, they are not the primary cause of hypertension. Renal dysfunction: Renal issues may complicate hypertension but are not the main cause. Water retention: Increased water retention and vascular resistance are the primary causes of pregnancy-induced hypertension. Family history: While family history may predispose, it is not the direct cause."
+    },
+    {
+      "qNo": 72,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "are antihypertensive drugs advised to lactating mothers except:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Losartan"
+        },
+        {
+          "key": "B",
+          "text": "Lisinopril"
+        },
+        {
+          "key": "C",
+          "text": "Enalapril"
+        },
+        {
+          "key": "D",
+          "text": "Hydrochlorothiazide"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Losartan: Losartan is not recommended for lactating mothers due to its potential adverse effects on the baby. Lisinopril: Lisinopril is generally considered safe for lactating mothers. Enalapril: This drug is safe for use during breastfeeding. Hydrochlorothiazide: This is a safe diuretic for lactating mothers."
+    },
+    {
+      "qNo": 73,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "A patient is on heparin. Which of the following tests is required before the administration of heparin?",
+      "options": [
+        {
+          "key": "A",
+          "text": "aPTT"
+        },
+        {
+          "key": "B",
+          "text": "PT"
+        },
+        {
+          "key": "C",
+          "text": "Serum hemoglobin test"
+        },
+        {
+          "key": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "aPTT: Activated Partial Thromboplastin Time (aPTT) is the key test required to monitor the therapeutic range of heparin therapy. PT: PT is used to monitor warfarin therapy, not heparin. Serum hemoglobin test: This is unrelated to heparin monitoring. Both A and B: Only aPTT is relevant for heparin."
+    },
+    {
+      "qNo": 74,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "The most common cause of infant mortality in India is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Low birth weight"
+        },
+        {
+          "key": "B",
+          "text": "Complications of labor"
+        },
+        {
+          "key": "C",
+          "text": "Sepsis"
+        },
+        {
+          "key": "D",
+          "text": "Congenital anomalies"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Low birth weight: Low birth weight is the leading cause of infant mortality in India, often associated with preterm birth and poor maternal nutrition. Complications of labor: While it contributes to mortality, it is not the most common cause. Sepsis: Neonatal sepsis is a significant factor but not the primary cause. Congenital anomalies: These account for fewer cases compared to low birth weight."
+    },
+    {
+      "qNo": 75,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Failure to pass meconium within the first 24 hours after birth may indicate: Copyright © 2026 Adda247",
+      "options": [
+        {
+          "key": "A",
+          "text": "Abdominal wall defect"
+        },
+        {
+          "key": "B",
+          "text": "Celiac disease"
+        },
+        {
+          "key": "C",
+          "text": "Hirschsprung's disease"
+        },
+        {
+          "key": "D",
+          "text": "Intussusception"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Abdominal wall defect: While it causes digestive issues, it does not directly result in failure to pass meconium. Celiac disease: This condition affects older children and adults, not newborns. Hirschsprung's disease: This congenital condition is caused by the absence of nerve cells in the intestines, leading to delayed passage of meconium. Intussusception: This is an intestinal obstruction seen later in infancy, not immediately after birth."
+    },
+    {
+      "qNo": 76,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Size of the cannula shown in the image is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "18 G"
+        },
+        {
+          "key": "B",
+          "text": "16 G"
+        },
+        {
+          "key": "C",
+          "text": "20 G"
+        },
+        {
+          "key": "D",
+          "text": "22 G"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "18 G: The green color-coded hub identifies the cannula size as 18 gauge, which is commonly used for administering fluids and medications in adults. 16 G: A 16 G cannula is typically orange and used for rapid fluid resuscitation. 20 G: A 20 G cannula is pink in color and used for routine IV therapy. 22 G: A 22 G cannula is blue and is used for pediatric or small vein access."
+    },
+    {
+      "qNo": 77,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Choose the correct statement for Trousseau's sign:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tremor, rigidity, bradykinesia, and hypokinesia"
+        },
+        {
+          "key": "B",
+          "text": "Ischemia induces carpal spasm by inflating the blood pressure cuff"
+        },
+        {
+          "key": "C",
+          "text": "Twitching of facial muscles when the facial nerve is tapped"
+        },
+        {
+          "key": "D",
+          "text": "Sudden and severe attacks of pain, swelling, redness, and tenderness in the joints"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Tremor, rigidity, bradykinesia, and hypokinesia: These are features of Parkinson's disease, not Trousseau's sign. Ischemia induces carpal spasm by inflating the blood pressure cuff: This is a classic description of Trousseau's sign, indicating latent tetany due to hypocalcemia. Twitching of facial muscles when the facial nerve is tapped: This refers to Chvostek's sign, not Trousseau's sign. Sudden and severe attacks of pain, swelling, redness, and tenderness in the joints: This describes gout, not Trousseau's sign."
+    },
+    {
+      "qNo": 78,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "Which of the following electrolyte imbalances is associated with Digoxin toxicity?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hypokalemia"
+        },
+        {
+          "key": "B",
+          "text": "Hypernatremia"
+        },
+        {
+          "key": "C",
+          "text": "Hyperkalemia"
+        },
+        {
+          "key": "D",
+          "text": "Hypocalcemia"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Hypokalemia (low potassium levels) increases the sensitivity of the myocardium to digoxin and is the most common electrolyte imbalance associated with digoxin toxicity. Digoxin inhibits the sodiumpotassium ATPase pump. When potassium levels are low, more digoxin binds to the pump, increasing the risk of toxic effects such as arrhythmias. Therefore, potassium levels must be closely monitored during digoxin therapy, especially in patients on diuretics or those with renal impairment. Explanation of Options: (a) Hypokalemia Low serum potassium increases the myocardial binding of digoxin, potentiating its toxic effects like ventricular arrhythmias. It is a well-established risk factor for digoxin toxicity. (b) Hypernatremia Sodium level changes are not directly related to digoxin toxicity. Hypernatremia is not typically associated with increased digoxin sensitivity. (c) Hyperkalemia Although severe digoxin toxicity can cause hyperkalemia due to sodium-potassium pump inhibition, hypokalemia is the predisposing factor that increases toxicity. (d) Hypocalcemia Hypocalcemia is not commonly associated with digoxin toxicity. In fact, hypercalcemia may worsen digoxin toxicity due to increased intracellular calcium."
+    },
+    {
+      "qNo": 79,
+      "subject": "Medical-Surgical Nursing",
+      "question": "For nasogastric intubation, the length of the NG tube should be measured from:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nose to the tragus plus nose to the umbilicus"
+        },
+        {
+          "key": "B",
+          "text": "Nose to the sternum"
+        },
+        {
+          "key": "C",
+          "text": "Nose to the umbilicus"
+        },
+        {
+          "key": "D",
+          "text": "Nose to the tragus of the ear plus nose to the sternum Copyright © 2026 Adda247"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Nose to the tragus plus nose to the umbilicus: This is not a standard measurement for NG tube placement. Nose to the sternum: This does not account for the necessary tubing length for correct placement. Nose to the umbilicus: This is used for other measurements but not NG tube placement. Nose to the tragus of the ear plus nose to the sternum: Correct. This method ensures accurate placement into the stomach."
+    },
+    {
+      "qNo": 80,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "The program aimed to train health personnel in basic newborn care and resuscitation is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Rashtriya Bal Swasthya Karyakram"
+        },
+        {
+          "key": "B",
+          "text": "Navjat Shishu Suraksha Karyakram"
+        },
+        {
+          "key": "C",
+          "text": "IMNCI"
+        },
+        {
+          "key": "D",
+          "text": "Home-based newborn care"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Rashtriya Bal Swasthya Karyakram: This program focuses on child health screening and early interventions. Navjat Shishu Suraksha Karyakram: This program trains health personnel in basic newborn care and resuscitation. IMNCI: Integrated Management of Neonatal and Childhood Illness addresses broader child health issues but does not focus specifically on newborn resuscitation. Home-based newborn care: This involves postnatal care at home but does not train health personnel in resuscitation."
+    },
+    {
+      "qNo": 81,
+      "subject": "General Aptitude & Reasoning",
+      "question": "The surgical removal of the entire contents of the orbit, including the eyeballs and eyelids, is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Evisceration"
+        },
+        {
+          "key": "B",
+          "text": "Enucleation"
+        },
+        {
+          "key": "C",
+          "text": "Exenteration"
+        },
+        {
+          "key": "D",
+          "text": "Laser surgery"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Evisceration: This involves the removal of the contents of the eye but leaves the sclera intact. Enucleation: This refers to the removal of the eyeball only, without the surrounding orbital contents. Exenteration: This involves the removal of the entire orbital contents, including the eyeballs, eyelids, and surrounding tissues. Laser surgery: This is a non-invasive surgical technique and does not involve removing the orbit's contents."
+    },
+    {
+      "qNo": 82,
+      "subject": "Medical-Surgical Nursing",
+      "question": "The small intestine does NOT involve the:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Jejunum"
+        },
+        {
+          "key": "B",
+          "text": "Duodenum"
+        },
+        {
+          "key": "C",
+          "text": "Ileum"
+        },
+        {
+          "key": "D",
+          "text": "Caecum"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Jejunum: This is a part of the small intestine, located between the duodenum and ileum. Duodenum: This is the first part of the small intestine. Ileum: This is the final section of the small intestine. Caecum: The caecum is part of the large intestine, not the small intestine."
+    },
+    {
+      "qNo": 83,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "What should be the duration of suctioning for ventilated patients?",
+      "options": [
+        {
+          "key": "A",
+          "text": "20–25 seconds"
+        },
+        {
+          "key": "B",
+          "text": "5–10 seconds"
+        },
+        {
+          "key": "C",
+          "text": "15–20 seconds"
+        },
+        {
+          "key": "D",
+          "text": "10–15 seconds"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "20–25 seconds: Prolonged suctioning can cause hypoxia and other complications. 5–10 seconds: This is the recommended duration to minimize complications while ensuring effective suctioning. 15–20 seconds: This is longer than the recommended time and may lead to hypoxia. 10–15 seconds: This is longer than the recommended duration for safe suctioning."
+    },
+    {
+      "qNo": 84,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which is the nucleus of masseteric reflex?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Superior sensory nucleus of the trigeminal nerve"
+        },
+        {
+          "key": "B",
+          "text": "Spinal nucleus of the trigeminal nerve"
+        },
+        {
+          "key": "C",
+          "text": "Mesencephalic nucleus of trigeminal nerve"
+        },
+        {
+          "key": "D",
+          "text": "Dorsal nucleus of vagus nerve"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Superior sensory nucleus of the trigeminal nerve: This is not involved in the masseteric reflex. Spinal nucleus of the trigeminal nerve: This nucleus is associated with pain and temperature sensations. Mesencephalic nucleus of trigeminal nerve: This nucleus is responsible for the proprioceptive input necessary for the masseteric reflex. Dorsal nucleus of vagus nerve: This nucleus is part of the vagus nerve, not the trigeminal nerve."
+    },
+    {
+      "qNo": 85,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "The nurse explains to the mother of a neonate diagnosed with erythroblastosis fetalis that the exchange transfusion is necessary to prevent damage to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Liver"
+        },
+        {
+          "key": "B",
+          "text": "Lungs"
+        },
+        {
+          "key": "C",
+          "text": "Kidneys"
+        },
+        {
+          "key": "D",
+          "text": "Brain Copyright © 2026 Adda247"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Liver: While the liver may be affected, the primary aim is to prevent brain damage. Lungs: The lungs are not directly affected in this condition. Kidneys: The kidneys are not the primary concern in erythroblastosis fetalis. Brain: The exchange transfusion helps prevent bilirubin-induced brain damage (kernicterus)."
+    },
+    {
+      "qNo": 86,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Which of the following should not be provided to the newborn in galactosemia?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Milk"
+        },
+        {
+          "key": "B",
+          "text": "Starch"
+        },
+        {
+          "key": "C",
+          "text": "Gluten"
+        },
+        {
+          "key": "D",
+          "text": "Glycogen"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Milk: Galactosemia is a metabolic disorder where the newborn cannot process galactose in milk. Starch: Starch does not contain galactose and can be metabolized. Gluten: Gluten is unrelated to galactose metabolism. Glycogen: Glycogen is stored glucose and not related to galactose intake."
+    },
+    {
+      "qNo": 87,
+      "subject": "General Aptitude & Reasoning",
+      "question": "Z-track intramuscular technique is used in administering which kind of medication?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Dark-colored medication"
+        },
+        {
+          "key": "B",
+          "text": "Long-term use medication"
+        },
+        {
+          "key": "C",
+          "text": "Medication more than 5 ml"
+        },
+        {
+          "key": "D",
+          "text": "Medication that has a long absorption time"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Dark-colored medication: The Z-track technique prevents dark-colored medications (e.g., iron dextran) from staining the skin. Long-term use medication: The Z-track technique is not specific to long-term medications. Medication more than 5 ml: Large-volume intramuscular injections are uncommon and not necessarily related to the Z-track technique. Medication that has a long absorption time: Absorption time is not the primary consideration for using the Z-track technique."
+    },
+    {
+      "qNo": 88,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Antibody 'A' and Antigen 'B' are present in which blood group?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A"
+        },
+        {
+          "key": "B",
+          "text": "B"
+        },
+        {
+          "key": "C",
+          "text": "AB"
+        },
+        {
+          "key": "D",
+          "text": "O"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "A: Blood group A has Antigen 'A' and Antibody 'B'. B: Blood group B has Antigen 'B' and Antibody 'A'. AB: Blood group AB has both Antigen 'A' and 'B' but no antibodies. O: Blood group O has neither Antigen 'A' nor 'B' but contains both Antibody 'A' and 'B'."
+    },
+    {
+      "qNo": 89,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "A client is at 35 weeks of gestation and calls the nurse at the clinic, reporting a sudden discharge of fluid from the vagina. Based on the data provided, the nurse suspects which of the following conditions?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Miscarriage"
+        },
+        {
+          "key": "B",
+          "text": "Preterm labor"
+        },
+        {
+          "key": "C",
+          "text": "Intrauterine fetal demise"
+        },
+        {
+          "key": "D",
+          "text": "Premature rupture of the membranes"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Miscarriage: Miscarriage usually occurs earlier in pregnancy and is not characterized by fluid discharge at 35 weeks. Preterm labor: Preterm labor involves uterine contractions and cervical dilation, not necessarily fluid discharge. Intrauterine fetal demise: This condition does not typically present with fluid discharge. Premature rupture of the membranes: Sudden fluid discharge at 35 weeks is a classic sign of premature rupture of the amniotic sac."
+    },
+    {
+      "qNo": 90,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "An example of a positive feedback mechanism in our body is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Temperature regulation"
+        },
+        {
+          "key": "B",
+          "text": "Baroreceptor mechanism"
+        },
+        {
+          "key": "C",
+          "text": "Oxytocin in childbirth"
+        },
+        {
+          "key": "D",
+          "text": "Regulation of thyroid hormone"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Temperature regulation: This is an example of a negative feedback mechanism. Baroreceptor mechanism: This also functions as a negative feedback mechanism to maintain blood pressure. Oxytocin in childbirth: Oxytocin release during childbirth enhances uterine contractions, exemplifying a positive feedback mechanism. Regulation of thyroid hormone: This is a negative feedback mechanism controlled by the hypothalamus-pituitary-thyroid axis."
+    },
+    {
+      "qNo": 91,
+      "subject": "Medical-Surgical Nursing",
+      "question": "When is World Patient Safety Day observed?",
+      "options": [
+        {
+          "key": "A",
+          "text": "16 September"
+        },
+        {
+          "key": "B",
+          "text": "17 September"
+        },
+        {
+          "key": "C",
+          "text": "18 September"
+        },
+        {
+          "key": "D",
+          "text": "19 September Copyright © 2026 Adda247"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "16 September: This is not the date for World Patient Safety Day. 17 September: World Patient Safety Day is observed on this date to raise awareness about patient safety. 18 September: This is not the correct date. 19 September: This is not the date for the observance."
+    },
+    {
+      "qNo": 92,
+      "subject": "General Aptitude & Reasoning",
+      "question": "What is at the back of a Rs. 2000 note of Mahatma Gandhi (new series)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sun Temple"
+        },
+        {
+          "key": "B",
+          "text": "Mangalyaan"
+        },
+        {
+          "key": "C",
+          "text": "Red Fort"
+        },
+        {
+          "key": "D",
+          "text": "Rani Ki Vav"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Sun Temple: This is not featured on the Rs. 2000 note. Mangalyaan: The Rs. 2000 note features the image of Mangalyaan to highlight India's scientific achievements. Red Fort: The Red Fort is depicted on the Rs. 500 note. Rani Ki Vav: This is depicted on the Rs. 100 note."
+    },
+    {
+      "qNo": 93,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Punjab is also known as the \"Land of five rivers\". Which one is not part of these five rivers?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sutlej"
+        },
+        {
+          "key": "B",
+          "text": "Yamuna"
+        },
+        {
+          "key": "C",
+          "text": "Ravi"
+        },
+        {
+          "key": "D",
+          "text": "Jhelum"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Sutlej: Sutlej is one of the five rivers of Punjab. Yamuna: Yamuna is not part of the five rivers of Punjab; it flows through other regions in India. Ravi: Ravi is one of the five rivers of Punjab. Jhelum: Jhelum is also one of the five rivers."
+    },
+    {
+      "qNo": 94,
+      "subject": "General Aptitude & Reasoning",
+      "question": "__________ was the first Vice President of India.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Dr. S. Radhakrishnan"
+        },
+        {
+          "key": "B",
+          "text": "Pandit Jawahar Lal Nehru"
+        },
+        {
+          "key": "C",
+          "text": "Dr. S. D. Sharma"
+        },
+        {
+          "key": "D",
+          "text": "Dr. Rajendra Prasad"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Dr. S. Radhakrishnan: He was the first Vice President of India and later became the President. Pandit Jawahar Lal Nehru: He was the first Prime Minister of India, not the Vice President. Dr. S. D. Sharma: He served as the ninth President of India. Dr. Rajendra Prasad: He was the first President of India."
+    },
+    {
+      "qNo": 95,
+      "subject": "Medical-Surgical Nursing",
+      "question": "The headquarters of RBI is in ________.",
+      "options": [
+        {
+          "key": "A",
+          "text": "Delhi"
+        },
+        {
+          "key": "B",
+          "text": "Kanpur"
+        },
+        {
+          "key": "C",
+          "text": "Mumbai"
+        },
+        {
+          "key": "D",
+          "text": "Chandigarh"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Delhi: While many government organizations are headquartered in Delhi, RBI's headquarters is not. Kanpur: Kanpur is not associated with the headquarters of RBI. Mumbai: The Reserve Bank of India (RBI) is headquartered in Mumbai, Maharashtra. Chandigarh: Chandigarh is not RBI headquarters."
+    },
+    {
+      "qNo": 96,
+      "subject": "Medical-Surgical Nursing",
+      "question": "With reference to the invaders in ancient India, which one of the following is the correct chronological order?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Greeks - Sakas - Kushanas"
+        },
+        {
+          "key": "B",
+          "text": "Greeks - Kushanas - Sakas"
+        },
+        {
+          "key": "C",
+          "text": "Sakas - Greeks - Kushanas"
+        },
+        {
+          "key": "D",
+          "text": "Sakas - Kushanas – Greeks"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Greeks - Sakas - Kushanas: The Greeks invaded first, followed by the Sakas, and then the Kushanas. Greeks - Kushanas - Sakas: This does not represent the correct historical sequence. Sakas - Greeks - Kushanas: The Sakas came after the Greeks. Sakas - Kushanas - Greeks: This is not the correct chronological order of invasions."
+    },
+    {
+      "qNo": 97,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Pearl: Necklace: Flower : ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Garden"
+        },
+        {
+          "key": "B",
+          "text": "Bouquet"
+        },
+        {
+          "key": "C",
+          "text": "Petal"
+        },
+        {
+          "key": "D",
+          "text": "Plant Copyright © 2026 Adda247"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Garden: While flowers are found in a garden, this does not align with the analogy. Pearls are not \"found\" in a necklace but are arranged in one, making \"garden\" an incorrect match. Bouquet: A bouquet is an arrangement of flowers, just as a necklace is an arrangement of pearls. This is the correct analogy and the best fit for the relationship. Petal: Petals are part of a flower, but the question seeks an arrangement of flowers, not a component of one. Thus, \"petal\" does not match the analogy. Plant: A plant produces flowers, but this does not correspond to the arrangement relationship shown in the analogy between pearls and a necklace."
+    },
+    {
+      "qNo": 98,
+      "subject": "Medical-Surgical Nursing",
+      "question": "A person wants to make a sum of Rs. 16 with 40 coins using 50 paise coins and 25 paise coins. How many coins are there of 25 paise?",
+      "options": [
+        {
+          "key": "A",
+          "text": "20"
+        },
+        {
+          "key": "B",
+          "text": "24"
+        },
+        {
+          "key": "C",
+          "text": "16"
+        },
+        {
+          "key": "D",
+          "text": "22"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "20: This does not satisfy the total value of Rs. 16 with 40 coins. 24: This value results in a mismatch in the total coin count. 16: With 16 coins of 25 paise and 24 coins of 50 paise, the total is Rs. 16 with 40 coins. 22: This does not satisfy the conditions of the problem."
+    },
+    {
+      "qNo": 99,
+      "subject": "Medical-Surgical Nursing",
+      "question": "A person buys an article at 7/9 of its value and sells it for 20 percent more than its value. What is his gain percentage?",
+      "options": [
+        {
+          "key": "A",
+          "text": "50 percent"
+        },
+        {
+          "key": "B",
+          "text": "45.3 percent"
+        },
+        {
+          "key": "C",
+          "text": "44.4 percent"
+        },
+        {
+          "key": "D",
+          "text": "54.3 percent"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "50 percent: The calculated gain percentage exceeds 50 percent. 45.3 percent: This is lower than the actual gain percentage. 44.4 percent: This value does not match the calculations for the given conditions. 54.3 percent: Buying at 7/9 of the value and selling at 20% above results in a 54.3% gain."
+    },
+    {
+      "qNo": 100,
+      "subject": "General Aptitude & Reasoning",
+      "question": "Which number is missing in the given number series? 0, 1, 1, 2, 3, 5, 8, 13, 21, ?, 55",
+      "options": [
+        {
+          "key": "A",
+          "text": "32"
+        },
+        {
+          "key": "B",
+          "text": "38"
+        },
+        {
+          "key": "C",
+          "text": "34"
+        },
+        {
+          "key": "D",
+          "text": "45"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "32: This does not follow the Fibonacci sequence rule. 38: This number does not match the pattern of the series. 34: The series follows the Fibonacci sequence, where each number is the sum of the two preceding numbers: 13 + 21 = 34. 45: This number does not follow the Fibonacci sequence. Copyright © 2026 Adda247"
+    }
+  ]
+}

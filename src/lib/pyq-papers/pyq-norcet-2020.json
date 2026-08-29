@@ -1,0 +1,2489 @@
+{
+  "paperId": "pyq-norcet-2020",
+  "title": "AIIMS NORCET (2020) Official Question Paper & Key",
+  "examName": "AIIMS NORCET",
+  "year": 2020,
+  "shift": "Shift 1 (01 Sep 2020 / NORCET 2020)",
+  "totalMarks": 98,
+  "negativeMarking": "0.33 (1/3rd deduction per incorrect MCQ)",
+  "durationMinutes": 90,
+  "officialKeyNotification": "AIIMS New Delhi Official Master Response Key (2020)",
+  "subjectsSummary": [
+    {
+      "name": "Med-Surg & Critical Care",
+      "count": 35
+    },
+    {
+      "name": "Obstetrics (OBG)",
+      "count": 15
+    },
+    {
+      "name": "Child Health (Pediatrics)",
+      "count": 15
+    },
+    {
+      "name": "Fundamentals & Procedures",
+      "count": 15
+    },
+    {
+      "name": "Pharmacology & Dosage",
+      "count": 10
+    },
+    {
+      "name": "General Aptitude & Reasoning",
+      "count": 10
+    }
+  ],
+  "questions": [
+    {
+      "qNo": 1,
+      "subject": "Medical-Surgical Nursing",
+      "question": "A nurse is preparing to give a bath to an admitted patient with a perineal problem. Which of the Generate HTML Link will help the patient? following Add New Test",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bed bath"
+        },
+        {
+          "key": "B",
+          "text": "Therapeutic bath"
+        },
+        {
+          "key": "C",
+          "text": "Self-bath with minimal help Test Title / ID 640480"
+        },
+        {
+          "key": "D",
+          "text": "None of the above"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Bed bath: A bed bath is given to patients who are bedridden or unable to move. While it ensures cleanliness, it may not specifically address perineal problems requiring therapeutic care. · Therapeutic bath: A therapeutic bath isTo Date specifically designed to treat skin conditions or localized problems like perineal issues. It involves the use of medicated solutions or warm water to soothe and Created heal affected areas. mm/dd/yyyy -- who are mobile but need some assistance. It may notSearch · Self-bath with minimal help: This option is for--:-patients be suitable forClear perineal problems as these require more focused care. mm/dd/yyyy --:-- -- · None of the above: This option is incorrect as therapeutic baths are effective for managing perineal problems and provide relief to the patient. · A sitz bath is a warm water bath you sit in to relieve discomfort in your perineal region. Soaking this area in warm water relaxes your anal sphincter, which helps increase blood flow through your anal ID"
+    },
+    {
+      "qNo": 2,
+      "subject": "Medical-Surgical Nursing",
+      "question": "In the absence of a nurse on the floor, a patient falls from the bed. This type of injury belongs to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Battery"
+        },
+        {
+          "key": "B",
+          "text": "Negligence"
+        },
+        {
+          "key": "C",
+          "text": "Tort"
+        },
+        {
+          "key": "D",
+          "text": "None of the above"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "In law and nursing ethics, negligence is defined as the failure to provide reasonable care that a prudent professional would normally give in a similar situation. If a nurse is absent from duty or fails to ensure patient safety (e.g., by leaving side rails down), and the patient falls from bed, this is considered professional negligence. According to Potter & Perry’s Fundamentals of Nursing (10th edition) and Black’s Law Dictionary, negligence in nursing arises when there is: 1. Duty of care owed to the patient, 2. Breach of that duty, 3. Injury to the patient, 4. Causal relationship between breach and injury. Therefore, this scenario is classified as negligence. Explanation of options: (a) Battery – Battery means intentional physical contact without consent (e.g., forcing an injection). A fall due to absence of care is not intentional, so it is not battery. (b) Negligence – Correct. The nurse had a duty of care to ensure safety, absence caused breach, and the patient suffered injury. Verified in Potter & Perry’s Fundamentals of Nursing and ICN Code of Ethics. (c) Tort – Tort is a broad legal term for a civil wrong (includes negligence, assault, battery, defamation). While negligence is a type of tort, the most specific answer here is negligence. (d) None of the above – Incorrect because negligence is clearly applicable."
+    },
+    {
+      "qNo": 3,
+      "subject": "Medical-Surgical Nursing",
+      "question": "The responsibility of maintaining a patient & medical record lies with:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Patient"
+        },
+        {
+          "key": "B",
+          "text": "Director"
+        },
+        {
+          "key": "C",
+          "text": "Treating doctor"
+        },
+        {
+          "key": "D",
+          "text": "Medical superintendent"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "In a hospital organization, the Medical Superintendent is responsible for overseeing the management of medical records. This includes ensuring that all necessary patient information, including identification, medical history, medication history, treatment details, and family history, is stored properly for future use. The Medical Records Department (MRD) is a part of the hospital where these records are maintained. · Patient: The Patient is responsible for their own belongings and is expected to follow hospital instructions and protocols, but they are not responsible for maintaining the medical record. · Director: The Director is the superior authority in the hospital organization, but their responsibility typically focuses on overall hospital management, not specific patient records. · Treating doctor: The Treating physician is responsible for treating the patient, including prescribing medications and administering care, but does not manage medical records. · Medical superintendent: The Medical Superintendent oversees the organization and storage of medical records, ensuring that all essential patient information is correctly stored and available for future reference. Information Booster Patient medical records include: · Identification data · Medical history · Medication history/treatment history · Family history · Medical directives · Lab forms · Consent forms · Progress notes · Financial information"
+    },
+    {
+      "qNo": 4,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "Postpartum bleeding after 24 hours of delivery is known as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Primary PPH"
+        },
+        {
+          "key": "B",
+          "text": "Secondary PPH"
+        },
+        {
+          "key": "C",
+          "text": "Third stage hemorrhage"
+        },
+        {
+          "key": "D",
+          "text": "True postpartum hemorrhage"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Primary PPH: Primary PPH occurs within 24 hours of delivery, typically due to uterine atony, bleeding disorders, or placental issues. · Secondary PPH: Secondary PPH occurs 24 hours to 12 weeks after delivery, often caused by retained placental tissue, infection, or uterine issues. · Third stage hemorrhage: Third stage hemorrhage occurs during the third stage of labor, specifically before the placenta is delivered. It is not related to bleeding occurring after 24 hours. · True postpartum hemorrhage: This is not a standard medical term; therefore, it does not accurately describe postpartum bleeding. The correct term is either primary or secondary PPH. · Symptoms of PPH include dizziness, fainting, vaginal bleeding, blurred vision, and in severe cases, death. · Causes of PPH include loss of uterine tone, bleeding disorders, and trauma during delivery. · Treatment includes uterine massage, blood transfusion, and medications like Misoprostol and Methylergonovine to control bleeding. · Medical procedures for managing PPH include uterine compression (massaging to shrink the uterus), dilation and curettage (surgical removal of uterine lining), and the use of balloon tamponade (inflating a balloon to stop the bleeding). Additional Information: · Postpartum Psychosis is a severe mental illness affecting women shortly after childbirth, often triggered by a history of Bipolar Affective Disorder (BPAD) or family history. · Postpartum Depression involves a complex mix of physical, emotional, and behavioral changes after childbirth. · Other postpartum complications include cardiovascular disorders, infections, sepsis, pre-existing illnesses, PPH, and cardiomyopathy."
+    },
+    {
+      "qNo": 5,
+      "subject": "Medical-Surgical Nursing",
+      "question": "A woman with 3rd-day postpartum complains of breast engorgement. What is the cutoff temperature for fever in postpartum women?",
+      "options": [
+        {
+          "key": "A",
+          "text": "37°C"
+        },
+        {
+          "key": "B",
+          "text": "38°C"
+        },
+        {
+          "key": "C",
+          "text": "39°C"
+        },
+        {
+          "key": "D",
+          "text": "34°C"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· 37°C: This is considered the normal body temperature for most individuals and does not indicate fever in postpartum women. · 38°C: A temperature of 38°C or higher is considered a fever in postpartum women, particularly when it persists, and may indicate an infection such as mastitis or other complications. · 39°C: While 39°C is a high fever, the threshold for postpartum fever is lower, set at 38°C to ensure early detection and management of potential complications. · 34°C: This is below normal body temperature and does not indicate fever. It might suggest hypothermia but is irrelevant to the postpartum context. · Breast engorgement occurs when the breast tissue overflows with milk, often due to the inability of the mother to feed the baby effectively. · Management: Applying warm water, using compresses, and massaging the breasts can help reduce the engorgement. · Fever in postpartum women is defined as a temperature of 38°C (100.4°F) or higher. · If the fever is greater than 38°C on any two of the first 10 days postpartum, it is considered abnormal and should be evaluated further. · A fever of 37°C is typically considered within normal range during the early postpartum period."
+    },
+    {
+      "qNo": 6,
+      "subject": "Medical-Surgical Nursing",
+      "question": "In which condition distal pulse is preferred rather than apical pulse?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Arrhythmia"
+        },
+        {
+          "key": "B",
+          "text": "Shock"
+        },
+        {
+          "key": "C",
+          "text": "Hypertension"
+        },
+        {
+          "key": "D",
+          "text": "Heart block"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Arrhythmia: In arrhythmias, the apical pulse is often preferred over the distal pulse because it provides a more accurate representation of the heart rate and rhythm. · Shock: In cases of shock, the distal pulse is preferred as it helps assess the adequacy of peripheral perfusion. A weak or absent distal pulse indicates compromised circulation due to poor cardiac output or vascular resistance. · Hypertension: The distal pulse may not provide additional diagnostic information in hypertension, where blood pressure measurements and apical pulse are more relevant. · Heart block: In heart block, the apical pulse is typically used as it reflects the true heart rate, especially when there is a discrepancy between the atrial and ventricular rates. · Shock refers to a life-threatening condition where there is inadequate blood flow to organs and tissues, leading to oxygen deprivation. · In shock, distal pulses (e.g., radial or pedal pulses) are often assessed to determine peripheral perfusion and circulatory status. · Distal pulses are preferred in shock because they help evaluate the extent of blood flow to the extremities, which can indicate the severity of circulatory failure. · Apical pulse is usually assessed in cases of arrhythmias or other cardiac conditions where heart rhythm and rate need precise monitoring. · In hypertension, blood pressure measurement is prioritized over pulse type."
+    },
+    {
+      "qNo": 7,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "A pre-eclampsia woman & baby is lying with her mother. Neonate born in 37 weeks. After 57 hours, when the nurse monitors the vital signs of the baby, the temperature is low (35°C). What will be the intervention?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Give punishment for mother for not caring baby"
+        },
+        {
+          "key": "B",
+          "text": "Separate the baby from mother"
+        },
+        {
+          "key": "C",
+          "text": "Place baby under radiant warmer"
+        },
+        {
+          "key": "D",
+          "text": "Cover the baby and check the vitals after 30 minutes"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "· Give punishment for mother for not caring baby: Punishing the mother is inappropriate and unethical. Education and support are the correct approaches. · Separate the baby from mother: Separating the baby from the mother may disrupt bonding and breastfeeding, which are crucial for the neonate & recovery unless absolutely necessary. · Place baby under radiant warmer: Radiant warmers provide controlled heat, ensuring the baby’s temperature stabilizes quickly and safely. This intervention is critical for maintaining normal thermoregulation and avoiding further complications. · Cover the baby and check the vitals after 30 minutes: While covering the baby helps retain heat, it is insufficient in cases of moderate hypothermia. Monitoring without effective warming delays proper care."
+    },
+    {
+      "qNo": 8,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Universal blood donor is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "O"
+        },
+        {
+          "key": "B",
+          "text": "AB"
+        },
+        {
+          "key": "C",
+          "text": "A"
+        },
+        {
+          "key": "D",
+          "text": "B"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Group O negative blood is considered the universal donor type because it has no A, B, or Rh antigens, minimizing the risk of adverse immune reactions. · AB blood group is the universal recipient, not donor, as it has both A and B antigens but no antibodies against either. · Option (c) and (d): Blood groups A and B can only donate to individuals with compatible antigens. Additional Information: · Rh factor is also considered during transfusion. O negative is the true universal donor as it does not have the Rh antigen. · Emergency transfusions often use O negative when the recipient & blood type is unknown."
+    },
+    {
+      "qNo": 9,
+      "subject": "General Aptitude & Reasoning",
+      "question": "WHO hand wash time with soap is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "40 to 60 seconds"
+        },
+        {
+          "key": "B",
+          "text": "20 to 30 seconds"
+        },
+        {
+          "key": "C",
+          "text": "2 minutes"
+        },
+        {
+          "key": "D",
+          "text": "5 minutes Copyright © 2026 Adda247"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· 40 to 60 seconds: WHO specifies that handwashing with soap should last 40 to 60 seconds to cover all steps, including palm rubbing, back of the hand, fingers, and wrists. · 20 to 30 seconds: 20 to 30 seconds is the recommended duration for using alcohol-based hand rubs, not soap and water. · 2 minutes: Two minutes is not the standard time recommended by WHO for hand washing; it exceeds the necessary duration for effective cleaning. · 5 minutes: This is far longer than needed for hand washing and is not practical or recommended in routine practice. Additional Information: · Effective handwashing is crucial in infection control, particularly in healthcare settings, and should include thorough cleaning of all hand surfaces. · Alcohol-based hand rubs are used when soap and water are unavailable but require shorter application times."
+    },
+    {
+      "qNo": 10,
+      "subject": "General Aptitude & Reasoning",
+      "question": "Why is it necessary to remove dark-colored nail paint before surgery?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nail paint interferes with SPO2 monitoring and we cannot assess capillary refill time"
+        },
+        {
+          "key": "B",
+          "text": "To prevent burns from cautery"
+        },
+        {
+          "key": "C",
+          "text": "Nail paint increases chances of infections"
+        },
+        {
+          "key": "D",
+          "text": "To follow OT ethics"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Nail paint interferes with SPO2 monitoring and we cannot assess capillary refill time: Nail paint, particularly dark-colored, can obstruct the light absorption of the pulse oximeter, leading to inaccurate oxygen saturation readings. It also prevents clear visualization of capillary refill time, a crucial assessment of peripheral perfusion. · To prevent burns from cautery: As nail paint does not significantly affect the risk of burns from electrocautery equipment. · Nail paint increases chances of infections: While hygiene is critical in the operating room, nail paint removal is not specifically associated with infection risk reduction. · To follow OT ethics: While maintaining operating room standards is essential, nail paint removal is not a matter of ethics but a practical need for accurate monitoring and assessment. Additional Information: · Healthcare professionals also monitor changes in the nail bed & color for signs of oxygenation or circulation problems during surgery. Clear nails help ensure accurate assessments."
+    },
+    {
+      "qNo": 11,
+      "subject": "Medical-Surgical Nursing",
+      "question": "A patient with MASA is admitted in MICU, and the nurse has to provide colostomy care to the patient. Which PPE should the nurse use?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Gloves, Gown, Mask"
+        },
+        {
+          "key": "B",
+          "text": "Gloves only"
+        },
+        {
+          "key": "C",
+          "text": "Gloves and mask"
+        },
+        {
+          "key": "D",
+          "text": "Gloves and shoe cover"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Gloves, Gown, Mask: Gloves, gown, and mask are recommended to ensure complete protection during colostomy care. Gloves prevent direct contact with body fluids, the gown shields clothing from contamination, and the mask reduces the risk of respiratory exposure. · Gloves only: Using only gloves is insufficient for infection prevention in MASA patients. · Gloves and mask: Gloves and a mask alone do not protect the nurse&#39;s clothing, which may get contaminated. · Gloves and shoe cover: Gloves and shoe covers are inadequate for upper body protection during care. Additional Information: · Patients with MASA require strict isolation and adherence to infection control protocols. · All used PPE should be disposed of in designated biohazard bins to prevent the spread of infection."
+    },
+    {
+      "qNo": 12,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "Which Leopold maneuver is used to assess the fetal attitude during abdominal palpation of an ANC mother?",
+      "options": [
+        {
+          "key": "A",
+          "text": "First"
+        },
+        {
+          "key": "B",
+          "text": "Second"
+        },
+        {
+          "key": "C",
+          "text": "Third"
+        },
+        {
+          "key": "D",
+          "text": "Fourth"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "First maneuver: Determines the fetal part in the fundus → assesses fetal lie and presentation. Second maneuver: Identifies the fetal back and limbs → assesses fetal position. Third maneuver: Palpates the lower uterine pole to identify the presenting part and check engagement. Fourth maneuver: Assesses descent and fetal attitude (degree of flexion of the fetal head)."
+    },
+    {
+      "qNo": 13,
+      "subject": "Medical-Surgical Nursing",
+      "question": "The self-care deficit theory was proposed by:",
+      "options": [
+        {
+          "key": "A",
+          "text": "D. Orem"
+        },
+        {
+          "key": "B",
+          "text": "Rogers"
+        },
+        {
+          "key": "C",
+          "text": "Betty Newman"
+        },
+        {
+          "key": "D",
+          "text": "Leininger"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· D. Orem: Proposed the self-care deficit theory, which includes three interrelated theories: the theory of self-care, the theory of self-care deficit, and the theory of nursing systems. · Rogers: Known for the Science of Unitary Human Beings, which views patients as energy fields interacting with their environment. · Betty Newman: Developed the Neuman Systems Model, focusing on stress and the patient’s response to stressors. · Leininger: Introduced the Culture Care Theory, emphasizing culturally congruent care. Additional Information: · The self-care deficit theory identifies the need for nursing interventions when individuals are unable to meet their basic self-care needs due to illness, injury, or other factors. · Nurses assist by providing support, teaching, and resources to enable patients to regain independence in self-care."
+    },
+    {
+      "qNo": 14,
+      "subject": "Medical-Surgical Nursing",
+      "question": "A patient with anorexia nervosa is taking food correctly as per her diet plan, but there was no increase in weight observed. What will be the nursing intervention for the above patient?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Observe the patient while taking the meal and after up to 2 hours"
+        },
+        {
+          "key": "B",
+          "text": "Increase calorie food from 1500 to 2000"
+        },
+        {
+          "key": "C",
+          "text": "Add vitamin tablets to her medications"
+        },
+        {
+          "key": "D",
+          "text": "Engage them in other activities"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Observe the patient while taking the meal and after up to 2 hours: Observation helps detect any maladaptive behaviors like purging or discarding food, which could hinder weight gain. · Increase calorie food from 1500 to 2000: Increasing calorie intake may be necessary but should be based on careful assessment and medical advice. Without behavioral correction, increasing food intake alone might not address the underlying issue. · Add vitamin tablets to her medications: Adding vitamin supplements may improve nutritional deficiencies but does not directly address the behavioral aspect of the disorder. Copyrightbut © 2026 · Engage them in other activities: Engaging in activities can support emotional well-being is notAdda247 sufficient as the primary intervention for weight stabilization. Additional Information: · Nursing care for anorexia nervosa focuses on behavioral monitoring, psychological support, and adherence to the nutritional rehabilitation plan. · A multidisciplinary approach involving dietitians, psychologists, and medical professionals is essential for effective management."
+    },
+    {
+      "qNo": 15,
+      "subject": "Medical-Surgical Nursing",
+      "question": "What is the difference between Regular ECT and Modified ECT?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Low Volt shock is provided"
+        },
+        {
+          "key": "B",
+          "text": "Anesthesia is given"
+        },
+        {
+          "key": "C",
+          "text": "Muscle relaxant is given"
+        },
+        {
+          "key": "D",
+          "text": "None of the above"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Explanation: The key difference between Regular (Unmodified) ECT and Modified ECT is the use of general anesthesia (along with a muscle relaxant) in modified ECT. Regular ECT: Given without anesthesia or muscle relaxants, which can cause strong muscle contractions and higher risk of injury. Modified ECT: Given under short-acting general anesthesia and muscle relaxants, making the procedure safer, more comfortable, and minimizing physical complications. Hence, the most appropriate single best answer is anesthesia is given."
+    },
+    {
+      "qNo": 16,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "are crystalloid solutions except:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Normal saline"
+        },
+        {
+          "key": "B",
+          "text": "Ringer lactate"
+        },
+        {
+          "key": "C",
+          "text": "5% Dextrose"
+        },
+        {
+          "key": "D",
+          "text": "HES"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "· Normal Saline: Composition: Contains 0.9% sodium chloride (NaCl) in water, making it isotonic to plasma. · Classification: Isotonic crystalloid solution. · Uses: Volume resuscitation, electrolyte replacement, and as a vehicle for drug administration. · Ringer Lactate:Composition: Contains sodium, chloride, potassium, calcium, and lactate as a buffer. · Classification: Isotonic crystalloid solution. · Uses: Preferred for fluid resuscitation in cases of burns, trauma, and metabolic acidosis due to its buffering capacity (lactate is converted to bicarbonate). · 5% Dextrose (D5W):Composition: 5% glucose in water, initially isotonic but becomes hypotonic after glucose is metabolized. · Classification: Hypotonic crystalloid solution. · Uses: Used for hydration and to supply calories. It is also used in cases of hypernatremia. · HES (Hydroxyethyl Starch):Composition: Contains large starch molecules dissolved in a saline or balanced electrolyte solution. · Classification: Colloid solution. · Uses: Primarily used for volume expansion by increasing oncotic pressure and retaining fluid in the vascular space. · Why it is not a crystalloid: HES contains large, insoluble molecules, unlike crystalloids, which consist of small, water-soluble molecules. Additional Information: · Colloids: Substance containing particles larger than atoms · Gelatin, butter, blood, colored gases are few examples of colloids · Dehydration and kidney failure patients will be given with colloid solutions to treat"
+    },
+    {
+      "qNo": 17,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "An antenatal mother is admitted with complaints of eclampsia. What will be the loading dose of MgSO4 given to the patient?",
+      "options": [
+        {
+          "key": "A",
+          "text": "4 ml in 16 ml NS"
+        },
+        {
+          "key": "B",
+          "text": "8 ml in 12 ml of NS"
+        },
+        {
+          "key": "C",
+          "text": "6 ml in 14 ml of NS"
+        },
+        {
+          "key": "D",
+          "text": "2 ml in 18 ml of NS"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "In the management of eclampsia, the Pritchard regimen is one of the most widely used protocols for administering Magnesium Sulphate (MgSO₄). Loading Dose in Pritchard Regimen: 4 grams (8 ml of 50% MgSO₄ solution)intravenously (IV) over 5–10 minutes, diluted with 12 ml of Normal Saline (NS) or sterile water PLUS 10 grams (5 g in each buttock)intramuscularly (IM) using 50% MgSO₄, mixed with 1 ml of 2% lignocaine to reduce pain Therefore, the correct IV loading dose for eclampsia is: 8 ml of 50% MgSO₄ in 12 ml NS = 4 grams IV loading dose This is then followed by maintenance doses IM every 4 hours as per the regimen. / Explanation of Each Option: (a) 4 ml in 16 ml NS – 4 ml of 50% MgSO₄ = 2 grams only, which is inadequate for loading dose. (b) 8 ml in 12 ml of NS – 8 ml of 50% MgSO₄ = 4 grams, which is the standard IV loading dose for eclampsia treatment. (c) 6 ml in 14 ml of NS – 6 ml = 3 grams; less than the required loading dose. (d) 2 ml in 18 ml of NS – 2 ml = 1 gram of MgSO₄; far too low for a loading dose in eclampsia."
+    },
+    {
+      "qNo": 18,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which among the following is a measure of dispersion?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mean"
+        },
+        {
+          "key": "B",
+          "text": "Range Copyright © 2026 Adda247"
+        },
+        {
+          "key": "C",
+          "text": "Mode"
+        },
+        {
+          "key": "D",
+          "text": "Median"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Mean: The mean is a measure of central tendency, representing the average of a dataset. It does not describe the spread or variability of data. · Range: The range is a measure of dispersion, as it indicates the difference between the maximum and minimum values in a dataset, providing a sense of data variability. · Mode: The mode is another measure of central tendency, representing the most frequently occurring value in a dataset, and does not reflect data dispersion. · Median: The median is also a measure of central tendency, representing the middle value when the data is ordered. It does not measure dispersion. Additional Information: · Quartile deviation -> Half of the difference between upper and lower quartile · Standard deviation -> Measure of how disperse the data in relation to mean · Mean deviation -> Used to measure average deviation from the mean of given data"
+    },
+    {
+      "qNo": 19,
+      "subject": "Medical-Surgical Nursing",
+      "question": "A patient was brought to ED with a complaint of chest pain for the last 1 hour. Which test is done to detect myocardial infarction?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Serum electrolyte"
+        },
+        {
+          "key": "B",
+          "text": "Check ABG"
+        },
+        {
+          "key": "C",
+          "text": "Check CBC"
+        },
+        {
+          "key": "D",
+          "text": "Troponin T"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "· Serum electrolyte: While serum electrolyte tests are important for assessing electrolyte imbalances that may affect heart function, they are not specific for diagnosing myocardial infarction. · Check ABG: Arterial blood gas (ABG) analysis measures oxygenation and acid-base status but is not used to detect myocardial infarction. · Check CBC: A complete blood count (CBC) provides general information about a patient's health, such as signs of infection or anemia, but it does not diagnose myocardial infarction. · Troponin T: Troponin T is a highly sensitive and specific cardiac biomarker used to detect myocardial infarction. Elevated levels indicate cardiac muscle injury, making it the most appropriate test in this scenario. Myocardial Infraction - an irreversible damage to the cardiac tissues due to lack of oxygen · Troponin T and Troponin I are the proteins present in blood which will be released when the cardiac muscle damages · Hence Troponin T is key marker of Myocardial Infraction. · Artery blockage contribute to MI Causes: · Age · Family History · Smoking · High cholesterol levels · Diabetes · Obesity Additional Information: · ABG - Arterial blood gas analysis where the arterial blood is taken and the gaseous analysis will be done · Serum electrolytes - the electrolytes like sodium, potassium, calcium and magnesium will be analyzed · CBC - complete blood count where the blood cells and other components will be analyzed"
+    },
+    {
+      "qNo": 20,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "Which psychiatric drug does not need any test dose before starting the routine dose?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Haloperidol"
+        },
+        {
+          "key": "B",
+          "text": "Risperidone"
+        },
+        {
+          "key": "C",
+          "text": "Clozapine Copyright © 2026 Adda247"
+        },
+        {
+          "key": "D",
+          "text": "Quetiapine"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Haloperidol, a first-generation (typical) antipsychotic, can be started directly at a clinically appropriate dose without the requirement of a test dose. Although patients should be monitored for extrapyramidal symptoms (EPS) and QT prolongation, there is no specific test dose protocol mandated before initiating haloperidol therapy. It is routinely used in emergency psychiatric settings and general practice. Explanation of options: (a) Haloperidol: Correct. No test dose is needed; standard initial dosing and clinical monitoring are sufficient. (b) Risperidone: Requires gradual dose titration, especially in elderly and renal-impaired patients. Not associated with a test dose, but not the best choice for this question. (c) Clozapine: Test dose and mandatory blood monitoring required. Clozapine can cause agranulocytosis, so baseline and weekly WBC/ANC counts are mandatory before and during treatment. (d) Quetiapine: Requires slow titration to reduce risk of orthostatic hypotension and sedation, though not a formal test dose—it still isn’t initiated abruptly."
+    },
+    {
+      "qNo": 21,
+      "subject": "Mental Health & Psychiatric Nursing",
+      "question": "A patient admitted to the ward with the diagnosis of delirium. In the first 24 to 48 hours, what should the nurse plan according to priority?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Orientation to person, place, and environment"
+        },
+        {
+          "key": "B",
+          "text": "To restore bladder and bowel function"
+        },
+        {
+          "key": "C",
+          "text": "Correct the wake and sleep cycle"
+        },
+        {
+          "key": "D",
+          "text": "To improve nutritional status"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Orientation to person, place, and environment: The priority in managing a patient with delirium is to reorient them to their surroundings to reduce confusion, anxiety, and agitation, ensuring their safety and cooperation in care. · To restore bladder and bowel function: While important, this is not an immediate priority in the first 24-48 hours unless there is an acute issue causing significant distress or risk. · Correct the wake and sleep cycle: Sleep-wake cycle correction is essential in delirium but is addressed after stabilizing the patient's orientation and ensuring safety. · To improve nutritional status: Nutritional support is necessary for long-term recovery but is not the primary focus during the acute phase of delirium management. Difference between Delirium and Dementia: · 4.As we can see there is marked disorientation in awareness, So the initial treatment includes orientation to person, place and environment · Delirium is involved in confused thinking the nurse should assess the orientation of person, place and environment · This can be done by asking questions like where are you, what is the time now, etc. Additional Information: · Hyper active delirium: the person will have rapid mood changes, hallucinations, agitation and restlessness · Hypoactive delirium: inactive, reduced motor activity, abnormal drowsiness · Mixed: will have the symptoms of both"
+    },
+    {
+      "qNo": 22,
+      "subject": "Medical-Surgical Nursing",
+      "question": "A patient posted for surgery is advised to remove jewelry because:",
+      "options": [
+        {
+          "key": "A",
+          "text": "To maintain OR ethics"
+        },
+        {
+          "key": "B",
+          "text": "It causes burns to the patient with the use of cautery"
+        },
+        {
+          "key": "C",
+          "text": "To prevent theft"
+        },
+        {
+          "key": "D",
+          "text": "To prevent disturbance to the surgeon"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· To maintain OR ethics: While maintaining operating room protocols is essential, the removal of jewelry is not specifically related to ethical concerns but rather safety. · It causes burns to the patient with the use of cautery: Jewelry can conduct electricity and heat, potentially leading to burns during the use of electrocautery equipment in surgery. This is the main reason for its removal. · To prevent theft: Though it may be a secondary concern, preventing theft is not the primary reason for advising jewelry removal before surgery. · To prevent disturbance to the surgeon: Jewelry does not cause any direct disturbance to the surgeon during the procedure. The primary concern is patient safety. Infection prevention and control · Standard precautions: · Hand hygiene · PPE · Aseptic technique- Prevention of needle stick injury · Environmental cleaning · Instrument reprocessing · Waste management · Universal precautions: · Blood spillage management/blood and bloody fluid post exposure management."
+    },
+    {
+      "qNo": 23,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "At what time is the ward census done?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Day time"
+        },
+        {
+          "key": "B",
+          "text": "Morning shift"
+        },
+        {
+          "key": "C",
+          "text": "Evening shift"
+        },
+        {
+          "key": "D",
+          "text": "None of the above"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Day time: This is a vague option as \"day time\" could refer to any time during daylight hours and is not specific to when the ward census is typically done. · Morning shift: The ward census is commonly conducted during the morning shift as it aligns with the start of the day’s activities, allowing for patient headcount, updates, and planning of care. · Evening shift: While some updates to patient records may occur in the evening, the formal census is generally completed during the morning shift. · None of the above: As the census is indeed done during the morning shift to ensure accurate data for the day’s planning. · Hospitals includes mainly medical wards, surgical wards, ICUs, emergency, and laboratories and other areas which will help the patient to get proper treatment · Ward census will include the number of patients admitting into the ward · On basis of this further management is planned for improving hospitals Additional Information: · BD - twice in a day Copyright © 2026 Adda247 · TID - thrice in a day · QID - four times a day · NBM - Nill per oral"
+    },
+    {
+      "qNo": 24,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "Adrenaline dose in anaphylactic shock is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1 ∶ 1000 (0.5 ml)"
+        },
+        {
+          "key": "B",
+          "text": "1 ∶ 10000 (0.5 ml)"
+        },
+        {
+          "key": "C",
+          "text": "1 ∶ 1000 (1 ml)"
+        },
+        {
+          "key": "D",
+          "text": "1 ∶ 10000 (1 ml)"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· 1 ∶ 1000 (0.5 ml): The recommended dose of adrenaline for intramuscular (IM) administration in anaphylactic shock is 0.5 ml of a 1 ∶ 1000 solution (equivalent to 0.5 mg). This dose is typically given in the lateral thigh and helps counteract severe allergic reactions by improving airway patency, reducing swelling, and stabilizing blood pressure. · 1 ∶ 10000 (0.5 ml): A 1 ∶ 10000 dilution is used for intravenous (IV) administration during cardiac arrest, not for IM administration in anaphylactic shock. · 1 ∶ 1000 (1 ml): Administering 1 ml of a 1 ∶ 1000 solution (1 mg) IM exceeds the recommended dose for anaphylactic shock and can increase the risk of side effects such as severe hypertension or arrhythmias. · 1 ∶ 10000 (1 ml): This is also intended for IV use in emergencies like cardiac arrest and is not appropriate for the initial management of anaphylaxis. · Shock - sudden drop of blood flow to the vital organs · Types · Anaphylactic - due to allergic reactions · Neurogenic - nervous injuries · Cardiogenic - cardiac related conditions can lead to shock · Hypovolemic - due to less amount of fluid · Low blood pressure, rapid breathing, weak pulse, decreased urine output. · Adrenaline is the first line treatment for shock where for anaphylactic shock we give 0.5ml to treat it · Adrenaline rapidly reverses the effects of anaphylaxis. Additional Information:"
+    },
+    {
+      "qNo": 25,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "Position for a patient with continuous RT feeding:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Supine"
+        },
+        {
+          "key": "B",
+          "text": "Fowlers"
+        },
+        {
+          "key": "C",
+          "text": "Reverse Trendelenburg"
+        },
+        {
+          "key": "D",
+          "text": "Side lying"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Supine: A supine position increases the risk of aspiration during RT (nasogastric or enteral) feeding as the stomach contents can easily reflux into the esophagus and airway. · Fowlers: The Fowler's position (semi-sitting, with the head of the bed elevated 30°–45°) is the recommended position for continuous RT feeding. It minimizes the risk of aspiration and promotes proper digestion and gastric emptying. · Reverse Trendelenburg: Although this position elevates the head, it is less commonly used for feeding and is primarily used for patients with specific contraindications to bending at the hips. · Side lying: This position is not recommended during RT feeding, as it does not prevent aspiration effectively and can complicate feeding tube patency. Additional Information: · Supine - used for all common procedures and supervision or physical examination of patient · Reverse Trendelenburg - head is raised than foot · Side lying: used for gastric wash or bowel wash, spinal tapping and other procedures"
+    },
+    {
+      "qNo": 26,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Normally enteral feedings are flushed with water to open blocked tubes and ease feeding. In which area is it done with air?",
+      "options": [
+        {
+          "key": "A",
+          "text": "NICU"
+        },
+        {
+          "key": "B",
+          "text": "Operation unit"
+        },
+        {
+          "key": "C",
+          "text": "Rehabilitation unit"
+        },
+        {
+          "key": "D",
+          "text": "Critical care unit"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· NICU (Neonatal Intensive Care Unit): In the NICU, flushing enteral feeding tubes with air is preferred over water to minimize the risk of fluid overload in neonates, who have limited tolerance to extra fluid volume. Air flushing also helps confirm tube placement safely in these delicate patients. · Operation unit: Enteral feeding is rarely performed in the operation unit. Flushing tubes with air in this setting is not common practice, as feeding tubes are generally managed postoperatively or outside the operating room. · Rehabilitation unit: In the rehabilitation unit, flushing enteral feeding tubes with water is standard, as patients typically have better fluid tolerance and do not require the precautions taken for Copyright © 2026 Adda247 neonates or critically ill patients. · Critical care unit: In critical care units, water is commonly used to flush feeding tubes unless contraindicated. Air may be used in specific situations, but this is less frequent compared to practices in the NICU. Additional Information: · Operation unit - where the surgeries are performed usually minor and major OT can be seen in hospitals · Rehabilitation - care given for the patient to prevent adverse complications · Hospice care - focuses on comfort and quality of life of patient who is having serious illness"
+    },
+    {
+      "qNo": 27,
+      "subject": "Community Health Nursing (CHN)",
+      "question": "A 19-year-old unmarried girl came to the gynae OPD for vaccination against cervical cancer. Which vaccine will be administered to the client?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Gardasil"
+        },
+        {
+          "key": "B",
+          "text": "TCV"
+        },
+        {
+          "key": "C",
+          "text": "Bexsero"
+        },
+        {
+          "key": "D",
+          "text": "HBV"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Gardasil: Gardasil is a vaccine that protects against the human papillomavirus (HPV), a primary cause of cervical cancer. It is recommended for females aged 9–26 years to prevent cervical, vaginal, and vulvar cancers. It is the correct vaccine for this client. · TCV (Typhoid Conjugate Vaccine): This vaccine protects against typhoid fever and is unrelated to cervical cancer prevention. · Bexsero: Bexsero is a vaccine for meningococcal disease caused by Neisseria meningitidis serogroup B. It has no role in preventing cervical cancer. · HBV (Hepatitis B Vaccine): The HBV vaccine protects against hepatitis B, a liver infection, and does not prevent cervical cancer. Additional Information: · HBV - against hepatitis -B vaccine - as soon as after birth · Bexsero - against meningococcal infection - should be given before 2 months of age · TCV - against typhoid - given any time after 2 years"
+    },
+    {
+      "qNo": 28,
+      "subject": "Medical-Surgical Nursing",
+      "question": "A patient in the emergency department diagnosed with fluid and air present in the lung. What is the above-mentioned condition known as?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hemothorax"
+        },
+        {
+          "key": "B",
+          "text": "Hydropneumothorax"
+        },
+        {
+          "key": "C",
+          "text": "Hemopneumothorax"
+        },
+        {
+          "key": "D",
+          "text": "Pneumothorax"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Hemothorax: Hemothorax refers to the accumulation of blood in the pleural cavity, which does not involve the presence of air along with the fluid. · Hydropneumothorax: Hydropneumothorax is the correct term for the presence of both air and fluid in the pleural cavity. It typically results from trauma, infection, or surgical procedures. · Hemopneumothorax: Hemopneumothorax refers to the simultaneous presence of blood and air in the pleural cavity. This is not specified in the question, as \"fluid\" can refer to other types of fluids (e.g., serous fluid). · Pneumothorax: Pneumothorax refers to air in the pleural cavity without any fluid. It often causes lung collapse but does not describe the coexistence of fluid and air. Copyright © 2026 Adda247 Additional Information: · Hemothorax - lungs filled with blood - tissue plasmogen activators can be used to treat it · Pneumothorax - lungs filled with air - insertion of needle and removal of excess air · Hemopneumothorax - lungs filled with blood and air - chest tube thoracotomy"
+    },
+    {
+      "qNo": 29,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "Lignocaine and adrenaline are not used for the repair of injury to digitalis because?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Adrenaline decreases the effect of lignocaine"
+        },
+        {
+          "key": "B",
+          "text": "Adrenaline causes systemic effects"
+        },
+        {
+          "key": "C",
+          "text": "Adrenaline causes vasodilation, leading to increased bleeding"
+        },
+        {
+          "key": "D",
+          "text": "Adrenaline causes vasoconstriction, leading to decreased tissue perfusion"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "In digital blocks (fingers, toes, penis, nose, ears), lignocaine with adrenaline is avoided because adrenaline causes intense vasoconstriction. This reduces blood supply to end-artery areas → risk of ischemia, necrosis, and gangrene. Therefore, plain lignocaine (without adrenaline) is used for digital nerve block. Explanation of options: (A) Adrenaline decreases the effect of lignocaine: Wrong. Adrenaline actually prolongs lignocaine’s effect by reducing systemic absorption. (B) Adrenaline causes systemic effects: Not the main concern in digital injury; systemic effects occur if large doses are absorbed, not in small digital blocks. (C) Adrenaline causes vasodilation, leading to increased bleeding: Opposite. Adrenaline causes vasoconstriction, not vasodilation. (D) Adrenaline causes vasoconstriction, leading to decreased tissue perfusion: Correct. This can cause ischemia and necrosis in digits supplied by end arteries."
+    },
+    {
+      "qNo": 30,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "A patient with DVT is advised low molecular heparin. At which site will the nurse administer this?",
+      "options": [
+        {
+          "key": "A",
+          "text": "SC"
+        },
+        {
+          "key": "B",
+          "text": "IM"
+        },
+        {
+          "key": "C",
+          "text": "Oral"
+        },
+        {
+          "key": "D",
+          "text": "IV"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· SC (Subcutaneous): Low molecular weight heparin (e.g., enoxaparin) is typically administered subcutaneously. This method ensures gradual absorption, providing effective anticoagulation with a lower risk of complications compared to IV or IM routes. · IM (Intramuscular): Heparin is not administered intramuscularly due to the risk of hematoma formation at the injection site, especially in patients at risk for bleeding. · Oral: Low molecular weight heparin is not available in oral form. Oral anticoagulants like warfarin or direct oral anticoagulants (DOACs) are used for long-term management instead. · IV (Intravenous): Unfractionated heparin is administered intravenously for acute management, but low molecular weight heparin is specifically designed for subcutaneous use. Additional Information: · Low molecular weight heparin is having less bleeding risk than other types of heparins. · Platelet count routine monitoring is necessary to avoid heparin induced thrombocytopenia"
+    },
+    {
+      "qNo": 31,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "Glove papers are discarded in which BMW dustbin?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Black dustbin"
+        },
+        {
+          "key": "B",
+          "text": "Red dustbin"
+        },
+        {
+          "key": "C",
+          "text": "Yellow dustbin"
+        },
+        {
+          "key": "D",
+          "text": "Blue dustbin"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Black dustbin: Non-contaminated glove papers are classified as general waste and are disposed of in the black dustbin, which is designated for non-hazardous and non-infectious waste. · Red dustbin: The red dustbin is for contaminated recyclable waste like used gloves, IV tubes, and syringes. Glove papers, unless contaminated, are not included in this category. · Yellow dustbin: Yellow bins are for biomedical waste such as human tissues, dressings, or materials contaminated with body fluids, which does not apply to glove papers. · Blue dustbin: Blue bins are used for glassware and metallic items, which are recyclable but unrelated to glove paper disposal. Glove papers coming under the category of general waste. General waste should be discarded in black dustbin Additional Information: · Red dustbin -> IV sets, urine bags, catheters, gloves etc. · Yellow dustbin -> Infectious, pathological, chemical, pharmaceutical, cytotoxic waste. · Blue dustbin -> Sharps including metals."
+    },
+    {
+      "qNo": 32,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "BMW management of vials and broken ampules should be discarded in:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Blue dustbin"
+        },
+        {
+          "key": "B",
+          "text": "Red dustbin"
+        },
+        {
+          "key": "C",
+          "text": "Black dustbin"
+        },
+        {
+          "key": "D",
+          "text": "None of the above"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Blue dustbin: According to biomedical waste management guidelines, glassware such as broken ampules, vials, and other glass items should be discarded in blue dustbins, which are specifically designated for sharps and glass. This ensures safe disposal and minimizes the risk of injury. · Red dustbin: The red dustbin is used for contaminated plastic waste, such as IV sets, catheters, and gloves, but not for glass items. · Black dustbin: Black bins are for general non-hazardous waste, such as paper and kitchen waste, and not biomedical waste. · None of the above: This is incorrect because blue dustbins are the designated choice for vials and broken ampules. Glassware items like broken or discarded ampules, vials should be discarded in blue cardboard box. Copyright © 2026 Adda247 Additional Information: · Red dustbin -> IV sets, urine bags, catheters, gloves etc. · Yellow dustbin -> Infectious, pathological, chemical, pharmaceutical, cytotoxic waste. · Blue dustbin -> Sharps including metals. · Black dustbin -> General waste like food and papers etc"
+    },
+    {
+      "qNo": 33,
+      "subject": "Community Health Nursing (CHN)",
+      "question": "Sharp blades and needles are to be discarded in which of the following?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Black cardboard"
+        },
+        {
+          "key": "B",
+          "text": "Red"
+        },
+        {
+          "key": "C",
+          "text": "White container"
+        },
+        {
+          "key": "D",
+          "text": "Blue"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "· Black cardboard: Black containers are for general, non-hazardous waste, such as paper or food waste, and are not suitable for disposing of sharps. · Red: Red bins are for contaminated recyclable waste like gloves, IV sets, and catheters but not sharps like blades and needles. · White container: According to BMW guidelines, sharp waste such as needles, scalpels, and blades should be discarded in puncture-proof white containers to ensure safe handling and prevent injuries. · Blue: Blue bins are meant for glass waste like vials and ampules, not sharp objects. · Classification of biomedical waste: · Infectious -> Waste contaminated with blood & other body fluids, cultures, swabs and bandages etc. · Pathological -> Human tissues, organs or fluids, body parts & contaminated animal dead bodies. · Sharps -> Syringe needles, disposable scalpels and blades. · Chemical waste -> Solvents, reagents in labs, disinfectants etc. · Pharmaceutical waste -> Expired, unused and contaminated drugs and vaccines. · Cytotoxic waste -> Cytotoxic drugs used in cancer treatment and their metabolites. · Radioactive waste -> Radioactive diagnostic and therapeutic materials. · General waste -> Papers, food, garbage etc. Sharps like blades, needles and disposable scalpels should be discarded in white container."
+    },
+    {
+      "qNo": 34,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Vicryl 3.0 is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Natural absorbable"
+        },
+        {
+          "key": "B",
+          "text": "Synthetic non-absorbable"
+        },
+        {
+          "key": "C",
+          "text": "Synthetic absorbable"
+        },
+        {
+          "key": "D",
+          "text": "Natural non-absorbable"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "· Natural absorbable: This category includes sutures like catgut, made from natural materials. Vicryl is not natural but synthetic. · Synthetic non-absorbable: This includes sutures like nylon or polypropylene, which are synthetic and do not absorb over time. Vicryl does not belong to this group. · Synthetic absorbable: Vicryl is a synthetic absorbable suture made of polyglactin 910. It is commonly used in surgeries because it gradually absorbs within the body over time, reducing the need for suture removal. · Natural non-absorbable: Sutures like silk fall under this category. Vicryl is synthetic and absorbable, not natural or non-absorbable. Additional Information: · Vicryl 3-0 is used for general soft tissue approximation or ligation. · It takes 56 - 70 days to get dissolve."
+    },
+    {
+      "qNo": 35,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "A doctor prescribed a pediatric child 50 ml of fluid transfused over 10 minutes at a drop rate of 15 ml per hour. In 30 minutes, what will be the flow rate?",
+      "options": [
+        {
+          "key": "A",
+          "text": "20"
+        },
+        {
+          "key": "B",
+          "text": "50"
+        },
+        {
+          "key": "C",
+          "text": "25"
+        },
+        {
+          "key": "D",
+          "text": "30"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Formula: Given: Volume of fluid prescribed: 50 mL Time prescribed for infusion: 10 minutes Drop factor: 15 mL/hour Step 1: Convert the Drop Factor to gtt/min The drop factor is given as 15 mL/hour, which we convert to mL/min: Drop factor (mL/min)= 15/60=0.25mL/min Copyright © 2026 Adda247 Final Answer: Flow Rate (gtt/min): 20 gtt/min The flow rate for 30 minutes is the same, as it remains constant."
+    },
+    {
+      "qNo": 36,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "A nurse is asked to give 1000 ml of normal saline at a flow rate of 125 ml per hour. How much time will it take to complete this fluid?",
+      "options": [
+        {
+          "key": "A",
+          "text": "8 hours"
+        },
+        {
+          "key": "B",
+          "text": "6 hours"
+        },
+        {
+          "key": "C",
+          "text": "10 hours"
+        },
+        {
+          "key": "D",
+          "text": "12 hours"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Flow rate (ml/hr) = Total volume (ml) ÷ Infusion time (hr) · Infusion time (hr) = Total volume (ml) ÷ Flow rate (ml/hr) · Infusion time (hr) = 1000 / 125 = 8 hrs · To transfuse 1000 ml of NS at the flow rate of 125 ml / hour, 8 hours are required. Additional Information: · Total volume (ml) = Flow rate (ml/hr) x Infusion time (hr)."
+    },
+    {
+      "qNo": 37,
+      "subject": "Medical-Surgical Nursing",
+      "question": "A nurse in PICU is advised to give 400 ml of fluid over 8 hours. The drop factor is 60 drops per minute. What is the flow rate?",
+      "options": [
+        {
+          "key": "A",
+          "text": "13 drops per minute"
+        },
+        {
+          "key": "B",
+          "text": "50 drops per minute"
+        },
+        {
+          "key": "C",
+          "text": "17 drops per minute"
+        },
+        {
+          "key": "D",
+          "text": "30 drops per minute"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Flow rate = Volume (ml) x Drop factor ÷ Time · Flow rate = 400 x 60 ÷ 8 x 60 = 50 drops per minute. Additional Information: · Hours should be converted into minutes. · So, 8 hours = 4 x 60 = 480 minutes."
+    },
+    {
+      "qNo": 38,
+      "subject": "Medical-Surgical Nursing",
+      "question": "of the following are incorrect regarding stoma formation except:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Stoma is created near bony prominence"
+        },
+        {
+          "key": "B",
+          "text": "Stoma should be created away from bony prominence"
+        },
+        {
+          "key": "C",
+          "text": "Stoma is created in the lower abdomen in a fatty region"
+        },
+        {
+          "key": "D",
+          "text": "Stoma can be done anywhere"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Stoma is created near bony prominence: This is incorrect because creating a stoma near bony prominences increases the risk of pressure sores, irritation, and improper adhesion of stoma appliances. · Stoma should be created away from bony prominence: This is correct. Stomas are ideally placed in areas away from bony prominences to ensure proper appliance adhesion, avoid irritation, and enhance patient comfort. · Stoma is created in the lower abdomen in a fatty region: This is incorrect as placing a stoma in a fatty region can lead to difficulty in maintaining a proper seal due to skin creases and folds. · Stoma can be done anywhere: This is incorrect because stoma placement must consider factors like patient anatomy, comfort, and appliance management, making it a planned procedure rather than arbitrary placement. The stoma site should be 5 cm away from skin folds, prior scars or bony prominences and belt line. It allows for proper fitting. Additional Information: · Stoma should not be created near bony prominence. · In case of obese patient’s stoma should be created in upper abdomen."
+    },
+    {
+      "qNo": 39,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "ECG of the patient shows ST depression, prominent U wave, and inverted T wave. Which electrolyte imbalance is present?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Potassium 2.2 mEq/L"
+        },
+        {
+          "key": "B",
+          "text": "Calcium 8.2 mEq/L"
+        },
+        {
+          "key": "C",
+          "text": "Magnesium 1.8 mg/dl"
+        },
+        {
+          "key": "D",
+          "text": "Sodium 133 mEq/L"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Potassium 2.2 mEq/L: These ECG findings (ST depression, prominent U wave, and inverted T wave) are characteristic of hypokalemia (low potassium levels). Potassium of 2.2 mEq/L is critically low, and hypokalemia significantly affects cardiac conduction and repolarization. · Calcium 8.2 mEq/L: This calcium level is slightly below normal, but hypocalcemia usually manifests with prolonged QT intervals, not the ECG changes mentioned. Copyright © 2026 Adda247 · Magnesium 1.8 mg/dl: This is within the normal range (1.5–2.5 mg/dl). Hypomagnesemia may cause QT prolongation but does not specifically present with prominent U waves or inverted T waves. · Sodium 133 mEq/L: This is mildly hyponatremic, but sodium imbalances are not directly linked to the ECG changes described. Additional Information: · Sodium, calcium and magnesium levels are in normal levels. · Normal values: · Potassium -> 3.5 - 5 mEq/L · Calcium -> 8.5 - `10.5 mEq/L · Magnesium -> 1.3 - 2.5 mg/dl · Sodium -> 135 - 145 mEq/L"
+    },
+    {
+      "qNo": 40,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "A patient is undergoing blood transfusion and suddenly shows complaints of transfusion reaction. What will be the priority nursing intervention?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Stop the infusion and remove the cannula"
+        },
+        {
+          "key": "B",
+          "text": "Stop the infusion and flush with NS"
+        },
+        {
+          "key": "C",
+          "text": "Complete the transfusion and administer injection Avil"
+        },
+        {
+          "key": "D",
+          "text": "Complete the transfusion and discard the bag"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Stop the infusion and remove the cannula: While stopping the transfusion is correct, removing the cannula prematurely is not advised because it may be needed for administering emergency medications or fluids. · Stop the infusion and flush with NS: This is the correct intervention. The transfusion should be stopped immediately, and the line flushed with normal saline to prevent further reaction while maintaining IV access for medications or further management. · Complete the transfusion and administer injection Avil: Completing the transfusion is inappropriate as the reaction indicates a serious issue, and stopping the transfusion is crucial. Administering medication comes after stopping the transfusion. · Complete the transfusion and discard the bag: Completing the transfusion is unsafe. Additionally, the bag and tubing should be retained for testing and investigation of the reaction. Additional Information: · Prevention: · Administration of premedication like antipyretic (paracetamol) and anti-histamine · (Diphenhydramine) as per doctor's order. · Do patient identification, blood products verification properly prior to transfusion"
+    },
+    {
+      "qNo": 41,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "A nurse taking care of a child with epilepsy. What should the nurse do immediately?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Airway management and provide side-lying position"
+        },
+        {
+          "key": "B",
+          "text": "Administer oxygen to the child"
+        },
+        {
+          "key": "C",
+          "text": "Do nothing and record the epilepsy type and duration"
+        },
+        {
+          "key": "D",
+          "text": "Inform the doctor about epilepsy and record in the nurse & chart"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Airway management and provide side-lying position: Ensuring airway safety is the priority during a seizure. Placing the child in a side-lying position prevents aspiration of saliva or vomit, and airway management reduces the risk of hypoxia. · Administer oxygen to the child: Administering oxygen can be helpful but is not the immediate first step. Airway management and positioning must be addressed first. · Do nothing and record the epilepsy type and duration: Observing and documenting are important but secondary to immediate safety measures, such as airway protection and positioning. · Inform the doctor about epilepsy and record in the nurse's chart: Informing the doctor is necessary but comes after addressing the child’s immediate safety and stabilization during the seizure. Additional Information: · Do not start mouth-to-mouth breathing like CPR. · Patient usually starts breathing again on their own after seizure. · Do not try to stop the person movements. · Do not try to keep anything in the mouth to avoid injury. · Do not offer water or food until the patient becomes fully alert."
+    },
+    {
+      "qNo": 42,
+      "subject": "General Aptitude & Reasoning",
+      "question": "What advice should a nurse give to a patient on lithium therapy?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Drink a lot of water"
+        },
+        {
+          "key": "B",
+          "text": "Take the medicine after meals"
+        },
+        {
+          "key": "C",
+          "text": "Take the medicine on an empty stomach"
+        },
+        {
+          "key": "D",
+          "text": "Take a high-calorie diet"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Drink a lot of water: Patients on lithium therapy should be advised to maintain adequate hydration by drinking plenty of water. Lithium can affect kidney function and sodium balance, and dehydration increases the risk of lithium toxicity. · Take the medicine after meals: While taking lithium after meals may help reduce gastrointestinal side effects, hydration is the primary advice due to its importance in preventing toxicity. · Take the medicine on an empty stomach: Taking lithium on an empty stomach can increase the risk of gastrointestinal upset, so it is generally advised to take it with food. · Take a high-calorie diet: A high-calorie diet is not specifically required for lithium therapy. The focus should be on balanced nutrition and hydration. Additional Information: · Lithium should be taken along with food. · Diet should contain adequate salt. · Patient should take low calorie diet to prevent weight gain."
+    },
+    {
+      "qNo": 43,
+      "subject": "Medical-Surgical Nursing",
+      "question": "of the following are sesamoid bones except:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Patella"
+        },
+        {
+          "key": "B",
+          "text": "Fabella"
+        },
+        {
+          "key": "C",
+          "text": "Calcaneum"
+        },
+        {
+          "key": "D",
+          "text": "Cyamella"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "· Patella: The patella is the largest sesamoid bone, located in the knee joint, embedded within the quadriceps tendon. · Fabella: The fabella is a small sesamoid bone found in the lateral head of the gastrocnemius muscle behind the knee. · Calcaneum: The calcaneum, or heel bone, is not a sesamoid bone. It is a regular bone of the tarsal group in the foot. · Cyamella: The cyamella is a rare sesamoid bone located in the tendon of the popliteus muscle in some individuals Additional Information: · Patella -> Kneecap most easily found sesamoid bone and embedded within patellar tendon that attaches the quadriceps to the tibia. · Fabella -> Sesamoid bone that is embedded in the lateral head of the gastrocnemius muscle. · Cyamella -> A rare, generally asymptomatic, knee sesamoid bone located in the proximal tendon of the popliteal muscle."
+    },
+    {
+      "qNo": 44,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "How frequently should you conduct a blood test for a patient on regular clozapine? Copyright © 2026 Adda247",
+      "options": [
+        {
+          "key": "A",
+          "text": "Twice a week"
+        },
+        {
+          "key": "B",
+          "text": "Weekly"
+        },
+        {
+          "key": "C",
+          "text": "Monthly"
+        },
+        {
+          "key": "D",
+          "text": "Fortnightly"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Twice a week: While frequent monitoring may be needed initially, it is not the standard frequency for regular clozapine use. · Weekly: Clozapine requires weekly blood monitoring during the initial phase of treatment (typically the first 6 months) to check for agranulocytosis or severe neutropenia, which are serious side effects of the drug. · Monthly: After 6 months of stable therapy with normal blood counts, the frequency of monitoring is usually reduced to monthly. However, during regular treatment, weekly monitoring is standard. · Fortnightly: Fortnightly testing is not the standard protocol for clozapine monitoring during regular treatment phases. Additional Information: · Clozapine dose-> 300 - 900 mg. · It is a second-generation drug, discovered in 1950 and introduced clinically in 1970."
+    },
+    {
+      "qNo": 45,
+      "subject": "Medical-Surgical Nursing",
+      "question": "What is the key unit of a nation?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Constitution"
+        },
+        {
+          "key": "B",
+          "text": "Law"
+        },
+        {
+          "key": "C",
+          "text": "People"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "· Constitution: The constitution is a critical framework that governs a nation, but it is not the fundamental unit. It is created by and for the people. · Law: Laws are essential for the governance and functioning of a nation, but they are tools that serve the people. They are not the key unit of a nation. · People: People are the core unit of a nation, as they form its society, culture, and economy. A nation exists because of its people, who give it purpose and identity. · None: This is incorrect because people are indeed the fundamental unit of a nation. Additional Information: · Constitution -> The body of doctrines and practices that forms fundamental principles of political state. · Law -> A rule adopted by an organization chiefly for governing people."
+    },
+    {
+      "qNo": 46,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "Injection Morphine is given intrathecal during a procedure for pain relief. After the procedure, which of the following analgesics should not be administered?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Paracetamol"
+        },
+        {
+          "key": "B",
+          "text": "Diclofenac"
+        },
+        {
+          "key": "C",
+          "text": "Tramadol"
+        },
+        {
+          "key": "D",
+          "text": "Fentanyl"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "· Paracetamol: Paracetamol is a safe analgesic and antipyretic that can be used for mild to moderate pain relief without significant interaction with intrathecal morphine. · Diclofenac: Diclofenac, a nonsteroidal anti-inflammatory drug (NSAID), can be used alongside intrathecal morphine for additional pain relief as it acts via a different mechanism. · Tramadol: Tramadol is a weak opioid analgesic and can be used cautiously with intrathecal morphine; however, it does not pose a significant interaction risk. · Fentanyl: Fentanyl is a potent opioid analgesic, and its administration after intrathecal morphine may increase the risk of severe respiratory depression due to additive opioid effects. This makes fentanyl the analgesic that should be avoided in this scenario. Additional Information: · Tramadol also a synthetic opioid. But, fentanyl is proved to be superior to tramadol. · Paracetamol can be administered in post operative pain relief. · Diclofenac is avoided in case of patient with asthma."
+    },
+    {
+      "qNo": 47,
+      "subject": "Medical-Surgical Nursing",
+      "question": "A patient with anorexia nervosa will have:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tachycardia, Hypertension, Hypothermia"
+        },
+        {
+          "key": "B",
+          "text": "Bradycardia, Hypotension, Hypothermia"
+        },
+        {
+          "key": "C",
+          "text": "Tachycardia, Hypotension, Hypothermia"
+        },
+        {
+          "key": "D",
+          "text": "Bradycardia, Hypertension, Hyperthermia"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Tachycardia, Hypertension, Hypothermia: Tachycardia and hypertension are not typical features of anorexia nervosa. Instead, bradycardia and hypotension are more common due to the body’s response to malnutrition. · Bradycardia, Hypotension, Hypothermia: These are hallmark features of anorexia nervosa. Prolonged malnutrition leads to decreased metabolic rate, reduced cardiac output, and impaired thermoregulation, resulting in bradycardia, hypotension, and hypothermia. · Tachycardia, Hypotension, Hypothermia: Tachycardia is not typical in anorexia nervosa; rather, bradycardia is more commonly observed due to the body's adaptive response to conserve energy. · Bradycardia, Hypertension, Hyperthermia: Hypertension and hyperthermia are not characteristic of anorexia nervosa; instead, the condition presents with hypotension and hypothermia due to metabolic and circulatory changes. Additional Information: · Treatment: · Pharmacotherapy: · Neuroleptics · Appetite stimulants and antidepressants. · Psychological therapies: · Individual psychotherapy · Behavior therapy · Cognitive behavior therapy · Family therapy"
+    },
+    {
+      "qNo": 48,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "A patient is suffering from dyspnea. Which position will you provide for the patient to relieve?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Supine"
+        },
+        {
+          "key": "B",
+          "text": "Prone"
+        },
+        {
+          "key": "C",
+          "text": "Trendelenburg"
+        },
+        {
+          "key": "D",
+          "text": "Fowler"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "· Supine: The supine position, where the patient lies flat on their back, may worsen dyspnea as it can reduce lung expansion and increase the work of breathing. · Prone: The prone position is used for improving oxygenation in specific conditions like ARDS but is not typically helpful for general dyspnea relief. · Trendelenburg: This position (head lower than the feet) can exacerbate dyspnea by increasing pressure on the diaphragm, further restricting lung expansion. · Fowler: The Fowler position, with the head of the bed elevated to 45°–60°, is ideal for relieving dyspnea. It facilitates lung expansion, reduces pressure on the diaphragm, and improves oxygenation and comfort for the patient. Fowler's · Symptoms: · Heart palpitations · Breathing difficulty · Weight loss Copyright © 2026 Adda247 · Crackling in the lungs · Wheezing and night sweats · Labored breathing when lying flat · Swollen ankles and feet, high fever · Management of dyspnea: · Provide Fowler's position to the client. · In Fowler's position, gravity pulls the diaphragm downward, allows greater chest and lung expansion. · Also facilitates the relaxation of tension of abdominal muscles and improves breathing. · Administer oxygen. · Treat the underlying cause with medications. · Avoid sedentary life style. Additional Information: · In immobile patients and infants, this position alleviates compression of the chest that occurs due to · gravity"
+    },
+    {
+      "qNo": 49,
+      "subject": "Community Health Nursing (CHN)",
+      "question": "Needle stick injury can result in all of the following except:",
+      "options": [
+        {
+          "key": "A",
+          "text": "HIV"
+        },
+        {
+          "key": "B",
+          "text": "HBV"
+        },
+        {
+          "key": "C",
+          "text": "HCV"
+        },
+        {
+          "key": "D",
+          "text": "Malaria"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "· HIV: Needle stick injuries can transmit HIV if the needle is contaminated with the blood of an HIV-positive individual. · HBV: Hepatitis B virus is highly transmissible through needle stick injuries, especially if the exposed individual is unvaccinated. · HCV: Hepatitis C virus can also be transmitted via needle stick injuries, with significant risks depending on the viral load of the source. · Malaria: Malaria is not typically transmitted via needle stick injuries as it requires the Anopheles mosquito as a vector. Transmission through blood transfusion is possible but extremely rare via needle stick injury. · Needle stick injuries can lead to transmission of blood-borne diseases. · As NSI injuries have the potential to transmit bacteria, protozoa, viruses and prions, the risk for HBV, HCV and HIV is the highest. · Management: · Do not panic or put the finger in mouth or do not squeeze. · Wash the area with soap and water. · Flush splashes to the nose, mouth, or skin with water. · Irrigate eyes with clean water, saline. · Report the incident to your supervisor and infection control nurse. · Immediately seek medical treatment (Post exposure prophylaxis with hepatitis within 24 immunoglobulin hours). · Follow up with investigations and treatment to prevent blood borne infections. · Prevention: · Avoid unnecessary use of needles · Use devices with safety measures · Promote education and safe work practices for handling needles. · Avoid recapping and use safe disposable measures. Additional Information: · Malaria-> A disease caused by Plasmodium parasites and spread to humans through mosquito bite."
+    },
+    {
+      "qNo": 50,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "Which of the following is the most reliable method to confirm that a surgical instrument set has been properly sterilized in an autoclave?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Observing a color change on the autoclave tape​"
+        },
+        {
+          "key": "B",
+          "text": "Checking the set for visible cleanliness​"
+        },
+        {
+          "key": "C",
+          "text": "Using a chemical or biological indicator inside the pack"
+        },
+        {
+          "key": "D",
+          "text": "Confirming the autoclave door was closed properly​"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "(A) Observing a color change on the autoclave tape → Incorrect Tape indicates that the set has been exposed to heat, but does not guarantee sterilization of the contents. (B) Checking the set for visible cleanliness → Incorrect Visual inspection confirms cleanliness only, not sterilization. (C) Using a chemical or biological indicator inside the pack → Correct Chemical indicators change color when exposed to the correct temperature and pressure. Biological indicators (spore tests) are the gold standard for confirming sterility. This ensures the instruments are truly sterilized and safe for use. (D) Confirming the autoclave door was closed properly → Incorrect Proper closure is necessary for the cycle, but does not confirm that sterilization occurred."
+    },
+    {
+      "qNo": 51,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "Which of the following combinations is incompatible?",
+      "options": [
+        {
+          "key": "A",
+          "text": "A only"
+        },
+        {
+          "key": "B",
+          "text": "A and B"
+        },
+        {
+          "key": "C",
+          "text": "A and C"
+        },
+        {
+          "key": "D",
+          "text": "None of the above"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "​ · Normal saline and RL injections are suitable diluents for the intravenous administration of phenytoin. · Factors other than pH and co-solvent concentration may affect the stability of phenytoin in dextrose · solutions. · DNS contains dextrose. So, when phenytoin is mixed in DNS it forms precipitation. · The AmphoterIcin B should not be mixed with NS as it will precipitate. · The IV line which is used for Amphotericin-B should not be used for any other drug administration. Copyright © 2026 Adda247 · So, option A and B are correct. Additional Information: · TPN is a mixture of separate components like: · Lipid emulsions · Dextrose · Amino acids · Vitamins · Electrolytes · Minerals · Trace elements · In TPN ,1 ampule of MVI injection is added to the lipid emulsion (Intralipid 20%) and all other components."
+    },
+    {
+      "qNo": 52,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Identify the following instrument in the image:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Otoscope"
+        },
+        {
+          "key": "B",
+          "text": "Tonometer"
+        },
+        {
+          "key": "C",
+          "text": "Ophthalmoscope"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Otoscope: An otoscope is a medical device used to examine the ear canal and tympanic membrane (eardrum). It has a light source and a magnifying lens, making it suitable for diagnosing conditions like ear infections or wax buildup. The instrument in question matches this description. · Tonometer: A tonometer is used to measure intraocular pressure (IOP) in the eye, typically for diagnosing glaucoma. It does not resemble an otoscope in appearance or function. · Ophthalmoscope: An ophthalmoscope is used to examine the interior structures of the eye, such as the retina and optic nerve. While it also has a light source, it is structurally different from an otoscope. · None: This is incorrect because the instrument shown is clearly an otoscope. Additional Information: · If otoscope is inserted too far into the ear canal, it may damage the eardrum. · Do not move the otoscope forward if it feels hard or something blocking it."
+    },
+    {
+      "qNo": 53,
+      "subject": "Medical-Surgical Nursing",
+      "question": "This is a solution used in hospitals. After how many days should this solution be changed?",
+      "options": [
+        {
+          "key": "A",
+          "text": "7 days"
+        },
+        {
+          "key": "B",
+          "text": "28 days"
+        },
+        {
+          "key": "C",
+          "text": "14 days"
+        },
+        {
+          "key": "D",
+          "text": "21 days"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "· Glutaraldehyde is used as a liquid and greenish yellow in color. · It is effective against bacteria, fungi, viruses and spores. · This solution is effective up to 14 days and later need to be changed. · For disinfection, immerse the instruments for 10-15 minutes and rinse thoroughly. · For sterilization, immerse instruments for 6-8 hours and rinse thoroughly Additional Information: · Glutaraldehyde can cause the side effect of skin irritation. · If exposed for large amounts, it may cause nausea, headache and SOB. · Protective equipment is recommended to wear to avoid side effects."
+    },
+    {
+      "qNo": 54,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "Following is the picture of a sterile sponge used in emergencies. It has a blue color thread. What is the purpose of the blue color thread?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Blue line is radiopaque"
+        },
+        {
+          "key": "B",
+          "text": "Blue color is easily visible when soiled in blood"
+        },
+        {
+          "key": "C",
+          "text": "No specific purpose"
+        },
+        {
+          "key": "D",
+          "text": "Design of gauze piece"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Blue line is radiopaque: The blue line in sterile sponges is radiopaque, meaning it can be detected on X-rays. This feature is critical for identifying sponges left inside a patient during surgical procedures, ensuring patient safety and avoiding retained surgical items (RSIs). · Blue color is easily visible when soiled in blood: While the blue line might offer some visibility, its primary purpose is not visibility but radiopacity. · No specific purpose: This is incorrect, as the blue line has a significant purpose, particularly in surgical safety. · Design of gauze piece: The blue line is not included as a design feature but for its functional purpose of radiopacity. Additional Information: · Blue color is not visible when it is soiled in the blood. · But only through X-ray, it is highly visible. Copyright © 2026 Adda247 Q.55 In a blood transfusion reaction, what is the priority nursing intervention? A. Stop the infusion and remove the cannula B. Stop the infusion and flush with NS C. Complete the transfusion and administer injection Avil D. Complete the transfusion and discard the bag Answer: B Sol: · Stop the infusion and remove the cannula: While stopping the transfusion is correct, removing the cannula prematurely is not recommended as it may be needed for administering emergency medications or fluids. · Stop the infusion and flush with NS: This is the correct intervention. The transfusion should be stopped immediately to prevent further reaction. Flushing the IV line with normal saline ensures the line remains patent for emergency medications and management. · Complete the transfusion and administer injection Avil: Completing the transfusion during a reaction is unsafe and increases the risk of severe complications. Medications like antihistamines (e.g., Avil) are administered only after stopping the transfusion. · Complete the transfusion and discard the bag: This is incorrect as completing the transfusion is dangerous. Additionally, the transfusion bag and tubing should be retained for testing to investigate the cause of the reaction. Additional Information: · Anti - D injection 1500 IU (300 mcg) is administered through IV / IM at 28-30 weeks of pregnancy. · Another dose administered within 72 hours after delivery if the baby is Rh +ve. · Immediate cord ligation is done."
+    },
+    {
+      "qNo": 56,
+      "subject": "General Aptitude & Reasoning",
+      "question": "Which of the following is used to measure blood oxygen saturation?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Electrocardiogram (ECG)"
+        },
+        {
+          "key": "B",
+          "text": "Pulse oximeter"
+        },
+        {
+          "key": "C",
+          "text": "Blood pressure cuff"
+        },
+        {
+          "key": "D",
+          "text": "Thermometer"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Electrocardiogram (ECG): An ECG measures the electrical activity of the heart and provides information about the heart rhythm and function. It does not measure oxygen saturation. · Pulse oximeter: A pulse oximeter is a non-invasive device used to measure blood oxygen saturation (SpO₂) by analyzing the absorption of light through the blood in a finger or earlobe. It is the correct instrument for this purpose. · Blood pressure cuff: A blood pressure cuff is used to measure blood pressure, not oxygen saturation. · Thermometer: A thermometer is used to measure body temperature and does not assess oxygen levels in the blood."
+    },
+    {
+      "qNo": 57,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "What is the primary function of the liver in relation to medications?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Absorption of drugs"
+        },
+        {
+          "key": "B",
+          "text": "Distribution of drugs"
+        },
+        {
+          "key": "C",
+          "text": "Metabolism of drugs"
+        },
+        {
+          "key": "D",
+          "text": "Excretion of drugs"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "· Absorption of drugs: Absorption refers to the process by which drugs enter the bloodstream from the site of administration (such as the stomach or intestines). This process primarily occurs in the gastrointestinal tract, not in the liver. The liver does play a role in absorbing some nutrients and other substances, but not directly in the absorption of most medications. · Distribution of drugs: Distribution refers to the process by which a drug moves from the bloodstream into various tissues and organs of the body. While the liver is involved in the transport of substances, distribution is primarily dependent on blood flow and the drug's ability to pass through different tissues. The liver is involved in drug distribution indirectly because it affects the drug's metabolism and elimination. · Metabolism of drugs: The liver plays a crucial role in the metabolism of drugs. Once a drug enters the bloodstream, it travels to the liver, where enzymes break it down into metabolites. These metabolites can be active or inactive and are often more easily excreted by the body. The liver's role in drug metabolism is essential for detoxifying and altering drugs into forms that can be eliminated, either via urine or feces. · Excretion of drugs: Excretion refers to the elimination of drugs and their metabolites from the body. While the liver is involved in preparing drugs for excretion (via metabolism), the actual excretion mostly happens through the kidneys (via urine) or via the gastrointestinal system (via feces). The liver itself does not excrete drugs directly, but rather prepares them for elimination."
+    },
+    {
+      "qNo": 58,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "A 65-year-old man with hypertension is prescribed a beta-blocker. What is the most important side effect to monitor?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hypotension"
+        },
+        {
+          "key": "B",
+          "text": "Hyperglycemia"
+        },
+        {
+          "key": "C",
+          "text": "Bradycardia"
+        },
+        {
+          "key": "D",
+          "text": "Hyperkalemia"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "· Hypotension: Beta-blockers can lower blood pressure by reducing heart rate and the force of contraction, which can lead to hypotension (low blood pressure). However, hypotension is usually a secondary concern compared to bradycardia. In most cases, beta-blockers are used to treat hypertension, so significant hypotension would typically occur only with excessive dosing or combined with other antihypertensive drugs. · Hyperglycemia: Beta-blockers, especially non-selective ones, can potentially affect glucose metabolism. They may mask the symptoms of hypoglycemia (low blood sugar) in diabetic patients but are not generally associated with causing hyperglycemia. This side effect is more relevant in diabetic patients, and it is less of a concern for someone without diabetes. · Bradycardia: Beta-blockers slow the heart rate by blocking the beta-1 receptors in the heart. Bradycardia, or an abnormally slow heart rate (usually under 60 beats per minute), is the most important side effect to monitor. This can cause symptoms like dizziness, fatigue, and even fainting. In elderly patients, bradycardia can be particularly concerning because it may lead to more serious complications, including heart failure. · Hyperkalemia: Hyperkalemia (elevated potassium levels) is more commonly associated with medications like ACE inhibitors, potassium-sparing diuretics, or certain conditions like kidney disease, but it is not a typical side effect of beta-blockers. Beta-blockers do not significantly affect potassium levels, so this is not a primary concern when prescribing them."
+    },
+    {
+      "qNo": 59,
+      "subject": "General Aptitude & Reasoning",
+      "question": "In which condition should a nurse avoid the use of an ice pack?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Acute injury"
+        },
+        {
+          "key": "B",
+          "text": "Burns"
+        },
+        {
+          "key": "C",
+          "text": "Sprains"
+        },
+        {
+          "key": "D",
+          "text": "Fever"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Acute injury: Ice packs are commonly used for acute injuries, such as strains or sprains, to reduce swelling, pain, and inflammation. Applying ice in the first 24-48 hours after an acute injury can help manage these symptoms and prevent further tissue damage. · Burns: Ice should not be used on burns because it can cause further damage to the already injured skin. Cold therapy like ice may exacerbate the injury by constricting blood vessels, which reduces blood flow and oxygen to the damaged tissues. Instead, burns should be treated with cool (not©ice-cold) water, and medical attention should be sought if necessary. Copyright 2026 Adda247 · Sprains: For sprains, ice is often applied during the first 24-48 hours to help control swelling and pain. It is an effective treatment for reducing inflammation and should be used in the initial phase of injury. · Fever: Ice packs can be used for fever to help lower the body temperature, though it is usually recommended to use cool compresses instead of ice directly on the skin. Excessively cold temperatures can cause discomfort or even shivering, which can raise body temperature instead of lowering it. However, ice is generally safe in treating fever when used cautiously and in moderation."
+    },
+    {
+      "qNo": 60,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "What is the most common complication after a lumbar puncture?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Spinal cord injury"
+        },
+        {
+          "key": "B",
+          "text": "Headache"
+        },
+        {
+          "key": "C",
+          "text": "Infection"
+        },
+        {
+          "key": "D",
+          "text": "Bleeding"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Spinal cord injury: Spinal cord injury is extremely rare after a lumbar puncture, as the needle is typically inserted between the vertebrae in the lumbar region, well below the level of the spinal cord. The procedure is performed with great care to avoid damaging the spinal cord. · Headache: A headache is the most common complication after a lumbar puncture. It typically results from a \"post-lumbar puncture headache\" (PLPH), which occurs when cerebrospinal fluid (CSF) leaks out from the puncture site, lowering the pressure within the spinal canal and brain. This type of headache is often positional, meaning it worsens when the patient is upright and improves when lying down. · Infection: Infection is a serious but less common complication of lumbar puncture. Sterile technique is used during the procedure to minimize the risk of infection. While infection can occur, it is relatively rare, and preventive measures like proper cleaning and using sterile equipment are followed to reduce this risk. · Bleeding: Bleeding, particularly into the epidural or subarachnoid space, is another potential complication but is less common than a headache. It is usually more of a concern in patients with blood clotting disorders or those taking anticoagulant medications. However, with proper technique, the risk of significant bleeding is minimized."
+    },
+    {
+      "qNo": 61,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "Which of the following is a contraindication for the administration of morphine?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Asthma"
+        },
+        {
+          "key": "B",
+          "text": "Hypertension"
+        },
+        {
+          "key": "C",
+          "text": "Low body weight"
+        },
+        {
+          "key": "D",
+          "text": "History of seizures"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Asthma: Morphine and other opioids can cause respiratory depression, which may be dangerous for patients with asthma or other respiratory conditions. In asthma, the use of morphine can worsen breathing difficulties by decreasing the respiratory drive, making it a contraindication in these patients. Caution is also required for any patient with respiratory problems, including chronic obstructive pulmonary disease (COPD). · Hypertension: Morphine is generally not contraindicated in hypertension. It may cause slight changes in blood pressure, but it is not a specific concern for patients with high blood pressure. In fact, morphine can sometimes cause mild vasodilation, which might even lower blood pressure. However, it’s important to monitor blood pressure in patients with hypertension when using opioids. · Low body weight: Low body weight is not a direct contraindication for morphine, although it may require dosage adjustments. Smaller individuals may be more sensitive to the drug, so careful dosing is necessary, but low body weight itself is not a contraindication. · History of seizures: A history of seizures is not a specific contraindication for morphine use. However, opioids, including morphine, can lower the seizure threshold, especially if taken in high doses or when combined with other drugs that affect the central nervous system. Caution is advised in patients with a history of seizures, but it's not an absolute contraindication."
+    },
+    {
+      "qNo": 62,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "The primary concern for a nurse when administering blood products to a patient is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ensuring the correct blood type"
+        },
+        {
+          "key": "B",
+          "text": "Monitoring for fever"
+        },
+        {
+          "key": "C",
+          "text": "Checking the patient & weight"
+        },
+        {
+          "key": "D",
+          "text": "Administering the medication promptly"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Ensuring the correct blood type: The primary concern when administering blood products is to ensure that the blood type is compatible between the donor and the recipient. This is crucial to prevent a hemolytic transfusion reaction, where the recipient’s immune system attacks the transfused blood cells. A mismatch in blood type (such as giving type A blood to a type B patient) can cause severe and life-threatening reactions. Therefore, verifying the correct blood type before administration is the most important step. · Monitoring for fever: While monitoring for fever is important after administering blood products, especially to identify signs of a transfusion reaction, it is not the primary concern. Fever can be a symptom of a transfusion reaction, but ensuring compatibility is the top priority. · Checking the patient & weight: While checking the patient’s weight is important for determining the volume of blood to be transfused (especially in pediatric or small patients), it is not the primary concern. The key is verifying blood compatibility to prevent a reaction. · Administering the medication promptly: While blood transfusions should be administered within a specific time frame to ensure the blood is safe and effective, the main concern is ensuring the correct blood type and avoiding any transfusion reactions. Timeliness is important but secondary to compatibility."
+    },
+    {
+      "qNo": 63,
+      "subject": "Medical-Surgical Nursing",
+      "question": "In the case of a patient experiencing a stroke, which diagnostic test is most commonly performed to confirm the diagnosis?",
+      "options": [
+        {
+          "key": "A",
+          "text": "CT scan"
+        },
+        {
+          "key": "B",
+          "text": "MRI"
+        },
+        {
+          "key": "C",
+          "text": "Electrocardiogram (ECG)"
+        },
+        {
+          "key": "D",
+          "text": "X-ray"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· CT scan: A CT (computed tomography) scan is the most commonly performed diagnostic test in the acute phase of a stroke. It is fast, widely available, and can help identify whether the stroke is caused by bleeding (hemorrhagic stroke) or by a blockage (ischemic stroke). CT scans are particularly useful in the first few hours after the onset of stroke symptoms to rule out hemorrhage and determine the appropriate treatment approach. · MRI: An MRI (magnetic resonance imaging) scan provides a more detailed image of the brain and can identify ischemic strokes, especially in the early stages. However, MRI is less commonly used in the acute phase due to its longer scanning time, and it is typically performed when more detailed information is needed or in non-acute cases. MRI is highly sensitive for detecting brain tissue damage from stroke. · Electrocardiogram (ECG): An ECG records the electrical activity of the heart. While it is important in diagnosing the underlying cause of a stroke (such as arrhythmias or atrial fibrillation), it does not confirm the diagnosis of a stroke itself. An ECG can be helpful in identifying risk factors but is not used to visualize brain structures. · X-ray: An X-ray is used for imaging bones and certain organs but is not useful for diagnosing strokes, which affect the brain. X-rays are not typically used to diagnose neurological conditions like stroke."
+    },
+    {
+      "qNo": 64,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "The ideal position for a patient to relieve pressure on the sacrum in a bedridden state is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Supine"
+        },
+        {
+          "key": "B",
+          "text": "Lateral"
+        },
+        {
+          "key": "C",
+          "text": "Fowler"
+        },
+        {
+          "key": "D",
+          "text": "Prone"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Supine: In the supine position, the patient is lying flat on their back. This position places direct pressure on the sacrum, which can increase the risk of developing pressure ulcers (bedsores) on the sacral area in bedridden patients. It is not ideal for relieving pressure on the sacrum. · Lateral: The lateral position (side-lying) is the best position to relieve pressure on the sacrum. When the patient is turned onto their side, the pressure is redistributed to the side of the body, taking the weight off the sacrum. It's important to position the patient correctly with proper alignment to avoid pressure on other bony prominences, such as the hips or shoulders. · Fowler: The Fowler position involves the patient being semi-reclined, typically with the upper body elevated at an angle (usually 45 to 60 degrees). While this position may be used to promote comfort or ease of breathing, it still places pressure on the sacrum, so it is not ideal for pressure relief in bedridden patients. · Prone: The prone position (lying face down) could potentially relieve pressure on the sacrum, but it is generally not recommended for long periods due to discomfort and the potential for other complications (e.g., pressure on the chest or difficulty breathing). This position is not commonly used for pressure relief in bedridden patients."
+    },
+    {
+      "qNo": 65,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "What is the first step a nurse should take when a patient is in shock?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Administer oxygen"
+        },
+        {
+          "key": "B",
+          "text": "Assess vital signs"
+        },
+        {
+          "key": "C",
+          "text": "Administer IV fluids"
+        },
+        {
+          "key": "D",
+          "text": "Call for help"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Administer oxygen: Administering oxygen can be a critical intervention for a patient in shock, especially if they are hypoxic. However, before administering oxygen, it’s essential to first assess the patient's vital signs to understand the severity of shock and determine the appropriate interventions. · Assess vital signs: The first step in managing shock is to assess the patient's vital signs (such as heart rate, blood pressure, respiratory rate, and oxygen saturation). This assessment provides essential information about the patient's current condition and the severity of the shock, helping to guide further interventions like oxygen, fluids, or medications. · Administer IV fluids: While administering IV fluids is crucial in many cases of shock (especially hypovolemic shock), it should only be done after assessing the patient's condition. Without evaluating vital signs, administering fluids blindly could be harmful, especially in cases like cardiogenic shock where fluid overload may worsen the situation. · Call for help: While calling for help is important in a situation of shock; the nurse must first assess the patient's vital signs to understand the immediate severity of the situation. Calling for help is typically done simultaneously or immediately after the initial assessment, but it should not replace the need for an initial evaluation."
+    },
+    {
+      "qNo": 66,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "The nurse notices that a patient with an indwelling catheter is showing signs of a urinary tract infection (UTI). The first action the nurse should take is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Change the catheter immediately"
+        },
+        {
+          "key": "B",
+          "text": "Collect a urine sample for culture and sensitivity"
+        },
+        {
+          "key": "C",
+          "text": "Administer antibiotics as prescribed"
+        },
+        {
+          "key": "D",
+          "text": "Notify the physician"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Change the catheter immediately: While it may be necessary to replace a catheter if it is no longer functioning properly or is infected, the first action should be to collect a urine sample for culture and sensitivity. Changing the catheter prematurely without obtaining a sample could make it difficult to identify the exact pathogen causing the infection. · Collect a urine sample for culture and sensitivity: The first action the nurse should take is to collect a urine sample for culture and sensitivity. This allows for the identification of the specific bacteria causing the urinary tract infection (UTI) and ensures that the correct antibiotic is prescribed. Culturing the urine before initiating antibiotics is important to avoid the possibility of antibiotic resistance and ensure effective treatment. · Administer antibiotics as prescribed: While administering antibiotics is an essential part of UTI treatment, it should be done after the urine sample is collected for culture and sensitivity. Starting antibiotics without knowing the specific pathogen may lead to ineffective treatment or antibiotic resistance. · Notify the physician: Notifying the physician is important, but it should follow the collection of the urine sample. The physician needs to know the culture results to prescribe the correct treatment, so the nurse should first gather the necessary information (urine sample) before reaching out to the physician."
+    },
+    {
+      "qNo": 67,
+      "subject": "Medical-Surgical Nursing",
+      "question": "A nurse is providing care to a patient post-surgery. What is the primary purpose of using a sequential compression device (SCD)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "To reduce pain"
+        },
+        {
+          "key": "B",
+          "text": "To prevent deep vein thrombosis (DVT)"
+        },
+        {
+          "key": "C",
+          "text": "To promote respiratory function"
+        },
+        {
+          "key": "D",
+          "text": "To prevent wound infection"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· To reduce pain: Sequential compression devices (SCDs) are not primarily used for pain management. Their main function is to improve circulation and prevent blood clots. While SCDs may indirectly help with comfort by promoting circulation, their primary purpose is not pain reduction. · To prevent deep vein thrombosis (DVT): The primary purpose of using a sequential compression device (SCD) is to prevent the formation of deep vein thrombosis (DVT). SCDs work by applying intermittent pressure to the legs, which helps to improve venous return, reduce blood stasis, and enhance circulation, all of which reduce the risk of DVT, especially in postoperative patients who are at increased risk. · To promote respiratory function: While SCDs help improve circulation in the lower limbs, they do not directly affect respiratory function. Respiratory support would typically involve devices like oxygen therapy or incentive spirometry, not SCDs. · To prevent wound infection: SCDs are not used to prevent wound infections. They focus on circulation and preventing clot formation, whereas preventing infections involves other measures, such as proper wound care and hygiene, antibiotics if needed, and sterile technique during dressing changes."
+    },
+    {
+      "qNo": 68,
+      "subject": "Medical-Surgical Nursing",
+      "question": "A patient with chronic obstructive pulmonary disease (COPD) should be monitored for:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hypoxia"
+        },
+        {
+          "key": "B",
+          "text": "Hyperkalemia"
+        },
+        {
+          "key": "C",
+          "text": "Hypertension"
+        },
+        {
+          "key": "D",
+          "text": "Hyperglycemia"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Hypoxia: Patients with chronic obstructive pulmonary disease (COPD) often experience hypoxia, which is a deficiency in the amount of oxygen reaching the tissues. This occurs because COPD causes chronic airflow limitation and impaired gas exchange in the lungs. As a result, patients with COPD may have low blood oxygen levels, leading to hypoxia. Monitoring oxygen levels is critical in these patients to ensure they receive adequate oxygen supplementation if needed. · Hyperkalemia: Hyperkalemia (high potassium levels) is not a primary concern for COPD patients. While certain medications, such as potassium-sparing diuretics or kidney dysfunction, can cause hyperkalemia, it is not directly associated with COPD itself. Monitoring potassium levels may be necessary if the patient is on specific medications, but it is not a primary issue in COPD. · Hypertension: While hypertension (high blood pressure) can co-exist with COPD, it is not the most common issue to monitor for in these patients. COPD primarily affects the lungs and oxygenation, so monitoring hypoxia is a more immediate concern than hypertension. However, managing comorbid conditions like hypertension is still important. · Hyperglycemia: Hyperglycemia (high blood sugar) is not directly caused by COPD, though certain medications used to treat COPD, such as corticosteroids, can raise blood sugar levels. Hyperglycemia is not a primary monitoring concern in COPD management compared to hypoxia, though it may require attention if the patient is on certain treatments."
+    },
+    {
+      "qNo": 69,
+      "subject": "General Aptitude & Reasoning",
+      "question": "Which of the following is an early sign of hypovolemic shock?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Increased heart rate"
+        },
+        {
+          "key": "B",
+          "text": "Decreased blood pressure"
+        },
+        {
+          "key": "C",
+          "text": "Increased respiratory rate"
+        },
+        {
+          "key": "D",
+          "text": "Decreased urine output Copyright © 2026 Adda247"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Increased heart rate: An increased heart rate (tachycardia) is often one of the earliest signs of hypovolemic shock. When the body loses blood volume (due to trauma, bleeding, dehydration, etc.), the heart compensates by pumping faster to maintain adequate cardiac output and blood pressure. This compensatory mechanism is an early response to hypovolemia. · Decreased blood pressure: Decreased blood pressure typically occurs later in hypovolemic shock. In the early stages, the body attempts to maintain blood pressure through compensatory mechanisms like vasoconstriction and increased heart rate. Blood pressure drops only once these compensatory mechanisms can no longer maintain it, which is usually seen as shock progresses. · Increased respiratory rate: An increased respiratory rate (tachypnea) can also occur as a compensatory mechanism in response to hypovolemic shock, particularly if the body is attempting to improve oxygenation due to reduced blood volume. However, tachycardia (increased heart rate) is generally an earlier sign compared to tachypnea in hypovolemic shock. · Decreased urine output: Decreased urine output is a later sign of hypovolemic shock, reflecting worsening renal perfusion due to reduced blood flow. The kidneys respond to hypovolemia by retaining water, leading to oliguria (low urine output). This occurs after the body’s initial compensatory mechanisms are overwhelmed."
+    },
+    {
+      "qNo": 70,
+      "subject": "Medical-Surgical Nursing",
+      "question": "A nurse is caring for a patient with severe burns. Which of the following interventions is a priority in the first 24 hours?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Pain management"
+        },
+        {
+          "key": "B",
+          "text": "Fluid resuscitation"
+        },
+        {
+          "key": "C",
+          "text": "Wound care"
+        },
+        {
+          "key": "D",
+          "text": "Infection control"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Pain management: While pain management is a critical aspect of burn care, especially in the early stages, it is not the priority intervention in the first 24 hours. Fluid resuscitation takes precedence to prevent shock and maintain organ function, as severe burns can lead to significant fluid loss. Once the patient is stabilized with adequate fluids, pain management can then be effectively addressed. · Fluid resuscitation: Fluid resuscitation is the priority intervention in the first 24 hours following a severe burn. Burns cause significant fluid loss through damaged skin, leading to hypovolemia (low blood volume) and potential shock. The goal is to restore circulating volume and maintain perfusion to vital organs, such as the kidneys and heart. Early and aggressive fluid resuscitation is essential in preventing complications like renal failure, shock, and multi-organ dysfunction. · Wound care: Wound care is important in burn management, but it is not the most critical intervention during the first 24 hours. The priority is to stabilize the patient, particularly through fluid resuscitation and ensuring hemodynamic stability. Wound care, including cleaning and debridement, is typically initiated after the initial stabilization phase. · Infection control: Infection control is always a concern in burn patients, as burn wounds are highly susceptible to infection. However, infection control is not the priority in the first 24 hours. The focus during this period is on fluid resuscitation and stabilizing the patient’s circulation and organ function. Infection control becomes a key focus once the patient is hemodynamically stable."
+    },
+    {
+      "qNo": 71,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "A patient with a history of asthma is prescribed a beta-blocker. What is the nurse’s primary concern?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hypotension"
+        },
+        {
+          "key": "B",
+          "text": "Bronchospasm"
+        },
+        {
+          "key": "C",
+          "text": "Increased heart rate"
+        },
+        {
+          "key": "D",
+          "text": "Chest pain"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Hypotension: While hypotension (low blood pressure) is a potential side effect of beta-blockers, especially if used in high doses, it is not the primary concern for a patient with asthma. Beta-blockers primarily affect the heart and circulation, and hypotension is not the most dangerous side effect in this case. · Bronchospasm: Bronchospasm is the primary concern when administering beta-blockers to a patient with asthma. Beta-blockers, particularly non-selective ones, can block the beta-2 adrenergic receptors in the lungs, which are responsible for relaxing bronchial smooth muscle. This can lead to bronchoconstriction and worsening of asthma symptoms, potentially causing an asthma attack. Therefore, caution is needed when prescribing beta-blockers to asthma patients, and selective beta-blockers (which primarily affect the heart) may be preferred if necessary. · Increased heart rate: Beta-blockers are used to reduce the heart rate and control arrhythmias, so they would not typically cause an increased heart rate. In fact, the opposite is true—beta-blockers slow down the heart rate, which can be beneficial for patients with conditions like hypertension or arrhythmias. · Chest pain: While chest pain could be a concern in certain patients, particularly those with underlying heart disease, it is not the primary concern with the use of beta-blockers in asthma patients. Chest pain may be addressed with other medications, but the immediate concern is preventing respiratory complications like bronchospasm."
+    },
+    {
+      "qNo": 72,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which of the following tests is used to diagnose diabetes mellitus?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hemoglobin A1c"
+        },
+        {
+          "key": "B",
+          "text": "Liver function test"
+        },
+        {
+          "key": "C",
+          "text": "Serum electrolytes"
+        },
+        {
+          "key": "D",
+          "text": "Complete blood count"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Hemoglobin A1c: The Hemoglobin A1c test is commonly used to diagnose diabetes mellitus and to monitor blood glucose control in individuals with diabetes. It provides an average blood glucose level over the past 2-3 months. An A1c level of 6.5% or higher on two separate occasions is used as a diagnostic criterion for diabetes. · Liver function test: A liver function test measures enzymes, proteins, and substances that indicate how well the liver is working. While liver function tests are important for diagnosing liver conditions, they are not used to diagnose diabetes. However, individuals with diabetes may have liver issues related to their condition, such as fatty liver disease. · Serum electrolytes: Serum electrolytes tests measure the levels of minerals like sodium, potassium, and calcium in the blood. These tests are important for assessing electrolyte imbalances but are not used to diagnose diabetes. However, severe cases of uncontrolled diabetes can lead to electrolyte disturbances, but this is not a primary diagnostic tool for diabetes. · Complete blood count: A complete blood count (CBC) evaluates overall health and detects various disorders, including infections, anemia, and other hematological conditions. It is not used to diagnose diabetes. While certain conditions related to diabetes may affect blood counts, a CBC alone does not provide information about blood glucose levels or insulin function."
+    },
+    {
+      "qNo": 73,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which of the following is a complication of prolonged use of corticosteroids?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hyperglycemia"
+        },
+        {
+          "key": "B",
+          "text": "Hypotension"
+        },
+        {
+          "key": "C",
+          "text": "Hyperkalemia"
+        },
+        {
+          "key": "D",
+          "text": "Bradypnea"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Hyperglycemia: One of the well-known complications of prolonged use of corticosteroids is hyperglycemia. Corticosteroids can increase blood sugar levels by promoting gluconeogenesis (the production of glucose) and reducing the effectiveness of insulin. This can lead to elevated blood sugar levels, and in some cases, it may contribute to the development of steroid-induced diabetes. · Hypotension: Corticosteroids, particularly when used for extended periods, tend to have the opposite effect on blood pressure, typically increasing blood pressure rather than lowering it. This occurs due to their ability to promote sodium retention and fluid balance, which increases blood volume and can result in hypertension, not hypotension. · Hyperkalemia: Prolonged use of corticosteroids is more likely to lead to hypokalemia (low potassium levels), not hyperkalemia (high potassium levels). Corticosteroids can cause potassium loss through the kidneys, leading to a decreased level of potassium in the blood. Therefore, hyperkalemia is not a typical complication of corticosteroid use. · Bradypnea: Corticosteroids do not typically cause bradypnea (slow breathing). While they may influence respiratory function in certain conditions, such as asthma or chronic obstructive pulmonary disease (COPD), they are not associated with a direct effect on slowing the respiratory rate. Copyright © 2026 Adda247"
+    },
+    {
+      "qNo": 74,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "Which of the following is the primary symptom of preeclampsia?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Increased blood pressure"
+        },
+        {
+          "key": "B",
+          "text": "Increased heart rate"
+        },
+        {
+          "key": "C",
+          "text": "Severe headache"
+        },
+        {
+          "key": "D",
+          "text": "Proteinuria"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Increased blood pressure: The primary symptom of preeclampsia is increased blood pressure (hypertension). Preeclampsia is characterized by elevated blood pressure (typically >140/90 mmHg) after 20 weeks of gestation, along with the presence of proteinuria (protein in the urine). This condition can lead to serious complications for both the mother and baby if left untreated. · Increased heart rate: Increased heart rate (tachycardia) can be associated with various conditions, but it is not a primary symptom of preeclampsia. The main concern with preeclampsia is high blood pressure and its complications, rather than an increased heart rate. · Severe headache: A severe headache can occur with preeclampsia, especially if the condition progresses to more severe forms (such as eclampsia). However, it is not the primary symptom. While a headache is a common symptom, it typically develops as a result of the elevated blood pressure and is more of a secondary sign. · Proteinuria: Proteinuria (the presence of protein in the urine) is an important diagnostic sign of preeclampsia but is not the primary symptom. While it helps confirm the diagnosis, elevated blood pressure is typically the first clinical sign that prompts suspicion of preeclampsia."
+    },
+    {
+      "qNo": 75,
+      "subject": "General Aptitude & Reasoning",
+      "question": "A patient is receiving insulin therapy for diabetes. Which of the following symptoms would indicate hypoglycemia?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Shaking and sweating"
+        },
+        {
+          "key": "B",
+          "text": "Rapid weight gain"
+        },
+        {
+          "key": "C",
+          "text": "Increased thirst"
+        },
+        {
+          "key": "D",
+          "text": "Vomiting"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Shaking and sweating: Shaking and sweating are common symptoms of hypoglycemia (low blood sugar). When blood glucose levels drop too low, the body responds with a release of stress hormones (such as adrenaline), which can cause symptoms like shaking, sweating, dizziness, and anxiety. These symptoms typically occur when blood glucose falls below normal levels. · Rapid weight gain: Rapid weight gain is not a symptom of hypoglycemia. It could be a sign of hyperglycemia (high blood sugar), fluid retention, or even other conditions unrelated to diabetes. Weight gain is more associated with the use of insulin or other medications that promote fluid retention or increase appetite. · Increased thirst: Increased thirst (polydipsia) is more commonly associated with hyperglycemia (high blood sugar), particularly in uncontrolled diabetes. It occurs when the kidneys try to expel excess glucose through urine, leading to dehydration and a compensatory increase in thirst. This is not a symptom of hypoglycemia. · Vomiting: Vomiting is not typically associated with hypoglycemia. It can be caused by various conditions, including gastrointestinal issues, infections, or severe hyperglycemia (particularly diabetic ketoacidosis), but it is not a typical symptom of low blood sugar."
+    },
+    {
+      "qNo": 76,
+      "subject": "Medical-Surgical Nursing",
+      "question": "A nurse is caring for a patient with pneumonia. Which of the following should be prioritized in the nursing plan?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Encourage deep breathing and coughing exercises"
+        },
+        {
+          "key": "B",
+          "text": "Provide a high-calorie diet"
+        },
+        {
+          "key": "C",
+          "text": "Encourage the patient to rest"
+        },
+        {
+          "key": "D",
+          "text": "Administer pain medication as prescribed"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Encourage deep breathing and coughing exercises: Encouraging deep breathing and coughing exercises is a priority in the nursing plan for a patient with pneumonia. These exercises help to clear the lungs of secretions, improve oxygenation, and prevent atelectasis (collapse of the lung). Effective coughing can help expel mucus and bacteria from the respiratory system, which is critical in managing pneumonia and preventing complications like further infections or respiratory distress. · Provide a high-calorie diet: While a high-calorie diet may be beneficial for promoting recovery, especially if the patient is experiencing weight loss, it is not the priority intervention for pneumonia. Ensuring proper nutrition can help support the immune system and overall recovery, but addressing respiratory function (via deep breathing and coughing exercises) is more immediate and critical in the acute phase of pneumonia. · Encourage the patient to rest: Rest is important for recovery from pneumonia, as it allows the body to fight off the infection. However, while rest should be encouraged, deep breathing and coughing exercises take precedence because they directly address the respiratory concerns associated with pneumonia, such as clearing airways and improving lung function. · Administer pain medication as prescribed: Pain management, including administering prescribed pain medication, is important, particularly if the patient has pleuritic chest pain. However, pain relief should not override the need to address the airway clearance through deep breathing and coughing exercises. Pain relief can be provided alongside other interventions, but it is not the primary focus."
+    },
+    {
+      "qNo": 77,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which of the following is the most common complication following a hip replacement surgery?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Wound infection"
+        },
+        {
+          "key": "B",
+          "text": "Deep vein thrombosis (DVT)"
+        },
+        {
+          "key": "C",
+          "text": "Pulmonary embolism"
+        },
+        {
+          "key": "D",
+          "text": "Pneumonia"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Wound infection: Wound infection is a potential complication following hip replacement surgery, but it is less common compared to other complications like deep vein thrombosis (DVT). Proper surgical technique and prophylactic antibiotics can help reduce the risk of infection, but DVT remains a more frequent issue in the postoperative period. · Deep vein thrombosis (DVT): Deep vein thrombosis (DVT) is one of the most common complications following hip replacement surgery. DVT occurs when a blood clot forms in the deep veins, often in the legs, due to reduced mobility after surgery. The risk is heightened after hip surgery because of the prolonged immobility and possible damage to blood vessels. Preventative measures, such as anticoagulants, compression stockings, and early mobilization, are typically employed to reduce the risk. · Pulmonary embolism: A pulmonary embolism (PE) is a serious complication that can occur if a DVT clot breaks loose and travels to the lungs. While PE is a potentially life-threatening condition, it is less common than DVT following hip replacement surgery. However, PE remains a concern because of its potential to occur as a consequence of an untreated DVT. · Pneumonia: Pneumonia is a possible complication after surgery, especially in older adults or those with pre-existing lung conditions, but it is not as common as DVT. Pneumonia typically occurs due to immobility and difficulty with deep breathing after surgery, which can increase the risk of respiratory infections. However, DVT is considered the most common complication after hip replacement surgery."
+    },
+    {
+      "qNo": 78,
+      "subject": "Medical-Surgical Nursing",
+      "question": "A nurse is caring for a patient with hyperthyroidism. Which of the following symptoms is most likely to be observed?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Weight gain and lethargy"
+        },
+        {
+          "key": "B",
+          "text": "Increased appetite and weight loss"
+        },
+        {
+          "key": "C",
+          "text": "Cold intolerance"
+        },
+        {
+          "key": "D",
+          "text": "Bradycardia"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Weight gain and lethargy: These symptoms are more commonly associated with hypothyroidism, not hyperthyroidism. In hypothyroidism, the thyroid gland underproduces thyroid hormones, leading to weight gain and lethargy (fatigue and low energy levels). Hyperthyroidism, on the other hand, is characterized by an overproduction of thyroid hormones, which leads to opposite symptoms. · Increased appetite and weight loss: In hyperthyroidism, the thyroid gland produces excessive amounts of thyroid hormones (T3 and T4), which increase the body's metabolism. This often leads to weight loss despite increased appetite, as the body burns calories more quickly than usual. Other symptoms commonly include rapid heartbeat, heat intolerance, and anxiety. · Cold intolerance: Cold intolerance is more common in hypothyroidism, where the body’s metabolism slows down due to a lack of thyroid hormones. People with hypothyroidism may feel cold more Copyright © 2026 Adda247 easily. In contrast, people with hyperthyroidism typically experience heat intolerance due to an increased metabolic rate. · Bradycardia: Bradycardia (slow heart rate) is typically seen in hypothyroidism, where the slowing of the metabolism also affects heart rate. In hyperthyroidism, the opposite occurs—there is often tachycardia (increased heart rate) due to the overstimulation of the heart by the elevated thyroid hormones."
+    },
+    {
+      "qNo": 79,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "A nurse is teaching a diabetic patient how to manage their blood sugar. The nurse should explain that the best time to test blood glucose is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "After a meal"
+        },
+        {
+          "key": "B",
+          "text": "Before bed"
+        },
+        {
+          "key": "C",
+          "text": "Before meals"
+        },
+        {
+          "key": "D",
+          "text": "After exercise"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "· After a meal: Testing blood glucose after a meal helps to determine how the body is handling the food just consumed. It shows the postprandial blood glucose levels, but it is not the best time for routine blood glucose monitoring. After meals, blood sugar tends to be higher, which may not provide the most useful information for managing daily insulin or medication adjustments. · Before bed: Testing before bed can be useful to ensure that the patient's blood glucose level is within a safe range overnight, but it is not the best time to check for managing daily blood glucose levels. The before-meal tests are typically more helpful for adjusting insulin dosages and meal planning. · Before meals: The best time to test blood glucose is generally before meals (preprandial). This allows the patient to assess their blood glucose level before they eat, helping to determine how much insulin or medication is needed to control blood sugar levels around mealtime. Pre-meal blood glucose monitoring gives valuable information for insulin dose adjustments and helps maintain better overall blood sugar control throughout the day. · After exercise: Testing blood glucose after exercise can be helpful to monitor how physical activity is impacting glucose levels, but it is not the primary time to check. Exercise can lower blood glucose, and monitoring after exercise can give insight into the effects of physical activity, but it is not typically the time used for routine blood glucose management."
+    },
+    {
+      "qNo": 80,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which of the following is a typical sign of meningitis in an adult?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Abdominal pain"
+        },
+        {
+          "key": "B",
+          "text": "Stiff neck"
+        },
+        {
+          "key": "C",
+          "text": "Chest pain"
+        },
+        {
+          "key": "D",
+          "text": "Joint swelling"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Abdominal pain is not a typical sign of meningitis in adults. Meningitis primarily affects the meninges (the protective membranes covering the brain and spinal cord), and symptoms are more related to neurological issues such as headache, fever, and neck stiffness. Abdominal pain could occur in some cases due to other infections or conditions but is not specific to meningitis. · Stiff neck: A stiff neck is one of the classic signs of meningitis, especially in adults. This symptom occurs due to inflammation of the meninges, which can cause muscle rigidity and discomfort when trying to move the neck. This sign, along with fever, headache, and sensitivity to light, is commonly associated with bacterial or viral meningitis. · Chest pain: Chest pain is not a typical symptom of meningitis. Chest pain may suggest conditions like heart problems, lung issues, or gastrointestinal problems, but it is not characteristic of meningitis. Meningitis symptoms are more likely to involve fever, headache, neck stiffness, and altered mental status. · Joint swelling: Joint swelling is not a typical sign of meningitis in adults. Although some infections may cause joint inflammation (such as viral infections or autoimmune conditions), meningitis primarily affects the brain and spinal cord. Swelling of joints is more commonly associated with conditions like arthritis or infections like septic arthritis, rather than meningitis."
+    },
+    {
+      "qNo": 81,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "Which of the following is the most common cause of hospital-acquired infections (HAIs)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Fungal infections"
+        },
+        {
+          "key": "B",
+          "text": "Bacterial infections"
+        },
+        {
+          "key": "C",
+          "text": "Viral infections"
+        },
+        {
+          "key": "D",
+          "text": "Parasitic infections"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Fungal infections: While fungal infections can occur in hospital settings, they are less common compared to bacterial infections. Fungal infections are typically associated with immunocompromised patients or those with long-term antibiotic use, but overall, they are not the most common cause of hospital-acquired infections (HAIs). · Bacterial infections: Bacterial infections are the most common cause of hospital-acquired infections (HAIs). These infections can be caused by various pathogens such as Escherichia coli (E. coli), Staphylococcus aureus, Clostridium difficile (C. diff), and Pseudomonas aeruginosa, among others. Hospitals, due to their high concentration of patients, procedures, and invasive devices (such as catheters and ventilators), are high-risk environments for bacterial infections. Common HAI sites include urinary tract infections, surgical site infections, pneumonia, and bloodstream infections. · Viral infections: Viral infections can also occur in hospitals but are less frequent than bacterial infections when it comes to HAIs. Influenza, norovirus, and respiratory syncytial virus (RSV) can be transmitted in hospital settings, but bacterial infections generally account for more cases. · Parasitic infections: Parasitic infections are rare causes of hospital-acquired infections. While parasitic infections can occur in certain healthcare settings, they are far less common than bacterial infections and are not considered a primary cause of HAIs."
+    },
+    {
+      "qNo": 82,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "The nurse is caring for a patient who is receiving warfarin therapy. What should be the priority in monitoring for this patient?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Blood pressure"
+        },
+        {
+          "key": "B",
+          "text": "International Normalized Ratio (INR)"
+        },
+        {
+          "key": "C",
+          "text": "Serum potassium levels"
+        },
+        {
+          "key": "D",
+          "text": "Blood glucose levels"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "(b) International Normalized Ratio (INR) Explanation: Warfarin is an anticoagulant used to prevent blood clots. The INR (International Normalized Ratio) is the most critical parameter to monitor because it reflects the effectiveness of warfarin therapy and helps in adjusting the dose to avoid complications such as bleeding or clotting. 1. Why INR is prioritized: · INR measures the clotting tendency of blood. · The therapeutic range is usually 2.0–3.0 for most conditions (e.g., atrial fibrillation, DVT). · An INR below the range increases clotting risk, while an INR above it raises the risk of bleeding. 2. Why not other options: · Blood pressure (a): While important in general, it does not directly monitor warfarin therapy. · Serum potassium levels (c): More relevant for medications like diuretics or conditions like hyperkalemia. · Blood glucose levels (d): Significant for diabetic patients but unrelated to anticoagulant therapy. Nursing priority involves frequent INR checks, educating the patient about dietary vitamin K (affects INR), and recognizing signs of bleeding or clot formation."
+    },
+    {
+      "qNo": 83,
+      "subject": "Medical-Surgical Nursing",
+      "question": "A nurse is caring for a patient with a history of myocardial infarction (MI). The nurse should prioritize monitoring for which of the following?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Decreased blood pressure"
+        },
+        {
+          "key": "B",
+          "text": "Arrhythmias"
+        },
+        {
+          "key": "C",
+          "text": "Increased temperature"
+        },
+        {
+          "key": "D",
+          "text": "Increased urinary output Copyright © 2026 Adda247"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Decreased blood pressure: While a decreased blood pressure can be a concern after a myocardial infarction (MI), it is not as immediately critical to monitor as arrhythmias. Blood pressure changes can occur after MI due to heart function impairment, but arrhythmias are a more common and life-threatening immediate complication after MI that require close monitoring. · Arrhythmias: Arrhythmias are one of the most common and dangerous complications after a myocardial infarction. The injury to the heart muscle from the MI can disrupt the normal electrical conduction system of the heart, leading to potentially life-threatening arrhythmias such as ventricular fibrillation or ventricular tachycardia. These arrhythmias can cause sudden cardiac arrest if not managed promptly, which is why they must be prioritized for monitoring in a patient with a history of MI. · Increased temperature: Increased temperature (fever) is not a typical or immediate complication of myocardial infarction. It may occur in the case of an infection or inflammation, but fever is not the primary concern in the acute phase following MI. Monitoring for arrhythmias, oxygenation, and circulatory stability is more critical in the early stages. · Increased urinary output: While increased urinary output (diuresis) can be a positive sign of improved renal function or fluid balance, it is not a primary concern after a myocardial infarction. In fact, a decrease in urinary output could be a sign of renal complications or low perfusion, but arrhythmias are much more critical to monitor immediately after MI."
+    },
+    {
+      "qNo": 84,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which of the following is the most common side effect of opioid pain medications?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Diarrhea"
+        },
+        {
+          "key": "B",
+          "text": "Constipation"
+        },
+        {
+          "key": "C",
+          "text": "Insomnia"
+        },
+        {
+          "key": "D",
+          "text": "Tremors"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Diarrhea: Diarrhea is not a common side effect of opioid medications. In fact, opioids typically cause constipation because they slow down gastrointestinal motility, which can lead to difficulty passing stool. · Constipation: Constipation is the most common side effect of opioid pain medications. Opioids bind to receptors in the gastrointestinal tract, which slows down bowel movements and leads to constipation. This is a well-known and frequent problem for patients on long-term opioid therapy, and it often requires management with stool softeners, laxatives, or other interventions. · Insomnia: While insomnia can occur in some patients taking opioids, it is not as common as constipation. Opioids may cause drowsiness or sedation, and in some individuals, they may even contribute to sleep disturbances, but insomnia is generally not the most prevalent side effect. · Tremors: Tremors are not a common side effect of opioid medications. While opioids can cause various side effects, including dizziness or confusion, tremors are more often associated with other conditions or medications, not opioids."
+    },
+    {
+      "qNo": 85,
+      "subject": "Medical-Surgical Nursing",
+      "question": "A nurse is caring for a patient with cirrhosis of the liver. Which of the following is a potential complication of cirrhosis?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hypokalemia"
+        },
+        {
+          "key": "B",
+          "text": "Hepatic encephalopathy"
+        },
+        {
+          "key": "C",
+          "text": "Hypercalcemia"
+        },
+        {
+          "key": "D",
+          "text": "Diabetic ketoacidosis"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Hypokalemia: Hypokalemia (low potassium levels) is not a direct or primary complication of cirrhosis. However, it can occur as a secondary issue, often due to diuretic use or issues related to fluid imbalance. While it's a concern, it is not as directly associated with cirrhosis as hepatic encephalopathy. · Hepatic encephalopathy: Hepatic encephalopathy is a well-known complication of cirrhosis. It occurs when the liver is no longer able to adequately detoxify the blood, leading to a buildup of toxins like ammonia in the bloodstream. These toxins affect the brain, causing symptoms ranging from mild confusion to coma. It is a serious complication and requires prompt medical management. · Hypercalcemia: Hypercalcemia (elevated calcium levels) is not typically associated with cirrhosis. In fact, cirrhosis can sometimes cause hypocalcemia (low calcium levels) due to liver dysfunction affecting vitamin D metabolism and calcium regulation. Hypercalcemia is more often related to conditions like cancer, hyperparathyroidism, or other endocrine disorders. · Diabetic ketoacidosis: Diabetic ketoacidosis (DKA) is a complication seen in diabetes (especially type 1) and is not directly related to cirrhosis. DKA occurs when the body produces high levels of ketones due to insulin deficiency, leading to metabolic acidosis. While cirrhosis can affect glucose metabolism, it is not typically associated with the development of diabetic ketoacidosis."
+    },
+    {
+      "qNo": 86,
+      "subject": "General Aptitude & Reasoning",
+      "question": "The nurse is caring for a post-operative patient who is at risk for venous thromboembolism (VTE). Which of the following interventions should the nurse implement?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ambulation as soon as possible"
+        },
+        {
+          "key": "B",
+          "text": "Administering IV fluids only"
+        },
+        {
+          "key": "C",
+          "text": "Keeping the patient in bed for 48 hours"
+        },
+        {
+          "key": "D",
+          "text": "Limiting the use of compression stockings"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Ambulation as soon as possible: Early ambulation is one of the most effective interventions to prevent venous thromboembolism (VTE) in post-operative patients. Mobilizing the patient as soon as they are stable helps improve circulation and reduces the risk of blood clots forming in the veins, particularly in the legs (deep vein thrombosis or DVT), which can lead to pulmonary embolism (PE) if dislodged. · Administering IV fluids only: While IV fluids may be part of the post-operative care to maintain hydration and circulation, administering IV fluids only is not an intervention for preventing VTE. Other strategies, such as ambulation, anticoagulation, or compression devices, are more directly aimed at preventing blood clots. · Keeping the patient in bed for 48 hours: Prolonged bed rest increases the risk of venous thromboembolism due to stasis of blood flow, which can lead to clot formation. Prolonged immobility is a major risk factor for VTE, and it is generally avoided by encouraging early movement and ambulation once the patient is stable. · Limiting the use of compression stockings: Compression stockings are an important part of preventing VTE, not something to be limited. These stockings help improve circulation and reduce the risk of blood clots. Their use should be encouraged rather than limited, especially in high-risk patients."
+    },
+    {
+      "qNo": 87,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "A nurse is teaching a patient with a new diagnosis of chronic obstructive pulmonary disease (COPD). Which of the following should the nurse include in the teaching?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Avoiding physical activity"
+        },
+        {
+          "key": "B",
+          "text": "Using a humidifier during sleep"
+        },
+        {
+          "key": "C",
+          "text": "Smoking cessation is not necessary"
+        },
+        {
+          "key": "D",
+          "text": "Limiting fluid intake to reduce lung congestion"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Avoiding physical activity: Physical activity is actually beneficial for patients with COPD. Exercise can help improve lung function, increase stamina, and reduce symptoms like shortness of breath. It’s important to encourage physical activity in a controlled manner, as long as the patient is stable and exercises within their limits. · Using a humidifier during sleep: Using a humidifier can be helpful for patients with COPD, especially at night. It can help moisturize the air and ease breathing by preventing the airways from becoming dry. Dry air can irritate the respiratory system, so a humidifier can provide some relief for COPD symptoms, especially during sleep. · Smoking cessation is not necessary: Smoking cessation is the most important step in managing COPD. Smoking is the primary cause of COPD, and continuing to smoke will worsen the condition. The nurse should emphasize that smoking cessation is critical for slowing disease progression and improving quality of life. · Limiting fluid intake to reduce lung congestion: Limiting fluid intake is not typically recommended for COPD patients unless there is a specific concern such as heart failure or fluid retention. In most cases, staying well-hydrated is important to help thin mucus and make it easier to clear from the lungs. Excessive fluid restriction could actually have negative effects in managing respiratory symptoms. Copyright © 2026 Adda247 Q.88 A nurse is preparing to administer an antibiotic to a patient with a urinary tract infection (UTI). Which of the following actions is a priority before administering the medication? A. Assess the patient blood pressure B. Review the patient allergy history C. Administer pain medication D. Obtain a full set of vital signs Answer: B Sol: · Avoiding physical activity: Physical activity is actually beneficial for patients with COPD. Exercise can help improve lung function, increase stamina, and reduce symptoms like shortness of breath. It’s important to encourage physical activity in a controlled manner, as long as the patient is stable and exercises within their limits. · Using a humidifier during sleep: Using a humidifier can be helpful for patients with COPD, especially at night. It can help moisturize the air and ease breathing by preventing the airways from becoming dry. Dry air can irritate the respiratory system, so a humidifier can provide some relief for COPD symptoms, especially during sleep. · Smoking cessation is not necessary: Smoking cessation is the most important step in managing COPD. Smoking is the primary cause of COPD, and continuing to smoke will worsen the condition. The nurse should emphasize that smoking cessation is critical for slowing disease progression and improving quality of life. · Limiting fluid intake to reduce lung congestion: Limiting fluid intake is not typically recommended for COPD patients unless there is a specific concern such as heart failure or fluid retention. In most cases, staying well-hydrated is important to help thin mucus and make it easier to clear from the lungs. Excessive fluid restriction could actually have negative effects in managing respiratory symptoms."
+    },
+    {
+      "qNo": 89,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "A nurse is caring for a patient who is receiving chemotherapy. The patient is experiencing nausea and vomiting. What is the most appropriate intervention?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Administer antiemetic medications as prescribed"
+        },
+        {
+          "key": "B",
+          "text": "Increase fluid intake immediately"
+        },
+        {
+          "key": "C",
+          "text": "Offer the patient high-fat foods"
+        },
+        {
+          "key": "D",
+          "text": "Encourage the patient to eat a large meal"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Administer antiemetic medications as prescribed: Antiemetic medications are the most appropriate intervention for nausea and vomiting, especially in patients receiving chemotherapy. Chemotherapy can cause significant nausea and vomiting due to the effect of the drugs on the gastrointestinal system. Administering antiemetic drugs, such as ondansetron or metoclopramide, as prescribed will help alleviate these symptoms and improve the patient's comfort and ability to tolerate treatment. · Increase fluid intake immediately: While increased fluid intake is important for maintaining hydration, it is not the primary intervention for nausea and vomiting. If the patient is experiencing nausea, consuming large amounts of fluids immediately could worsen the nausea. The main focus should be on controlling the nausea first, often with antiemetics, before addressing hydration concerns. · Offer the patient high-fat foods: Offering high-fat foods is not recommended during nausea and vomiting. High-fat foods can be harder to digest and may worsen nausea. The patient should be encouraged to eat smaller, more easily digestible meals, and avoid fatty, greasy, or spicy foods that can irritate the stomach. · Encourage the patient to eat a large meal: Encouraging the patient to eat a large meal is not advisable during nausea and vomiting. Large meals may be overwhelming to the digestive system and can increase the discomfort associated with nausea. It's better to encourage smaller, more frequent meals if the patient can tolerate eating."
+    },
+    {
+      "qNo": 90,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "What is the first action the nurse should take if a patient shows signs of an allergic reaction after receiving medication?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Call the healthcare provider"
+        },
+        {
+          "key": "B",
+          "text": "Administer an antihistamine"
+        },
+        {
+          "key": "C",
+          "text": "Stop the medication and notify the healthcare provider"
+        },
+        {
+          "key": "D",
+          "text": "Monitor the patient vital signs"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "· Call the healthcare provider: While it is important to notify the healthcare provider about the allergic reaction, the first priority is to stop the medication immediately to prevent further exposure to the allergen. Calling the healthcare provider can come afterward, but stopping the medication should be done first to protect the patient. · Administer an antihistamine: Administering an antihistamine might be necessary to manage mild allergic reactions (e.g., itching, hives). However, the first priority is to stop the medication. Administering an antihistamine should only be done after stopping the offending medication and depending on the severity of the allergic reaction. · Stop the medication and notify the healthcare provider: The first action is to stop the medication immediately when a patient shows signs of an allergic reaction. This is essential to prevent the reaction from worsening. Afterward, the nurse should notify the healthcare provider for further assessment and management. In severe cases, such as anaphylaxis, emergency treatment (e.g., epinephrine) may be required. · Monitor the patient vital signs: While monitoring vital signs is important, especially to assess for signs of severe allergic reactions (like anaphylaxis), the first priority is to stop the medication to halt the progression of the allergic reaction. Monitoring should be done after discontinuing the medication and notifying the healthcare provider."
+    },
+    {
+      "qNo": 91,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which of the following is the most appropriate intervention for a patient with a full-thickness burn?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Clean the wound with antiseptic soap and water"
+        },
+        {
+          "key": "B",
+          "text": "Cover the wound with a dry dressing"
+        },
+        {
+          "key": "C",
+          "text": "Apply ice to the burned area"
+        },
+        {
+          "key": "D",
+          "text": "Administer a tetanus shot and pain medication"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "· Clean the wound with antiseptic soap and water: For a full-thickness burn, the wound should not be cleaned with soap and water in the initial stages, as it can cause further damage or introduce infection. Full-thickness burns (third-degree burns) involve all layers of the skin and can affect deeper tissues, so more careful wound care is necessary. Cleaning should be done with sterile techniques, and only after the initial assessment. · Cover the wound with a dry dressing: While covering the wound is important to protect it from infection, dry dressings are not the most appropriate intervention for a full-thickness burn. The burn area should be covered with a sterile, non-stick dressing and may require specialized burn care products like hydrocolloid dressings, depending on the severity. A dry dressing could cause more trauma to the burn site when removed. · Apply ice to the burned area: Ice should never be applied to a burn. Applying ice can cause further damage to the already injured tissues and may lead to hypothermia. The appropriate intervention is to cool the burn with lukewarm water (not ice water) for 10-20 minutes immediately after the injury, but ice should not be used. · Administer a tetanus shot and pain medication: Administering a tetanus shot is an appropriate intervention, as burns can introduce bacteria into the wound, which increases the risk of tetanus infection. Additionally, pain medication should be administered to control the significant pain associated with full-thickness burns. These measures are crucial for managing the patient’s immediate needs following a burn injury."
+    },
+    {
+      "qNo": 92,
+      "subject": "Medical-Surgical Nursing",
+      "question": "A patient with a history of asthma is prescribed a corticosteroid inhaler. The nurse should explain that the medication is used primarily for which of the following?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Relief of acute asthma symptoms"
+        },
+        {
+          "key": "B",
+          "text": "Long-term management of asthma"
+        },
+        {
+          "key": "C",
+          "text": "Prevention of viral infections"
+        },
+        {
+          "key": "D",
+          "text": "Treatment of bacterial infections"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Relief of acute asthma symptoms: Corticosteroid inhalers are not typically used forCopyright the immediate of acute asthma symptoms. For acute symptoms, short-acting bronchodilators (like albuterol) © 2026relief Adda247 are used, which quickly open the airways. Corticosteroids, however, are used for long-term control and prevention, not immediate relief. · Long-term management of asthma: Corticosteroid inhalers are used primarily for long-term management of asthma. These medications help reduce inflammation in the airways, preventing asthma attacks and controlling chronic symptoms. They do not provide immediate relief but work over time to improve overall asthma control and reduce the frequency of flare-ups. · Prevention of viral infections: Corticosteroid inhalers do not prevent viral infections. While steroids can reduce inflammation, they do not have antiviral properties. In fact, long-term use of corticosteroids can sometimes make patients more susceptible to infections. · Treatment of bacterial infections: Corticosteroid inhalers are not used to treat bacterial infections. They do not have antibacterial properties. Antibiotics are prescribed for bacterial infections, while corticosteroids are used to reduce inflammation in conditions like asthma or chronic obstructive pulmonary disease (COPD)."
+    },
+    {
+      "qNo": 93,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "A patient is receiving a blood transfusion and begins to experience chills, fever, and back pain. What is the nurse priority action?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Administer acetaminophen for fever"
+        },
+        {
+          "key": "B",
+          "text": "Stop the transfusion and notify the healthcare provider"
+        },
+        {
+          "key": "C",
+          "text": "Increase the infusion rate of the blood"
+        },
+        {
+          "key": "D",
+          "text": "Encourage the patient to take deep breaths"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Administer acetaminophen for fever: While acetaminophen may be used to treat fever, it is not the priority action in this situation. The most important step when a patient experiences symptoms like chills, fever, and back pain during a blood transfusion is to stop the transfusion immediately to prevent further complications. After stopping the transfusion, other interventions, like managing fever, can be considered. · Stop the transfusion and notify the healthcare provider: The priority action is to stop the transfusion as soon as signs of a potential transfusion reaction (such as chills, fever, and back pain) occur. These symptoms could indicate a hemolytic reaction, which can be life-threatening. The nurse should then notify the healthcare provider immediately for further assessment and management. The transfusion should not be restarted until the healthcare provider has assessed the patient. · Increase the infusion rate of the blood: Increasing the infusion rate is not appropriate in this situation. If the patient is experiencing a reaction, the nurse should stop the transfusion, not speed it up. Increasing the infusion rate could exacerbate the reaction and worsen the patient’s condition. · Encourage the patient to take deep breaths: Encouraging deep breathing is helpful in managing anxiety, but it is not the priority action if the patient is having an adverse reaction to the transfusion. The primary concern is to stop the transfusion to prevent further harm."
+    },
+    {
+      "qNo": 94,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "What is the primary function of the kidneys in the regulation of fluid balance?",
+      "options": [
+        {
+          "key": "A",
+          "text": "To produce urine"
+        },
+        {
+          "key": "B",
+          "text": "To regulate the pH of the blood"
+        },
+        {
+          "key": "C",
+          "text": "To maintain electrolyte balance"
+        },
+        {
+          "key": "D",
+          "text": "To produce red blood cells"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "· To produce urine: While the kidneys do produce urine, this is not their primary function in the regulation of fluid balance. Urine production is a result of the kidneys filtering excess waste and fluid from the blood. The key role of the kidneys in fluid balance is to regulate the volume and composition of body fluids, which includes electrolyte balance, rather than just urine production. · To regulate the pH of the blood: The kidneys do help regulate blood pH, but this is a secondary function. They achieve this by excreting hydrogen ions and reabsorbing bicarbonate from urine to maintain a stable pH level in the body. However, this function is part of a broader regulatory system that also involves the lungs and buffers in the blood. · To maintain electrolyte balance: The primary role of the kidneys in fluid balance is to maintain electrolyte balance. The kidneys filter the blood, removing excess electrolytes like sodium, potassium, and calcium, and reabsorbing the necessary ones to maintain a balance that supports normal cellular function. This regulation helps control fluid balance in the body. · To produce red blood cells: While the kidneys produce erythropoietin, a hormone that stimulates the production of red blood cells in the bone marrow, this is not their primary function in fluid balance. Erythropoietin production is involved in regulating red blood cell production in response to oxygen levels, not fluid balance."
+    },
+    {
+      "qNo": 95,
+      "subject": "Medical-Surgical Nursing",
+      "question": "A nurse is caring for a patient with chronic kidney disease (CKD). Which of the following lab results would the nurse expect to see in this patient?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Low serum potassium"
+        },
+        {
+          "key": "B",
+          "text": "High creatinine level"
+        },
+        {
+          "key": "C",
+          "text": "Decreased serum sodium"
+        },
+        {
+          "key": "D",
+          "text": "Elevated white blood cell count"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "· Low serum potassium: In chronic kidney disease (CKD), the kidneys' ability to excrete potassium is impaired. This can lead to hyperkalemia (high potassium levels), not low potassium. Therefore, a low serum potassium would not typically be expected in a patient with CKD. · High creatinine level: High creatinine levels are a common finding in patients with CKD. As kidney function declines, the kidneys' ability to filter and eliminate creatinine from the blood decreases. Creatinine is a waste product from muscle metabolism, and its level rises when kidney function is impaired, making it a key marker for kidney function. · Decreased serum sodium: While decreased serum sodium (hyponatremia) can occur in various conditions, it is not specifically characteristic of CKD. In CKD, patients may have difficulty with fluid balance, but sodium levels are more likely to be normal or slightly elevated, especially in the early stages of the disease. Hyponatremia can occur in later stages of CKD but is not as typical as high creatinine. · Elevated white blood cell count: An elevated white blood cell count (leukocytosis) is more commonly seen with infections or inflammatory conditions, but it is not a typical finding in CKD unless there is an infection or inflammation. CKD itself does not directly cause an elevated white blood cell count."
+    },
+    {
+      "qNo": 96,
+      "subject": "General Aptitude & Reasoning",
+      "question": "A patient is scheduled for a colonoscopy. Which of the following interventions is most important in preparing the patient?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Administer a laxative as ordered"
+        },
+        {
+          "key": "B",
+          "text": "NPO for 24 hours prior to the procedure"
+        },
+        {
+          "key": "C",
+          "text": "Encourage the patient to increase fluid intake"
+        },
+        {
+          "key": "D",
+          "text": "Provide pain medication prior to the procedure"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Administer a laxative as ordered: For a colonoscopy, the most important preparation is to ensure that the colon is completely emptied so that the doctor can clearly see the colon walls during the procedure. This is typically achieved through the administration of a laxative or bowel preparation solution, often ordered to be taken the night before the procedure. This helps clear out any stool and other debris from the colon, ensuring the best possible visibility for the procedure. · NPO for 24 hours prior to the procedure: While it is important for the patient to be NPO (nothing by mouth) before a colonoscopy, the typical instruction is to be NPO for at least 6-8 hours before the procedure, not 24 hours. The patient should refrain from eating or drinking to reduce the risk of aspiration during sedation. However, the key preparation is the bowel-cleansing regimen, which usually takes place the day before the procedure. · Encourage the patient to increase fluid intake: While fluid intake is important during bowel preparation to help prevent dehydration, the primary intervention is to follow the prescribed bowel prep regimen, which may include consuming specific fluids or laxatives. The increased fluid intake should happen as part of the bowel prep instructions, but it is secondary to administering the prescribed bowel-cleansing agent. · Provide pain medication prior to the procedure: Pain medication is not routinely given prior to a colonoscopy. Sedation is typically used during the procedure to ensure the patient is comfortable and pain-free. The focus is on preparing the colon rather than providing pain relief beforehand. Pain management during the procedure is generally handled with anesthetics or sedatives administered by the healthcare team."
+    },
+    {
+      "qNo": 97,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "Copyright A patient with diabetes mellitus is scheduled for surgery. What is the nurse priority concern© 2026 Adda247 related to the patient diabetes management prior to surgery?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ensure the patient receives a dose of insulin the morning of the surgery"
+        },
+        {
+          "key": "B",
+          "text": "Ensure the patient is on an appropriate diet for the day of surgery"
+        },
+        {
+          "key": "C",
+          "text": "Ensure the patient blood glucose level is within the target range"
+        },
+        {
+          "key": "D",
+          "text": "Ensure the patient has a complete physical examination"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "· Ensure the patient receives a dose of insulin the morning of the surgery: While insulin management is important, giving a full dose of insulin right before surgery could lead to hypoglycemia, especially if the patient is fasting or if the surgery is delayed. Typically, insulin doses are adjusted based on the patient's blood glucose level and the type of surgery. The priority is ensuring blood glucose levels are within target range before the procedure, not just administering insulin. · Ensure the patient is on an appropriate diet for the day of surgery: Diet is important, but it is generally not the primary concern in the immediate preoperative period for a diabetic patient. Most patients are NPO (nothing by mouth) before surgery to reduce the risk of aspiration during anesthesia. The focus should be on managing blood glucose, as fluctuations in glucose levels (either hyperglycemia or hypoglycemia) can lead to complications during surgery and recovery. · Ensure the patient blood glucose level is within the target range: Blood glucose control is the priority concern in the perioperative period for diabetic patients. Both hyperglycemia (high blood sugar) and hypoglycemia (low blood sugar) can lead to complications such as infections, delayed healing, and poor surgical outcomes. Ensuring that blood glucose is within a target range prior to surgery helps prevent these risks and promotes optimal recovery. · Ensure the patient has a complete physical examination: A complete physical examination is essential for preoperative assessment, but the immediate concern for a diabetic patient is the management of blood glucose levels. While a physical exam is part of the overall preoperative assessment, it is not the priority for a patient with diabetes in the hours leading up to surgery."
+    },
+    {
+      "qNo": 98,
+      "subject": "Medical-Surgical Nursing",
+      "question": "A nurse is caring for a patient post-surgery and notices a serous drainage from the incision. Which of the following is the most appropriate action?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Change the dressing and monitor for any changes"
+        },
+        {
+          "key": "B",
+          "text": "Apply a heating pad to the wound to reduce drainage"
+        },
+        {
+          "key": "C",
+          "text": "Notify the healthcare provider immediately"
+        },
+        {
+          "key": "D",
+          "text": "Leave the wound open to drain naturally"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "· Change the dressing and monitor for any changes: Serous drainage (a clear, watery fluid) is a common and normal type of drainage from a surgical wound during the early stages of healing. It typically indicates that the body is healing and can be expected in the first few days after surgery. The appropriate action is to change the dressing to maintain a clean environment for the wound and monitor the wound for any changes in drainage, such as an increase in amount, a change in color, or the development of other signs of infection. · Apply a heating pad to the wound to reduce drainage: Applying a heating pad to the wound is not appropriate and could potentially cause harm. Heat could increase blood flow and potentially exacerbate swelling or increase drainage. It is important to maintain a clean, dry dressing and observe the wound for any signs of infection or unusual drainage. · Notify the healthcare provider immediately: There is no immediate need to notify the healthcare provider if the drainage is serous, as this is typically a normal part of the healing process. However, if the drainage changes to something more concerning (such as pus or blood), or if the wound shows signs of infection (redness, warmth, or increased pain), then contacting the healthcare provider would be necessary. · Leave the wound open to drain naturally: Leaving the wound open to drain naturally is not appropriate unless specifically directed by the healthcare provider. Typically, wounds should be kept covered to promote healing and prevent infection. If there is excess drainage, the wound dressing should be changed regularly, but leaving the wound open is not recommended unless it's part of a specialized treatment plan."
+    },
+    {
+      "qNo": 99,
+      "subject": "Medical-Surgical Nursing",
+      "question": "The nurse is teaching a patient about the use of a peak flow meter for asthma management. Which statement by the patient indicates understanding of the teaching?",
+      "options": [
+        {
+          "key": "A",
+          "text": "I should use the peak flow meter once a week"
+        },
+        {
+          "key": "B",
+          "text": "I should use the peak flow meter during an asthma attack"
+        },
+        {
+          "key": "C",
+          "text": "I should use the peak flow meter every day when my asthma is stable"
+        },
+        {
+          "key": "D",
+          "text": "I should use the peak flow meter only when I am having trouble breathing."
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "· \"I should use the peak flow meter once a week.\": Using a peak flow meter once a week is insufficient for effective asthma management. Patients with asthma should use the meter more frequently to monitor lung function, typically on a daily basis, especially when their asthma is stable. Weekly monitoring does not provide enough data to manage asthma proactively. · \"I should use the peak flow meter during an asthma attack.\": While the peak flow meter can be used during an asthma attack, it is primarily used regularly to monitor lung function when the asthma is stable, in order to identify any changes or early signs of worsening symptoms before an attack occurs. During an active asthma attack, the patient should focus on treating the attack as prescribed, using a rescue inhaler or seeking emergency care if needed. · \"I should use the peak flow meter every day when my asthma is stable.\": Regular daily use of the peak flow meter is important for asthma management. By measuring peak expiratory flow daily, the patient can track their lung function and identify any early signs of asthma worsening. This proactive approach allows for adjustments in medications or actions before symptoms worsen significantly. · \"I should use the peak flow meter only when I am having trouble breathing.\": Using the peak flow meter only when experiencing trouble breathing is not ideal. Monitoring peak flow regularly (even when breathing is normal) helps to detect subtle changes in lung function that may indicate worsening asthma. This allows for earlier intervention before breathing problems become severe."
+    },
+    {
+      "qNo": 100,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which of the following provides free online access to the scientific nursing/health sciences literature?",
+      "options": [
+        {
+          "key": "A",
+          "text": "PubMed"
+        },
+        {
+          "key": "B",
+          "text": "British Nursing Index​"
+        },
+        {
+          "key": "C",
+          "text": "Registry of Nursing Research​"
+        },
+        {
+          "key": "D",
+          "text": "CINAHL​"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Here's why the other options have limitations for free access: (b) British Nursing Index (BNI): While BNI is a valuable resource, it typically requires a paid subscription for full-text access to articles. (c) Registry of Nursing Research (RN Registry): This registry focuses on identifying ongoing nursing research studies, not necessarily providing access to the full research articles. (d) CINAHL (Cumulative Index to Nursing and Allied Health Literature): Similar to BNI, CINAHL is a premier database for nursing and allied health literature, but often requires institutional access or a paid subscription for full-text articles. PubMed, on the other hand, is a free service from the National Library of Medicine (NLM) that provides access to millions of citations from MEDLINE and additional life science journals. While some articles may require a paid subscription through the publisher's website, PubMed often links to freely available versions or offers \"similar articles\" suggestions that might be open access. Additional Free Resources: Open-access journals: Many scholarly journals in nursing and health sciences are published as open access, meaning the full text is freely available online without a subscription. Searching for \"[topic] + open access journal\" can lead you to relevant articles. Institutional repositories: Universities and research institutions sometimes offer open access to the research conducted by their faculty and students. Explore the websites of relevant institutions for potential resources. Copyright © 2026 Adda247"
+    }
+  ]
+}

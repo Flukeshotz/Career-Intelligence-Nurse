@@ -1,0 +1,2439 @@
+{
+  "paperId": "pyq-norcet-2023",
+  "title": "AIIMS NORCET 5 (2023) Official Question Paper & Key",
+  "examName": "AIIMS NORCET",
+  "year": 2023,
+  "shift": "Stage 1 Prelims (17 Sep 2023 / NORCET 5)",
+  "totalMarks": 96,
+  "negativeMarking": "0.33 (1/3rd deduction per incorrect MCQ)",
+  "durationMinutes": 90,
+  "officialKeyNotification": "AIIMS New Delhi Official Master Response Key (2023)",
+  "subjectsSummary": [
+    {
+      "name": "Med-Surg & Critical Care",
+      "count": 35
+    },
+    {
+      "name": "Obstetrics (OBG)",
+      "count": 15
+    },
+    {
+      "name": "Child Health (Pediatrics)",
+      "count": 15
+    },
+    {
+      "name": "Fundamentals & Procedures",
+      "count": 15
+    },
+    {
+      "name": "Pharmacology & Dosage",
+      "count": 10
+    },
+    {
+      "name": "General Aptitude & Reasoning",
+      "count": 10
+    }
+  ],
+  "questions": [
+    {
+      "qNo": 1,
+      "subject": "General Aptitude & Reasoning",
+      "question": "Maximum time of hand hygiene: Generate HTML Link",
+      "options": [
+        {
+          "key": "A",
+          "text": "90 Seconds"
+        },
+        {
+          "key": "B",
+          "text": "20-30 Seconds"
+        },
+        {
+          "key": "C",
+          "text": "1 Minute"
+        },
+        {
+          "key": "D",
+          "text": "2 Minutes Test Title / ID 640476 Exam Category Exam Select Exam Category"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "90 Seconds: Handwashing for this duration is not commonly practiced in standard hand hygiene protocols. Select Paid Status All Created From Date ID Test Type TITLE LANGUAGE SUBJECT Q.2 Maximum & minimum score of GCS are: A. 8-9 Norcet B. 8-12 Previous C. Year12-13 Paper English PYQ EXAM CATEGORY EXAMS MARKS TIME (MINS) UPDATED AT CREATED AT S3 PATH SF JSON V2 JSON NURSING NORCET 100 90 Thu, Jun 19, 2025, Wed, Jan 8, 2025, View View View 15:49:04 05:47:53 D. 3-15 (Held on ACTION edit content_copy 2023 Answer: D September 17) Sol: 8-9: These values do not represent the minimum and maximum scores of the Glasgow Coma Scale (GCS). 8-12: This range represents moderate brain injury according to the GCS, but it is not the total scoring range. 12-13: This range is part of mild brain injury in GCS but does not include the minimum or maximum scores. 3-15: The GCS ranges from 3 (indicating deep unconsciousness or coma) to 15 (indicating full consciousness). This range assesses eye-opening, verbal response, and motor response."
+    },
+    {
+      "qNo": 3,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "Side effect of chloramphenicol is?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Dizziness"
+        },
+        {
+          "key": "B",
+          "text": "Headache"
+        },
+        {
+          "key": "C",
+          "text": "Bone marrow suppression"
+        },
+        {
+          "key": "D",
+          "text": "Immunity suppression"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Dizziness: While dizziness may occur with certain medications, it is not a common or significant side effect of chloramphenicol. Headache: Headache can be a general side effect of many drugs but is not a characteristic adverse effect of chloramphenicol. Bone marrow suppression (Correct Option): Chloramphenicol is known to cause bone marrow suppression, which can lead to aplastic anemia, a rare but serious side effect. Immunity suppression: Chloramphenicol does not directly suppress the immune system; its adverse effects are primarily related to bone marrow toxicity."
+    },
+    {
+      "qNo": 4,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Needle gauge preferred with blood transfusion is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "16 G"
+        },
+        {
+          "key": "B",
+          "text": "18 G"
+        },
+        {
+          "key": "C",
+          "text": "20 G"
+        },
+        {
+          "key": "D",
+          "text": "22 G"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "16 G: A 16-gauge needle is larger and may be used for rapid transfusion or in emergency settings but is not routinely preferred for blood transfusions. 18 G (Correct Option): An 18-gauge needle is commonly used for blood transfusions as it provides an optimal flow rate without causing excessive damage to blood cells. 20 G: A 20-gauge needle can also be used, especially in adults with smaller veins, but it is slower compared to 18 G and less ideal for routine transfusions. 22 G: A 22-gauge needle is generally too small for blood transfusions as it may cause hemolysis and reduce the flow rate significantly."
+    },
+    {
+      "qNo": 5,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "Which of the following is the correct series of labor?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Engagement, Descent, Flexion, Crowning, Internal rotation of head, Extension, External rotation of head, Restitution."
+        },
+        {
+          "key": "B",
+          "text": "Engagement, Descent, Flexion, Internal rotation of head, Crowning, Extension, Restitution, External rotation of head."
+        },
+        {
+          "key": "C",
+          "text": "Engagement, Descent, Crowning, Flexion, Extension, Restitution, Internal rotation of head, External rotation of head."
+        },
+        {
+          "key": "D",
+          "text": "Engagement, Descent, Flexion, Internal rotation of head, Crowning, Restitution, Extension, External rotation of head."
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "A: Crowning happens after internal rotation of the head, and the sequence here is not logical. B: This option reflects the proper sequence of labor: Engagement: The fetal head enters the pelvis. Descent: The fetus moves down through the birth canal. Flexion: The fetal chin moves towards the chest. Internal rotation of the head: The head rotates to align with the birth canal. Crowning: The widest part of the head appears at the vaginal opening. Extension: The head extends to pass under the pubic bone. Restitution: The head rotates back to align with the shoulders. External rotation of the head: The head turns as the shoulders are delivered. C: Crowning occurs after internal rotation and flexion, so this sequence is inaccurate. D: Restitution occurs after extension, not before it."
+    },
+    {
+      "qNo": 6,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Neonates compression ventilation ratio:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1:1"
+        },
+        {
+          "key": "B",
+          "text": "1:2"
+        },
+        {
+          "key": "C",
+          "text": "1:3"
+        },
+        {
+          "key": "D",
+          "text": "1:4 Copyright © 2026 Adda247 PUBLISH expand_circle_down POINTS 0 START TIME"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "1:1: This ratio is not used in neonatal resuscitation and would indicate equal compression and ventilation cycles, which is inappropriate. 1:2: This ratio is also incorrect and does not align with neonatal resuscitation guidelines. 1:3: The recommended compression-to-ventilation ratio for neonates during resuscitation is 3 compressions to 1 ventilation. This ensures adequate oxygenation and circulation in the critical first moments after birth. 1:4: This ratio is not used in neonatal resuscitation and would delay oxygenation"
+    },
+    {
+      "qNo": 7,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Identify the given figure:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hohmann retractor"
+        },
+        {
+          "key": "B",
+          "text": "Farabeuf retractor"
+        },
+        {
+          "key": "C",
+          "text": "Doyen retractor"
+        },
+        {
+          "key": "D",
+          "text": "Denver retractor"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Hohmann retractor: The Hohmann retractor is commonly used in orthopedic surgeries to retract soft tissues and expose bones, but it does not match the design of the instrument shown. Farabeuf retractor: This is a small, double-ended retractor used in superficial procedures. Its shape is not consistent with the instrument shown. Doyen retractor: The Doyen retractor is typically used in abdominal surgeries, and its design is different from the figure described. Denver retractor: The Denver retractor is a specialized surgical instrument used for deep retraction in certain procedures. Its shape and design match the figure in question."
+    },
+    {
+      "qNo": 8,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Percentage of burnt perineum (TBSA) according to Rule of Nines is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1%​"
+        },
+        {
+          "key": "B",
+          "text": "4.5%​"
+        },
+        {
+          "key": "C",
+          "text": "9%​"
+        },
+        {
+          "key": "D",
+          "text": "18%​"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "According to the Rule of Nines (Wallace’s rule), the perineum accounts for 1% of total body surface area (TBSA). (b) 4.5% → Incorrect. Represents either the anterior or posterior surface of one arm. (c) 9% → Incorrect. Represents the entire head and neck or one complete arm. (d) 18% → Incorrect. Represents the entire trunk (front or back) or one complete leg."
+    },
+    {
+      "qNo": 9,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "Which disease is not included in Mission Indradhanush?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Tetanus"
+        },
+        {
+          "key": "B",
+          "text": "Diphtheria"
+        },
+        {
+          "key": "C",
+          "text": "Pneumonia"
+        },
+        {
+          "key": "D",
+          "text": "Whooping cough"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Tetanus: Tetanus is included in Mission Indradhanush, which focuses on increasing immunization coverage for preventable diseases in children and pregnant women. Diphtheria: Diphtheria is also covered under Mission Indradhanush as part of the DPT (Diphtheria, Pertussis, Tetanus) vaccine. Pneumonia: Pneumonia is not explicitly included in the diseases targeted under Mission Indradhanush. However, pneumococcal vaccines may be provided separately under other immunization programs. Whooping cough: Whooping cough (pertussis) is part of the DPT vaccine and is included in Mission Indradhanush."
+    },
+    {
+      "qNo": 10,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Birth weight quadruples by:",
+      "options": [
+        {
+          "key": "A",
+          "text": "5 Months"
+        },
+        {
+          "key": "B",
+          "text": "1 Year"
+        },
+        {
+          "key": "C",
+          "text": "18 Months"
+        },
+        {
+          "key": "D",
+          "text": "2 Years"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "5 Months: By 5 months, the birth weight typically doubles, not quadruples. 1 Year: By 1 year, the birth weight usually triples, not quadruples. 18 Months: Birth weight does not typically quadruple by 18 months; this milestone occurs later. 2 Years: By 2 years of age, a child’s birth weight is expected to quadruple, reflecting normal growth patterns."
+    },
+    {
+      "qNo": 11,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Height of a neonate doubles by:",
+      "options": [
+        {
+          "key": "A",
+          "text": "4 Years"
+        },
+        {
+          "key": "B",
+          "text": "3 Years"
+        },
+        {
+          "key": "C",
+          "text": "2 Years Copyright © 2026 Adda247"
+        },
+        {
+          "key": "D",
+          "text": "1 Year"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "4 Years: By 4 years of age, a child’s height typically doubles the neonate’s birth length, reflecting normal growth and development. 3 Years: By 3 years, the height has not yet doubled but is approaching the doubling milestone. 2 Years: By 2 years, the height increases significantly but has not yet reached double the birth length. 1 Year: By 1 year, the height increases by approximately 50% of the birth length, not double."
+    },
+    {
+      "qNo": 12,
+      "subject": "Medical-Surgical Nursing",
+      "question": "SSPE is a complication of which disease?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Whooping cough"
+        },
+        {
+          "key": "B",
+          "text": "Measles"
+        },
+        {
+          "key": "C",
+          "text": "Meningitis"
+        },
+        {
+          "key": "D",
+          "text": "Tetanus"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Whooping cough: While whooping cough (pertussis) can cause severe respiratory complications, it is not associated with SSPE (Subacute Sclerosing Panencephalitis). Measles: SSPE is a rare and fatal complication of measles. It occurs years after the initial infection and is caused by a persistent measles virus in the central nervous system, leading to progressive brain damage. Meningitis: Meningitis involves inflammation of the meninges and is not linked to SSPE. Tetanus: Tetanus affects the nervous system through a toxin produced by Clostridium tetani, but it is not associated with SSPE."
+    },
+    {
+      "qNo": 13,
+      "subject": "Medical-Surgical Nursing",
+      "question": "The term for a decreased number of RBCs is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Anaemia"
+        },
+        {
+          "key": "B",
+          "text": "Pancytopenia"
+        },
+        {
+          "key": "C",
+          "text": "Leukemia"
+        },
+        {
+          "key": "D",
+          "text": "Thrombocytopenia"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Anaemia: Anaemia refers to a condition characterized by a decreased number of red blood cells (RBCs) or hemoglobin, leading to reduced oxygen-carrying capacity of the blood. Pancytopenia: Pancytopenia is a condition where all three major blood cell types (RBCs, WBCs, and platelets) are reduced. It is not specific to RBC reduction. Leukemia: Leukemia is a cancer of the blood and bone marrow that primarily affects white blood cells (WBCs), not RBCs. Thrombocytopenia: Thrombocytopenia refers to a decreased number of platelets, not RBCs."
+    },
+    {
+      "qNo": 14,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "Placenta implantation abnormality where the placenta is implanted deeply into the myometrium:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Placenta Accreta"
+        },
+        {
+          "key": "B",
+          "text": "Placenta Previa"
+        },
+        {
+          "key": "C",
+          "text": "Placenta Increta"
+        },
+        {
+          "key": "D",
+          "text": "Placenta Percreta"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Placenta Accreta: This occurs when the placenta attaches too deeply into the uterine wall but does not invade the myometrium. Placenta Previa: This refers to a condition where the placenta partially or completely covers the cervix. It does not involve abnormal invasion into the myometrium. Placenta Increta (Correct Option): Placenta increta occurs when the placenta invades and grows deeply into the myometrium, making it harder to detach after delivery. Placenta Percreta: This is a more severe condition where the placenta penetrates through the uterine wall and may invade adjacent organs, such as the bladder."
+    },
+    {
+      "qNo": 15,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which antiepileptic is given by the intranasal route?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Midazolam"
+        },
+        {
+          "key": "B",
+          "text": "Diazepam"
+        },
+        {
+          "key": "C",
+          "text": "Clobazam"
+        },
+        {
+          "key": "D",
+          "text": "Nitrazepam"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Midazolam: Midazolam is a benzodiazepine used for acute seizure management and can be administered via the intranasal route. It is effective for rapid absorption and is convenient in emergencies. Diazepam: While diazepam is commonly used for seizures, it is typically administered rectally, orally, or intravenously, not intranasally. Clobazam: Clobazam is used for long-term seizure control and is administered orally, not intranasally. Nitrazepam: Nitrazepam is used for epilepsy and sleep disorders but is administered orally, not via the intranasal route."
+    },
+    {
+      "qNo": 16,
+      "subject": "Medical-Surgical Nursing",
+      "question": "are the signs of good breastfeeding attachment except:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Baby chin touches the breast"
+        },
+        {
+          "key": "B",
+          "text": "Baby lower lip inverted"
+        },
+        {
+          "key": "C",
+          "text": "Baby secondary areola well covered by upper lip"
+        },
+        {
+          "key": "D",
+          "text": "Sucking audible"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Correct answer (b) Explanation: Good breastfeeding attachment is indicated by several key signs that ensure effective milk transfer and prevent nipple problems. In proper attachment, the baby’s chin should touch the breast, the mouth should be wide open, and more of the areola should be visible above the baby’s upper lip than below the lower lip. The baby’s lips, especially the lower lip, should be everted (turned outward), allowing a deep latch. Audible sucking or swallowing sounds indicate that milk is being effectively removed. An inverted lower lip is not a sign of good attachment, as it suggests a shallow latch, which can lead to ineffective feeding and nipple soreness."
+    },
+    {
+      "qNo": 17,
+      "subject": "General Aptitude & Reasoning",
+      "question": "Intramuscular injection angle is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "15 Degree"
+        },
+        {
+          "key": "B",
+          "text": "25 Degree"
+        },
+        {
+          "key": "C",
+          "text": "45 Degree Copyright © 2026 Adda247"
+        },
+        {
+          "key": "D",
+          "text": "90 Degree"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "15 Degree: This angle is used for intradermal injections, such as those for tuberculosis testing. 25 Degree: This angle is commonly used for subcutaneous injections, like insulin administration, depending on the needle length and fat layer. 45 Degree: This is also suitable for subcutaneous injections but not for intramuscular injections. 90 Degree: Intramuscular injections require a 90-degree angle to ensure the needle penetrates deeply into the muscle for effective medication absorption."
+    },
+    {
+      "qNo": 18,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Which congenital cardiac defect does not cause heart failure?",
+      "options": [
+        {
+          "key": "A",
+          "text": "ASD"
+        },
+        {
+          "key": "B",
+          "text": "VSD"
+        },
+        {
+          "key": "C",
+          "text": "TGA"
+        },
+        {
+          "key": "D",
+          "text": "PDA"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Atrial Septal Defect (ASD), especially small to moderate-sized, often remains asymptomatic in infancy and early childhood and typically does not cause heart failure during this period. In contrast, defects like VSD, PDA, and TGA often lead to volume or pressure overload, causing early-onset congestive heart failure (CHF) if left untreated. Explanation of Options: (a) ASD – Atrial Septal Defect: Correct. Most ASDs, particularly secundum-type, do not cause heart failure in infancy. Symptoms may appear later in adulthood if large and untreated. (b) VSD – Ventricular Septal Defect: Commonly causes left-to-right shunt, leading to pulmonary overcirculation and heart failure if the defect is moderate or large. (c) TGA – Transposition of Great Arteries: A cyanotic congenital defect that causes severe hypoxemia and heart failure in neonates unless promptly corrected. (d) PDA – Patent Ductus Arteriosus: Causes left-to-right shunt leading to volume overload, especially in premature infants, resulting in heart failure."
+    },
+    {
+      "qNo": 19,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Second dose of DPT site of injection:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Deltoid muscle"
+        },
+        {
+          "key": "B",
+          "text": "Gluteus maximus"
+        },
+        {
+          "key": "C",
+          "text": "Vastus lateralis muscle"
+        },
+        {
+          "key": "D",
+          "text": "Gluteus minimus"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Deltoid muscle: This site is commonly used for intramuscular injections in older children and adults but is not the recommended site for DPT in infants. Gluteus maximus: The gluteus maximus is not recommended for infants due to the risk of damaging the sciatic nerve. Vastus lateralis muscle:The vastus lateralis muscle, located in the anterolateral thigh, is the preferred site for DPT injections in infants. It is well-developed and safe for intramuscular administration. Gluteus minimus: This is not commonly used for intramuscular injections in infants and is not recommended for DPT administration."
+    },
+    {
+      "qNo": 20,
+      "subject": "Community Health Nursing (CHN)",
+      "question": "Iron dextran is given by which route?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Intravenous"
+        },
+        {
+          "key": "B",
+          "text": "Intramuscular"
+        },
+        {
+          "key": "C",
+          "text": "Intraosseous"
+        },
+        {
+          "key": "D",
+          "text": "Intradermal"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Intravenous: Although iron dextran can be administered intravenously, the intramuscular route is also commonly used and is particularly preferred in specific clinical scenarios. Intramuscular: Iron dextran is frequently administered via the intramuscular route, especially when IV administration is not feasible. The injection is typically given deep into the gluteal muscle to minimize staining and tissue irritation. Intraosseous: Intraosseous administration is primarily used for emergency fluid or medication delivery, not for routine administration of iron dextran. Intradermal: The intradermal route is unsuitable for administering iron dextran and is instead used for allergy testing or specific vaccines."
+    },
+    {
+      "qNo": 21,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "When a drug is injected into the bone marrow, this pathway is called:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Intraperitoneal"
+        },
+        {
+          "key": "B",
+          "text": "Intrathecal"
+        },
+        {
+          "key": "C",
+          "text": "Intramedullary"
+        },
+        {
+          "key": "D",
+          "text": "Intraarterial"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Intraperitoneal: This refers to injecting a drug into the peritoneal cavity, not the bone marrow. Intrathecal: This involves injecting a drug into the spinal canal (subarachnoid space), typically for anesthesia or central nervous system medications. Intramedullary: Intramedullary refers to injecting a drug directly into the bone marrow cavity. This method is often used in emergencies for rapid medication administration when IV access is difficult, particularly in pediatric cases. Intraarterial: This involves injecting a drug directly into an artery, typically for localized treatment, such as chemotherapy for tumors."
+    },
+    {
+      "qNo": 22,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Longest bone in the human body?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Humerus"
+        },
+        {
+          "key": "B",
+          "text": "Femur"
+        },
+        {
+          "key": "C",
+          "text": "Tibia"
+        },
+        {
+          "key": "D",
+          "text": "Radius"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Humerus: The humerus is the longest bone in the upper limb but is not the longest bone in the entire human body. Copyright © 2026 Adda247 Femur: The femur, or thigh bone, is the longest bone in the human body. It extends from the hip to the knee and supports the body’s weight during standing and walking. Tibia: The tibia, or shinbone, is the second-longest bone in the body, located in the lower leg, but it is shorter than the femur. Radius: The radius is one of the two forearm bones and is much shorter than the femur."
+    },
+    {
+      "qNo": 23,
+      "subject": "General Aptitude & Reasoning",
+      "question": "Normal urine output in 24 hours?",
+      "options": [
+        {
+          "key": "A",
+          "text": "300 ml"
+        },
+        {
+          "key": "B",
+          "text": "500 ml"
+        },
+        {
+          "key": "C",
+          "text": "2.5 Liter"
+        },
+        {
+          "key": "D",
+          "text": "1.5 Liter"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "300 ml: This is considered oliguria, a condition of abnormally low urine output, which is below normal. 500 ml: While this is within the minimum threshold for urine production to avoid dehydration, it is less than the normal daily urine output. 2.5 Liter: This is above the normal range and could indicate polyuria, often seen in conditions like diabetes or excessive fluid intake. 1.5 Liter: The normal urine output in 24 hours is approximately 1.5 liters (1500 ml), varying based on fluid intake, physical activity, and environmental conditions."
+    },
+    {
+      "qNo": 24,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Fluid of choice in a burn patient?",
+      "options": [
+        {
+          "key": "A",
+          "text": "0.45 Normal Saline"
+        },
+        {
+          "key": "B",
+          "text": "0.25 Normal Saline"
+        },
+        {
+          "key": "C",
+          "text": "3% Normal Saline"
+        },
+        {
+          "key": "D",
+          "text": "Ringer Lactate"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "0.45 Normal Saline: This is a hypotonic solution and is not suitable for burn patients, as it does not effectively replace the electrolytes lost in burns. 0.25 Normal Saline: This is also a hypotonic solution and inappropriate for burn resuscitation due to insufficient sodium and chloride content. 3% Normal Saline: This hypertonic solution is used in specific conditions like severe hyponatremia but is not the fluid of choice for burn patients. Ringer Lactate: Ringer lactate is an isotonic solution that is ideal for burn patients. It helps restore fluid balance, electrolytes, and lactate, which acts as a buffer to correct metabolic acidosis often seen in burn injuries."
+    },
+    {
+      "qNo": 25,
+      "subject": "Medical-Surgical Nursing",
+      "question": "In laparoscopy, the gas used is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "CO₂"
+        },
+        {
+          "key": "B",
+          "text": "N₂O"
+        },
+        {
+          "key": "C",
+          "text": "O₂"
+        },
+        {
+          "key": "D",
+          "text": "Heliox"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "CO₂: Carbon dioxide (CO₂) is the most commonly used gas for laparoscopy because it is non-flammable, easily absorbed by the body, and quickly exhaled, making it safe for creating pneumoperitoneum. N₂O: Nitrous oxide (N₂O) is not used in laparoscopy as it is flammable and not suitable for creating pneumoperitoneum. O₂: Oxygen (O₂) is not used for laparoscopy due to its high flammability risk during electrosurgical procedures. Heliox: Heliox (a mixture of helium and oxygen) is not used in laparoscopy; its primary use is in managing respiratory conditions."
+    },
+    {
+      "qNo": 26,
+      "subject": "General Aptitude & Reasoning",
+      "question": "Sodium concentration in plasma?",
+      "options": [
+        {
+          "key": "A",
+          "text": "110 mEq/L"
+        },
+        {
+          "key": "B",
+          "text": "130 mEq/L"
+        },
+        {
+          "key": "C",
+          "text": "150 mEq/L"
+        },
+        {
+          "key": "D",
+          "text": "170 mEq/L"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "110 mEq/L: This value indicates severe hyponatremia, a dangerously low sodium level. 130 mEq/L: This value represents mild hyponatremia, which is close to the lower end of the normal range for sodium concentration in plasma (135–145 mEq/L). 150 mEq/L: This value is above the normal plasma sodium range and may suggest borderline hypernatremia in certain clinical contexts. 170 mEq/L: This value indicates severe hypernatremia, which is abnormally high and associated with serious complications."
+    },
+    {
+      "qNo": 27,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Convert 38.6°C to °F:",
+      "options": [
+        {
+          "key": "A",
+          "text": "98.6"
+        },
+        {
+          "key": "B",
+          "text": "102.2"
+        },
+        {
+          "key": "C",
+          "text": "101.48"
+        },
+        {
+          "key": "D",
+          "text": "103.82"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Explanation of Calculation: The formula to convert Celsius to Fahrenheit is: °F=(°C×95)+32°F = (°C \\times \\frac{9}{5}) + 32°F=(°C×59​)+32 °F=(38.6×1.8)+32=69.48+32=101.48°F°F = (38.6 \\times 1.8) + 32 = 69.48 + 32 = 101.48°F°F=(38.6×1.8)+32=69.48+32=101.48°F 98.6: This is the normal body temperature in Fahrenheit, not the equivalent of 38.6°C. 102.2: This is a rounded approximation often used, but the exact conversion of 38.6°C is 101.48°F. 101.48: This is the exact conversion of 38.6°C to Fahrenheit using the formula. 103.82: This value is too high and incorrect based on the conversion formula."
+    },
+    {
+      "qNo": 28,
+      "subject": "Medical-Surgical Nursing",
+      "question": "100 crore vaccinations (COVAXIN + COVISHIELD) were completed in India on:",
+      "options": [
+        {
+          "key": "A",
+          "text": "20th October 2021"
+        },
+        {
+          "key": "B",
+          "text": "21st October 2021"
+        },
+        {
+          "key": "C",
+          "text": "22nd October 2021"
+        },
+        {
+          "key": "D",
+          "text": "23rd October 2021"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "20th October 2021: This is not the date when India achieved the milestone of 100 crore vaccinations. 21st October 2021: India completed 100 crore COVID-19 vaccinations (COVAXIN + COVISHIELD) on 21st October 2021, marking a significant achievement in the country’s vaccination drive. 22nd October 2021: This is not the correct date for the 100-crore vaccination milestone. 23rd October 2021: This is also not the date for this milestone."
+    },
+    {
+      "qNo": 29,
+      "subject": "Medical-Surgical Nursing",
+      "question": "India started COVID-19 vaccination with COVAXIN on:",
+      "options": [
+        {
+          "key": "A",
+          "text": "15 October 2021"
+        },
+        {
+          "key": "B",
+          "text": "18 December 2021"
+        },
+        {
+          "key": "C",
+          "text": "16 January 2021"
+        },
+        {
+          "key": "D",
+          "text": "22 November 2021"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "15 October 2021: This date is unrelated to the launch of COVAXIN. 18 December 2021: This date does not correspond to the rollout of COVID-19 vaccination in India. 16 January 2021: India launched its COVID-19 vaccination drive, including COVAXIN (developed by Bharat Biotech), on 16 January 2021. This marked the beginning of one of the world’s largest vaccination campaigns. 22 November 2021: This date is unrelated to the initiation of COVID-19 vaccination in India."
+    },
+    {
+      "qNo": 30,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "Which is not included in the triage system?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Red"
+        },
+        {
+          "key": "B",
+          "text": "Yellow"
+        },
+        {
+          "key": "C",
+          "text": "Green"
+        },
+        {
+          "key": "D",
+          "text": "Blue"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Red: Indicates immediate priority for patients who require urgent care to survive (e.g., life-threatening conditions). Yellow: Indicates delayed priority for patients who need care but can wait without immediate danger to life. Green: Indicates minimal priority for patients with minor injuries or conditions that do not require urgent care. Blue: Blue is not a standard category in the triage system. The traditional triage system includes red, yellow, green, and sometimes black (for deceased or expectant)."
+    },
+    {
+      "qNo": 31,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "I.V. cannula size for rapid IV infusion:",
+      "options": [
+        {
+          "key": "A",
+          "text": "16 G"
+        },
+        {
+          "key": "B",
+          "text": "18 G"
+        },
+        {
+          "key": "C",
+          "text": "20 G"
+        },
+        {
+          "key": "D",
+          "text": "22 G"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "16 G: A 16-gauge cannula is a large-bore cannula suitable for rapid IV infusion. It allows high fluid flow rates, making it ideal for emergencies and fluid resuscitation. 18 G: An 18-gauge cannula is also commonly used for IV infusions, but its flow rate is slightly lower compared to a 16 G cannula. 20 G: A 20-gauge cannula is suitable for routine IV infusions but is not optimal for rapid fluid administration due to its smaller size. 22 G: A 22-gauge cannula is small and typically used for pediatric or elderly patients with fragile veins. It is unsuitable for rapid IV infusions."
+    },
+    {
+      "qNo": 32,
+      "subject": "Medical-Surgical Nursing",
+      "question": "True about complementary feeding is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "It can be started from birth with breastfeed."
+        },
+        {
+          "key": "B",
+          "text": "It can be started by 6 months onwards along with breastfeed."
+        },
+        {
+          "key": "C",
+          "text": "It is a substitute for breastfeed."
+        },
+        {
+          "key": "D",
+          "text": "Both A and B"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "It can be started from birth with breastfeed: Exclusive breastfeeding is recommended from birth until 6 months of age. Complementary feeding is not started at birth. It can be started by 6 months onwards along with breastfeed: Complementary feeding should begin at 6 months of age while continuing breastfeeding. It provides additional nutrients required for growth and development as breast milk alone is no longer sufficient. It is a substitute for breastfeed: Complementary feeding is not a substitute for breastfeeding but is introduced alongside it to supplement the baby's nutritional needs. Both A and B: This is incorrect because statement A is not true."
+    },
+    {
+      "qNo": 33,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Exclusive breastfeeding is up to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "1 Year"
+        },
+        {
+          "key": "B",
+          "text": "2 Years"
+        },
+        {
+          "key": "C",
+          "text": "6 Months"
+        },
+        {
+          "key": "D",
+          "text": "4 Months"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "1 Year: While breastfeeding can continue alongside complementary feeding, exclusive breastfeeding is not recommended for a full year as additional nutrition is required. 2 Years: Breastfeeding may continue up to 2 years or beyond, but exclusive breastfeeding is only advised for the first 6 months. 6 Months: Exclusive breastfeeding is recommended by the World Health Organization (WHO) and other health bodies for the first 6 months of life, providing all the necessary nutrients and immune protection. 4 Months: Exclusive breastfeeding for only 4 months is considered insufficient as infants still need the benefits of breast milk for the full 6 months."
+    },
+    {
+      "qNo": 34,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which of the following is not included in the surgical safety checklist:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Verify with patient name and procedure to be done."
+        },
+        {
+          "key": "B",
+          "text": "Allergy check."
+        },
+        {
+          "key": "C",
+          "text": "Medications check."
+        },
+        {
+          "key": "D",
+          "text": "Counselling Copyright © 2026 Adda247"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Verify with patient name and procedure to be done: Verifying the patient’s identity and the procedure is a critical part of the surgical safety checklist to prevent wrong-patient or wrong-procedure errors. Allergy check: Checking for allergies, especially to medications or anesthesia, is essential for patient safety and is included in the checklist. Medications check: Ensuring that all medications, including anesthesia and antibiotics, are prepared and administered correctly is a standard part of the checklist. Counselling: Counselling is important preoperatively for patient education and consent but is not a formal component of the surgical safety checklist, which focuses on intraoperative safety protocols."
+    },
+    {
+      "qNo": 35,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "In which episiotomy tear is the anal sphincter intact?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1st degree"
+        },
+        {
+          "key": "B",
+          "text": "2nd degree"
+        },
+        {
+          "key": "C",
+          "text": "3rd degree"
+        },
+        {
+          "key": "D",
+          "text": "4th degree"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "1st degree: A 1st-degree tear involves only the vaginal mucosa and perineal skin, leaving the muscles and anal sphincter intact. 2nd degree: A 2nd-degree tear involves the vaginal mucosa, perineal skin, and perineal muscles, but the anal sphincter remains intact. 3rd degree: A 3rd-degree tear extends through the vaginal mucosa, perineal muscles, and into the anal sphincter, damaging it. 4th degree: A 4th-degree tear extends through the anal sphincter and involves the rectal mucosa, causing the most severe damage."
+    },
+    {
+      "qNo": 36,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "Most common type of episiotomy:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Median"
+        },
+        {
+          "key": "B",
+          "text": "Mediolateral"
+        },
+        {
+          "key": "C",
+          "text": "J-shaped"
+        },
+        {
+          "key": "D",
+          "text": "Lateral"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Median: While the median (midline) episiotomy is easier to perform and heals well, it is less common because it carries a higher risk of extension into the anal sphincter. Mediolateral: The mediolateral episiotomy is the most commonly performed type. It involves an incision at an angle from the vaginal opening, reducing the risk of anal sphincter damage while still allowing sufficient space for childbirth. J-shaped: The J-shaped episiotomy is less commonly used due to its complexity and potential for uneven healing. Lateral: The lateral episiotomy is rare as it can cause excessive bleeding and complicate healing."
+    },
+    {
+      "qNo": 37,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "For placental removal, all methods are used EXCEPT:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Give Oxytocin"
+        },
+        {
+          "key": "B",
+          "text": "Give Massage"
+        },
+        {
+          "key": "C",
+          "text": "Controlled cord traction"
+        },
+        {
+          "key": "D",
+          "text": "Prostaglandin E1"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Give Oxytocin: Oxytocin is used to stimulate uterine contractions, which helps in the natural expulsion of the placenta. Give Massage: Uterine massage is performed to enhance uterine contractions and facilitate placental separation. Controlled cord traction: This is a standard method used during the active management of the third stage of labor to remove the placenta safely while avoiding uterine inversion. Prostaglandin E1: Prostaglandin E1 is not typically used for placental removal. It is mainly utilized for cervical ripening and induction of labor, not for expelling the placenta."
+    },
+    {
+      "qNo": 38,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Contraception contraindicated in a lactating mother:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Combined oral contraceptive pills"
+        },
+        {
+          "key": "B",
+          "text": "Spermicidal jellies"
+        },
+        {
+          "key": "C",
+          "text": "Condom"
+        },
+        {
+          "key": "D",
+          "text": "Copper T"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Combined oral contraceptive pills: Combined oral contraceptives contain both estrogen and progestin. Estrogen can reduce milk production, making them contraindicated in lactating mothers. Progestin-only contraceptives are a safer alternative during breastfeeding. Spermicidal jellies: These do not interfere with lactation and can be safely used as a contraceptive option. Condom: Condoms are a barrier method that has no impact on lactation and are safe for use by breastfeeding mothers. Copper T: Copper T is an intrauterine device (IUD) that does not affect lactation and is considered a suitable contraceptive for lactating mothers."
+    },
+    {
+      "qNo": 39,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Abscess and lump in the right breast with infected fever postpartum care:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Breastfeeding continue from both breasts"
+        },
+        {
+          "key": "B",
+          "text": "Left breast feeding"
+        },
+        {
+          "key": "C",
+          "text": "Bilateral abscess"
+        },
+        {
+          "key": "D",
+          "text": "Give Bromocriptine"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Breastfeeding continue from both breasts: Breastfeeding from the affected breast with an abscess is generally avoided to prevent worsening of the infection. Left breast feeding: Breastfeeding can continue from the unaffected left breast to maintain lactation and provide nutrition to the baby while managing the infection in the right breast. Bilateral abscess: This refers to infection in both breasts. The scenario in the question specifies a single infected breast (right breast), so this is not applicable. Give Bromocriptine: Bromocriptine suppresses lactation but is not the standard treatment for a breast abscess. Antibiotics and drainage of the abscess are preferred."
+    },
+    {
+      "qNo": 40,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Following are the parameters of anthropometry. Which of the following is an age-independent anthropometry factor?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mid-arm Circumference"
+        },
+        {
+          "key": "B",
+          "text": "Weight"
+        },
+        {
+          "key": "C",
+          "text": "Height Copyright © 2026 Adda247"
+        },
+        {
+          "key": "D",
+          "text": "Head Circumference"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Mid-arm Circumference: Mid-arm circumference (MAC) is an age-independent parameter. It is widely used to assess nutritional status in children and adults, particularly in emergencies or resourcelimited settings, as it remains stable after early childhood. Weight: Weight is age-dependent, as it changes significantly throughout growth and development stages. Height: Height is also age-dependent, varying greatly during childhood and adolescence. Head Circumference: Head circumference is age-dependent, primarily used to assess brain and skull growth in infants and young children."
+    },
+    {
+      "qNo": 41,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Main purpose of an ankle-type bandage is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "To immobilize the joint while providing heat and compression to the bones."
+        },
+        {
+          "key": "B",
+          "text": "To promote healing."
+        },
+        {
+          "key": "C",
+          "text": "To prevent ankle displacement fracture."
+        },
+        {
+          "key": "D",
+          "text": "To prevent infection."
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Correct Option: 1 (To immobilize the joint while providing heat and compression to the bones) To immobilize the joint while providing heat and compression to the bones: An ankle-type bandage is primarily used to immobilize the joint, reduce swelling, and provide support. The compression also helps in improving circulation and reducing pain or inflammation. To promote healing: While promoting healing is a secondary benefit, it is not the main purpose of an ankle-type bandage. To prevent ankle displacement fracture: Ankle-type bandages are not designed to prevent fractures but to support existing injuries like sprains. To prevent infection: Preventing infection is not the purpose of an ankle-type bandage. This is typically achieved using sterile dressings."
+    },
+    {
+      "qNo": 42,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which of these is a cause of Neural Tube Defects?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Iron deficiency"
+        },
+        {
+          "key": "B",
+          "text": "Vitamin D deficiency"
+        },
+        {
+          "key": "C",
+          "text": "Previous history of Neural Tube Defects"
+        },
+        {
+          "key": "D",
+          "text": "Folate deficiency"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Iron deficiency: While important for preventing anemia, iron deficiency is not directly associated with neural tube defects. Vitamin D deficiency: Vitamin D deficiency affects bone health and calcium metabolism but does not cause neural tube defects. Previous history of Neural Tube Defects: While a previous history of neural tube defects increases the risk of recurrence, it is not a direct cause. Folate deficiency: Folate (Vitamin B9) is crucial for the proper closure of the neural tube during early fetal development. Folate deficiency during pregnancy is a primary cause of neural tube defects such as spina bifida and anencephaly."
+    },
+    {
+      "qNo": 43,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "Placenta is discarded in which colored bag?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Black Bag"
+        },
+        {
+          "key": "B",
+          "text": "Yellow Bag"
+        },
+        {
+          "key": "C",
+          "text": "Red Bag"
+        },
+        {
+          "key": "D",
+          "text": "Blue Bag"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Black Bag: Black bags are used for non-infectious general waste, such as paper or wrappers, not biological waste like the placenta. Yellow Bag: The yellow bag is used for anatomical waste, including the placenta, body tissues, and organs, as per biomedical waste management guidelines. Red Bag: Red bags are for recyclable contaminated waste, such as gloves or IV tubing, not for anatomical waste. Blue Bag: Blue bags are for metallic or glass waste, such as vials and needles, not biological waste."
+    },
+    {
+      "qNo": 44,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "Size numbering of a French catheter denotes:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Radius of the catheter"
+        },
+        {
+          "key": "B",
+          "text": "Internal diameter of the catheter"
+        },
+        {
+          "key": "C",
+          "text": "External diameter of the catheter"
+        },
+        {
+          "key": "D",
+          "text": "Circumference of the catheter"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Radius of the catheter: The French (Fr) size does not measure the radius. Internal diameter of the catheter: French size denotes the external diameter, not the internal diameter. External diameter of the catheter: The French size system measures the external diameter of the catheter. One French unit equals 1/3 of a millimeter in diameter. For example, a 12 Fr catheter has an external diameter of 4 mm (12/3 = 4 mm). Circumference of the catheter: French size is not based on the circumference but specifically the external diameter."
+    },
+    {
+      "qNo": 45,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "Which fluid causes shifting of fluid from cell to plasma?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hypotonic Solution"
+        },
+        {
+          "key": "B",
+          "text": "Isotonic Solution"
+        },
+        {
+          "key": "C",
+          "text": "Alkaline Solution"
+        },
+        {
+          "key": "D",
+          "text": "Hypertonic Solution"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Hypotonic Solution: A hypotonic solution causes fluid to move from plasma into the cells, leading to cellular swelling. Isotonic Solution: An isotonic solution does not cause fluid shifting; it maintains equilibrium between the intracellular and extracellular compartments. Alkaline Solution: Alkalinity of a solution does not directly affect fluid movement between cells and plasma. Hypertonic Solution: A hypertonic solution has a higher solute concentration than the plasma. This causes fluid to shift from the cells to the plasma, resulting in cellular shrinkage and increased plasma volume. Copyright © 2026 Adda247 Q.46 Features of pre-eclampsia are all of the following except: A. Changes in vision B. Polyuria C. Proteinuria D. Hypertension Answer: B Sol: Changes in vision: Vision changes, such as blurriness or seeing spots, are common symptoms of pre-eclampsia due to the effects of high blood pressure on the optic nerves and brain. Polyuria: Pre-eclampsia is associated with reduced kidney function, leading to oliguria (decreased urine output), not polyuria (excessive urination). Proteinuria: The presence of protein in the urine is a hallmark sign of pre-eclampsia, indicating kidney damage. Hypertension: High blood pressure is one of the defining features of pre-eclampsia and is critical for its diagnosis."
+    },
+    {
+      "qNo": 47,
+      "subject": "Medical-Surgical Nursing",
+      "question": "PDSA stands for:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Plan - Direct - Set goals - Apply"
+        },
+        {
+          "key": "B",
+          "text": "Plan - Divide - Study - Act"
+        },
+        {
+          "key": "C",
+          "text": "Plan - Do - Study - Act"
+        },
+        {
+          "key": "D",
+          "text": "Plan - Devise - Set goals – Apply"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Plan - Direct - Set goals - Apply: This is incorrect as it does not reflect the standard PDSA cycle terminology. Plan - Divide - Study - Act: This is incorrect; \"Divide\" is not part of the PDSA cycle. Plan - Do - Study - Act: The PDSA cycle is a systematic framework used for quality improvement in healthcare and other fields. · Plan: Identify an area for improvement and plan the change. · Do: Implement the change on a small scale. · Study: Analyze the results and assess the effectiveness of the change. · Act: Standardize the change if successful or refine the plan for further testing. Plan - Devise - Set goals - Apply: This is incorrect and not the recognized terminology for the PDSA cycle."
+    },
+    {
+      "qNo": 48,
+      "subject": "Community Health Nursing (CHN)",
+      "question": "Full form of DPT:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Diphtheria - Poliomyelitis - Tuberculosis"
+        },
+        {
+          "key": "B",
+          "text": "Diphtheria - Pneumococcal Disease - Tuberculosis"
+        },
+        {
+          "key": "C",
+          "text": "Diarrhea - Plague - Tuberculosis"
+        },
+        {
+          "key": "D",
+          "text": "Diphtheria - Pertussis – Tetanus"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Diphtheria - Poliomyelitis - Tuberculosis: This is incorrect. Poliomyelitis and tuberculosis are not part of the DPT vaccine. Diphtheria - Pneumococcal Disease - Tuberculosis: This is incorrect. Pneumococcal disease and tuberculosis are not included in the DPT vaccine. Diarrhea - Plague - Tuberculosis: This is incorrect. These diseases are unrelated to the DPT vaccine. Diphtheria - Pertussis - Tetanus: The DPT vaccine protects against Diphtheria, Pertussis (whooping cough), and Tetanus, three serious bacterial diseases."
+    },
+    {
+      "qNo": 49,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "Golden color of amniotic fluid indicates:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Post maturity"
+        },
+        {
+          "key": "B",
+          "text": "Intrauterine death"
+        },
+        {
+          "key": "C",
+          "text": "Rh incompatibility"
+        },
+        {
+          "key": "D",
+          "text": "Fetal distress"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Post maturity: Amniotic fluid in post-maturity is more likely to have meconium staining, appearing green or yellowish, but not golden. Intrauterine death: In cases of intrauterine death, the amniotic fluid may appear dark or have an offensive odor, not golden. Rh incompatibility: Golden-colored amniotic fluid is a characteristic finding in Rh incompatibility, resulting from bilirubin in the fluid due to hemolysis of fetal red blood cells. Fetal distress: Fetal distress is associated with meconium-stained amniotic fluid (greenish), not golden."
+    },
+    {
+      "qNo": 50,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "In anaphylactic shock, which medications are given?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Atropine"
+        },
+        {
+          "key": "B",
+          "text": "Atropine + Noradrenaline"
+        },
+        {
+          "key": "C",
+          "text": "Adrenaline - Hydrocortisone"
+        },
+        {
+          "key": "D",
+          "text": "Adrenaline"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Atropine: Atropine is not used in anaphylactic shock; it is typically reserved for bradycardia or arrhythmias. Atropine + Noradrenaline: This combination is not appropriate for anaphylactic shock. Noradrenaline is used for conditions like septic shock. Adrenaline - Hydrocortisone: Adrenaline is the primary treatment for anaphylactic shock. It reverses airway constriction, increases blood pressure, and reduces swelling. Hydrocortisone is used as a secondary medication to manage inflammation and prevent late-phase allergic reactions. Together, they form a comprehensive treatment approach. Adrenaline: While adrenaline alone is the first-line treatment, it is often combined with hydrocortisone for complete management of anaphylaxis."
+    },
+    {
+      "qNo": 51,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Incubation period is best defined as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Time elapsed between first apparent sign to directly or indirectly transmitting pathogenic infectious agents to another susceptible host."
+        },
+        {
+          "key": "B",
+          "text": "Time elapsed between exposure of pathogen to first apparent sign and symptom."
+        },
+        {
+          "key": "C",
+          "text": "The time between when a person is exposed to a bacteria or virus and when a test can accurately detect organism."
+        },
+        {
+          "key": "D",
+          "text": "Both 1 and 2"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Time elapsed between first apparent sign to directly or indirectly transmitting pathogenic infectious agents to another susceptible host: This describes the period of communicability, not the incubation Copyright © 2026 Adda247 period. Time elapsed between exposure of pathogen to first apparent sign and symptom: The incubation period refers to the time from initial exposure to the pathogen to the appearance of the first signs and symptoms of the disease. The time between when a person is exposed to a bacteria or virus and when a test can accurately detect organism: This describes the window period in diagnostic testing, not the incubation period. Both 1 and 2: This is incorrect because only option 2 accurately defines the incubation period."
+    },
+    {
+      "qNo": 52,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Smallest diameter of the true pelvis:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Transverse diameter of the pelvic inlet"
+        },
+        {
+          "key": "B",
+          "text": "Interspinous diameter"
+        },
+        {
+          "key": "C",
+          "text": "Oblique diameter"
+        },
+        {
+          "key": "D",
+          "text": "Anteroposterior diameter"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Transverse diameter of the pelvic inlet: This is the widest diameter of the pelvic inlet, not the smallest diameter of the true pelvis. Interspinous diameter: The interspinous diameter, measured between the ischial spines, is the smallest diameter of the true pelvis. It is the most critical diameter for determining whether vaginal delivery is possible. Oblique diameter: The oblique diameter is larger than the interspinous diameter and is not the smallest. Anteroposterior diameter: This diameter is larger than the interspinous diameter and varies depending on the level of the pelvis being measured."
+    },
+    {
+      "qNo": 53,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "5th vital sign among the following is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Temperature"
+        },
+        {
+          "key": "B",
+          "text": "Blood Pressure"
+        },
+        {
+          "key": "C",
+          "text": "SpO₂"
+        },
+        {
+          "key": "D",
+          "text": "Pain"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Temperature: Temperature is one of the traditional four vital signs (temperature, pulse, respiratory rate, and blood pressure). It is not the 5th vital sign. Blood Pressure: Blood pressure is also part of the standard four vital signs. SpO₂: SpO₂ (oxygen saturation) is a newer addition in some clinical settings but is not universally recognized as the 5th vital sign. Pain: Pain is widely accepted as the 5th vital sign. It emphasizes the need to assess and address pain as a critical aspect of patient care, alongside other vital signs."
+    },
+    {
+      "qNo": 54,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Identify the following instrument:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Monopolar cautery pencil"
+        },
+        {
+          "key": "B",
+          "text": "Bipolar cautery pencil"
+        },
+        {
+          "key": "C",
+          "text": "Electric pencil"
+        },
+        {
+          "key": "D",
+          "text": "None of the above"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Monopolar cautery pencil: A monopolar cautery pencil uses a single active electrode with a grounding pad and is not the instrument depicted in this question. Bipolar cautery pencil: The bipolar cautery pencil has two tips (electrodes) on the same instrument, allowing current to pass between the tips for precise coagulation and cutting in a localized area without requiring a grounding pad. Electric pencil: This term is not used in medical terminology for electrosurgical instruments, making this option incorrect. None of the above: This is incorrect because the correct answer is bipolar cautery pencil."
+    },
+    {
+      "qNo": 55,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "Infected cotton with blood and other bodily waste should be discarded in:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Red bag"
+        },
+        {
+          "key": "B",
+          "text": "Blue bag"
+        },
+        {
+          "key": "C",
+          "text": "Yellow bag"
+        },
+        {
+          "key": "D",
+          "text": "Black bag"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Red bag: Red bags are used for contaminated, recyclable biomedical waste like gloves, IV tubing, and catheters, not for infected cotton with blood or bodily fluids. Blue bag: Blue bags are meant for glassware or metallic waste, such as syringes or vials, not biological waste. Yellow bag: The yellow bag is designated for infected waste, such as cotton with blood, body fluids, or anatomical waste, as per biomedical waste management guidelines. Black bag: Black bags are for general non-hazardous waste, like paper or food wrappers, and are not suitable for biomedical waste."
+    },
+    {
+      "qNo": 56,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which of the following is the universal blood donor?",
+      "options": [
+        {
+          "key": "A",
+          "text": "O"
+        },
+        {
+          "key": "B",
+          "text": "AB+"
+        },
+        {
+          "key": "C",
+          "text": "O+"
+        },
+        {
+          "key": "D",
+          "text": "B+"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "O-: O-negative blood is considered the universal donor because it lacks A, B, and Rh antigens, making it compatible with any blood type. AB+: AB-positive blood is the universal recipient, not the universal donor, as it can receive blood from all types but cannot be donated universally. O+: O-positive can be donated to any Rh-positive blood type, but it is not universal as it cannot be given to Rh-negative recipients. B+: B-positive blood can only be donated to B-positive and AB-positive recipients, making it limited in compatibility."
+    },
+    {
+      "qNo": 57,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Describe COVID-19 from the following terms:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Endemic"
+        },
+        {
+          "key": "B",
+          "text": "Sporadic"
+        },
+        {
+          "key": "C",
+          "text": "Epidemic"
+        },
+        {
+          "key": "D",
+          "text": "Pandemic"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Endemic: An endemic refers to a disease consistently present within a specific geographic area or population, such as malaria in certain tropical regions. COVID-19 is not endemic as it spread globally. Sporadic: A sporadic disease occurs infrequently and irregularly, which does not describe the widespread and sustained transmission of COVID-19. Epidemic: An epidemic is a sudden increase in the number of cases of a disease in a specific region or population. COVID-19 began as an epidemic in Wuhan, China, but later escalated. Pandemic (Correct Option): A pandemic refers to an epidemic that spreads across multiple countries or continents, affecting a large number of people. COVID-19 was declared a pandemic by the World Health Organization (WHO) on March 11, 2020, due to its global spread."
+    },
+    {
+      "qNo": 58,
+      "subject": "Medical-Surgical Nursing",
+      "question": "After rapid blood transfusion, patient shows tetany, which indicates:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hypocalcemia"
+        },
+        {
+          "key": "B",
+          "text": "Hypercalcemia"
+        },
+        {
+          "key": "C",
+          "text": "Hypokalemia"
+        },
+        {
+          "key": "D",
+          "text": "Hyperkalemia"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Hypocalcemia: Tetany after rapid blood transfusion is caused by hypocalcemia. Blood products often contain citrate as an anticoagulant, which binds to calcium in the patient's blood, leading to a temporary drop in calcium levels. Hypercalcemia: Hypercalcemia does not occur after blood transfusion. It is associated with conditions like hyperparathyroidism or malignancy. Hypokalemia: Hypokalemia causes muscle weakness and arrhythmias but not tetany. It is unrelated to citrate in blood transfusions. Hyperkalemia: Hyperkalemia may occur due to hemolysis during transfusion but does not cause tetany. Instead, it leads to cardiac and neuromuscular symptoms."
+    },
+    {
+      "qNo": 59,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "are adverse effects of chloramphenicol, except:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Bone marrow suppression"
+        },
+        {
+          "key": "B",
+          "text": "Grey baby syndrome"
+        },
+        {
+          "key": "C",
+          "text": "Aplastic anemia"
+        },
+        {
+          "key": "D",
+          "text": "Pseudo parkinsonism"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Bone marrow suppression: Chloramphenicol is known to cause bone marrow suppression, which can be reversible or progress to severe aplastic anemia. Grey baby syndrome: Grey baby syndrome occurs in neonates due to the inability of immature livers to metabolize chloramphenicol, leading to toxicity. Aplastic anemia: Chloramphenicol is associated with rare but severe aplastic anemia, which is irreversible and potentially fatal. Pseudo parkinsonism: This is not an adverse effect of chloramphenicol. Pseudo parkinsonism is typically associated with antipsychotic drugs that block dopamine, not antibiotics."
+    },
+    {
+      "qNo": 60,
+      "subject": "Medical-Surgical Nursing",
+      "question": "BMI grading for underweight:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Less than 18.5"
+        },
+        {
+          "key": "B",
+          "text": "18.5 to 24.9"
+        },
+        {
+          "key": "C",
+          "text": "25.0 to 29.9"
+        },
+        {
+          "key": "D",
+          "text": "30.0 or higher"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Less than 18.5: A BMI (Body Mass Index) of less than 18.5 is classified as underweight, indicating insufficient body weight for height. 18.5 to 24.9: This range is classified as normal weight, indicating a healthy weight for height. 25.0 to 29.9: This range is classified as overweight, representing increased body weight relative to height. 30.0 or higher: A BMI of 30.0 or above is classified as obesity, indicating excessive body fat."
+    },
+    {
+      "qNo": 61,
+      "subject": "General Aptitude & Reasoning",
+      "question": "Which of the following is a sign of fluid overload?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sunken eyes"
+        },
+        {
+          "key": "B",
+          "text": "Fainting"
+        },
+        {
+          "key": "C",
+          "text": "Rapid breathing"
+        },
+        {
+          "key": "D",
+          "text": "Jugular vein distention"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Sunken eyes: This is a sign of dehydration, not fluid overload. Fainting: Fainting is not specifically associated with fluid overload; it is more likely related to dehydration, hypotension, or other conditions. Rapid breathing: Rapid breathing can occur in various conditions, such as respiratory distress or metabolic acidosis, but it is not a definitive sign of fluid overload. Jugular vein distention: Jugular vein distention (JVD) is a hallmark sign of fluid overload, often seen in conditions like heart failure, where increased venous pressure causes visible neck vein distension."
+    },
+    {
+      "qNo": 62,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "A neonate/infant comes with choking. What is the best method to treat such patients?",
+      "options": [
+        {
+          "key": "A",
+          "text": "5 back slaps and 5 chest thrusts"
+        },
+        {
+          "key": "B",
+          "text": "4 back slaps and 5 chest thrusts"
+        },
+        {
+          "key": "C",
+          "text": "3 back slaps and 3 chest thrusts"
+        },
+        {
+          "key": "D",
+          "text": "Heimlich maneuver Copyright © 2026 Adda247"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "The recommended first aid for choking in infants (under 1 year of age) is to alternate 5 back slaps (between the shoulder blades using the heel of the hand) with 5 chest thrusts (using two fingers on the lower third of the sternum). This maneuver helps to dislodge the foreign object from the airway. The Heimlich maneuver (abdominal thrusts) is not recommended for infants due to the risk of injury to abdominal organs. These steps should continue until the object is expelled or the infant becomes unresponsive, in which case CPR is initiated. Explanation of options: (a) 5 back slaps and 5 chest thrusts: Correct. Standard, evidence-based protocol for relieving foreign body airway obstruction in infants under 1 year. (b) 4 back slaps and 5 chest thrusts: Not consistent with AHA or AAP protocols. (c) 3 back slaps and 3 chest thrusts: Incorrect ratio. Not recommended by any official guideline. (d) Heimlich maneuver: Not appropriate for infants under 1 year. Reserved for children over 1 year and adults."
+    },
+    {
+      "qNo": 63,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Identify blade size:",
+      "options": [
+        {
+          "key": "A",
+          "text": "11"
+        },
+        {
+          "key": "B",
+          "text": "15"
+        },
+        {
+          "key": "C",
+          "text": "21"
+        },
+        {
+          "key": "D",
+          "text": "22"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "11: The #11 blade is a pointed blade with a triangular shape, commonly used for precise incisions, such as in vascular surgeries or creating stab incisions for procedures like chest drains or abscess drainage. 15: The #15 blade is small and curved, ideal for short, precise cuts in areas like plastic surgery or delicate tissue dissection. 21: The #21 blade is a larger blade used for heavy-duty incisions, such as in post-mortem or large animal surgeries. 22: The #22 blade is similar to the #21 but slightly smaller, used for larger incisions in general surgeries."
+    },
+    {
+      "qNo": 64,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "In placental attachment, where the placenta is anchored and partially or completely attached to the myometrium, it is called:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Increta"
+        },
+        {
+          "key": "B",
+          "text": "Accreta"
+        },
+        {
+          "key": "C",
+          "text": "Percreta"
+        },
+        {
+          "key": "D",
+          "text": "Battledore placenta"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Increta: Placenta increta occurs when the placenta invades deeply into the myometrium but does not penetrate the entire uterine wall. Accreta: Placenta accreta involves the placenta attaching abnormally to the myometrium without invading it deeply. It is less severe than increta. Percreta: Placenta percreta is the most severe form, where the placenta penetrates through the myometrium and uterine serosa, potentially invading adjacent organs. Battledore placenta: This term describes an umbilical cord attached to the edge of the placenta, which is unrelated to abnormal placental attachment to the uterus."
+    },
+    {
+      "qNo": 65,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "Which of the following antitubercular drugs causes peripheral neuropathy?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Isoniazid"
+        },
+        {
+          "key": "B",
+          "text": "Pyrazinamide"
+        },
+        {
+          "key": "C",
+          "text": "Rifampicin"
+        },
+        {
+          "key": "D",
+          "text": "Dapsone"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Isoniazid: Isoniazid is an antitubercular drug that can cause peripheral neuropathy as a side effect. This occurs due to vitamin B6 (pyridoxine) depletion, and supplementation with pyridoxine is often recommended to prevent this condition. Pyrazinamide: Pyrazinamide is associated with hepatotoxicity and hyperuricemia but does not cause peripheral neuropathy. Rifampicin: Rifampicin can cause hepatotoxicity and orange discoloration of body fluids but is not associated with peripheral neuropathy. Dapsone: Dapsone is used to treat leprosy, not tuberculosis, and can cause hemolytic anemia but not peripheral neuropathy."
+    },
+    {
+      "qNo": 66,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "For long-term use of which of the following drugs is frequent serum drug level monitoring required?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amitriptyline"
+        },
+        {
+          "key": "B",
+          "text": "Haloperidol"
+        },
+        {
+          "key": "C",
+          "text": "Lithium"
+        },
+        {
+          "key": "D",
+          "text": "Lorazepam"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Amitriptyline: Amitriptyline is a tricyclic antidepressant. While therapeutic drug monitoring can be helpful in certain cases, it does not require frequent serum level checks for long-term use. Haloperidol: Haloperidol, an antipsychotic, can cause side effects like tardive dyskinesia and extrapyramidal symptoms but does not require frequent serum level monitoring. Lithium: Lithium, used for managing bipolar disorder, has a narrow therapeutic index. Frequent serum level monitoring is essential to prevent toxicity or underdosing. Therapeutic levels are typically maintained between 0.6–1.2 mEq/L, and levels above 1.5 mEq/L can be toxic. Lorazepam: Lorazepam, a benzodiazepine, does not require routine serum drug level monitoring, even with long-term use. Copyright © 2026 Adda247 Q.67 All of the following conditions use contraception, except: A. Mother with antihypertensive B. Lactating mother C. Unexplained vaginal bleeding D. Newly married Answer: C Sol: Mother with antihypertensive: Mothers on antihypertensive medications can use certain contraceptives, but caution is advised with estrogen-containing options, as they may increase blood pressure. Lactating mother: Contraceptives, such as progestin-only pills, IUDs, or barrier methods, are safe for lactating mothers. Unexplained vaginal bleeding: Contraceptive use is contraindicated in cases of unexplained vaginal bleeding until the cause is identified. This ensures serious underlying conditions, such as cancer or infections, are not overlooked. Newly married: Newly married individuals can use contraception based on their family planning preferences, with no contraindications."
+    },
+    {
+      "qNo": 68,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "A child diagnosed with moderate dehydration is treated with:",
+      "options": [
+        {
+          "key": "A",
+          "text": "5% dextrose"
+        },
+        {
+          "key": "B",
+          "text": "10% dextrose"
+        },
+        {
+          "key": "C",
+          "text": "25% dextrose"
+        },
+        {
+          "key": "D",
+          "text": "Normal saline"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "5% dextrose: This is a hypotonic solution that is not ideal for rehydration as it lacks sufficient electrolytes needed to restore the fluid and electrolyte balance in moderate dehydration. 10% dextrose: This hypertonic solution is primarily used for hypoglycemia, not for treating dehydration. 25% dextrose: This is a concentrated solution used in severe hypoglycemia or emergencies, not for dehydration management. Normal saline: Normal saline (0.9% sodium chloride) is an isotonic solution that restores fluid and electrolyte balance effectively in cases of moderate dehydration, making it the preferred choice."
+    },
+    {
+      "qNo": 69,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Patient in emergency department total burn 64% but genital area cover total TBSA%?",
+      "options": [
+        {
+          "key": "A",
+          "text": "9%"
+        },
+        {
+          "key": "B",
+          "text": "18%"
+        },
+        {
+          "key": "C",
+          "text": "1%"
+        },
+        {
+          "key": "D",
+          "text": "4½%"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "9%: This percentage corresponds to areas like the head or each arm but not the genital area. 18%: This percentage is for larger areas like the anterior or posterior trunk, not the genital area. 1%: The genital area contributes 1% to the total body surface area (TBSA) as per the Rule of Nines, used to estimate burn coverage. 4½%: This percentage does not correspond to the genital area but is used for parts of larger areas, like the anterior or posterior aspect of a leg."
+    },
+    {
+      "qNo": 70,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Best method to assess malnutrition in adults:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hb level"
+        },
+        {
+          "key": "B",
+          "text": "Skin fold"
+        },
+        {
+          "key": "C",
+          "text": "MUAC"
+        },
+        {
+          "key": "D",
+          "text": "Chest circumference"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Hb level: Hemoglobin levels are useful for diagnosing anemia, which may indicate malnutrition but do not provide a comprehensive assessment of nutritional status. Skin fold: Skinfold thickness measures subcutaneous fat and provides an assessment of energy reserves in the body. It is an effective method for evaluating malnutrition, especially when combined with other indicators. MUAC: Mid-Upper Arm Circumference (MUAC) is a useful tool for malnutrition assessment but is more commonly applied in resource-limited settings or emergencies. Chest circumference: This is typically used for assessing growth in infants and young children and is not suitable for evaluating malnutrition in adults."
+    },
+    {
+      "qNo": 71,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "Which is NOT a true feature of preeclampsia?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Polyuria"
+        },
+        {
+          "key": "B",
+          "text": "Proteinuria"
+        },
+        {
+          "key": "C",
+          "text": "Edema"
+        },
+        {
+          "key": "D",
+          "text": "Increased Systolic Blood Pressure"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Polyuria: Polyuria is not a feature of preeclampsia. In fact, preeclampsia is often associated with oliguria (reduced urine output) due to kidney involvement and decreased renal perfusion. Proteinuria: Proteinuria is a hallmark feature of preeclampsia, resulting from kidney damage caused by the condition. Edema: Edema, especially in the face and hands, is a common symptom of preeclampsia, caused by fluid retention and endothelial dysfunction. Increased Systolic Blood Pressure: Increased systolic blood pressure (≥140 mmHg) is a diagnostic criterion for preeclampsia and is a key feature of the condition."
+    },
+    {
+      "qNo": 72,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which symptom is NOT common in renal failure?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hyperkalemia"
+        },
+        {
+          "key": "B",
+          "text": "Urine output"
+        },
+        {
+          "key": "C",
+          "text": "Hyponatremia"
+        },
+        {
+          "key": "D",
+          "text": "Hypokalemia"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Hyperkalemia: Hyperkalemia is a common symptom of renal failure due to the kidneys' inability to excrete potassium effectively. Urine output: In renal failure, urine output is typically reduced (oliguria or anuria), making it a significant symptom of the condition. Hyponatremia: Hyponatremia is common in renal failure, as the kidneys fail to regulate sodium balance properly, often leading to dilutional hyponatremia. Hypokalemia: Hypokalemia is not common in renal failure. Instead, potassium levels usually rise (hyperkalemia) due to decreased renal excretion."
+    },
+    {
+      "qNo": 73,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "Correct methods of potassium administration, except:",
+      "options": [
+        {
+          "key": "A",
+          "text": "IV bolus"
+        },
+        {
+          "key": "B",
+          "text": "Dilute in CNS"
+        },
+        {
+          "key": "C",
+          "text": "Slow infusion"
+        },
+        {
+          "key": "D",
+          "text": "With orange juice"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "IV bolus: Potassium should never be given as an IV bolus due to the risk of severe cardiac arrhythmias or cardiac arrest. It must always be administered slowly and diluted. Dilute in CNS: Potassium should be diluted in solutions like normal saline (CNS) to avoid irritation of the veins and prevent complications from rapid administration. Slow infusion: Potassium is administered slowly via infusion to ensure safety and prevent hyperkalemia-related complications. With orange juice: Potassium can be administered orally with orange juice, as it is a potassium-rich food that enhances the oral intake of potassium."
+    },
+    {
+      "qNo": 74,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "How often should a Jackson-Pratt drain be emptied?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Every four to six hours the first few days until the amount decreases."
+        },
+        {
+          "key": "B",
+          "text": "Every eight to ten hours the first few days until the amount decreases."
+        },
+        {
+          "key": "C",
+          "text": "Every twelve hours the first few days until the amount decreases."
+        },
+        {
+          "key": "D",
+          "text": "When orders are placed to drain tubings."
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Every four to six hours the first few days until the amount decreases: A Jackson-Pratt drain is typically emptied every four to six hours initially or whenever it is half full. This prevents excessive pressure buildup and ensures accurate measurement of drainage. Every eight to ten hours the first few days until the amount decreases: This frequency may delay the emptying process, leading to potential issues like reduced suction efficiency or overflow. Every twelve hours the first few days until the amount decreases: Waiting twelve hours can lead to drainage accumulation and reduced effectiveness of the drain. When orders are placed to drain tubing’s: Drains are managed based on established protocols or nursing judgment, not waiting for specific orders to empty them."
+    },
+    {
+      "qNo": 75,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Identify this instrument used in neonatal resuscitation:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Endotracheal tube"
+        },
+        {
+          "key": "B",
+          "text": "Laryngeal mask airway"
+        },
+        {
+          "key": "C",
+          "text": "Airway"
+        },
+        {
+          "key": "D",
+          "text": "Spirometer tube"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Endotracheal tube: An endotracheal tube is inserted into the trachea for direct airway management, but it is not the instrument described in this context. Laryngeal mask airway: A laryngeal mask airway (LMA) is used in neonatal resuscitation to maintain an open airway when intubation or bag-mask ventilation is challenging. It is a less invasive alternative to endotracheal intubation. Airway: The term \"airway\" is general and does not specifically describe the instrument used here. Spirometer tube: A spirometer tube is used for measuring lung function and is not relevant to neonatal resuscitation."
+    },
+    {
+      "qNo": 76,
+      "subject": "Mental Health & Psychiatric Nursing",
+      "question": "After the closure, the foramen ovale is known as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ligamentum arteriosum"
+        },
+        {
+          "key": "B",
+          "text": "Ligamentum venosum"
+        },
+        {
+          "key": "C",
+          "text": "Fossa ovalis"
+        },
+        {
+          "key": "D",
+          "text": "Bregma"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Ligamentum arteriosum: This structure forms from the closure of the ductus arteriosus, not the foramen ovale. Ligamentum venosum: This structure forms from the closure of the ductus venosus, not the foramen ovale. Fossa ovalis: After the foramen ovale (a fetal opening between the right and left atria) closes, it becomes the fossa ovalis, a depression in the interatrial septum of the heart. Bregma: The bregma is the junction where the coronal and sagittal sutures meet on the skull, unrelated to the foramen ovale. Copyright © 2026 Adda247"
+    },
+    {
+      "qNo": 77,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Which drug is used to treat PDA (Patent Ductus Arteriosus)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Oxaceprol"
+        },
+        {
+          "key": "B",
+          "text": "Morphine"
+        },
+        {
+          "key": "C",
+          "text": "Dopamine"
+        },
+        {
+          "key": "D",
+          "text": "Indomethacin"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Oxaceprol: This drug is used for osteoarthritis management, not for PDA. Morphine: Morphine is an opioid analgesic and is not used for treating PDA. Dopamine: Dopamine is a vasopressor used for increasing blood pressure and cardiac output but has no role in closing PDA. Indomethacin: Indomethacin, a nonsteroidal anti-inflammatory drug (NSAID), is used to treat Patent Ductus Arteriosus in neonates. It works by inhibiting prostaglandin synthesis, which helps close the ductus arteriosus."
+    },
+    {
+      "qNo": 78,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Cannula size used in a newborn baby is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "24 size"
+        },
+        {
+          "key": "B",
+          "text": "22 size"
+        },
+        {
+          "key": "C",
+          "text": "20 size"
+        },
+        {
+          "key": "D",
+          "text": "18 size"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "24 size: A 24-gauge cannula is the smallest size and is suitable for newborns due to their delicate veins and small diameter, ensuring minimal trauma during insertion. 22 size: While a 22-gauge cannula can be used in older infants or children, it is slightly larger and not typically preferred for newborns. 20 size: A 20-gauge cannula is used for older children and adults but is too large for newborns. 18 size: An 18-gauge cannula is commonly used for rapid fluid infusion in adults but is unsuitable for newborns."
+    },
+    {
+      "qNo": 79,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Neonatal reflex elicited by touching the cheeks of the baby is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Moro reflex"
+        },
+        {
+          "key": "B",
+          "text": "Rooting reflex"
+        },
+        {
+          "key": "C",
+          "text": "Startle reflex"
+        },
+        {
+          "key": "D",
+          "text": "Sucking reflex"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Moro reflex: This reflex is triggered by sudden movement or loud noise, causing the baby to extend and then retract the arms. It is unrelated to touching the cheeks. Rooting reflex: The rooting reflex is elicited by touching the baby’s cheek, causing the baby to turn their head toward the touch and open their mouth, aiding in breastfeeding. Startle reflex: The startle reflex, often synonymous with the Moro reflex, involves a response to sudden stimuli and does not relate to touching the cheek. Sucking reflex: The sucking reflex is triggered by placing an object, like a finger or nipple, in the baby’s mouth, not by touching the cheeks."
+    },
+    {
+      "qNo": 80,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "When does the anterior fontanelle close in the child?",
+      "options": [
+        {
+          "key": "A",
+          "text": "6-8 weeks"
+        },
+        {
+          "key": "B",
+          "text": "6-8 months"
+        },
+        {
+          "key": "C",
+          "text": "12-18 months"
+        },
+        {
+          "key": "D",
+          "text": "12-18 weeks"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "6-8 weeks: This is the time frame when the posterior fontanelle typically closes, not the anterior fontanelle. 6-8 months: This is too early for the closure of the anterior fontanelle. 12-18 months: The anterior fontanelle generally closes between 12-18 months of age as the cranial bones fuse together during normal development. 12-18 weeks: This is far too early for the closure of the anterior fontanelle."
+    },
+    {
+      "qNo": 81,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "Which of the following is not a component of Kangaroo Mother Care (KMC)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Skin-to-skin contact"
+        },
+        {
+          "key": "B",
+          "text": "Supplementary nutrition"
+        },
+        {
+          "key": "C",
+          "text": "Exclusive breastfeeding"
+        },
+        {
+          "key": "D",
+          "text": "Early discharge and follow-up"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Skin-to-skin contact: This is a core component of KMC, where the baby is placed on the mother's chest to promote warmth, bonding, and stability in vital signs. Supplementary nutrition: Supplementary nutrition is not a component of KMC. Instead, KMC emphasizes exclusive breastfeeding as the primary source of nutrition for the baby. Exclusive breastfeeding: Exclusive breastfeeding is an essential part of KMC, ensuring optimal nutrition and immunity for the baby. Early discharge and follow-up: Early discharge and regular follow-up are components of KMC to ensure continued care and monitoring of the baby’s growth and development."
+    },
+    {
+      "qNo": 82,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Cessation of breathing for 20 seconds is known as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Respiratory arrest"
+        },
+        {
+          "key": "B",
+          "text": "Respiratory distress syndrome"
+        },
+        {
+          "key": "C",
+          "text": "Apnoea"
+        },
+        {
+          "key": "D",
+          "text": "Transient tachypnea"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Respiratory arrest: Respiratory arrest refers to the complete cessation of breathing, which is a life-threatening condition requiring immediate intervention. It is not defined by a specific duration like 20 seconds. Respiratory distress syndrome: This is a condition commonly seen in premature infants due to insufficient surfactant, leading to breathing difficulties, not cessation of breathing. Apnoea: Apnoea is the temporary cessation of breathing for at least 20 seconds or shorter periods if accompanied by bradycardia or oxygen desaturation. It is often observed in premature infants. Transient tachypnea: This refers to temporary rapid breathing in newborns, typically caused by delayed clearance of lung fluid, not cessation of breathing. Copyright © 2026 Adda247 Q.83 After closure, the ductus arteriosus is known as: A. Ligamentum arteriosum B. Ligamentum venosum C. Fossa ovalis D. Bregma Answer: A Sol: Ligamentum arteriosum: After birth, the ductus arteriosus, a fetal blood vessel connecting the pulmonary artery to the aorta, closes and becomes the ligamentum arteriosum, a fibrous remnant. Ligamentum venosum: This is the remnant of the ductus venosus, which connects the umbilical vein to the inferior vena cava in fetal circulation. Fossa ovalis: This forms after the closure of the foramen ovale, a fetal opening between the right and left atria. Bregma: The bregma is the junction of the sagittal and coronal sutures on the skull and is unrelated to the ductus arteriosus."
+    },
+    {
+      "qNo": 84,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "For assessing the gestational age of a preterm infant, the nurse should use:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Palmar creases"
+        },
+        {
+          "key": "B",
+          "text": "Reflex stability"
+        },
+        {
+          "key": "C",
+          "text": "Breast bud size"
+        },
+        {
+          "key": "D",
+          "text": "Head-to-toe length"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Palmar Creases: Palmar creases are part of the physical assessment used in tools like the Ballard Score. Their number and depth increase with gestational age, making them a reliable indicator of fetal maturation. In extremely preterm infants, palmar creases may be absent or faint. Reflex Stability: Primitive reflexes such as the Moro and grasp reflex appear before birth and are used in neuromuscular maturity assessments. However, reflex stability itself is not a primary determinant of gestational age. Breast Bud Size: Breast bud size is included in the Ballard Score, but its reliability is lower than palmar creases because it can be influenced by maternal hormones. This makes it a less consistent indicator of gestational age. Head-to-Toe Length: Head-to-toe length gives a general measure of growth, but it is influenced by genetics and environmental factors, making it an inconsistent and indirect indicator of gestational age in preterm infants."
+    },
+    {
+      "qNo": 85,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "What should an ANM teach a mother for starting supplementary food for the baby after six months?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Continue breastfeeding for at least 2 years"
+        },
+        {
+          "key": "B",
+          "text": "Discontinue breastfeeding"
+        },
+        {
+          "key": "C",
+          "text": "Start supplementary food with fried food"
+        },
+        {
+          "key": "D",
+          "text": "Start with raw food"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Continue breastfeeding for at least 2 years: Mothers should continue breastfeeding along with introducing supplementary food after six months, as per WHO recommendations, to ensure optimal nutrition and immunity for the baby. Discontinue breastfeeding: Discontinuing breastfeeding at six months is not recommended, as breast milk remains an essential source of nutrition and antibodies for the child. Start supplementary food with fried food: Fried food is inappropriate for infants and can lead to digestion issues and poor nutritional balance. Start with raw food: Raw food is not suitable for infants due to the risk of contamination and difficulty in digestion. Cooked and easily digestible food is recommended."
+    },
+    {
+      "qNo": 86,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "The nurse educates a group of middle-aged women to undergo which of the following tests for screening cervical cancer?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mantoux test"
+        },
+        {
+          "key": "B",
+          "text": "Ultrasonography"
+        },
+        {
+          "key": "C",
+          "text": "Fine needle aspiration cytology"
+        },
+        {
+          "key": "D",
+          "text": "Pap smear"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Mantoux test: This test is used to screen for tuberculosis, not cervical cancer. Ultrasonography: Ultrasonography is used for imaging internal organs but is not a screening tool for cervical cancer. Fine needle aspiration cytology: This test is used to diagnose localized lumps or lesions, such as in breast cancer or thyroid nodules, but is not appropriate for cervical cancer screening. Pap smear: The Pap smear test is the gold standard for screening cervical cancer. It detects precancerous changes and abnormal cells in the cervix, allowing for early intervention."
+    },
+    {
+      "qNo": 87,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "Delivery of the baby happens in which stage of labor?",
+      "options": [
+        {
+          "key": "A",
+          "text": "1st stage"
+        },
+        {
+          "key": "B",
+          "text": "2nd stage"
+        },
+        {
+          "key": "C",
+          "text": "3rd stage"
+        },
+        {
+          "key": "D",
+          "text": "4th stage"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "1st stage: The first stage of labor involves the onset of regular contractions and ends with the full dilation of the cervix (10 cm). Delivery does not occur in this stage. 2nd stage: The second stage begins after full cervical dilation and ends with the delivery of the baby. This is the active pushing phase where the baby is born. 3rd stage: The third stage starts after the delivery of the baby and ends with the delivery of the placenta. 4th stage: The fourth stage is the recovery period after the delivery of the placenta, where the mother is monitored for complications like hemorrhage."
+    },
+    {
+      "qNo": 88,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "Which immunoglobulin can cross the placenta and provide passive immunity to the newborn?",
+      "options": [
+        {
+          "key": "A",
+          "text": "IgG"
+        },
+        {
+          "key": "B",
+          "text": "IgE"
+        },
+        {
+          "key": "C",
+          "text": "IgM"
+        },
+        {
+          "key": "D",
+          "text": "IgA"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "IgG: IgG is the only immunoglobulin that can cross the placenta. It provides passive immunity to the newborn by transferring maternal antibodies, which help protect the infant against infections during the early months of life. IgE: IgE is involved in allergic reactions and does not cross the placenta. IgM: IgM is the first antibody produced in response to infection but cannot cross the placenta due to its large size. IgA: IgA is found in mucosal areas and breast milk but does not cross the placenta. It contributes to passive immunity through breastfeeding."
+    },
+    {
+      "qNo": 89,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "Bishop's score includes all, EXCEPT:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cervical dilation"
+        },
+        {
+          "key": "B",
+          "text": "Station of fetal head"
+        },
+        {
+          "key": "C",
+          "text": "Consistency of cervix"
+        },
+        {
+          "key": "D",
+          "text": "Fetal Heart Rate (FHR)"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Cervical dilation: This is a component of the Bishop's score, which assesses how dilated the cervix is (measured in centimeters). Station of fetal head: This refers to the position of the fetal head in relation to the ischial spines and is included in the Bishop's score. Consistency of cervix: This describes whether the cervix is firm, medium, or soft, and it is also part of the Bishop's score. Fetal Heart Rate (FHR): FHR is not part of the Bishop's score, which evaluates the readiness of the cervix for labor induction, not fetal well-being."
+    },
+    {
+      "qNo": 90,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "Crowning is defined as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "When the maximum diameter of the head stretches the vulval outlet without any recession of the head even after the contraction is over"
+        },
+        {
+          "key": "B",
+          "text": "When the fetal head and shoulders are visible at the pelvic floor"
+        },
+        {
+          "key": "C",
+          "text": "When the head is delivered"
+        },
+        {
+          "key": "D",
+          "text": "Torsion of the neck"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "When the maximum diameter of the head stretches the vulval outlet without any recession of the head even after the contraction is over : Crowning is the point in labor when the largest diameter of the fetal head is visible at the vulva and remains visible between contractions. This indicates that delivery is imminent. When the fetal head and shoulders are visible at the pelvic floor: This describes engagement and descent but does not specifically define crowning. When the head is delivered: Delivery of the head occurs after crowning, but the two are not synonymous. Torsion of the neck: This is unrelated to the process of crowning and refers to abnormal twisting of the neck."
+    },
+    {
+      "qNo": 91,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "The structural and functional unit between the developing embryo and maternal body is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Placenta"
+        },
+        {
+          "key": "B",
+          "text": "Fallopian tube"
+        },
+        {
+          "key": "C",
+          "text": "Eustachian tube"
+        },
+        {
+          "key": "D",
+          "text": "Vas deferens"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Placenta: The placenta serves as the structural and functional unit between the mother and the developing embryo. It facilitates the exchange of nutrients, gases, and waste products and produces hormones essential for maintaining pregnancy. Fallopian tube: The fallopian tube is the site of fertilization but is not involved in the structural or functional connection between the mother and the embryo. Eustachian tube: The Eustachian tube connects the middle ear to the nasopharynx and is unrelated to pregnancy or embryonic development. Vas deferens: The vas deferens is part of the male reproductive system and is unrelated to pregnancy or the connection between mother and embryo."
+    },
+    {
+      "qNo": 92,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "The umbilical cord is protected by:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Vernix caseosa"
+        },
+        {
+          "key": "B",
+          "text": "Amniotic fluid"
+        },
+        {
+          "key": "C",
+          "text": "Blood substitutes"
+        },
+        {
+          "key": "D",
+          "text": "Wharton’s jelly"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Vernix caseosa: This is a white, cheese-like substance that coats the skin of the fetus, providing protection against amniotic fluid exposure, but it does not protect the umbilical cord. Amniotic fluid: Amniotic fluid surrounds the fetus and helps cushion it, but it does not provide structural protection to the umbilical cord. Blood substitutes: This term does not apply to the umbilical cord or its protection. Wharton’s jelly: Wharton’s jelly is a gelatinous substance that surrounds the blood vessels within the umbilical cord, protecting them from compression and ensuring effective blood flow between the fetus and the placenta."
+    },
+    {
+      "qNo": 93,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "Disparity in the relation between the fetal head and maternal pelvis is called:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Contracted pelvis"
+        },
+        {
+          "key": "B",
+          "text": "Malposition"
+        },
+        {
+          "key": "C",
+          "text": "Unstable lie"
+        },
+        {
+          "key": "D",
+          "text": "CPD"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Contracted pelvis: This refers to an abnormality in the maternal pelvis structure that may contribute to labor difficulties but does not specifically describe the disparity between the fetal head and pelvis. Malposition: Malposition refers to an abnormal position of the fetal head, such as occiput posterior, but it does not specifically indicate a mismatch between the head and pelvis. Unstable lie: Unstable lie refers to frequent changes in the fetal position or orientation in the uterus, not a mismatch between the fetal head and maternal pelvis. CPD: Cephalopelvic Disproportion (CPD) describes a mismatch between the size of the fetal head and the maternal pelvis, which can hinder vaginal delivery."
+    },
+    {
+      "qNo": 94,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "Out of the following, which is considered a positive sign of pregnancy?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Fetal movement"
+        },
+        {
+          "key": "B",
+          "text": "Change of the uterus"
+        },
+        {
+          "key": "C",
+          "text": "Breast change"
+        },
+        {
+          "key": "D",
+          "text": "Morning sickness Copyright © 2026 Adda247"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Fetal movement: Fetal movement felt by the examiner is a positive sign of pregnancy, as it directly confirms the presence of a fetus. Change of the uterus: Uterine changes, such as enlargement, are considered probable signs of pregnancy but are not definitive as they can occur in other conditions. Breast change: Breast changes, such as tenderness or darkened areolae, are probable signs of pregnancy but are not definitive. Morning sickness: Morning sickness is a presumptive sign of pregnancy and can occur due to other conditions like hormonal changes or gastrointestinal issues."
+    },
+    {
+      "qNo": 95,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "The symptom that differentiates eclampsia from pre-eclampsia is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hypertension"
+        },
+        {
+          "key": "B",
+          "text": "Seizures"
+        },
+        {
+          "key": "C",
+          "text": "Edema"
+        },
+        {
+          "key": "D",
+          "text": "Stroke"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Hypertension: Hypertension is a common feature of both pre-eclampsia and eclampsia and does not differentiate the two conditions. Seizures: Seizures are the hallmark feature of eclampsia, distinguishing it from pre-eclampsia. Eclampsia is defined as pre-eclampsia with the onset of generalized tonic-clonic seizures. Edema: Edema is a symptom of pre-eclampsia and is not specific to eclampsia. Stroke: Stroke is a potential complication of severe eclampsia but is not the defining feature differentiating it from pre-eclampsia."
+    },
+    {
+      "qNo": 96,
+      "subject": "Medical-Surgical Nursing",
+      "question": "The most common cause of abortion in the first trimester:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chromosomal abnormality"
+        },
+        {
+          "key": "B",
+          "text": "Trauma"
+        },
+        {
+          "key": "C",
+          "text": "Maternal disease"
+        },
+        {
+          "key": "D",
+          "text": "RTI"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Chromosomal abnormality: Chromosomal abnormalities are the most common cause of first-trimester abortions, accounting for approximately 50–70% of cases. These abnormalities result in non-viable embryos due to genetic defects. Trauma: Trauma is a rare cause of abortion and is more likely to result in complications during later stages of pregnancy. Maternal disease: Maternal diseases like diabetes or thyroid dysfunction can contribute to pregnancy loss but are less common than chromosomal abnormalities in the first trimester. RTI: Reproductive tract infections (RTIs) can lead to complications but are not a leading cause of first-trimester abortions."
+    },
+    {
+      "qNo": 97,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "When a drug is to be given at bedtime, which of the following coded instruction is used?",
+      "options": [
+        {
+          "key": "A",
+          "text": "sos"
+        },
+        {
+          "key": "B",
+          "text": "od"
+        },
+        {
+          "key": "C",
+          "text": "hs"
+        },
+        {
+          "key": "D",
+          "text": "ac"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "sos: This stands for \"if needed\" or \"as necessary\" and does not indicate bedtime administration. od: This stands for \"once daily\" and refers to a drug taken once in 24 hours, not specifically at bedtime. hs: hs stands for \"hora somni,\" which means at bedtime. It is used for medications that are intended to be taken at night before sleep. ac: This stands for \"before meals\" and is unrelated to bedtime administration."
+    },
+    {
+      "qNo": 98,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "A client comes to the clinic with a bleeding nose. Which of the following instructions to the client is most appropriate?",
+      "options": [
+        {
+          "key": "A",
+          "text": "\"Sit up with your head tilted forward. Grasp the soft part of your nose firmly between your thumb and forefinger.\""
+        },
+        {
+          "key": "B",
+          "text": "\"Lay down and tilt your head backward. Grasp the end of your nose between your fingers.\""
+        },
+        {
+          "key": "C",
+          "text": "\"Sit up and lean backward. Put pressure on the side of your nose with your hand.\""
+        },
+        {
+          "key": "D",
+          "text": "\"Lay down and tilt your head to one side and put pressure on the side of your nose with your hand.\""
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Sit up with your head tilted forward: Tilting the head forward prevents blood from flowing into the throat, which can cause choking or nausea. Applying pressure to the soft part of the nose compresses blood vessels, effectively stopping the bleeding. Lay down and tilt your head backward: This position can lead to blood flowing into the throat, increasing the risk of aspiration or nausea. Sit up and lean backward: Leaning backward also allows blood to flow into the throat, posing the same risks as tilting the head backward. Lay down and tilt your head to one side: Lying down does not help control the bleeding and increases the likelihood of blood entering the throat."
+    },
+    {
+      "qNo": 99,
+      "subject": "General Aptitude & Reasoning",
+      "question": "A client with a very dry mouth, skin, and mucous membranes is diagnosed with dehydration. Which intervention should the nurse perform when caring for a client diagnosed with fluid volume deficit?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Assessing urinary intake and output."
+        },
+        {
+          "key": "B",
+          "text": "Obtaining the client's weight weekly at different times of the day."
+        },
+        {
+          "key": "C",
+          "text": "Monitoring arterial blood gas (ABG) results."
+        },
+        {
+          "key": "D",
+          "text": "Maintaining I.V. therapy at the keep-vein-open rate."
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Assessing urinary intake and output: Monitoring intake and output (I&O) is essential in clients with dehydration. It helps assess fluid balance and evaluate the effectiveness of interventions to correct fluid volume deficit. Obtaining the client's weight weekly at different times of the day: Daily weights, not weekly, are a better indicator of fluid balance in clients with dehydration. Weights should be taken at the same time each day for consistency. Monitoring arterial blood gas (ABG) results: ABG results are important in clients with acid-base imbalances but are not directly related to managing fluid volume deficit. Maintaining I.V. therapy at the keep-vein-open rate: A \"keep-vein-open\" (KVO) rate is insufficient for clients with dehydration. Aggressive IV fluid replacement is often needed to correct fluid deficits. Copyright © 2026 Adda247"
+    },
+    {
+      "qNo": 100,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "The nurse is aware that the most common assessment finding in a child with ulcerative colitis is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Intense abdominal cramps"
+        },
+        {
+          "key": "B",
+          "text": "Profuse diarrhea"
+        },
+        {
+          "key": "C",
+          "text": "Anal fissures"
+        },
+        {
+          "key": "D",
+          "text": "Abdominal distention"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Intense abdominal cramps: While abdominal cramps can occur in ulcerative colitis, they are not as prominent as diarrhea. Profuse diarrhea: Profuse diarrhea is the hallmark symptom of ulcerative colitis, often containing blood and mucus due to inflammation and ulceration of the colon's lining. Anal fissures: Anal fissures are not a primary feature of ulcerative colitis; they are more commonly associated with conditions like Crohn’s disease. Abdominal distention: Abdominal distention is less common in ulcerative colitis and may indicate complications like toxic megacolon. Copyright © 2026 Adda247"
+    }
+  ]
+}
