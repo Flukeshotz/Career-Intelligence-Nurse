@@ -457,6 +457,21 @@ function generateDeterministicMayaResponse(context: MayaContext): MayaResponse {
     };
   }
 
+  if (/all exams|what.*exams|which exams|list.*exams|exams are there|exam catalog/i.test(q)) {
+    return {
+      message: "SkillCase indexes all 50 major Nursing Recruitment & Entrance Examinations in India across 5 sectors:\n\n1. Central & INIs (11): AIIMS NORCET, RRB Railways, UPSC ESIC, DSSSB Delhi, JIPMER, PGIMER, NIMHANS, SCTIMST, NEIGRIHMS, CNCI, GMCH-32.\n2. Defense & Paramilitary (5): Military Nursing Service (MNS SSC), ITBP, BSF, CRPF, SSB.\n3. State Health Commissions (25): UPPSC, UPUMS, UKMSSB, HSSC Haryana, Punjab BFUHS, HPPSC, JKSSB, RSMSSB Rajasthan, Gujarat OJAS, Maharashtra DHS, MP ESB, CG Vyapam, Goa PSC, TN MRB, TS MHSRB, AP MHSRB, Kerala PSC, KPSC Karnataka, WBHRB, BTSC Bihar, IGIMS, OSSSC Odisha, RIMS Ranchi, JSSC Jharkhand, Assam DME.\n4. Academic Entrances (5): AIIMS B.Sc. Entrance, NEET-UG Nursing, WBJEE ANM/GNM, UP CNET ABVMU, AIIMS M.Sc. PG Entrance.\n5. PSUs & Primary Health (4): ISRO, NPCIL, SAIL, NHM CHO.",
+      confidence: 'verified',
+      citation: 'SkillCase National Nursing Examination Census',
+      avatar: 'smiling',
+      quickActions: [
+        { label: 'Browse 50 Govt Exams', action: 'navigate', payload: '/nursing/exams' },
+        { label: 'AIIMS NORCET Hub', action: 'navigate', payload: '/nursing/norcet' },
+        { label: 'Explore Hospital Jobs', action: 'navigate', payload: '/nursing/jobs' },
+        { label: 'Check My Eligibility', action: 'complete_profile' }
+      ]
+    };
+  }
+
   if (/salary|pay|gross|allowance/i.test(q)) {
     return {
       message: "Central Government Nursing Officers (AIIMS, RRB, ESIC, JIPMER, PGIMER) are appointed in 7th CPC Pay Matrix Level 7 (Basic ₹44,900). With current DA, 30% HRA, Nursing Allowance (₹7,200/mo), and Uniform Allowance, gross monthly pay ranges from ₹78,000 to ₹88,000/month. Military Nursing Service (MNS) Lieutenants start at Level 10 + MSP (~₹95,000 to ₹1,10,000/month).",
