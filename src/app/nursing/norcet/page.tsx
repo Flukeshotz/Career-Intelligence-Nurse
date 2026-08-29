@@ -31,6 +31,7 @@ import { TrackButton } from '@/components/opportunity/TrackButton';
 import MayaCard from '@/components/maya/MayaCard';
 import { EXAM_PAPERS, ExamPaper } from '@/lib/pyq-mock-data';
 import { DETAILED_EXAM_INTELLIGENCE } from '@/lib/exam-syllabus-data';
+import { trackTelemetry } from '@/lib/telemetry';
 
 const NORCET_INTEL = DETAILED_EXAM_INTELLIGENCE['exam-norcet-2026'];
 
@@ -100,6 +101,7 @@ export default function NorcetCommandCenterPage() {
 
   useEffect(() => {
     setProfile(getUserProfile());
+    trackTelemetry('exam_view', { exam_id: 'exam-norcet-2026', exam_name: 'AIIMS NORCET 2026' });
   }, []);
 
   const hasQualifications = Boolean(profile?.qualificationsList && profile.qualificationsList.length > 0);
@@ -146,11 +148,24 @@ export default function NorcetCommandCenterPage() {
     setActivePaper(paper);
     setActivePaperMode(mode);
     setIsModalOpen(true);
+    trackTelemetry('pyq_started', {
+      exam_id: 'exam-norcet-2026',
+      paper_id: paper.id,
+      year: paper.year,
+      mode,
+    });
   };
 
   const handleSaveQuickVerify = () => {
     const current = getUserProfile();
     const qualName = quickQual === 'bsc' ? 'B.Sc. Nursing' : quickQual === 'gnm' ? 'GNM (General Nursing & Midwifery)' : 'Post Basic B.Sc. Nursing';
+
+    trackTelemetry('passport_completed', {
+      qualification: quickQual,
+      registered: quickRegistered,
+      exp_years: quickExpYears,
+      input_method: 'select',
+    });
 
     const updated = saveUserProfile({
       ...current,
