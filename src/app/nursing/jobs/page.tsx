@@ -16,8 +16,8 @@ type SortOption = 'urgent' | 'vacancies' | 'alphabetical';
 
 const TYPE_OPTIONS: { id: TypeFilter; label: string; emoji: string }[] = [
   { id: 'all', label: 'All Jobs', emoji: '⭐' },
-  { id: 'private', label: '🏥 Super-Speciality', emoji: '🏥' },
-  { id: 'government', label: '🏛️ Govt Hospitals', emoji: '🏛️' },
+  { id: 'private', label: 'Super-Speciality', emoji: '🏥' },
+  { id: 'government', label: 'Govt Hospitals', emoji: '🏛️' },
 ];
 
 const STATES = ['All States', 'Karnataka', 'Maharashtra', 'Tamil Nadu', 'Kerala', 'Delhi', 'Uttar Pradesh', 'Rajasthan', 'West Bengal', 'Bihar', 'Telangana', 'Odisha', 'Gujarat', 'Madhya Pradesh'];
