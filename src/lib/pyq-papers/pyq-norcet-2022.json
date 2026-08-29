@@ -58,7 +58,8 @@
         }
       ],
       "correctOption": "B",
-      "rationale": "ID"
+      "rationale": "ID",
+      "imageUrl": "/images/pyq/pyq-norcet-2022/q_1.png"
     },
     {
       "qNo": 2,
@@ -183,7 +184,8 @@
         }
       ],
       "correctOption": "B",
-      "rationale": "​ The diagonal conjugate is measured from the lower border of the pubic symphysis to the promontory of the sacrum (as seen in the image). It is the only pelvic conjugate that can be measured clinically by vaginal examination. The true (obstetric) conjugate is about 1.5–2 cm shorter than the diagonal conjugate and cannot be measured directly. Obstetric conjugate = True conjugate = Distance from sacral promontory to the midpoint of the posterior surface of the pubic symphysis."
+      "rationale": "​ The diagonal conjugate is measured from the lower border of the pubic symphysis to the promontory of the sacrum (as seen in the image). It is the only pelvic conjugate that can be measured clinically by vaginal examination. The true (obstetric) conjugate is about 1.5–2 cm shorter than the diagonal conjugate and cannot be measured directly. Obstetric conjugate = True conjugate = Distance from sacral promontory to the midpoint of the posterior surface of the pubic symphysis.",
+      "imageUrl": "/images/pyq/pyq-norcet-2022/q_6.png"
     },
     {
       "qNo": 7,
@@ -308,7 +310,8 @@
         }
       ],
       "correctOption": "A",
-      "rationale": "Blood sampling for ABG analysis: The procedure shown is most likely related to the collection of blood for arterial blood gas analysis. IV Drug Administration: Not applicable in this context. Venipuncture: Although related, the specific procedure being shown is more focused on ABG analysis. All of the above: Incorrect, as it specifies a different procedure."
+      "rationale": "Blood sampling for ABG analysis: The procedure shown is most likely related to the collection of blood for arterial blood gas analysis. IV Drug Administration: Not applicable in this context. Venipuncture: Although related, the specific procedure being shown is more focused on ABG analysis. All of the above: Incorrect, as it specifies a different procedure.",
+      "imageUrl": "/images/pyq/pyq-norcet-2022/q_11.png"
     },
     {
       "qNo": 12,
@@ -383,7 +386,8 @@
         }
       ],
       "correctOption": "A",
-      "rationale": "14 G: The 14 G IV cannula is the largest size available and is typically used in emergency or trauma situations where high-flow fluids, blood, or medications need to be infused rapidly. It's suitable for patients with large veins or in need of high volume resuscitation. 16 G: The 16 G IV cannula is slightly smaller than the 14 G but still allows for a high flow rate. It is commonly used in surgical settings, trauma care, or for blood transfusions in adults. It is versatile and can be used for a variety of medical situations requiring moderate to high flow. 18 G: The 18 G IV cannula is commonly used for regular infusions, such as intravenous fluids and medications. It offers a good flow rate without being as large and invasive as the 14 G or 16 G. It is often used for adult patients requiring moderate fluid administration. 20 G: The 20 G IV cannula is smaller and is used for patients who require less fluid flow or for pediatric patients with smaller veins. It is commonly used for routine drug administration, fluid maintenance, and in cases where high flow is not necessary. It is a standard size for general hospital use."
+      "rationale": "14 G: The 14 G IV cannula is the largest size available and is typically used in emergency or trauma situations where high-flow fluids, blood, or medications need to be infused rapidly. It's suitable for patients with large veins or in need of high volume resuscitation. 16 G: The 16 G IV cannula is slightly smaller than the 14 G but still allows for a high flow rate. It is commonly used in surgical settings, trauma care, or for blood transfusions in adults. It is versatile and can be used for a variety of medical situations requiring moderate to high flow. 18 G: The 18 G IV cannula is commonly used for regular infusions, such as intravenous fluids and medications. It offers a good flow rate without being as large and invasive as the 14 G or 16 G. It is often used for adult patients requiring moderate fluid administration. 20 G: The 20 G IV cannula is smaller and is used for patients who require less fluid flow or for pediatric patients with smaller veins. It is commonly used for routine drug administration, fluid maintenance, and in cases where high flow is not necessary. It is a standard size for general hospital use.",
+      "imageUrl": "/images/pyq/pyq-norcet-2022/q_14.png"
     },
     {
       "qNo": 15,
@@ -883,7 +887,8 @@
         }
       ],
       "correctOption": "A",
-      "rationale": "Within 72 hours: Oral contraceptive pills (OCP) or emergency contraception are most effective when taken within 72 hours (3 days) of unprotected sexual intercourse. The sooner they are taken, the more effective they are in preventing pregnancy. Within 12 hours: Although taking OCP within 12 hours is effective, the correct recommended window for emergency contraception is up to 72 hours. After 96 hours: Emergency contraception is generally not effective after 96 hours (4 days) of unprotected intercourse. Within 36 hours: Although OCP can still work within 36 hours, the optimal window for use is within 72 hours."
+      "rationale": "Within 72 hours: Oral contraceptive pills (OCP) or emergency contraception are most effective when taken within 72 hours (3 days) of unprotected sexual intercourse. The sooner they are taken, the more effective they are in preventing pregnancy. Within 12 hours: Although taking OCP within 12 hours is effective, the correct recommended window for emergency contraception is up to 72 hours. After 96 hours: Emergency contraception is generally not effective after 96 hours (4 days) of unprotected intercourse. Within 36 hours: Although OCP can still work within 36 hours, the optimal window for use is within 72 hours.",
+      "imageUrl": "/images/pyq/pyq-norcet-2022/q_34.png"
     },
     {
       "qNo": 35,
@@ -1008,7 +1013,8 @@
         }
       ],
       "correctOption": "B",
-      "rationale": "Bladder carcinoma: A bladder carcinoma may show irregularities or masses in the bladder, but it is not typically visible as a clear structure on a KUB X-ray unless advanced. Renal calculi: Renal calculi, or kidney stones, typically appear as white, dense spots or areas on an X-ray due to their high calcium content. These stones are commonly visible in the renal region on a KUB X-ray. Bladder injury: A bladder injury might be seen in contrast studies but is usually not visible in a simple KUB X-ray unless there is associated trauma or air leakage. Dilated ureter: A dilated ureter may not be very clearly visible on a KUB X-ray unless it’s caused by a stone or obstruction, but it’s often better detected with imaging techniques like a CT scan or ultrasound."
+      "rationale": "Bladder carcinoma: A bladder carcinoma may show irregularities or masses in the bladder, but it is not typically visible as a clear structure on a KUB X-ray unless advanced. Renal calculi: Renal calculi, or kidney stones, typically appear as white, dense spots or areas on an X-ray due to their high calcium content. These stones are commonly visible in the renal region on a KUB X-ray. Bladder injury: A bladder injury might be seen in contrast studies but is usually not visible in a simple KUB X-ray unless there is associated trauma or air leakage. Dilated ureter: A dilated ureter may not be very clearly visible on a KUB X-ray unless it’s caused by a stone or obstruction, but it’s often better detected with imaging techniques like a CT scan or ultrasound.",
+      "imageUrl": "/images/pyq/pyq-norcet-2022/q_39.png"
     },
     {
       "qNo": 40,
@@ -1483,7 +1489,8 @@
         }
       ],
       "correctOption": "B",
-      "rationale": "Transfemoral amputation: Amputation occurs above the knee joint, through the femur, with no knee joint present. Transtibial amputation: Amputation occurs below the knee joint, preserving the knee and removing part of the tibia and fibula. Knee disarticulation: Amputation occurs through the knee joint, leaving the femur intact. Ankle disarticulation: Amputation occurs at the ankle joint, preserving the tibia and fibula but removing the foot."
+      "rationale": "Transfemoral amputation: Amputation occurs above the knee joint, through the femur, with no knee joint present. Transtibial amputation: Amputation occurs below the knee joint, preserving the knee and removing part of the tibia and fibula. Knee disarticulation: Amputation occurs through the knee joint, leaving the femur intact. Ankle disarticulation: Amputation occurs at the ankle joint, preserving the tibia and fibula but removing the foot.",
+      "imageUrl": "/images/pyq/pyq-norcet-2022/q_58.png"
     },
     {
       "qNo": 59,
@@ -2158,7 +2165,8 @@
         }
       ],
       "correctOption": "B",
-      "rationale": "Abdomen: An MRI of the abdomen is used to evaluate abdominal organs such as the liver, kidneys, pancreas, intestines, and spleen. This would not focus on the facial structures, making this option incorrect. Face: An MRI of the face focuses on the facial bones, soft tissues, muscles, sinuses, and nerves. It is used to assess conditions such as tumors, fractures, infections, or nerve damage in the facial region, making this the correct option. Head: An MRI of the head typically focuses on the brain and surrounding structures like the skull, blood vessels, and nerves. It would not focus on the facial region, so this option is not correct for an image of the face. Pelvis: An MRI of the pelvis looks at the organs in the pelvic region, such as the bladder, reproductive organs, and pelvic bones. It does not include the face, so this option is also incorrect."
+      "rationale": "Abdomen: An MRI of the abdomen is used to evaluate abdominal organs such as the liver, kidneys, pancreas, intestines, and spleen. This would not focus on the facial structures, making this option incorrect. Face: An MRI of the face focuses on the facial bones, soft tissues, muscles, sinuses, and nerves. It is used to assess conditions such as tumors, fractures, infections, or nerve damage in the facial region, making this the correct option. Head: An MRI of the head typically focuses on the brain and surrounding structures like the skull, blood vessels, and nerves. It would not focus on the facial region, so this option is not correct for an image of the face. Pelvis: An MRI of the pelvis looks at the organs in the pelvic region, such as the bladder, reproductive organs, and pelvic bones. It does not include the face, so this option is also incorrect.",
+      "imageUrl": "/images/pyq/pyq-norcet-2022/q_85.png"
     },
     {
       "qNo": 86,

@@ -2333,7 +2333,8 @@
         }
       ],
       "correctOption": "D",
-      "rationale": "The figure has 4 horizontal lines and 4 vertical lines. To count the total number of rectangles: Formula: The number of rectangles is given by choosing 2 horizontal lines and 2 vertical lines from the total. Calculation: · Number of ways to choose 2 horizontal lines from 4 = (42)=6\\binom{4}{2} = 6(24​)=6. · Number of ways to choose 2 vertical lines from 4 = (42)=6\\binom{4}{2} = 6(24​)=6. · Total rectangles = 6×6=366 \\times 6 = 366×6=36."
+      "rationale": "The figure has 4 horizontal lines and 4 vertical lines. To count the total number of rectangles: Formula: The number of rectangles is given by choosing 2 horizontal lines and 2 vertical lines from the total. Calculation: · Number of ways to choose 2 horizontal lines from 4 = (42)=6\\binom{4}{2} = 6(24​)=6. · Number of ways to choose 2 vertical lines from 4 = (42)=6\\binom{4}{2} = 6(24​)=6. · Total rectangles = 6×6=366 \\times 6 = 366×6=36.",
+      "imageUrl": "/images/pyq/pyq-norcet-2024/q_92.png"
     },
     {
       "qNo": 93,
@@ -2433,7 +2434,8 @@
         }
       ],
       "correctOption": "D",
-      "rationale": ""
+      "rationale": "",
+      "imageUrl": "/images/pyq/pyq-norcet-2024/q_96.png"
     },
     {
       "qNo": 97,
