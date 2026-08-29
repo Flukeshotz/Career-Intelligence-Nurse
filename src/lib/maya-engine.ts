@@ -275,19 +275,32 @@ export async function askMaya(context: MayaContext): Promise<MayaResponse> {
     const groq = new Groq({ apiKey });
     const systemPrompt = buildSystemPrompt(context);
 
-    // Try primary high-speed model
-    const completion = await groq.chat.completions.create({
-      model: 'qwen/qwen3.8-27b',
-      messages: [
-        { role: 'system', content: systemPrompt },
-        { role: 'user', content: context.question },
-      ],
-      temperature: 0.25,
-      max_tokens: 500,
-      response_format: { type: 'json_object' },
-    });
+    // Multi-model fallback cascade
+    const candidateModels = ['qwen/qwen3.8-27b', 'groq/compound', 'openai/gpt-oss-120b'];
+    let raw = '';
 
-    const raw = completion.choices[0]?.message?.content || '';
+    for (const model of candidateModels) {
+      try {
+        const completion = await groq.chat.completions.create({
+          model,
+          messages: [
+            { role: 'system', content: systemPrompt },
+            { role: 'user', content: context.question },
+          ],
+          temperature: 0.2,
+          max_tokens: 600,
+          response_format: { type: 'json_object' },
+        });
+
+        raw = completion.choices[0]?.message?.content || '';
+        if (raw) break;
+      } catch (modelErr) {
+        console.warn(`[Maya Engine] Model ${model} failed, trying next...`, modelErr);
+      }
+    }
+
+    if (!raw) throw new Error('All candidate models returned empty response');
+
     const parsed = JSON.parse(raw) as MayaResponse;
 
     // Safety: downgrade confidence if candidate asks eligibility but has unconfirmed gaps
@@ -298,24 +311,25 @@ export async function askMaya(context: MayaContext): Promise<MayaResponse> {
 
     return parsed;
   } catch (err) {
-    console.error('[Maya Engine API Fallback]', err);
+    console.error('[Maya Engine Fallback Activated]', err);
 
-    // Deterministic Rule-Based Fallback using Structured Intelligence
+    // Deterministic Rule-Based Fallback using Structured Pan-India Intelligence
     return generateDeterministicMayaResponse(context);
   }
 }
 
-// ─── DETERMINISTIC FALLBACK INTELLIGENCE ─────────────────────────────────────
+// ─── DETERMINISTIC FALLBACK INTELLIGENCE (GLOBAL & CONTEXTUAL) ───────────────
 
 function generateDeterministicMayaResponse(context: MayaContext): MayaResponse {
-  const q = context.question.toLowerCase();
+  const q = context.question.toLowerCase().trim();
   const opp = context.opportunity;
 
+  // 1. Contextual Opportunity matching
   if (opp) {
     if (/eligible|apply|qualify|can i|am i/i.test(q)) {
       if (context.eligibilityResult?.confidence === 'likely') {
         return {
-          message: `Yes, based on your Career Passport details, you meet the eligibility criteria for ${opp.title} at ${opp.organisation}.`,
+          message: `Yes! Based on your Career Passport details, you meet the eligibility criteria for ${opp.title} at ${opp.organisation}.`,
           confidence: 'verified',
           citation: opp.officialNotificationUrl || 'Official Notification',
           avatar: 'thumbsup',
@@ -326,7 +340,7 @@ function generateDeterministicMayaResponse(context: MayaContext): MayaResponse {
         };
       } else if (context.eligibilityResult?.confidence === 'not_eligible') {
         return {
-          message: `Based on official criteria for ${opp.title}, some requirements are currently not met. You need: ${opp.qualification || 'the required qualification and clinical experience'}.`,
+          message: `Based on official criteria for ${opp.title}, some requirements are currently unmet. You need: ${opp.qualification || 'the required qualification and clinical experience'}.`,
           confidence: 'verified',
           citation: opp.officialNotificationUrl || 'Official Notification',
           avatar: 'sad',
@@ -337,7 +351,7 @@ function generateDeterministicMayaResponse(context: MayaContext): MayaResponse {
         };
       } else {
         return {
-          message: `For ${opp.title}, the official qualification requirement is: ${opp.qualification || 'B.Sc. Nursing or GNM with registration'}. Please verify your profile to confirm your exact match.`,
+          message: `For ${opp.title}, the official qualification is: ${opp.qualification || 'B.Sc. Nursing (0 exp) or GNM with hospital experience'}. Please complete your profile to confirm your exact match.`,
           confidence: 'verified',
           citation: opp.officialNotificationUrl || 'Official Notification',
           avatar: 'smiling',
@@ -349,7 +363,7 @@ function generateDeterministicMayaResponse(context: MayaContext): MayaResponse {
       }
     }
 
-    if (/syllabus|topics|subject|pattern|negative marking|marks/i.test(q)) {
+    if (/syllabus|topics|subject|pattern|negative marking|marks|stage/i.test(q)) {
       return {
         message: `The syllabus for ${opp.title} covers Core Nursing Sciences (Medical-Surgical, OBG, Pediatrics, Fundamentals, Pharmacology) alongside General Aptitude and Science. Standard negative marking is 1/3rd mark deduction.`,
         confidence: 'verified',
@@ -363,11 +377,105 @@ function generateDeterministicMayaResponse(context: MayaContext): MayaResponse {
     }
   }
 
+  // 2. Global Pan-India Knowledge Matching (When no opportunity is active)
+  if (/norcet|aiims/i.test(q)) {
+    return {
+      message: "AIIMS NORCET (Nursing Officer Recruitment Common Eligibility Test) is India's premier national exam for 2,218+ Nursing Officer posts (Level 7, ₹78k–₹85k/mo). It features two stages: Stage 1 Preliminary CBT (100 MCQs) and Stage 2 Mains (160 clinical case scenario MCQs). B.Sc. Nursing graduates qualify with 0 experience; GNM holders require 2 years in a 50+ bed hospital.",
+      confidence: 'verified',
+      citation: 'AIIMS Examination Section (aiimsexams.ac.in)',
+      avatar: 'smiling',
+      quickActions: [
+        { label: 'Open NORCET Hub', action: 'navigate', payload: '/nursing/norcet' },
+        { label: 'View Full Syllabus', action: 'navigate', payload: '/nursing/norcet#syllabus' },
+        { label: 'Check My Eligibility', action: 'complete_profile' }
+      ]
+    };
+  }
+
+  if (/rrb|railway/i.test(q)) {
+    return {
+      message: "RRB Nursing Superintendent (CEN 04/2024) recruits for 713 permanent posts in Indian Railways (Level 7, ₹76k–₹83k/mo + Free Railway Travel Passes & Medical). It consists of a single-stage 100-question CBT (70 Nursing + 10 Science + 10 GK + 10 Math). Both GNM and B.Sc. Nursing freshers are eligible with no bed-count experience required!",
+      confidence: 'verified',
+      citation: 'Railway Recruitment Control Board (rrbapply.gov.in)',
+      avatar: 'smiling',
+      quickActions: [
+        { label: 'View RRB Exam Details', action: 'navigate', payload: '/nursing/exams' },
+        { label: 'Official RRB Portal', action: 'view_official', payload: 'https://www.rrbapply.gov.in' }
+      ]
+    };
+  }
+
+  if (/esic/i.test(q)) {
+    return {
+      message: "UPSC ESIC Nursing Officer recruits for 1,930 Level 7 posts across 150+ ESIC hospitals. The selection is based on a 300-mark written test (80% Nursing + 20% General Ability) with no interview. B.Sc. Nursing graduates need 0 exp; GNM holders need 1 year in a 50+ bed hospital. Age limit is 30 years.",
+      confidence: 'verified',
+      citation: 'UPSC & ESIC Official Portals (upsconline.nic.in)',
+      avatar: 'smiling',
+      quickActions: [
+        { label: 'Explore ESIC Postings', action: 'navigate', payload: '/nursing/exams' },
+        { label: 'Official UPSC Portal', action: 'view_official', payload: 'https://upsconline.nic.in' }
+      ]
+    };
+  }
+
+  if (/mns|military/i.test(q)) {
+    return {
+      message: "Military Nursing Service (MNS SSC) recruits female B.Sc./M.Sc. Nursing graduates as Commissioned Officers (Rank of Lieutenant, Level 10 + MSP, ₹95k–₹1,10k/mo). The selection involves an NTA online CBT (150 Marks, no negative marking), an Armed Forces Panel Interview, and a Special Medical Board fitness exam.",
+      confidence: 'verified',
+      citation: 'Indian Army Official Website (joinindianarmy.nic.in)',
+      avatar: 'smiling',
+      quickActions: [
+        { label: 'View MNS Officer Details', action: 'navigate', payload: '/nursing/exams' },
+        { label: 'Join Indian Army Portal', action: 'view_official', payload: 'https://joinindianarmy.nic.in' }
+      ]
+    };
+  }
+
+  if (/dsssb|delhi/i.test(q)) {
+    return {
+      message: "DSSSB Nursing Officer (Post Code 02/24) offers 1,507 Group B posts under the Delhi Health Department (Gross ~₹85k/mo with 30% HRA). It features a One-Tier 200-mark CBT (100 marks non-technical + 100 marks nursing core). Candidates must have active Delhi Nursing Council (DNC) registration.",
+      confidence: 'verified',
+      citation: 'DSSSB Official Portal (dsssbonline.nic.in)',
+      avatar: 'smiling',
+      quickActions: [
+        { label: 'View DSSSB Vacancy', action: 'navigate', payload: '/nursing/jobs' },
+        { label: 'Open DSSSB Portal', action: 'view_official', payload: 'https://dsssbonline.nic.in' }
+      ]
+    };
+  }
+
+  if (/syllabus|curriculum|topics|subjects/i.test(q)) {
+    return {
+      message: "Government nursing exams in India share a standardized core: Medical-Surgical Nursing (MSN ~25%), Obstetrics & Gynaecology (OBG ~20%), Pediatrics (~15%), Fundamentals of Nursing & Procedures (~15%), Community Health (~10%), and Pharmacology & Mental Health (~15%). Central exams also include General Science, GK, and Aptitude.",
+      confidence: 'verified',
+      citation: 'INC & Government Recruitment Blueprints',
+      avatar: 'smiling',
+      quickActions: [
+        { label: 'Explore NORCET Syllabus', action: 'navigate', payload: '/nursing/norcet#syllabus' },
+        { label: 'View All Govt Exams', action: 'navigate', payload: '/nursing/exams' }
+      ]
+    };
+  }
+
+  if (/salary|pay|gross|allowance/i.test(q)) {
+    return {
+      message: "Central Government Nursing Officers (AIIMS, RRB, ESIC, JIPMER, PGIMER) are appointed in 7th CPC Pay Matrix Level 7 (Basic ₹44,900). With current DA, 30% HRA, Nursing Allowance (₹7,200/mo), and Uniform Allowance, gross monthly pay ranges from ₹78,000 to ₹88,000/month. Military Nursing Service (MNS) Lieutenants start at Level 10 + MSP (~₹95,000 to ₹1,10,000/month).",
+      confidence: 'verified',
+      citation: '7th Central Pay Commission Guidelines',
+      avatar: 'smiling',
+      quickActions: [
+        { label: 'Compare Government Exams', action: 'navigate', payload: '/nursing/exams' },
+        { label: 'View Hospital Vacancies', action: 'navigate', payload: '/nursing/jobs' }
+      ]
+    };
+  }
+
   return {
-    message: "I am Maya, your SkillCase career guide. I can help you evaluate your eligibility for government exams (like NORCET, RRB, ESIC), hospital vacancies, or review your syllabus.",
+    message: "I am Maya, your SkillCase career guide. I can help you evaluate your eligibility for government exams (like NORCET, RRB, ESIC, MNS, DSSSB), compare salary structures, review subject syllabi, or check hospital vacancies. What would you like to explore?",
     confidence: 'verified',
     avatar: 'smiling',
     quickActions: [
+      { label: 'Explore NORCET 2026', action: 'navigate', payload: '/nursing/norcet' },
       { label: 'Explore Govt Exams', action: 'navigate', payload: '/nursing/exams' },
       { label: 'Explore Hospital Jobs', action: 'navigate', payload: '/nursing/jobs' },
       { label: 'Update My Profile', action: 'complete_profile' }
