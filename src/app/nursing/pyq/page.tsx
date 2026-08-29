@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Search, SlidersHorizontal, FileText, CheckCircle2, ShieldCheck, Download, Eye, Sparkles } from 'lucide-react';
+import { ArrowLeft, Search, FileText } from 'lucide-react';
 import { EXAM_PAPERS, ExamPaper } from '@/lib/pyq-mock-data';
 import { PyqCard } from '@/components/opportunity/PyqCard';
 import { PaperViewerModal } from '@/components/opportunity/PaperViewerModal';
@@ -46,8 +46,8 @@ export default function PreviousYearPapersPage() {
   return (
     <div className="wide-container mobile-safe-bottom" style={{ paddingTop: '16px', maxWidth: '860px', margin: '0 auto', paddingBottom: '90px' }}>
       
-      {/* ── TOP NAV BAR ── */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
+      {/* ── TOP NAV & CALM HEADER ── */}
+      <div style={{ marginBottom: '16px' }}>
         <Link
           href="/nursing"
           style={{
@@ -55,39 +55,21 @@ export default function PreviousYearPapersPage() {
             alignItems: 'center',
             gap: '5px',
             color: 'var(--sc-navy-700)',
-            fontSize: '0.82rem',
+            fontSize: '0.80rem',
             fontWeight: 700,
             textDecoration: 'none',
+            marginBottom: '8px',
           }}
         >
-          <ArrowLeft size={15} />
+          <ArrowLeft size={14} />
           <span>Back to Home</span>
         </Link>
 
-        <span style={{ fontSize: '0.70rem', fontWeight: 800, color: '#16a34a', background: '#f0fdf4', border: '1px solid #bbf7d0', padding: '3px 8px', borderRadius: '100px' }}>
-          ✓ Verified Answer Keys
-        </span>
-      </div>
-
-      {/* ── HEADER BANNER ── */}
-      <div
-        style={{
-          background: 'linear-gradient(135deg, #091b33 0%, #061528 100%)',
-          color: '#ffffff',
-          borderRadius: '16px',
-          padding: '20px',
-          marginBottom: '16px',
-          boxShadow: '0 4px 14px rgba(6, 21, 40, 0.15)',
-        }}
-      >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.70rem', fontWeight: 800, color: '#93c5fd', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '4px' }}>
-          <span>SkillCase Master Examination Repository</span>
-        </div>
-        <h1 style={{ fontSize: '1.3rem', fontWeight: 800, margin: '0 0 6px 0', lineHeight: 1.25 }}>
-          Previous Year Papers &amp; CBT Simulations
+        <h1 style={{ fontSize: '1.35rem', fontWeight: 800, color: '#0f172a', margin: '0 0 2px 0', letterSpacing: '-0.02em' }}>
+          Previous Year Question Papers
         </h1>
-        <p style={{ fontSize: '0.80rem', color: '#cbd5e1', margin: 0, lineHeight: 1.45 }}>
-          Solve official shift papers and full-length predictor mocks with exact timers, 1/3rd negative marking, and rationales.
+        <p style={{ fontSize: '0.82rem', color: '#64748b', margin: 0 }}>
+          Official shift booklets and full-length CBT mocks with verified keys
         </p>
       </div>
 
@@ -106,10 +88,10 @@ export default function PreviousYearPapersPage() {
               height: '42px',
               borderRadius: '10px',
               background: '#ffffff',
-              border: '1px solid #e2e8f0',
+              border: '1px solid #cbd5e1',
               paddingLeft: '36px',
               paddingRight: '12px',
-              fontSize: '0.82rem',
+              fontSize: '0.84rem',
               color: '#0f172a',
               outline: 'none',
               boxShadow: '0 1px 3px rgba(0,0,0,0.02)',
@@ -149,12 +131,7 @@ export default function PreviousYearPapersPage() {
       </div>
 
       {/* ── PAPERS LIST ── */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.78rem', color: '#64748b', fontWeight: 600, padding: '0 2px' }}>
-          <span>Showing <strong>{filteredPapers.length}</strong> official question papers</span>
-          <span>100% Free Access</span>
-        </div>
-
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
         {filteredPapers.length === 0 ? (
           <div style={{ background: '#ffffff', borderRadius: '12px', border: '1px solid #e2e8f0', padding: '30px 20px', textAlign: 'center' }}>
             <FileText size={32} color="#94a3b8" style={{ margin: '0 auto 8px' }} />

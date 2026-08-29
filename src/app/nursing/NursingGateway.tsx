@@ -53,76 +53,13 @@ export default function NursingGateway() {
     <div style={{ background: '#f8fafc', minHeight: '100vh', padding: '16px 16px 100px', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
       <div style={{ maxWidth: '640px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '16px' }}>
 
-        {/* ── 1. GREETING & HEADER BAR ── */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: '4px' }}>
-          <div>
-            <h1 style={{ fontSize: '1.35rem', fontWeight: 800, color: '#0f172a', margin: 0, letterSpacing: '-0.02em' }}>
-              Good morning, {userName} 👋
-            </h1>
-            <div style={{ fontSize: '0.80rem', color: '#64748b', marginTop: '2px', fontWeight: 500 }}>
-              Your nursing career companion
-            </div>
-          </div>
-
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            {/* Notification Bell */}
-            <button
-              type="button"
-              onClick={() => setIsMayaOpen(true)}
-              style={{
-                width: '40px',
-                height: '40px',
-                borderRadius: '50%',
-                background: '#ffffff',
-                border: '1px solid #e2e8f0',
-                color: '#0f172a',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                cursor: 'pointer',
-                position: 'relative',
-              }}
-            >
-              <Bell size={18} color="#0f172a" />
-              <span
-                style={{
-                  position: 'absolute',
-                  top: '9px',
-                  right: '9px',
-                  width: '7px',
-                  height: '7px',
-                  borderRadius: '50%',
-                  background: '#ef4444',
-                  border: '1px solid #ffffff',
-                }}
-              />
-            </button>
-
-            {/* Profile / Career Passport Avatar */}
-            <Link
-              href="/profile"
-              style={{
-                width: '42px',
-                height: '42px',
-                borderRadius: '50%',
-                overflow: 'hidden',
-                background: '#f1f5f9',
-                border: '2px solid #e2e8f0',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                textDecoration: 'none',
-                flexShrink: 0,
-                position: 'relative',
-              }}
-              title="Open My Profile & Career Passport"
-            >
-              <img
-                src="/maya-smiling.webp"
-                alt="My Profile"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-              />
-            </Link>
+        {/* ── 1. GREETING ── */}
+        <div style={{ paddingTop: '8px' }}>
+          <h1 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#0f172a', margin: 0, letterSpacing: '-0.02em' }}>
+            Good morning, {userName} 👋
+          </h1>
+          <div style={{ fontSize: '0.82rem', color: '#64748b', marginTop: '2px', fontWeight: 500 }}>
+            Your nursing career companion
           </div>
         </div>
 
@@ -520,60 +457,6 @@ export default function NursingGateway() {
                 </div>
               </div>
             </Link>
-
-            {/* Row 4: Full-Width Maya Career Assistant Card */}
-            <div
-              onClick={() => setIsMayaOpen(true)}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => e.key === 'Enter' && setIsMayaOpen(true)}
-              style={{
-                background: 'linear-gradient(135deg, #eff6ff 0%, #e0f2fe 100%)',
-                border: '1px solid #bfdbfe',
-                borderRadius: '16px',
-                padding: '14px 16px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                gap: '12px',
-                cursor: 'pointer',
-                boxShadow: '0 2px 6px rgba(59,130,246,0.06)',
-              }}
-            >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', minWidth: 0, flex: 1 }}>
-                <div style={{ width: '42px', height: '42px', borderRadius: '50%', overflow: 'hidden', flexShrink: 0, border: '1.5px solid #60a5fa' }}>
-                  <img src="/maya-wave.webp" alt="Maya" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                </div>
-                <div style={{ minWidth: 0, flex: 1 }}>
-                  <div style={{ fontSize: '0.88rem', fontWeight: 800, color: '#1e3a8a', display: 'flex', alignItems: 'center', gap: '4px' }}>
-                    <span>Ask Maya</span>
-                    <Sparkles size={13} color="#2563eb" />
-                  </div>
-                  <div style={{ fontSize: '0.72rem', color: '#475569', marginTop: '2px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                    Instant answers about eligibility, cutoffs &amp; dates
-                  </div>
-                </div>
-              </div>
-
-              <div
-                style={{
-                  background: '#ffffff',
-                  border: '1px solid #93c5fd',
-                  color: '#1d4ed8',
-                  padding: '6px 12px',
-                  borderRadius: '10px',
-                  fontSize: '0.76rem',
-                  fontWeight: 800,
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '4px',
-                  flexShrink: 0,
-                }}
-              >
-                <MessageSquare size={13} />
-                <span>Ask Maya</span>
-              </div>
-            </div>
           </div>
         </div>
 

@@ -11,13 +11,10 @@ export function MayaFloatingButton() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
-  // Suppress floating FAB on pages that already have an inline Maya card or bottom docks
+  // Suppress floating FAB on detail pages with full bottom docks
   const shouldHideFab =
-    pathname === '/nursing' ||
-    pathname === '/' ||
     pathname?.includes('/nursing/exams/') ||
     pathname?.includes('/nursing/jobs/') ||
-    pathname === '/nursing/norcet' ||
     pathname?.startsWith('/admin');
 
   if (shouldHideFab) {
