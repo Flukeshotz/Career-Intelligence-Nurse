@@ -4,7 +4,7 @@
   "examName": "AIIMS NORCET",
   "year": 2024,
   "shift": "Stage 1 Prelims (12 Apr 2024 / NORCET 6)",
-  "totalMarks": 93,
+  "totalMarks": 100,
   "negativeMarking": "0.33 (1/3rd deduction per incorrect MCQ)",
   "durationMinutes": 90,
   "officialKeyNotification": "AIIMS New Delhi Official Master Response Key (2024)",
@@ -61,6 +61,31 @@
       "rationale": "Created From Date"
     },
     {
+      "qNo": 2,
+      "subject": "General Aptitude & Reasoning",
+      "question": "of these are seen in anorexia nervosa except:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Osteoporosis Norcet English"
+        },
+        {
+          "key": "B",
+          "text": "Myocardial hypertrophy Previous"
+        },
+        {
+          "key": "C",
+          "text": "Year Electrolyte imbalance"
+        },
+        {
+          "key": "D",
+          "text": "Menorrhagia Paper PYQ NURSING EXAMS MARKS TIME (MINS) UPDATED AT CREATED AT S3 PATH SF JSON V2 JSON NORCET 100 90 Thu, Jun 19, 2025, Wed, Jan 8, 2025, View View View 15:49:32 11:17:12 ACTION edit content_copy PUBLISH expand_circle_down (Held"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Osteoporosis: Osteoporosis is common in anorexia nervosa due to hormonal imbalance and nutrient deficiency. Myocardial hypertrophy: This may occur as a compensatory mechanism or in severe cases of prolonged malnutrition. Electrolyte imbalance: Electrolyte imbalances are a frequent complication due to inadequate nutrition and dehydration. Menorrhagia: Menorrhagia is not associated with anorexia nervosa; instead, amenorrhea (absence of menstruation) is more commonly observed."
+    },
+    {
       "qNo": 3,
       "subject": "General Aptitude & Reasoning",
       "question": "Identify the image:",
@@ -108,7 +133,7 @@
         }
       ],
       "correctOption": "C",
-      "rationale": "T tube: A T tube is a drainage tube used in surgeries like bile duct procedures, but it does not match the design of the image. Irrigation cannula: This is used for flushing or irrigation in surgical or medical procedures and does not resemble the shown device. Copyright © 2026 Adda247 POINTS 0 START TIME T Foley catheter: The Foley catheter is a flexible urinary catheter with an inflatable balloon at one end to hold it in place within the bladder. It is used for urinary drainage. Stomach tube: A stomach tube is used for gastric intubation but has a different design compared to the Foley catheter."
+      "rationale": "T tube: A T tube is a drainage tube used in surgeries like bile duct procedures, but it does not match the design of the image. Irrigation cannula: This is used for flushing or irrigation in surgical or medical procedures and does not resemble the shown device. POINTS 0 START TIME T Foley catheter: The Foley catheter is a flexible urinary catheter with an inflatable balloon at one end to hold it in place within the bladder. It is used for urinary drainage. Stomach tube: A stomach tube is used for gastric intubation but has a different design compared to the Foley catheter."
     },
     {
       "qNo": 5,
@@ -187,7 +212,7 @@
     },
     {
       "qNo": 8,
-      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "subject": "Medical-Surgical Nursing",
       "question": "Identify the blade size:",
       "options": [
         {
@@ -208,7 +233,32 @@
         }
       ],
       "correctOption": "B",
-      "rationale": "22: Blade 22 has a broader shape with a curved edge and is commonly used in general surgery, but it does not match the image shown. 23: Blade 23 has a scalpel-like curved shape and is often used in surgical procedures requiring precision cuts. The image matches the design of blade size 23. 24: Blade 24 is larger and wider than the blade shown in the image, typically used for heavy-duty surgical applications. 25: Blade 25 is smaller and more pointed, which does not match the design of the blade shown. Copyright © 2026 Adda247 Q.9 The following instrument is used to detect FHS. Name the instrument: A. Outlet forceps B. Sims speculum C. Fetoscope D. Tenaculum forceps Answer: C Sol: Outlet forceps: These are used during delivery to assist in the extraction of the baby and are unrelated to fetal heart sound (FHS) detection. Sims speculum: This instrument is used in gynecological examinations to visualize the cervix and vagina, not for detecting FHS. Fetoscope: The instrument shown is a fetoscope, a device specifically designed to detect fetal heart sounds (FHS). It amplifies the heartbeat of the fetus and is commonly used during pregnancy checkups. Tenaculum forceps: These are used to hold and manipulate tissues during gynecological surgeries and have no role in FHS detection."
+      "rationale": "22: Blade 22 has a broader shape with a curved edge and is commonly used in general surgery, but it does not match the image shown. 23: Blade 23 has a scalpel-like curved shape and is often used in surgical procedures requiring precision cuts. The image matches the design of blade size 23. 24: Blade 24 is larger and wider than the blade shown in the image, typically used for heavy-duty surgical applications. 25: Blade 25 is smaller and more pointed, which does not match the design of the blade shown."
+    },
+    {
+      "qNo": 9,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "The following instrument is used to detect FHS. Name the instrument:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Outlet forceps"
+        },
+        {
+          "key": "B",
+          "text": "Sims speculum"
+        },
+        {
+          "key": "C",
+          "text": "Fetoscope"
+        },
+        {
+          "key": "D",
+          "text": "Tenaculum forceps"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Outlet forceps: These are used during delivery to assist in the extraction of the baby and are unrelated to fetal heart sound (FHS) detection. Sims speculum: This instrument is used in gynecological examinations to visualize the cervix and vagina, not for detecting FHS. Fetoscope: The instrument shown is a fetoscope, a device specifically designed to detect fetal heart sounds (FHS). It amplifies the heartbeat of the fetus and is commonly used during pregnancy checkups. Tenaculum forceps: These are used to hold and manipulate tissues during gynecological surgeries and have no role in FHS detection."
     },
     {
       "qNo": 10,
@@ -288,7 +338,7 @@
     {
       "qNo": 13,
       "subject": "Child Health & Paediatric Nursing",
-      "question": "Copyright © 2026 Adda247 Deficiency of which vitamin causes defective bone mineralization disorder called rickets?",
+      "question": "Deficiency of which vitamin causes defective bone mineralization disorder called rickets?",
       "options": [
         {
           "key": "A",
@@ -537,7 +587,7 @@
     },
     {
       "qNo": 23,
-      "subject": "Child Health & Paediatric Nursing",
+      "subject": "General Aptitude & Reasoning",
       "question": "Infiltration cool and elevated portion at fluid state:",
       "options": [
         {
@@ -558,7 +608,57 @@
         }
       ],
       "correctOption": "C",
-      "rationale": "Transudate: Transudate is fluid with low protein content that accumulates due to non-inflammatory conditions like heart failure or hypoalbuminemia. It does not typically present as cool and elevated swelling. Inflammation: Inflammation is characterized by redness, warmth, swelling, and pain due to increased blood flow and immune response, not the cool and elevated nature described. Edema: Edema is the correct answer. It involves fluid accumulation in tissues, often appearing as a cool, elevated swelling in non-inflammatory conditions. Both A and B: Transudate and inflammation have distinct characteristics, and their combination does not describe the cool, elevated infiltration mentioned in the question. Q.24 A nurse is taking care of the patient with fluid electrolyte imbalance. She notices that there is redness around the IV cannula; after touching, she found tenderness and a decrease in IV flow. What is the correct interpretation of the following condition and the action? A. The finding is normal after cannulation, continue the IV flow B. The finding is abnormal, there is sepsis, stop the IV flow and remove cannula C. The finding is abnormal, there is phlebitis, stop the IV flow and remove cannula D. The finding is abnormal, wait for the physician to provide the order Answer: C Sol: The finding is normal after cannulation, continue the IV flow: Redness and tenderness are not normal signs after cannulation. The finding is abnormal, there is sepsis, stop the IV flow and remove cannula: Sepsis involves systemic infection and cannot be confirmed with localized symptoms. The finding is abnormal, there is phlebitis, stop the IV flow and remove cannula: Phlebitis is characterized by redness, tenderness, and reduced IV flow, making this the correct interpretation. The finding is abnormal, wait for the physician to provide the order: Immediate action is required to prevent complications, so waiting for the physician is inappropriate. Copyright © 2026 Adda247 Q.25 What is the correct compression-to-ventilation ratio for infant CPR performed by a single rescuer? A. 3:1 B. 3:2 C. 2:2 D. 30:2 Answer: D Sol: According to the AHA 2020 Guidelines, the correct compression-to-ventilation ratio for infant CPR by a single rescuer is 30 compressions to 2 breaths (30:2). This is the same ratio used for adults and children when only one rescuer is available. The 3:1 ratio applies only to neonatal resuscitation (newborns immediately after birth), not to routine infant CPR. The primary focus is to maintain effective circulation while minimizing interruptions in compressions. Explanation of Each Option: (a) 3:1 – This is used only in neonatal resuscitation, not for standard infant CPR. (b) 3:2 – Not a recommended ratio in any AHA guideline for any age group. (c) 2:2 – Also not a valid or standard ratio in infant or adult CPR. (d) 30:2 – Correct compression-to-ventilation ratio for a single rescuer performing infant CPR."
+      "rationale": "Transudate: Transudate is fluid with low protein content that accumulates due to non-inflammatory conditions like heart failure or hypoalbuminemia. It does not typically present as cool and elevated swelling. Inflammation: Inflammation is characterized by redness, warmth, swelling, and pain due to increased blood flow and immune response, not the cool and elevated nature described. Edema: Edema is the correct answer. It involves fluid accumulation in tissues, often appearing as a cool, elevated swelling in non-inflammatory conditions. Both A and B: Transudate and inflammation have distinct characteristics, and their combination does not describe the cool, elevated infiltration mentioned in the question."
+    },
+    {
+      "qNo": 24,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "A nurse is taking care of the patient with fluid electrolyte imbalance. She notices that there is redness around the IV cannula; after touching, she found tenderness and a decrease in IV flow. What is the correct interpretation of the following condition and the action?",
+      "options": [
+        {
+          "key": "A",
+          "text": "The finding is normal after cannulation, continue the IV flow"
+        },
+        {
+          "key": "B",
+          "text": "The finding is abnormal, there is sepsis, stop the IV flow and remove cannula"
+        },
+        {
+          "key": "C",
+          "text": "The finding is abnormal, there is phlebitis, stop the IV flow and remove cannula"
+        },
+        {
+          "key": "D",
+          "text": "The finding is abnormal, wait for the physician to provide the order"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "The finding is normal after cannulation, continue the IV flow: Redness and tenderness are not normal signs after cannulation. The finding is abnormal, there is sepsis, stop the IV flow and remove cannula: Sepsis involves systemic infection and cannot be confirmed with localized symptoms. The finding is abnormal, there is phlebitis, stop the IV flow and remove cannula: Phlebitis is characterized by redness, tenderness, and reduced IV flow, making this the correct interpretation. The finding is abnormal, wait for the physician to provide the order: Immediate action is required to prevent complications, so waiting for the physician is inappropriate."
+    },
+    {
+      "qNo": 25,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "What is the correct compression-to-ventilation ratio for infant CPR performed by a single rescuer?",
+      "options": [
+        {
+          "key": "A",
+          "text": "3:1"
+        },
+        {
+          "key": "B",
+          "text": "3:2"
+        },
+        {
+          "key": "C",
+          "text": "2:2"
+        },
+        {
+          "key": "D",
+          "text": "30:2"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "According to the AHA 2020 Guidelines, the correct compression-to-ventilation ratio for infant CPR by a single rescuer is 30 compressions to 2 breaths (30:2). This is the same ratio used for adults and children when only one rescuer is available. The 3:1 ratio applies only to neonatal resuscitation (newborns immediately after birth), not to routine infant CPR. The primary focus is to maintain effective circulation while minimizing interruptions in compressions. Explanation of Each Option: (a) 3:1 – This is used only in neonatal resuscitation, not for standard infant CPR. (b) 3:2 – Not a recommended ratio in any AHA guideline for any age group. (c) 2:2 – Also not a valid or standard ratio in infant or adult CPR. (d) 30:2 – Correct compression-to-ventilation ratio for a single rescuer performing infant CPR."
     },
     {
       "qNo": 26,
@@ -637,7 +737,7 @@
     },
     {
       "qNo": 29,
-      "subject": "Pharmacology & Drug Calculations",
+      "subject": "Medical-Surgical Nursing",
       "question": "A patient has fallen from the rooftop. Spinal injury is suspected. The emergency intervention in such cases includes?",
       "options": [
         {
@@ -658,7 +758,32 @@
         }
       ],
       "correctOption": "A",
-      "rationale": "Jaw thrust: The jaw thrust maneuver is the preferred method to open the airway in a patient with suspected spinal injuries, as it avoids movement of the cervical spine. Head tilt chin lift: This method is contraindicated in cases of spinal injury because tilting the head can worsen a cervical spine injury. Both A and B: This is incorrect because only the jaw thrust maneuver is safe for maintaining airway patency in patients with suspected spinal injuries. CPR: While CPR is critical for patients without a pulse or breathing, it is not a specific intervention for maintaining the airway in spinal injury cases. Copyright © 2026 Adda247 Q.30 A patient is undergoing blood transfusion and suddenly shows complaints of a transfusion reaction. What will be the priority nursing intervention? A. Stop the infusion and remove the cannula B. Stop the infusion C. Complete the transfusion and administer injection Avil D. None of the above Answer: B Sol: Stop the infusion: The first step in managing a suspected transfusion reaction to prevent further complications. Stop the infusion and remove the cannula: Removal of the cannula is not an immediate priority unless there are severe reactions involving the site. Complete the transfusion and administer injection Avil: Completing the transfusion is dangerous during a reaction. None of the above: This is not correct answer."
+      "rationale": "Jaw thrust: The jaw thrust maneuver is the preferred method to open the airway in a patient with suspected spinal injuries, as it avoids movement of the cervical spine. Head tilt chin lift: This method is contraindicated in cases of spinal injury because tilting the head can worsen a cervical spine injury. Both A and B: This is incorrect because only the jaw thrust maneuver is safe for maintaining airway patency in patients with suspected spinal injuries. CPR: While CPR is critical for patients without a pulse or breathing, it is not a specific intervention for maintaining the airway in spinal injury cases."
+    },
+    {
+      "qNo": 30,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "A patient is undergoing blood transfusion and suddenly shows complaints of a transfusion reaction. What will be the priority nursing intervention?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Stop the infusion and remove the cannula"
+        },
+        {
+          "key": "B",
+          "text": "Stop the infusion"
+        },
+        {
+          "key": "C",
+          "text": "Complete the transfusion and administer injection Avil"
+        },
+        {
+          "key": "D",
+          "text": "None of the above"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Stop the infusion: The first step in managing a suspected transfusion reaction to prevent further complications. Stop the infusion and remove the cannula: Removal of the cannula is not an immediate priority unless there are severe reactions involving the site. Complete the transfusion and administer injection Avil: Completing the transfusion is dangerous during a reaction. None of the above: This is not correct answer."
     },
     {
       "qNo": 31,
@@ -762,7 +887,7 @@
     },
     {
       "qNo": 35,
-      "subject": "Nursing Foundations & Clinical Procedures",
+      "subject": "Medical-Surgical Nursing",
       "question": "The doctor prescribes a patient to take inhaled beclomethasone and inhaled albuterol for the treatment of asthma. As a nurse, how will you teach the patient to take medications properly?",
       "options": [
         {
@@ -783,7 +908,32 @@
         }
       ],
       "correctOption": "D",
-      "rationale": "Beclomethasone first, 5 minutes later Albuterol: Incorrect as beclomethasone, a corticosteroid, should be used after the airway has been opened. Albuterol first, 1 minute later Beclomethasone: Albuterol opens airways, but sufficient time (5 minutes) is needed for full effect before using beclomethasone. Beclomethasone first, 1 minute later Albuterol: This order is incorrect as airway dilation should be prioritized. Albuterol first, 5 minutes later Beclomethasone: Albuterol, a bronchodilator, is given first to open the airways, allowing beclomethasone to penetrate deeper into the lungs effectively. Copyright © 2026 Adda247 Q.36 A nurse has just performed an NG tube insertion procedure. The most accurate method for confirming the NG tube placement is: A. X-ray B. Auscultation C. Observing the patient for coughing, aspiration of content, and pH monitoring D. Dip in a bowl of water Answer: A Sol: X-ray: The gold standard for confirming NG tube placement, ensuring accurate positioning in the stomach and avoiding complications. Auscultation: Involves listening for air sounds in the stomach but is less reliable and not a definitive method. Observing the patient for coughing, aspiration of content, and pH monitoring: While helpful as initial checks, these are not definitive methods for confirming placement. Dip in a bowl of water: Not a recognized or effective method for confirming NG tube placement."
+      "rationale": "Beclomethasone first, 5 minutes later Albuterol: Incorrect as beclomethasone, a corticosteroid, should be used after the airway has been opened. Albuterol first, 1 minute later Beclomethasone: Albuterol opens airways, but sufficient time (5 minutes) is needed for full effect before using beclomethasone. Beclomethasone first, 1 minute later Albuterol: This order is incorrect as airway dilation should be prioritized. Albuterol first, 5 minutes later Beclomethasone: Albuterol, a bronchodilator, is given first to open the airways, allowing beclomethasone to penetrate deeper into the lungs effectively."
+    },
+    {
+      "qNo": 36,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "A nurse has just performed an NG tube insertion procedure. The most accurate method for confirming the NG tube placement is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "X-ray"
+        },
+        {
+          "key": "B",
+          "text": "Auscultation"
+        },
+        {
+          "key": "C",
+          "text": "Observing the patient for coughing, aspiration of content, and pH monitoring"
+        },
+        {
+          "key": "D",
+          "text": "Dip in a bowl of water"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "X-ray: The gold standard for confirming NG tube placement, ensuring accurate positioning in the stomach and avoiding complications. Auscultation: Involves listening for air sounds in the stomach but is less reliable and not a definitive method. Observing the patient for coughing, aspiration of content, and pH monitoring: While helpful as initial checks, these are not definitive methods for confirming placement. Dip in a bowl of water: Not a recognized or effective method for confirming NG tube placement."
     },
     {
       "qNo": 37,
@@ -888,7 +1038,7 @@
     {
       "qNo": 41,
       "subject": "Medical-Surgical Nursing",
-      "question": "Winging of scapula after mastectomy is due to damage of which nerve? Copyright © 2026 Adda247",
+      "question": "Winging of scapula after mastectomy is due to damage of which nerve?",
       "options": [
         {
           "key": "A",
@@ -1296,7 +1446,7 @@
         },
         {
           "key": "B",
-          "text": "X-linked recessive Copyright © 2026 Adda247"
+          "text": "X-linked recessive"
         },
         {
           "key": "C",
@@ -1412,7 +1562,7 @@
     },
     {
       "qNo": 62,
-      "subject": "Pharmacology & Drug Calculations",
+      "subject": "Medical-Surgical Nursing",
       "question": "Which of the following factors is a common cause of fatty diarrhoea?",
       "options": [
         {
@@ -1433,7 +1583,32 @@
         }
       ],
       "correctOption": "B",
-      "rationale": "Lactose intolerance: Leads to diarrhea but not typically fatty; it results in osmotic diarrhea due to undigested lactose. Celiac disease: Gluten intolerance damages intestinal villi, impairing fat absorption, leading to fatty stools. Bacterial and viral infection: Causes watery diarrhea, not fatty stools. Sucrose intolerance: Rarely linked to fatty diarrhea; it causes osmotic diarrhea due to unabsorbed sugars. Copyright © 2026 Adda247 Q.63 The client admitted with angina is given a prescription for nitroglycerine. The client should be instructed to: A. Replenish his supply every 3 months B. Take one every 15 minutes if pain occurs C. Leave the medication in a brown bottle D. Crush the medication and take with water Answer: C Sol: Replenish his supply every 3 months: Important for efficacy but not the most critical instruction here. Take one every 15 minutes if pain occurs: Incorrect, as nitroglycerin is taken every 5 minutes for angina, up to 3 doses, not 15 minutes. Leave the medication in a brown bottle: Nitroglycerin is light-sensitive and should be stored in a brown bottle to maintain effectiveness. Crush the medication and take with water: Nitroglycerin tablets are meant to dissolve under the tongue, not to be crushed or swallowed."
+      "rationale": "Lactose intolerance: Leads to diarrhea but not typically fatty; it results in osmotic diarrhea due to undigested lactose. Celiac disease: Gluten intolerance damages intestinal villi, impairing fat absorption, leading to fatty stools. Bacterial and viral infection: Causes watery diarrhea, not fatty stools. Sucrose intolerance: Rarely linked to fatty diarrhea; it causes osmotic diarrhea due to unabsorbed sugars."
+    },
+    {
+      "qNo": 63,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "The client admitted with angina is given a prescription for nitroglycerine. The client should be instructed to:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Replenish his supply every 3 months"
+        },
+        {
+          "key": "B",
+          "text": "Take one every 15 minutes if pain occurs"
+        },
+        {
+          "key": "C",
+          "text": "Leave the medication in a brown bottle"
+        },
+        {
+          "key": "D",
+          "text": "Crush the medication and take with water"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Replenish his supply every 3 months: Important for efficacy but not the most critical instruction here. Take one every 15 minutes if pain occurs: Incorrect, as nitroglycerin is taken every 5 minutes for angina, up to 3 doses, not 15 minutes. Leave the medication in a brown bottle: Nitroglycerin is light-sensitive and should be stored in a brown bottle to maintain effectiveness. Crush the medication and take with water: Nitroglycerin tablets are meant to dissolve under the tongue, not to be crushed or swallowed."
     },
     {
       "qNo": 64,
@@ -1571,7 +1746,7 @@
         },
         {
           "key": "B",
-          "text": "The mask is placed under the chin, making it ineffective. Copyright © 2026 Adda247"
+          "text": "The mask is placed under the chin, making it ineffective."
         },
         {
           "key": "C",
@@ -1713,7 +1888,7 @@
     {
       "qNo": 75,
       "subject": "Child Health & Paediatric Nursing",
-      "question": "Failure to pass meconium within the first 24 hours after birth may indicate: Copyright © 2026 Adda247",
+      "question": "Failure to pass meconium within the first 24 hours after birth may indicate:",
       "options": [
         {
           "key": "A",
@@ -1829,7 +2004,7 @@
         },
         {
           "key": "D",
-          "text": "Nose to the tragus of the ear plus nose to the sternum Copyright © 2026 Adda247"
+          "text": "Nose to the tragus of the ear plus nose to the sternum"
         }
       ],
       "correctOption": "D",
@@ -1979,7 +2154,7 @@
         },
         {
           "key": "D",
-          "text": "Brain Copyright © 2026 Adda247"
+          "text": "Brain"
         }
       ],
       "correctOption": "D",
@@ -2129,7 +2304,7 @@
         },
         {
           "key": "D",
-          "text": "19 September Copyright © 2026 Adda247"
+          "text": "19 September"
         }
       ],
       "correctOption": "B",
@@ -2279,7 +2454,7 @@
         },
         {
           "key": "D",
-          "text": "Plant Copyright © 2026 Adda247"
+          "text": "Plant"
         }
       ],
       "correctOption": "B",
@@ -2358,7 +2533,7 @@
         }
       ],
       "correctOption": "C",
-      "rationale": "32: This does not follow the Fibonacci sequence rule. 38: This number does not match the pattern of the series. 34: The series follows the Fibonacci sequence, where each number is the sum of the two preceding numbers: 13 + 21 = 34. 45: This number does not follow the Fibonacci sequence. Copyright © 2026 Adda247"
+      "rationale": "32: This does not follow the Fibonacci sequence rule. 38: This number does not match the pattern of the series. 34: The series follows the Fibonacci sequence, where each number is the sum of the two preceding numbers: 13 + 21 = 34. 45: This number does not follow the Fibonacci sequence."
     }
   ]
 }

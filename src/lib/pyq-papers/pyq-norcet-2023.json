@@ -4,7 +4,7 @@
   "examName": "AIIMS NORCET",
   "year": 2023,
   "shift": "Stage 1 Prelims (17 Sep 2023 / NORCET 5)",
-  "totalMarks": 96,
+  "totalMarks": 100,
   "negativeMarking": "0.33 (1/3rd deduction per incorrect MCQ)",
   "durationMinutes": 90,
   "officialKeyNotification": "AIIMS New Delhi Official Master Response Key (2023)",
@@ -58,7 +58,32 @@
         }
       ],
       "correctOption": "B",
-      "rationale": "90 Seconds: Handwashing for this duration is not commonly practiced in standard hand hygiene protocols. Select Paid Status All Created From Date ID Test Type TITLE LANGUAGE SUBJECT Q.2 Maximum & minimum score of GCS are: A. 8-9 Norcet B. 8-12 Previous C. Year12-13 Paper English PYQ EXAM CATEGORY EXAMS MARKS TIME (MINS) UPDATED AT CREATED AT S3 PATH SF JSON V2 JSON NURSING NORCET 100 90 Thu, Jun 19, 2025, Wed, Jan 8, 2025, View View View 15:49:04 05:47:53 D. 3-15 (Held on ACTION edit content_copy 2023 Answer: D September 17) Sol: 8-9: These values do not represent the minimum and maximum scores of the Glasgow Coma Scale (GCS). 8-12: This range represents moderate brain injury according to the GCS, but it is not the total scoring range. 12-13: This range is part of mild brain injury in GCS but does not include the minimum or maximum scores. 3-15: The GCS ranges from 3 (indicating deep unconsciousness or coma) to 15 (indicating full consciousness). This range assesses eye-opening, verbal response, and motor response."
+      "rationale": "90 Seconds: Handwashing for this duration is not commonly practiced in standard hand hygiene protocols. Select Paid Status All Created From Date ID Test Type TITLE LANGUAGE SUBJECT"
+    },
+    {
+      "qNo": 2,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Maximum & minimum score of GCS are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "8-9 Norcet"
+        },
+        {
+          "key": "B",
+          "text": "8-12 Previous"
+        },
+        {
+          "key": "C",
+          "text": "Year12-13 Paper English PYQ EXAM CATEGORY EXAMS MARKS TIME (MINS) UPDATED AT CREATED AT S3 PATH SF JSON V2 JSON NURSING NORCET 100 90 Thu, Jun 19, 2025, Wed, Jan 8, 2025, View View View 15:49:04 05:47:53"
+        },
+        {
+          "key": "D",
+          "text": "3-15 (Held on ACTION edit content_copy 2023"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "8-9: These values do not represent the minimum and maximum scores of the Glasgow Coma Scale (GCS). 8-12: This range represents moderate brain injury according to the GCS, but it is not the total scoring range. 12-13: This range is part of mild brain injury in GCS but does not include the minimum or maximum scores. 3-15: The GCS ranges from 3 (indicating deep unconsciousness or coma) to 15 (indicating full consciousness). This range assesses eye-opening, verbal response, and motor response."
     },
     {
       "qNo": 3,
@@ -154,7 +179,7 @@
         },
         {
           "key": "D",
-          "text": "1:4 Copyright © 2026 Adda247 PUBLISH expand_circle_down POINTS 0 START TIME"
+          "text": "1:4 PUBLISH expand_circle_down POINTS 0 START TIME"
         }
       ],
       "correctOption": "C",
@@ -275,7 +300,7 @@
         },
         {
           "key": "C",
-          "text": "2 Years Copyright © 2026 Adda247"
+          "text": "2 Years"
         },
         {
           "key": "D",
@@ -425,7 +450,7 @@
         },
         {
           "key": "C",
-          "text": "45 Degree Copyright © 2026 Adda247"
+          "text": "45 Degree"
         },
         {
           "key": "D",
@@ -558,7 +583,7 @@
         }
       ],
       "correctOption": "B",
-      "rationale": "Humerus: The humerus is the longest bone in the upper limb but is not the longest bone in the entire human body. Copyright © 2026 Adda247 Femur: The femur, or thigh bone, is the longest bone in the human body. It extends from the hip to the knee and supports the body’s weight during standing and walking. Tibia: The tibia, or shinbone, is the second-longest bone in the body, located in the lower leg, but it is shorter than the femur. Radius: The radius is one of the two forearm bones and is much shorter than the femur."
+      "rationale": "Humerus: The humerus is the longest bone in the upper limb but is not the longest bone in the entire human body. Femur: The femur, or thigh bone, is the longest bone in the human body. It extends from the hip to the knee and supports the body’s weight during standing and walking. Tibia: The tibia, or shinbone, is the second-longest bone in the body, located in the lower leg, but it is shorter than the femur. Radius: The radius is one of the two forearm bones and is much shorter than the femur."
     },
     {
       "qNo": 23,
@@ -854,7 +879,7 @@
         },
         {
           "key": "D",
-          "text": "Counselling Copyright © 2026 Adda247"
+          "text": "Counselling"
         }
       ],
       "correctOption": "D",
@@ -1000,7 +1025,7 @@
         },
         {
           "key": "C",
-          "text": "Height Copyright © 2026 Adda247"
+          "text": "Height"
         },
         {
           "key": "D",
@@ -1112,7 +1137,7 @@
     },
     {
       "qNo": 45,
-      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "subject": "General Aptitude & Reasoning",
       "question": "Which fluid causes shifting of fluid from cell to plasma?",
       "options": [
         {
@@ -1133,7 +1158,32 @@
         }
       ],
       "correctOption": "D",
-      "rationale": "Hypotonic Solution: A hypotonic solution causes fluid to move from plasma into the cells, leading to cellular swelling. Isotonic Solution: An isotonic solution does not cause fluid shifting; it maintains equilibrium between the intracellular and extracellular compartments. Alkaline Solution: Alkalinity of a solution does not directly affect fluid movement between cells and plasma. Hypertonic Solution: A hypertonic solution has a higher solute concentration than the plasma. This causes fluid to shift from the cells to the plasma, resulting in cellular shrinkage and increased plasma volume. Copyright © 2026 Adda247 Q.46 Features of pre-eclampsia are all of the following except: A. Changes in vision B. Polyuria C. Proteinuria D. Hypertension Answer: B Sol: Changes in vision: Vision changes, such as blurriness or seeing spots, are common symptoms of pre-eclampsia due to the effects of high blood pressure on the optic nerves and brain. Polyuria: Pre-eclampsia is associated with reduced kidney function, leading to oliguria (decreased urine output), not polyuria (excessive urination). Proteinuria: The presence of protein in the urine is a hallmark sign of pre-eclampsia, indicating kidney damage. Hypertension: High blood pressure is one of the defining features of pre-eclampsia and is critical for its diagnosis."
+      "rationale": "Hypotonic Solution: A hypotonic solution causes fluid to move from plasma into the cells, leading to cellular swelling. Isotonic Solution: An isotonic solution does not cause fluid shifting; it maintains equilibrium between the intracellular and extracellular compartments. Alkaline Solution: Alkalinity of a solution does not directly affect fluid movement between cells and plasma. Hypertonic Solution: A hypertonic solution has a higher solute concentration than the plasma. This causes fluid to shift from the cells to the plasma, resulting in cellular shrinkage and increased plasma volume."
+    },
+    {
+      "qNo": 46,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "Features of pre-eclampsia are all of the following except:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Changes in vision"
+        },
+        {
+          "key": "B",
+          "text": "Polyuria"
+        },
+        {
+          "key": "C",
+          "text": "Proteinuria"
+        },
+        {
+          "key": "D",
+          "text": "Hypertension"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Changes in vision: Vision changes, such as blurriness or seeing spots, are common symptoms of pre-eclampsia due to the effects of high blood pressure on the optic nerves and brain. Polyuria: Pre-eclampsia is associated with reduced kidney function, leading to oliguria (decreased urine output), not polyuria (excessive urination). Proteinuria: The presence of protein in the urine is a hallmark sign of pre-eclampsia, indicating kidney damage. Hypertension: High blood pressure is one of the defining features of pre-eclampsia and is critical for its diagnosis."
     },
     {
       "qNo": 47,
@@ -1258,7 +1308,7 @@
         }
       ],
       "correctOption": "B",
-      "rationale": "Time elapsed between first apparent sign to directly or indirectly transmitting pathogenic infectious agents to another susceptible host: This describes the period of communicability, not the incubation Copyright © 2026 Adda247 period. Time elapsed between exposure of pathogen to first apparent sign and symptom: The incubation period refers to the time from initial exposure to the pathogen to the appearance of the first signs and symptoms of the disease. The time between when a person is exposed to a bacteria or virus and when a test can accurately detect organism: This describes the window period in diagnostic testing, not the incubation period. Both 1 and 2: This is incorrect because only option 2 accurately defines the incubation period."
+      "rationale": "Time elapsed between first apparent sign to directly or indirectly transmitting pathogenic infectious agents to another susceptible host: This describes the period of communicability, not the incubation period. Time elapsed between exposure of pathogen to first apparent sign and symptom: The incubation period refers to the time from initial exposure to the pathogen to the appearance of the first signs and symptoms of the disease. The time between when a person is exposed to a bacteria or virus and when a test can accurately detect organism: This describes the window period in diagnostic testing, not the incubation period. Both 1 and 2: This is incorrect because only option 2 accurately defines the incubation period."
     },
     {
       "qNo": 52,
@@ -1529,7 +1579,7 @@
         },
         {
           "key": "D",
-          "text": "Heimlich maneuver Copyright © 2026 Adda247"
+          "text": "Heimlich maneuver"
         }
       ],
       "correctOption": "A",
@@ -1633,7 +1683,32 @@
         }
       ],
       "correctOption": "C",
-      "rationale": "Amitriptyline: Amitriptyline is a tricyclic antidepressant. While therapeutic drug monitoring can be helpful in certain cases, it does not require frequent serum level checks for long-term use. Haloperidol: Haloperidol, an antipsychotic, can cause side effects like tardive dyskinesia and extrapyramidal symptoms but does not require frequent serum level monitoring. Lithium: Lithium, used for managing bipolar disorder, has a narrow therapeutic index. Frequent serum level monitoring is essential to prevent toxicity or underdosing. Therapeutic levels are typically maintained between 0.6–1.2 mEq/L, and levels above 1.5 mEq/L can be toxic. Lorazepam: Lorazepam, a benzodiazepine, does not require routine serum drug level monitoring, even with long-term use. Copyright © 2026 Adda247 Q.67 All of the following conditions use contraception, except: A. Mother with antihypertensive B. Lactating mother C. Unexplained vaginal bleeding D. Newly married Answer: C Sol: Mother with antihypertensive: Mothers on antihypertensive medications can use certain contraceptives, but caution is advised with estrogen-containing options, as they may increase blood pressure. Lactating mother: Contraceptives, such as progestin-only pills, IUDs, or barrier methods, are safe for lactating mothers. Unexplained vaginal bleeding: Contraceptive use is contraindicated in cases of unexplained vaginal bleeding until the cause is identified. This ensures serious underlying conditions, such as cancer or infections, are not overlooked. Newly married: Newly married individuals can use contraception based on their family planning preferences, with no contraindications."
+      "rationale": "Amitriptyline: Amitriptyline is a tricyclic antidepressant. While therapeutic drug monitoring can be helpful in certain cases, it does not require frequent serum level checks for long-term use. Haloperidol: Haloperidol, an antipsychotic, can cause side effects like tardive dyskinesia and extrapyramidal symptoms but does not require frequent serum level monitoring. Lithium: Lithium, used for managing bipolar disorder, has a narrow therapeutic index. Frequent serum level monitoring is essential to prevent toxicity or underdosing. Therapeutic levels are typically maintained between 0.6–1.2 mEq/L, and levels above 1.5 mEq/L can be toxic. Lorazepam: Lorazepam, a benzodiazepine, does not require routine serum drug level monitoring, even with long-term use."
+    },
+    {
+      "qNo": 67,
+      "subject": "Medical-Surgical Nursing",
+      "question": "of the following conditions use contraception, except:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mother with antihypertensive"
+        },
+        {
+          "key": "B",
+          "text": "Lactating mother"
+        },
+        {
+          "key": "C",
+          "text": "Unexplained vaginal bleeding"
+        },
+        {
+          "key": "D",
+          "text": "Newly married"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Mother with antihypertensive: Mothers on antihypertensive medications can use certain contraceptives, but caution is advised with estrogen-containing options, as they may increase blood pressure. Lactating mother: Contraceptives, such as progestin-only pills, IUDs, or barrier methods, are safe for lactating mothers. Unexplained vaginal bleeding: Contraceptive use is contraindicated in cases of unexplained vaginal bleeding until the cause is identified. This ensures serious underlying conditions, such as cancer or infections, are not overlooked. Newly married: Newly married individuals can use contraception based on their family planning preferences, with no contraindications."
     },
     {
       "qNo": 68,
@@ -1858,7 +1933,7 @@
         }
       ],
       "correctOption": "C",
-      "rationale": "Ligamentum arteriosum: This structure forms from the closure of the ductus arteriosus, not the foramen ovale. Ligamentum venosum: This structure forms from the closure of the ductus venosus, not the foramen ovale. Fossa ovalis: After the foramen ovale (a fetal opening between the right and left atria) closes, it becomes the fossa ovalis, a depression in the interatrial septum of the heart. Bregma: The bregma is the junction where the coronal and sagittal sutures meet on the skull, unrelated to the foramen ovale. Copyright © 2026 Adda247"
+      "rationale": "Ligamentum arteriosum: This structure forms from the closure of the ductus arteriosus, not the foramen ovale. Ligamentum venosum: This structure forms from the closure of the ductus venosus, not the foramen ovale. Fossa ovalis: After the foramen ovale (a fetal opening between the right and left atria) closes, it becomes the fossa ovalis, a depression in the interatrial septum of the heart. Bregma: The bregma is the junction where the coronal and sagittal sutures meet on the skull, unrelated to the foramen ovale."
     },
     {
       "qNo": 77,
@@ -2008,7 +2083,32 @@
         }
       ],
       "correctOption": "C",
-      "rationale": "Respiratory arrest: Respiratory arrest refers to the complete cessation of breathing, which is a life-threatening condition requiring immediate intervention. It is not defined by a specific duration like 20 seconds. Respiratory distress syndrome: This is a condition commonly seen in premature infants due to insufficient surfactant, leading to breathing difficulties, not cessation of breathing. Apnoea: Apnoea is the temporary cessation of breathing for at least 20 seconds or shorter periods if accompanied by bradycardia or oxygen desaturation. It is often observed in premature infants. Transient tachypnea: This refers to temporary rapid breathing in newborns, typically caused by delayed clearance of lung fluid, not cessation of breathing. Copyright © 2026 Adda247 Q.83 After closure, the ductus arteriosus is known as: A. Ligamentum arteriosum B. Ligamentum venosum C. Fossa ovalis D. Bregma Answer: A Sol: Ligamentum arteriosum: After birth, the ductus arteriosus, a fetal blood vessel connecting the pulmonary artery to the aorta, closes and becomes the ligamentum arteriosum, a fibrous remnant. Ligamentum venosum: This is the remnant of the ductus venosus, which connects the umbilical vein to the inferior vena cava in fetal circulation. Fossa ovalis: This forms after the closure of the foramen ovale, a fetal opening between the right and left atria. Bregma: The bregma is the junction of the sagittal and coronal sutures on the skull and is unrelated to the ductus arteriosus."
+      "rationale": "Respiratory arrest: Respiratory arrest refers to the complete cessation of breathing, which is a life-threatening condition requiring immediate intervention. It is not defined by a specific duration like 20 seconds. Respiratory distress syndrome: This is a condition commonly seen in premature infants due to insufficient surfactant, leading to breathing difficulties, not cessation of breathing. Apnoea: Apnoea is the temporary cessation of breathing for at least 20 seconds or shorter periods if accompanied by bradycardia or oxygen desaturation. It is often observed in premature infants. Transient tachypnea: This refers to temporary rapid breathing in newborns, typically caused by delayed clearance of lung fluid, not cessation of breathing."
+    },
+    {
+      "qNo": 83,
+      "subject": "Medical-Surgical Nursing",
+      "question": "After closure, the ductus arteriosus is known as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ligamentum arteriosum"
+        },
+        {
+          "key": "B",
+          "text": "Ligamentum venosum"
+        },
+        {
+          "key": "C",
+          "text": "Fossa ovalis"
+        },
+        {
+          "key": "D",
+          "text": "Bregma"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Ligamentum arteriosum: After birth, the ductus arteriosus, a fetal blood vessel connecting the pulmonary artery to the aorta, closes and becomes the ligamentum arteriosum, a fibrous remnant. Ligamentum venosum: This is the remnant of the ductus venosus, which connects the umbilical vein to the inferior vena cava in fetal circulation. Fossa ovalis: This forms after the closure of the foramen ovale, a fetal opening between the right and left atria. Bregma: The bregma is the junction of the sagittal and coronal sutures on the skull and is unrelated to the ductus arteriosus."
     },
     {
       "qNo": 84,
@@ -2279,7 +2379,7 @@
         },
         {
           "key": "D",
-          "text": "Morning sickness Copyright © 2026 Adda247"
+          "text": "Morning sickness"
         }
       ],
       "correctOption": "A",
@@ -2408,7 +2508,7 @@
         }
       ],
       "correctOption": "A",
-      "rationale": "Assessing urinary intake and output: Monitoring intake and output (I&O) is essential in clients with dehydration. It helps assess fluid balance and evaluate the effectiveness of interventions to correct fluid volume deficit. Obtaining the client's weight weekly at different times of the day: Daily weights, not weekly, are a better indicator of fluid balance in clients with dehydration. Weights should be taken at the same time each day for consistency. Monitoring arterial blood gas (ABG) results: ABG results are important in clients with acid-base imbalances but are not directly related to managing fluid volume deficit. Maintaining I.V. therapy at the keep-vein-open rate: A \"keep-vein-open\" (KVO) rate is insufficient for clients with dehydration. Aggressive IV fluid replacement is often needed to correct fluid deficits. Copyright © 2026 Adda247"
+      "rationale": "Assessing urinary intake and output: Monitoring intake and output (I&O) is essential in clients with dehydration. It helps assess fluid balance and evaluate the effectiveness of interventions to correct fluid volume deficit. Obtaining the client's weight weekly at different times of the day: Daily weights, not weekly, are a better indicator of fluid balance in clients with dehydration. Weights should be taken at the same time each day for consistency. Monitoring arterial blood gas (ABG) results: ABG results are important in clients with acid-base imbalances but are not directly related to managing fluid volume deficit. Maintaining I.V. therapy at the keep-vein-open rate: A \"keep-vein-open\" (KVO) rate is insufficient for clients with dehydration. Aggressive IV fluid replacement is often needed to correct fluid deficits."
     },
     {
       "qNo": 100,
@@ -2433,7 +2533,7 @@
         }
       ],
       "correctOption": "B",
-      "rationale": "Intense abdominal cramps: While abdominal cramps can occur in ulcerative colitis, they are not as prominent as diarrhea. Profuse diarrhea: Profuse diarrhea is the hallmark symptom of ulcerative colitis, often containing blood and mucus due to inflammation and ulceration of the colon's lining. Anal fissures: Anal fissures are not a primary feature of ulcerative colitis; they are more commonly associated with conditions like Crohn’s disease. Abdominal distention: Abdominal distention is less common in ulcerative colitis and may indicate complications like toxic megacolon. Copyright © 2026 Adda247"
+      "rationale": "Intense abdominal cramps: While abdominal cramps can occur in ulcerative colitis, they are not as prominent as diarrhea. Profuse diarrhea: Profuse diarrhea is the hallmark symptom of ulcerative colitis, often containing blood and mucus due to inflammation and ulceration of the colon's lining. Anal fissures: Anal fissures are not a primary feature of ulcerative colitis; they are more commonly associated with conditions like Crohn’s disease. Abdominal distention: Abdominal distention is less common in ulcerative colitis and may indicate complications like toxic megacolon."
     }
   ]
 }

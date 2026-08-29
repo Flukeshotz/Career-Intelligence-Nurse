@@ -4,7 +4,7 @@
   "examName": "AIIMS NORCET",
   "year": 2022,
   "shift": "Shift 1 (11 Sep 2022 / NORCET 2022)",
-  "totalMarks": 97,
+  "totalMarks": 100,
   "negativeMarking": "0.33 (1/3rd deduction per incorrect MCQ)",
   "durationMinutes": 90,
   "officialKeyNotification": "AIIMS New Delhi Official Master Response Key (2022)",
@@ -133,7 +133,7 @@
         }
       ],
       "correctOption": "C",
-      "rationale": "In obstetrics, the position is defined as the relationship of the fetal presenting part (e.g., occiput, sacrum, mentum) to the quadrants of the maternal pelvis. For example, \"left occipito-anterior (LOA)\" means the occiput of the fetus is pointing toward the left anterior quadrant of the maternal pelvis. According to Williams Obstetrics and Dutta’s Obstetrics, this definition clearly distinguishes “position” from other terms like lie, attitude, and station. Thus, the correct answer is position. Option-wise Explanation: (a) Attitude Attitude is the relation of fetal parts to one another, like flexion or extension of the head, limbs, and trunk. Example: complete flexion (fetal position) or extension. It does not describe the relation with maternal pelvis. (b) Lie Lie is the relationship between the long axis of the fetus and the long axis of the mother’s uterus. It can be longitudinal, transverse, or oblique. It is not about the presenting part vs pelvis. (c) Position Position = relationship of the presenting part (occiput, sacrum, mentum) to the maternal pelvic quadrants. Examples: LOA, ROA, LOP. This is the correct term in obstetrics. Copyright © 2026 Adda247 POINTS 0 START TIME (d) Station Station refers to the level of the presenting part in relation to the maternal ischial spines. Example: station 0 (at the spines), +1, +2 (below spines, descending), -1, -2 (above spines). It is not about relation to the pelvis quadrants."
+      "rationale": "In obstetrics, the position is defined as the relationship of the fetal presenting part (e.g., occiput, sacrum, mentum) to the quadrants of the maternal pelvis. For example, \"left occipito-anterior (LOA)\" means the occiput of the fetus is pointing toward the left anterior quadrant of the maternal pelvis. According to Williams Obstetrics and Dutta’s Obstetrics, this definition clearly distinguishes “position” from other terms like lie, attitude, and station. Thus, the correct answer is position. Option-wise Explanation: (a) Attitude Attitude is the relation of fetal parts to one another, like flexion or extension of the head, limbs, and trunk. Example: complete flexion (fetal position) or extension. It does not describe the relation with maternal pelvis. (b) Lie Lie is the relationship between the long axis of the fetus and the long axis of the mother’s uterus. It can be longitudinal, transverse, or oblique. It is not about the presenting part vs pelvis. (c) Position Position = relationship of the presenting part (occiput, sacrum, mentum) to the maternal pelvic quadrants. Examples: LOA, ROA, LOP. This is the correct term in obstetrics. POINTS 0 START TIME (d) Station Station refers to the level of the presenting part in relation to the maternal ischial spines. Example: station 0 (at the spines), +1, +2 (below spines, descending), -1, -2 (above spines). It is not about relation to the pelvis quadrants."
     },
     {
       "qNo": 5,
@@ -358,7 +358,32 @@
         }
       ],
       "correctOption": "A",
-      "rationale": "Yellow (22 G): The yellow IV cannula is smaller and typically used for pediatric patients or those requiring low-flow infusion, as it is gentle on smaller veins. Orange (14 G): The orange IV cannula is large and provides a high flow rate, making it ideal for trauma or emergency situations where rapid fluid or blood transfusion is necessary. Grey (16 G): The grey IV cannula offers a high flow rate, commonly used in adults for surgeries, trauma cases, or when a large volume of fluids needs to be infused quickly. Green (18 G): The green IV cannula is used for moderate to high flow rates, often used in surgical settings or when administering medications that require faster infusion rates. Copyright © 2026 Adda247 Q.14 Identify the size of the IV cannula in the image? A. 14 G B. 16 G C. 18 G D. 20 G Answer: A Sol: 14 G: The 14 G IV cannula is the largest size available and is typically used in emergency or trauma situations where high-flow fluids, blood, or medications need to be infused rapidly. It's suitable for patients with large veins or in need of high volume resuscitation. 16 G: The 16 G IV cannula is slightly smaller than the 14 G but still allows for a high flow rate. It is commonly used in surgical settings, trauma care, or for blood transfusions in adults. It is versatile and can be used for a variety of medical situations requiring moderate to high flow. 18 G: The 18 G IV cannula is commonly used for regular infusions, such as intravenous fluids and medications. It offers a good flow rate without being as large and invasive as the 14 G or 16 G. It is often used for adult patients requiring moderate fluid administration. 20 G: The 20 G IV cannula is smaller and is used for patients who require less fluid flow or for pediatric patients with smaller veins. It is commonly used for routine drug administration, fluid maintenance, and in cases where high flow is not necessary. It is a standard size for general hospital use."
+      "rationale": "Yellow (22 G): The yellow IV cannula is smaller and typically used for pediatric patients or those requiring low-flow infusion, as it is gentle on smaller veins. Orange (14 G): The orange IV cannula is large and provides a high flow rate, making it ideal for trauma or emergency situations where rapid fluid or blood transfusion is necessary. Grey (16 G): The grey IV cannula offers a high flow rate, commonly used in adults for surgeries, trauma cases, or when a large volume of fluids needs to be infused quickly. Green (18 G): The green IV cannula is used for moderate to high flow rates, often used in surgical settings or when administering medications that require faster infusion rates."
+    },
+    {
+      "qNo": 14,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Identify the size of the IV cannula in the image?",
+      "options": [
+        {
+          "key": "A",
+          "text": "14 G"
+        },
+        {
+          "key": "B",
+          "text": "16 G"
+        },
+        {
+          "key": "C",
+          "text": "18 G"
+        },
+        {
+          "key": "D",
+          "text": "20 G"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "14 G: The 14 G IV cannula is the largest size available and is typically used in emergency or trauma situations where high-flow fluids, blood, or medications need to be infused rapidly. It's suitable for patients with large veins or in need of high volume resuscitation. 16 G: The 16 G IV cannula is slightly smaller than the 14 G but still allows for a high flow rate. It is commonly used in surgical settings, trauma care, or for blood transfusions in adults. It is versatile and can be used for a variety of medical situations requiring moderate to high flow. 18 G: The 18 G IV cannula is commonly used for regular infusions, such as intravenous fluids and medications. It offers a good flow rate without being as large and invasive as the 14 G or 16 G. It is often used for adult patients requiring moderate fluid administration. 20 G: The 20 G IV cannula is smaller and is used for patients who require less fluid flow or for pediatric patients with smaller veins. It is commonly used for routine drug administration, fluid maintenance, and in cases where high flow is not necessary. It is a standard size for general hospital use."
     },
     {
       "qNo": 15,
@@ -454,7 +479,7 @@
         },
         {
           "key": "D",
-          "text": "Increase secretion Copyright © 2026 Adda247"
+          "text": "Increase secretion"
         }
       ],
       "correctOption": "A",
@@ -583,7 +608,7 @@
         }
       ],
       "correctOption": "C",
-      "rationale": "Venus: Venus is the 2nd planet from the Sun, not the 3rd. Mars: Mars is the 4th planet from the Sun, located after Earth. Copyright © 2026 Adda247 Earth: Earth is the 3rd planet from the Sun, positioned between Venus and Mars. Jupiter: Jupiter is the 5th planet from the Sun, much farther than Earth."
+      "rationale": "Venus: Venus is the 2nd planet from the Sun, not the 3rd. Mars: Mars is the 4th planet from the Sun, located after Earth. Earth: Earth is the 3rd planet from the Sun, positioned between Venus and Mars. Jupiter: Jupiter is the 5th planet from the Sun, much farther than Earth."
     },
     {
       "qNo": 24,
@@ -833,7 +858,7 @@
         }
       ],
       "correctOption": "A",
-      "rationale": "Ram Nath Kovind: He is the current President of India, having taken office on July 25, 2017. Copyright © 2026 Adda247 Narendra Modi: He is the Prime Minister of India, not the President. Rajnath Singh: He is the Home Minister of India, not the President. Amit Shah: He is the Union Home Minister, not the President."
+      "rationale": "Ram Nath Kovind: He is the current President of India, having taken office on July 25, 2017. Narendra Modi: He is the Prime Minister of India, not the President. Rajnath Singh: He is the Home Minister of India, not the President. Amit Shah: He is the Union Home Minister, not the President."
     },
     {
       "qNo": 34,
@@ -1083,7 +1108,7 @@
         }
       ],
       "correctOption": "B",
-      "rationale": "It is not produced by vertebrates: IgM is produced by vertebrates and is a critical component of the immune system, particularly in the primary immune response. It forms the initial immune response: IgM is the first antibody produced during the initial immune response to an infection. It plays a crucial role in early defense mechanisms by neutralizing pathogens Copyright © 2026 Adda247 and activating the complement system. It is not an isotype of antibody: IgM is one of the five major isotypes of antibodies (IgG, IgA, IgM, IgE, IgD) and is essential for immune function. It is the smallest antibody: This is incorrect. IgM is the largest antibody in terms of molecular size. It exists as a pentamer in its secreted form, which makes it significantly larger than other antibody isotypes like IgG."
+      "rationale": "It is not produced by vertebrates: IgM is produced by vertebrates and is a critical component of the immune system, particularly in the primary immune response. It forms the initial immune response: IgM is the first antibody produced during the initial immune response to an infection. It plays a crucial role in early defense mechanisms by neutralizing pathogens and activating the complement system. It is not an isotype of antibody: IgM is one of the five major isotypes of antibodies (IgG, IgA, IgM, IgE, IgD) and is essential for immune function. It is the smallest antibody: This is incorrect. IgM is the largest antibody in terms of molecular size. It exists as a pentamer in its secreted form, which makes it significantly larger than other antibody isotypes like IgG."
     },
     {
       "qNo": 44,
@@ -1229,7 +1254,7 @@
         },
         {
           "key": "D",
-          "text": "Shallow T wave Copyright © 2026 Adda247"
+          "text": "Shallow T wave"
         }
       ],
       "correctOption": "B",
@@ -1312,7 +1337,7 @@
     },
     {
       "qNo": 53,
-      "subject": "Nursing Foundations & Clinical Procedures",
+      "subject": "Medical-Surgical Nursing",
       "question": "Folic acid richest sources?",
       "options": [
         {
@@ -1333,7 +1358,32 @@
         }
       ],
       "correctOption": "C",
-      "rationale": "Milk: Milk contains small amounts of folic acid but is not considered a rich source of this nutrient. It provides other essential nutrients like calcium and vitamin D. Meat: Meat contains minimal folic acid. It is a good source of protein, iron, and vitamin B12, but not folate. Green leafy vegetables: Green leafy vegetables, such as spinach, kale, and broccoli, are among the richest natural sources of folic acid. Folic acid is essential for DNA synthesis and cell division, particularly important during pregnancy and for preventing anemia. Banana: Bananas contain some folic acid but in smaller quantities compared to green leafy vegetables. They are more known for their potassium content. Q.54 A patient is very restless while receiving IV fluids to treat dehydration. The IV catheter has slipped out of the vein and fluid is delivered to the surrounding tissues under the skin, causing swelling. Which term best describes this occurrence? A. Infection B. Fluid overload C. Infiltration D. Extravasation Answer: C Copyright © 2026 Adda247 Sol: Infection: Infection refers to the invasion of microorganisms at the IV site, which may result in redness, heat, and pus. This does not describe the condition where IV fluids leak into surrounding tissues. Fluid overload: Fluid overload occurs when excessive IV fluids are infused into the body, leading to symptoms like shortness of breath, hypertension, or edema, not localized swelling at the IV site. Infiltration: Infiltration occurs when the IV catheter slips out of the vein and IV fluids leak into the surrounding tissues. This results in swelling, coolness, and discomfort at the site, matching the scenario described. Extravasation: Extravasation is similar to infiltration but involves the leakage of vesicant or irritating medications into the tissue, which can cause severe damage. The scenario involves fluids, not vesicant medications, so this term is incorrect."
+      "rationale": "Milk: Milk contains small amounts of folic acid but is not considered a rich source of this nutrient. It provides other essential nutrients like calcium and vitamin D. Meat: Meat contains minimal folic acid. It is a good source of protein, iron, and vitamin B12, but not folate. Green leafy vegetables: Green leafy vegetables, such as spinach, kale, and broccoli, are among the richest natural sources of folic acid. Folic acid is essential for DNA synthesis and cell division, particularly important during pregnancy and for preventing anemia. Banana: Bananas contain some folic acid but in smaller quantities compared to green leafy vegetables. They are more known for their potassium content."
+    },
+    {
+      "qNo": 54,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "A patient is very restless while receiving IV fluids to treat dehydration. The IV catheter has slipped out of the vein and fluid is delivered to the surrounding tissues under the skin, causing swelling. Which term best describes this occurrence?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Infection"
+        },
+        {
+          "key": "B",
+          "text": "Fluid overload"
+        },
+        {
+          "key": "C",
+          "text": "Infiltration"
+        },
+        {
+          "key": "D",
+          "text": "Extravasation"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Infection: Infection refers to the invasion of microorganisms at the IV site, which may result in redness, heat, and pus. This does not describe the condition where IV fluids leak into surrounding tissues. Fluid overload: Fluid overload occurs when excessive IV fluids are infused into the body, leading to symptoms like shortness of breath, hypertension, or edema, not localized swelling at the IV site. Infiltration: Infiltration occurs when the IV catheter slips out of the vein and IV fluids leak into the surrounding tissues. This results in swelling, coolness, and discomfort at the site, matching the scenario described. Extravasation: Extravasation is similar to infiltration but involves the leakage of vesicant or irritating medications into the tissue, which can cause severe damage. The scenario involves fluids, not vesicant medications, so this term is incorrect."
     },
     {
       "qNo": 55,
@@ -1458,7 +1508,7 @@
         }
       ],
       "correctOption": "D",
-      "rationale": "The nominal scale is used for categorizing data into distinct, non-overlapping categories without any order or ranking. While the mode (most frequent category) is typically used for nominal data, the median can be applicable in certain situations for analyzing nominal scale data, as it involves central tendency, but it's not commonly used for nominal data. Explanation of Options: (a) Ratio: The ratio scale involves numerical values with a true zero point and is used for operations like division, which does not apply to nominal data. (b) Range: Range measures the spread of continuous data and is not applicable to nominal scales, as nominal data lacks inherent numerical order. Copyright © 2026 Adda247 (c) Mean: The mean is used for interval or ratio data with numerical values, not for nominal data, which cannot be averaged. (d) Median: The median represents the middle value in ordered data, but it's typically used more for ordinal, interval, or ratio scales. However, it's closer to central tendency measures for nominal scale data when required."
+      "rationale": "The nominal scale is used for categorizing data into distinct, non-overlapping categories without any order or ranking. While the mode (most frequent category) is typically used for nominal data, the median can be applicable in certain situations for analyzing nominal scale data, as it involves central tendency, but it's not commonly used for nominal data. Explanation of Options: (a) Ratio: The ratio scale involves numerical values with a true zero point and is used for operations like division, which does not apply to nominal data. (b) Range: Range measures the spread of continuous data and is not applicable to nominal scales, as nominal data lacks inherent numerical order. (c) Mean: The mean is used for interval or ratio data with numerical values, not for nominal data, which cannot be averaged. (d) Median: The median represents the middle value in ordered data, but it's typically used more for ordinal, interval, or ratio scales. However, it's closer to central tendency measures for nominal scale data when required."
     },
     {
       "qNo": 60,
@@ -1588,7 +1638,7 @@
     {
       "qNo": 65,
       "subject": "Obstetrics & Gynaecological Nursing (OBG)",
-      "question": "A pregnant client asks the nurse in the clinic when she will be able to begin feel the fetus move. The nurse responds by telling the mother that fetal movements will be noted between which weeks of gestation? Copyright © 2026 Adda247",
+      "question": "A pregnant client asks the nurse in the clinic when she will be able to begin feel the fetus move. The nurse responds by telling the mother that fetal movements will be noted between which weeks of gestation?",
       "options": [
         {
           "key": "A",
@@ -1721,7 +1771,7 @@
         },
         {
           "key": "B",
-          "text": "Pap smear Copyright © 2026 Adda247"
+          "text": "Pap smear"
         },
         {
           "key": "C",
@@ -1737,7 +1787,7 @@
     },
     {
       "qNo": 71,
-      "subject": "Pharmacology & Drug Calculations",
+      "subject": "Medical-Surgical Nursing",
       "question": "Not recognize word affect Wernicke's area then damage which lobe of brain?",
       "options": [
         {
@@ -1758,7 +1808,32 @@
         }
       ],
       "correctOption": "B",
-      "rationale": "Parietal lobe: The parietal lobe is involved in processing sensory information, such as touch and spatial awareness. It is not associated with language comprehension or Wernicke's area. Temporal lobe: Wernicke's area is located in the temporal lobe of the brain, specifically in the dominant hemisphere (left in most people). Damage to this area results in difficulty recognizing and comprehending words, a condition known as Wernicke's aphasia. Frontal lobe: The frontal lobe is responsible for higher cognitive functions, motor control, and speech production (Broca's area). It is not involved in word recognition. Occipital lobe: The occipital lobe primarily handles visual processing and is unrelated to language or word recognition. Q.72 You are preparing to give potassium chloride 30 mEq in 1000 ml of normal saline over 10 hours. The medication label reads 40 mEq per 20 ml. How many milliliters of potassium chloride do you need to administer the correct dose? A. 10 ml B. 15 ml C. 20 ml D. 50 ml Answer: B Sol: 10 ml: 10 ml would only provide 20 mEq (10 × 2 mEq/ml), which is insufficient. 15 ml: 15 ml delivers exactly 30 mEq (15 × 2 mEq/ml). 20 ml: 20 ml delivers 40 mEq (20 × 2 mEq/ml), which exceeds the required dose. 50 ml: 50 ml delivers 100 mEq (50 × 2 mEq/ml), which is far above the required dose."
+      "rationale": "Parietal lobe: The parietal lobe is involved in processing sensory information, such as touch and spatial awareness. It is not associated with language comprehension or Wernicke's area. Temporal lobe: Wernicke's area is located in the temporal lobe of the brain, specifically in the dominant hemisphere (left in most people). Damage to this area results in difficulty recognizing and comprehending words, a condition known as Wernicke's aphasia. Frontal lobe: The frontal lobe is responsible for higher cognitive functions, motor control, and speech production (Broca's area). It is not involved in word recognition. Occipital lobe: The occipital lobe primarily handles visual processing and is unrelated to language or word recognition."
+    },
+    {
+      "qNo": 72,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "You are preparing to give potassium chloride 30 mEq in 1000 ml of normal saline over 10 hours. The medication label reads 40 mEq per 20 ml. How many milliliters of potassium chloride do you need to administer the correct dose?",
+      "options": [
+        {
+          "key": "A",
+          "text": "10 ml"
+        },
+        {
+          "key": "B",
+          "text": "15 ml"
+        },
+        {
+          "key": "C",
+          "text": "20 ml"
+        },
+        {
+          "key": "D",
+          "text": "50 ml"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "10 ml: 10 ml would only provide 20 mEq (10 × 2 mEq/ml), which is insufficient. 15 ml: 15 ml delivers exactly 30 mEq (15 × 2 mEq/ml). 20 ml: 20 ml delivers 40 mEq (20 × 2 mEq/ml), which exceeds the required dose. 50 ml: 50 ml delivers 100 mEq (50 × 2 mEq/ml), which is far above the required dose."
     },
     {
       "qNo": 73,
@@ -1833,7 +1908,7 @@
         }
       ],
       "correctOption": "B",
-      "rationale": "Jejunostomy tube: This tube is used for feeding directly into the jejunum, not for gastric compression. Sengstaken Blakemore tube:This tube is designed for gastric compression, typically used to control bleeding from esophageal varices by applying pressure. Levin tube: This is a single-lumen nasogastric tube used for gastric suctioning or feeding but not for compression. Salem sump tube: This is a double-lumen nasogastric tube used for suctioning and decompression but not specifically for gastric compression. Copyright © 2026 Adda247"
+      "rationale": "Jejunostomy tube: This tube is used for feeding directly into the jejunum, not for gastric compression. Sengstaken Blakemore tube:This tube is designed for gastric compression, typically used to control bleeding from esophageal varices by applying pressure. Levin tube: This is a single-lumen nasogastric tube used for gastric suctioning or feeding but not for compression. Salem sump tube: This is a double-lumen nasogastric tube used for suctioning and decompression but not specifically for gastric compression."
     },
     {
       "qNo": 76,
@@ -1983,7 +2058,7 @@
         }
       ],
       "correctOption": "C",
-      "rationale": "Rickettsia prowazekii: Rickettsia prowazekii is the causative agent of epidemic typhus, not Lyme disease. It is transmitted by lice and affects the skin, nervous system, and organs. Alphavirus: Alphavirus refers to a group of viruses that can cause diseases like chikungunya or Eastern equine encephalitis. These viruses are not responsible for Lyme disease, which is caused by a bacterium. Copyright © 2026 Adda247 Borrelia burgdorferi: Borrelia burgdorferi is the bacterium responsible for Lyme disease. Lyme disease is transmitted through the bite of an infected black-legged tick (Ixodes species). The symptoms include fever, fatigue, and a characteristic skin rash known as erythema migrans. Trypanosoma brucei gambiense: Trypanosoma brucei gambiense is the causative agent of sleeping sickness (African trypanosomiasis), which is transmitted by the tsetse fly, not related to Lyme disease."
+      "rationale": "Rickettsia prowazekii: Rickettsia prowazekii is the causative agent of epidemic typhus, not Lyme disease. It is transmitted by lice and affects the skin, nervous system, and organs. Alphavirus: Alphavirus refers to a group of viruses that can cause diseases like chikungunya or Eastern equine encephalitis. These viruses are not responsible for Lyme disease, which is caused by a bacterium. Borrelia burgdorferi: Borrelia burgdorferi is the bacterium responsible for Lyme disease. Lyme disease is transmitted through the bite of an infected black-legged tick (Ixodes species). The symptoms include fever, fatigue, and a characteristic skin rash known as erythema migrans. Trypanosoma brucei gambiense: Trypanosoma brucei gambiense is the causative agent of sleeping sickness (African trypanosomiasis), which is transmitted by the tsetse fly, not related to Lyme disease."
     },
     {
       "qNo": 82,
@@ -2108,7 +2183,7 @@
         }
       ],
       "correctOption": "A",
-      "rationale": "Side lying position with unaffected side down: After thoracentesis, the patient should be placed in a side-lying position with the unaffected side down. This helps prevent any pressure on the recently punctured site and allows the lung to expand properly. It also promotes proper drainage and minimizes the risk of complications. Side lying position with affected side down: Placing the affected side down is not recommended as it could put pressure on the puncture site and potentially cause complications, such as air or fluid accumulation. Copyright © 2026 Adda247 Prone position: The prone position is not generally recommended after thoracentesis as it may not provide optimal drainage or minimize the risk of complications for the punctured lung. Supine position: The supine position may not be ideal after thoracentesis because it could lead to fluid accumulation in the lungs and may not provide the same benefits for drainage or preventing complications as the side-lying position with the unaffected side down."
+      "rationale": "Side lying position with unaffected side down: After thoracentesis, the patient should be placed in a side-lying position with the unaffected side down. This helps prevent any pressure on the recently punctured site and allows the lung to expand properly. It also promotes proper drainage and minimizes the risk of complications. Side lying position with affected side down: Placing the affected side down is not recommended as it could put pressure on the puncture site and potentially cause complications, such as air or fluid accumulation. Prone position: The prone position is not generally recommended after thoracentesis as it may not provide optimal drainage or minimize the risk of complications for the punctured lung. Supine position: The supine position may not be ideal after thoracentesis because it could lead to fluid accumulation in the lungs and may not provide the same benefits for drainage or preventing complications as the side-lying position with the unaffected side down."
     },
     {
       "qNo": 87,
@@ -2238,7 +2313,7 @@
     {
       "qNo": 92,
       "subject": "Medical-Surgical Nursing",
-      "question": "Copyright © 2026 Adda247 What is the immediate first aid management of chemical accident foreign body in the cornea area?",
+      "question": "What is the immediate first aid management of chemical accident foreign body in the cornea area?",
       "options": [
         {
           "key": "A",
@@ -2458,7 +2533,7 @@
         }
       ],
       "correctOption": "D",
-      "rationale": "Correct Answer: (d) Grief is the internal, personal, and emotional response experienced after the loss of a loved one. It includes feelings such as sadness, anger, guilt, denial, loneliness, or even relief. Grief is subjective, meaning each person experiences and expresses it differently based on personality, relationship with the deceased, culture, and coping mechanisms. To understand it clearly, it is important to differentiate related terms: Bereavement refers to the state of having lost someone due to death. It describes the condition of the survivor. Mourning is the external expression of grief, influenced by cultural, religious, and social customs (e.g., wearing black clothes, rituals, prayer ceremonies). Grief, therefore, is the inner emotional experience, while mourning is its outward expression. Hence, the subjective response experienced by loved ones after death is called grief. Copyright © 2026 Adda247"
+      "rationale": "Correct Answer: (d) Grief is the internal, personal, and emotional response experienced after the loss of a loved one. It includes feelings such as sadness, anger, guilt, denial, loneliness, or even relief. Grief is subjective, meaning each person experiences and expresses it differently based on personality, relationship with the deceased, culture, and coping mechanisms. To understand it clearly, it is important to differentiate related terms: Bereavement refers to the state of having lost someone due to death. It describes the condition of the survivor. Mourning is the external expression of grief, influenced by cultural, religious, and social customs (e.g., wearing black clothes, rituals, prayer ceremonies). Grief, therefore, is the inner emotional experience, while mourning is its outward expression. Hence, the subjective response experienced by loved ones after death is called grief."
     }
   ]
 }
