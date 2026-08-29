@@ -8,7 +8,6 @@ import {
   ArrowLeft,
   ExternalLink,
   Users,
-  AlertCircle,
   Building2,
   BookOpen,
   CheckCircle2,
@@ -18,7 +17,7 @@ import {
   Clock,
   Sparkles,
   ChevronRight,
-  Download
+  Share2
 } from 'lucide-react';
 import { getExamBySlug, getRequirementsForOpportunity, INITIAL_EXAMS } from '@/lib/data';
 import { generateExamJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
@@ -27,6 +26,7 @@ import { TrustPanel } from '@/components/opportunity/TrustPanel';
 import { ShareButtons } from '@/components/opportunity/ShareButtons';
 import { TrackButton } from '@/components/opportunity/TrackButton';
 import { PyqCard } from '@/components/opportunity/PyqCard';
+import { ExamDetailAccordion } from '@/components/opportunity/ExamDetailAccordion';
 import MayaCard from '@/components/maya/MayaCard';
 import { DETAILED_EXAM_INTELLIGENCE } from '@/lib/exam-syllabus-data';
 import { getPapersForExam, EXAM_PAPERS } from '@/lib/pyq-mock-data';
@@ -84,7 +84,7 @@ export default async function ExamDetailPage({
   const examDateFormatted = exam.examDate
     ? new Date(exam.examDate).toLocaleDateString('en-IN', {
         day: 'numeric',
-        month: 'long',
+        month: 'short',
         year: 'numeric',
       })
     : 'To be announced';
@@ -92,13 +92,13 @@ export default async function ExamDetailPage({
   const deadlineFormatted = exam.applicationDeadline
     ? new Date(exam.applicationDeadline).toLocaleDateString('en-IN', {
         day: 'numeric',
-        month: 'long',
+        month: 'short',
         year: 'numeric',
       })
     : 'Closed / In Exam Phase';
 
   return (
-    <div className="wide-container mobile-safe-bottom" style={{ paddingTop: '20px' }}>
+    <div className="wide-container mobile-safe-bottom" style={{ paddingTop: '16px', maxWidth: '860px', margin: '0 auto', paddingBottom: '90px' }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(examJsonLd) }}
@@ -108,53 +108,65 @@ export default async function ExamDetailPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }}
       />
 
-      {/* Breadcrumb + Back Navigation */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
+      {/* ── TOP NAV BAR ── */}
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
         <Link
           href="/nursing/exams"
           style={{
             display: 'inline-flex',
             alignItems: 'center',
-            gap: '6px',
+            gap: '5px',
             color: 'var(--sc-navy-700)',
-            fontSize: '0.86rem',
+            fontSize: '0.82rem',
             fontWeight: 700,
             textDecoration: 'none',
           }}
         >
-          <ArrowLeft size={16} />
-          <span>Back to All 50 Exams</span>
+          <ArrowLeft size={15} />
+          <span>All 50 Exams</span>
         </Link>
 
-        <TrackButton
-          opportunityId={exam.id}
-          opportunityType="exam"
-          title={exam.name}
-          employerOrOrg={exam.organisation}
-          slug={exam.slug}
-          nextStageName="Stage 1 CBT"
-          nextStageDate={exam.examDate}
-        />
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <ShareButtons
+            opportunityId={exam.id}
+            opportunityType="exams"
+            title={exam.name}
+            employerOrOrg={exam.organisation}
+            deadline={exam.applicationDeadline}
+            slug={exam.slug}
+            profession="nursing"
+          />
+
+          <TrackButton
+            opportunityId={exam.id}
+            opportunityType="exam"
+            title={exam.name}
+            employerOrOrg={exam.organisation}
+            slug={exam.slug}
+            nextStageName="Stage 1 CBT"
+            nextStageDate={exam.examDate}
+          />
+        </div>
       </div>
 
-      {/* ── 1. HERO HEADER ── */}
+      {/* ── 1. CLEAN HERO CARD ── */}
       <div
         style={{
           background: 'linear-gradient(135deg, var(--sc-navy-900) 0%, var(--sc-navy-700) 100%)',
           color: 'var(--sc-white)',
-          borderRadius: 'var(--radius-xl)',
-          padding: '24px',
-          marginBottom: '20px',
-          boxShadow: 'var(--shadow-lifted)',
+          borderRadius: '16px',
+          padding: '20px',
+          marginBottom: '16px',
+          boxShadow: '0 4px 14px rgba(8, 50, 98, 0.15)',
         }}
       >
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '8px', marginBottom: '10px' }}>
           <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
-            <span style={{ fontSize: '0.72rem', fontWeight: 800, background: 'rgba(255,255,255,0.15)', color: '#ffffff', padding: '3px 9px', borderRadius: '4px', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-              🎯 {detailed?.officialCadre || 'National Examination'}
+            <span style={{ fontSize: '0.70rem', fontWeight: 800, background: 'rgba(255,255,255,0.15)', color: '#ffffff', padding: '3px 8px', borderRadius: '4px', textTransform: 'uppercase', letterSpacing: '0.03em' }}>
+              🎯 {detailed?.officialCadre || 'National Exam'}
             </span>
-            <span style={{ fontSize: '0.72rem', fontWeight: 800, background: 'rgba(1,144,53,0.3)', color: '#86efac', padding: '3px 9px', borderRadius: '4px' }}>
-              ✓ Official Blueprint Verified
+            <span style={{ fontSize: '0.70rem', fontWeight: 800, background: 'rgba(1,144,53,0.3)', color: '#86efac', padding: '3px 8px', borderRadius: '4px' }}>
+              ✓ Verified Blueprint
             </span>
           </div>
 
@@ -172,7 +184,7 @@ export default async function ExamDetailPage({
                 padding: '6px 12px',
                 borderRadius: '6px',
                 fontWeight: 800,
-                fontSize: '0.78rem',
+                fontSize: '0.76rem',
                 textDecoration: 'none',
               }}
             >
@@ -182,55 +194,102 @@ export default async function ExamDetailPage({
           )}
         </div>
 
-        <h1 style={{ fontSize: '1.5rem', fontWeight: 800, lineHeight: 1.3, marginBottom: '6px' }}>
+        <h1 style={{ fontSize: '1.35rem', fontWeight: 800, lineHeight: 1.3, marginBottom: '4px' }}>
           {exam.name}
         </h1>
 
-        <div style={{ fontSize: '0.90rem', color: '#cbd5e1', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '16px' }}>
-          <Building2 size={16} color="#94a3b8" />
+        <div style={{ fontSize: '0.84rem', color: '#cbd5e1', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '14px' }}>
+          <Building2 size={15} color="#94a3b8" />
           <span>{exam.organisation}</span>
         </div>
 
-        {/* 4 Glance Chips */}
+        {/* 4 Clean Stats Chips */}
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(115px, 1fr))',
             gap: '8px',
-            paddingTop: '14px',
-            borderTop: '1px solid rgba(255,255,255,0.15)',
+            paddingTop: '12px',
+            borderTop: '1px solid rgba(255,255,255,0.12)',
           }}
         >
-          <div style={{ background: 'rgba(255,255,255,0.08)', padding: '10px 12px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '0.65rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 700 }}>Total Vacancies</div>
-            <div style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--sc-white)' }}>
-              {exam.vacancies ? `${exam.vacancies.toLocaleString('en-IN')} Posts` : 'Official Notice'}
+          <div style={{ background: 'rgba(255,255,255,0.08)', padding: '8px 10px', borderRadius: '8px' }}>
+            <div style={{ fontSize: '0.62rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 700 }}>Vacancies</div>
+            <div style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--sc-white)' }}>
+              {exam.vacancies ? `${exam.vacancies.toLocaleString('en-IN')} Posts` : 'See Notice'}
             </div>
           </div>
 
-          <div style={{ background: 'rgba(255,255,255,0.08)', padding: '10px 12px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '0.65rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 700 }}>Monthly Pay</div>
-            <div style={{ fontSize: '1.05rem', fontWeight: 800, color: '#f7d78e' }}>
-              {detailed?.grossSalaryMonthly ? detailed.grossSalaryMonthly.split('(')[0] : 'Pay Level 7 (~₹80k)'}
+          <div style={{ background: 'rgba(255,255,255,0.08)', padding: '8px 10px', borderRadius: '8px' }}>
+            <div style={{ fontSize: '0.62rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 700 }}>Monthly Pay</div>
+            <div style={{ fontSize: '0.98rem', fontWeight: 800, color: '#f7d78e' }}>
+              {detailed?.grossSalaryMonthly ? detailed.grossSalaryMonthly.split('(')[0] : 'Level 7 (~₹80k)'}
             </div>
           </div>
 
-          <div style={{ background: 'rgba(255,255,255,0.08)', padding: '10px 12px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '0.65rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 700 }}>Exam Date</div>
-            <div style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--sc-white)' }}>{examDateFormatted}</div>
+          <div style={{ background: 'rgba(255,255,255,0.08)', padding: '8px 10px', borderRadius: '8px' }}>
+            <div style={{ fontSize: '0.62rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 700 }}>Exam Date</div>
+            <div style={{ fontSize: '0.94rem', fontWeight: 800, color: 'var(--sc-white)' }}>{examDateFormatted}</div>
           </div>
 
-          <div style={{ background: 'rgba(255,255,255,0.08)', padding: '10px 12px', borderRadius: '8px' }}>
-            <div style={{ fontSize: '0.65rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 700 }}>Registration</div>
-            <div style={{ fontSize: '1.00rem', fontWeight: 800, color: '#fca5a5' }}>{deadlineFormatted}</div>
+          <div style={{ background: 'rgba(255,255,255,0.08)', padding: '8px 10px', borderRadius: '8px' }}>
+            <div style={{ fontSize: '0.62rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 700 }}>Registration</div>
+            <div style={{ fontSize: '0.94rem', fontWeight: 800, color: '#fca5a5' }}>{deadlineFormatted}</div>
           </div>
         </div>
       </div>
 
-      {/* ── 2. CONTEXTUAL MAYA INTELLIGENCE CARD ── */}
-      <div style={{ marginBottom: '20px' }}>
+      {/* ── 2. ELIGIBILITY ENGINE SECTION ── */}
+      <div style={{ marginBottom: '16px' }}>
+        <EligibilitySection
+          opportunityId={exam.id}
+          requirements={requirements}
+          officialNotificationUrl={exam.officialNotificationUrl}
+        />
+      </div>
+
+      {/* ── 3. PREVIOUS YEAR PAPERS & MOCKS (Clean Cards) ── */}
+      <div style={{ marginBottom: '16px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <FileText size={18} color="var(--sc-navy-700)" />
+            <h2 style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--sc-navy-900)', margin: 0 }}>
+              Previous Year Papers &amp; Mocks
+            </h2>
+          </div>
+          <span style={{ fontSize: '0.70rem', fontWeight: 700, color: 'var(--sc-green-600)', background: 'var(--sc-green-50)', padding: '2px 7px', borderRadius: '100px' }}>
+            ✓ Verified Answer Keys
+          </span>
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+          {fallbackPapers.map(p => (
+            <PyqCard key={p.id} paper={p} />
+          ))}
+        </div>
+      </div>
+
+      {/* ── 4. EXPANDABLE INTELLIGENCE ACCORDION (Syllabus, Pattern, Strategy) ── */}
+      <div style={{ marginBottom: '16px' }}>
+        <ExamDetailAccordion detailed={detailed} />
+      </div>
+
+      {/* ── 5. OFFICIAL CURATION & SOURCE TRUST PANEL ── */}
+      <div style={{ marginBottom: '16px' }}>
+        <TrustPanel
+          source={exam.organisation}
+          sourceType="official"
+          lastVerified={exam.lastVerified}
+          officialNotificationUrl={exam.officialNotificationUrl}
+          applicationUrl={exam.applicationUrl}
+          status={exam.status}
+        />
+      </div>
+
+      {/* ── 6. CONTEXTUAL MAYA INTELLIGENCE CARD ── */}
+      <div>
         <MayaCard
-          title={`Questions about ${exam.name}?`}
+          title={`Ask Maya about ${exam.name}`}
           pageContext="exam"
           opportunity={{
             id: exam.id,
@@ -254,204 +313,6 @@ export default async function ExamDetailPage({
             'What are the best previous year question papers?'
           ]}
         />
-      </div>
-
-      {/* ── 3. PREVIOUS YEARS QUESTION PAPERS & MOCKS (NEW!) ── */}
-      <div style={{ marginBottom: '24px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '12px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <FileText size={20} color="var(--sc-navy-700)" />
-            <h2 style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--sc-navy-900)' }}>
-              Official Previous Year Papers (PYQs) &amp; Mock Tests
-            </h2>
-          </div>
-          <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--sc-green-600)', background: 'var(--sc-green-50)', padding: '3px 8px', borderRadius: '100px' }}>
-            ✓ Verified Answer Keys
-          </span>
-        </div>
-
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-          {fallbackPapers.map(p => (
-            <PyqCard key={p.id} paper={p} />
-          ))}
-        </div>
-      </div>
-
-      {/* ── 4. MAIN 2-COLUMN INTELLIGENCE SECTION ── */}
-      <div className="desktop-grid-2col">
-        {/* Left Column: Eligibility Engine + Full Course Syllabus */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-          {/* Eligibility Engine Card */}
-          <EligibilitySection
-            opportunityId={exam.id}
-            requirements={requirements}
-            officialNotificationUrl={exam.officialNotificationUrl}
-          />
-
-          {/* Full Course Syllabus Breakdown */}
-          <div className="sc-card" style={{ padding: '20px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-              <BookOpen size={18} color="var(--sc-navy-700)" />
-              <h2 style={{ fontSize: '1.10rem', fontWeight: 800, color: 'var(--sc-navy-900)' }}>
-                Official Course Syllabus &amp; High-Yield Topics
-              </h2>
-            </div>
-
-            {detailed?.syllabusModules && detailed.syllabusModules.length > 0 ? (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                {detailed.syllabusModules.map((mod, mi) => (
-                  <div key={mi} style={{ background: '#f8fafc', borderRadius: '10px', padding: '12px 14px', border: '1px solid #e2e8f0' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
-                      <span style={{ fontWeight: 800, fontSize: '0.88rem', color: 'var(--sc-navy-900)' }}>
-                        {mod.subject}
-                      </span>
-                      {mod.weightagePercent && (
-                        <span style={{ fontSize: '0.72rem', fontWeight: 800, color: 'var(--sc-navy-700)', background: '#eef5ff', padding: '2px 7px', borderRadius: '100px' }}>
-                          ~{mod.weightagePercent}% Weightage
-                        </span>
-                      )}
-                    </div>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
-                      {mod.highYieldTopics.map((topic, ti) => (
-                        <span key={ti} style={{ fontSize: '0.72rem', background: '#ffffff', color: 'var(--sc-ink-700)', padding: '3px 8px', borderRadius: '6px', border: '1px solid #e2e8f0' }}>
-                          {topic}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div style={{ fontSize: '0.82rem', color: 'var(--sc-ink-700)' }}>
-                Comprehensive B.Sc. / GNM core syllabus covering Anatomy, Physiology, Medical-Surgical Nursing, OBG, Pediatrics, and Pharmacology.
-              </div>
-            )}
-          </div>
-        </div>
-
-        {/* Right Column: Exam Pattern + Preparation Strategy + Trust Panel */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-          {/* Exam Pattern & Stages Card */}
-          <div className="sc-card" style={{ padding: '20px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '12px' }}>
-              <Layers size={18} color="var(--sc-navy-700)" />
-              <h2 style={{ fontSize: '1.10rem', fontWeight: 800, color: 'var(--sc-navy-900)' }}>
-                Exam Pattern &amp; Marking Scheme
-              </h2>
-            </div>
-
-            {detailed?.stages && detailed.stages.length > 0 ? (
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                {detailed.stages.map((stage, si) => (
-                  <div
-                    key={si}
-                    style={{
-                      background: si === 0 ? '#f0fdf4' : '#f8fafc',
-                      borderRadius: '10px',
-                      padding: '12px',
-                      border: si === 0 ? '1px solid #bbf7d0' : '1px solid #e2e8f0',
-                    }}
-                  >
-                    <div style={{ fontSize: '0.88rem', fontWeight: 800, color: 'var(--sc-navy-900)', marginBottom: '3px' }}>
-                      {stage.stageName}
-                    </div>
-                    <div style={{ fontSize: '0.75rem', color: 'var(--sc-ink-600)', marginBottom: '8px' }}>
-                      {stage.description}
-                    </div>
-
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6px', fontSize: '0.75rem' }}>
-                      <div>
-                        <span style={{ color: 'var(--sc-ink-600)' }}>Questions: </span>
-                        <strong>{stage.totalQuestions} MCQs</strong>
-                      </div>
-                      <div>
-                        <span style={{ color: 'var(--sc-ink-600)' }}>Duration: </span>
-                        <strong>{stage.durationMinutes} Mins</strong>
-                      </div>
-                      <div>
-                        <span style={{ color: 'var(--sc-ink-600)' }}>Negative: </span>
-                        <strong style={{ color: '#dc2626' }}>{stage.negativeMarking}</strong>
-                      </div>
-                      <div>
-                        <span style={{ color: 'var(--sc-ink-600)' }}>Qualifying: </span>
-                        <strong style={{ color: 'var(--sc-green-600)' }}>{stage.qualifyingMarks.split('|')[0]}</strong>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div style={{ fontSize: '0.82rem', color: 'var(--sc-ink-700)' }}>
-                Computer-Based Test (CBT) with objective multiple-choice questions.
-              </div>
-            )}
-          </div>
-
-          {/* Actionable Preparation Advice */}
-          {detailed?.preparationStrategy && (
-            <div className="sc-card" style={{ padding: '18px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '8px' }}>
-                <Sparkles size={16} color="#b45309" />
-                <h3 style={{ fontSize: '0.96rem', fontWeight: 800, color: 'var(--sc-navy-900)' }}>
-                  High-Yield Study Strategy
-                </h3>
-              </div>
-              <ul style={{ paddingLeft: '16px', margin: 0, fontSize: '0.78rem', color: 'var(--sc-ink-700)', lineHeight: 1.55 }}>
-                {detailed.preparationStrategy.slice(0, 4).map((strat, i) => (
-                  <li key={i} style={{ marginBottom: '4px' }}>{strat}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {/* Institutional Trust Panel */}
-          <TrustPanel
-            source={exam.source}
-            sourceType={exam.sourceType}
-            lastVerified={exam.lastVerified}
-            officialNotificationUrl={exam.officialNotificationUrl}
-            applicationUrl={exam.applicationUrl}
-            status={exam.status}
-          />
-        </div>
-      </div>
-
-      {/* ── 5. STICKY PERSISTENT APPLICATION BAR ── */}
-      <div
-        style={{
-          position: 'sticky',
-          bottom: '76px',
-          zIndex: 80,
-          background: 'rgba(255, 255, 255, 0.98)',
-          backdropFilter: 'blur(12px)',
-          border: '1px solid var(--sc-line-200)',
-          borderRadius: '12px',
-          padding: '12px 16px',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          gap: '10px',
-          boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
-          maxWidth: '920px',
-          margin: '20px auto 0',
-        }}
-      >
-        <div style={{ fontSize: '0.80rem', color: 'var(--sc-ink-700)', fontWeight: 600 }}>
-          {exam.organisation} • {exam.vacancies ? `${exam.vacancies.toLocaleString('en-IN')} Posts` : 'Active Notification'}
-        </div>
-
-        {exam.applicationUrl && (
-          <a
-            href={exam.applicationUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-navy"
-            style={{ textDecoration: 'none', fontSize: '0.82rem', padding: '8px 14px' }}
-          >
-            <span>Official Portal</span>
-            <ExternalLink size={13} />
-          </a>
-        )}
       </div>
     </div>
   );
