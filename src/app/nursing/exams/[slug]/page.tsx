@@ -11,12 +11,9 @@ import {
   Building2,
   BookOpen,
   CheckCircle2,
-  HelpCircle,
   Layers,
   Award,
   Clock,
-  Sparkles,
-  ChevronRight,
   Share2
 } from 'lucide-react';
 import { getExamBySlug, getRequirementsForOpportunity, INITIAL_EXAMS } from '@/lib/data';
@@ -98,7 +95,7 @@ export default async function ExamDetailPage({
     : 'Closed / In Exam Phase';
 
   return (
-    <div className="wide-container mobile-safe-bottom" style={{ paddingTop: '16px', maxWidth: '860px', margin: '0 auto', paddingBottom: '90px' }}>
+    <div className="wide-container mobile-safe-bottom" style={{ paddingTop: '16px', maxWidth: '860px', margin: '0 auto', paddingBottom: '100px' }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(examJsonLd) }}
@@ -108,7 +105,7 @@ export default async function ExamDetailPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }}
       />
 
-      {/* ── TOP NAV BAR ── */}
+      {/* ── TOP NAV BAR (Clean & Uncluttered) ── */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
         <Link
           href="/nursing/exams"
@@ -126,27 +123,15 @@ export default async function ExamDetailPage({
           <span>All 50 Exams</span>
         </Link>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-          <ShareButtons
-            opportunityId={exam.id}
-            opportunityType="exams"
-            title={exam.name}
-            employerOrOrg={exam.organisation}
-            deadline={exam.applicationDeadline}
-            slug={exam.slug}
-            profession="nursing"
-          />
-
-          <TrackButton
-            opportunityId={exam.id}
-            opportunityType="exam"
-            title={exam.name}
-            employerOrOrg={exam.organisation}
-            slug={exam.slug}
-            nextStageName="Stage 1 CBT"
-            nextStageDate={exam.examDate}
-          />
-        </div>
+        <ShareButtons
+          opportunityId={exam.id}
+          opportunityType="exams"
+          title={exam.name}
+          employerOrOrg={exam.organisation}
+          deadline={exam.applicationDeadline}
+          slug={exam.slug}
+          profession="nursing"
+        />
       </div>
 
       {/* ── 1. CLEAN HERO CARD ── */}
@@ -286,7 +271,68 @@ export default async function ExamDetailPage({
         />
       </div>
 
-      {/* ── 6. CONTEXTUAL MAYA INTELLIGENCE CARD ── */}
+      {/* ── 6. BOTTOM ACTION BAR: TRACK IN "MY CYCLES" + OFFICIAL APPLY ── */}
+      <div
+        style={{
+          background: '#ffffff',
+          borderRadius: '14px',
+          border: '1.5px solid var(--sc-line-200)',
+          padding: '16px 20px',
+          marginBottom: '20px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          flexWrap: 'wrap',
+          gap: '12px',
+          boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)',
+        }}
+      >
+        <div>
+          <div style={{ fontSize: '0.92rem', fontWeight: 800, color: 'var(--sc-navy-900)' }}>
+            Track This Recruitment Cycle
+          </div>
+          <div style={{ fontSize: '0.75rem', color: 'var(--sc-ink-500)' }}>
+            Get alerts for admit card releases, exam dates, answer keys &amp; results.
+          </div>
+        </div>
+
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <TrackButton
+            opportunityId={exam.id}
+            opportunityType="exam"
+            title={exam.name}
+            employerOrOrg={exam.organisation}
+            slug={exam.slug}
+            nextStageName="Stage 1 CBT"
+            nextStageDate={exam.examDate}
+          />
+
+          {exam.applicationUrl && (
+            <a
+              href={exam.applicationUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '5px',
+                background: 'var(--sc-navy-700)',
+                color: '#ffffff',
+                padding: '9px 16px',
+                borderRadius: '8px',
+                fontWeight: 700,
+                fontSize: '0.80rem',
+                textDecoration: 'none',
+              }}
+            >
+              <span>Apply on Official Portal</span>
+              <ExternalLink size={13} />
+            </a>
+          )}
+        </div>
+      </div>
+
+      {/* ── 7. CONTEXTUAL MAYA INTELLIGENCE CARD ── */}
       <div>
         <MayaCard
           title={`Ask Maya about ${exam.name}`}
@@ -307,10 +353,10 @@ export default async function ExamDetailPage({
             descriptionSimple: exam.descriptionSimple,
           }}
           suggestedPrompts={[
-            'Am I eligible for this exam?',
+            'What are the past year cutoff percentiles?',
             'What is the exam syllabus?',
             'What is the marking scheme & negative marking?',
-            'What are the best previous year question papers?'
+            'Am I eligible for this exam?'
           ]}
         />
       </div>

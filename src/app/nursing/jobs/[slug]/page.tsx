@@ -128,14 +128,6 @@ export default async function JobDetailPage({
               ✓ Verified Live Opportunity
             </span>
           </div>
-
-          <TrackButton
-            opportunityId={job.id}
-            opportunityType="job"
-            title={job.title}
-            employerOrOrg={job.employer}
-            slug={job.slug}
-          />
         </div>
 
         <h1 style={{ fontSize: '1.55rem', fontWeight: 800, color: 'var(--sc-navy-900)', lineHeight: 1.3, marginBottom: '6px' }}>
