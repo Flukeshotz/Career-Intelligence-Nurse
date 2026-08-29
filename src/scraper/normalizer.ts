@@ -36,6 +36,7 @@ export interface NormalizedOpportunity {
   sourceName: string;
   sourceType: 'official' | 'verified_secondary' | 'other';
   lastVerifiedAt: string;
+  notes?: string | null;
 }
 
 export function normalizeOpportunity(raw: RawScrapedOpportunity): NormalizedOpportunity {

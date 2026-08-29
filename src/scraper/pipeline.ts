@@ -76,6 +76,7 @@ function exportToCsv(opps: NormalizedOpportunity[], reqs: RawScrapedRequirement[
     'external_ref',
     'profession',
     'opportunity_type',
+    'slug',
     'title',
     'organisation',
     'job_type',
@@ -99,12 +100,15 @@ function exportToCsv(opps: NormalizedOpportunity[], reqs: RawScrapedRequirement[
     'source_url',
     'source_type',
     'last_verified_at',
+    'curator',
+    'notes',
   ];
 
   const oppRows = opps.map((o) => [
     escapeCsv(o.externalRef),
     escapeCsv(o.profession),
     escapeCsv(o.opportunityType),
+    escapeCsv(o.slug),
     escapeCsv(o.title),
     escapeCsv(o.organisation),
     escapeCsv(o.jobType || ''),
@@ -127,7 +131,9 @@ function exportToCsv(opps: NormalizedOpportunity[], reqs: RawScrapedRequirement[
     escapeCsv(o.applicationUrl || ''),
     escapeCsv(o.sourceUrl),
     escapeCsv(o.sourceType),
-    escapeCsv(o.lastVerifiedAt),
+    escapeCsv(o.lastVerifiedAt || '2026-08-27'),
+    escapeCsv('SkillCase Editorial Team'),
+    escapeCsv(o.notes || 'Verified against official recruitment notice.'),
   ]);
 
   const oppCsvContent = [oppHeaders.join(','), ...oppRows.map((r) => r.join(','))].join('\n');

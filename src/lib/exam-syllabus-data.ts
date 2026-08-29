@@ -660,5 +660,205 @@ export const DETAILED_EXAM_INTELLIGENCE: Record<string, DetailedExamInfo> = {
         answer: 'Contract nurses working in government healthcare institutions receive up to 2.5 marks per 6-month block in tribal areas, and up to 2 marks per 6-month block in rural/urban areas, capped at 20 marks maximum.'
       }
     ]
+  },
+
+  // ─── 9. PGIMER CHANDIGARH NURSING OFFICER ──────────────────────────────────
+  'exam-pgimer-no-2026': {
+    examId: 'exam-pgimer-no-2026',
+    officialCadre: 'Nursing Officer (Group B, INI Premier Cadre)',
+    payMatrixLevel: '7th CPC Pay Matrix Level 7',
+    basicPay: '₹44,900 – ₹1,42,400',
+    grossSalaryMonthly: '₹80,000 – ₹88,000 / month (with Chandigarh HRA & Allowances)',
+    ageLimitDetails: '18 to 35 Years as on closing date',
+    ageRelaxations: 'SC/ST: 5 Years | OBC: 3 Years | PwBD: 10 Years',
+    stages: [
+      {
+        stageName: 'Computer Based Test (CBT)',
+        totalQuestions: 100,
+        totalMarks: 100,
+        durationMinutes: 100,
+        mode: 'CBT (Online)',
+        negativeMarking: '0.25 (1/4th) mark deducted per wrong answer',
+        qualifyingMarks: 'General/EWS: 50% (50 marks) | SC/ST/OBC: 45% (45 marks)',
+        description: 'Online screening and ranking examination consisting of nursing sciences and general aptitude.',
+        sections: [
+          { name: 'Core Clinical Nursing Sciences', questions: 85, marks: 85 },
+          { name: 'General Knowledge & Aptitude', questions: 15, marks: 15 }
+        ]
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Advanced Clinical & Bedside Nursing',
+        weightagePercent: 40,
+        highYieldTopics: [
+          'Critical Care: Hemodynamic monitoring, CVP calculation, arterial line management, ventilator waveforms',
+          'Emergency Nursing: Advanced trauma life support (ATLS), poisonings, shock classification',
+          'Infection Control & Sterilization: Autoclaving parameters, CSSD protocols, biomedical waste classification 2016'
+        ]
+      },
+      {
+        subject: 'Maternal & Child Health',
+        weightagePercent: 30,
+        highYieldTopics: [
+          'High Risk Pregnancy: Pre-eclampsia, gestational diabetes, antepartum hemorrhage (Placenta Praevia vs Abruptio)',
+          'Pediatric Emergencies: Neonatal resuscitation protocol, status epilepticus in children, phototherapy irradiance'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Focus intensely on PGIMER repeat questions and clinical algorithms.',
+      'Practice 100-minute timed mock tests to manage the 1-minute-per-question speed.'
+    ],
+    selectionSteps: [
+      'Step 1: CBT Written Examination (100 Marks)',
+      'Step 2: Document Verification at PGIMER Chandigarh Campus',
+      'Step 3: Medical Fitness Test & Appointment'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Does PGIMER require experience for B.Sc. Nursing graduates?',
+        answer: 'No, B.Sc. Nursing / Post Basic graduates require zero experience. GNM diploma holders require 2 years experience in a minimum 50-bedded hospital.'
+      }
+    ]
+  },
+
+  // ─── 10. MILITARY NURSING SERVICE (MNS SSC OFFICER) ────────────────────────
+  'exam-mns-ssc-2026': {
+    examId: 'exam-mns-ssc-2026',
+    officialCadre: 'Lieutenant (Military Nursing Service - Short Service Commission)',
+    payMatrixLevel: 'Military Pay Matrix Level 10 + Military Service Pay (MSP)',
+    basicPay: '₹56,100 + ₹15,500 MSP + DA + Allowances',
+    grossSalaryMonthly: '₹95,000 – ₹1,10,000 / month (with Military Canteen, Ration & Medical Facilities)',
+    ageLimitDetails: '21 to 35 Years on date of application',
+    ageRelaxations: 'Applicable as per Armed Forces Medical Services recruitment rules',
+    stages: [
+      {
+        stageName: 'Stage 1: Computer Based Examination (CBT by NTA)',
+        totalQuestions: 150,
+        totalMarks: 150,
+        durationMinutes: 150,
+        mode: 'CBT (Online)',
+        negativeMarking: 'No negative marking',
+        qualifyingMarks: '50% Minimum Qualifying Score',
+        description: 'National Level CBT conducted by NTA covering Nursing, General English, and General Intelligence.',
+        sections: [
+          { name: 'Nursing Core Subjects', questions: 100, marks: 100 },
+          { name: 'General English', questions: 25, marks: 25 },
+          { name: 'General Intelligence & Current Affairs', questions: 25, marks: 25 }
+        ]
+      },
+      {
+        stageName: 'Stage 2: Panel Interview & Special Medical Examination (SMB)',
+        totalQuestions: 0,
+        totalMarks: 100,
+        durationMinutes: 30,
+        mode: 'Interview / Counselling',
+        negativeMarking: 'N/A',
+        qualifyingMarks: 'Panel Assessment',
+        description: 'Personal Interview conducted at designated Armed Forces Base Hospitals followed by Special Medical Board assessment.',
+        sections: [
+          { name: 'Military Suitability, Clinical Knowledge & Personality', questions: 0, marks: 100 }
+        ]
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Military Nursing Core Subjects',
+        weightagePercent: 65,
+        highYieldTopics: [
+          'Battlefield & Trauma Nursing: Triage in mass casualties, tourniquet application, blast & gunshot wounds',
+          'Critical Care & Medical-Surgical: ACLS/BLS, emergency medications, burn management',
+          'Obstetrics, Pediatrics, Community Health, and Psychology'
+        ]
+      },
+      {
+        subject: 'General English & Officer Aptitude',
+        weightagePercent: 35,
+        highYieldTopics: [
+          'English Grammar: Sentence correction, comprehension passages, idioms & phrases, vocabulary',
+          'Logical Reasoning, Military Current Affairs, Science & National Health Schemes'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Focus on English fluency and clinical confidence for the Service Interview Panel.',
+      'Maintain strict physical fitness and height criteria (min 152 cm for female candidates).'
+    ],
+    selectionSteps: [
+      'Step 1: NTA Online CBT Examination (150 Marks)',
+      'Step 2: Armed Forces Panel Interview (Selected candidates)',
+      'Step 3: Special Medical Board (SMB) at Base Hospital',
+      'Step 4: All-India Merit List & Commissioning as Lieutenant'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Can male nurses apply for MNS SSC Officer recruitment?',
+        answer: 'Currently, the Military Nursing Service (MNS) Short Service Commission is open exclusively to female nursing graduates who are citizens of India.'
+      }
+    ]
+  },
+
+  // ─── 11. NIMHANS BENGALURU NURSING OFFICER ─────────────────────────────────
+  'exam-nimhans-no-2026': {
+    examId: 'exam-nimhans-no-2026',
+    officialCadre: 'Nursing Officer (INI Psychiatric & Neuro Specialty)',
+    payMatrixLevel: '7th CPC Pay Matrix Level 7',
+    basicPay: '₹44,900 – ₹1,42,400',
+    grossSalaryMonthly: '₹78,000 – ₹86,000 / month',
+    ageLimitDetails: '18 to 35 Years',
+    ageRelaxations: 'SC/ST: 5 Years | OBC: 3 Years | PwBD: 10 Years',
+    stages: [
+      {
+        stageName: 'Online Computer Based Test (CBT)',
+        totalQuestions: 100,
+        totalMarks: 100,
+        durationMinutes: 90,
+        mode: 'CBT (Online)',
+        negativeMarking: '0.25 mark deducted per wrong answer',
+        qualifyingMarks: 'UR/EWS/OBC: 50% | SC/ST: 45%',
+        description: 'Comprehensive test emphasizing psychiatric nursing, neurology, and general nursing sciences.',
+        sections: [
+          { name: 'Psychiatric, Neurological & Core Nursing', questions: 80, marks: 80 },
+          { name: 'General Aptitude & Research/Biostatistics', questions: 20, marks: 20 }
+        ]
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Psychiatric & Mental Health Nursing (High Weightage)',
+        weightagePercent: 40,
+        highYieldTopics: [
+          'Psychopharmacology: Lithium therapy & toxicity, Extrapyramidal symptoms (EPS), Neuroleptic Malignant Syndrome (NMS), SSRIs/TCAs',
+          'Psychiatric Emergencies: Suicide risk assessment, acute psychosis, delirium tremens, violent patient de-escalation',
+          'Mental Healthcare Act 2017: Advance directives, nominated representatives, admission & discharge protocols',
+          'Therapeutic Modalities: Electroconvulsive Therapy (ECT pre/intra/post care), Cognitive Behavioral Therapy (CBT) basics'
+        ]
+      },
+      {
+        subject: 'Neurological & Neuro-Surgical Nursing',
+        weightagePercent: 30,
+        highYieldTopics: [
+          'Raised ICP management (Mannitol, 3% saline, head-up position), Glasgow Coma Scale (GCS), Cranial Nerve assessment',
+          'Stroke management (NIHSS scale, tPA protocol), Spinal Cord Injuries & Autonomic Dysreflexia, Post-Craniotomy care'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Master Psychiatric Nursing terminology, defense mechanisms, and psychotropic drug therapeutic ranges.',
+      'Review neuro-anatomy, intracranial pressure monitoring, and ventilator care.'
+    ],
+    selectionSteps: [
+      'Step 1: CBT Written Test (100 Marks)',
+      'Step 2: Document Verification & Clinical Skill Assessment',
+      'Step 3: Final Merit List'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Is GNM eligible for NIMHANS Nursing Officer?',
+        answer: 'Yes, GNM candidates with 2 years clinical experience in a minimum 50-bedded hospital and active state council registration are eligible.'
+      }
+    ]
   }
 };
+

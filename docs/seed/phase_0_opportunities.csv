@@ -1,393 +1,228 @@
-external_ref,profession,opportunity_type,title,organisation,job_type,location_state,location_city,role,qualification_summary,experience_min_years,experience_max_years,salary_min,salary_max,salary_raw,vacancy_count,application_start,application_deadline,exam_date,status,description_simple,official_notification_url,application_url,source_url,source_type,last_verified_at
-"NORCET-2026","nursing","exam","NORCET 2026 (Nursing Officer Recruitment Common Eligibility Test)","AIIMS New Delhi & Central Government Hospitals","","","","nursing_officer","B.Sc. (Hons.) Nursing / B.Sc. Nursing / Post Basic / GNM with 2 yrs exp","0","","531000","1678000","7th CPC Pay Matrix Level 7 (Rs. 44,900 - 1,42,400)","2218","2026-07-24","2026-08-13","2026-09-12","open","What is this?
-A national / state recruitment examination for NORCET 2026 (Nursing Officer Recruitment Common Eligibility Test) at AIIMS New Delhi & Central Government Hospitals (2,218 posts announced).
+external_ref,profession,opportunity_type,slug,title,organisation,job_type,location_state,location_city,role,qualification_summary,experience_min_years,experience_max_years,salary_min,salary_max,salary_raw,vacancy_count,application_start,application_deadline,exam_date,status,description_simple,official_notification_url,application_url,source_url,source_type,last_verified_at,curator,notes
+"NORCET-2026","nursing","exam","aiims-new-delhi-central-government-hospitals-norcet-2026-nursing-officer-recruitment-common-eligibility-test","NORCET 2026 (Nursing Officer Recruitment Common Eligibility Test)","AIIMS New Delhi & Central Government Hospitals","","","","nursing_officer","B.Sc. (Hons.) Nursing / B.Sc. Nursing / Post Basic / GNM with 2 yrs exp","0","","531000","1678000","7th CPC Pay Matrix Level 7 (Rs. 44,900 - 1,42,400)","2218","2026-07-24","2026-08-13","2026-09-12","closed","What is this?
+A national recruitment examination for NORCET 2026 at AIIMS New Delhi & participating AIIMS institutes (2,218 posts announced).
 
 Who can apply?
-B.Sc. (Hons.) Nursing / B.Sc. Nursing / Post Basic / GNM with 2 yrs exp. Freshers and experienced candidates eligible.
+B.Sc. Nursing / Post Basic (0 exp) OR GNM with 2 yrs clinical experience in 50+ bed hospital.
 
 Important dates:
-Applications close on 13 August 2026. Examination scheduled for 12 September 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
+Applications closed on 13 August 2026. Admit cards release on 09 September 2026. Stage 1 CBT on 12 September 2026.
 
 What happens next?
-Online application submission followed by Computer-Based Test (CBT) and centralized counselling.","https://www.aiimsexams.ac.in/pdf/NORCET_2026_Advt_82.pdf","https://www.aiimsexams.ac.in","https://www.aiimsexams.ac.in","official","2026-08-28"
-"AIIMS-DELHI-NO-2026","nursing","job","Nursing Officer (Group B)","AIIMS New Delhi","government","Delhi","New Delhi (Ansari Nagar)","nursing_officer","B.Sc. (Hons.) Nursing / B.Sc. Nursing / Post Basic B.Sc.","0","","531000","1678000","Level 7 Pay Matrix (Rs. 44,900 - 1,42,400)","450","2026-08-01","2026-09-18","","open","What is this?
-A permanent / contractual government vacancy for Nursing Officer (Group B) at AIIMS New Delhi (450 posts announced).
+Stage 1 Preliminary CBT (100 MCQs) followed by Stage 2 Mains CBT (160 MCQs) and centralized institute allocation.","https://www.aiimsexams.ac.in","https://www.aiimsexams.ac.in","https://www.aiimsexams.ac.in","official","2026-08-27","SkillCase Editorial Team","Flagship national exam; application window closed, examination phase active."
+"AIIMS-DELHI-NO-2026","nursing","job","aiims-new-delhi-nursing-officer-group-b-2026","Nursing Officer (Group B - AIIMS New Delhi Cadre via NORCET)","AIIMS New Delhi","government","Delhi","New Delhi (Ansari Nagar)","nursing_officer","B.Sc. (Hons.) Nursing / B.Sc. Nursing / Post Basic B.Sc. OR GNM with 2 yrs exp","0","","531000","1678000","Level 7 Pay Matrix (Rs. 44,900 - 1,42,400)","450","2026-07-24","2026-08-13","2026-09-12","closed","What is this?
+Nursing Officer cadre vacancy allocation for AIIMS New Delhi (450 posts filled via NORCET-11 merit rank list).
 
 Who can apply?
-B.Sc. (Hons.) Nursing / B.Sc. Nursing / Post Basic B.Sc.. Freshers and experienced candidates eligible.
+B.Sc. Nursing (0 exp) OR GNM with 2 yrs experience in min 50 bed hospital.
 
-Important dates:
-Applications close on 18 September 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by shortlisting, clinical skill evaluation, and interview.","https://www.aiimsexams.ac.in/pdf/AIIMS_ND_NO_Advt.pdf","https://www.aiimsexams.ac.in","https://www.aiims.edu","official","2026-08-28"
-"ESIC-NO-2026","nursing","job","ESIC Nursing Officer Recruitment 2026","Employees State Insurance Corporation (ESIC)","government","Maharashtra","Mumbai & Regional Model Hospitals","nursing_officer","B.Sc. Nursing or GNM with 1 yr clinical experience in 50-bed hospital","0","","538000","1550000","Level 7 (Rs. 44,900 - 1,42,400)","523","2026-08-05","2026-09-20","","open","What is this?
-A permanent / contractual government vacancy for ESIC Nursing Officer Recruitment 2026 at Employees State Insurance Corporation (ESIC) (523 posts announced).
+Selection Process:
+Centralized selection via AIIMS NORCET examination score and choice preference portal.","https://www.aiimsexams.ac.in","https://www.aiimsexams.ac.in","https://www.aiims.edu","official","2026-08-27","SkillCase Editorial Team","Allocated via NORCET common eligibility merit list."
+"ESIC-NO-2026","nursing","job","employees-state-insurance-corporation-esic-esic-nursing-officer-recruitment-2026","ESIC Nursing Officer Recruitment 2026","Employees State Insurance Corporation (ESIC)","government","Maharashtra","Mumbai & Regional Model Hospitals","nursing_officer","B.Sc. Nursing or GNM with 1 yr clinical experience in 50-bed hospital","0","","538000","1550000","Level 7 (Rs. 44,900 - 1,42,400)","523","2026-08-05","2026-09-20","","open","What is this?
+A permanent government vacancy for ESIC Nursing Officer Recruitment 2026 (523 posts announced).
 
 Who can apply?
-B.Sc. Nursing or GNM with 1 yr clinical experience in 50-bed hospital. Freshers and experienced candidates eligible.
+B.Sc. Nursing (0 exp) OR GNM with 1 yr clinical experience in 50-bed hospital. Age up to 30 years.
 
 Important dates:
-Applications close on 20 September 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by shortlisting, clinical skill evaluation, and interview.","https://www.esic.gov.in/recruitments","https://upsconline.nic.in/ora/Detail.php?post_id=ESIC_NO_2026","https://www.esic.gov.in","official","2026-08-28"
-"RRB-NURSE-2026","nursing","exam","RRB Nursing Superintendent / Staff Nurse Examination 2026","Railway Recruitment Boards (Indian Railways)","","","","staff_nurse","GNM 3 yrs course or B.Sc. Nursing with State / INC Registration","0","","538000","1550000","7th CPC Level 7 (Rs. 44,900 Initial Pay) + Railway Allowances","713","2026-08-17","2026-09-16","2026-11-20","open","What is this?
-A national / state recruitment examination for RRB Nursing Superintendent / Staff Nurse Examination 2026 at Railway Recruitment Boards (Indian Railways) (713 posts announced).
+Applications close on 20 September 2026.","https://www.esic.gov.in","https://upsconline.nic.in","https://www.esic.gov.in","official","2026-08-27","SkillCase Editorial Team","UPSC written recruitment test."
+"RRB-NURSE-2026","nursing","exam","railway-recruitment-boards-indian-railways-rrb-nursing-superintendent-staff-nurse-examination-2026","RRB Nursing Superintendent / Staff Nurse Examination 2026","Railway Recruitment Boards (Indian Railways)","","","","staff_nurse","GNM 3 yrs course or B.Sc. Nursing with State / INC Registration","0","","538000","1550000","7th CPC Level 7 (Rs. 44,900 Initial Pay) + Railway Allowances","713","2026-08-17","2026-09-16","2026-11-20","open","What is this?
+A national recruitment examination for RRB Nursing Superintendent Examination 2026 (713 posts announced).
 
 Who can apply?
-GNM 3 yrs course or B.Sc. Nursing with State / INC Registration. Freshers and experienced candidates eligible.
+GNM 3 yrs course or B.Sc. Nursing with State / INC Registration. Age 20–40 years.
 
 Important dates:
-Applications close on 16 September 2026. Examination scheduled for 20 November 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by Computer-Based Test (CBT) and centralized counselling.","https://www.rrbchennai.gov.in/downloads/CEN_04_2026_Paramedical.pdf","https://www.rrbapply.gov.in","https://indianrailways.gov.in","official","2026-08-28"
-"DSSSB-NO-2026","nursing","job","DSSSB Nursing Officer (Health & Family Welfare Department)","Delhi Subordinate Services Selection Board (DSSSB)","government","Delhi","New Delhi (Govt of NCT of Delhi)","nursing_officer","B.Sc. Nursing / Post Basic B.Sc. or GNM + 1 yr exp + Delhi Nursing Council Registration","0","","531000","1678000","Group B Pay Level 7 (Rs. 44,900 - 1,42,400)","1507","2026-08-10","2026-09-15","","open","What is this?
-A permanent / contractual government vacancy for DSSSB Nursing Officer (Health & Family Welfare Department) at Delhi Subordinate Services Selection Board (DSSSB) (1507 posts announced).
+Applications close on 16 September 2026. Examination scheduled for 20 November 2026.","https://www.rrbapply.gov.in","https://www.rrbapply.gov.in","https://indianrailways.gov.in","official","2026-08-27","SkillCase Editorial Team","CEN 04/2026 Paramedical category."
+"DSSSB-NO-2026","nursing","job","delhi-subordinate-services-selection-board-dsssb-dsssb-nursing-officer-health-family-welfare-department-2026","DSSSB Nursing Officer (Health & Family Welfare Department)","Delhi Subordinate Services Selection Board (DSSSB)","government","Delhi","New Delhi (Govt of NCT of Delhi)","nursing_officer","B.Sc. Nursing or GNM + 1 yr exp + Delhi Nursing Council Registration","0","","531000","1678000","Group B Pay Level 7 (Rs. 44,900 - 1,42,400)","1507","2026-08-10","2026-09-15","","open","What is this?
+A Delhi State Government vacancy for 1,507 Nursing Officer posts under Directorate of Health Services.
 
 Who can apply?
-B.Sc. Nursing / Post Basic B.Sc. or GNM + 1 yr exp + Delhi Nursing Council Registration. Freshers and experienced candidates eligible.
+B.Sc. Nursing (0 exp) OR GNM with 1 yr clinical experience in 50-bed hospital + Delhi Nursing Council (DNC) registration. Age up to 30 years.
 
 Important dates:
-Applications close on 15 September 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by shortlisting, clinical skill evaluation, and interview.","https://dsssb.delhi.gov.in/current-vacancies","https://dsssbonline.nic.in","https://dsssb.delhi.gov.in","official","2026-08-28"
-"JIPMER-NO-2026","nursing","job","JIPMER Senior Nursing Officer / Nursing Officer Recruitment","Jawaharlal Institute of Postgraduate Medical Education & Research (JIPMER)","government","Puducherry","Puducherry & Karaikal","nursing_officer","B.Sc. Nursing or GNM with 2 years clinical experience in min 50 bedded hospital","0","","531000","1678000","Level 7 Pay Matrix (Rs. 44,900 - 1,42,400)","180","2026-08-01","2026-09-10","","open","What is this?
-A permanent / contractual government vacancy for JIPMER Senior Nursing Officer / Nursing Officer Recruitment at Jawaharlal Institute of Postgraduate Medical Education & Research (JIPMER) (180 posts announced).
+Applications close on 15 September 2026.","https://dsssb.delhi.gov.in","https://dsssbonline.nic.in","https://dsssb.delhi.gov.in","official","2026-08-27","SkillCase Editorial Team","Post Code 02/24."
+"JIPMER-NO-2026","nursing","job","jipmer-nursing-officer-recruitment-2026","JIPMER Nursing Officer Recruitment 2026","Jawaharlal Institute of Postgraduate Medical Education & Research (JIPMER)","government","Puducherry","Puducherry & Karaikal","nursing_officer","B.Sc. Nursing (0 exp) or GNM with 2 years clinical experience in min 50 bedded hospital","0","","531000","1678000","Level 7 Pay Matrix (Rs. 44,900 - 1,42,400)","180","2026-08-01","2026-09-10","","open","What is this?
+A central government vacancy for Nursing Officer at JIPMER Puducherry (180 posts announced).
 
 Who can apply?
-B.Sc. Nursing or GNM with 2 years clinical experience in min 50 bedded hospital. Freshers and experienced candidates eligible.
+B.Sc. Nursing (0 exp) OR GNM with 2 years clinical experience in min 50 bedded hospital. Age up to 35 years.
 
 Important dates:
-Applications close on 10 September 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by shortlisting, clinical skill evaluation, and interview.","https://www.jipmer.edu.in/announcements/jobs","https://www.jipmer.edu.in/online-application/nursing-officer-2026","https://www.jipmer.edu.in","official","2026-08-28"
-"KAR-KPSC-NURSE-2026","nursing","job","Staff Nurse (Directorate of Health & Family Welfare Services)","Karnataka Public Service Commission (KPSC)","government","Karnataka","Bangalore & District Hospitals","staff_nurse","B.Sc. Nursing / GNM from KNC recognized institution","0","","400000","780000","Rs. 33,450 - 62,600 (Karnataka State Pay Scale)","840","2026-08-12","2026-09-24","","open","What is this?
-A permanent / contractual government vacancy for Staff Nurse (Directorate of Health & Family Welfare Services) at Karnataka Public Service Commission (KPSC) (840 posts announced).
+Applications close on 10 September 2026.","https://www.jipmer.edu.in","https://www.jipmer.edu.in","https://www.jipmer.edu.in","official","2026-08-27","SkillCase Editorial Team","Online CBT + Skill test."
+"KAR-KPSC-NURSE-2026","nursing","job","karnataka-public-service-commission-kpsc-staff-nurse-directorate-of-health-family-welfare-services-2026","Staff Nurse (Directorate of Health & Family Welfare Services)","Karnataka Public Service Commission (KPSC)","government","Karnataka","Bangalore & District Hospitals","staff_nurse","B.Sc. Nursing / GNM from KNC recognized institution","0","","400000","780000","Rs. 33,450 - 62,600 (Karnataka State Pay Scale)","840","2026-08-12","2026-09-24","","open","What is this?
+A government vacancy for 840 Staff Nurse posts at Karnataka Public Service Commission.
 
 Who can apply?
-B.Sc. Nursing / GNM from KNC recognized institution. Freshers and experienced candidates eligible.
+B.Sc. Nursing / GNM with Karnataka Nursing Council (KNC) registration.
 
 Important dates:
-Applications close on 24 September 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by shortlisting, clinical skill evaluation, and interview.","https://kpsc.karnataka.gov.in/storage/pdf-files/Staff_Nurse_Advt_2026.pdf","https://kpsc.karnataka.gov.in/online-application","https://kpsc.karnataka.gov.in","official","2026-08-28"
-"MAHA-DHS-NURSE-2026","nursing","job","Staff Nurse (Arogya Seva Mandal)","Directorate of Health Services (DHS Maharashtra)","government","Maharashtra","Pune, Nagpur, Mumbai & District Civil Hospitals","staff_nurse","B.Sc. Nursing or GNM with MNC registration","0","","420000","900000","Pay Matrix Level S-10 (Rs. 35,400 - 1,12,400)","650","2026-08-18","2026-09-30","","open","What is this?
-A permanent / contractual government vacancy for Staff Nurse (Arogya Seva Mandal) at Directorate of Health Services (DHS Maharashtra) (650 posts announced).
+Applications close on 24 September 2026.","https://kpsc.karnataka.gov.in","https://kpsc.karnataka.gov.in","https://kpsc.karnataka.gov.in","official","2026-08-27","SkillCase Editorial Team","State cadre."
+"MAHA-DHS-NURSE-2026","nursing","job","directorate-of-health-services-dhs-maharashtra-staff-nurse-arogya-seva-mandal-2026","Staff Nurse (Arogya Seva Mandal)","Directorate of Health Services (DHS Maharashtra)","government","Maharashtra","Pune, Nagpur, Mumbai & District Civil Hospitals","staff_nurse","B.Sc. Nursing or GNM with MNC registration","0","","420000","900000","Pay Matrix Level S-10 (Rs. 35,400 - 1,12,400)","650","2026-08-18","2026-09-30","","open","What is this?
+A government vacancy for 650 Staff Nurse posts at DHS Maharashtra.
 
 Who can apply?
-B.Sc. Nursing or GNM with MNC registration. Freshers and experienced candidates eligible.
+B.Sc. Nursing or GNM with Maharashtra Nursing Council (MNC) registration.
 
 Important dates:
-Applications close on 30 September 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by shortlisting, clinical skill evaluation, and interview.","https://arogya.maharashtra.gov.in/pdf/Staff_Nurse_Recruitment_2026.pdf","https://arogya.maharashtra.gov.in/apply-online","https://arogya.maharashtra.gov.in","official","2026-08-28"
-"TN-MRB-NURSE-2026","nursing","exam","Nurses Recruitment Examination 2026","Medical Services Recruitment Board (TN MRB)","","","","staff_nurse","Diploma in Nursing (GNM) or B.Sc. Nursing with TNC Registration","0","","430000","920000","Pay Scale Level 10 (Rs. 35,900 - 1,13,500)","980","2026-08-10","2026-09-20","2026-11-15","open","What is this?
-A national / state recruitment examination for Nurses Recruitment Examination 2026 at Medical Services Recruitment Board (TN MRB) (980 posts announced).
+Applications close on 30 September 2026.","https://arogya.maharashtra.gov.in","https://arogya.maharashtra.gov.in","https://arogya.maharashtra.gov.in","official","2026-08-27","SkillCase Editorial Team","State health services."
+"TN-MRB-NURSE-2026","nursing","exam","medical-services-recruitment-board-tn-mrb-nurses-recruitment-examination-2026","Nurses Recruitment Examination 2026","Medical Services Recruitment Board (TN MRB)","","","","staff_nurse","Diploma in Nursing (GNM) or B.Sc. Nursing with TNC Registration","0","","430000","920000","Pay Scale Level 10 (Rs. 35,900 - 1,13,500)","980","2026-08-10","2026-09-20","2026-11-15","open","What is this?
+A state recruitment examination for Nurses Recruitment Examination 2026 at TN MRB (980 posts announced).
 
 Who can apply?
-Diploma in Nursing (GNM) or B.Sc. Nursing with TNC Registration. Freshers and experienced candidates eligible.
+Diploma in Nursing (GNM) or B.Sc. Nursing with TNC Registration.
 
 Important dates:
-Applications close on 20 September 2026. Examination scheduled for 15 November 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by Computer-Based Test (CBT) and centralized counselling.","https://www.mrb.tn.gov.in/notifications/Notification_07_MRB_2026.pdf","https://www.mrb.tn.gov.in/online-registration","https://www.mrb.tn.gov.in","official","2026-08-28"
-"KERALA-PSC-NURSE-2026","nursing","job","Staff Nurse Grade II (Health Services Department)","Kerala Public Service Commission (Kerala PSC)","government","Kerala","Thiruvananthapuram, Kochi, Kozhikode & All Districts","staff_nurse","B.Sc. Nursing or GNM with KNMC Registration","0","","470000","980000","Scale of Pay Rs. 39,300 - 83,000 (Kerala Revised Pay)","420","2026-08-01","2026-09-15","","open","What is this?
-A permanent / contractual government vacancy for Staff Nurse Grade II (Health Services Department) at Kerala Public Service Commission (Kerala PSC) (420 posts announced).
+Applications close on 20 September 2026. Examination scheduled for 15 November 2026.","https://www.mrb.tn.gov.in","https://www.mrb.tn.gov.in","https://www.mrb.tn.gov.in","official","2026-08-27","SkillCase Editorial Team","Tamil language test applicable."
+"KERALA-PSC-NURSE-2026","nursing","job","kerala-public-service-commission-kerala-psc-staff-nurse-grade-ii-health-services-department-2026","Staff Nurse Grade II (Health Services Department)","Kerala Public Service Commission (Kerala PSC)","government","Kerala","Thiruvananthapuram, Kochi, Kozhikode & All Districts","staff_nurse","B.Sc. Nursing or GNM with KNMC Registration","0","","470000","980000","Scale of Pay Rs. 39,300 - 83,000 (Kerala Revised Pay)","420","2026-08-01","2026-09-15","","open","What is this?
+A permanent government vacancy for 420 Staff Nurse Grade II posts at Kerala Public Service Commission.
 
 Who can apply?
-B.Sc. Nursing or GNM with KNMC Registration. Freshers and experienced candidates eligible.
+B.Sc. Nursing or GNM with Kerala Nurses and Midwives Council (KNMC) registration.
 
 Important dates:
-Applications close on 15 September 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by shortlisting, clinical skill evaluation, and interview.","https://www.keralapsc.gov.in/extra-ordinary-gazette-date-2026","https://thulasi.psc.kerala.gov.in/thulasi/","https://www.keralapsc.gov.in","official","2026-08-28"
-"UP-UPUMS-NURSE-2026","nursing","job","Nursing Officer (Computer Based Examination 2026)","UPUMS Saifai & UP State Medical Colleges","government","Uttar Pradesh","Saifai (Etawah), Lucknow & Kanpur","nursing_officer","B.Sc. Nursing / Post Basic B.Sc. OR GNM with 2 yrs exp in min 50 bedded hospital","0","","531000","1678000","Pay Matrix Level 7 (Rs. 44,900 - 1,42,400)","535","2026-08-15","2026-09-22","","open","What is this?
-A permanent / contractual government vacancy for Nursing Officer (Computer Based Examination 2026) at UPUMS Saifai & UP State Medical Colleges (535 posts announced).
+Applications close on 15 September 2026.","https://www.keralapsc.gov.in","https://thulasi.psc.kerala.gov.in","https://www.keralapsc.gov.in","official","2026-08-27","SkillCase Editorial Team","Category No 2026/04."
+"UP-UPUMS-NURSE-2026","nursing","job","upums-saifai-up-state-medical-colleges-nursing-officer-computer-based-examination-2026-2026","Nursing Officer (Computer Based Examination 2026)","UPUMS Saifai & UP State Medical Colleges","government","Uttar Pradesh","Saifai (Etawah), Lucknow & Kanpur","nursing_officer","B.Sc. Nursing / Post Basic B.Sc. OR GNM with 2 yrs exp in min 50 bedded hospital","0","","531000","1678000","Pay Matrix Level 7 (Rs. 44,900 - 1,42,400)","535","2026-08-15","2026-09-22","","open","What is this?
+A government vacancy for 535 Nursing Officer posts at UPUMS Saifai.
 
 Who can apply?
-B.Sc. Nursing / Post Basic B.Sc. OR GNM with 2 yrs exp in min 50 bedded hospital. Freshers and experienced candidates eligible.
+B.Sc. Nursing (0 exp) OR GNM with 2 yrs exp in min 50 bed hospital.
 
 Important dates:
-Applications close on 22 September 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by shortlisting, clinical skill evaluation, and interview.","https://www.upums.ac.in/pdf/Advt_Nursing_Officer_2026.pdf","https://www.upums.ac.in/apply-online","https://www.upums.ac.in","official","2026-08-28"
-"RAJ-RSSB-NURSE-2026","nursing","exam","Rajasthan Staff Nurse (GNM) Direct Recruitment Exam 2026","Rajasthan Staff Selection Board (RSMSSB)","","","","staff_nurse","GNM Course or equivalent with RNC (Rajasthan Nursing Council) Registration","0","","390000","840000","Pay Matrix Level L-11 (Rs. 37,800 - 1,19,700)","1588","2026-08-08","2026-09-18","2026-11-08","open","What is this?
-A national / state recruitment examination for Rajasthan Staff Nurse (GNM) Direct Recruitment Exam 2026 at Rajasthan Staff Selection Board (RSMSSB) (1588 posts announced).
+Applications close on 22 September 2026.","https://www.upums.ac.in","https://www.upums.ac.in","https://www.upums.ac.in","official","2026-08-27","SkillCase Editorial Team","CBT mode selection."
+"RAJ-RSSB-NURSE-2026","nursing","exam","rajasthan-staff-selection-board-rsmssb-rajasthan-staff-nurse-gnm-direct-recruitment-exam-2026","Rajasthan Staff Nurse (GNM) Direct Recruitment Exam 2026","Rajasthan Staff Selection Board (RSMSSB)","","","","staff_nurse","GNM Course or equivalent with RNC (Rajasthan Nursing Council) Registration","0","","405000","860000","Pay Matrix Level L-10 (Rs. 33,800 - 1,06,700)","1588","2026-08-08","2026-09-18","2026-11-08","open","What is this?
+A state recruitment examination for 1,588 Staff Nurse (GNM) posts at RSMSSB.
 
 Who can apply?
-GNM Course or equivalent with RNC (Rajasthan Nursing Council) Registration. Freshers and experienced candidates eligible.
+GNM Course or equivalent with RNC Registration.
 
 Important dates:
-Applications close on 18 September 2026. Examination scheduled for 8 November 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by Computer-Based Test (CBT) and centralized counselling.","https://rsmssb.rajasthan.gov.in/Static/files/Advt_GNM_Nurse_2026.pdf","https://sso.rajasthan.gov.in/","https://rsmssb.rajasthan.gov.in","official","2026-08-28"
-"WB-WBHRB-NURSE-2026","nursing","job","Staff Nurse Grade II (Basic B.Sc. & GNM Cadre)","West Bengal Health Recruitment Board (WBHRB)","government","West Bengal","Kolkata & District Hospital Sub-Divisions","staff_nurse","GNM or Basic B.Sc. Nursing or Post Basic with WBNC Registration & Bengali fluency","0","","380000","820000","Pay Matrix Level 9 (Rs. 28,900 - 74,500) + WB State DA/HRA","2100","2026-08-14","2026-09-26","","open","What is this?
-A permanent / contractual government vacancy for Staff Nurse Grade II (Basic B.Sc. & GNM Cadre) at West Bengal Health Recruitment Board (WBHRB) (2100 posts announced).
+Applications close on 18 September 2026. Examination scheduled for 8 November 2026.","https://rsmssb.rajasthan.gov.in","https://sso.rajasthan.gov.in","https://rsmssb.rajasthan.gov.in","official","2026-08-27","SkillCase Editorial Team","Rajasthan GNM direct recruitment."
+"WB-WBHRB-NURSE-2026","nursing","job","west-bengal-health-recruitment-board-wbhrb-staff-nurse-grade-ii-basic-b-sc-gnm-cadre-2026","Staff Nurse Grade II (Basic B.Sc. & GNM Cadre)","West Bengal Health Recruitment Board (WBHRB)","government","West Bengal","Kolkata & Sub-Divisional Medical Colleges","staff_nurse","GNM or Basic B.Sc. Nursing with WBNC Registration","0","","425000","890000","Pay Level 9 (Rs. 28,900 - 74,500 + Uniform & Wash Allowance)","1150","2026-08-14","2026-09-25","","open","What is this?
+A government vacancy for 1,150 Staff Nurse Grade II posts at WBHRB.
 
 Who can apply?
-GNM or Basic B.Sc. Nursing or Post Basic with WBNC Registration & Bengali fluency. Freshers and experienced candidates eligible.
+GNM or Basic B.Sc. Nursing with West Bengal Nursing Council (WBNC) registration.
 
 Important dates:
-Applications close on 26 September 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by shortlisting, clinical skill evaluation, and interview.","https://wbhrb.in/advertisement/Staff_Nurse_Gr_II_2026.pdf","https://wbhrb.in/online-application","https://wbhrb.in","official","2026-08-28"
-"BIHAR-BTSC-NURSE-2026","nursing","job","Staff Nurse Grade A (Bihar Health Subordinate Cadre)","Bihar Technical Service Commission (BTSC)","government","Bihar","Patna, Gaya, Muzaffarpur & District Sub-Divisions","staff_nurse","GNM Training Certificate / B.Sc. Nursing with BNRC (Bihar Nursing Registration Council)","0","","531000","1678000","Pay Level 7 (Rs. 44,900 - 1,42,400 Grade Pay Rs. 4600)","10709","2026-08-01","2026-09-12","","open","What is this?
-A permanent / contractual government vacancy for Staff Nurse Grade A (Bihar Health Subordinate Cadre) at Bihar Technical Service Commission (BTSC) (10709 posts announced).
+Applications close on 25 September 2026.","https://www.wbhrb.in","https://www.wbhrb.in","https://www.wbhrb.in","official","2026-08-27","SkillCase Editorial Team","WB health cadre."
+"BIHAR-BTSC-NURSE-2026","nursing","job","bihar-technical-service-commission-btsc-tutor-staff-nurse-a-grade-recruitment-2026","Staff Nurse (A-Grade) / Nursing Tutor","Bihar Technical Service Commission (BTSC)","government","Bihar","Patna & District Sadar Hospitals","staff_nurse","GNM Diploma or B.Sc. Nursing with BNRC Registration","0","","450000","960000","Pay Scale Level 7 (Rs. 44,900 - 1,42,400)","1200","2026-08-05","2026-09-20","","open","What is this?
+A government vacancy for 1,200 Staff Nurse (A-Grade) posts at BTSC Bihar.
 
 Who can apply?
-GNM Training Certificate / B.Sc. Nursing with BNRC (Bihar Nursing Registration Council). Freshers and experienced candidates eligible.
+GNM Diploma or B.Sc. Nursing with Bihar Nursing Registration Council (BNRC) registration.
 
 Important dates:
-Applications close on 12 September 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by shortlisting, clinical skill evaluation, and interview.","https://btsc.bihar.gov.in/pdf/Staff_Nurse_Gr_A_Notice_2026.pdf","https://btsc.bihar.gov.in/online-apply","https://btsc.bihar.gov.in","official","2026-08-28"
-"TS-MHSRB-NURSE-2026","nursing","exam","Staff Nurse Recruitment Examination 2026","Medical Health Services Recruitment Board (MHSRB Telangana)","","","","staff_nurse","GNM or B.Sc. Nursing with Telangana State Nursing Council Registration","0","","450000","960000","Scale of Pay Rs. 36,750 - 89,200 (TS Revised Pay Scales)","1240","2026-08-16","2026-09-28","2026-11-22","open","What is this?
-A national / state recruitment examination for Staff Nurse Recruitment Examination 2026 at Medical Health Services Recruitment Board (MHSRB Telangana) (1240 posts announced).
+Applications close on 20 September 2026.","https://btsc.bih.nic.in","https://btsc.bih.nic.in","https://btsc.bih.nic.in","official","2026-08-27","SkillCase Editorial Team","BTSC Advt 01/2026."
+"TS-MHSRB-NURSE-2026","nursing","exam","medical-health-services-recruitment-board-mhsrb-telangana-staff-nurse-recruitment-examination-2026","Staff Nurse Recruitment Examination 2026","Medical Health Services Recruitment Board (MHSRB Telangana)","","","","staff_nurse","GNM or B.Sc. Nursing with Telangana State Nursing Council Registration","0","","440000","950000","Scale of Pay Rs. 36,750 - 89,250 (Telangana Revised Scale)","1240","2026-08-16","2026-09-28","2026-11-22","open","What is this?
+A state recruitment examination for 1,240 Staff Nurse posts at MHSRB Telangana.
 
 Who can apply?
-GNM or B.Sc. Nursing with Telangana State Nursing Council Registration. Freshers and experienced candidates eligible.
+GNM or B.Sc. Nursing with Telangana State Nursing Council Registration.
 
 Important dates:
-Applications close on 28 September 2026. Examination scheduled for 22 November 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by Computer-Based Test (CBT) and centralized counselling.","https://mhsrb.telangana.gov.in/docs/Staff_Nurse_Advt_03_2026.pdf","https://mhsrb.telangana.gov.in/online-application","https://mhsrb.telangana.gov.in","official","2026-08-28"
-"ODISHA-OSSSC-NURSE-2026","nursing","job","Nursing Officer (District Cadre Group C)","Odisha Sub-ordinate Staff Selection Commission (OSSSC)","government","Odisha","Bhubaneswar, Cuttack & District Headquarters","nursing_officer","B.Sc. Nursing or GNM with ONMRC Registration & Odia language proficiency","0","","360000","780000","Pay Scale Level 8 (Rs. 29,200 - 92,300)","7483","2026-08-10","2026-09-25","","open","What is this?
-A permanent / contractual government vacancy for Nursing Officer (District Cadre Group C) at Odisha Sub-ordinate Staff Selection Commission (OSSSC) (7483 posts announced).
+Applications close on 28 September 2026. Examination scheduled for 22 November 2026.","https://mhsrb.telangana.gov.in","https://mhsrb.telangana.gov.in","https://mhsrb.telangana.gov.in","official","2026-08-27","SkillCase Editorial Team","Includes service weightage."
+"ODISHA-OSSSC-NURSE-2026","nursing","job","odisha-sub-ordinate-staff-selection-commission-osssc-nursing-officer-district-cadre-2026","Nursing Officer (District Cadre Group C)","Odisha Sub-ordinate Staff Selection Commission (OSSSC)","government","Odisha","Bhubaneswar, Cuttack & District Headquarters Hospitals","nursing_officer","B.Sc. Nursing or GNM with ONMRC Registration","0","","380000","820000","Pay Matrix Level 8 (Rs. 29,200 - 92,300)","750","2026-08-11","2026-09-26","","open","What is this?
+A government vacancy for 750 Nursing Officer posts at OSSSC Odisha.
 
 Who can apply?
-B.Sc. Nursing or GNM with ONMRC Registration & Odia language proficiency. Freshers and experienced candidates eligible.
+B.Sc. Nursing or GNM with Odisha Nursing Council (ONMRC) registration.
 
 Important dates:
-Applications close on 25 September 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by shortlisting, clinical skill evaluation, and interview.","https://www.osssc.gov.in/Public/Pages/Notice_Nursing_Officer_2026.pdf","https://www.osssc.gov.in/Public/Pages/ApplyOnline.aspx","https://www.osssc.gov.in","official","2026-08-28"
-"GUJ-GMC-NURSE-2026","nursing","job","Staff Nurse Class III (Commissioner of Health & Medical Education)","Gujarat Medical Services / OJAS Gujarat","government","Gujarat","Ahmedabad, Vadodara, Surat & Civil Hospitals","staff_nurse","Basic B.Sc. Nursing or GNM with Gujarat Nursing Council (GNC) Registration","0","","380000","820000","Fixed Pay Rs. 26,000 for 5 years, then Level 5 Regular Matrix","1120","2026-08-12","2026-09-20","","open","What is this?
-A permanent / contractual government vacancy for Staff Nurse Class III (Commissioner of Health & Medical Education) at Gujarat Medical Services / OJAS Gujarat (1120 posts announced).
+Applications close on 26 September 2026.","https://www.osssc.gov.in","https://www.osssc.gov.in","https://www.osssc.gov.in","official","2026-08-27","SkillCase Editorial Team","District cadre recruitment."
+"GUJ-GMC-NURSE-2026","nursing","job","gujarat-medical-education-and-research-society-gmers-staff-nurse-class-iii-2026","Staff Nurse (Class III - GMERS Medical Colleges)","Gujarat Medical Services / GMERS","government","Gujarat","Ahmedabad, Vadodara, Surat & Rajkot","staff_nurse","B.Sc. Nursing or GNM with Gujarat Nursing Council (GNC) Registration","0","","390000","850000","Pay Matrix Level 5 (Fixed Rs. 26,000 for 5 years then Regular Level 5)","480","2026-08-17","2026-09-28","","open","What is this?
+A government vacancy for 480 Staff Nurse posts at GMERS Gujarat.
 
 Who can apply?
-Basic B.Sc. Nursing or GNM with Gujarat Nursing Council (GNC) Registration. Freshers and experienced candidates eligible.
+B.Sc. Nursing or GNM with Gujarat Nursing Council (GNC) Registration.
 
 Important dates:
-Applications close on 20 September 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by shortlisting, clinical skill evaluation, and interview.","https://ojas.gujarat.gov.in/AdvtDetailFiles/GMC_Staff_Nurse_2026.pdf","https://ojas.gujarat.gov.in/AdvtList.aspx?type=lCxEnhanced","https://ojas.gujarat.gov.in","official","2026-08-28"
-"MP-NHM-NURSE-2026","nursing","job","Staff Nurse (Female & Male) Contractual Vacancies","National Health Mission Madhya Pradesh (MP NHM)","government","Madhya Pradesh","Bhopal, Indore, Jabalpur & Gwalior","staff_nurse","B.Sc. Nursing or GNM with MP Nursing Registration Council (MPNRC)","0","","300000","420000","Honorarium Rs. 20,000 / month (Contractual)","960","2026-08-15","2026-09-25","","open","What is this?
-A permanent / contractual government vacancy for Staff Nurse (Female & Male) Contractual Vacancies at National Health Mission Madhya Pradesh (MP NHM) (960 posts announced).
+Applications close on 28 September 2026.","https://gmers.gujarat.gov.in","https://ojas.gujarat.gov.in","https://gmers.gujarat.gov.in","official","2026-08-27","SkillCase Editorial Team","OJAS portal application."
+"MP-NHM-NURSE-2026","nursing","job","national-health-mission-nhm-madhya-pradesh-contractual-staff-nurse-recruitment-2026","Contractual Staff Nurse (National Health Mission MP)","National Health Mission (NHM Madhya Pradesh)","government","Madhya Pradesh","Bhopal, Indore, Jabalpur & District Hospitals","staff_nurse","B.Sc. Nursing or GNM with MPNRC Live Registration","0","","240000","360000","Fixed Honorarium Rs. 20,000 / month","620","2026-08-10","2026-09-25","","open","What is this?
+A government vacancy for 620 Contractual Staff Nurse posts at NHM MP.
 
 Who can apply?
-B.Sc. Nursing or GNM with MP Nursing Registration Council (MPNRC). Freshers and experienced candidates eligible.
+B.Sc. Nursing or GNM with MPNRC Live Registration.
 
 Important dates:
-Applications close on 25 September 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by shortlisting, clinical skill evaluation, and interview.","https://www.mponline.gov.in/Quick%20Links/NHM/Doc/Staff_Nurse_Advt_2026.pdf","https://www.mponline.gov.in","https://www.mponline.gov.in","official","2026-08-28"
-"MANIPAL-BLR-ICU-2026","nursing","job","Staff Nurse — Medical & Surgical ICU","Manipal Hospital","private","Karnataka","Bangalore (Old Airport Road & Whitefield)","icu","B.Sc. Nursing or GNM with 2+ years ICU experience","2","","360000","480000","Rs. 30,000 - 40,000 / month + Critical Care Shift Allowance","15","2026-08-01","2026-09-30","","open","What is this?
-A private super-speciality hospital vacancy for Staff Nurse — Medical & Surgical ICU at Manipal Hospital (15 posts announced).
+Applications close on 25 September 2026.","https://nhmmp.gov.in","https://www.mponline.gov.in","https://nhmmp.gov.in","official","2026-08-27","SkillCase Editorial Team","MPOnline portal registration."
+"MANIPAL-BLR-ICU-2026","nursing","job","manipal-hospital-bengaluru-senior-icu-nurse-critical-care-unit-2026","Senior ICU Nurse (Critical Care Unit)","Manipal Hospital Bengaluru","private","Karnataka","Bengaluru (Old Airport Road & Whitefield)","icu","B.Sc. Nursing / GNM + min 2 yrs experience in Medical/Surgical ICU","2","","360000","540000","Rs. 30,000 - 45,000 / month (based on experience & clinical score)","18","2026-08-01","2026-09-30","","open","What is this?
+A private healthcare opportunity for 18 Senior ICU Nurse posts at Manipal Hospital Bengaluru.
 
 Who can apply?
-B.Sc. Nursing or GNM with 2+ years ICU experience. Minimum 2 years clinical experience required.
+B.Sc. Nursing / GNM + min 2 yrs experience in Medical/Surgical ICU.
 
 Important dates:
-Applications close on 30 September 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by shortlisting, clinical skill evaluation, and interview.","https://careers.manipalhospitals.com/manipalhospitals/jobslist?department=Nursing&location=Bangalore","https://careers.manipalhospitals.com/manipalhospitals/jobslist?department=Nursing&location=Bangalore","https://careers.manipalhospitals.com","official","2026-08-28"
-"APOLLO-CHN-OT-2026","nursing","job","Operation Theatre (OT) Staff Nurse","Apollo Hospitals","private","Tamil Nadu","Chennai (Greams Road)","ot","B.Sc. Nursing or GNM with 1+ years OT experience","1","","320000","450000","Rs. 26,000 - 38,000 / month","8","2026-08-10","2026-09-25","","open","What is this?
-A private super-speciality hospital vacancy for Operation Theatre (OT) Staff Nurse at Apollo Hospitals (8 posts announced).
+Applications close on 30 September 2026.","https://www.manipalhospitals.com/careers/","https://www.manipalhospitals.com/careers/","https://www.manipalhospitals.com","official","2026-08-27","SkillCase Editorial Team","NABH accredited tertiary hospital."
+"APOLLO-CHN-OT-2026","nursing","job","apollo-hospitals-greams-road-staff-nurse-operation-theatre-surgical-suites-2026","Staff Nurse (Operation Theatre & Surgical Suites)","Apollo Hospitals Greams Road","private","Tamil Nadu","Chennai (Greams Road)","ot","B.Sc. Nursing or GNM with 1+ yr experience in OT scrubbing & sterile prep","1","","340000","500000","Rs. 28,000 - 42,000 / month + Shift Allowances","25","2026-08-05","2026-09-25","","open","What is this?
+A private healthcare opportunity for 25 Staff Nurse posts at Apollo Hospitals Greams Road Chennai.
 
 Who can apply?
-B.Sc. Nursing or GNM with 1+ years OT experience. Minimum 1 years clinical experience required.
+B.Sc. Nursing or GNM with 1+ yr experience in OT scrubbing & sterile prep.
 
 Important dates:
-Applications close on 25 September 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by shortlisting, clinical skill evaluation, and interview.","https://careers-myhr-apollo.peoplestrong.com/job/detail/APG_SN_1842843","https://careers-myhr-apollo.peoplestrong.com/job/detail/APG_SN_1842843","https://careers-myhr-apollo.peoplestrong.com/job/joblist","official","2026-08-28"
-"MAX-DELHI-ER-2026","nursing","job","Emergency & Trauma Ward Staff Nurse","Max Healthcare","private","Delhi","Saket & Patparganj, New Delhi","emergency","B.Sc. Nursing with BLS/ACLS and 1-3 years ER experience","1","","380000","520000","Rs. 32,000 - 44,000 / month","10","2026-08-15","2026-10-10","","open","What is this?
-A private super-speciality hospital vacancy for Emergency & Trauma Ward Staff Nurse at Max Healthcare (10 posts announced).
+Applications close on 25 September 2026.","https://careers.apollohospitals.com","https://careers.apollohospitals.com","https://www.apollohospitals.com","official","2026-08-27","SkillCase Editorial Team","JCI accredited facility."
+"MAX-DELHI-ER-2026","nursing","job","max-super-speciality-hospital-saket-emergency-trauma-care-staff-nurse-2026","Emergency & Trauma Care Staff Nurse","Max Super Speciality Hospital Saket","private","Delhi","New Delhi (Saket & Shalimar Bagh)","emergency","B.Sc. Nursing + 1+ yr experience in Emergency Triage / Trauma with BLS/ACLS","1","","380000","580000","Rs. 32,000 - 48,000 / month + Night Shift Allowance","20","2026-08-08","2026-09-28","","open","What is this?
+A private healthcare opportunity for 20 Emergency Staff Nurse posts at Max Super Speciality Hospital Saket.
 
 Who can apply?
-B.Sc. Nursing with BLS/ACLS and 1-3 years ER experience. Minimum 1 years clinical experience required.
+B.Sc. Nursing with 1+ yr experience in Emergency Triage / Trauma.
 
 Important dates:
-Applications close on 10 October 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by shortlisting, clinical skill evaluation, and interview.","https://www.maxhealthcare.in/careers/nursing-jobs-saket","https://www.maxhealthcare.in/careers/nursing-jobs-saket","https://www.maxhealthcare.in","official","2026-08-28"
-"FORTIS-MUM-CATH-2026","nursing","job","Cath Lab & Cardiac Care Staff Nurse","Fortis Healthcare","private","Maharashtra","Mumbai (Mulund & Kalyan)","cardiac_icu","B.Sc. Nursing or GNM with 2+ years Cardiac / Cath Lab experience","2","","400000","550000","Rs. 34,000 - 46,000 / month","6","2026-08-12","2026-09-30","","open","What is this?
-A private super-speciality hospital vacancy for Cath Lab & Cardiac Care Staff Nurse at Fortis Healthcare (6 posts announced).
+Applications close on 28 September 2026.","https://www.maxhealthcare.in/careers","https://www.maxhealthcare.in/careers","https://www.maxhealthcare.in","official","2026-08-27","SkillCase Editorial Team","BLS/ACLS preferred."
+"FORTIS-MUM-CATH-2026","nursing","job","fortis-hospital-mulund-cardiac-catheterization-lab-ccu-staff-nurse-2026","Cardiac Catheterization Lab & CCU Staff Nurse","Fortis Hospital Mulund","private","Maharashtra","Mumbai (Mulund West)","icu","B.Sc. Nursing or GNM with 2+ yrs experience in Cath Lab / Cardiac ICU","2","","400000","620000","Rs. 34,000 - 52,000 / month + Specialty Allowance","12","2026-08-12","2026-10-05","","open","What is this?
+A private healthcare opportunity for 12 Cardiac Cath Lab Nurse posts at Fortis Hospital Mulund Mumbai.
 
 Who can apply?
-B.Sc. Nursing or GNM with 2+ years Cardiac / Cath Lab experience. Minimum 2 years clinical experience required.
+B.Sc. Nursing or GNM with 2+ yrs experience in Cath Lab / Cardiac ICU.
 
 Important dates:
-Applications close on 30 September 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by shortlisting, clinical skill evaluation, and interview.","https://www.fortishealthcare.com/careers/nursing-mumbai","https://www.fortishealthcare.com/careers/nursing-mumbai","https://www.fortishealthcare.com","official","2026-08-28"
-"NH-BLR-PICU-2026","nursing","job","Pediatric ICU (PICU) & NICU Staff Nurse","Narayana Health","private","Karnataka","Bangalore (Narayana Health City, Bommasandra)","pediatric","B.Sc. Nursing / GNM with 1+ years pediatric or neonatal ICU experience","1","","340000","480000","Rs. 28,000 - 40,000 / month","12","2026-08-05","2026-09-28","","open","What is this?
-A private super-speciality hospital vacancy for Pediatric ICU (PICU) & NICU Staff Nurse at Narayana Health (12 posts announced).
+Applications close on 05 October 2026.","https://www.fortishealthcare.com/careers","https://www.fortishealthcare.com/careers","https://www.fortishealthcare.com","official","2026-08-27","SkillCase Editorial Team","Cardiology specialty."
+"APOLLO-BLR-CARD-2026","nursing","job","apollo-hospitals-bannerghatta-cardiac-icu-staff-nurse-2026","Cardiac ICU Staff Nurse","Apollo Hospitals Bannerghatta","private","Karnataka","Bengaluru (Bannerghatta Road)","icu","B.Sc. Nursing or GNM with 2+ yrs experience in Cardiac ICU / CCU","2","","360000","550000","Rs. 30,000 - 46,000 / month + Shift Allowances","15","2026-08-10","2026-10-02","","open","What is this?
+A private healthcare opportunity for 15 Cardiac ICU Staff Nurse posts at Apollo Hospitals Bannerghatta.
 
 Who can apply?
-B.Sc. Nursing / GNM with 1+ years pediatric or neonatal ICU experience. Minimum 1 years clinical experience required.
+B.Sc. Nursing or GNM with 2+ yrs experience in Cardiac ICU / CCU.
 
 Important dates:
-Applications close on 28 September 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by shortlisting, clinical skill evaluation, and interview.","https://careers.narayanahealth.org/job-details/staff-nurse-picu-bangalore","https://careers.narayanahealth.org/job-details/staff-nurse-picu-bangalore","https://careers.narayanahealth.org","official","2026-08-28"
-"MEDANTA-GUR-ONCO-2026","nursing","job","Staff Nurse — Medical Oncology & Day Care Chemotherapy","Medanta The Medicity","private","Haryana","Gurugram (Sector 38)","oncology","B.Sc. Nursing with Chemotherapy administration certification & 1+ yr exp","1","","380000","500000","Rs. 32,000 - 42,000 / month","8","2026-08-10","2026-10-05","","open","What is this?
-A private super-speciality hospital vacancy for Staff Nurse — Medical Oncology & Day Care Chemotherapy at Medanta The Medicity (8 posts announced).
+Applications close on 02 October 2026.","https://careers.apollohospitals.com","https://careers.apollohospitals.com","https://www.apollohospitals.com","official","2026-08-27","SkillCase Editorial Team","Cardiac care unit."
+"NH-BLR-PICU-2026","nursing","job","narayana-health-city-pediatric-icu-picu-staff-nurse-2026","Pediatric ICU (PICU) Staff Nurse","Narayana Health City","private","Karnataka","Bengaluru (Bommasandra)","icu","B.Sc. Nursing / GNM with 1+ yr experience in Pediatric / Neonatal ICU","1","","350000","520000","Rs. 29,000 - 44,000 / month","14","2026-08-04","2026-09-30","","open","What is this?
+A private healthcare opportunity for 14 PICU Nurse posts at Narayana Health City Bengaluru.
 
 Who can apply?
-B.Sc. Nursing with Chemotherapy administration certification & 1+ yr exp. Minimum 1 years clinical experience required.
+B.Sc. Nursing / GNM with 1+ yr experience in Pediatric / Neonatal ICU.
 
 Important dates:
-Applications close on 5 October 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by shortlisting, clinical skill evaluation, and interview.","https://www.medanta.org/careers/nursing-oncology-gurugram","https://www.medanta.org/careers/nursing-oncology-gurugram","https://www.medanta.org","official","2026-08-28"
-"APOLLO-HYD-ICU-2026","nursing","job","Staff Nurse — Neuro & Trauma ICU","Apollo Hospitals Jubilee Hills","private","Telangana","Hyderabad","icu","B.Sc. Nursing or GNM with 2+ years Neuro ICU experience","2","","360000","480000","Rs. 30,000 - 40,000 / month","12","2026-08-14","2026-10-05","","open","What is this?
-A private super-speciality hospital vacancy for Staff Nurse — Neuro & Trauma ICU at Apollo Hospitals Jubilee Hills (12 posts announced).
+Applications close on 30 September 2026.","https://www.narayanahealth.org/careers","https://www.narayanahealth.org/careers","https://www.narayanahealth.org","official","2026-08-27","SkillCase Editorial Team","Pediatric critical care."
+"MEDANTA-GUR-ONCO-2026","nursing","job","medanta-the-medicity-oncology-chemotherapy-staff-nurse-2026","Oncology & Chemotherapy Staff Nurse","Medanta The Medicity","private","Haryana","Gurugram (Sector 38)","ward_nurse","B.Sc. Nursing / GNM with 2+ yrs experience in Medical Oncology / Chemo Administration","2","","420000","650000","Rs. 35,000 - 55,000 / month","10","2026-08-06","2026-10-01","","open","What is this?
+A private healthcare opportunity for 10 Oncology Nurse posts at Medanta The Medicity Gurugram.
 
 Who can apply?
-B.Sc. Nursing or GNM with 2+ years Neuro ICU experience. Minimum 2 years clinical experience required.
+B.Sc. Nursing / GNM with 2+ yrs experience in Medical Oncology / Chemo Administration.
 
 Important dates:
-Applications close on 5 October 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by shortlisting, clinical skill evaluation, and interview.","https://careers-myhr-apollo.peoplestrong.com/job/detail/APG_SN_1839201","https://careers-myhr-apollo.peoplestrong.com/job/detail/APG_SN_1839201","https://careers-myhr-apollo.peoplestrong.com/job/joblist","official","2026-08-28"
-"MANIPAL-JAI-NURSE-2026","nursing","job","Staff Nurse — General Wards & Day Care","Manipal Hospital Jaipur","private","Rajasthan","Jaipur (Vidhyadhar Nagar)","staff_nurse","GNM or B.Sc. Nursing with RNC registration","0","","260000","360000","Rs. 22,000 - 30,000 / month","14","2026-08-18","2026-09-28","","open","What is this?
-A private super-speciality hospital vacancy for Staff Nurse — General Wards & Day Care at Manipal Hospital Jaipur (14 posts announced).
+Applications close on 01 October 2026.","https://www.medanta.org/careers","https://www.medanta.org/careers","https://www.medanta.org","official","2026-08-27","SkillCase Editorial Team","Oncology specialized center."
+"APOLLO-HYD-ICU-2026","nursing","job","apollo-hospitals-jubilee-hills-medical-icu-staff-nurse-2026","Medical ICU Staff Nurse","Apollo Hospitals Jubilee Hills","private","Telangana","Hyderabad (Jubilee Hills)","icu","B.Sc. Nursing / GNM with 1+ yr experience in Critical Care / MICU","1","","350000","530000","Rs. 29,000 - 45,000 / month","16","2026-08-02","2026-09-28","","open","What is this?
+A private healthcare opportunity for 16 Medical ICU Staff Nurse posts at Apollo Hospitals Jubilee Hills.
 
 Who can apply?
-GNM or B.Sc. Nursing with RNC registration. Freshers and experienced candidates eligible.
+B.Sc. Nursing / GNM with 1+ yr experience in Critical Care / MICU.
 
 Important dates:
-Applications close on 28 September 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by shortlisting, clinical skill evaluation, and interview.","https://careers.manipalhospitals.com/manipalhospitals/jobslist?department=Nursing&location=Jaipur","https://careers.manipalhospitals.com/manipalhospitals/jobslist?department=Nursing&location=Jaipur","https://careers.manipalhospitals.com","official","2026-08-28"
-"FORTIS-KOL-OT-2026","nursing","job","Surgical OT & Recovery Room Staff Nurse","Fortis Hospital Kolkata","private","West Bengal","Kolkata (Anandapur)","ot","B.Sc. Nursing / GNM with 1+ years surgical OT experience","1","","300000","420000","Rs. 25,000 - 35,000 / month","6","2026-08-20","2026-10-12","","open","What is this?
-A private super-speciality hospital vacancy for Surgical OT & Recovery Room Staff Nurse at Fortis Hospital Kolkata (6 posts announced).
+Applications close on 28 September 2026.","https://careers.apollohospitals.com","https://careers.apollohospitals.com","https://www.apollohospitals.com","official","2026-08-27","SkillCase Editorial Team","NABH & JCI accredited."
+"MANIPAL-JAI-NURSE-2026","nursing","job","manipal-hospital-jaipur-inpatient-ward-staff-nurse-2026","Inpatient Ward Staff Nurse","Manipal Hospital Jaipur","private","Rajasthan","Jaipur (Vidhyadhar Nagar)","ward_nurse","B.Sc. Nursing / GNM with 1+ yr experience in Inpatient / Post-Op Care","1","","300000","440000","Rs. 25,000 - 37,000 / month","12","2026-08-05","2026-09-26","","open","What is this?
+A private healthcare opportunity for 12 Inpatient Ward Nurse posts at Manipal Hospital Jaipur.
 
 Who can apply?
-B.Sc. Nursing / GNM with 1+ years surgical OT experience. Minimum 1 years clinical experience required.
+B.Sc. Nursing / GNM with 1+ yr experience in Inpatient / Post-Op Care.
 
 Important dates:
-Applications close on 12 October 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by shortlisting, clinical skill evaluation, and interview.","https://www.fortishealthcare.com/careers/nursing-kolkata","https://www.fortishealthcare.com/careers/nursing-kolkata","https://www.fortishealthcare.com","official","2026-08-28"
-"APOLLO-BLR-CARD-2026","nursing","job","Staff Nurse — Cardiac Catheterization Lab & CCU","Apollo Hospitals Bangalore","private","Karnataka","Bangalore (Bannerghatta Road & Jayanagar)","cardiac_icu","B.Sc. Nursing or GNM with 2+ years CCU / Cath Lab experience","2","","380000","500000","Rs. 32,000 - 42,000 / month","10","2026-08-22","2026-10-15","","open","What is this?
-A private super-speciality hospital vacancy for Staff Nurse — Cardiac Catheterization Lab & CCU at Apollo Hospitals Bangalore (10 posts announced).
+Applications close on 26 September 2026.","https://www.manipalhospitals.com/careers/","https://www.manipalhospitals.com/careers/","https://www.manipalhospitals.com","official","2026-08-27","SkillCase Editorial Team","Inpatient surgical & medical wards."
+"FORTIS-KOL-OT-2026","nursing","job","fortis-hospital-anandapur-operation-theatre-staff-nurse-2026","Operation Theatre Staff Nurse","Fortis Hospital Anandapur","private","West Bengal","Kolkata (Anandapur)","ot","B.Sc. Nursing / GNM with 2+ yrs experience in Surgical OT & Scrubbing","2","","340000","510000","Rs. 28,000 - 43,000 / month","10","2026-08-07","2026-09-29","","open","What is this?
+A private healthcare opportunity for 10 Operation Theatre Nurse posts at Fortis Hospital Kolkata.
 
 Who can apply?
-B.Sc. Nursing or GNM with 2+ years CCU / Cath Lab experience. Minimum 2 years clinical experience required.
+B.Sc. Nursing / GNM with 2+ yrs experience in Surgical OT & Scrubbing.
 
 Important dates:
-Applications close on 15 October 2026.
-
-What do you need?
-State Nursing Council or INC registration certificate, qualification degree/diploma certificates, and government ID proof.
-
-What happens next?
-Online application submission followed by shortlisting, clinical skill evaluation, and interview.","https://careers-myhr-apollo.peoplestrong.com/job/detail/APG_SN_1845112","https://careers-myhr-apollo.peoplestrong.com/job/detail/APG_SN_1845112","https://careers-myhr-apollo.peoplestrong.com/job/joblist","official","2026-08-28"
+Applications close on 29 September 2026.","https://www.fortishealthcare.com/careers","https://www.fortishealthcare.com/careers","https://www.fortishealthcare.com","official","2026-08-27","SkillCase Editorial Team","Tertiary multi-specialty surgical suites."

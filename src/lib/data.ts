@@ -2,6 +2,24 @@ import { INITIAL_JOBS, INITIAL_EXAMS, INITIAL_REQUIREMENTS, MockJob, MockExam, M
 
 export { INITIAL_JOBS, INITIAL_EXAMS, INITIAL_REQUIREMENTS };
 
+/**
+ * Opportunity Lifecycle State Machine:
+ * "open -> closed: deadline passed -> System, computed at read time — never trust source-reported status alone."
+ */
+export function computeOpportunityStatus(item: {
+  applicationDeadline?: string;
+  examDate?: string;
+  status: 'open' | 'upcoming' | 'closed' | 'expired';
+}): 'open' | 'upcoming' | 'closed' | 'expired' {
+  if (item.applicationDeadline) {
+    const deadlineTime = new Date(item.applicationDeadline).getTime();
+    if (!isNaN(deadlineTime) && Date.now() > deadlineTime) {
+      return 'closed';
+    }
+  }
+  return item.status;
+}
+
 export interface OpportunityFilters {
   profession?: string;
   type?: 'government' | 'private' | 'all';
@@ -11,7 +29,10 @@ export interface OpportunityFilters {
 }
 
 export async function getJobs(filters: OpportunityFilters = {}): Promise<MockJob[]> {
-  let list = [...INITIAL_JOBS];
+  let list = INITIAL_JOBS.map((j) => ({
+    ...j,
+    status: computeOpportunityStatus(j),
+  }));
 
   if (filters.profession && filters.profession !== 'all') {
     list = list.filter((j) => j.professionCode === filters.profession);
@@ -63,11 +84,18 @@ export async function getJobBySlug(profession: string, slug: string): Promise<Mo
   const job = INITIAL_JOBS.find(
     (j) => j.professionCode === profession && j.slug === slug
   );
-  return job || null;
+  if (!job) return null;
+  return {
+    ...job,
+    status: computeOpportunityStatus(job),
+  };
 }
 
 export async function getExams(filters: { search?: string; status?: string } = {}): Promise<MockExam[]> {
-  let list = [...INITIAL_EXAMS];
+  let list = INITIAL_EXAMS.map((e) => ({
+    ...e,
+    status: computeOpportunityStatus(e),
+  }));
 
   if (filters.status && filters.status !== 'all') {
     list = list.filter((e) => e.status === filters.status);
@@ -89,7 +117,11 @@ export async function getExamBySlug(profession: string, slug: string): Promise<M
   const exam = INITIAL_EXAMS.find(
     (e) => e.professionCode === profession && e.slug === slug
   );
-  return exam || null;
+  if (!exam) return null;
+  return {
+    ...exam,
+    status: computeOpportunityStatus(exam),
+  };
 }
 
 export async function getRequirementsForOpportunity(options: {
