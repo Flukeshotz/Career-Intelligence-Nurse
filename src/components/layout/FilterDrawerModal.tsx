@@ -28,12 +28,14 @@ export function FilterDrawerModal({ isOpen, onClose, initialType = 'all' }: Filt
 
   // Filter State
   const [selectedType, setSelectedType] = useState<'all' | 'exams' | 'jobs'>(initialType);
-  const [selectedSector, setSelectedSector] = useState<'all' | 'central' | 'railways' | 'defense' | 'state' | 'private'>('all');
+  const [selectedSector, setSelectedSector] = useState<'all' | 'central' | 'railways' | 'defense' | 'state' | 'private' | 'abroad'>('all');
   const [selectedQualification, setSelectedQualification] = useState<'all' | 'bsc' | 'gnm' | 'msc'>('all');
   const [sortBy, setSortBy] = useState<'urgent' | 'vacancies' | 'exam_date' | 'alphabetical'>('urgent');
 
   // Compute live match count based on active filters
   const matchedCount = useMemo(() => {
+    if (selectedSector === 'abroad') return 3; // 3 primary destination programs (Ireland, Germany, UAE)
+
     let examsList = selectedType === 'jobs' ? [] : INITIAL_EXAMS;
     let jobsList = selectedType === 'exams' ? [] : INITIAL_JOBS;
 
@@ -69,7 +71,9 @@ export function FilterDrawerModal({ isOpen, onClose, initialType = 'all' }: Filt
 
   const handleApply = () => {
     onClose();
-    if (selectedType === 'jobs') {
+    if (selectedSector === 'abroad') {
+      router.push('/nursing/abroad');
+    } else if (selectedType === 'jobs') {
       router.push(`/nursing/jobs?sector=${selectedSector}&qual=${selectedQualification}&sort=${sortBy}`);
     } else {
       router.push(`/nursing/exams?sector=${selectedSector}&qual=${selectedQualification}&sort=${sortBy}`);
@@ -248,6 +252,7 @@ export function FilterDrawerModal({ isOpen, onClose, initialType = 'all' }: Filt
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
               {[
                 { id: 'all', label: 'All Sectors' },
+                { id: 'abroad', label: '✈️ Abroad (Ireland, Germany, UAE)' },
                 { id: 'central', label: '🏛️ Central Govt & AIIMS' },
                 { id: 'railways', label: '🚆 Indian Railways' },
                 { id: 'defense', label: '🛡️ Army & MNS' },

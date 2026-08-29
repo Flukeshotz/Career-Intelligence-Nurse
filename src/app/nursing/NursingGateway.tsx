@@ -429,7 +429,53 @@ export default function NursingGateway() {
               </Link>
             </div>
 
-            {/* Row 2: Full-Width Previous Papers & PYQs Card */}
+            {/* Row 2: Full-Width Abroad & Global Nursing Card */}
+            <Link
+              href="/nursing/abroad"
+              style={{
+                background: 'linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%)',
+                border: '1px solid #bae6fd',
+                borderRadius: '16px',
+                padding: '14px 16px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '12px',
+                textDecoration: 'none',
+                boxShadow: '0 2px 6px rgba(14, 165, 233, 0.06)',
+                transition: 'all 0.12s ease',
+              }}
+            >
+              <div
+                style={{
+                  width: '38px',
+                  height: '38px',
+                  borderRadius: '50%',
+                  background: '#0284c7',
+                  color: '#ffffff',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                  fontSize: '1.05rem',
+                }}
+              >
+                ✈️
+              </div>
+
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <div style={{ fontSize: '0.88rem', fontWeight: 800, color: '#0f172a' }}>
+                    Abroad &amp; Global Nursing Jobs
+                  </div>
+                  <ChevronRight size={15} color="#0369a1" />
+                </div>
+                <div style={{ fontSize: '0.74rem', color: '#0369a1', marginTop: '2px', fontWeight: 600 }}>
+                  🇮🇪 Ireland · 🇩🇪 Germany · 🇦🇪 UAE (₹32L–₹48L/yr)
+                </div>
+              </div>
+            </Link>
+
+            {/* Row 3: Full-Width Previous Papers & PYQs Card */}
             <Link
               href="/nursing/pyq"
               style={{
@@ -475,7 +521,7 @@ export default function NursingGateway() {
               </div>
             </Link>
 
-            {/* Row 3: Full-Width Maya Career Assistant Card */}
+            {/* Row 4: Full-Width Maya Career Assistant Card */}
             <div
               onClick={() => setIsMayaOpen(true)}
               role="button"
