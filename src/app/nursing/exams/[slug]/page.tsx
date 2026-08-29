@@ -254,7 +254,7 @@ export default async function ExamDetailPage({
       {/* ── 6. CONTEXTUAL MAYA INTELLIGENCE CARD ── */}
       <div style={{ marginBottom: '20px' }}>
         <MayaCard
-          title={`Ask Maya about ${exam.name}`}
+          title={`Ask Maya about ${exam.name.split('(')[0].trim()}`}
           pageContext="exam"
           opportunity={{
             id: exam.id,
@@ -272,10 +272,10 @@ export default async function ExamDetailPage({
             descriptionSimple: exam.descriptionSimple,
           }}
           suggestedPrompts={[
-            'What are the past year cutoff percentiles?',
-            'What is the exam syllabus?',
-            'What is the marking scheme & negative marking?',
-            'Am I eligible for this exam?'
+            '🎯 Past Cutoff Percentiles',
+            '📋 Check My Eligibility',
+            '⏱️ CBT Exam Pattern',
+            '📚 High-Yield Topics'
           ]}
         />
       </div>
