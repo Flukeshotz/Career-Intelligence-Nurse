@@ -2738,6 +2738,326 @@ export const DETAILED_EXAM_INTELLIGENCE: Record<string, DetailedExamInfo> = {
         answer: 'Major SAIL hospitals include JLN Hospital & Research Centre Bhilai (1,000 beds), Ispat General Hospital Rourkela (600 beds), Bokaro General Hospital (900 beds), and Durgapur Steel Plant Hospital (600 beds).'
       }
     ]
+  },
+
+  // ─── 46. AIIMS B.SC. (HONS) NURSING ENTRANCE ───────────────────────────────
+  'exam-aiims-bsc-entrance-2026': {
+    examId: 'exam-aiims-bsc-entrance-2026',
+    officialCadre: 'B.Sc. (Hons) Nursing Trainee (4-Year Undergraduate Degree at 16 AIIMS)',
+    payMatrixLevel: 'Monthly Academic Stipend (₹500/mo) + Free Accommodation during Training',
+    basicPay: 'Academic Admission / Degree',
+    grossSalaryMonthly: 'Trainee Stipend -> Direct eligibility for Level 7 AIIMS NORCET upon graduation',
+    ageLimitDetails: 'Minimum 17 Years as on 31st December of the admission year (Female only for B.Sc. Hons)',
+    ageRelaxations: 'SC/ST: 5% lower qualifying cutoff in 10+2 (50% aggregate)',
+    stages: [
+      {
+        stageName: 'National Computer Based Entrance Examination (CBT)',
+        totalQuestions: 100,
+        totalMarks: 100,
+        durationMinutes: 120,
+        mode: 'CBT (Online)',
+        negativeMarking: '0.33 (1/3rd) mark deduction for each incorrect response',
+        qualifyingMarks: 'UR/EWS: 50% | OBC: 45% | SC/ST: 40%',
+        description: 'Physics (30 Qs), Chemistry (30 Qs), Biology (30 Qs), General Knowledge & Logic (10 Qs).'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Biology (Botany & Zoology — 30 Questions)',
+        weightagePercent: 30,
+        highYieldTopics: [
+          'Human Physiology: Digestive, Respiratory, Circulatory, Excretory, Neural, Endocrine systems',
+          'Genetics & Evolution: Mendelian inheritance, Molecular basis of inheritance',
+          'Human Reproduction & Reproductive Health, Biotechnology principles'
+        ]
+      },
+      {
+        subject: 'Physics (Class 11 & 12 NCERT — 30 Questions)',
+        weightagePercent: 30,
+        highYieldTopics: [
+          'Electrostatics, Current Electricity, Optics, Thermodynamics, Laws of Motion, Modern Physics'
+        ]
+      },
+      {
+        subject: 'Chemistry (Class 11 & 12 NCERT — 30 Questions)',
+        weightagePercent: 30,
+        highYieldTopics: [
+          'Organic Chemistry: Biomolecules, Hydrocarbons, Aldehydes & Ketones',
+          'Inorganic Chemistry: Coordination Compounds, Chemical Bonding',
+          'Physical Chemistry: Solutions, Electrochemistry, Chemical Kinetics'
+        ]
+      },
+      {
+        subject: 'General Knowledge & Reasoning (10 Questions)',
+        weightagePercent: 10,
+        highYieldTopics: [
+          'National Current Affairs, Famous Scientists & Discoveries, Logical Reasoning'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Master Class 11 & 12 NCERT Biology line-by-line — Biology carries 30 high-scoring questions.',
+      'Practice with previous AIIMS B.Sc. Nursing CBT papers to build speed under 1/3rd negative marking.'
+    ],
+    selectionSteps: [
+      'Step 1: PAAR Basic Registration & Code Generation on aiimsexams.ac.in',
+      'Step 2: National CBT Entrance Test (100 Marks)',
+      'Step 3: Online Seat Allocation across 16 AIIMS Institutes (Delhi, Bhopal, Bhubaneswar, Jodhpur, Patna, Raipur, Rishikesh, Bathinda, Deoghar, Gorakhpur, Kalyani, Bilaspur, Nagpur, Mangalagiri, Bibinagar, Jammu)'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Are male candidates eligible for AIIMS B.Sc. (Hons) Nursing?',
+        answer: 'No, AIIMS B.Sc. (Hons) Nursing is currently open exclusively for female candidates. Male candidates can apply for AIIMS Paramedical courses or other state/central university B.Sc. Nursing programs.'
+      }
+    ]
+  },
+
+  // ─── 47. NEET-UG B.SC. NURSING ADMISSION ───────────────────────────────────
+  'exam-neet-ug-nursing-2026': {
+    examId: 'exam-neet-ug-nursing-2026',
+    officialCadre: 'B.Sc. Nursing Student / Military Nursing Service (MNS) Cadet',
+    payMatrixLevel: 'Academic Admission / Commissioned Military Cadetship',
+    basicPay: 'Academic Degree / Commission Track',
+    grossSalaryMonthly: 'MNS Cadets receive free boarding, tuition, and direct commission as Lieutenant (Level 10)',
+    ageLimitDetails: 'Minimum 17 Years as on 31st December | 17 to 25 Years for Military Nursing Service (MNS B.Sc.)',
+    ageRelaxations: 'Category-wise NEET qualifying cutoffs',
+    stages: [
+      {
+        stageName: 'National Eligibility cum Entrance Test (NEET-UG)',
+        totalQuestions: 200,
+        totalMarks: 720,
+        durationMinutes: 200,
+        mode: 'Pen & Paper Conventional',
+        negativeMarking: '1 mark deducted per wrong answer (+4 marks for correct)',
+        qualifyingMarks: '50th Percentile (UR) | 40th Percentile (OBC/SC/ST)',
+        description: 'Physics (50 Qs), Chemistry (50 Qs), Botany (50 Qs), Zoology (50 Qs). Best 180 questions evaluated.'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Botany & Zoology (360 Marks)',
+        weightagePercent: 50,
+        highYieldTopics: [
+          'Human Physiology, Cell Structure & Function, Genetics, Ecology, Reproduction, Biotechnology'
+        ]
+      },
+      {
+        subject: 'Physics & Chemistry (360 Marks)',
+        weightagePercent: 50,
+        highYieldTopics: [
+          'Mechanics, Electromagnetism, Modern Physics, Chemical Bonding, Organic Chemistry, Equilibrium'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Target 400+ marks in NEET-UG to secure admission in top central institutes like BHU, RAK College, Lady Hardinge, and MNS AFMC Colleges.'
+    ],
+    selectionSteps: [
+      'Step 1: NEET-UG National Examination',
+      'Step 2: Medical Counselling Committee (MCC) All India B.Sc. Nursing Counseling',
+      'Step 3: For MNS Colleges: Computer Based Test of General Intelligence & English (ToGIGE) + Psychological Assessment + Interview at Base Hospital Delhi'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Which colleges admit B.Sc. Nursing through NEET-UG score?',
+        answer: 'Armed Forces Medical Colleges (MNS Pune, Kolkata, Asvini Mumbai, Lucknow, Bengaluru, Secunderabad), Banaras Hindu University (BHU), RAK College of Nursing (DU), Lady Hardinge Medical College (DU), and IP University Delhi colleges.'
+      }
+    ]
+  },
+
+  // ─── 48. WBJEE ANM(R) & GNM JOINT ENTRANCE ────────────────────────────────
+  'exam-wbjee-gnm-anm-2026': {
+    examId: 'exam-wbjee-gnm-anm-2026',
+    officialCadre: 'GNM / ANM(R) Diploma Student (West Bengal Govt Nursing Schools)',
+    payMatrixLevel: 'State Govt Training & Clinical Posting',
+    basicPay: 'Diploma Admission',
+    grossSalaryMonthly: 'Diploma Trainee -> Direct eligibility for WBHRB Staff Nurse Grade II (Level 9)',
+    ageLimitDetails: '17 to 35 Years as on 31st December',
+    ageRelaxations: 'Permanent Resident / Domicile of West Bengal is mandatory',
+    stages: [
+      {
+        stageName: 'Single Stage OMR Joint Entrance Examination',
+        totalQuestions: 100,
+        totalMarks: 115,
+        durationMinutes: 90,
+        mode: 'OMR (Offline)',
+        negativeMarking: '0.25 mark deduction for Category-1 questions',
+        qualifyingMarks: 'Merit rank (GMR / ANMR)',
+        description: 'Category 1: 85 Qs (1 mark each) + Category 2: 15 Qs (2 marks each). Total 115 Marks.'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Life Science (Class 10 WBBSE Standard — 50 Marks)',
+        weightagePercent: 43.5,
+        highYieldTopics: [
+          'Control & Coordination in Living Organisms, Continuity of Life (Cell Division & Reproduction), Heredity & Evolution, Environment & its Resources'
+        ]
+      },
+      {
+        subject: 'Physical Science (Class 10 Standard — 25 Marks)',
+        weightagePercent: 21.7,
+        highYieldTopics: [
+          'Matter & its properties, Light & Sound, Current Electricity, Chemical Reactions & Periodic Table'
+        ]
+      },
+      {
+        subject: 'Basic English, Mathematics, GK & Reasoning (40 Marks)',
+        weightagePercent: 34.8,
+        highYieldTopics: [
+          'Basic English Grammar (15 Marks), Arithmetic (10 Marks), General Knowledge (10 Marks), Logical Reasoning (5 Marks)'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Life Science (50 Marks) and Physical Science (25 Marks) account for over 65% of the total test — master Madhyamik Class 9 & 10 textbooks.'
+    ],
+    selectionSteps: [
+      'Step 1: OMR Written Entrance Examination',
+      'Step 2: General Merit Rank (GMR) generation',
+      'Step 3: WBJEEB Online Centralized E-Counselling and School Allotment'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Can male candidates apply for WBJEE ANM/GNM?',
+        answer: 'Male candidates are eligible for GNM courses in designated government and private male nursing training institutes. ANM(R) is exclusively for female candidates residing in Gram Panchayat areas of West Bengal.'
+      }
+    ]
+  },
+
+  // ─── 49. UP CNET (ABVMU) B.SC. NURSING ENTRANCE ─────────────────────────────
+  'exam-up-abvm-bsc-2026': {
+    examId: 'exam-up-abvm-bsc-2026',
+    officialCadre: 'B.Sc. Nursing Student (UP Govt & Private Medical Colleges)',
+    payMatrixLevel: '4-Year Professional Nursing Degree Course',
+    basicPay: 'Undergraduate Admission',
+    grossSalaryMonthly: 'UG Degree -> Direct eligibility for UPPSC & UPUMS Level 7 recruitment',
+    ageLimitDetails: 'Minimum 17 Years as on 31st December of the admission year',
+    ageRelaxations: 'SC/ST: 5% relaxation in 10+2 marks (40% aggregate)',
+    stages: [
+      {
+        stageName: 'Common Nursing Entrance Test (CNET UP)',
+        totalQuestions: 200,
+        totalMarks: 200,
+        durationMinutes: 180,
+        mode: 'OMR (Offline)',
+        negativeMarking: 'No negative marking (1 mark per correct answer)',
+        qualifyingMarks: 'UR/EWS: 50th Percentile | SC/ST/OBC: 40th Percentile',
+        description: '200 MCQs in English medium. Nursing Aptitude (40 Qs), Physics (40 Qs), Chemistry (40 Qs), Biology (40 Qs), English & GK (40 Qs).'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Nursing Aptitude (40 Questions / 40 Marks)',
+        weightagePercent: 20,
+        highYieldTopics: [
+          'Ethics of Nursing, Roles of Nurse in Healthcare, History of Nursing (Florence Nightingale), First Aid Basics, Biomedical Waste Awareness'
+        ]
+      },
+      {
+        subject: 'Biology (Class 11 & 12 NCERT — 40 Questions)',
+        weightagePercent: 20,
+        highYieldTopics: [
+          'Human Physiology, Genetics, Reproduction, Cell Biology, Ecology'
+        ]
+      },
+      {
+        subject: 'Physics & Chemistry (80 Questions / 80 Marks)',
+        weightagePercent: 40,
+        highYieldTopics: [
+          'Electrostatics, Optics, Organic Chemistry, Chemical Bonding, Thermodynamics'
+        ]
+      },
+      {
+        subject: 'English & General Knowledge (40 Questions / 40 Marks)',
+        weightagePercent: 20,
+        highYieldTopics: [
+          'Vocabulary, Sentence Correction, Synonyms/Antonyms, UP State Current Affairs & Health Schemes'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'There is no negative marking: attempt all 200 questions.',
+      'Score high in Nursing Aptitude and Biology to secure top government colleges (KGMU Lucknow, SGPGIMS, UPUMS Saifai, RMLIMS).'
+    ],
+    selectionSteps: [
+      'Step 1: CNET UP OMR Entrance Examination (200 Marks)',
+      'Step 2: State Merit Ranking by ABVMU Lucknow',
+      'Step 3: Online Choice Filling and College Allotment'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Which colleges are covered under UP CNET?',
+        answer: 'All government and private nursing colleges in UP including KGMU Lucknow, SGPGIMS, UPUMS Saifai, RMLIMS Lucknow, and 23+ State Medical Colleges.'
+      }
+    ]
+  },
+
+  // ─── 50. AIIMS M.SC. NURSING POST-GRADUATE ENTRANCE ────────────────────────
+  'exam-aiims-msc-nursing-2026': {
+    examId: 'exam-aiims-msc-nursing-2026',
+    officialCadre: 'Post-Graduate M.Sc. Nursing Specialist / Clinical Nurse Specialist',
+    payMatrixLevel: 'Monthly Academic Stipend (₹12,000–₹15,000/mo) + Hostel',
+    basicPay: 'Post-Graduate Specialized Degree',
+    grossSalaryMonthly: 'Post-Graduation leads to Sister Tutor / Assistant Professor / Specialist Nurse (Level 8–10)',
+    ageLimitDetails: 'No upper age limit for AIIMS M.Sc. Nursing',
+    ageRelaxations: 'SC/ST: 5% relaxation in qualifying B.Sc. aggregate (55%)',
+    stages: [
+      {
+        stageName: 'National Computer Based Entrance Test (CBT)',
+        totalQuestions: 90,
+        totalMarks: 90,
+        durationMinutes: 90,
+        mode: 'CBT (Online)',
+        negativeMarking: '0.33 (1/3rd) mark deduction for each incorrect response',
+        qualifyingMarks: '50% (45 Marks out of 90)',
+        description: '90 MCQs covering full B.Sc. Nursing & Clinical Sciences curriculum.'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Advanced Medical-Surgical & Critical Care Nursing (30 Questions)',
+        weightagePercent: 33.3,
+        highYieldTopics: [
+          'Ventilator Management, Inotrope Titration, ABG Interpretation, Arrhythmia Protocol, Trauma, Oncology Chemotherapy'
+        ]
+      },
+      {
+        subject: 'Obstetric, Gynecological & Pediatric Nursing (25 Questions)',
+        weightagePercent: 27.8,
+        highYieldTopics: [
+          'High Risk Obstetrics, Neonatal Intensive Care (NICU), Pediatric Advanced Life Support (PALS), Congenital Anomalies'
+        ]
+      },
+      {
+        subject: 'Nursing Research, Statistics & Education (20 Questions)',
+        weightagePercent: 22.2,
+        highYieldTopics: [
+          'Research Designs, Sampling Techniques, Statistical Tests (t-test, ANOVA, Chi-square), Curriculum Development, Evaluation Methods'
+        ]
+      },
+      {
+        subject: 'Psychiatric, Community Health & Nursing Management (15 Questions)',
+        weightagePercent: 16.7,
+        highYieldTopics: [
+          'Psychopharmacology, Healthcare Administration, Quality & NABH Standards, Community Epidemiology'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Nursing Research and Statistics carry 20 high-differentiation marks — focus on research designs and statistical tests.',
+      'Solve previous 5 years AIIMS M.Sc. Nursing CBT papers.'
+    ],
+    selectionSteps: [
+      'Step 1: Online CBT Entrance Examination (90 Marks)',
+      'Step 2: Merit List publication and specialty counseling across AIIMS New Delhi, Bhopal, Bhubaneswar, Jodhpur, Patna, Raipur, and Rishikesh'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'What clinical experience is required for AIIMS M.Sc. Nursing?',
+        answer: 'Candidates must possess minimum 1 year of clinical experience after B.Sc. Nursing (for Post-Basic B.Sc., 1 year experience either before or after PB B.Sc.).'
+      }
+    ]
   }
 };
 
