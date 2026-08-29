@@ -1638,6 +1638,1106 @@ export const DETAILED_EXAM_INTELLIGENCE: Record<string, DetailedExamInfo> = {
         answer: 'Candidates can submit application for only one district at a time for district cadre vacancies.'
       }
     ]
+  },
+
+  // ─── 25. AP MHSRB STAFF NURSE ──────────────────────────────────────────────
+  'exam-ap-mhsrb-nurse-2026': {
+    examId: 'exam-ap-mhsrb-nurse-2026',
+    officialCadre: 'Staff Nurse (Directorate of Medical Education / Public Health)',
+    payMatrixLevel: 'RPS 2022 Pay Scale ₹34,580 – ₹1,07,210',
+    basicPay: '₹34,580 – ₹1,07,210',
+    grossSalaryMonthly: '₹52,000 – ₹60,000 / month',
+    ageLimitDetails: '18 to 42 Years as on 1st July',
+    ageRelaxations: 'BC/SC/ST/EWS: 5 Years | PwBD: 10 Years | Ex-Servicemen: 3 Years',
+    stages: [
+      {
+        stageName: 'Single Stage Computer Based Test (CBT)',
+        totalQuestions: 100,
+        totalMarks: 100,
+        durationMinutes: 90,
+        mode: 'CBT (Online)',
+        negativeMarking: 'No negative marking',
+        qualifyingMarks: 'OC/EWS: 40% | BC: 35% | SC/ST/PwBD: 30%',
+        description: '100 MCQs covering General Nursing & B.Sc. curriculum. Maximum 15 marks service weightage for contract/outsourced nurses in AP Govt hospitals.'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Core Nursing Sciences (100 Questions)',
+        weightagePercent: 100,
+        highYieldTopics: [
+          'Anatomy & Physiology, Nutrition, Biochemistry, Microbiology',
+          'Medical-Surgical Nursing: Critical Care, Emergency Nursing, Peri-operative Care',
+          'Midwifery & Obstetrical Nursing, Child Health / Pediatric Care, Community Health'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Focus on clinical scenarios and community health healthcare programs in Andhra Pradesh.'
+    ],
+    selectionSteps: [
+      'Step 1: 100-Mark Online CBT',
+      'Step 2: Weightage computation (CBT score + Contract service points)',
+      'Step 3: Counseling and Zone-wise Posting'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Is AP Nursing Council registration required?',
+        answer: 'Yes, candidates must be registered with Andhra Pradesh Nursing and Midwives Council.'
+      }
+    ]
+  },
+
+  // ─── 26. KPSC KARNATAKA STAFF NURSE ────────────────────────────────────────
+  'exam-kpsc-kar-nurse-2026': {
+    examId: 'exam-kpsc-kar-nurse-2026',
+    officialCadre: 'Staff Nurse (Directorate of Health & Family Welfare Services)',
+    payMatrixLevel: 'Karnataka State Revised Scale ₹33,450 – ₹62,600',
+    basicPay: '₹33,450 – ₹62,600',
+    grossSalaryMonthly: '₹48,000 – ₹55,000 / month',
+    ageLimitDetails: '18 to 35 Years (General Merit)',
+    ageRelaxations: 'Category 2A/2B/3A/3B: 3 Years (Up to 38 yrs) | SC/ST/Cat-1: 5 Years (Up to 40 yrs)',
+    stages: [
+      {
+        stageName: 'Paper 1: General Knowledge (100 Marks)',
+        totalQuestions: 100,
+        totalMarks: 100,
+        durationMinutes: 90,
+        mode: 'OMR / CBT',
+        negativeMarking: '0.25 (1/4th) mark deduction',
+        qualifyingMarks: '35%',
+        description: 'General Studies, Karnataka History, Geography, Indian Constitution, Mental Ability.'
+      },
+      {
+        stageName: 'Paper 2: Professional Nursing Knowledge (100 Marks)',
+        totalQuestions: 100,
+        totalMarks: 100,
+        durationMinutes: 120,
+        mode: 'OMR / CBT',
+        negativeMarking: '0.25 (1/4th) mark deduction',
+        qualifyingMarks: '35%',
+        description: 'Diploma in Nursing & B.Sc. Nursing curriculum subjects.'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Core Nursing Subjects (Paper 2)',
+        weightagePercent: 50,
+        highYieldTopics: [
+          'Fundamentals, Med-Surg Nursing, Community Health, Midwifery, Pediatric Care'
+        ]
+      },
+      {
+        subject: 'General Knowledge & Kannada Language (Paper 1)',
+        weightagePercent: 50,
+        highYieldTopics: [
+          'Karnataka State Schemes, History of Karnataka, Current Affairs, Kannada Language Compulsory Test'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Balance General Studies Paper 1 with Technical Nursing Paper 2.',
+      'Prepare for compulsory Kannada Language test if Kannada was not studied in SSLC.'
+    ],
+    selectionSteps: [
+      'Step 1: Competitive Written Exam (Paper 1 + Paper 2 = 200 Marks)',
+      'Step 2: 1:2 Verification of Certificates at KPSC Central Office, Bangalore'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Is Kannada language proficiency mandatory?',
+        answer: 'Yes, candidates who did not have Kannada as first or second language in 10th standard must clear the KPSC Kannada Language Exam (50 marks).'
+      }
+    ]
+  },
+
+  // ─── 27. MAHARASHTRA DHS AROGYA VIBHAG STAFF NURSE ─────────────────────────
+  'exam-maha-dhs-nurse-2026': {
+    examId: 'exam-maha-dhs-nurse-2026',
+    officialCadre: 'Staff Nurse (Group C, Arogya Seva Mandal)',
+    payMatrixLevel: '7th CPC Level S-10 (₹35,400 – ₹1,12,400)',
+    basicPay: '₹35,400 – ₹1,12,400',
+    grossSalaryMonthly: '₹52,000 – ₹60,000 / month',
+    ageLimitDetails: '18 to 38 Years (Open) | Up to 43 Years (Backward Classes)',
+    ageRelaxations: 'Reserved Categories: 5 Years | PwBD: Up to 45 Years',
+    stages: [
+      {
+        stageName: 'Single Stage Computer Based Test (CBT)',
+        totalQuestions: 100,
+        totalMarks: 200,
+        durationMinutes: 120,
+        mode: 'CBT (Online)',
+        negativeMarking: 'No negative marking',
+        qualifyingMarks: '45% (90 Marks out of 200)',
+        description: '100 MCQs carrying 2 marks each. 80 Technical Nursing Qs (160 Marks) + 20 Non-Technical Qs (40 Marks: Marathi, English, GK, Reasoning).'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Core Nursing Subjects (80 Questions / 160 Marks)',
+        weightagePercent: 80,
+        highYieldTopics: [
+          'Anatomy & Physiology, Medical-Surgical Nursing, Pharmacology, Midwifery, Pediatric Care, Community Health'
+        ]
+      },
+      {
+        subject: 'General Awareness, Marathi & English (20 Questions / 40 Marks)',
+        weightagePercent: 20,
+        highYieldTopics: [
+          'Marathi Grammar: Vyakaran, Samarthak Shabd, Prayog',
+          'English Grammar, General Knowledge of Maharashtra, Basic Mental Ability'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Focus heavily on the 80 technical nursing questions carrying 160 marks.',
+      'Ensure Maharashtra Nursing Council (MNC) registration certificate is up-to-date.'
+    ],
+    selectionSteps: [
+      'Step 1: Online CBT Examination (200 Marks)',
+      'Step 2: Circle-wise Merit List (Mumbai, Pune, Nashik, Kolhapur, Aurangabad, Latur, Akola, Nagpur)'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Is MNC registration required?',
+        answer: 'Yes, registration with Maharashtra Nursing Council (MNC), Mumbai is mandatory.'
+      }
+    ]
+  },
+
+  // ─── 28. MP ESB VYAPAM STAFF NURSE ─────────────────────────────────────────
+  'exam-mp-esb-nurse-2026': {
+    examId: 'exam-mp-esb-nurse-2026',
+    officialCadre: 'Staff Nurse (Group 5 Paramedical & Nursing Cadre)',
+    payMatrixLevel: 'Pay Level 7 (₹28,700 – ₹91,300)',
+    basicPay: '₹28,700 – ₹91,300',
+    grossSalaryMonthly: '₹42,000 – ₹48,000 / month',
+    ageLimitDetails: '18 to 40 Years (45 Years for Female/Reserved/Contract candidates)',
+    ageRelaxations: 'MP Domicile SC/ST/OBC/Women: 5 Years',
+    stages: [
+      {
+        stageName: 'Single Stage Online CBT Examination',
+        totalQuestions: 100,
+        totalMarks: 100,
+        durationMinutes: 120,
+        mode: 'CBT (Online)',
+        negativeMarking: 'No negative marking',
+        qualifyingMarks: 'UR/EWS: 50% | SC/ST/OBC: 40%',
+        description: '100 MCQs. 75 Questions Technical Nursing + 25 Questions General Section (General Knowledge, Hindi, English, Math, Science, Reasoning).'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Core Nursing Subjects (75 Marks)',
+        weightagePercent: 75,
+        highYieldTopics: [
+          'Anatomy, Physiology, Medical-Surgical Nursing, Community Health, Midwifery & Gynecological, Child Health'
+        ]
+      },
+      {
+        subject: 'General Section (25 Marks)',
+        weightagePercent: 25,
+        highYieldTopics: [
+          'Samanya Gyan (MP Specific), Samanya Hindi, Samanya English, Samanya Ganit, Samanya Vigyan, Reasoning'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Solve MP ESB Vyapam previous year Group 5 question papers.',
+      'Register with MP Nursing Council and keep MP Employment Portal registration live.'
+    ],
+    selectionSteps: [
+      'Step 1: Online CBT Exam',
+      'Step 2: Department-wise Merit Rank Allocation'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Is MP Employment Exchange registration mandatory?',
+        answer: 'Yes, active registration on the MP Rojgar Portal (MP Online) is mandatory at the time of form filling.'
+      }
+    ]
+  },
+
+  // ─── 29. HSSC HARYANA STAFF NURSE ──────────────────────────────────────────
+  'exam-hssc-har-nurse-2026': {
+    examId: 'exam-hssc-har-nurse-2026',
+    officialCadre: 'Staff Nurse (Group C, Technical Health Cadre)',
+    payMatrixLevel: 'Pay Matrix Level 6 (₹35,400 – ₹1,12,400)',
+    basicPay: '₹35,400 – ₹1,12,400',
+    grossSalaryMonthly: '₹52,000 – ₹60,000 / month',
+    ageLimitDetails: '18 to 42 Years',
+    ageRelaxations: 'SC/BC of Haryana: 5 Years | PwBD: 10 Years',
+    stages: [
+      {
+        stageName: 'CET Mains Technical OMR Examination (97.5 Marks)',
+        totalQuestions: 100,
+        totalMarks: 97.5,
+        durationMinutes: 105,
+        mode: 'OMR Written',
+        negativeMarking: '0.975 deduction for unattempted 5th option',
+        qualifyingMarks: 'General: 50% | Reserved: 40%',
+        description: '70% Technical Nursing Subject + 20% Haryana History, Culture, Geography + 10% Computer Knowledge.'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Technical Nursing Subjects (70%)',
+        weightagePercent: 70,
+        highYieldTopics: [
+          'Medical-Surgical, Community Health, Midwifery, Child Health, Mental Health, Pharmacology'
+        ]
+      },
+      {
+        subject: 'Haryana GK & Computer Literacy (30%)',
+        weightagePercent: 30,
+        highYieldTopics: [
+          'Haryana History, Folk Dance, Monuments, Basic Computer Hardware & MS Office'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Ensure you fill the 5th bubble in OMR to avoid unattempted negative deduction.',
+      'Review Haryana-specific public health initiatives.'
+    ],
+    selectionSteps: [
+      'Step 1: CET Mains Written Examination (97.5 Marks)',
+      'Step 2: Socio-Economic Criteria Verification (2.5 Marks)',
+      'Step 3: Document Verification at Panchkula'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Is HNRC registration mandatory?',
+        answer: 'Yes, registration with Haryana Nurses and Nurse-Midwives Council is required.'
+      }
+    ]
+  },
+
+  // ─── 30. PUNJAB BFUHS STAFF NURSE ──────────────────────────────────────────
+  'exam-punjab-bfuhs-nurse-2026': {
+    examId: 'exam-punjab-bfuhs-nurse-2026',
+    officialCadre: 'Staff Nurse (Department of Health & Family Welfare / Medical Education)',
+    payMatrixLevel: 'Pay Matrix Level 5 (Initial Pay ₹29,200 for probation)',
+    basicPay: '₹29,200 – ₹92,300',
+    grossSalaryMonthly: '₹45,000 – ₹52,000 / month',
+    ageLimitDetails: '18 to 37 Years as on 1st January',
+    ageRelaxations: 'SC/BC of Punjab: 5 Years | State Govt Employees: Up to 45 Years',
+    stages: [
+      {
+        stageName: 'Single Stage OMR Written Test',
+        totalQuestions: 100,
+        totalMarks: 100,
+        durationMinutes: 120,
+        mode: 'OMR (Offline)',
+        negativeMarking: '0.25 (1/4th) mark deduction',
+        qualifyingMarks: 'UR: 35% | SC/BC: 30%',
+        description: '100 MCQs based on Nursing Curriculum (80 Qs) + General Knowledge & Punjabi Language (20 Qs).'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Nursing Curriculum (80 Marks)',
+        weightagePercent: 80,
+        highYieldTopics: [
+          'Anatomy, Med-Surg, OBG, Pediatrics, Fundamentals, Community Health Nursing'
+        ]
+      },
+      {
+        subject: 'Punjabi Language & GK (20 Marks)',
+        weightagePercent: 20,
+        highYieldTopics: [
+          'Punjabi Grammar (Matric Standard), Punjab History & Culture, Current Affairs'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Ensure 10th standard Punjabi language passing certificate is available.',
+      'Keep PNRC (Punjab Nurses Registration Council) certificate active.'
+    ],
+    selectionSteps: [
+      'Step 1: OMR Written Test',
+      'Step 2: 1:3 Merit List Counseling at BFUHS Faridkot'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Is Punjabi compulsory in 10th standard for Punjab Staff Nurse?',
+        answer: 'Yes, candidate must have passed Matriculation with Punjabi as one of the compulsory subjects.'
+      }
+    ]
+  },
+
+  // ─── 31. JKSSB JUNIOR STAFF NURSE ──────────────────────────────────────────
+  'exam-jkssb-nurse-2026': {
+    examId: 'exam-jkssb-nurse-2026',
+    officialCadre: 'Junior Staff Nurse (Health & Medical Education Dept, UT of J&K)',
+    payMatrixLevel: 'Pay Level 4 (₹25,500 – ₹81,100)',
+    basicPay: '₹25,500 – ₹81,100',
+    grossSalaryMonthly: '₹38,000 – ₹45,000 / month',
+    ageLimitDetails: '18 to 40 Years (Open Merit) | Up to 43 Years (RBA/SC/ST/ALC)',
+    ageRelaxations: 'Reserved Categories: 3 Years | PwBD: 2 Years | Govt Servants: Up to 40 Years',
+    stages: [
+      {
+        stageName: 'Single Stage Online Computer Based Test (CBT)',
+        totalQuestions: 120,
+        totalMarks: 120,
+        durationMinutes: 120,
+        mode: 'CBT (Online)',
+        negativeMarking: '0.25 (1/4th) mark deduction',
+        qualifyingMarks: 'Merit list based on cutoffs',
+        description: '120 Questions covering Anatomy, Fundamentals, Med-Surg, Midwifery, Community Health, and Child Health.'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Nursing & Paramedical Curriculum (120 Questions)',
+        weightagePercent: 100,
+        highYieldTopics: [
+          'Anatomy & Physiology (15 Qs), Microbiology & Pathology (10 Qs), Fundamentals of Nursing (25 Qs), Medical-Surgical Nursing (30 Qs), Midwifery & Gynae (20 Qs), Community Health & Pediatrics (20 Qs)'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Focus on high-yield sections: Medical-Surgical Nursing and Fundamentals of Nursing.'
+    ],
+    selectionSteps: [
+      'Step 1: Online CBT Examination',
+      'Step 2: Document Verification for J&K Domicile Candidates'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Is J&K Domicile certificate required?',
+        answer: 'Yes, candidate must be a Domicile of Union Territory of Jammu & Kashmir.'
+      }
+    ]
+  },
+
+  // ─── 32. ASSAM DME STAFF NURSE ─────────────────────────────────────────────
+  'exam-assam-dme-nurse-2026': {
+    examId: 'exam-assam-dme-nurse-2026',
+    officialCadre: 'Staff Nurse (Grade III, Medical College Hospitals)',
+    payMatrixLevel: 'Pay Band 2 (₹14,000 – ₹60,500 + Grade Pay ₹6,800)',
+    basicPay: '₹20,800 – ₹60,500',
+    grossSalaryMonthly: '₹34,000 – ₹40,000 / month',
+    ageLimitDetails: '18 to 40 Years as on 1st January',
+    ageRelaxations: 'OBC/MOBC: 3 Years | SC/ST: 5 Years | PwBD: 10 Years',
+    stages: [
+      {
+        stageName: 'Single Stage Written Examination / Skill Test',
+        totalQuestions: 100,
+        totalMarks: 100,
+        durationMinutes: 120,
+        mode: 'OMR (Offline)',
+        negativeMarking: 'No negative marking',
+        qualifyingMarks: 'Merit rank',
+        description: '100 MCQs covering GNM/B.Sc. Nursing subjects + General English & Assam GK.'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Core Nursing Subjects (80 Marks)',
+        weightagePercent: 80,
+        highYieldTopics: [
+          'Basic Nursing Sciences, Medical-Surgical Nursing, Community Health, Midwifery, Pediatric Care'
+        ]
+      },
+      {
+        subject: 'General Knowledge & English (20 Marks)',
+        weightagePercent: 20,
+        highYieldTopics: [
+          'Assam Geography, National Parks, General English Grammar'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Ensure registration with Assam Nurses, Midwives and Health Visitors Council is current.'
+    ],
+    selectionSteps: [
+      'Step 1: OMR Written Examination',
+      'Step 2: Document Verification at DME Office, Sixmile, Guwahati'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Is Assam Employment Exchange registration required?',
+        answer: 'Yes, valid registration in any Employment Exchange in Assam is mandatory.'
+      }
+    ]
+  },
+
+  // ─── 33. NHM COMMUNITY HEALTH OFFICER (CHO) ────────────────────────────────
+  'exam-nhm-cho-panindia-2026': {
+    examId: 'exam-nhm-cho-panindia-2026',
+    officialCadre: 'Community Health Officer (CHO / MLHP, Ayushman Bharat)',
+    payMatrixLevel: 'Fixed Honorarium ₹25,000 + Performance Incentive up to ₹15,000/mo',
+    basicPay: '₹25,000 (Fixed)',
+    grossSalaryMonthly: '₹35,000 – ₹40,000 / month (with PLP Performance Linked Payment)',
+    ageLimitDetails: '21 to 35 Years (40 Years for OBC/SC/ST)',
+    ageRelaxations: 'Reserved Categories: 5 Years',
+    stages: [
+      {
+        stageName: 'Common Online Screening Examination (CBT)',
+        totalQuestions: 100,
+        totalMarks: 100,
+        durationMinutes: 120,
+        mode: 'CBT (Online)',
+        negativeMarking: 'No negative marking',
+        qualifyingMarks: 'UR: 33% | SC/ST/OBC: 30%',
+        description: 'Section 1: Nursing & Public Health (80 Questions) + Section 2: General Knowledge & Aptitude (20 Questions).'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Primary Healthcare & Community Health (80 Marks)',
+        weightagePercent: 80,
+        highYieldTopics: [
+          'Ayushman Bharat & Health and Wellness Centre (HWC) guidelines',
+          'Maternal Health: Antenatal care, High-risk pregnancy, Partograph, Postpartum hemorrhage',
+          'Child Health: National Immunization Schedule (NIS), IMNCI, Malnutrition management (SAM/MAM)',
+          'Communicable & Non-Communicable Diseases: TB (Ni-kshay), Leprosy, Hypertension, Diabetes, Cancer screening',
+          'Adolescent & Family Planning: Contraceptive methods, Antara, Chhaya, Rashtriya Kishor Swasthya Karyakram (RKSK)'
+        ]
+      },
+      {
+        subject: 'General Knowledge & Basic Aptitude (20 Marks)',
+        weightagePercent: 20,
+        highYieldTopics: [
+          'National Health Programs, Current Health Initiatives, Basic Numerical & Reasoning Skills'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Focus 80% of study time on Community Health Nursing, National Health Programs, and NCD screening guidelines.',
+      'Candidates with B.Sc. Nursing with Integrated CPH (Certificate Course in Community Health) are eligible for direct posting.'
+    ],
+    selectionSteps: [
+      'Step 1: Online CBT Screening Examination',
+      'Step 2: State-wise District Allocation and 6-Month CPH Bridge Program (for non-CPH candidates)'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Who is exempted from the 6-month Bridge Program (BPCCHN)?',
+        answer: 'Candidates who passed B.Sc. Nursing / Post Basic B.Sc. from academic year 2020-21 onwards with integrated Certificate Program in Community Health (CPH) are eligible for direct appointment without the 6-month bridge course.'
+      }
+    ]
+  },
+
+  // ─── 34. HPPSC HIMACHAL PRADESH STAFF NURSE ────────────────────────────────
+  'exam-hppsc-hp-nurse-2026': {
+    examId: 'exam-hppsc-hp-nurse-2026',
+    officialCadre: 'Staff Nurse Class III (Health & Family Welfare Dept, HP)',
+    payMatrixLevel: 'Pay Level 6 (₹35,400 – ₹1,12,400)',
+    basicPay: '₹35,400 – ₹1,12,400',
+    grossSalaryMonthly: '₹48,000 – ₹56,000 / month (+ Tribal / Remote Area Allowance)',
+    ageLimitDetails: '18 to 45 Years as on 1st January',
+    ageRelaxations: 'HP Domicile SC/ST/OBC/WFF: 5 Years',
+    stages: [
+      {
+        stageName: 'Paper 1: General Screening Test (100 Marks)',
+        totalQuestions: 100,
+        totalMarks: 100,
+        durationMinutes: 120,
+        mode: 'CBT / OMR',
+        negativeMarking: '0.25 mark deduction',
+        qualifyingMarks: '35%',
+        description: '80 Nursing Subject Questions + 10 HP General Knowledge + 10 National/International Affairs.'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Core Nursing Subjects (80 Marks)',
+        weightagePercent: 80,
+        highYieldTopics: [
+          'Anatomy & Physiology, Med-Surg, Community Health, Midwifery, Child Health, Pharmacology'
+        ]
+      },
+      {
+        subject: 'Himachal Pradesh GK & Current Events (20 Marks)',
+        weightagePercent: 20,
+        highYieldTopics: [
+          'Himachal Geography, Rivers, Culture, Fairs & Festivals, Himachal Health Schemes'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Study Himachal Pradesh General Knowledge (10 marks) alongside core nursing subjects.'
+    ],
+    selectionSteps: [
+      'Step 1: Screening Test (100 Marks)',
+      'Step 2: Document Verification at HPPSC Nigam Vihar, Shimla'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Is registration with HPNRC required?',
+        answer: 'Yes, registration with Himachal Pradesh State Nurses Registration Council (HPNRC) is mandatory.'
+      }
+    ]
+  },
+
+  // ─── 35. CG VYAPAM CHHATTISGARH STAFF NURSE ────────────────────────────────
+  'exam-cg-vyapam-nurse-2026': {
+    examId: 'exam-cg-vyapam-nurse-2026',
+    officialCadre: 'Staff Nurse (Directorate of Health Services, CG)',
+    payMatrixLevel: 'Pay Matrix Level 7 (₹28,700 – ₹91,300)',
+    basicPay: '₹28,700 – ₹91,300',
+    grossSalaryMonthly: '₹42,000 – ₹48,000 / month',
+    ageLimitDetails: '18 to 35 Years (40 Years for CG Domicile Candidates)',
+    ageRelaxations: 'CG SC/ST/OBC/Female: 5 Years (Up to 45 years)',
+    stages: [
+      {
+        stageName: 'Single Stage OMR Examination (100 Marks)',
+        totalQuestions: 100,
+        totalMarks: 100,
+        durationMinutes: 120,
+        mode: 'OMR (Offline)',
+        negativeMarking: '0.25 (1/4th) mark deduction',
+        qualifyingMarks: 'UR: 33% | SC/ST/OBC: 23%',
+        description: '100 MCQs covering full B.Sc. Nursing curriculum.'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'B.Sc. Nursing Curriculum (100 Questions)',
+        weightagePercent: 100,
+        highYieldTopics: [
+          'Anatomy, Physiology, Biochemistry, Microbiology, Psychology, Sociology',
+          'Medical-Surgical, Community Health, Midwifery & Obstetrical, Pediatric Care, Mental Health'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Practice standard B.Sc. Nursing MCQs with high accuracy to avoid negative marking.'
+    ],
+    selectionSteps: [
+      'Step 1: CG Vyapam OMR Exam',
+      'Step 2: Counseling and Division-wise Posting (Raipur, Bilaspur, Durg, Bastar, Surguja)'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Is Chhattisgarh Nursing Council registration mandatory?',
+        answer: 'Yes, registration with Chhattisgarh Nursing Council, Raipur is required.'
+      }
+    ]
+  },
+
+  // ─── 36. JSSC JHARKHAND STAFF NURSE GRADE A ────────────────────────────────
+  'exam-jssc-jhk-nurse-2026': {
+    examId: 'exam-jssc-jhk-nurse-2026',
+    officialCadre: 'Staff Nurse Grade A (Jharkhand Health Services)',
+    payMatrixLevel: '7th CPC Level 7 (₹44,900 – ₹1,42,400)',
+    basicPay: '₹44,900 – ₹1,42,400',
+    grossSalaryMonthly: '₹65,000 – ₹72,000 / month',
+    ageLimitDetails: '21 to 35 Years (General UR) | Up to 38 Years (Female UR/OBC) | Up to 40 Years (SC/ST)',
+    ageRelaxations: 'OBC: 2–3 Years | SC/ST: 5 Years',
+    stages: [
+      {
+        stageName: 'Single Stage Computer Based Test (CBT)',
+        totalQuestions: 120,
+        totalMarks: 360,
+        durationMinutes: 120,
+        mode: 'CBT (Online)',
+        negativeMarking: '1 mark deducted per wrong answer (3 marks for correct)',
+        qualifyingMarks: 'UR: 40% | BC-2: 36.5% | BC-1: 34% | SC/ST/Women: 32%',
+        description: '120 MCQs carrying 3 marks each (Total 360 Marks). Full nursing syllabus.'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Core Nursing Sciences (120 Questions / 360 Marks)',
+        weightagePercent: 100,
+        highYieldTopics: [
+          'Anatomy & Physiology, Nutrition, Microbiology, Medical-Surgical Nursing',
+          'Community Health Nursing, Midwifery & Obstetrical Care, Child Health Nursing, Pharmacology'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Each question carries 3 marks with 1 mark negative deduction — avoid blind guessing.'
+    ],
+    selectionSteps: [
+      'Step 1: 360-Mark Online CBT',
+      'Step 2: Document Verification at JSSC Office, Namkum, Ranchi'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Is Jharkhand Nursing Council registration required?',
+        answer: 'Yes, registration with Jharkhand Nursing Council (JNC) is mandatory.'
+      }
+    ]
+  },
+
+  // ─── 37. GOA MEDICAL COLLEGE STAFF NURSE ───────────────────────────────────
+  'exam-goa-gmc-nurse-2026': {
+    examId: 'exam-goa-gmc-nurse-2026',
+    officialCadre: 'Staff Nurse (Goa Medical College & DHS)',
+    payMatrixLevel: 'Pay Matrix Level 6 (₹35,400 – ₹1,12,400)',
+    basicPay: '₹35,400 – ₹1,12,400',
+    grossSalaryMonthly: '₹50,000 – ₹58,000 / month',
+    ageLimitDetails: 'Up to 45 Years',
+    ageRelaxations: 'Govt Servants: 5 Years | PwBD: 10 Years',
+    stages: [
+      {
+        stageName: 'Computer Based Recruitment Test (CBRT)',
+        totalQuestions: 100,
+        totalMarks: 100,
+        durationMinutes: 90,
+        mode: 'CBT (Online)',
+        negativeMarking: 'No negative marking',
+        qualifyingMarks: 'UR: 65% | OBC: 60% | SC/ST: 55%',
+        description: '100 MCQs covering Nursing Subjects (75 Qs) + English & Konkani (25 Qs).'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Nursing Curriculum & Clinical Care (75 Marks)',
+        weightagePercent: 75,
+        highYieldTopics: [
+          'Med-Surg, Critical Care, Midwifery, Pediatric Care, Fundamentals'
+        ]
+      },
+      {
+        subject: 'Konkani Language & General Ability (25 Marks)',
+        weightagePercent: 25,
+        highYieldTopics: [
+          'Basic Konkani language comprehension, English communication, General Knowledge'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Review Konkani vocabulary alongside clinical nursing scenarios.'
+    ],
+    selectionSteps: [
+      'Step 1: CBRT Written Examination',
+      'Step 2: Document Verification at Goa PSC / GMC Bambolim'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Is 15-year residence certificate required for Goa Staff Nurse?',
+        answer: 'Yes, 15 years Goa residence certificate issued by the competent Mamlatdar is mandatory.'
+      }
+    ]
+  },
+
+  // ─── 38. GMCH SECTOR 32 CHANDIGARH NURSING OFFICER ─────────────────────────
+  'exam-gmch-chd-nurse-2026': {
+    examId: 'exam-gmch-chd-nurse-2026',
+    officialCadre: 'Nursing Officer (Group B, Level 7)',
+    payMatrixLevel: '7th CPC Level 7 (₹44,900 – ₹1,42,400)',
+    basicPay: '₹44,900 – ₹1,42,400',
+    grossSalaryMonthly: '₹80,000 – ₹88,000 / month',
+    ageLimitDetails: '18 to 37 Years as on 1st January',
+    ageRelaxations: 'SC: 5 Years | OBC: 3 Years | PwBD: 10 Years',
+    stages: [
+      {
+        stageName: 'Written Examination (100 Marks)',
+        totalQuestions: 100,
+        totalMarks: 100,
+        durationMinutes: 120,
+        mode: 'OMR Written',
+        negativeMarking: '0.25 (1/4th) mark deduction',
+        qualifyingMarks: 'UR/EWS: 50% | SC/PwBD: 40%',
+        description: 'Part 1: Nursing Core (70 Qs) + Part 2: Practical Clinical Assessment (30 Qs).'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Core Nursing & Practical Assessment',
+        weightagePercent: 100,
+        highYieldTopics: [
+          'Medical-Surgical, OBG, Pediatrics, ICU & Emergency procedures, Drug administration'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Complete the mandatory 80-hour Course on Computer Concepts (CCC) from NIELIT before applying.'
+    ],
+    selectionSteps: [
+      'Step 1: Written Examination (100 Marks)',
+      'Step 2: Document Verification at GMCH-32 Chandigarh Campus'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Is ICT computer course certificate mandatory?',
+        answer: 'Yes, 80-hour Certificate Course on Computer Concepts (CCC) from a Govt-recognized institution (NIELIT) is mandatory as per Chandigarh Administration service rules.'
+      }
+    ]
+  },
+
+  // ─── 39. IGIMS PATNA NURSING OFFICER ───────────────────────────────────────
+  'exam-igims-patna-nurse-2026': {
+    examId: 'exam-igims-patna-nurse-2026',
+    officialCadre: 'Nursing Officer (Group B, Autonomous Apex Institute)',
+    payMatrixLevel: '7th CPC Level 7 (₹44,900 – ₹1,42,400)',
+    basicPay: '₹44,900 – ₹1,42,400',
+    grossSalaryMonthly: '₹75,000 – ₹82,000 / month',
+    ageLimitDetails: '18 to 37 Years (Male UR) | Up to 40 Years (Female UR/OBC) | Up to 42 Years (SC/ST)',
+    ageRelaxations: 'Bihar Domicile Relaxations Apply',
+    stages: [
+      {
+        stageName: 'Single Stage Computer Based Test (CBT)',
+        totalQuestions: 100,
+        totalMarks: 100,
+        durationMinutes: 120,
+        mode: 'CBT (Online)',
+        negativeMarking: '0.25 (1/4th) mark deduction',
+        qualifyingMarks: 'UR: 40% | BC: 36.5% | EBC: 34% | SC/ST: 32%',
+        description: '100 MCQs covering full B.Sc./GNM curriculum.'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Clinical Nursing Sciences',
+        weightagePercent: 100,
+        highYieldTopics: [
+          'Medical-Surgical, Critical Care, Midwifery, Pediatrics, Fundamentals'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Prepare with standard AIIMS NORCET level question banks.'
+    ],
+    selectionSteps: [
+      'Step 1: 100-Mark Online CBT',
+      'Step 2: Document Verification at IGIMS Administrative Block, Patna'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Can candidates from outside Bihar apply for IGIMS?',
+        answer: 'Yes, candidates from all states can apply under Unreserved (UR) category.'
+      }
+    ]
+  },
+
+  // ─── 40. RIMS RANCHI STAFF NURSE GRADE A ───────────────────────────────────
+  'exam-rims-ranchi-nurse-2026': {
+    examId: 'exam-rims-ranchi-nurse-2026',
+    officialCadre: 'Staff Nurse Grade A (Autonomous Institute of National Standing)',
+    payMatrixLevel: '7th CPC Level 7 (₹44,900 – ₹1,42,400)',
+    basicPay: '₹44,900 – ₹1,42,400',
+    grossSalaryMonthly: '₹74,000 – ₹82,000 / month',
+    ageLimitDetails: 'Up to 35 Years (UR) | Up to 38 Years (OBC) | Up to 40 Years (SC/ST)',
+    ageRelaxations: 'Reserved Categories: 3–5 Years',
+    stages: [
+      {
+        stageName: 'Single Stage Online CBT Examination',
+        totalQuestions: 100,
+        totalMarks: 100,
+        durationMinutes: 120,
+        mode: 'CBT (Online)',
+        negativeMarking: '0.25 mark deduction',
+        qualifyingMarks: 'UR: 40% | BC: 36.5% | SC/ST: 32%',
+        description: '100 MCQs covering Nursing Subjects (80 Qs) + General Knowledge & Reasoning (20 Qs).'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Core Nursing Subjects',
+        weightagePercent: 80,
+        highYieldTopics: [
+          'Med-Surg, Emergency Trauma Care, Midwifery, Pediatrics, Fundamentals'
+        ]
+      },
+      {
+        subject: 'General Awareness & Reasoning',
+        weightagePercent: 20,
+        highYieldTopics: [
+          'National Current Affairs, General Science, Logical Reasoning'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Focus on trauma care and emergency nursing alongside general knowledge.'
+    ],
+    selectionSteps: [
+      'Step 1: Online CBT',
+      'Step 2: Document Verification at RIMS Campus, Bariatu, Ranchi'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Is GNM eligible with experience?',
+        answer: 'Yes, GNM with 2 years experience in a minimum 50-bedded hospital is eligible.'
+      }
+    ]
+  },
+
+  // ─── 41. CNCI KOLKATA STAFF NURSE ──────────────────────────────────────────
+  'exam-cnci-kolkata-nurse-2026': {
+    examId: 'exam-cnci-kolkata-nurse-2026',
+    officialCadre: 'Staff Nurse (Group B, National Cancer Institute)',
+    payMatrixLevel: '7th CPC Level 7 (₹44,900 – ₹1,42,400)',
+    basicPay: '₹44,900 – ₹1,42,400',
+    grossSalaryMonthly: '₹76,000 – ₹84,000 / month',
+    ageLimitDetails: 'Up to 35 Years',
+    ageRelaxations: 'SC/ST: 5 Years | OBC: 3 Years',
+    stages: [
+      {
+        stageName: 'Written CBT Examination',
+        totalQuestions: 100,
+        totalMarks: 100,
+        durationMinutes: 90,
+        mode: 'CBT (Online)',
+        negativeMarking: '0.25 mark deduction',
+        qualifyingMarks: 'UR/OBC: 50% | SC/ST: 45%',
+        description: '100 MCQs with heavy focus on Oncology Nursing, Chemotherapy Handling, and Palliative Care.'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Oncology & Medical-Surgical Nursing',
+        weightagePercent: 70,
+        highYieldTopics: [
+          'Chemotherapy Administration & Extravasation Management, Radiation Safety, Neutropenic Precautions, Pain & Palliative Care'
+        ]
+      },
+      {
+        subject: 'General Nursing & Infection Control',
+        weightagePercent: 30,
+        highYieldTopics: [
+          'CLABSI bundles, Blood Transfusion protocols, Bio-medical waste rules'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Master chemotherapy drugs, side effects, oncologic emergencies (Tumor Lysis, SVC Syndrome).'
+    ],
+    selectionSteps: [
+      'Step 1: Written CBT Exam',
+      'Step 2: Document Verification at CNCI Newtown Campus, Kolkata'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Is prior oncology experience preferred?',
+        answer: 'Yes, candidates with oncology diploma or 1+ year cancer hospital ICU experience receive selection preference.'
+      }
+    ]
+  },
+
+  // ─── 42. SSB SUB-INSPECTOR STAFF NURSE ─────────────────────────────────────
+  'exam-ssb-mha-nurse-2026': {
+    examId: 'exam-ssb-mha-nurse-2026',
+    officialCadre: 'Sub-Inspector (Staff Nurse, Group B Combatised)',
+    payMatrixLevel: '7th CPC Level 6 (₹35,400 – ₹1,12,400)',
+    basicPay: '₹35,400 – ₹1,12,400',
+    grossSalaryMonthly: '₹62,000 – ₹70,000 / month (+ Ration, Border Hardship Allowance)',
+    ageLimitDetails: '21 to 30 Years',
+    ageRelaxations: 'SC/ST: 5 Years | OBC: 3 Years',
+    stages: [
+      {
+        stageName: 'Stage 1: Physical Efficiency Test (PET/PST)',
+        totalQuestions: 0,
+        totalMarks: 0,
+        durationMinutes: 0,
+        mode: 'Physical Qualifying',
+        negativeMarking: 'None',
+        qualifyingMarks: 'Pass mandatory race benchmarks',
+        description: 'Physical screening at SSB Frontier HQ.'
+      },
+      {
+        stageName: 'Stage 2: Written Examination (100 Marks)',
+        totalQuestions: 100,
+        totalMarks: 100,
+        durationMinutes: 120,
+        mode: 'OMR / CBT',
+        negativeMarking: 'No negative marking',
+        qualifyingMarks: 'UR/EWS/OBC: 45% | SC/ST: 40%',
+        description: 'General Awareness (25 Qs) + Nursing Technical (75 Qs).'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Paramilitary Nursing & Trauma Care (75 Marks)',
+        weightagePercent: 75,
+        highYieldTopics: [
+          'Emergency Trauma, Blast Injuries, Wound Debridement, Infection Control, Medical-Surgical'
+        ]
+      },
+      {
+        subject: 'General Knowledge & Reasoning (25 Marks)',
+        weightagePercent: 25,
+        highYieldTopics: [
+          'Indian Geography, Border Security, Basic Mental Ability'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Maintain running and physical fitness alongside nursing MCQ practice.'
+    ],
+    selectionSteps: [
+      'Stage 1: PST/PET',
+      'Stage 2: Written Examination',
+      'Stage 3: Detailed Medical Examination (DME)'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Are female candidates eligible for SSB Staff Nurse?',
+        answer: 'Yes, female candidates possessing GNM / B.Sc. Nursing and meeting physical standards are eligible.'
+      }
+    ]
+  },
+
+  // ─── 43. NPCIL NURSE 'A' (DEPT OF ATOMIC ENERGY) ───────────────────────────
+  'exam-npcil-dae-nurse-2026': {
+    examId: 'exam-npcil-dae-nurse-2026',
+    officialCadre: 'Nurse \'A\' (Group B, Central PSU / Dept of Atomic Energy)',
+    payMatrixLevel: '7th CPC Level 7 (₹44,900 – ₹1,42,400)',
+    basicPay: '₹44,900 – ₹1,42,400',
+    grossSalaryMonthly: '₹78,000 – ₹86,000 / month (+ Atomic Township Quarters, Free Healthcare & Allowances)',
+    ageLimitDetails: '18 to 30 Years as on closing date',
+    ageRelaxations: 'SC/ST: 5 Years | OBC (NCL): 3 Years | PwBD: 10 Years',
+    stages: [
+      {
+        stageName: 'Stage 1: Preliminary Screening Test (50 Questions / 150 Marks)',
+        totalQuestions: 50,
+        totalMarks: 150,
+        durationMinutes: 60,
+        mode: 'CBT (Online)',
+        negativeMarking: '1 mark deducted per wrong answer (3 marks for correct)',
+        qualifyingMarks: 'General: 40% | SC/ST/OBC: 30%',
+        description: 'Mathematics (20 Qs), Science (20 Qs), General Awareness (10 Qs).'
+      },
+      {
+        stageName: 'Stage 2: Advanced Technical Nursing Test (50 Questions / 150 Marks)',
+        totalQuestions: 50,
+        totalMarks: 150,
+        durationMinutes: 120,
+        mode: 'CBT (Online)',
+        negativeMarking: '1 mark deducted per wrong answer (3 marks for correct)',
+        qualifyingMarks: 'General: 30% | Reserved: 20%',
+        description: '50 Advanced Technical MCQs based on B.Sc./GNM syllabus. Merit list is prepared solely on Stage 2 score.'
+      },
+      {
+        stageName: 'Stage 3: Skill Test (Go / No-Go)',
+        totalQuestions: 0,
+        totalMarks: 50,
+        durationMinutes: 30,
+        mode: 'Skill Test / Practical',
+        negativeMarking: 'None',
+        qualifyingMarks: 'Qualifying',
+        description: 'Practical clinical procedure evaluation on mannequins.'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Advanced Nursing & Industrial Health (Stage 2)',
+        weightagePercent: 100,
+        highYieldTopics: [
+          'Occupational Health & Radiation Safety, Emergency Trauma Care, Medical-Surgical, ICU Procedures, Pharmacology'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Master High School Mathematics and Science for Stage 1 to qualify for Stage 2 Advanced Nursing Test.'
+    ],
+    selectionSteps: [
+      'Stage 1: Preliminary Test (Qualifying)',
+      'Stage 2: Advanced Test (Merit Ranking)',
+      'Stage 3: Practical Skill Test (Qualifying)',
+      'Stage 4: Document Verification and Pre-Employment Medical Exam'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'What is Nursing \'A\' Certificate?',
+        answer: 'Candidates with B.Sc. Nursing or 3-year GNM Diploma and valid registration with Central/State Nursing Council are recognized as possessing Nursing \'A\' certificate.'
+      }
+    ]
+  },
+
+  // ─── 44. ISRO NURSE 'B' (DEPT OF SPACE) ────────────────────────────────────
+  'exam-isro-dos-nurse-2026': {
+    examId: 'exam-isro-dos-nurse-2026',
+    officialCadre: 'Nurse \'B\' (Level 7, Department of Space / ISRO)',
+    payMatrixLevel: '7th CPC Level 7 (₹44,900 – ₹1,42,400)',
+    basicPay: '₹44,900 – ₹1,42,400',
+    grossSalaryMonthly: '₹78,000 – ₹86,000 / month (+ ISRO Quarters & Space Center Medical Benefits)',
+    ageLimitDetails: '18 to 35 Years as on closing date',
+    ageRelaxations: 'SC/ST: 5 Years | OBC: 3 Years | Ex-Servicemen: Deduct military service + 3 yrs',
+    stages: [
+      {
+        stageName: 'Stage 1: Written Examination (80 Questions / 80 Marks)',
+        totalQuestions: 80,
+        totalMarks: 80,
+        durationMinutes: 90,
+        mode: 'CBT (Online)',
+        negativeMarking: '0.33 (1/3rd) mark deduction',
+        qualifyingMarks: 'UR: 50% (32/80) | Reserved: 40% (24/80)',
+        description: '80 MCQs covering full Nursing curriculum and clinical procedures.'
+      },
+      {
+        stageName: 'Stage 2: Skill Test (100 Marks)',
+        totalQuestions: 0,
+        totalMarks: 100,
+        durationMinutes: 45,
+        mode: 'Skill Test / Practical',
+        negativeMarking: 'None',
+        qualifyingMarks: '60% (60/100)',
+        description: 'Practical clinical procedure evaluation on 1:5 ratio candidates based on Stage 1 written rank.'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Comprehensive Clinical & Aerospace First Aid Nursing',
+        weightagePercent: 100,
+        highYieldTopics: [
+          'Emergency Resuscitation & Defibrillation, Mechanical Ventilation, Trauma & Burn Management, Pharmacology, Biomedical Waste Management'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Aim for 65+ out of 80 in Stage 1 Written Test to secure a top rank for Stage 2 Skill Test calling.'
+    ],
+    selectionSteps: [
+      'Step 1: 80-Mark Online Written Test (CBT)',
+      'Step 2: Practical Skill Test (1:5 shortlist ratio)',
+      'Step 3: Document Verification and Pre-Employment Medical Fitness'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Where are ISRO Nurse \'B\' postings located?',
+        answer: 'Postings are at ISRO Space Centers including SDSC SHAR Sriharikota, VSSC Thiruvananthapuram, URSC Bengaluru, SAC Ahmedabad, and LPSC Valiamala.'
+      }
+    ]
+  },
+
+  // ─── 45. SAIL PLANT HOSPITALS STAFF NURSE ──────────────────────────────────
+  'exam-sail-med-nurse-2026': {
+    examId: 'exam-sail-med-nurse-2026',
+    officialCadre: 'Staff Nurse / Proficiency Trainee (SAIL 500+ Bed Plant Hospitals)',
+    payMatrixLevel: 'Maharatna PSU Stipend + Regular Level S-3 Cadre upon absorption',
+    basicPay: '₹26,000 (Trainee) -> ₹38,000 – ₹85,000 (Regular S-3)',
+    grossSalaryMonthly: '₹35,000 – ₹55,000 / month (+ Free Hospital Accommodation & Medical)',
+    ageLimitDetails: 'Up to 30 Years',
+    ageRelaxations: 'SC/ST: 5 Years | OBC (NCL): 3 Years',
+    stages: [
+      {
+        stageName: 'Written Test / Clinical Assessment & Walk-in Interview',
+        totalQuestions: 100,
+        totalMarks: 100,
+        durationMinutes: 90,
+        mode: 'CBT / Interview',
+        negativeMarking: '0.25 mark deduction',
+        qualifyingMarks: 'UR/OBC: 50% | SC/ST: 40%',
+        description: 'Technical Nursing (75 Qs) + Industrial First Aid & General Aptitude (25 Qs).'
+      }
+    ],
+    syllabusModules: [
+      {
+        subject: 'Industrial Emergency & Clinical Nursing',
+        weightagePercent: 100,
+        highYieldTopics: [
+          'Industrial Burns & Crush Injury Management, ICU Monitoring, CPR, Inotropes, Emergency Resuscitation'
+        ]
+      }
+    ],
+    preparationStrategy: [
+      'Focus on trauma, burns, and emergency ICU patient management in large hospital setups.'
+    ],
+    selectionSteps: [
+      'Step 1: Written Examination / Clinical Assessment',
+      'Step 2: Medical Fitness at Plant Base Hospital'
+    ],
+    frequentlyAskedQuestions: [
+      {
+        question: 'Which hospitals belong to SAIL?',
+        answer: 'Major SAIL hospitals include JLN Hospital & Research Centre Bhilai (1,000 beds), Ispat General Hospital Rourkela (600 beds), Bokaro General Hospital (900 beds), and Durgapur Steel Plant Hospital (600 beds).'
+      }
+    ]
   }
 };
 
