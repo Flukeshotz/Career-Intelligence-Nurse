@@ -1,0 +1,2414 @@
+{
+  "paperId": "pyq-norcet-2024",
+  "title": "AIIMS NORCET 7 (2024) Official Question Paper & Key",
+  "examName": "AIIMS NORCET",
+  "year": 2024,
+  "shift": "Stage 1 Prelims (15 Sep 2024)",
+  "totalMarks": 95,
+  "negativeMarking": "0.33 (1/3rd deduction per incorrect MCQ)",
+  "durationMinutes": 90,
+  "officialKeyNotification": "AIIMS New Delhi Official Master Response Key (2024)",
+  "subjectsSummary": [
+    {
+      "name": "Med-Surg & Critical Care",
+      "count": 35
+    },
+    {
+      "name": "Obstetrics (OBG)",
+      "count": 15
+    },
+    {
+      "name": "Child Health (Pediatrics)",
+      "count": 15
+    },
+    {
+      "name": "Fundamentals & Procedures",
+      "count": 15
+    },
+    {
+      "name": "Pharmacology & Dosage",
+      "count": 10
+    },
+    {
+      "name": "General Aptitude & Reasoning",
+      "count": 10
+    }
+  ],
+  "questions": [
+    {
+      "qNo": 1,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Inability to produce semen in a man is called: Generate HTML Link",
+      "options": [
+        {
+          "key": "A",
+          "text": "Aspermia"
+        },
+        {
+          "key": "B",
+          "text": "Azoospermia"
+        },
+        {
+          "key": "C",
+          "text": "Asthenospermia"
+        },
+        {
+          "key": "D",
+          "text": "Tetrazoospermia Test Title / ID 640475 Exam Category Exam Select Exam Category"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Aspermia: This refers to the complete absence semen production, which may be due to blockages, hormonal issues, or nerve damage. It is often associated with ejaculatory dysfunction Select Paid of Status All Select Language and can impact fertility. Azoospermia: This condition involves the To absence Created Date of sperm in the semen despite normal semen production. It is commonly caused by blockages, testicular failure, or hormonal imbalances, making Created From Date natural conception difficult. Search toward the Clear mm/dd/yyyy --:-- -Asthenospermia: This refers to reduced sperm motility, where sperm are present but lack the ability to swim efficiently egg. Causes include infections, genetic factors, or lifestyle issues like mm/dd/yyyy --:-- -- smoking. Tetrazoospermia: This condition refers to abnormalities in the shape and structure of sperm (morphology). Poorly formed sperm often struggle to fertilize an egg, leading to potential fertility challenges. ID"
+    },
+    {
+      "qNo": 2,
+      "subject": "Medical-Surgical Nursing",
+      "question": "",
+      "options": [
+        {
+          "key": "A",
+          "text": "Option A"
+        },
+        {
+          "key": "B",
+          "text": "Sensorineural deafness"
+        },
+        {
+          "key": "C",
+          "text": "2024"
+        },
+        {
+          "key": "D",
+          "text": "Combination of both sensorineural deafness and conductive deafness"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Conductive deafness: In Weber's test, sound lateralizes to the diseased ear in cases of conductive deafness because bone conduction becomes more prominent due to the defect in air conduction. Sensorineural deafness: In sensorineural deafness, sound lateralizes to the better ear because the affected ear has a reduced ability to detect sound through both air and bone conduction. Tympanic deafness: This term is not widely recognized or used in clinical practice to describe hearing loss or Weber's test results, making it irrelevant in this context. Combination of both sensorineural deafness and conductive deafness: This condition, known as mixed hearing loss, does not produce the specific pattern of sound lateralizing to the diseased ear in Weber's test. Instead, results may vary depending on the dominant type of hearing loss."
+    },
+    {
+      "qNo": 3,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which artery is commonly affected during myocardial infarction (MI)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Renal artery"
+        },
+        {
+          "key": "B",
+          "text": "Celiac artery"
+        },
+        {
+          "key": "C",
+          "text": "Coronary artery"
+        },
+        {
+          "key": "D",
+          "text": "Hepatic artery"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Renal artery: This artery is responsible for supplying blood to the kidneys and has no direct role in myocardial infarction, which affects the heart. Celiac artery: The celiac artery supplies blood to the stomach, liver, spleen, and other abdominal organs, making it unrelated to myocardial infarction. Coronary artery: This is the correct answer. Coronary arteries provide oxygenated blood to the heart muscle, and a blockage in these arteries leads to myocardial infarction (heart attack) by depriving the heart tissue of oxygen. Hepatic artery: This artery supplies blood to the liver and plays no role in myocardial infarction, which involves the coronary arteries."
+    },
+    {
+      "qNo": 4,
+      "subject": "Medical-Surgical Nursing",
+      "question": "What is the main sign of tuberculosis?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Coughing more than 3 weeks"
+        },
+        {
+          "key": "B",
+          "text": "Coughing occasionally"
+        },
+        {
+          "key": "C",
+          "text": "Coughing only at night time"
+        },
+        {
+          "key": "D",
+          "text": "Mild coughing"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Coughing more than 3 weeks: This is the hallmark symptom of tuberculosis, often accompanied by weight loss, fatigue, fever, and night sweats, indicating a possible active infection. Coughing occasionally: Occasional coughing is non-specific and can be caused by common conditions like allergies or a minor throat irritation, not necessarily tuberculosis. Coughing only at night time: Nighttime coughing is more characteristic of conditions like asthma or GERD and is not a typical sign of tuberculosis. Mild coughing: Mild coughing without other significant symptoms is not indicative of tuberculosis, as the disease usually presents with persistent and severe symptoms."
+    },
+    {
+      "qNo": 5,
+      "subject": "Medical-Surgical Nursing",
+      "question": "The goal of clinical management of a patient with COPD is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Improvement in ventilation"
+        },
+        {
+          "key": "B",
+          "text": "Increase in bronchial secretions"
+        },
+        {
+          "key": "C",
+          "text": "Improvement in general health"
+        },
+        {
+          "key": "D",
+          "text": "All of the above"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Improvement in ventilation: This is a key goal of COPD management, achieved through bronchodilators, oxygen therapy, and breathing exercises to enhance airflow and oxygenation. Increase in bronchial secretions: This is not a goal of COPD management. Instead, reducing excess mucus production and clearing airways to improve breathing is targeted. Improvement in general health: This is an important part of COPD management, involving lifestyle changes, smoking cessation, nutrition, and regular physical activity to enhance overall well-being. All of the above: This is correct because COPD management encompasses improving ventilation, addressing mucus production, and improving general health for comprehensive care."
+    },
+    {
+      "qNo": 6,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Liver abscess mainly occurs in:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Right lobe of the liver"
+        },
+        {
+          "key": "B",
+          "text": "Left lobe of the liver"
+        },
+        {
+          "key": "C",
+          "text": "Both lobes"
+        },
+        {
+          "key": "D",
+          "text": "None of the above"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Right lobe of the liver: This is correct because the right lobe is larger and has a higher blood supply, making it more vulnerable to infections and the formation of abscesses. Left lobe of the liver: While abscesses can occur here, they are less frequent compared to the right lobe due to the smaller size and lower blood supply. Both lobes: This is rare and usually associated with severe, untreated, or systemic infections that spread extensively within the liver. None of the above: This is incorrect, as liver abscesses are a well-documented condition, predominantly affecting the right lobe."
+    },
+    {
+      "qNo": 7,
+      "subject": "Medical-Surgical Nursing",
+      "question": "In which of the following disease conditions is Glucocorticoid therapy applicable?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chronic adrenal insufficiency"
+        },
+        {
+          "key": "B",
+          "text": "Bronchial asthma"
+        },
+        {
+          "key": "C",
+          "text": "Preventing graft rejection in organ transplantation"
+        },
+        {
+          "key": "D",
+          "text": "All of the above"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Chronic adrenal insufficiency: Glucocorticoids are crucial in hormone replacement therapy to compensate for the lack of cortisol production in adrenal insufficiency, ensuring normal metabolic and immune functions. Bronchial asthma: They play a significant role in reducing airway inflammation, preventing asthma attacks, and improving respiratory function, often administered via inhalers or oral medications. Preventing graft rejection in organ transplantation: Glucocorticoids suppress the immune system, reducing the risk of the body rejecting transplanted organs by limiting immune response and inflammation. All of the above: glucocorticoids are widely used in all these conditions due to their anti-inflammatory and immunosuppressive properties."
+    },
+    {
+      "qNo": 8,
+      "subject": "Medical-Surgical Nursing",
+      "question": "The most useful test for the diagnosis of Diabetes mellitus is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Urine glucose"
+        },
+        {
+          "key": "B",
+          "text": "ESR"
+        },
+        {
+          "key": "C",
+          "text": "Glucose tolerance test"
+        },
+        {
+          "key": "D",
+          "text": "Ketone body level"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Urine glucose: This test is not a reliable diagnostic tool for diabetes as it only detects glucose in urine when blood sugar levels are significantly high, often missing early stages of the condition. ESR: The erythrocyte sedimentation rate measures inflammation in the body and has no direct relevance to diagnosing diabetes mellitus. Glucose tolerance test: This is the most accurate test for diagnosing diabetes, as it evaluates the body’s response to a glucose load by measuring blood sugar levels over time. Ketone body level: This test helps in identifying diabetic ketoacidosis, a serious complication of diabetes, but it is not used to diagnose diabetes itself."
+    },
+    {
+      "qNo": 9,
+      "subject": "Medical-Surgical Nursing",
+      "question": "A patient with cerebral thrombosis is scheduled for cerebral angiography. Which of the following nursing care is appropriate for this client?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Inform the client that a warm, flushed feeling and a salty taste may occur."
+        },
+        {
+          "key": "B",
+          "text": "Avoid applying a pressure dressing over the site of puncture."
+        },
+        {
+          "key": "C",
+          "text": "Keep the extremity used as puncture site flexed to prevent bleeding."
+        },
+        {
+          "key": "D",
+          "text": "All of the above"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Inform the client that a warm, flushed feeling and a salty taste may occur: This is correct because these sensations are common due to the contrast dye injection and should be communicated to the patient to reduce anxiety. Avoid applying a pressure dressing over the site of puncture: This is incorrect because applying a pressure dressing is essential to prevent bleeding and ensure proper healing at the puncture site. Keep the extremity used as puncture site flexed to prevent bleeding: The extremity should remain straight to minimize the risk of bleeding or hematoma formation. All of the above: Not all interventions listed are appropriate or aligned with standard nursing practices for cerebral angiography."
+    },
+    {
+      "qNo": 10,
+      "subject": "Medical-Surgical Nursing",
+      "question": "What does male intersex mean?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Presence of female external genitalia with male gonads"
+        },
+        {
+          "key": "B",
+          "text": "Presence of male external genitalia with female gonads"
+        },
+        {
+          "key": "C",
+          "text": "A man having sexual relation with another man"
+        },
+        {
+          "key": "D",
+          "text": "A man having sexual relation with a woman"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Presence of female external genitalia with male gonads: This is correct, as male intersex describes a condition where an individual has male gonads (testes) but external genitalia that resemble female structures due to hormonal or genetic differences. Presence of male external genitalia with female gonads: This does not define male intersex but could refer to other intersex variations involving chromosomal or gonadal differences. A man having sexual relation with another man: This describes sexual orientation and is unrelated to intersex, which pertains to biological and anatomical variations. A man having sexual relation with a woman: This is unrelated to the concept of intersex, which focuses on variations in physical sex characteristics."
+    },
+    {
+      "qNo": 11,
+      "subject": "Medical-Surgical Nursing",
+      "question": "What is the main reason for angina pectoris?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Neurological disease"
+        },
+        {
+          "key": "B",
+          "text": "Gastric disease"
+        },
+        {
+          "key": "C",
+          "text": "Respiratory disease"
+        },
+        {
+          "key": "D",
+          "text": "Cardiac disease"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Neurological disease: Neurological conditions do not cause angina; however, they might present symptoms like chest discomfort in some cases due to nerve involvement. Gastric disease: Gastric problems, like acid reflux, may mimic angina symptoms (e.g., chest pain), but they are not the root cause of true angina. Respiratory disease: Respiratory conditions, such as asthma or pneumonia, do not lead to angina, as they affect the lungs rather than the heart’s blood supply. Cardiac disease: As angina results from reduced blood flow to the heart muscle, most often due to coronary artery disease or other cardiac conditions."
+    },
+    {
+      "qNo": 12,
+      "subject": "Medical-Surgical Nursing",
+      "question": "What does cystocele mean?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Accumulation of fluid in the urinary bladder"
+        },
+        {
+          "key": "B",
+          "text": "Bladder sloughing"
+        },
+        {
+          "key": "C",
+          "text": "Bladder infection"
+        },
+        {
+          "key": "D",
+          "text": "Having bladder atrophy Copyright © 2026 Adda247"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Accumulation of fluid in the urinary bladder: This is incorrect as cystocele does not involve fluid accumulation; it refers to the bladder bulging into the vaginal wall due to weakened pelvic floor muscles. Bladder sloughing: Cystocele refers to the bladder slipping or bulging into the vaginal wall, typically caused by weakened support structures in the pelvic area. Bladder infection: This refers to cystitis, which is inflammation or infection of the bladder, and is unrelated to the structural issue seen in a cystocele. Having bladder atrophy: As cystocele involves a structural bulging or prolapse of the bladder, not atrophy or shrinkage."
+    },
+    {
+      "qNo": 13,
+      "subject": "General Aptitude & Reasoning",
+      "question": "Side effects of long-term glucocorticoid therapy are:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Peptic Ulcer"
+        },
+        {
+          "key": "B",
+          "text": "Sensitivity to Infection"
+        },
+        {
+          "key": "C",
+          "text": "Cataract and Glaucoma"
+        },
+        {
+          "key": "D",
+          "text": "All of the above"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Peptic Ulcer: Long-term glucocorticoid use can increase the risk of peptic ulcers by reducing the protective lining of the stomach and enhancing acid production. Sensitivity to Infection: Glucocorticoids suppress the immune system, making the body more susceptible to infections, including opportunistic ones. Cataract and Glaucoma: Prolonged use of glucocorticoids can cause cataracts (clouding of the eye lens) and glaucoma (increased intraocular pressure), affecting vision. All of the above: As all these side effects are associated with long-term glucocorticoid therapy and are significant considerations during treatment."
+    },
+    {
+      "qNo": 14,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Cholelithiasis is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Inflammation of gall bladder"
+        },
+        {
+          "key": "B",
+          "text": "Stone in Kidney"
+        },
+        {
+          "key": "C",
+          "text": "Stone in gall bladder"
+        },
+        {
+          "key": "D",
+          "text": "Infection in Kidney"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Inflammation of gall bladder: As inflammation of the gall bladder is termed cholecystitis, which often occurs due to obstruction caused by gallstones. Stone in Kidney: This is incorrect, as kidney stones are referred to as nephrolithiasis, and they form in the kidneys rather than the gall bladder. Stone in gall bladder: Cholelithiasis refers to the presence or formation of gallstones in the gall bladder, which can block bile flow and lead to pain or complications. Infection in Kidney: As kidney infections are known as pyelonephritis, a bacterial infection affecting the renal pelvis and kidney tissue, not the gall bladder."
+    },
+    {
+      "qNo": 15,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which is the best test for detecting liver dysfunction?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Serum albumin"
+        },
+        {
+          "key": "B",
+          "text": "Serum bilirubin"
+        },
+        {
+          "key": "C",
+          "text": "SGPT"
+        },
+        {
+          "key": "D",
+          "text": "Prothrombin time"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Serum albumin: This test measures protein levels produced by the liver, but its decrease is not specific to liver dysfunction as it can also be affected by nutritional status or kidney issues. Serum bilirubin: Elevated bilirubin levels can indicate jaundice or bile duct obstruction, but it does not specifically measure liver cell damage or dysfunction. SGPT (ALT): Serum glutamate pyruvate transaminase (SGPT), also called alanine transaminase (ALT), is the most specific enzyme for detecting liver cell damage and evaluating overall liver function. Prothrombin time: This test assesses clotting ability, which can be impaired in severe liver disease, but it is more indicative of advanced dysfunction rather than a primary diagnostic tool."
+    },
+    {
+      "qNo": 16,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which of the following is a bone disease that causes loss of bone density and increases the risk of fractures?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Osteoporosis"
+        },
+        {
+          "key": "B",
+          "text": "Hyperglycemia"
+        },
+        {
+          "key": "C",
+          "text": "Hypoglycemia"
+        },
+        {
+          "key": "D",
+          "text": "Emphysema"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Osteoporosis: This condition involves decreased bone density, making bones fragile and prone to fractures, but it is unrelated to blood sugar levels. Hyperglycemia: This refers to high blood sugar levels, which can affect metabolic health but has no direct relation to bone diseases or density issues. Hypoglycemia: Hypoglycemia refers to low blood sugar levels, which can cause metabolic imbalances. While it is not a bone disease, it can indirectly influence bone health through systemic effects. Emphysema: This lung condition affects the alveoli (air sacs) and is entirely unrelated to blood sugar levels or bone health."
+    },
+    {
+      "qNo": 17,
+      "subject": "Medical-Surgical Nursing",
+      "question": "In Dyspepsia:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Small amount of acid secreted in the stomach."
+        },
+        {
+          "key": "B",
+          "text": "Acid is secreted in excess in the stomach."
+        },
+        {
+          "key": "C",
+          "text": "No relation to acid secretion in the stomach."
+        },
+        {
+          "key": "D",
+          "text": "None of the above."
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Small amount of acid secreted in the stomach: As, dyspepsia is typically associated with excessive acid production rather than a lack of acid secretion. Acid is secreted in excess in the stomach: Dyspepsia, or indigestion, is commonly caused by an overproduction of stomach acid, which irritates the stomach lining and leads to symptoms like discomfort, bloating, and heartburn. No relation to acid secretion in the stomach: Dyspepsia is directly related to abnormal acid secretion, making this option irrelevant. None of the above: As dyspepsia is specifically associated with excess acid secretion in the stomach."
+    },
+    {
+      "qNo": 18,
+      "subject": "General Aptitude & Reasoning",
+      "question": "Why lipstick and nail polish is removed before surgery?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Surgery becomes easier"
+        },
+        {
+          "key": "B",
+          "text": "Surgery becomes more successful"
+        },
+        {
+          "key": "C",
+          "text": "Psychological benefits to the patient"
+        },
+        {
+          "key": "D",
+          "text": "Cyanosis is checked Copyright © 2026 Adda247"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Surgery becomes easier: As, removing lipstick and nail polish does not impact the physical ease of performing the surgical procedure. Surgery becomes more successful: As the success of the surgery depends on medical and technical factors, not the removal of cosmetic products. Psychological benefits to the patient: As the removal of lipstick and nail polish does not have significant psychological implications for the patient undergoing surgery. Cyanosis is checked: Lipstick and nail polish can obscure critical observations of cyanosis (bluish discoloration of the skin or nails), which is an important indicator of oxygenation levels during and after surgery. Removing them ensures accurate monitoring of the patient’s condition."
+    },
+    {
+      "qNo": 19,
+      "subject": "Mental Health & Psychiatric Nursing",
+      "question": "Glucocorticoid therapy should not be stopped suddenly because:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sudden discontinuation may result in serious mental disorder."
+        },
+        {
+          "key": "B",
+          "text": "Sudden discontinuation may cause allergic reactions."
+        },
+        {
+          "key": "C",
+          "text": "Sudden discontinuation may cause severe adrenal insufficiency."
+        },
+        {
+          "key": "D",
+          "text": "None of the above."
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Sudden discontinuation may result in serious mental disorder: While mood changes or mental health effects like depression can occur, they are secondary concerns compared to adrenal insufficiency. Sudden discontinuation may cause allergic reactions: as allergic reactions are not related to the withdrawal of glucocorticoids. Sudden discontinuation may cause severe adrenal insufficiency: Long-term glucocorticoid use suppresses adrenal gland function, and abrupt withdrawal can lead to a life-threatening condition due to the body's inability to produce enough cortisol. None of the above: This is incorrect, as the most critical concern is severe adrenal insufficiency resulting from sudden discontinuation."
+    },
+    {
+      "qNo": 20,
+      "subject": "Medical-Surgical Nursing",
+      "question": "The nurse is caring for a male client with a diagnosis of chronic gastritis. The nurse monitors the client knowing that this client is at risk for which vitamin deficiency?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Vitamin A"
+        },
+        {
+          "key": "B",
+          "text": "Vitamin B12"
+        },
+        {
+          "key": "C",
+          "text": "Vitamin C"
+        },
+        {
+          "key": "D",
+          "text": "Vitamin E"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Vitamin A: As Vitamin A deficiency is not linked to chronic gastritis. It is more commonly associated with visual impairments and skin conditions. Vitamin B12: Chronic gastritis, particularly in cases with reduced gastric acid secretion or atrophic gastritis, impairs the absorption of Vitamin B12, which may lead to pernicious anemia and neurological symptoms. Vitamin C: While chronic gastritis might indirectly affect the absorption of Vitamin C, its deficiency is not a primary concern and is less commonly associated with this condition. Vitamin E: As Vitamin E deficiency is unrelated to chronic gastritis and is typically linked to fat malabsorption syndromes."
+    },
+    {
+      "qNo": 21,
+      "subject": "General Aptitude & Reasoning",
+      "question": "Raynaud's disease is a:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nervous system disease"
+        },
+        {
+          "key": "B",
+          "text": "Digestive system disease"
+        },
+        {
+          "key": "C",
+          "text": "Heart circulatory disease"
+        },
+        {
+          "key": "D",
+          "text": "Respiratory diseases"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Nervous system disease: As Raynaud's disease affects blood vessels rather than nerves, although symptoms like numbness may mimic neurological conditions. Digestive system disease: As Raynaud's disease does not impact digestive organs or functions and is unrelated to gastrointestinal health. Heart circulatory disease: Raynaud's disease is a circulatory disorder characterized by narrowed blood vessels, often triggered by stress or cold, leading to reduced blood flow and discoloration in extremities. Respiratory diseases: As the condition does not involve the respiratory system, and symptoms are localized to blood flow in extremities like fingers and toes."
+    },
+    {
+      "qNo": 22,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "The immunoglobulin that is found in breast milk is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "IgG"
+        },
+        {
+          "key": "B",
+          "text": "IgM"
+        },
+        {
+          "key": "C",
+          "text": "IgD"
+        },
+        {
+          "key": "D",
+          "text": "IgA"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "IgG: IgG is the most abundant antibody in the blood and provides systemic immunity, but it is not the main immunoglobulin in breast milk. IgM: This is incorrect. IgM is primarily involved in the early immune response and is not found in significant quantities in breast milk. IgD: IgD plays a role in activating B cells and is not associated with breast milk or mucosal immunity. IgA: Secretory IgA is the predominant antibody in breast milk, providing mucosal immunity to the infant by protecting the gastrointestinal tract against infections and pathogens."
+    },
+    {
+      "qNo": 23,
+      "subject": "Medical-Surgical Nursing",
+      "question": "The trauma caused during myocardial infarction (MI) and dysrhythmias is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Cardiogenic trauma"
+        },
+        {
+          "key": "B",
+          "text": "Hypovolemic trauma"
+        },
+        {
+          "key": "C",
+          "text": "Neurogenic trauma"
+        },
+        {
+          "key": "D",
+          "text": "Septic trauma"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Cardiogenic trauma: Cardiogenic trauma occurs when the heart muscle is damaged, often due to myocardial infarction (MI) or severe dysrhythmias, leading to reduced cardiac output and impaired circulation. Hypovolemic trauma: Hypovolemic trauma is caused by significant blood or fluid loss, such as in hemorrhage, and is unrelated to heart muscle damage. Neurogenic trauma: Neurogenic trauma occurs due to damage to the nervous system, often leading to loss of vascular tone, but it is not associated with cardiac dysfunction. Septic trauma: Septic trauma results from severe infections causing systemic inflammation, but it does not involve direct damage to the heart muscle. Copyright © 2026 Adda247"
+    },
+    {
+      "qNo": 24,
+      "subject": "General Aptitude & Reasoning",
+      "question": "The volume of urine in oliguria is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Less than 100 ml"
+        },
+        {
+          "key": "B",
+          "text": "Less than 400 ml"
+        },
+        {
+          "key": "C",
+          "text": "Less than 800 ml"
+        },
+        {
+          "key": "D",
+          "text": "Does not make urine"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Less than 100 ml: As urine output below 100 ml per day is defined as anuria, which is a more severe condition than oliguria. Less than 400 ml: Oliguria is defined as a urine output of less than 400 ml per day in adults, often indicating dehydration, kidney dysfunction, or other medical conditions. Less than 800 ml: as this volume is higher than the threshold for oliguria and is considered within the normal range for daily urine output. Does not make urine: This is incorrect, as complete absence of urine production refers to anuria, not oliguria."
+    },
+    {
+      "qNo": 25,
+      "subject": "Medical-Surgical Nursing",
+      "question": "T-tube drainage is used after which surgery:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lobectomy"
+        },
+        {
+          "key": "B",
+          "text": "Billroth"
+        },
+        {
+          "key": "C",
+          "text": "Cholecystectomy"
+        },
+        {
+          "key": "D",
+          "text": "Ileostomy"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Lobectomy: as T-tube drainage is not used in lung surgeries like lobectomy, which involves removing a lobe of the lung. Billroth: as T-tube drainage is not associated with gastrointestinal reconstruction surgeries like Billroth I or II. Cholecystectomy: T-tube drainage is commonly used after a cholecystectomy (gall bladder removal) to drain bile, monitor bile output, and ensure that the common bile duct remains unobstructed during the healing process. Ileostomy: as T-tube drainage is not required in bowel surgeries like ileostomy, which involve creating an opening in the ileum for waste elimination."
+    },
+    {
+      "qNo": 26,
+      "subject": "Medical-Surgical Nursing",
+      "question": "The cause of pneumonia in AIDS patients is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Staphylococcus"
+        },
+        {
+          "key": "B",
+          "text": "Streptococcus"
+        },
+        {
+          "key": "C",
+          "text": "Pneumocystis coryni"
+        },
+        {
+          "key": "D",
+          "text": "Mycoplasma"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Staphylococcus: While Staphylococcus species can cause pneumonia, they are not the most frequent cause in AIDS patients. Opportunistic infections like Pneumocystis are more common. Streptococcus: Streptococcus pneumoniae is a common cause of pneumonia in the general population but is less frequent in AIDS patients compared to opportunistic pathogens like Pneumocystis coryni. Pneumocystis coryni: Pneumocystis coryni (also known as Pneumocystis jirovecii) is a leading cause of pneumonia in immunocompromised individuals, including those with AIDS, causing severe and often life-threatening pulmonary infections. Mycoplasma: Mycoplasma pneumoniae causes atypical pneumonia but is less commonly seen in AIDS patients compared to Pneumocystis coryni."
+    },
+    {
+      "qNo": 27,
+      "subject": "General Aptitude & Reasoning",
+      "question": "Presence of sugar in urine:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Oliguria"
+        },
+        {
+          "key": "B",
+          "text": "Glycosuria"
+        },
+        {
+          "key": "C",
+          "text": "Hematuria"
+        },
+        {
+          "key": "D",
+          "text": "Pyuria"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Oliguria: Oliguria refers to a reduced urine output, often due to dehydration or kidney dysfunction, and is unrelated to glucose presence. Glycosuria: This is correct. Glycosuria refers to the presence of glucose in the urine, which is typically seen in conditions like uncontrolled diabetes mellitus due to high blood sugar levels exceeding the renal threshold. Hematuria: Hematuria indicates the presence of blood in the urine, often due to urinary tract infections, kidney stones, or trauma. Pyuria: Pyuria refers to the presence of pus in urine, which suggests an infection in the urinary tract but has no connection to glucose."
+    },
+    {
+      "qNo": 28,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "What is the drug of choice for Thalassemia?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Vincristine"
+        },
+        {
+          "key": "B",
+          "text": "Vinblastine"
+        },
+        {
+          "key": "C",
+          "text": "Dilantin"
+        },
+        {
+          "key": "D",
+          "text": "Deferoxamine"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Vincristine: Vincristine is a chemotherapy drug used to treat cancers like leukemia and lymphoma and is unrelated to Thalassemia treatment. Vinblastine: Vinblastine is another chemotherapy drug used for cancer treatment and has no role in managing Thalassemia. Dilantin: Dilantin (phenytoin) is an antiepileptic drug used to control seizures and does not address the complications of Thalassemia. Deferoxamine: Deferoxamine is an iron chelator used in Thalassemia patients to remove excess iron that accumulates due to frequent blood transfusions, preventing complications like organ damage."
+    },
+    {
+      "qNo": 29,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "Cancer found in connective tissue is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Carcinoma"
+        },
+        {
+          "key": "B",
+          "text": "Sarcoma"
+        },
+        {
+          "key": "C",
+          "text": "Leukemia"
+        },
+        {
+          "key": "D",
+          "text": "Metastasis"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Carcinoma: Carcinomas originate in epithelial cells, such as those in the skin or lining of organs, and are not related to connective tissue. Sarcoma: Sarcomas are cancers that develop in connective tissues, including bone, cartilage, fat, muscle, or blood vessels, making them distinct from carcinomas or blood cancers. Leukemia: Leukemia originates in blood-forming tissues like bone marrow and affects white blood cells, not connective tissues. Metastasis: Metastasis refers to the spread of cancer from its original site to other parts of the body, not the type or origin of the cancer. Copyright © 2026 Adda247 Q.30 Select the correct statement regarding the specific disorder of muscular or skeletal system: A. Osteoporosis - decrease in bone mass and higher chances of fractures with advancing age B. Myasthenia gravis - an autoimmune disorder characterized by inflammation of the joints. C. Gout - inflammation of joints due to extra deposition of calcium D. Age-related shortening of muscles Answer: A Sol: Osteoporosis - decrease in bone mass and higher chances of fractures with advancing age: Osteoporosis is a condition marked by reduced bone density, making bones weak and prone to fractures, particularly in older individuals. Myasthenia gravis - an autoimmune disorder characterized by inflammation of the joints: Myasthenia gravis is an autoimmune disorder affecting the neuromuscular junctions, leading to muscle weakness, not joint inflammation. Gout - inflammation of joints due to extra deposition of calcium: Gout results from the accumulation of uric acid crystals in the joints, not calcium deposits. Age-related shortening of muscles: While aging can lead to some muscle atrophy and stiffness, it is not defined as a specific condition or disorder of the musculoskeletal system."
+    },
+    {
+      "qNo": 31,
+      "subject": "Mental Health & Psychiatric Nursing",
+      "question": "The percentage of population suffering from serious mental illness is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "3%"
+        },
+        {
+          "key": "B",
+          "text": "1%"
+        },
+        {
+          "key": "C",
+          "text": "10%"
+        },
+        {
+          "key": "D",
+          "text": "5%"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "3%: While 3% may represent a subset of severe mental health conditions, it underestimates the total prevalence of all mental illnesses. 1%: Serious mental illnesses like schizophrenia alone affect about 1% of the population, but the total prevalence of mental health conditions is much higher. 10%: Approximately 10% of the population suffers from mental health conditions, including both mild conditions like anxiety and serious illnesses such as bipolar disorder or schizophrenia. 5%: Although 5% might represent some moderate to severe cases, it falls short of the actual prevalence when mild and severe conditions are included."
+    },
+    {
+      "qNo": 32,
+      "subject": "Pharmacology & Drug Calculations",
+      "question": "Euphoria is caused by which of the following?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sedative drugs"
+        },
+        {
+          "key": "B",
+          "text": "Psychotropic drugs"
+        },
+        {
+          "key": "C",
+          "text": "Fumigant substances"
+        },
+        {
+          "key": "D",
+          "text": "Both (1) and (2)"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Sedative drugs: Sedative drugs, such as benzodiazepines, can cause euphoria by depressing the central nervous system and inducing a relaxed, pleasurable state. Psychotropic drugs: Psychotropic drugs, such as stimulants or hallucinogens, can alter mood and perception, often leading to feelings of euphoria. Fumigant substances: Fumigants are used for pest control and have no effect on mood or euphoria, and their inhalation can be toxic rather than euphoric. Both (1) and (2): Both sedative and psychotropic drugs are known to cause euphoria through their effects on the central nervous system and neurotransmitter activity."
+    },
+    {
+      "qNo": 33,
+      "subject": "Mental Health & Psychiatric Nursing",
+      "question": "What is unnecessarily excessive fear of high places called?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Agoraphobia"
+        },
+        {
+          "key": "B",
+          "text": "Acrophobia"
+        },
+        {
+          "key": "C",
+          "text": "Algophobia"
+        },
+        {
+          "key": "D",
+          "text": "Genophobia"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Agoraphobia: Agoraphobia is the fear of open or crowded spaces where escape might feel difficult or embarrassing, commonly leading to avoidance behavior. Acrophobia: Acrophobia is the fear of heights, often triggered by being in high places or even thinking about them, leading to anxiety, dizziness, and a sense of losing balance. Algophobia: Algophobia refers to an intense fear of pain, which can stem from both physical and emotional discomfort, and is unrelated to heights. Genophobia: Genophobia is the fear of sexual intimacy, often associated with trauma, anxiety, or emotional distress, and it has no relation to the fear of heights."
+    },
+    {
+      "qNo": 34,
+      "subject": "Community Health Nursing (CHN)",
+      "question": "In which chapter of the Mental Health Act, there is a rule regarding the discharge of a mental patient from the hospital?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Chapter-5"
+        },
+        {
+          "key": "B",
+          "text": "Chapter-6"
+        },
+        {
+          "key": "C",
+          "text": "Chapter-7"
+        },
+        {
+          "key": "D",
+          "text": "Chapter-8"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Chapter-5: Chapter-5 of the Mental Health Act specifically outlines provisions for the discharge of mental health patients, including criteria and procedures to ensure their safe and appropriate reintegration into the community. Chapter-6: Chapter-6 focuses on rules to ensure continuity of care and rehabilitation for patients but does not directly address discharge processes. Chapter-7: Chapter-7 deals with licensing and regulation of mental health institutions and professionals, unrelated to patient discharge. Chapter-8: Chapter-8 includes miscellaneous provisions and general guidelines, but it does not cover the rules for discharging patients from mental health facilities."
+    },
+    {
+      "qNo": 35,
+      "subject": "Mental Health & Psychiatric Nursing",
+      "question": "What does zoophobia mean?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Inexplicable fear of closed places"
+        },
+        {
+          "key": "B",
+          "text": "Inexplicable fear of water"
+        },
+        {
+          "key": "C",
+          "text": "Inexplicable fear of animals"
+        },
+        {
+          "key": "D",
+          "text": "Inexplicable fear of open spaces"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Inexplicable fear of closed places: Fear of closed or confined spaces is called claustrophobia, which is unrelated to zoophobia. Inexplicable fear of water: The fear of water is known as hydrophobia, often associated with anxiety near or in water, not animals. Copyright © 2026 Adda247 Inexplicable fear of animals: Zoophobia is an intense, irrational fear of animals, which can cause significant anxiety or panic when encountering or even thinking about animals. Inexplicable fear of open spaces: Fear of open spaces is referred to as agoraphobia, which involves a fear of being in situations where escape might be difficult, not a fear of animals."
+    },
+    {
+      "qNo": 36,
+      "subject": "General Aptitude & Reasoning",
+      "question": "Reversible dementia is seen in:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Wilson"
+        },
+        {
+          "key": "B",
+          "text": "Myxedema"
+        },
+        {
+          "key": "C",
+          "text": "Alzheimer’s"
+        },
+        {
+          "key": "D",
+          "text": "Huntington disease"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Wilson: Wilson's disease affects copper metabolism, leading to neurological and psychiatric symptoms, but it does not typically cause reversible dementia unless copper accumulation is caught early. Myxedema: Myxedema, caused by severe hypothyroidism, can result in reversible cognitive decline and dementia-like symptoms, which improve significantly with thyroid hormone replacement therapy. Alzheimer’s: Alzheimer’s disease is a progressive neurodegenerative condition that causes irreversible dementia due to ongoing neuronal loss. Huntington disease: Huntington disease is a genetic disorder causing irreversible cognitive and motor decline due to neurodegeneration."
+    },
+    {
+      "qNo": 37,
+      "subject": "Mental Health & Psychiatric Nursing",
+      "question": "Common risk factor in patients with severe depression is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Fatigability"
+        },
+        {
+          "key": "B",
+          "text": "Hallucination"
+        },
+        {
+          "key": "C",
+          "text": "Agitation"
+        },
+        {
+          "key": "D",
+          "text": "Suicidal tendency"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Fatigability: This is incorrect. Fatigability, or feeling excessively tired, is a common symptom of depression but does not represent the most severe or life-threatening risk. Hallucination: This is incorrect. Hallucinations are more often associated with psychotic disorders, and while they can occur in severe depression with psychotic features, they are not the primary concern. Agitation: This is incorrect. Agitation is a symptom of depression that can cause restlessness or irritability but does not pose as critical a risk as suicidal tendencies. Suicidal tendency: This is correct. Suicidal tendencies, including thoughts or actions, are the most severe risk factor in severe depression, requiring urgent medical and psychological intervention to prevent self-harm."
+    },
+    {
+      "qNo": 38,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Mental illnesses that cause bodily symptoms, including pain, and the symptoms can't be traced back to any physical cause are known as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "PTSD"
+        },
+        {
+          "key": "B",
+          "text": "Obsessive-Compulsive Disorder"
+        },
+        {
+          "key": "C",
+          "text": "Somatoform disorder"
+        },
+        {
+          "key": "D",
+          "text": "Dissociative disorder"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "PTSD: Post-Traumatic Stress Disorder is related to emotional trauma and does not primarily manifest as unexplained physical symptoms. Obsessive-Compulsive Disorder: OCD involves intrusive thoughts and compulsive behaviors, not unexplained physical symptoms. Somatoform disorder: This disorder causes physical symptoms with no identifiable medical cause, often linked to psychological stress. Dissociative disorder: Dissociative disorders involve disruptions in identity, memory, or consciousness, not physical symptoms."
+    },
+    {
+      "qNo": 39,
+      "subject": "Mental Health & Psychiatric Nursing",
+      "question": "In which type of schizophrenia is the patient's motor behavior greatly disturbed?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Catatonic schizophrenia"
+        },
+        {
+          "key": "B",
+          "text": "Residual schizophrenia"
+        },
+        {
+          "key": "C",
+          "text": "Hebephrenic schizophrenia"
+        },
+        {
+          "key": "D",
+          "text": "Paranoid schizophrenia"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Catatonic schizophrenia: This type involves significant disturbances in motor behavior, such as immobility, stupor, or excessive motor activity. Residual schizophrenia: This subtype includes milder symptoms after an acute episode, not major motor disturbances. Hebephrenic schizophrenia: Also known as disorganized schizophrenia, this type involves disorganized behavior and speech, not motor disturbances. Paranoid schizophrenia: This type is characterized by delusions and hallucinations, not disturbances in motor behavior."
+    },
+    {
+      "qNo": 40,
+      "subject": "Mental Health & Psychiatric Nursing",
+      "question": "Mania is characterized by:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Paranoid delusion"
+        },
+        {
+          "key": "B",
+          "text": "High self-esteem"
+        },
+        {
+          "key": "C",
+          "text": "Loss of insight"
+        },
+        {
+          "key": "D",
+          "text": "Loss of orientation"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Paranoid delusion: This is incorrect. Paranoid delusions are more commonly seen in psychotic disorders like schizophrenia and are not a core feature of mania. High self-esteem: This is correct. Mania is often characterized by elevated mood, heightened self-esteem, or grandiosity, leading to overconfidence and impulsive behavior. Loss of insight: This is incorrect. While individuals with mania may lack insight into their condition, it is a secondary feature rather than a defining characteristic. Loss of orientation: This is incorrect. Mania typically does not involve disorientation, as patients remain aware of their environment and circumstances."
+    },
+    {
+      "qNo": 41,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "interventions prevent hypothermia in preterm babies except:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Use of polyethylene plastic wraps"
+        },
+        {
+          "key": "B",
+          "text": "Using double layered incubators"
+        },
+        {
+          "key": "C",
+          "text": "Using woolen caps to cover head"
+        },
+        {
+          "key": "D",
+          "text": "Keeping the delivery room temperature at 22 degrees Celsius"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "According to the World Health Organization (WHO), the recommended delivery room temperature for preterm and low birth weight newborns should be at least 25°C (77°F). Keeping the room at 22°C is too cold and may contribute to rapid heat loss, increasing the risk of neonatal hypothermia, which is a major cause of neonatal morbidity and mortality. Preterm infants are especially vulnerable due to their immature skin, low fat stores, and high surface area-to-weight ratio. Copyright © 2026 Adda247 Explanation of each option: (a) Use of polyethylene plastic wraps – This method reduces evaporative heat loss immediately after birth, especially in preterm infants. It is endorsed by WHO as an effective intervention to maintain body temperature during the initial hours of life. (b) Using double layered incubators – Double-wall incubators help minimize radiant and conductive heat loss. They maintain a thermoneutral environment and reduce the frequency of temperature fluctuations, supporting thermal stability. (c) Using woolen caps to cover head – Newborns lose a significant amount of heat through their head, and covering it with a cap effectively reduces heat loss, particularly in preterm and low birth weight babies. (d) Keeping the delivery room temperature at 22 degrees Celsius – Correct answer. WHO recommends a minimum of 25°C in the delivery room for thermal protection of newborns. A temperature of 22°C is insufficient and increases the risk of hypothermia in preterm babies. ​"
+    },
+    {
+      "qNo": 42,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Surfactant inactivation occurs in:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Infant of diabetic mother"
+        },
+        {
+          "key": "B",
+          "text": "Meconium aspiration syndrome"
+        },
+        {
+          "key": "C",
+          "text": "Transient tachypnea of newborn"
+        },
+        {
+          "key": "D",
+          "text": "Bronchopulmonary dysplasia"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Infant of diabetic mother: While infants of diabetic mothers may have delayed surfactant production, there is no direct inactivation of surfactant. Meconium aspiration syndrome: In this condition, aspirated meconium can inactivate surfactant in the lungs, leading to impaired alveolar expansion and respiratory distress. Transient tachypnea of newborn: This condition is caused by delayed clearance of lung fluid and does not involve surfactant inactivation. Bronchopulmonary dysplasia: This chronic lung disease develops from prolonged mechanical ventilation and oxygen therapy, but surfactant inactivation is not a primary factor."
+    },
+    {
+      "qNo": 43,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Total lung capacity in a newborn is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "100 mL"
+        },
+        {
+          "key": "B",
+          "text": "350 mL"
+        },
+        {
+          "key": "C",
+          "text": "500 mL"
+        },
+        {
+          "key": "D",
+          "text": "150 mL"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "100 mL: This value is much lower than the total lung capacity of a newborn. 350 mL: This value is higher than the average lung capacity of a newborn. 500 mL: This is typical for an adult and not a newborn. 150 mL: The total lung capacity in a healthy newborn is approximately 150 mL."
+    },
+    {
+      "qNo": 44,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Macrosomia means:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Baby with large tongue"
+        },
+        {
+          "key": "B",
+          "text": "Baby with large head"
+        },
+        {
+          "key": "C",
+          "text": "Large size baby"
+        },
+        {
+          "key": "D",
+          "text": "Baby whose birthweight is not adequate to the length"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Baby with large tongue: This condition is known as macroglossia, not macrosomia. Baby with large head: A large head is termed macrocephaly, not macrosomia. Large size baby: Macrosomia refers to a baby with an excessive birth weight, typically over 4,000 grams. Baby whose birthweight is not adequate to the length: This describes a condition like intrauterine growth restriction, not macrosomia."
+    },
+    {
+      "qNo": 45,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "the following are normal manifestations in a newborn baby EXCEPT:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Uneven head shape"
+        },
+        {
+          "key": "B",
+          "text": "Respirations are irregular, abdominal, 30-60 bpm"
+        },
+        {
+          "key": "C",
+          "text": "Positive moro reflex"
+        },
+        {
+          "key": "D",
+          "text": "Heart rate is 80 bpm"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Uneven head shape: An uneven head shape, known as molding, is a normal finding in newborns due to passage through the birth canal. Respirations are irregular, abdominal, 30-60 bpm: Newborns typically have irregular, abdominal breathing with a respiratory rate of 30-60 breaths per minute. Positive moro reflex: The moro reflex (startle reflex) is a normal neurological response in newborns. Heart rate is 80 bpm: A normal newborn heart rate ranges from 120-160 bpm; a heart rate of 80 bpm is abnormally low and could indicate bradycardia."
+    },
+    {
+      "qNo": 46,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Estimated date of delivery is calculated using:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mc Donald’s rule"
+        },
+        {
+          "key": "B",
+          "text": "Naegele’s rule"
+        },
+        {
+          "key": "C",
+          "text": "Rule of nine"
+        },
+        {
+          "key": "D",
+          "text": "Dawn’s formula"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Mc Donald’s rule: This rule is used to estimate gestational age based on fundal height, not delivery date. Naegele’s rule: Naegele’s rule calculates the estimated date of delivery by adding 9 months and 7 days to the first day of the last menstrual period. Rule of nine: This is used for calculating the percentage of body surface area affected in burns. Dawn’s formula: This is not a recognized method for calculating delivery dates."
+    },
+    {
+      "qNo": 47,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Iron supplementation in a healthy term breastfed baby should be started at the age of: Copyright © 2026 Adda247",
+      "options": [
+        {
+          "key": "A",
+          "text": "2 weeks"
+        },
+        {
+          "key": "B",
+          "text": "4 weeks"
+        },
+        {
+          "key": "C",
+          "text": "8 weeks"
+        },
+        {
+          "key": "D",
+          "text": "6 weeks"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "2 weeks: Iron stores from birth are sufficient for the first few weeks. 4 weeks: Iron supplementation is generally not required this early in healthy term babies. 8 weeks: Iron supplementation begins earlier in term breastfed babies. 6 weeks: At 6 weeks, breastfed babies start receiving iron supplementation to meet their growing needs."
+    },
+    {
+      "qNo": 48,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which of the following is the correct criterion for low birth weight?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Baby weighing less than 1.5 kg at birth."
+        },
+        {
+          "key": "B",
+          "text": "Overall baby weight at birth less than 2.5 kg."
+        },
+        {
+          "key": "C",
+          "text": "Baby weighing less than 4 kg at birth."
+        },
+        {
+          "key": "D",
+          "text": "Baby weighing less than 3 kg at birth."
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Baby weighing less than 1.5 kg at birth: This defines very low birth weight, not low birth weight. Overall baby weight at birth less than 2.5 kg: Low birth weight is defined as less than 2.5 kg at birth. Baby weighing less than 4 kg at birth: This is well above the low birth weight criterion. Baby weighing less than 3 kg at birth: This does not fit the standard definition of low birth weight."
+    },
+    {
+      "qNo": 49,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Size of suction catheter used in neonate for oral and nasal suction is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "8 Fr"
+        },
+        {
+          "key": "B",
+          "text": "12 Fr"
+        },
+        {
+          "key": "C",
+          "text": "14 Fr"
+        },
+        {
+          "key": "D",
+          "text": "16 Fr"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "8 Fr: For neonates, an 8 Fr suction catheter is the appropriate size for oral and nasal suctioning. 12 Fr: This size is more suitable for older infants or children. 14 Fr: This is too large for neonates. 16 Fr: This size is used for adults."
+    },
+    {
+      "qNo": 50,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "What is the most appropriate site to assess capillary refill time (CRT) in a neonate or infant?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Nail bed"
+        },
+        {
+          "key": "B",
+          "text": "Sternum"
+        },
+        {
+          "key": "C",
+          "text": "Ear lobule"
+        },
+        {
+          "key": "D",
+          "text": "Great toe"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "(a) Nail bed – Though commonly used in adults, infant nails are thin and often unreliable due to temperature variations and translucency. Capillary refill here may give inconsistent results in neonates and small infants. (b) Sternum – Correct The most reliable site in infants. It is centrally located, easier to press, and less affected by peripheral vasoconstriction. It offers a more accurate assessment of central perfusion and circulatory status in neonates and young infants. Capillary refill time >2 seconds may suggest dehydration or shock. (c) Ear lobule – Not typically recommended due to poor reliability and variable perfusion, especially in cool environments or low ambient temperatures. (d) Great toe – Like the nail bed, it is a peripheral site, affected by cold, making capillary refill less dependable in infants."
+    },
+    {
+      "qNo": 51,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "What is the most common and ideal pelvis?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Android"
+        },
+        {
+          "key": "B",
+          "text": "Gynecoid"
+        },
+        {
+          "key": "C",
+          "text": "Platypelloid"
+        },
+        {
+          "key": "D",
+          "text": "Anthropoid"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Android: This pelvis type is narrow and less favorable for childbirth. Gynecoid: The gynecoid pelvis is the most common and ideal shape for vaginal delivery. Platypelloid: This flat pelvis type is less suited for childbirth. Anthropoid: This elongated pelvis type can make labor more difficult."
+    },
+    {
+      "qNo": 52,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "The feeling of the child's movement by the mother is called:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lightning"
+        },
+        {
+          "key": "B",
+          "text": "Engagement"
+        },
+        {
+          "key": "C",
+          "text": "Quickening"
+        },
+        {
+          "key": "D",
+          "text": "Ballottement"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Lightning: Lightning refers to the baby dropping into the pelvis before delivery. Engagement: Engagement is when the fetal head enters the maternal pelvis. Quickening: Quickening is the first perception of fetal movements by the mother, usually around 18–20 weeks of gestation. Ballottement: Ballottement is a clinical sign where the fetus bounces upon palpation, not felt by the mother."
+    },
+    {
+      "qNo": 53,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "The forward bending of the uterus in relation to the vagina is called:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Anteflexion"
+        },
+        {
+          "key": "B",
+          "text": "Plantar flexion"
+        },
+        {
+          "key": "C",
+          "text": "Anteversion"
+        },
+        {
+          "key": "D",
+          "text": "Dorsiflexion Copyright © 2026 Adda247"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Anteflexion: Anteflexion refers to the forward bending of the uterus on itself, which may also affect its relation to the vagina. Plantar flexion: Plantar flexion is the downward movement of the foot, unrelated to the uterus. Anteversion: Anteversion describes the forward tilt of the entire uterus in relation to the vagina, not its bending. Dorsiflexion: Dorsiflexion refers to the upward movement of the foot or toes, unrelated to the uterus."
+    },
+    {
+      "qNo": 54,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "Jacquemier's sign is also known as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Osiander sign"
+        },
+        {
+          "key": "B",
+          "text": "Chadwick sign"
+        },
+        {
+          "key": "C",
+          "text": "Goodell's sign"
+        },
+        {
+          "key": "D",
+          "text": "Hegar's sign"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Osiander sign: This refers to pulsation in the lateral vaginal fornices, not associated with Jacquemier's sign. Chadwick sign: Jacquemier's sign, also called Chadwick's sign, indicates bluish discoloration of the cervix due to increased blood flow in early pregnancy. Goodell's sign: Goodell's sign refers to the softening of the cervix, not discoloration. Hegar's sign: Hegar's sign indicates softening of the lower uterine segment, unrelated to cervix coloration."
+    },
+    {
+      "qNo": 55,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "At which of the following weeks of gestation does the uterus normally reach the level of the xiphisternum?",
+      "options": [
+        {
+          "key": "A",
+          "text": "32 weeks"
+        },
+        {
+          "key": "B",
+          "text": "36 weeks"
+        },
+        {
+          "key": "C",
+          "text": "40 weeks"
+        },
+        {
+          "key": "D",
+          "text": "42 weeks"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "32 weeks: At 32 weeks, the uterus is lower than the xiphisternum, typically midway between the umbilicus and the xiphisternum. 36 weeks: By 36 weeks of gestation, the uterus reaches the xiphisternum, marking its highest position. 40 weeks: At 40 weeks, the uterus descends slightly as the baby engages in the pelvis (lightening). 42 weeks: By 42 weeks, the uterus would have descended further due to the advancing term."
+    },
+    {
+      "qNo": 56,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Forceps should not be used in:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Twin delivery"
+        },
+        {
+          "key": "B",
+          "text": "Hydrocephalus"
+        },
+        {
+          "key": "C",
+          "text": "Postmaturity"
+        },
+        {
+          "key": "D",
+          "text": "After coming head of the breech"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Twin delivery: Forceps can be used cautiously in twin delivery, especially for the second twin. Hydrocephalus: Forceps are contraindicated in hydrocephalus due to the risk of causing brain injury or damage to the large head. Postmaturity: Forceps can be used if necessary in postmature deliveries. After coming head of the breech: Forceps can assist with the delivery of the aftercoming head in breech presentation."
+    },
+    {
+      "qNo": 57,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which among the following hormone is secreted by the pituitary gland?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Calcitonin"
+        },
+        {
+          "key": "B",
+          "text": "Glucocorticoids"
+        },
+        {
+          "key": "C",
+          "text": "Glucagon"
+        },
+        {
+          "key": "D",
+          "text": "Prolactin"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Calcitonin: Calcitonin is secreted by the thyroid gland, not the pituitary gland. Glucocorticoids: Glucocorticoids are secreted by the adrenal cortex. Glucagon: Glucagon is secreted by the pancreas. Prolactin: Prolactin is secreted by the anterior pituitary gland and is essential for milk production in lactating mothers."
+    },
+    {
+      "qNo": 58,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "At what stage of labor is Episiotomy usually done?",
+      "options": [
+        {
+          "key": "A",
+          "text": "First stage"
+        },
+        {
+          "key": "B",
+          "text": "Third stage"
+        },
+        {
+          "key": "C",
+          "text": "Fourth stage"
+        },
+        {
+          "key": "D",
+          "text": "Second stage"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "First stage: The first stage of labor involves cervical dilation, and episiotomy is not performed. Third stage: The third stage involves the delivery of the placenta, not episiotomy. Fourth stage: This stage focuses on postpartum recovery. Second stage: Episiotomy is performed during the second stage of labor to enlarge the vaginal opening and facilitate the delivery of the baby."
+    },
+    {
+      "qNo": 59,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "Which hormone is necessary for the positive pregnancy test?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Progesterone"
+        },
+        {
+          "key": "B",
+          "text": "hCG"
+        },
+        {
+          "key": "C",
+          "text": "Estrogen"
+        },
+        {
+          "key": "D",
+          "text": "Placental Lactogen"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Progesterone: Progesterone supports pregnancy but is not used in pregnancy tests. hCG: Human chorionic gonadotropin (hCG) is detected in pregnancy tests as it is secreted by the placenta after implantation. Estrogen: Estrogen levels increase during pregnancy but are not used in pregnancy tests. Placental Lactogen: Placental lactogen supports fetal growth but is unrelated to pregnancy detection."
+    },
+    {
+      "qNo": 60,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "An irregular, acyclic bleeding from the uterus is known as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Polymenorrhea"
+        },
+        {
+          "key": "B",
+          "text": "Metrorrhagia"
+        },
+        {
+          "key": "C",
+          "text": "Oligomenorrhea"
+        },
+        {
+          "key": "D",
+          "text": "Menorrhagia"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Polymenorrhea: This refers to frequent menstrual cycles. Metrorrhagia: Metrorrhagia refers to irregular, acyclic uterine bleeding unrelated to the menstrual cycle. Oligomenorrhea: This is infrequent menstrual periods. Menorrhagia: This refers to heavy menstrual bleeding during regular cycles."
+    },
+    {
+      "qNo": 61,
+      "subject": "General Aptitude & Reasoning",
+      "question": "Keeping a medicine in the internal cavity of the body in liquid form is called:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Inhalation"
+        },
+        {
+          "key": "B",
+          "text": "Instillation"
+        },
+        {
+          "key": "C",
+          "text": "Interval or Insertion"
+        },
+        {
+          "key": "D",
+          "text": "Insufflation"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Inhalation: This involves breathing in medication through the respiratory tract. Instillation: Instillation refers to placing a liquid medication into a body cavity, such as the eyes or ears. Interval or Insertion: This term does not describe the administration of liquid medication. Insufflation: Insufflation involves blowing powdered medication into a body cavity."
+    },
+    {
+      "qNo": 62,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Nosocomial infections are also known as:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hospital-acquired infection"
+        },
+        {
+          "key": "B",
+          "text": "Idiopathic infection"
+        },
+        {
+          "key": "C",
+          "text": "Primary infection"
+        },
+        {
+          "key": "D",
+          "text": "Iatrogenic infection"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Hospital-acquired infection: Nosocomial infections refer to infections acquired in a healthcare setting. Idiopathic infection: Idiopathic refers to diseases of unknown cause. Primary infection: This refers to the initial infection in a host. Iatrogenic infection: Iatrogenic infections result from medical procedures, which may overlap with nosocomial infections but are not identical."
+    },
+    {
+      "qNo": 63,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Change in the amount of which of the following electrolytes causes 'tetany' disease?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hypocalcemia"
+        },
+        {
+          "key": "B",
+          "text": "Hypermagnesemia"
+        },
+        {
+          "key": "C",
+          "text": "Hypercalcemia"
+        },
+        {
+          "key": "D",
+          "text": "Hyponatremia"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Hypocalcemia: Tetany is caused by a decrease in calcium levels, leading to increased neuromuscular excitability. Hypermagnesemia: High magnesium levels do not cause tetany; instead, they may depress neuromuscular activity. Hypercalcemia: High calcium levels do not lead to tetany but can cause lethargy and confusion. Hyponatremia: Low sodium levels primarily affect neurological functions, not neuromuscular excitability as seen in tetany."
+    },
+    {
+      "qNo": 64,
+      "subject": "Obstetrics & Gynaecological Nursing (OBG)",
+      "question": "Which position is mostly recommended for rectal examination?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Lithotomy position"
+        },
+        {
+          "key": "B",
+          "text": "Dorsal recumbent position"
+        },
+        {
+          "key": "C",
+          "text": "Sims position"
+        },
+        {
+          "key": "D",
+          "text": "Prone position"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Lithotomy position: This position is primarily used for gynecological or obstetric procedures. Dorsal recumbent position: This position is used for abdominal examinations but is not ideal for rectal examinations. Sims position: The Sims position, where the patient lies on their left side with knees slightly bent, provides optimal access for rectal examinations. Prone position: The prone position involves lying on the stomach and is not suitable for rectal examinations."
+    },
+    {
+      "qNo": 65,
+      "subject": "General Aptitude & Reasoning",
+      "question": "Which (preparation) is given in the depth of the muscles by 'Z' technique?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Zinc"
+        },
+        {
+          "key": "B",
+          "text": "Iron"
+        },
+        {
+          "key": "C",
+          "text": "Vitamin-C"
+        },
+        {
+          "key": "D",
+          "text": "Calcium"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Zinc: Zinc supplements are usually given orally or intravenously, not intramuscularly. Iron: The Z-track technique is used to inject iron preparations deep into the muscle to prevent leakage and staining of the skin. Vitamin-C: Vitamin C is typically given orally or intravenously, not intramuscularly. Calcium: Calcium is usually administered orally or intravenously, not through the Z-track method."
+    },
+    {
+      "qNo": 66,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which of the following diseases is not caused by viruses? Copyright © 2026 Adda247",
+      "options": [
+        {
+          "key": "A",
+          "text": "Polio"
+        },
+        {
+          "key": "B",
+          "text": "Chicken pox"
+        },
+        {
+          "key": "C",
+          "text": "AIDS"
+        },
+        {
+          "key": "D",
+          "text": "TB"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Polio: Polio is caused by the poliovirus. Chicken pox: Chicken pox is caused by the varicella-zoster virus. AIDS: AIDS is caused by the human immunodeficiency virus (HIV). TB: Tuberculosis (TB) is caused by the bacterium Mycobacterium tuberculosis, not a virus."
+    },
+    {
+      "qNo": 67,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Components of the Under Five clinic include:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Vaccination"
+        },
+        {
+          "key": "B",
+          "text": "Nutrition Survey"
+        },
+        {
+          "key": "C",
+          "text": "O.R.S. Therapy"
+        },
+        {
+          "key": "D",
+          "text": "All of these"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Vaccination: Vaccination is a key component of the Under Five clinic to protect children from preventable diseases such as measles, polio, and diphtheria, ensuring better child health outcomes. Nutrition Survey: Nutrition surveys assess the nutritional status of children under five years of age to identify and address malnutrition through dietary interventions or supplements. O.R.S. Therapy: Oral Rehydration Salt (O.R.S.) therapy is crucial for managing dehydration caused by diarrhea, a common health issue in children under five. All of these: The Under Five clinic encompasses all these components, along with monitoring growth, providing health education, and managing common childhood illnesses."
+    },
+    {
+      "qNo": 68,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Malaria is caused by:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Plasmodium falciparum"
+        },
+        {
+          "key": "B",
+          "text": "Entamoeba"
+        },
+        {
+          "key": "C",
+          "text": "Retrovirus"
+        },
+        {
+          "key": "D",
+          "text": "Salmonella"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Plasmodium falciparum: Malaria is caused by protozoan parasites of the Plasmodium genus, with P. falciparum being the most severe type. Entamoeba: This causes amoebiasis, not malaria. Retrovirus: Retroviruses, such as HIV, cause viral infections but not malaria. Salmonella: This bacterium causes typhoid and food poisoning, not malaria."
+    },
+    {
+      "qNo": 69,
+      "subject": "Medical-Surgical Nursing",
+      "question": "The main cause of lung cancer is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Smoking"
+        },
+        {
+          "key": "B",
+          "text": "Alcohol"
+        },
+        {
+          "key": "C",
+          "text": "Exposure to sunlight"
+        },
+        {
+          "key": "D",
+          "text": "All of the above"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Smoking: Tobacco smoke is the leading cause of lung cancer, responsible for nearly 90% of cases. Alcohol: Alcohol consumption is not directly linked to lung cancer but affects other organs. Exposure to sunlight: Sunlight exposure is linked to skin cancers, not lung cancer. All of the above: Among the options, smoking is the primary cause."
+    },
+    {
+      "qNo": 70,
+      "subject": "Child Health & Paediatric Nursing",
+      "question": "Pulse polio immunization covers:",
+      "options": [
+        {
+          "key": "A",
+          "text": "0 - 5 yr children"
+        },
+        {
+          "key": "B",
+          "text": "0 - 1 yr children"
+        },
+        {
+          "key": "C",
+          "text": "1 - 5 yr children"
+        },
+        {
+          "key": "D",
+          "text": "0 - 2 yr children"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Pulse Polio Immunization Programme in India targets all children below 5 years of age, irrespective of their previous vaccination status. The objective is to ensure no child under five remains susceptible to poliovirus, thereby achieving eradication. Explanation of options: (a) 0 – 5 yr children: Correct. Covers every child below 5 years to break poliovirus transmission. (b) 0 – 1 yr children: Incorrect. This age group is part of routine immunization, but Pulse Polio is not restricted to it. (c) 1 – 5 yr children: Incorrect. If infants under 1 year are excluded, the programme goal would fail. (d) 0 – 2 yr children: Incorrect. The programme covers beyond 2 years, up to 5 years."
+    },
+    {
+      "qNo": 71,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Fat is stored in:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Blood"
+        },
+        {
+          "key": "B",
+          "text": "Liver"
+        },
+        {
+          "key": "C",
+          "text": "Muscles"
+        },
+        {
+          "key": "D",
+          "text": "Adipose tissue"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Blood: Blood transports nutrients but does not store fat. Liver: The liver metabolizes fat but is not the primary storage site. Muscles: Muscles store glycogen, not fat. Adipose tissue: Fat is primarily stored in adipose tissue for energy reserves and insulation."
+    },
+    {
+      "qNo": 72,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Orange is a major source of:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Carbohydrates"
+        },
+        {
+          "key": "B",
+          "text": "Fats"
+        },
+        {
+          "key": "C",
+          "text": "Proteins"
+        },
+        {
+          "key": "D",
+          "text": "Vitamin C Copyright © 2026 Adda247"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Carbohydrates: Oranges contain some carbohydrates but are not a major source. Fats: Incorrect. Oranges are low in fat. Proteins: Oranges have negligible protein content. Vitamin C: Oranges are rich in Vitamin C, essential for immunity and skin health."
+    },
+    {
+      "qNo": 73,
+      "subject": "Medical-Surgical Nursing",
+      "question": "The smallest structural unit of a protein is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Amino Acid"
+        },
+        {
+          "key": "B",
+          "text": "Protease"
+        },
+        {
+          "key": "C",
+          "text": "Peptides"
+        },
+        {
+          "key": "D",
+          "text": "Peptones"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Amino Acid: Proteins are polymers made of amino acids, the basic building blocks. Protease: Protease is an enzyme that breaks down proteins into amino acids. Peptides: Peptides are short chains of amino acids, not the smallest unit. Peptones: Peptones are partially digested proteins, not the smallest structural unit."
+    },
+    {
+      "qNo": 74,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which of the following is not a vitamin?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Folic Acid"
+        },
+        {
+          "key": "B",
+          "text": "Lactic Acid"
+        },
+        {
+          "key": "C",
+          "text": "Nicotinic Acid"
+        },
+        {
+          "key": "D",
+          "text": "Ascorbic Acid"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Folic Acid: Folic acid is a B-vitamin essential for DNA synthesis. Lactic Acid: Lactic acid is a by-product of metabolism, not a vitamin. Nicotinic Acid: Nicotinic acid is a form of Vitamin B3. Ascorbic Acid: Ascorbic acid is Vitamin C."
+    },
+    {
+      "qNo": 75,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Select the false statement regarding fat:",
+      "options": [
+        {
+          "key": "A",
+          "text": "They are heat regulators."
+        },
+        {
+          "key": "B",
+          "text": "They provide less energy than carbohydrates."
+        },
+        {
+          "key": "C",
+          "text": "These are unsaturated compounds of C, H, and O."
+        },
+        {
+          "key": "D",
+          "text": "Together with proteins, they form the cell membrane."
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "They are heat regulators: Fats provide insulation and regulate heat. They provide less energy than carbohydrates: Fats provide more energy (9 kcal/g) than carbohydrates (4 kcal/g). These are unsaturated compounds of C, H, and O: Fats can be saturated or unsaturated, consisting of C, H, and O. Together with proteins, they form the cell membrane: Fats, specifically phospholipids, are key components of cell membranes."
+    },
+    {
+      "qNo": 76,
+      "subject": "General Aptitude & Reasoning",
+      "question": "Sex Education may be introduced at the primary stage through:",
+      "options": [
+        {
+          "key": "A",
+          "text": "A separate subject"
+        },
+        {
+          "key": "B",
+          "text": "Knowledge about hygiene"
+        },
+        {
+          "key": "C",
+          "text": "Integration with physical education"
+        },
+        {
+          "key": "D",
+          "text": "Lessons on nature study"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "A separate subject: Introducing sex education as a separate subject at the primary stage may not be age-appropriate and could be met with resistance. Knowledge about hygiene: While hygiene education is important, it is not the same as comprehensive sex education. Integration with physical education: Integrating sex education into physical education provides a natural context for discussing body awareness and development. Lessons on nature study: Nature study focuses on the environment and does not provide a suitable medium for teaching sex education."
+    },
+    {
+      "qNo": 77,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Qualitative and Quantitative Research are the classification of research on the basis of:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Use of the research"
+        },
+        {
+          "key": "B",
+          "text": "Time dimensions"
+        },
+        {
+          "key": "C",
+          "text": "Techniques used"
+        },
+        {
+          "key": "D",
+          "text": "Purpose of the research"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Use of the research: This classification divides research into basic and applied categories, not qualitative and quantitative. Time dimensions: This relates to cross-sectional and longitudinal studies, not qualitative and quantitative methods. Techniques used: Qualitative research uses non-numerical data like interviews, while quantitative research uses numerical data and statistical methods. Purpose of the research: This classifies research as exploratory, descriptive, or explanatory."
+    },
+    {
+      "qNo": 78,
+      "subject": "Medical-Surgical Nursing",
+      "question": "The following are the principles of health education, except:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Unknown to known"
+        },
+        {
+          "key": "B",
+          "text": "Comprehension"
+        },
+        {
+          "key": "C",
+          "text": "Credibility"
+        },
+        {
+          "key": "D",
+          "text": "Interest"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Unknown to known: Health education emphasizes moving from known to unknown concepts for better understanding, making \"unknown to known\" incorrect in this context. Comprehension: Health education requires the content to be easily understood by the audience. Credibility: Credibility ensures that the information is trustworthy and reliable. Interest: Engaging the audience’s interest is crucial for effective health education. Copyright © 2026 Adda247 Q.79 What is the main purpose of ABC analysis in material management? A. To control purchasing B. To control inventories C. To control obsolescence D. To determine stocking Answer: B Sol: To control purchasing: ABC analysis focuses on inventory classification, not specifically on purchasing decisions. To control inventories: ABC analysis categorizes inventory into three classes (A, B, C) to prioritize management efforts and optimize inventory control. To control obsolescence: While it indirectly reduces obsolescence, its primary purpose is inventory management. To determine stocking: Stocking strategies are part of inventory management but not the main purpose of ABC analysis."
+    },
+    {
+      "qNo": 80,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which of the following gases is used in sterilization of medical equipment?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ethylene oxide gas"
+        },
+        {
+          "key": "B",
+          "text": "Methylene oxide gas"
+        },
+        {
+          "key": "C",
+          "text": "Methane gas"
+        },
+        {
+          "key": "D",
+          "text": "Ethane gas"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Ethylene oxide gas: Ethylene oxide gas is widely used to sterilize medical equipment and instruments sensitive to heat or moisture. Methylene oxide gas: This is not used for sterilization and is not a recognized sterilizing agent. Methane gas: Methane is a flammable gas with no sterilization properties. Ethane gas: Ethane is a hydrocarbon used in industrial processes, not for sterilization."
+    },
+    {
+      "qNo": 81,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which of the following states has the largest forest area according to India State of Forest Report (ISFR), 2019?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Madhya Pradesh"
+        },
+        {
+          "key": "B",
+          "text": "Nagaland"
+        },
+        {
+          "key": "C",
+          "text": "Karnataka"
+        },
+        {
+          "key": "D",
+          "text": "Maharashtra"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Madhya Pradesh: Madhya Pradesh has the largest forest cover in India, covering approximately 77,482 square kilometers. Nagaland: Nagaland has a significant percentage of forest cover but not the largest in area. Karnataka: Karnataka has substantial forest resources but ranks lower than Madhya Pradesh. Maharashtra: Maharashtra has a large forest area but less than Madhya Pradesh."
+    },
+    {
+      "qNo": 82,
+      "subject": "Medical-Surgical Nursing",
+      "question": "In September 2021, who among the following was elected as the new Chief Minister of Punjab?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Ambika Soni"
+        },
+        {
+          "key": "B",
+          "text": "Navjot Singh Sidhu"
+        },
+        {
+          "key": "C",
+          "text": "Sunil Kumar Jakhar"
+        },
+        {
+          "key": "D",
+          "text": "Charanjit Singh Channi"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Ambika Soni: Ambika Soni is a senior Congress leader but was not elected as Chief Minister. Navjot Singh Sidhu: Though a prominent leader in Punjab politics, he did not assume the Chief Minister's role. Sunil Kumar Jakhar: Sunil Jakhar is a Congress politician but was not chosen as Chief Minister. Charanjit Singh Channi: Charanjit Singh Channi was elected as the Chief Minister, becoming Punjab’s first Dalit CM."
+    },
+    {
+      "qNo": 83,
+      "subject": "Medical-Surgical Nursing",
+      "question": "The Varanasi Kanyakumari National Highway is:",
+      "options": [
+        {
+          "key": "A",
+          "text": "NH 15"
+        },
+        {
+          "key": "B",
+          "text": "NH 2"
+        },
+        {
+          "key": "C",
+          "text": "NH 7"
+        },
+        {
+          "key": "D",
+          "text": "NH 47"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "NH 15: NH 15 connects Pathankot to Samakhiali but does not extend to Varanasi or Kanyakumari. NH 2: NH 2 connects Delhi to Kolkata, unrelated to Varanasi or Kanyakumari. NH 7: NH 7, also known as NH 44 after renumbering, connects Varanasi in Uttar Pradesh to Kanyakumari in Tamil Nadu. NH 47: NH 47 is a highway in southern India, unrelated to Varanasi."
+    },
+    {
+      "qNo": 84,
+      "subject": "General Aptitude & Reasoning",
+      "question": "The tallest statue in the world of Sardar Patel, inaugurated by Sh. Narendra Modi, is 182 meters tall. This statue is called:",
+      "options": [
+        {
+          "key": "A",
+          "text": "Statue of Liberty"
+        },
+        {
+          "key": "B",
+          "text": "Statue of Unity"
+        },
+        {
+          "key": "C",
+          "text": "Statue of Integrity"
+        },
+        {
+          "key": "D",
+          "text": "Statue of Courage"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Explanation of Options: (a) Statue of Liberty This is a famous statue in New York, USA, representing liberty and freedom, not Sardar Patel. It's only 93 meters tall (including pedestal) — much shorter than the Sardar Patel statue. (b) Statue of Unity This is the correct and authentic name of the 182-meter-tall statue of Sardar Vallabhbhai Patel, located near the Sardar Sarovar Dam in Gujarat, India. It was inaugurated by Prime Minister Narendra Modi on October 31, 2018. It is the tallest statue in the world. (c) Statue of Integrity Sounds plausible but is not the actual name. No official or globally recognized statue is named \"Statue of Integrity\". (d) Statue of Courage Again, this is an incorrect and fabricated option. It is not the name of any known statue of Sardar Patel. Copyright © 2026 Adda247 Q.85 The Elephant is a symbol of which Indian political party? A. National Congress Party B. Communist Party of India C. Bahujan Samaj Party D. Rashtriya Janata Dal Answer: C Sol: National Congress Party: The Congress Party uses the symbol of a hand, not an elephant. Communist Party of India: The Communist Party uses the symbol of a hammer and sickle. Bahujan Samaj Party: The elephant symbolizes strength and the support of marginalized communities in the Bahujan Samaj Party. Rashtriya Janata Dal: The Rashtriya Janata Dal uses the symbol of a lantern."
+    },
+    {
+      "qNo": 86,
+      "subject": "Medical-Surgical Nursing",
+      "question": "World “No Tobacco Day” was observed globally on:",
+      "options": [
+        {
+          "key": "A",
+          "text": "31 May"
+        },
+        {
+          "key": "B",
+          "text": "2 June"
+        },
+        {
+          "key": "C",
+          "text": "15 June"
+        },
+        {
+          "key": "D",
+          "text": "20 June"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "31 May: World “No Tobacco Day” is observed annually on 31 May to raise awareness about the dangers of tobacco use. 2 June: No major global observance related to tobacco falls on this date. 15 June: This date does not relate to tobacco awareness. 20 June: This date is unrelated to World “No Tobacco Day.”"
+    },
+    {
+      "qNo": 87,
+      "subject": "Medical-Surgical Nursing",
+      "question": "In which ecosystem is the vegetation dominated by grass and herbs?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Forest Ecosystem"
+        },
+        {
+          "key": "B",
+          "text": "Grassland Ecosystem"
+        },
+        {
+          "key": "C",
+          "text": "Tundra Ecosystem"
+        },
+        {
+          "key": "D",
+          "text": "Desert Ecosystem"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "Forest Ecosystem: Forest ecosystems are dominated by trees, not grass and herbs. Grassland Ecosystem: Grasslands are characterized by vegetation primarily composed of grasses and herbs. Tundra Ecosystem: Tundra ecosystems are dominated by mosses, lichens, and small shrubs. Desert Ecosystem: Desert ecosystems are dominated by sparse vegetation adapted to arid conditions."
+    },
+    {
+      "qNo": 88,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Who was appointed as the Chief Election Commissioner in 2021?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sushil Chandra"
+        },
+        {
+          "key": "B",
+          "text": "Sunil Arora"
+        },
+        {
+          "key": "C",
+          "text": "Sukumar Sen"
+        },
+        {
+          "key": "D",
+          "text": "Rajiv Kumar"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "Sushil Chandra: Sushil Chandra was appointed as the Chief Election Commissioner of India in April 2021. Sunil Arora: Sunil Arora served as the Chief Election Commissioner before Sushil Chandra. Sukumar Sen: Sukumar Sen was India’s first Chief Election Commissioner, serving from 1950 to 1958. Rajiv Kumar: Rajiv Kumar succeeded Sushil Chandra as Chief Election Commissioner in 2022."
+    },
+    {
+      "qNo": 89,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Who was the father of Tipu Sultan?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mir Qasim"
+        },
+        {
+          "key": "B",
+          "text": "Mir Jafar"
+        },
+        {
+          "key": "C",
+          "text": "Haider Ali"
+        },
+        {
+          "key": "D",
+          "text": "Shah Alam"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Mir Qasim: Mir Qasim was a Nawab of Bengal and not related to Tipu Sultan. Mir Jafar: Mir Jafar was also a Nawab of Bengal known for his betrayal in the Battle of Plassey. Haider Ali: Haider Ali was the ruler of Mysore and the father of Tipu Sultan, known for his military skills and administrative reforms. Shah Alam: Shah Alam II was a Mughal emperor, not connected to Tipu Sultan's lineage."
+    },
+    {
+      "qNo": 90,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Ammonia is a compound with the molecular formula of:",
+      "options": [
+        {
+          "key": "A",
+          "text": "N₂O"
+        },
+        {
+          "key": "B",
+          "text": "NaHCO₃"
+        },
+        {
+          "key": "C",
+          "text": "NaOH"
+        },
+        {
+          "key": "D",
+          "text": "NH₃"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "N₂O: N₂O is nitrous oxide, commonly known as laughing gas. NaHCO₃: NaHCO₃ is sodium bicarbonate, commonly known as baking soda. NaOH: NaOH is sodium hydroxide, commonly known as caustic soda. NH₃: Ammonia has the molecular formula NH₃, consisting of one nitrogen and three hydrogen atoms."
+    },
+    {
+      "qNo": 91,
+      "subject": "Medical-Surgical Nursing",
+      "question": "Which of the following words will come second in the English dictionary?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Magical"
+        },
+        {
+          "key": "B",
+          "text": "Magnify"
+        },
+        {
+          "key": "C",
+          "text": "Material"
+        },
+        {
+          "key": "D",
+          "text": "Magnetic"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "Magical: This word comes first as \"Mag-\" is alphabetically earlier than \"Magnetic,\" \"Magnify,\" and \"Material.\" Magnify: This word comes third as \"Magnify\" appears after \"Magnetic\" in alphabetical order. Material: This word comes fourth since \"Mat-\" is alphabetically later than \"Mag-\". Magnetic: Correct. This word comes second, as it alphabetically follows \"Magical\" and precedes \"Magnify\" and \"Material.\""
+    },
+    {
+      "qNo": 92,
+      "subject": "Medical-Surgical Nursing",
+      "question": "How many rectangles are there in the above figure?",
+      "options": [
+        {
+          "key": "A",
+          "text": "25"
+        },
+        {
+          "key": "B",
+          "text": "30"
+        },
+        {
+          "key": "C",
+          "text": "9"
+        },
+        {
+          "key": "D",
+          "text": "36"
+        }
+      ],
+      "correctOption": "D",
+      "rationale": "The figure has 4 horizontal lines and 4 vertical lines. To count the total number of rectangles: Formula: The number of rectangles is given by choosing 2 horizontal lines and 2 vertical lines from the total. Calculation: · Number of ways to choose 2 horizontal lines from 4 = (42)=6\\binom{4}{2} = 6(24​)=6. · Number of ways to choose 2 vertical lines from 4 = (42)=6\\binom{4}{2} = 6(24​)=6. · Total rectangles = 6×6=366 \\times 6 = 366×6=36."
+    },
+    {
+      "qNo": 93,
+      "subject": "General Aptitude & Reasoning",
+      "question": "Which number is missing in the given number series? 0, 1, 1, 2, 3, 5, 8, 13, 21, ?, 55",
+      "options": [
+        {
+          "key": "A",
+          "text": "32"
+        },
+        {
+          "key": "B",
+          "text": "38"
+        },
+        {
+          "key": "C",
+          "text": "34"
+        },
+        {
+          "key": "D",
+          "text": "40"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Let’s verify: 0 1 0+1=1 1+1=2 1+2=3 2+3=5 3+5=8 5 + 8 = 13 8 + 13 = 21 13 + 21 = 34 ← Missing Number 21 + 34 = 55"
+    },
+    {
+      "qNo": 94,
+      "subject": "Nursing Foundations & Clinical Procedures",
+      "question": "Select the related number from the given alternatives. LION : 40 :: TIGER : ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "59"
+        },
+        {
+          "key": "B",
+          "text": "50"
+        },
+        {
+          "key": "C",
+          "text": "40"
+        },
+        {
+          "key": "D",
+          "text": "39"
+        }
+      ],
+      "correctOption": "A",
+      "rationale": "The relationship between the words and numbers involves assigning values based on the position of letters in the English alphabet. LION: L = 12 I=9 O = 15 N = 14 Sum = 12+9+15+14=5012 + 9 + 15 + 14 = 5012+9+15+14=50. Divide by 5: 50/5=4050/5 = 4050/5=40. TIGER: T = 20 I=9 G=7 E=5 R = 18 Sum = 20+9+7+5+18=59 20 + 9 + 7 + 5 + 18 = 5920+9+7+5+18=59."
+    },
+    {
+      "qNo": 95,
+      "subject": "Medical-Surgical Nursing",
+      "question": "The headquarters of RBI is in which city?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Delhi"
+        },
+        {
+          "key": "B",
+          "text": "Kanpur"
+        },
+        {
+          "key": "C",
+          "text": "Mumbai"
+        },
+        {
+          "key": "D",
+          "text": "None of the above"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Delhi: While many government organizations are headquartered in Delhi, RBI's headquarters is not. Kanpur: Kanpur is not associated with the headquarters of RBI. Mumbai: The Reserve Bank of India (RBI) is headquartered in Mumbai, Maharashtra. None of the above: This is not the part of this Question. Copyright © 2026 Adda247 Q.96 The length of the bridge, which a train 130 m long and traveling at 45 km/hr can cross in 30 seconds, is: A. 200 m B. 225 m C. 245 m D. 250 m Answer: D Sol:"
+    },
+    {
+      "qNo": 97,
+      "subject": "General Aptitude & Reasoning",
+      "question": "What should come in place of the question mark (?) in the following question: (72÷6) of (15−3)=?(72 \\div 6) \\, \\text{of} \\, (15 - 3) = ?(72÷6)of(15−3)=?",
+      "options": [
+        {
+          "key": "A",
+          "text": "156"
+        },
+        {
+          "key": "B",
+          "text": "72"
+        },
+        {
+          "key": "C",
+          "text": "144"
+        },
+        {
+          "key": "D",
+          "text": "196"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Solve the parentheses first: (15−3)=12(15 - 3) = 12(15−3)=12 Divide 727272 by 666: 72÷6=1272 \\div 6 = 1272÷6=12 Apply the \"of\" operation (multiplication): 12×12=14412 \\times 12 = 14412×12=144"
+    },
+    {
+      "qNo": 98,
+      "subject": "General Aptitude & Reasoning",
+      "question": "The ratio of ages of Aman and Harish is 2:32 : 32:3. After 1 year, the sum of their ages will be 12. Find the age of Harish.",
+      "options": [
+        {
+          "key": "A",
+          "text": "60"
+        },
+        {
+          "key": "B",
+          "text": "3"
+        },
+        {
+          "key": "C",
+          "text": "6"
+        },
+        {
+          "key": "D",
+          "text": "4"
+        }
+      ],
+      "correctOption": "C",
+      "rationale": "Let the current ages of Aman and Harish be: 2x and 3x (based on the ratio 2:3).2x \\, \\text{and} \\, 3x \\, \\text{(based on the ratio 2:3).}2xand3x(based on the ratio 2:3). After 1 year, their ages will be: 2x+1 and 3x+1.2x + 1 \\, \\text{and} \\, 3x + 1.2x+1and3x+1. Sum of their ages after 1 year is given as 12: (2x+1)+(3x+1)=12.(2x + 1) + (3x + 1) = 12.(2x+1)+(3x+1)=12. Simplify the equation: 5x+2=12 ⟹ 5x=10 ⟹ x=2.5x + 2 = 12 \\implies 5x = 10 \\implies x = 2.5x+2=12⟹5x=10⟹x=2. Find Harish's current age: 3x=3×2=6.3x = 3 \\times 2 = 6.3x=3×2=6. Q.99 27 men can complete the work of digging a well in 20 days working 5 hours/day. The work starts. After 4 days, 12 men leave. To complete the digging within the schedule, the remaining men need to work how many hours/day? A. 8 B. 6 C. 9 D. 10 Answer: C Sol: Calculate the total work in man-hours: Total work=27×20×5=2700 man-hours.\\text{Total work} = 27 \\times 20 \\times 5 = 2700 \\, \\text{man-hours}.Total work=27×20×5=2700man-hours. Work completed in the first 4 days by 27 men working 5 hours/day: Work completed=27×4×5=540 man-hours.\\text{Work completed} = 27 \\times 4 \\times 5 = 540 \\, \\text{man-hours}.Work completed=27×4×5=540man-hours. Remaining work: Remaining work=2700−540=2160 man-hours.\\text{Remaining work} = 2700 - 540 = 2160 \\, \\text{man-hours}.Remaining work=2700−540=2160man-hours. Number of men left after 4 days: Remaining men=27−12=15 men.\\text{Remaining men} = 27 - 12 = 15 \\, \\text{men}.Remaining men=27−12=15men. Remaining days to complete the work: Remaining days=20−4=16 days.\\text{Remaining days} = 20 - 4 = 16 \\, \\text{days}.Remaining days=20−4=16days. Required hours/day to complete the remaining work: Hours/day=Remaining workRemaining men×Remaining days=216015×16=9 hours/day.\\text{Hours/day} = \\frac{\\text{Remaining work}}{\\text{Remaining men} \\times \\text{Remaining days}} = \\frac{2160} {15 \\times 16} = 9 \\, \\text{hours/day}.Hours/day=Remaining men×Remaining daysRemaining work​=15×162160​=9hours/day."
+    },
+    {
+      "qNo": 100,
+      "subject": "General Aptitude & Reasoning",
+      "question": "What should come at the end in the following number series? 0, 2, 10, 30, 68, ?",
+      "options": [
+        {
+          "key": "A",
+          "text": "125"
+        },
+        {
+          "key": "B",
+          "text": "130"
+        },
+        {
+          "key": "C",
+          "text": "135"
+        },
+        {
+          "key": "D",
+          "text": "140"
+        }
+      ],
+      "correctOption": "B",
+      "rationale": "To find the pattern, calculate the difference between consecutive terms: 2−0=22 - 0 = 22−0=2 10−2=810 - 2 = 810−2=8 30−10=2030 - 10 = 2030−10=20 68−30=3868 - 30 = 3868−30=38 The differences are: 2,8,20,382, 8, 20, 382,8,20,38. Now calculate the second differences: 8−2=68 - 2 = 68−2=6 20−8=1220 - 8 = 1220−8=12 38−20=1838 - 20 = 1838−20=18 The second differences are increasing by 6: 6,12,186, 12, 186,12,18. Next difference: 38+24=6238 + 24 = 6238+24=62. Add this to the last term: 68+62=130.68 + 62 = 130.68+62=130. Copyright © 2026 Adda247"
+    }
+  ]
+}

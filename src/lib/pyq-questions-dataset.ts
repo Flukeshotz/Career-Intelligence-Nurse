@@ -1347,7 +1347,28 @@ export const MASTER_NURSING_QUESTIONS: QuestionItem[] = [
   }
 ];
 
+import norcet2024 from './pyq-papers/pyq-norcet-2024.json';
+import norcet2025Prelims from './pyq-papers/pyq-norcet-2025-prelims.json';
+import norcet2023 from './pyq-papers/pyq-norcet-2023.json';
+import norcet2022 from './pyq-papers/pyq-norcet-2022.json';
+import norcet2021 from './pyq-papers/pyq-norcet-2021.json';
+import norcet2020 from './pyq-papers/pyq-norcet-2020.json';
+
+const EXTRACTED_PAPERS_MAP: Record<string, FullPaperData> = {
+  'pyq-norcet-2024': norcet2024 as unknown as FullPaperData,
+  'pyq-norcet-2026': norcet2024 as unknown as FullPaperData,
+  'pyq-norcet-2025-prelims': norcet2025Prelims as unknown as FullPaperData,
+  'pyq-norcet-2023': norcet2023 as unknown as FullPaperData,
+  'pyq-norcet-2022': norcet2022 as unknown as FullPaperData,
+  'pyq-norcet-2021': norcet2021 as unknown as FullPaperData,
+  'pyq-norcet-2020': norcet2020 as unknown as FullPaperData,
+};
+
 export function getFullPaperData(paperId: string): FullPaperData {
+  if (EXTRACTED_PAPERS_MAP[paperId]) {
+    return EXTRACTED_PAPERS_MAP[paperId];
+  }
+
   const foundPaper = EXAM_PAPERS.find(p => p.id === paperId);
 
   if (foundPaper) {
