@@ -2,19 +2,10 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import {
-  GraduationCap,
-  Calendar,
+  Building2,
   FileText,
   ArrowLeft,
   ExternalLink,
-  Users,
-  Building2,
-  BookOpen,
-  CheckCircle2,
-  Layers,
-  Award,
-  Clock,
-  Share2
 } from 'lucide-react';
 import { getExamBySlug, getRequirementsForOpportunity, INITIAL_EXAMS } from '@/lib/data';
 import { generateExamJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
@@ -95,7 +86,7 @@ export default async function ExamDetailPage({
     : 'Closed / In Exam Phase';
 
   return (
-    <div className="wide-container mobile-safe-bottom" style={{ paddingTop: '16px', maxWidth: '860px', margin: '0 auto', paddingBottom: '100px' }}>
+    <div className="wide-container mobile-safe-bottom" style={{ paddingTop: '16px', maxWidth: '860px', margin: '0 auto', paddingBottom: '90px' }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(examJsonLd) }}
@@ -105,7 +96,7 @@ export default async function ExamDetailPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }}
       />
 
-      {/* ── TOP NAV BAR (Clean & Uncluttered) ── */}
+      {/* ── TOP NAV BAR ── */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
         <Link
           href="/nursing/exams"
@@ -271,69 +262,8 @@ export default async function ExamDetailPage({
         />
       </div>
 
-      {/* ── 6. BOTTOM ACTION BAR: TRACK IN "MY CYCLES" + OFFICIAL APPLY ── */}
-      <div
-        style={{
-          background: '#ffffff',
-          borderRadius: '14px',
-          border: '1.5px solid var(--sc-line-200)',
-          padding: '16px 20px',
-          marginBottom: '20px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          flexWrap: 'wrap',
-          gap: '12px',
-          boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)',
-        }}
-      >
-        <div>
-          <div style={{ fontSize: '0.92rem', fontWeight: 800, color: 'var(--sc-navy-900)' }}>
-            Track This Recruitment Cycle
-          </div>
-          <div style={{ fontSize: '0.75rem', color: 'var(--sc-ink-500)' }}>
-            Get alerts for admit card releases, exam dates, answer keys &amp; results.
-          </div>
-        </div>
-
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <TrackButton
-            opportunityId={exam.id}
-            opportunityType="exam"
-            title={exam.name}
-            employerOrOrg={exam.organisation}
-            slug={exam.slug}
-            nextStageName="Stage 1 CBT"
-            nextStageDate={exam.examDate}
-          />
-
-          {exam.applicationUrl && (
-            <a
-              href={exam.applicationUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '5px',
-                background: 'var(--sc-navy-700)',
-                color: '#ffffff',
-                padding: '9px 16px',
-                borderRadius: '8px',
-                fontWeight: 700,
-                fontSize: '0.80rem',
-                textDecoration: 'none',
-              }}
-            >
-              <span>Apply on Official Portal</span>
-              <ExternalLink size={13} />
-            </a>
-          )}
-        </div>
-      </div>
-
-      {/* ── 7. CONTEXTUAL MAYA INTELLIGENCE CARD ── */}
-      <div>
+      {/* ── 6. CONTEXTUAL MAYA INTELLIGENCE CARD ── */}
+      <div style={{ marginBottom: '20px' }}>
         <MayaCard
           title={`Ask Maya about ${exam.name}`}
           pageContext="exam"
@@ -359,6 +289,61 @@ export default async function ExamDetailPage({
             'Am I eligible for this exam?'
           ]}
         />
+      </div>
+
+      {/* ── 7. SLEEK BOTTOM ACTION DOCK ── */}
+      <div
+        style={{
+          position: 'sticky',
+          bottom: '76px',
+          zIndex: 80,
+          background: 'rgba(255, 255, 255, 0.95)',
+          backdropFilter: 'blur(10px)',
+          border: '1px solid var(--sc-line-200)',
+          borderRadius: '14px',
+          padding: '10px 14px',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '10px',
+          boxShadow: '0 8px 24px rgba(0, 0, 0, 0.12)',
+        }}
+      >
+        <TrackButton
+          opportunityId={exam.id}
+          opportunityType="exam"
+          title={exam.name}
+          employerOrOrg={exam.organisation}
+          slug={exam.slug}
+          nextStageName="Stage 1 CBT"
+          nextStageDate={exam.examDate}
+        />
+
+        {exam.applicationUrl && (
+          <a
+            href={exam.applicationUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              flex: 1.2,
+              height: '44px',
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '6px',
+              background: 'var(--sc-navy-700)',
+              color: '#ffffff',
+              borderRadius: '10px',
+              fontWeight: 800,
+              fontSize: '0.82rem',
+              textDecoration: 'none',
+              whiteSpace: 'nowrap',
+              boxShadow: '0 2px 6px rgba(8, 50, 98, 0.25)',
+            }}
+          >
+            <span>Apply on Portal</span>
+            <ExternalLink size={14} />
+          </a>
+        )}
       </div>
     </div>
   );

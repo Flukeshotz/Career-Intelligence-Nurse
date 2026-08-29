@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Bookmark, Check, ChevronDown, Bell, BellCheck } from 'lucide-react';
+import { Bookmark, Check, ChevronDown } from 'lucide-react';
 import { getTrackedOpportunities, trackOpportunityItem, advanceStage, TrackedItem } from '@/lib/user-store';
 
 export function TrackButton({
@@ -56,10 +56,10 @@ export function TrackButton({
 
   const STAGES: Array<{ key: TrackedItem['stage']; label: string; short: string }> = [
     { key: 'interested', label: 'Interested / Following', short: 'Interested' },
-    { key: 'applied', label: 'Applied (Application Submitted)', short: 'Applied' },
+    { key: 'applied', label: 'Applied (Submitted)', short: 'Applied' },
     { key: 'admit_card_awaited', label: 'Admit Card Awaited', short: 'Admit Card' },
     { key: 'exam_scheduled', label: 'Exam Scheduled', short: 'Scheduled' },
-    { key: 'exam_taken', label: 'Exam Taken / Attended', short: 'Exam Taken' },
+    { key: 'exam_taken', label: 'Exam Attended', short: 'Attended' },
     { key: 'result_awaited', label: 'Result Awaited', short: 'Result Awaited' },
     { key: 'result_out', label: 'Result Declared', short: 'Result Out' },
     { key: 'counselling', label: 'Counselling / DV', short: 'Counselling' },
@@ -70,55 +70,58 @@ export function TrackButton({
     const currentStageObj = STAGES.find((s) => s.key === trackedItem.stage);
 
     return (
-      <div style={{ position: 'relative', display: 'inline-block' }}>
+      <div style={{ position: 'relative', flex: 1 }}>
         <button
           type="button"
           onClick={() => setShowStageSelector(!showStageSelector)}
           style={{
+            width: '100%',
+            height: '44px',
             display: 'inline-flex',
             alignItems: 'center',
+            justifyContent: 'center',
             gap: '6px',
             background: '#f0fdf4',
             color: '#15803d',
             border: '1.5px solid #86efac',
-            borderRadius: '8px',
-            padding: '8px 14px',
-            fontSize: '0.80rem',
+            borderRadius: '10px',
+            padding: '0 14px',
+            fontSize: '0.82rem',
             fontWeight: 700,
             cursor: 'pointer',
             transition: 'all 0.15s ease',
+            whiteSpace: 'nowrap',
           }}
         >
           <span style={{ width: '16px', height: '16px', borderRadius: '50%', background: '#16a34a', color: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.65rem', fontWeight: 900 }}>
             ✓
           </span>
-          <span>Stage: {currentStageObj?.short || 'Tracked'}</span>
+          <span>{currentStageObj?.short || 'Tracked'}</span>
           <ChevronDown size={14} />
         </button>
 
         {showStageSelector && (
           <div
-            className="sc-card"
             style={{
               position: 'absolute',
               bottom: '100%',
-              right: 0,
+              left: 0,
               marginBottom: '8px',
-              zIndex: 50,
-              padding: '8px',
+              zIndex: 100,
+              padding: '6px',
               display: 'flex',
               flexDirection: 'column',
-              gap: '4px',
-              width: '260px',
-              maxHeight: '280px',
+              gap: '2px',
+              width: '240px',
+              maxHeight: '260px',
               overflowY: 'auto',
-              boxShadow: '0 10px 30px rgba(0, 0, 0, 0.18)',
+              boxShadow: '0 12px 36px rgba(0, 0, 0, 0.18)',
               background: '#ffffff',
               borderRadius: '12px',
-              border: '1px solid var(--sc-line-200)',
+              border: '1px solid #e2e8f0',
             }}
           >
-            <div style={{ fontSize: '0.70rem', color: 'var(--sc-ink-500)', padding: '4px 8px', fontWeight: 700, textTransform: 'uppercase' }}>
+            <div style={{ fontSize: '0.68rem', color: '#64748b', padding: '4px 8px', fontWeight: 700, textTransform: 'uppercase' }}>
               Update Recruitment Stage:
             </div>
             {STAGES.map((st) => (
@@ -130,8 +133,8 @@ export function TrackButton({
                   textAlign: 'left',
                   padding: '7px 10px',
                   borderRadius: '6px',
-                  fontSize: '0.80rem',
-                  color: trackedItem.stage === st.key ? '#15803d' : 'var(--sc-ink-900)',
+                  fontSize: '0.78rem',
+                  color: trackedItem.stage === st.key ? '#15803d' : '#1e293b',
                   background: trackedItem.stage === st.key ? '#f0fdf4' : 'transparent',
                   fontWeight: trackedItem.stage === st.key ? 800 : 500,
                   display: 'flex',
@@ -156,22 +159,26 @@ export function TrackButton({
       type="button"
       onClick={() => handleInitialTrack('applied')}
       style={{
+        flex: 1,
+        height: '44px',
         display: 'inline-flex',
         alignItems: 'center',
+        justifyContent: 'center',
         gap: '6px',
         background: '#ffffff',
-        color: 'var(--sc-navy-700)',
-        border: '1.5px solid var(--sc-line-200)',
-        borderRadius: '8px',
-        padding: '8px 14px',
-        fontSize: '0.80rem',
+        color: '#0f172a',
+        border: '1.5px solid #cbd5e1',
+        borderRadius: '10px',
+        padding: '0 14px',
+        fontSize: '0.82rem',
         fontWeight: 700,
         cursor: 'pointer',
         transition: 'all 0.15s ease',
+        whiteSpace: 'nowrap',
       }}
     >
-      <Bookmark size={14} />
-      <span>Track in My Cycles</span>
+      <Bookmark size={15} />
+      <span>Track Cycle</span>
     </button>
   );
 }
