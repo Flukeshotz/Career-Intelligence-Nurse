@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-jkssb-nurse-2026-2026",
+  "examId": "exam-jkssb-nurse-2026",
+  "cycleId": "jkssb-nurse-2026",
+  "examName": "JKSSB Junior Staff Nurse",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "JKSSB Junior Staff Nurse 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://jkssb.nic.in",
+  "officialNotice": "J&K Services Selection Board Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-jkssb-nurse-2026-2026/original.pdf",
+  "sha256": "ef918c26a15623329660fe78f9b1a68943c373259ce186e93d2a9aee354b8ca2",
+  "pageCount": 24,
+  "questionCount": 120,
+  "expectedQuestionCount": 120,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "0.25 deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 120,
+  "negativeMarking": "0.25 deduction"
+}

@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-rrb-nurse-2026-2026",
+  "examId": "exam-rrb-nurse-2026",
+  "cycleId": "rrb-nurse-2026",
+  "examName": "RRB Staff Nurse",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "RRB Staff Nurse 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://www.rrbapply.gov.in",
+  "officialNotice": "Railway Recruitment Boards Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-rrb-nurse-2026-2026/original.pdf",
+  "sha256": "853328a8e4e5e3d66351158c21c47d01c51ca2c741769c98e4c3a38170643dc4",
+  "pageCount": 24,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "0.33 (1/3rd deduction) marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 90,
+  "totalMarks": 100,
+  "negativeMarking": "0.33 deduction"
+}

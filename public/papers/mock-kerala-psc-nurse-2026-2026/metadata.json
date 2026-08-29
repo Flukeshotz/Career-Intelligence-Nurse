@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-kerala-psc-nurse-2026-2026",
+  "examId": "exam-kerala-psc-nurse-2026",
+  "cycleId": "kerala-psc-nurse-2026",
+  "examName": "Kerala PSC Staff Nurse Grade II",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "Kerala PSC Staff Nurse Grade II 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://www.keralapsc.gov.in",
+  "officialNotice": "Kerala Public Service Commission Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-kerala-psc-nurse-2026-2026/original.pdf",
+  "sha256": "ed851f265d0663b1cd5f2ba27ad500829ea99fa15a02cee3dd3c415dcfb0586b",
+  "pageCount": 24,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "0.33 deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 75,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

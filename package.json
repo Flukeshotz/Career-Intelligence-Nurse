@@ -8,7 +8,13 @@
     "start": "next start",
     "lint": "next lint",
     "scrape": "tsx src/scraper/index.ts",
-    "seed:market": "tsx src/scraper/index.ts"
+    "seed:market": "tsx src/scraper/index.ts",
+    "pyq:discover": "tsx src/scraper/pyq/pipeline.ts --discover",
+    "pyq:download": "tsx src/scraper/pyq/pipeline.ts --download",
+    "pyq:extract": "tsx src/scraper/pyq/pipeline.ts --extract",
+    "pyq:validate": "tsx src/scraper/pyq/pipeline.ts --validate",
+    "pyq:publish": "tsx src/scraper/pyq/pipeline.ts --publish",
+    "pyq:sync": "tsx src/scraper/pyq/pipeline.ts --sync"
   },
   "dependencies": {
     "csv-parse": "^7.0.2",

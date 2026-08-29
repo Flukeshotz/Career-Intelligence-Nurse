@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-neet-ug-nursing-2026",
+  "examId": "exam-neet-ug-nursing-2026",
+  "cycleId": "neet-ug-nursing-2026",
+  "examName": "NEET-UG B.Sc. Nursing Entrance",
+  "year": 2024,
+  "stage": "PRELIMS",
+  "shift": "NTA Master Paper (05 May 2024)",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://neet.nta.nic.in",
+  "officialNotice": "NTA NEET UG Official Answer Key Notification",
+  "originalFilePath": "/papers/pyq-neet-ug-nursing-2026/original.pdf",
+  "sha256": "2de2b142dbc190c374f3aae30287d57456faf0d96598d4a184f0fe36aee0f19a",
+  "pageCount": 32,
+  "questionCount": 200,
+  "expectedQuestionCount": 200,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official National Testing Agency (NTA) verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 200,
+  "totalMarks": 200,
+  "negativeMarking": "0.25 deduction"
+}

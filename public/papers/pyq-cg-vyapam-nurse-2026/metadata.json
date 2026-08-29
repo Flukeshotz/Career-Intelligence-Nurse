@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-cg-vyapam-nurse-2026",
+  "examId": "exam-cg-vyapam-nurse-2026",
+  "cycleId": "cg-vyapam-nurse-2026",
+  "examName": "CG Vyapam Chhattisgarh Staff Nurse",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "Health Dept Recruitment Test",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://vyapam.cgstate.gov.in",
+  "officialNotice": "CG Vyapam Staff Nurse Model Answer Key",
+  "originalFilePath": "/papers/pyq-cg-vyapam-nurse-2026/original.pdf",
+  "sha256": "698816ee0bc9533b4a0bfbd8fc72b83f017c3228ed674d5b343c03266a98ef3a",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official CG Professional Examination Board verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

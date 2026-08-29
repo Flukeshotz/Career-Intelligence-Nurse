@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-goa-gmc-nurse-2026-2026",
+  "examId": "exam-goa-gmc-nurse-2026",
+  "cycleId": "goa-gmc-nurse-2026",
+  "examName": "Goa Medical College Staff Nurse",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "Goa Medical College Staff Nurse 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://gmc.goa.gov.in",
+  "officialNotice": "Goa Medical College Bambolim Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-goa-gmc-nurse-2026-2026/original.pdf",
+  "sha256": "e9827612ede78226bb162065d11de96779b2136419ce7eec643520da7f34ddf8",
+  "pageCount": 24,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "0.25 deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 90,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

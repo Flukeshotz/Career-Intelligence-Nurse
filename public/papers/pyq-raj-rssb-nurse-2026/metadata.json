@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-raj-rssb-nurse-2026",
+  "examId": "exam-raj-rssb-nurse-2026",
+  "cycleId": "raj-rssb-nurse-2026",
+  "examName": "RSMSSB Rajasthan Staff Nurse",
+  "year": 2024,
+  "stage": "PRELIMS",
+  "shift": "Contractual GNM Exam",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://rsmssb.rajasthan.gov.in",
+  "officialNotice": "RSMSSB GNM Direct Recruitment Final Key (Advt 03/2023)",
+  "originalFilePath": "/papers/pyq-raj-rssb-nurse-2026/original.pdf",
+  "sha256": "d9f0810d2beab19e95c25ab028ec7cdbc0c8832b36c406a30e85e6f28bb44686",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official RSMSSB Jaipur verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 90,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

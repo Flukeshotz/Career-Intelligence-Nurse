@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-punjab-bfuhs-nurse-2026",
+  "examId": "exam-punjab-bfuhs-nurse-2026",
+  "cycleId": "punjab-bfuhs-nurse-2026",
+  "examName": "Punjab BFUHS Staff Nurse",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "State Written Test",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://bfuhs.ac.in",
+  "officialNotice": "BFUHS Staff Nurse Direct Recruitment Key",
+  "originalFilePath": "/papers/pyq-punjab-bfuhs-nurse-2026/original.pdf",
+  "sha256": "643b8089f235fdf98ab9a45ba335908f0220a366dd1778032180c10e173ae85f",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official BFUHS Faridkot / Punjab Govt verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

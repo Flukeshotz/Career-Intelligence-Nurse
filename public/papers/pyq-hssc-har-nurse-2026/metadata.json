@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-hssc-har-nurse-2026",
+  "examId": "exam-hssc-har-nurse-2026",
+  "cycleId": "hssc-har-nurse-2026",
+  "examName": "Haryana HSSC Staff Nurse CET",
+  "year": 2023,
+  "stage": "MAINS",
+  "shift": "CET Group C Mains",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://hssc.gov.in",
+  "officialNotice": "HSSC Group C CET Mains Final Key",
+  "originalFilePath": "/papers/pyq-hssc-har-nurse-2026/original.pdf",
+  "sha256": "4e51e8fc9bc16b4a4f8f7ce1994cbadbf03e457dae0b3ee2a805c27d3214c546",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official Haryana Staff Selection Commission verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 105,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

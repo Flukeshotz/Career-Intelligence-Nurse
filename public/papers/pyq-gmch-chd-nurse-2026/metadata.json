@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-gmch-chd-nurse-2026",
+  "examId": "exam-gmch-chd-nurse-2026",
+  "cycleId": "gmch-chd-nurse-2026",
+  "examName": "GMCH Chandigarh Nursing Officer",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "Written Screening Test",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://gmch.gov.in",
+  "officialNotice": "GMCH CHD Nursing Officer Final Key",
+  "originalFilePath": "/papers/pyq-gmch-chd-nurse-2026/original.pdf",
+  "sha256": "542a6eed24404bca1c1ead7ace5e05a6f2abd4dd698df070a065cec6ccd5e6a9",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official GMCH Sector 32 Chandigarh verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.33 deduction"
+}

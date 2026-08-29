@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-wbhrb-nurse-2026",
+  "examId": "exam-wbhrb-nurse-2026",
+  "cycleId": "wbhrb-nurse-2026",
+  "examName": "WBHRB West Bengal Staff Nurse",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "Staff Nurse Gr II Screening",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://wbhrb.in",
+  "officialNotice": "WBHRB Staff Nurse Grade 2 Final Key",
+  "originalFilePath": "/papers/pyq-wbhrb-nurse-2026/original.pdf",
+  "sha256": "baae686367c4c731186fee94410a033a82dbeed7152ec186e16751e2bd73936d",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official WBHRB Kolkata verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 90,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

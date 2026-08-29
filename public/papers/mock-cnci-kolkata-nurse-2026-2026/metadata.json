@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-cnci-kolkata-nurse-2026-2026",
+  "examId": "exam-cnci-kolkata-nurse-2026",
+  "cycleId": "cnci-kolkata-nurse-2026",
+  "examName": "CNCI Kolkata Staff Nurse (Oncology)",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "CNCI Kolkata Staff Nurse (Oncology) 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://cnci.ac.in",
+  "officialNotice": "Chittaranjan National Cancer Institute Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-cnci-kolkata-nurse-2026-2026/original.pdf",
+  "sha256": "de90515f562c2c4023d49277bb53f0fd5beb2b4e8218da17478dc2395b37148f",
+  "pageCount": 24,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "0.25 deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 90,
+  "totalMarks": 100,
+  "negativeMarking": "0.33 deduction"
+}

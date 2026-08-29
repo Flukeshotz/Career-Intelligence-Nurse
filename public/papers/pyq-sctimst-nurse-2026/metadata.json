@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-sctimst-nurse-2026",
+  "examId": "exam-sctimst-nurse-2026",
+  "cycleId": "sctimst-nurse-2026",
+  "examName": "SCTIMST Thiruvananthapuram Staff Nurse",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "Written Test & Skill Test",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://www.sctimst.ac.in",
+  "officialNotice": "SCTIMST Recruitment Wing Official Key",
+  "originalFilePath": "/papers/pyq-sctimst-nurse-2026/original.pdf",
+  "sha256": "1e88d12ee003ced9652eee3515aafa0ab528b7b3bf0c2141b32cb9ce3baae748",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official SCTIMST Kerala verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 90,
+  "totalMarks": 100,
+  "negativeMarking": "0.33 deduction"
+}

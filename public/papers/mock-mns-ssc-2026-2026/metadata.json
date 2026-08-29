@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-mns-ssc-2026-2026",
+  "examId": "exam-mns-ssc-2026",
+  "cycleId": "mns-ssc-2026",
+  "examName": "Military Nursing Service (MNS)",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "Military Nursing Service (MNS) 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://joinindianarmy.nic.in",
+  "officialNotice": "Indian Army / DGMS Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-mns-ssc-2026-2026/original.pdf",
+  "sha256": "8badf9fe14624a985dda44f92d15184f0c959acde83c3fba6533eb53f611dc17",
+  "pageCount": 24,
+  "questionCount": 150,
+  "expectedQuestionCount": 150,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "No Negative Marking marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 150,
+  "totalMarks": 150,
+  "negativeMarking": "0.25 deduction"
+}

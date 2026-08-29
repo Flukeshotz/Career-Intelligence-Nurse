@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-nimhans-no-2026",
+  "examId": "exam-nimhans-no-2026",
+  "cycleId": "nimhans-no-2026",
+  "examName": "NIMHANS Bengaluru Nursing Officer",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "Online Screening Test",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://nimhans.ac.in",
+  "officialNotice": "NIMHANS Academic & Examination Section Key",
+  "originalFilePath": "/papers/pyq-nimhans-no-2026/original.pdf",
+  "sha256": "bfaa3b5615e15fe2929258519426bd281b30974dfff639693187943420108e01",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official NIMHANS Bengaluru verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 90,
+  "totalMarks": 100,
+  "negativeMarking": "0.33 deduction"
+}

@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-hppsc-hp-nurse-2026-2026",
+  "examId": "exam-hppsc-hp-nurse-2026",
+  "cycleId": "hppsc-hp-nurse-2026",
+  "examName": "HPPSC Himachal Pradesh Staff Nurse",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "HPPSC Himachal Pradesh Staff Nurse 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "http://www.hppsc.hp.gov.in",
+  "officialNotice": "HPPSC Shimla Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-hppsc-hp-nurse-2026-2026/original.pdf",
+  "sha256": "2e3a604e0cdb83d0a0e7d3952560443e293fc9e4fbe96478cbf27873aa72a482",
+  "pageCount": 24,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "0.25 deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

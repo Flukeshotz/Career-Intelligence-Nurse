@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-kpsc-kar-nurse-2026",
+  "examId": "exam-kpsc-kar-nurse-2026",
+  "cycleId": "kpsc-kar-nurse-2026",
+  "examName": "KPSC Karnataka Staff Nurse",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "Competitive Written Paper",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://kpsc.kar.nic.in",
+  "officialNotice": "KPSC Staff Nurse Final Key Notification",
+  "originalFilePath": "/papers/pyq-kpsc-kar-nurse-2026/original.pdf",
+  "sha256": "017ee5363d2568f19ba0a6ae821110c5588bc6b172e4c7417ba63ba79bcf2b96",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official Karnataka Public Service Commission verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 90,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

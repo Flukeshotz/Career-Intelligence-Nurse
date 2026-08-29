@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-maha-dhs-nurse-2026",
+  "examId": "exam-maha-dhs-nurse-2026",
+  "cycleId": "maha-dhs-nurse-2026",
+  "examName": "Maharashtra Arogya Vibhag Staff Nurse",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "Group C Staff Nurse CBT",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://arogya.maharashtra.gov.in",
+  "officialNotice": "Maharashtra DHS Group C Staff Nurse Official Key",
+  "originalFilePath": "/papers/pyq-maha-dhs-nurse-2026/original.pdf",
+  "sha256": "e54ad6f5bfd1e898493afe6c6aca1dd94d3ed8653e061e42bd7e0c088230fcd7",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official DHS Maharashtra Mumbai verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

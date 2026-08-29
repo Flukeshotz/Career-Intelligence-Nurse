@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-osssc-nurse-2026",
+  "examId": "exam-osssc-nurse-2026",
+  "cycleId": "osssc-nurse-2026",
+  "examName": "OSSSC Odisha Nursing Officer",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "District Cadre CRE-2023",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://www.osssc.gov.in",
+  "officialNotice": "OSSSC Notification IIE-49/2023 Master Answer Key",
+  "originalFilePath": "/papers/pyq-osssc-nurse-2026/original.pdf",
+  "sha256": "37f6345338aff23004b29526171c31e07fdf5be38e66406bd1b5bbe30f97aa35",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official OSSSC Bhubaneswar verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

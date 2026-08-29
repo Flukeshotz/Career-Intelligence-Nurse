@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-dsssb-nurse-2026-2026",
+  "examId": "exam-dsssb-nurse-2026",
+  "cycleId": "dsssb-nurse-2026",
+  "examName": "DSSSB Nursing Officer",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "DSSSB Nursing Officer 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://dsssbonline.nic.in",
+  "officialNotice": "DSSSB Delhi Health Dept Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-dsssb-nurse-2026-2026/original.pdf",
+  "sha256": "e50edb219027772148fc695a3393c6e90df771780427c3c9e0ecc748243489a8",
+  "pageCount": 24,
+  "questionCount": 200,
+  "expectedQuestionCount": 200,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "0.25 deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 200,
+  "negativeMarking": "0.33 deduction"
+}

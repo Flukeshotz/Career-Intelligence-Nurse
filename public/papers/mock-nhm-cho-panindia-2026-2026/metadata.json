@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-nhm-cho-panindia-2026-2026",
+  "examId": "exam-nhm-cho-panindia-2026",
+  "cycleId": "nhm-cho-panindia-2026",
+  "examName": "NHM Community Health Officer (CHO)",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "NHM Community Health Officer (CHO) 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://nhm.gov.in",
+  "officialNotice": "National Health Mission Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-nhm-cho-panindia-2026-2026/original.pdf",
+  "sha256": "3205b5c1128e04bb01a73fedd7eb80c00a7505a106ef1f964518a00827d654c3",
+  "pageCount": 24,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "No Negative Marking marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

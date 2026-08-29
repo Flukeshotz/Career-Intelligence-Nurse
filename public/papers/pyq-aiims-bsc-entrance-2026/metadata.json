@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-aiims-bsc-entrance-2026",
+  "examId": "exam-aiims-bsc-entrance-2026",
+  "cycleId": "aiims-bsc-entrance-2026",
+  "examName": "AIIMS B.Sc. (Hons) Nursing Entrance",
+  "year": 2024,
+  "stage": "PRELIMS",
+  "shift": "National Entrance Test (08 Jun 2024)",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://www.aiimsexams.ac.in",
+  "officialNotice": "AIIMS B.Sc. Nursing Entrance Official Key",
+  "originalFilePath": "/papers/pyq-aiims-bsc-entrance-2026/original.pdf",
+  "sha256": "8b10f9aa6ef091f7b544464bc75500d0e18be35066a25fb6fb43088cdfc25d06",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official AIIMS New Delhi Exams verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

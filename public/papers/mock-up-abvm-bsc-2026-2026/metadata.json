@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-up-abvm-bsc-2026-2026",
+  "examId": "exam-up-abvm-bsc-2026",
+  "cycleId": "up-abvm-bsc-2026",
+  "examName": "UP CNET (ABVMU) B.Sc. Nursing Test",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "UP CNET (ABVMU) B.Sc. Nursing Test 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://abvmuup.edu.in",
+  "officialNotice": "ABVMU Lucknow Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-up-abvm-bsc-2026-2026/original.pdf",
+  "sha256": "88359a7e05eb4035507a0a92c8491a95b902db3ff082dbecce96f647f9fb0bd1",
+  "pageCount": 24,
+  "questionCount": 200,
+  "expectedQuestionCount": 200,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "No Negative Marking marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 180,
+  "totalMarks": 200,
+  "negativeMarking": "0.25 deduction"
+}

@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-nhm-cho-panindia-2026",
+  "examId": "exam-nhm-cho-panindia-2026",
+  "cycleId": "nhm-cho-panindia-2026",
+  "examName": "NHM Community Health Officer (CHO)",
+  "year": 2024,
+  "stage": "PRELIMS",
+  "shift": "Bridge Program CCH / CHO",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://nhm.gov.in",
+  "officialNotice": "NHM CHO Common Evaluation Master Key",
+  "originalFilePath": "/papers/pyq-nhm-cho-panindia-2026/original.pdf",
+  "sha256": "d33d2aa2420dda656d4ff9e6972679bf8c268e3d5f217751bf58ec567ee8cd56",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official National Health Mission verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

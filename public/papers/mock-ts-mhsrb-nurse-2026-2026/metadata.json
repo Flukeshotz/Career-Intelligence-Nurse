@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-ts-mhsrb-nurse-2026-2026",
+  "examId": "exam-ts-mhsrb-nurse-2026",
+  "cycleId": "ts-mhsrb-nurse-2026",
+  "examName": "TS MHSRB Staff Nurse",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "TS MHSRB Staff Nurse 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://mhsrb.telangana.gov.in",
+  "officialNotice": "Telangana MHSRB Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-ts-mhsrb-nurse-2026-2026/original.pdf",
+  "sha256": "659ac9e2bebcb98d95a2c68277762bd1b010b398b20e61d1238fd3afbe05ef2b",
+  "pageCount": 24,
+  "questionCount": 80,
+  "expectedQuestionCount": 80,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "No Negative Marking marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 80,
+  "totalMarks": 80,
+  "negativeMarking": "0.25 deduction"
+}

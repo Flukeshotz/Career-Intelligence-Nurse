@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-rims-ranchi-nurse-2026",
+  "examId": "exam-rims-ranchi-nurse-2026",
+  "cycleId": "rims-ranchi-nurse-2026",
+  "examName": "RIMS Ranchi Staff Nurse Grade A",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "Direct Recruitment Test",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://www.rimsranchi.ac.in",
+  "officialNotice": "RIMS Ranchi Staff Nurse Screening Key",
+  "originalFilePath": "/papers/pyq-rims-ranchi-nurse-2026/original.pdf",
+  "sha256": "24896ffe62a76e9245a457fbe02e92caf7f3881ba0dc5c2a1fcbf2fcf752e0a6",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official RIMS Ranchi verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-tn-mrb-nurse-2026",
+  "examId": "exam-tn-mrb-nurse-2026",
+  "cycleId": "tn-mrb-nurse-2026",
+  "examName": "TN MRB Nurses Exam",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "CBT Master Paper",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://mrb.tn.gov.in",
+  "officialNotice": "TN MRB Notification No. 01/MRB/2023 Final Key",
+  "originalFilePath": "/papers/pyq-tn-mrb-nurse-2026/original.pdf",
+  "sha256": "e418464219660287f099186eedc3aa9bcdc59622bf56a0917283e0834e65730f",
+  "pageCount": 32,
+  "questionCount": 200,
+  "expectedQuestionCount": 200,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official Medical Services Recruitment Board TN verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 150,
+  "totalMarks": 200,
+  "negativeMarking": "0.25 deduction"
+}

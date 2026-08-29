@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-jkssb-nurse-2026",
+  "examId": "exam-jkssb-nurse-2026",
+  "cycleId": "jkssb-nurse-2026",
+  "examName": "JKSSB Junior Staff Nurse",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "GMC Division Cadre CBT",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://jkssb.nic.in",
+  "officialNotice": "JKSSB Health & Medical Education Dept Final Key",
+  "originalFilePath": "/papers/pyq-jkssb-nurse-2026/original.pdf",
+  "sha256": "e7caaea63d086c02b0314bfcbb224ebdedb498670ff0d053b7fe34f37c1d6349",
+  "pageCount": 32,
+  "questionCount": 120,
+  "expectedQuestionCount": 120,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official J&K Services Selection Board verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 120,
+  "negativeMarking": "0.25 deduction"
+}

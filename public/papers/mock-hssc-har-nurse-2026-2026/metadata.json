@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-hssc-har-nurse-2026-2026",
+  "examId": "exam-hssc-har-nurse-2026",
+  "cycleId": "hssc-har-nurse-2026",
+  "examName": "Haryana HSSC Staff Nurse CET",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "Haryana HSSC Staff Nurse CET 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://hssc.gov.in",
+  "officialNotice": "Haryana Staff Selection Commission Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-hssc-har-nurse-2026-2026/original.pdf",
+  "sha256": "5efe0e02521cf4c3120ddbf1e30a2560f5492d3d752745e76ce8ba9b5d5f1ba1",
+  "pageCount": 24,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "0.975 deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 105,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

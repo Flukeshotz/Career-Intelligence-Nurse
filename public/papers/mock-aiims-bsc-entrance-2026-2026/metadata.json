@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-aiims-bsc-entrance-2026-2026",
+  "examId": "exam-aiims-bsc-entrance-2026",
+  "cycleId": "aiims-bsc-entrance-2026",
+  "examName": "AIIMS B.Sc. (Hons) Nursing Entrance",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "AIIMS B.Sc. (Hons) Nursing Entrance 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://www.aiimsexams.ac.in",
+  "officialNotice": "AIIMS New Delhi Exams Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-aiims-bsc-entrance-2026-2026/original.pdf",
+  "sha256": "442d78aab7d4f9ddef7e87a296ae7fdb02ed513dd481d81fc924a4299ab77ff4",
+  "pageCount": 24,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "0.33 deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

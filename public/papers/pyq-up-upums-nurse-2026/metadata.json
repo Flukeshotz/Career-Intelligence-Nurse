@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-up-upums-nurse-2026",
+  "examId": "exam-up-upums-nurse-2026",
+  "cycleId": "up-upums-nurse-2026",
+  "examName": "UPUMS Saifai Nursing Officer",
+  "year": 2024,
+  "stage": "PRELIMS",
+  "shift": "CBT Online Exam",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://www.upums.ac.in",
+  "officialNotice": "UPUMS CBT Answer Key & Response Sheet Portal",
+  "originalFilePath": "/papers/pyq-up-upums-nurse-2026/original.pdf",
+  "sha256": "daefe7eda5996fc3d4e11bb55ae9eada32f60d62604d606296abbb68d8ba0b14",
+  "pageCount": 32,
+  "questionCount": 200,
+  "expectedQuestionCount": 200,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official UPUMS Saifai Etawah verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 180,
+  "totalMarks": 200,
+  "negativeMarking": "0.25 deduction"
+}

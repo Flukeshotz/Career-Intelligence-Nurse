@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-btsc-nurse-2026-2026",
+  "examId": "exam-btsc-nurse-2026",
+  "cycleId": "btsc-nurse-2026",
+  "examName": "BTSC Bihar Staff Nurse (Grade A)",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "BTSC Bihar Staff Nurse (Grade A) 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://btsc.bih.nic.in",
+  "officialNotice": "Bihar Technical Service Commission Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-btsc-nurse-2026-2026/original.pdf",
+  "sha256": "cc9279df5e32d73a30ae15ea768daf310a9d7790332cacd9dcfaa187e2b4b4e5",
+  "pageCount": 24,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "0.25 deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

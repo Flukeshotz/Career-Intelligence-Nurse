@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-rrb-nurse-2026",
+  "examId": "exam-rrb-nurse-2026",
+  "cycleId": "rrb-nurse-2026",
+  "examName": "RRB Staff Nurse",
+  "year": 2024,
+  "stage": "PRELIMS",
+  "shift": "CEN 02/2024 Shift 1",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://www.rrbapply.gov.in",
+  "officialNotice": "RRB CEN 02/2024 Shift 1 Master Question Paper & Key",
+  "originalFilePath": "/papers/pyq-rrb-nurse-2026/original.pdf",
+  "sha256": "bbe080e34beec3600b25c79bb7c0e0e0542fa3633dce9e2239621fd82b2ae65c",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official Railway Recruitment Boards verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 90,
+  "totalMarks": 100,
+  "negativeMarking": "0.33 deduction"
+}

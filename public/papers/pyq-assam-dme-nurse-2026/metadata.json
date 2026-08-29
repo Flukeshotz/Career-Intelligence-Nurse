@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-assam-dme-nurse-2026",
+  "examId": "exam-assam-dme-nurse-2026",
+  "cycleId": "assam-dme-nurse-2026",
+  "examName": "Assam DME Staff Nurse",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "Medical College Recruitment",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://dme.assam.gov.in",
+  "officialNotice": "Assam DME Staff Nurse Merit & Key Notice",
+  "originalFilePath": "/papers/pyq-assam-dme-nurse-2026/original.pdf",
+  "sha256": "645e0b99d2490537648a71b52976f1ffaea32963b5f4b4166ad960f2171e5ed9",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official Directorate of Medical Education Assam verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

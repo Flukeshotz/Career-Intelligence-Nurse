@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-nimhans-no-2026-2026",
+  "examId": "exam-nimhans-no-2026",
+  "cycleId": "nimhans-no-2026",
+  "examName": "NIMHANS Bengaluru Nursing Officer",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "NIMHANS Bengaluru Nursing Officer 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://nimhans.ac.in",
+  "officialNotice": "NIMHANS Bengaluru Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-nimhans-no-2026-2026/original.pdf",
+  "sha256": "dc748395f011bfb591e2434fd30f8b2faf94c1e43cea8bd57618e69669bc91b6",
+  "pageCount": 24,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "0.25 deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 90,
+  "totalMarks": 100,
+  "negativeMarking": "0.33 deduction"
+}

@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-dsssb-nurse-2026",
+  "examId": "exam-dsssb-nurse-2026",
+  "cycleId": "dsssb-nurse-2026",
+  "examName": "DSSSB Nursing Officer",
+  "year": 2024,
+  "stage": "PRELIMS",
+  "shift": "Post Code 02/24 Shift 1",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://dsssbonline.nic.in",
+  "officialNotice": "DSSSB Final Answer Key Notification Post Code 02/24",
+  "originalFilePath": "/papers/pyq-dsssb-nurse-2026/original.pdf",
+  "sha256": "d12d7ca07cfdfb2e698dc7273d92c32b1818e9cfd686f57c9a465151916c301b",
+  "pageCount": 32,
+  "questionCount": 200,
+  "expectedQuestionCount": 200,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official DSSSB Delhi Health Dept verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 200,
+  "negativeMarking": "0.33 deduction"
+}

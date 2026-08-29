@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-tn-mrb-nurse-2026-2026",
+  "examId": "exam-tn-mrb-nurse-2026",
+  "cycleId": "tn-mrb-nurse-2026",
+  "examName": "TN MRB Nurses Exam",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "TN MRB Nurses Exam 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://mrb.tn.gov.in",
+  "officialNotice": "Medical Services Recruitment Board TN Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-tn-mrb-nurse-2026-2026/original.pdf",
+  "sha256": "5562c6a132debac8172cd998a3e204649635d25635df731f9ea1b2e3e64c06cc",
+  "pageCount": 24,
+  "questionCount": 200,
+  "expectedQuestionCount": 200,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "No Negative Marking marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 150,
+  "totalMarks": 200,
+  "negativeMarking": "0.25 deduction"
+}

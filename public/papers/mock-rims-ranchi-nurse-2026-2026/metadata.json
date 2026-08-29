@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-rims-ranchi-nurse-2026-2026",
+  "examId": "exam-rims-ranchi-nurse-2026",
+  "cycleId": "rims-ranchi-nurse-2026",
+  "examName": "RIMS Ranchi Staff Nurse Grade A",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "RIMS Ranchi Staff Nurse Grade A 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://www.rimsranchi.ac.in",
+  "officialNotice": "RIMS Ranchi Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-rims-ranchi-nurse-2026-2026/original.pdf",
+  "sha256": "8c21660aab28416a164aa7057d95637cd110526c6f0253337e149db9596a3b3b",
+  "pageCount": 24,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "0.25 deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

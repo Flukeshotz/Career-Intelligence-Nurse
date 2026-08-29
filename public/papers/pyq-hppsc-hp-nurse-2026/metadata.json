@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-hppsc-hp-nurse-2026",
+  "examId": "exam-hppsc-hp-nurse-2026",
+  "cycleId": "hppsc-hp-nurse-2026",
+  "examName": "HPPSC Himachal Pradesh Staff Nurse",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "Class III Screening Test",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "http://www.hppsc.hp.gov.in",
+  "officialNotice": "HPPSC Class III Staff Nurse Screening Key",
+  "originalFilePath": "/papers/pyq-hppsc-hp-nurse-2026/original.pdf",
+  "sha256": "cfa243c427b54297e7bead1383e3b7eb113e78ce16460f65886b23eff92a7857",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official HPPSC Shimla verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

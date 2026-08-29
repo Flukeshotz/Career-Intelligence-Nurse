@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-jipmer-nurse-2026",
+  "examId": "exam-jipmer-nurse-2026",
+  "cycleId": "jipmer-nurse-2026",
+  "examName": "JIPMER Nursing Officer",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "CBT Morning Shift",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://www.jipmer.edu.in",
+  "officialNotice": "JIPMER Exam Section Official Question Paper & Key",
+  "originalFilePath": "/papers/pyq-jipmer-nurse-2026/original.pdf",
+  "sha256": "95a40f1c9c0df7028b80dbb9ba0e9f019e742e08120973af3c4a4617824c820c",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official JIPMER Puducherry verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 90,
+  "totalMarks": 100,
+  "negativeMarking": "0.33 deduction"
+}

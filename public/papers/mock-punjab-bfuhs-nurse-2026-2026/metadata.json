@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-punjab-bfuhs-nurse-2026-2026",
+  "examId": "exam-punjab-bfuhs-nurse-2026",
+  "cycleId": "punjab-bfuhs-nurse-2026",
+  "examName": "Punjab BFUHS Staff Nurse",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "Punjab BFUHS Staff Nurse 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://bfuhs.ac.in",
+  "officialNotice": "BFUHS Faridkot / Punjab Govt Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-punjab-bfuhs-nurse-2026-2026/original.pdf",
+  "sha256": "0046ff943b11249a379b398c936d9beeeed4ea0a6f10a74f9dd619f5ae7a70ae",
+  "pageCount": 24,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "0.25 deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

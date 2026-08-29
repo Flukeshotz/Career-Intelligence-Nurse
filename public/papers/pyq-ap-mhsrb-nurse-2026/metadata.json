@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-ap-mhsrb-nurse-2026",
+  "examId": "exam-ap-mhsrb-nurse-2026",
+  "cycleId": "ap-mhsrb-nurse-2026",
+  "examName": "AP MHSRB Staff Nurse",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "State Direct Recruitment CBT",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "http://mhsrb.ap.gov.in",
+  "officialNotice": "AP MHSRB Notification 01/2023 Official Master Key",
+  "originalFilePath": "/papers/pyq-ap-mhsrb-nurse-2026/original.pdf",
+  "sha256": "d4442d64125be3115424032da0da7b4d3300179a736d71a9385d42d0cf53a94c",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official Andhra Pradesh MHSRB verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

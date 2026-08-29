@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-aiims-msc-nursing-2026-2026",
+  "examId": "exam-aiims-msc-nursing-2026",
+  "cycleId": "aiims-msc-nursing-2026",
+  "examName": "AIIMS M.Sc. Nursing National Entrance",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "AIIMS M.Sc. Nursing National Entrance 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://www.aiimsexams.ac.in",
+  "officialNotice": "AIIMS New Delhi Exams Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-aiims-msc-nursing-2026-2026/original.pdf",
+  "sha256": "b5ccb5381ddaa53f4864e54a20b08d9a7ae46ee76da816f8559beb54eae17c9e",
+  "pageCount": 24,
+  "questionCount": 90,
+  "expectedQuestionCount": 90,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "0.33 deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 90,
+  "totalMarks": 90,
+  "negativeMarking": "0.25 deduction"
+}

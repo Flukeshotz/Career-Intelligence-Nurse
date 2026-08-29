@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-maha-dhs-nurse-2026-2026",
+  "examId": "exam-maha-dhs-nurse-2026",
+  "cycleId": "maha-dhs-nurse-2026",
+  "examName": "Maharashtra Arogya Vibhag Staff Nurse",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "Maharashtra Arogya Vibhag Staff Nurse 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://arogya.maharashtra.gov.in",
+  "officialNotice": "DHS Maharashtra Mumbai Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-maha-dhs-nurse-2026-2026/original.pdf",
+  "sha256": "93d1b44367ffa597508be97f3d6526ef8b04700e7d4e7dcf6a1bf2dd4e00ff30",
+  "pageCount": 24,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "No Negative Marking marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

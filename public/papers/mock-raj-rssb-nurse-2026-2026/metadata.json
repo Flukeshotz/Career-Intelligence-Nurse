@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-raj-rssb-nurse-2026-2026",
+  "examId": "exam-raj-rssb-nurse-2026",
+  "cycleId": "raj-rssb-nurse-2026",
+  "examName": "RSMSSB Rajasthan Staff Nurse",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "RSMSSB Rajasthan Staff Nurse 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://rsmssb.rajasthan.gov.in",
+  "officialNotice": "RSMSSB Jaipur Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-raj-rssb-nurse-2026-2026/original.pdf",
+  "sha256": "dfb2076d7d552bc52e19b7d3d2f4d566b8af62565eadcd7200c5a6898eae954f",
+  "pageCount": 24,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "0.33 deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 90,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

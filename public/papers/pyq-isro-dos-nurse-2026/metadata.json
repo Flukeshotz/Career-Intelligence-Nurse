@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-isro-dos-nurse-2026",
+  "examId": "exam-isro-dos-nurse-2026",
+  "cycleId": "isro-dos-nurse-2026",
+  "examName": "ISRO Nurse B (Dept of Space)",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "Written Screening Test",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://www.isro.gov.in",
+  "officialNotice": "ISRO URSC Nurse B Official Key Series A",
+  "originalFilePath": "/papers/pyq-isro-dos-nurse-2026/original.pdf",
+  "sha256": "f089d4494fbce00a95824981b6507ad9bb9799269dfc1b142d5b78611da1e88e",
+  "pageCount": 32,
+  "questionCount": 80,
+  "expectedQuestionCount": 80,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official ISRO Centres (URSC / SDSC) verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 90,
+  "totalMarks": 80,
+  "negativeMarking": "0.25 deduction"
+}

@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-npcil-dae-nurse-2026-2026",
+  "examId": "exam-npcil-dae-nurse-2026",
+  "cycleId": "npcil-dae-nurse-2026",
+  "examName": "NPCIL Nurse A (DAE)",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "NPCIL Nurse A (DAE) 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://www.npcilcareers.co.in",
+  "officialNotice": "Nuclear Power Corp of India Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-npcil-dae-nurse-2026-2026/original.pdf",
+  "sha256": "b22f88dcdce21b4dca4cdba43d3765390b2726dad2fc470575ea7c4e9a180225",
+  "pageCount": 24,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "1 mark deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

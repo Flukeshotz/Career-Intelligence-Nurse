@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-mns-ssc-2026",
+  "examId": "exam-mns-ssc-2026",
+  "cycleId": "mns-ssc-2026",
+  "examName": "Military Nursing Service (MNS)",
+  "year": 2024,
+  "stage": "PRELIMS",
+  "shift": "NTA CBT Examination",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://joinindianarmy.nic.in",
+  "officialNotice": "NTA MNS Official CBT Question Paper & Key",
+  "originalFilePath": "/papers/pyq-mns-ssc-2026/original.pdf",
+  "sha256": "e1b3a02283d1bc7bf7565d3c3e83e16baeebab7381a4491ba21d48e40221e56d",
+  "pageCount": 32,
+  "questionCount": 150,
+  "expectedQuestionCount": 150,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official Indian Army / DGMS verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 150,
+  "totalMarks": 150,
+  "negativeMarking": "0.25 deduction"
+}

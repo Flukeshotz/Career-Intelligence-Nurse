@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-sctimst-nurse-2026-2026",
+  "examId": "exam-sctimst-nurse-2026",
+  "cycleId": "sctimst-nurse-2026",
+  "examName": "SCTIMST Thiruvananthapuram Staff Nurse",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "SCTIMST Thiruvananthapuram Staff Nurse 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://www.sctimst.ac.in",
+  "officialNotice": "SCTIMST Kerala Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-sctimst-nurse-2026-2026/original.pdf",
+  "sha256": "0a72301ccb80cc575a16ef27cc8f29b43b35f31469e8e3dea0555c95f5a8ac2e",
+  "pageCount": 24,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "0.25 deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 90,
+  "totalMarks": 100,
+  "negativeMarking": "0.33 deduction"
+}

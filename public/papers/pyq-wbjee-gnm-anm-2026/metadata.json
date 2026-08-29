@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-wbjee-gnm-anm-2026",
+  "examId": "exam-wbjee-gnm-anm-2026",
+  "cycleId": "wbjee-gnm-anm-2026",
+  "examName": "WBJEE ANM(R) & GNM Joint Entrance",
+  "year": 2024,
+  "stage": "PRELIMS",
+  "shift": "Joint Entrance (04 Aug 2024)",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://wbjeeb.nic.in",
+  "officialNotice": "WBJEEB ANM/GNM Final Model Answer Key",
+  "originalFilePath": "/papers/pyq-wbjee-gnm-anm-2026/original.pdf",
+  "sha256": "652384fd0972535bf4af1a62f101f072dffc095232fb5ff293351697544a7d7a",
+  "pageCount": 32,
+  "questionCount": 115,
+  "expectedQuestionCount": 115,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official WBJEEB Kolkata verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 90,
+  "totalMarks": 115,
+  "negativeMarking": "0.25 deduction"
+}

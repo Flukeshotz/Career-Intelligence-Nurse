@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-guj-ojas-nurse-2026",
+  "examId": "exam-guj-ojas-nurse-2026",
+  "cycleId": "guj-ojas-nurse-2026",
+  "examName": "Gujarat OJAS Staff Nurse Class III",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "Advt 140/2022-23",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://ojas.gujarat.gov.in",
+  "officialNotice": "Gujarat OJAS Advt 140 Final Answer Key",
+  "originalFilePath": "/papers/pyq-guj-ojas-nurse-2026/original.pdf",
+  "sha256": "4136c429d5178334cfee7f7f0aa8be41633cde45814dfcb3ee97f7d0c43f6000",
+  "pageCount": 32,
+  "questionCount": 200,
+  "expectedQuestionCount": 200,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official Gujarat Health & Family Welfare verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 200,
+  "negativeMarking": "0.25 deduction"
+}

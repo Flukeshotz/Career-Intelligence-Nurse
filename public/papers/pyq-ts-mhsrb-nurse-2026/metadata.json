@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-ts-mhsrb-nurse-2026",
+  "examId": "exam-ts-mhsrb-nurse-2026",
+  "cycleId": "ts-mhsrb-nurse-2026",
+  "examName": "TS MHSRB Staff Nurse",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "CBT Screening Test",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://mhsrb.telangana.gov.in",
+  "officialNotice": "TS MHSRB Notification 02/2023 Final Key",
+  "originalFilePath": "/papers/pyq-ts-mhsrb-nurse-2026/original.pdf",
+  "sha256": "4fc0909c687300a79c3a16cfb3257e6857339d4d87774f064d32e2325755315c",
+  "pageCount": 32,
+  "questionCount": 80,
+  "expectedQuestionCount": 80,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official Telangana MHSRB verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 80,
+  "totalMarks": 80,
+  "negativeMarking": "0.25 deduction"
+}

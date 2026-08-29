@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-kerala-psc-nurse-2026",
+  "examId": "exam-kerala-psc-nurse-2026",
+  "cycleId": "kerala-psc-nurse-2026",
+  "examName": "Kerala PSC Staff Nurse Grade II",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "Cat No. 500/2021 Code A",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://www.keralapsc.gov.in",
+  "officialNotice": "Kerala PSC Final Answer Key Cat No. 500/2021",
+  "originalFilePath": "/papers/pyq-kerala-psc-nurse-2026/original.pdf",
+  "sha256": "cee7448b59a132a2f3f57c28df6b08adc86d5dda491eedc186f546c3b09549ff",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official Kerala Public Service Commission verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 75,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

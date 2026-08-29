@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-kpsc-kar-nurse-2026-2026",
+  "examId": "exam-kpsc-kar-nurse-2026",
+  "cycleId": "kpsc-kar-nurse-2026",
+  "examName": "KPSC Karnataka Staff Nurse",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "KPSC Karnataka Staff Nurse 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://kpsc.kar.nic.in",
+  "officialNotice": "Karnataka Public Service Commission Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-kpsc-kar-nurse-2026-2026/original.pdf",
+  "sha256": "c4018d26568beabe95192189200fc5f43472aca8fe8ff897bb4476d5f074d1ab",
+  "pageCount": 24,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "0.25 deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 90,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

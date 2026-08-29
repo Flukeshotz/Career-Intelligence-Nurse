@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-esic-nurse-2026-2026",
+  "examId": "exam-esic-nurse-2026",
+  "cycleId": "esic-nurse-2026",
+  "examName": "UPSC ESIC Nursing Officer",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "UPSC ESIC Nursing Officer 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://upsconline.nic.in",
+  "officialNotice": "Union Public Service Commission Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-esic-nurse-2026-2026/original.pdf",
+  "sha256": "282b6ada639ae92afc7004ff1a0b69fd27c41a2d01064a9bf624c74a1e48b196",
+  "pageCount": 24,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "0.33 deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.33 deduction"
+}

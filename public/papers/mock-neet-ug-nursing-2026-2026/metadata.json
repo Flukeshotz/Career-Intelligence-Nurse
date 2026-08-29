@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-neet-ug-nursing-2026-2026",
+  "examId": "exam-neet-ug-nursing-2026",
+  "cycleId": "neet-ug-nursing-2026",
+  "examName": "NEET-UG B.Sc. Nursing Entrance",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "NEET-UG B.Sc. Nursing Entrance 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://neet.nta.nic.in",
+  "officialNotice": "National Testing Agency (NTA) Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-neet-ug-nursing-2026-2026/original.pdf",
+  "sha256": "881115b9120f97fbfbaa2741500728dc2355f9c64d7a428a54048934765cf17c",
+  "pageCount": 24,
+  "questionCount": 200,
+  "expectedQuestionCount": 200,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "1 mark deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 200,
+  "totalMarks": 200,
+  "negativeMarking": "0.25 deduction"
+}

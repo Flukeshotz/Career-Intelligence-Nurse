@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-up-upums-nurse-2026-2026",
+  "examId": "exam-up-upums-nurse-2026",
+  "cycleId": "up-upums-nurse-2026",
+  "examName": "UPUMS Saifai Nursing Officer",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "UPUMS Saifai Nursing Officer 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://www.upums.ac.in",
+  "officialNotice": "UPUMS Saifai Etawah Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-up-upums-nurse-2026-2026/original.pdf",
+  "sha256": "1867a0e5460c9893b0cab63c1adc6fd76beccd51076708d76b00bbc4ac7da6b1",
+  "pageCount": 24,
+  "questionCount": 200,
+  "expectedQuestionCount": 200,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "0.33 deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 180,
+  "totalMarks": 200,
+  "negativeMarking": "0.25 deduction"
+}

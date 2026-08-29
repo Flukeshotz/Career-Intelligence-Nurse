@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-mp-esb-nurse-2026",
+  "examId": "exam-mp-esb-nurse-2026",
+  "cycleId": "mp-esb-nurse-2026",
+  "examName": "MP ESB Group 5 Staff Nurse",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "Group 5 Recruitment Test",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://esb.mp.gov.in",
+  "officialNotice": "MP ESB Group 5 Staff Nurse Model Key",
+  "originalFilePath": "/papers/pyq-mp-esb-nurse-2026/original.pdf",
+  "sha256": "22138414e3d14a48a550c85fd71c9e46f35ec73e26a973c50f53d0334e804fb0",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official MP Employees Selection Board verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

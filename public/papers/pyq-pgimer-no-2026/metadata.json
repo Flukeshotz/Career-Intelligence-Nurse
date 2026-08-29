@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-pgimer-no-2026",
+  "examId": "exam-pgimer-no-2026",
+  "cycleId": "pgimer-no-2026",
+  "examName": "PGIMER Chandigarh Nursing Officer",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "National Written CBT",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://pgimer.edu.in",
+  "officialNotice": "PGIMER Examination Branch Verified Master Key",
+  "originalFilePath": "/papers/pyq-pgimer-no-2026/original.pdf",
+  "sha256": "b9c1eb4119767654c236a865dcfc0793d4d54ea3b7c1316a5362c2755e59c98b",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official PGIMER Chandigarh verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 90,
+  "totalMarks": 100,
+  "negativeMarking": "0.33 deduction"
+}

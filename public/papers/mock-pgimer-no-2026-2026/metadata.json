@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-pgimer-no-2026-2026",
+  "examId": "exam-pgimer-no-2026",
+  "cycleId": "pgimer-no-2026",
+  "examName": "PGIMER Chandigarh Nursing Officer",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "PGIMER Chandigarh Nursing Officer 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://pgimer.edu.in",
+  "officialNotice": "PGIMER Chandigarh Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-pgimer-no-2026-2026/original.pdf",
+  "sha256": "239a815e36abb3f0828066242707a807f437df765f8424991b6472d463fb413c",
+  "pageCount": 24,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "0.25 deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 90,
+  "totalMarks": 100,
+  "negativeMarking": "0.33 deduction"
+}

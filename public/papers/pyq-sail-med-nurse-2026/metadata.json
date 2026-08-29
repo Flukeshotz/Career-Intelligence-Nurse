@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-sail-med-nurse-2026",
+  "examId": "exam-sail-med-nurse-2026",
+  "cycleId": "sail-med-nurse-2026",
+  "examName": "SAIL Plant Hospitals Staff Nurse",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "Proficiency Trainee CBT",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://www.sail.co.in",
+  "officialNotice": "SAIL Medical Unit Staff Nurse Key",
+  "originalFilePath": "/papers/pyq-sail-med-nurse-2026/original.pdf",
+  "sha256": "b4e47958820cf240a38c009afe7d9f37cf49d705616b943c9f642293013959e3",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official Steel Authority of India Ltd verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

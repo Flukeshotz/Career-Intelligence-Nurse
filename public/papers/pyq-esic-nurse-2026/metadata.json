@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-esic-nurse-2026",
+  "examId": "exam-esic-nurse-2026",
+  "cycleId": "esic-nurse-2026",
+  "examName": "UPSC ESIC Nursing Officer",
+  "year": 2024,
+  "stage": "PRELIMS",
+  "shift": "RT 07 July 2024 Series A",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://upsconline.nic.in",
+  "officialNotice": "UPSC Recruitment Test (07.07.2024) Final Master Key",
+  "originalFilePath": "/papers/pyq-esic-nurse-2026/original.pdf",
+  "sha256": "69c0fd5f98662f596f721aa2c11ee539f33923ff97de6144462d0aded7e0421d",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official Union Public Service Commission verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.33 deduction"
+}

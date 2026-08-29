@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-itbp-nurse-2026-2026",
+  "examId": "exam-itbp-nurse-2026",
+  "cycleId": "itbp-nurse-2026",
+  "examName": "ITBP Sub-Inspector Staff Nurse",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "ITBP Sub-Inspector Staff Nurse 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://recruitment.itbpolice.nic.in",
+  "officialNotice": "Indo-Tibetan Border Police (MHA) Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-itbp-nurse-2026-2026/original.pdf",
+  "sha256": "afddc33d03d1bdcd8f2294ae4f232d1919571ac4a80fe685412b300dfb163cfe",
+  "pageCount": 24,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "No Negative Marking marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}

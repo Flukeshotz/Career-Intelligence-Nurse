@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-uppsc-nurse-2026-2026",
+  "examId": "exam-uppsc-nurse-2026",
+  "cycleId": "uppsc-nurse-2026",
+  "examName": "UPPSC Staff Nurse (Male/Female)",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "UPPSC Staff Nurse (Male/Female) 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://uppsc.up.nic.in",
+  "officialNotice": "UP Public Service Commission Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-uppsc-nurse-2026-2026/original.pdf",
+  "sha256": "3f11a753314575a94d4a8d337026f754de074caee6268a48c795780628faef73",
+  "pageCount": 24,
+  "questionCount": 120,
+  "expectedQuestionCount": 120,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "0.33 deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 180,
+  "totalMarks": 120,
+  "negativeMarking": "0.25 deduction"
+}

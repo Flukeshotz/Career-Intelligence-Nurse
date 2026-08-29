@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-uppsc-nurse-2026",
+  "examId": "exam-uppsc-nurse-2026",
+  "cycleId": "uppsc-nurse-2026",
+  "examName": "UPPSC Staff Nurse (Male/Female)",
+  "year": 2024,
+  "stage": "MAINS",
+  "shift": "Mains Conventional Paper",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://uppsc.up.nic.in",
+  "officialNotice": "UPPSC Advt A-3/E-1/2023 Final Answer Key",
+  "originalFilePath": "/papers/pyq-uppsc-nurse-2026/original.pdf",
+  "sha256": "e07740bca2c70fb8ae4805f2ad1d4e03f38b76b41b70439b812ec9863cdb270a",
+  "pageCount": 32,
+  "questionCount": 120,
+  "expectedQuestionCount": 120,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official UP Public Service Commission verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 180,
+  "totalMarks": 120,
+  "negativeMarking": "0.25 deduction"
+}

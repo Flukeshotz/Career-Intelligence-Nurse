@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-jssc-jhk-nurse-2026-2026",
+  "examId": "exam-jssc-jhk-nurse-2026",
+  "cycleId": "jssc-jhk-nurse-2026",
+  "examName": "JSSC Jharkhand Staff Nurse Grade A",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "JSSC Jharkhand Staff Nurse Grade A 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://jssc.nic.in",
+  "officialNotice": "Jharkhand SSC Ranchi Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-jssc-jhk-nurse-2026-2026/original.pdf",
+  "sha256": "a45cbbfb0439d29254b51bd902e08d3f217404e28e16a5e48b1e060c60238334",
+  "pageCount": 24,
+  "questionCount": 120,
+  "expectedQuestionCount": 120,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "1 mark deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 120,
+  "negativeMarking": "0.25 deduction"
+}

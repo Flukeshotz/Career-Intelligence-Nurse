@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-jssc-jhk-nurse-2026",
+  "examId": "exam-jssc-jhk-nurse-2026",
+  "cycleId": "jssc-jhk-nurse-2026",
+  "examName": "JSSC Jharkhand Staff Nurse Grade A",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "JNSCCE Competitive Exam",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://jssc.nic.in",
+  "officialNotice": "JSSC JNSCCE-2023 Final Key Notification",
+  "originalFilePath": "/papers/pyq-jssc-jhk-nurse-2026/original.pdf",
+  "sha256": "01beb42f655d8b81d052417c7d82a454660aed53078c64f9a5788eda4bdbf6c4",
+  "pageCount": 32,
+  "questionCount": 120,
+  "expectedQuestionCount": 120,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official Jharkhand SSC Ranchi verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 120,
+  "negativeMarking": "0.25 deduction"
+}

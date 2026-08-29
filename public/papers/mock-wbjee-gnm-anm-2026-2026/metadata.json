@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-wbjee-gnm-anm-2026-2026",
+  "examId": "exam-wbjee-gnm-anm-2026",
+  "cycleId": "wbjee-gnm-anm-2026",
+  "examName": "WBJEE ANM(R) & GNM Joint Entrance",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "WBJEE ANM(R) & GNM Joint Entrance 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://wbjeeb.nic.in",
+  "officialNotice": "WBJEEB Kolkata Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-wbjee-gnm-anm-2026-2026/original.pdf",
+  "sha256": "0007ea4cef01b6f24dc7eb773263b12c4671bb0db415f36887851a60e773a4ce",
+  "pageCount": 24,
+  "questionCount": 115,
+  "expectedQuestionCount": 115,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "0.25 deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 90,
+  "totalMarks": 115,
+  "negativeMarking": "0.25 deduction"
+}

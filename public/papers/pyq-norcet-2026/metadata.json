@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-norcet-2026",
+  "examId": "exam-norcet-2026",
+  "cycleId": "norcet-2026",
+  "examName": "AIIMS NORCET",
+  "year": 2024,
+  "stage": "PRELIMS",
+  "shift": "Stage 1 Prelims (15 Sep 2024)",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://www.aiimsexams.ac.in",
+  "officialNotice": "AIIMS Notice No. 124/2024 Official Master Answer Key",
+  "originalFilePath": "/papers/pyq-norcet-2026/original.pdf",
+  "sha256": "77536e783f332fed49f6eced6b9098f2e348196983d8903b3ceb2777490e3860",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.284Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official AIIMS New Delhi & All INIs verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 90,
+  "totalMarks": 100,
+  "negativeMarking": "0.33 deduction"
+}

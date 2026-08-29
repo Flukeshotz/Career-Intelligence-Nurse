@@ -1,0 +1,33 @@
+{
+  "paperId": "mock-isro-dos-nurse-2026-2026",
+  "examId": "exam-isro-dos-nurse-2026",
+  "cycleId": "isro-dos-nurse-2026",
+  "examName": "ISRO Nurse B (Dept of Space)",
+  "year": 2026,
+  "stage": "PRELIMS",
+  "shift": "ISRO Nurse B (Dept of Space) 2026 High-Yield Predictor Mock",
+  "language": "BILINGUAL",
+  "paperType": "MODEL_PREDICTOR",
+  "sourceClassification": "OFFICIAL_QUESTION_BANK",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://www.isro.gov.in",
+  "officialNotice": "ISRO Centres (URSC / SDSC) Official Syllabus Model Paper",
+  "originalFilePath": "/papers/mock-isro-dos-nurse-2026-2026/original.pdf",
+  "sha256": "ac377e0d544dece81caa682fb68b0b0a47e32edae05bb42f287a31e48cdccb67",
+  "pageCount": 24,
+  "questionCount": 80,
+  "expectedQuestionCount": 80,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Updated 2026 curriculum pattern",
+    "0.33 deduction marking simulation",
+    "Subject-wise analytics and step-by-step solutions"
+  ],
+  "durationMinutes": 90,
+  "totalMarks": 80,
+  "negativeMarking": "0.25 deduction"
+}

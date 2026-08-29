@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-aiims-msc-nursing-2026",
+  "examId": "exam-aiims-msc-nursing-2026",
+  "cycleId": "aiims-msc-nursing-2026",
+  "examName": "AIIMS M.Sc. Nursing National Entrance",
+  "year": 2024,
+  "stage": "PRELIMS",
+  "shift": "PG Nursing Entrance Test",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://www.aiimsexams.ac.in",
+  "officialNotice": "AIIMS M.Sc. Nursing National Entrance Master Key",
+  "originalFilePath": "/papers/pyq-aiims-msc-nursing-2026/original.pdf",
+  "sha256": "f1eef14c49106109434571349ea9183caebd83d6268d21fb0562a60afbcc94d3",
+  "pageCount": 32,
+  "questionCount": 90,
+  "expectedQuestionCount": 90,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official AIIMS New Delhi Exams verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 90,
+  "totalMarks": 90,
+  "negativeMarking": "0.25 deduction"
+}

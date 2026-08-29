@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-up-abvm-bsc-2026",
+  "examId": "exam-up-abvm-bsc-2026",
+  "cycleId": "up-abvm-bsc-2026",
+  "examName": "UP CNET (ABVMU) B.Sc. Nursing Test",
+  "year": 2024,
+  "stage": "PRELIMS",
+  "shift": "Common Nursing Entrance Test",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://abvmuup.edu.in",
+  "officialNotice": "ABVMU UP CNET Official Answer Key",
+  "originalFilePath": "/papers/pyq-up-abvm-bsc-2026/original.pdf",
+  "sha256": "a7063665347f452e07a03a1ebb457ea08f9c2e9a6e49ee32b42ad6b70cb36bff",
+  "pageCount": 32,
+  "questionCount": 200,
+  "expectedQuestionCount": 200,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official ABVMU Lucknow verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 180,
+  "totalMarks": 200,
+  "negativeMarking": "0.25 deduction"
+}

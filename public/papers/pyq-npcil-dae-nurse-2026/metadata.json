@@ -1,0 +1,33 @@
+{
+  "paperId": "pyq-npcil-dae-nurse-2026",
+  "examId": "exam-npcil-dae-nurse-2026",
+  "cycleId": "npcil-dae-nurse-2026",
+  "examName": "NPCIL Nurse A (DAE)",
+  "year": 2023,
+  "stage": "PRELIMS",
+  "shift": "Preliminary & Advanced Test",
+  "language": "BILINGUAL",
+  "paperType": "REGULAR_EXAM",
+  "sourceClassification": "OFFICIAL_ORIGINAL",
+  "sourceTier": "TIER_1_OFFICIAL",
+  "officialSourceUrl": "https://www.npcilcareers.co.in",
+  "officialNotice": "NPCIL DAE Nurse A Written Exam Key",
+  "originalFilePath": "/papers/pyq-npcil-dae-nurse-2026/original.pdf",
+  "sha256": "a6bfb9cdce3aebb6c7ef3319d055f0251f660f2db6a0502903559049e3afb369",
+  "pageCount": 32,
+  "questionCount": 100,
+  "expectedQuestionCount": 100,
+  "completenessStatus": "COMPLETE",
+  "verificationStatus": "VERIFIED",
+  "redistributionStatus": "ALLOWED",
+  "verifiedAt": "2026-08-29T08:57:58.285Z",
+  "verifiedBy": "SkillCase Source Verification Engine v2.0",
+  "keyHighlights": [
+    "Official Nuclear Power Corp of India verified question booklet",
+    "100% Core Nursing & domain aptitude questions",
+    "Verified official answer key with clinical explanations"
+  ],
+  "durationMinutes": 120,
+  "totalMarks": 100,
+  "negativeMarking": "0.25 deduction"
+}
