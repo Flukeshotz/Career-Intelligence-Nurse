@@ -422,14 +422,8 @@ export default function NursingGateway() {
             </div>
 
             {/* Row 2: Full-Width Previous Papers & PYQs Card */}
-            <div
-              onClick={() => {
-                const p2024 = EXAM_PAPERS[0];
-                if (p2024) setSelectedPaper(p2024);
-              }}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => e.key === 'Enter' && setSelectedPaper(EXAM_PAPERS[0])}
+            <Link
+              href="/nursing/pyq"
               style={{
                 background: 'linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%)',
                 border: '1px solid #fde68a',
@@ -438,8 +432,9 @@ export default function NursingGateway() {
                 display: 'flex',
                 alignItems: 'center',
                 gap: '12px',
-                cursor: 'pointer',
+                textDecoration: 'none',
                 boxShadow: '0 2px 6px rgba(245,158,11,0.06)',
+                transition: 'all 0.12s ease',
               }}
             >
               <div
@@ -467,10 +462,10 @@ export default function NursingGateway() {
                   <ChevronRight size={15} color="#b45309" />
                 </div>
                 <div style={{ fontSize: '0.74rem', color: '#78350f', marginTop: '2px' }}>
-                  Practice real exam papers with verified answer keys
+                  Practice all real exam papers with verified answer keys
                 </div>
               </div>
-            </div>
+            </Link>
 
             {/* Row 3: Full-Width Maya Career Assistant Card */}
             <div
