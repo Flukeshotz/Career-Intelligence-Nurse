@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Bookmark, Check, RefreshCw, ChevronDown } from 'lucide-react';
+import { Bookmark, Check, ChevronDown, Bell, BellCheck } from 'lucide-react';
 import { getTrackedOpportunities, trackOpportunityItem, advanceStage, TrackedItem } from '@/lib/user-store';
 
 export function TrackButton({
@@ -32,7 +32,7 @@ export function TrackButton({
     }
   }, [opportunityId]);
 
-  const handleInitialTrack = (stage: TrackedItem['stage'] = 'interested') => {
+  const handleInitialTrack = (stage: TrackedItem['stage'] = 'applied') => {
     const res = trackOpportunityItem({
       opportunityId,
       opportunityType,
@@ -54,113 +54,95 @@ export function TrackButton({
     }
   };
 
-  const STAGES: Array<{ key: TrackedItem['stage']; label: string }> = [
-    { key: 'interested', label: 'Interested / Following' },
-    { key: 'applied', label: 'Applied (Application Submitted)' },
-    { key: 'admit_card_awaited', label: 'Admit Card Awaited' },
-    { key: 'exam_scheduled', label: 'Exam Scheduled' },
-    { key: 'exam_taken', label: 'Exam Taken / Attended' },
-    { key: 'result_awaited', label: 'Result Awaited' },
-    { key: 'result_out', label: 'Result Declared' },
-    { key: 'counselling', label: 'Counselling / Document Verification' },
-    { key: 'closed', label: 'Cycle Concluded' },
+  const STAGES: Array<{ key: TrackedItem['stage']; label: string; short: string }> = [
+    { key: 'interested', label: 'Interested / Following', short: 'Interested' },
+    { key: 'applied', label: 'Applied (Application Submitted)', short: 'Applied' },
+    { key: 'admit_card_awaited', label: 'Admit Card Awaited', short: 'Admit Card' },
+    { key: 'exam_scheduled', label: 'Exam Scheduled', short: 'Scheduled' },
+    { key: 'exam_taken', label: 'Exam Taken / Attended', short: 'Exam Taken' },
+    { key: 'result_awaited', label: 'Result Awaited', short: 'Result Awaited' },
+    { key: 'result_out', label: 'Result Declared', short: 'Result Out' },
+    { key: 'counselling', label: 'Counselling / DV', short: 'Counselling' },
+    { key: 'closed', label: 'Cycle Concluded', short: 'Closed' },
   ];
 
   if (trackedItem) {
     const currentStageObj = STAGES.find((s) => s.key === trackedItem.stage);
 
     return (
-      <div style={{ position: 'relative', width: '100%' }}>
-        <div
+      <div style={{ position: 'relative', display: 'inline-block' }}>
+        <button
+          type="button"
+          onClick={() => setShowStageSelector(!showStageSelector)}
           style={{
-            background: 'var(--sc-green-50)',
-            border: '1px solid rgba(1, 144, 53, 0.3)',
-            borderRadius: '12px',
-            padding: '14px 18px',
-            display: 'flex',
+            display: 'inline-flex',
             alignItems: 'center',
-            justifyContent: 'space-between',
-            flexWrap: 'wrap',
-            gap: '10px',
+            gap: '6px',
+            background: '#f0fdf4',
+            color: '#15803d',
+            border: '1.5px solid #86efac',
+            borderRadius: '8px',
+            padding: '8px 14px',
+            fontSize: '0.80rem',
+            fontWeight: 700,
+            cursor: 'pointer',
+            transition: 'all 0.15s ease',
           }}
         >
-          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <div
-              style={{
-                width: '32px',
-                height: '32px',
-                borderRadius: '50%',
-                background: 'var(--sc-green-600)',
-                color: '#ffffff',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontWeight: 800,
-              }}
-            >
-              ✓
-            </div>
-            <div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--sc-ink-600)', textTransform: 'uppercase', fontWeight: 700 }}>
-                Tracking in &quot;My Cycles&quot;
-              </div>
-              <div style={{ fontSize: '0.95rem', fontWeight: 800, color: 'var(--sc-navy-900)' }}>
-                Stage: <span style={{ color: 'var(--sc-green-600)' }}>{currentStageObj?.label}</span>
-              </div>
-            </div>
-          </div>
-
-          <button
-            onClick={() => setShowStageSelector(!showStageSelector)}
-            className="btn-secondary"
-            style={{ padding: '8px 14px', fontSize: '0.82rem' }}
-          >
-            <span>Update Stage</span>
-            <ChevronDown size={14} />
-          </button>
-        </div>
+          <span style={{ width: '16px', height: '16px', borderRadius: '50%', background: '#16a34a', color: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.65rem', fontWeight: 900 }}>
+            ✓
+          </span>
+          <span>Stage: {currentStageObj?.short || 'Tracked'}</span>
+          <ChevronDown size={14} />
+        </button>
 
         {showStageSelector && (
           <div
             className="sc-card"
             style={{
               position: 'absolute',
-              top: '100%',
-              left: 0,
+              bottom: '100%',
               right: 0,
-              marginTop: '6px',
-              zIndex: 30,
-              padding: '10px',
+              marginBottom: '8px',
+              zIndex: 50,
+              padding: '8px',
               display: 'flex',
               flexDirection: 'column',
               gap: '4px',
-              maxHeight: '260px',
+              width: '260px',
+              maxHeight: '280px',
               overflowY: 'auto',
-              boxShadow: 'var(--shadow-lifted)',
+              boxShadow: '0 10px 30px rgba(0, 0, 0, 0.18)',
+              background: '#ffffff',
+              borderRadius: '12px',
+              border: '1px solid var(--sc-line-200)',
             }}
           >
-            <div style={{ fontSize: '0.75rem', color: 'var(--sc-ink-600)', padding: '4px 8px', fontWeight: 700, textTransform: 'uppercase' }}>
-              Select where you are in this recruitment:
+            <div style={{ fontSize: '0.70rem', color: 'var(--sc-ink-500)', padding: '4px 8px', fontWeight: 700, textTransform: 'uppercase' }}>
+              Update Recruitment Stage:
             </div>
             {STAGES.map((st) => (
               <button
                 key={st.key}
+                type="button"
                 onClick={() => handleAdvance(st.key)}
                 style={{
                   textAlign: 'left',
-                  padding: '8px 12px',
-                  borderRadius: '8px',
-                  fontSize: '0.86rem',
-                  color: trackedItem.stage === st.key ? 'var(--sc-green-600)' : 'var(--sc-ink-900)',
-                  background: trackedItem.stage === st.key ? 'var(--sc-green-50)' : 'transparent',
+                  padding: '7px 10px',
+                  borderRadius: '6px',
+                  fontSize: '0.80rem',
+                  color: trackedItem.stage === st.key ? '#15803d' : 'var(--sc-ink-900)',
+                  background: trackedItem.stage === st.key ? '#f0fdf4' : 'transparent',
                   fontWeight: trackedItem.stage === st.key ? 800 : 500,
                   display: 'flex',
                   justifyContent: 'space-between',
                   alignItems: 'center',
+                  border: 'none',
+                  cursor: 'pointer',
                 }}
               >
                 <span>{st.label}</span>
-                {trackedItem.stage === st.key && <Check size={16} color="#019035" />}
+                {trackedItem.stage === st.key && <Check size={14} color="#16a34a" />}
               </button>
             ))}
           </div>
@@ -170,25 +152,26 @@ export function TrackButton({
   }
 
   return (
-    <div style={{ display: 'flex', gap: '10px', width: '100%' }}>
-      <button
-        onClick={() => handleInitialTrack('applied')}
-        className="btn-primary"
-        style={{ flex: 1, padding: '14px 20px', fontSize: '0.98rem' }}
-      >
-        <Check size={18} />
-        <span>I Applied — Track Cycle</span>
-      </button>
-
-      <button
-        onClick={() => handleInitialTrack('interested')}
-        className="btn-secondary"
-        style={{ padding: '14px 18px', fontSize: '0.9rem' }}
-        title="Follow updates for this post"
-      >
-        <Bookmark size={18} />
-        <span>Follow</span>
-      </button>
-    </div>
+    <button
+      type="button"
+      onClick={() => handleInitialTrack('applied')}
+      style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        gap: '6px',
+        background: '#ffffff',
+        color: 'var(--sc-navy-700)',
+        border: '1.5px solid var(--sc-line-200)',
+        borderRadius: '8px',
+        padding: '8px 14px',
+        fontSize: '0.80rem',
+        fontWeight: 700,
+        cursor: 'pointer',
+        transition: 'all 0.15s ease',
+      }}
+    >
+      <Bookmark size={14} />
+      <span>Track in My Cycles</span>
+    </button>
   );
 }
