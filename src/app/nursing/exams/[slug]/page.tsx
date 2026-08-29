@@ -286,14 +286,15 @@ export default async function ExamDetailPage({
           position: 'sticky',
           bottom: '76px',
           zIndex: 80,
-          background: 'rgba(255, 255, 255, 0.95)',
-          backdropFilter: 'blur(10px)',
+          background: 'rgba(255, 255, 255, 0.96)',
+          backdropFilter: 'blur(12px)',
           border: '1px solid var(--sc-line-200)',
           borderRadius: '14px',
-          padding: '10px 14px',
-          display: 'flex',
+          padding: '10px 12px',
+          display: 'grid',
+          gridTemplateColumns: exam.applicationUrl ? '1fr 1fr' : '1fr',
           alignItems: 'center',
-          gap: '10px',
+          gap: '8px',
           boxShadow: '0 8px 24px rgba(0, 0, 0, 0.12)',
         }}
       >
@@ -313,24 +314,27 @@ export default async function ExamDetailPage({
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              flex: 1.2,
               height: '44px',
               display: 'inline-flex',
               alignItems: 'center',
               justifyContent: 'center',
               gap: '6px',
-              background: 'var(--sc-navy-700)',
+              background: 'var(--sc-navy-900)',
               color: '#ffffff',
               borderRadius: '10px',
               fontWeight: 800,
-              fontSize: '0.82rem',
+              fontSize: '0.78rem',
               textDecoration: 'none',
               whiteSpace: 'nowrap',
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+              padding: '0 8px',
+              minWidth: 0,
               boxShadow: '0 2px 6px rgba(8, 50, 98, 0.25)',
             }}
           >
-            <span>Apply on Portal</span>
-            <ExternalLink size={14} />
+            <span style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>Apply on Portal</span>
+            <ExternalLink size={13} style={{ flexShrink: 0 }} />
           </a>
         )}
       </div>

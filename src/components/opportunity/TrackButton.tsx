@@ -70,7 +70,7 @@ export function TrackButton({
     const currentStageObj = STAGES.find((s) => s.key === trackedItem.stage);
 
     return (
-      <div style={{ position: 'relative', flex: 1 }}>
+      <div style={{ position: 'relative', minWidth: 0, width: '100%' }}>
         <button
           type="button"
           onClick={() => setShowStageSelector(!showStageSelector)}
@@ -80,24 +80,29 @@ export function TrackButton({
             display: 'inline-flex',
             alignItems: 'center',
             justifyContent: 'center',
-            gap: '6px',
+            gap: '5px',
             background: '#f0fdf4',
             color: '#15803d',
             border: '1.5px solid #86efac',
             borderRadius: '10px',
-            padding: '0 14px',
-            fontSize: '0.82rem',
+            padding: '0 8px',
+            fontSize: '0.78rem',
             fontWeight: 700,
             cursor: 'pointer',
             transition: 'all 0.15s ease',
             whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            minWidth: 0,
           }}
         >
-          <span style={{ width: '16px', height: '16px', borderRadius: '50%', background: '#16a34a', color: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.65rem', fontWeight: 900 }}>
+          <span style={{ width: '15px', height: '15px', borderRadius: '50%', background: '#16a34a', color: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.62rem', fontWeight: 900, flexShrink: 0 }}>
             ✓
           </span>
-          <span>Tracking: {currentStageObj?.short || 'Applied'}</span>
-          <ChevronDown size={14} />
+          <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+            {currentStageObj?.short || 'Tracked'}
+          </span>
+          <ChevronDown size={13} style={{ flexShrink: 0 }} />
         </button>
 
         {showStageSelector && (

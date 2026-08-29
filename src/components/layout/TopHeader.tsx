@@ -126,6 +126,31 @@ export function TopHeader() {
               ⌘K
             </span>
           </button>
+
+          {/* ── User Profile / Passport Link ── */}
+          <Link
+            href="/profile"
+            style={{
+              width: '34px',
+              height: '34px',
+              borderRadius: '50%',
+              overflow: 'hidden',
+              background: 'rgba(255, 255, 255, 0.12)',
+              border: '1.5px solid rgba(255, 255, 255, 0.25)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              textDecoration: 'none',
+              flexShrink: 0,
+            }}
+            title="My Career Passport / Profile"
+          >
+            <img
+              src="/maya-smiling.webp"
+              alt="My Profile"
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            />
+          </Link>
         </div>
       </header>
 
