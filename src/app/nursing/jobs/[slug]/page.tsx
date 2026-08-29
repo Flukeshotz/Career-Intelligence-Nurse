@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Building2, MapPin, Calendar, ExternalLink, ArrowLeft, Users, ShieldCheck, FileText, CheckCircle2 } from 'lucide-react';
-import { getJobBySlug, getRequirementsForOpportunity, INITIAL_JOBS } from '@/lib/data';
+import { getJobBySlug, getRequirementsForOpportunity, INITIAL_JOBS, INITIAL_EXAMS } from '@/lib/data';
 import { generateJobPostingJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { EligibilitySection } from '@/components/opportunity/EligibilitySection';
 import { TrustPanel } from '@/components/opportunity/TrustPanel';
@@ -64,6 +64,36 @@ export default async function JobDetailPage({
     : 'Open until filled';
 
   const isGov = job.type === 'government';
+
+  // Compute linked examination for government recruitment
+  let linkedExam = null;
+  if (isGov) {
+    const jobOrg = job.employer.toLowerCase();
+    const jobTitle = job.title.toLowerCase();
+    linkedExam = INITIAL_EXAMS.find(e => {
+      const examOrg = e.organisation.toLowerCase();
+      const examName = e.name.toLowerCase();
+      return (
+        (jobOrg.includes('aiims') && examName.includes('norcet')) ||
+        (jobOrg.includes('railway') && examName.includes('rrb')) ||
+        (jobOrg.includes('esic') && examName.includes('esic')) ||
+        (jobOrg.includes('dsssb') && examName.includes('dsssb')) ||
+        (jobOrg.includes('jipmer') && examName.includes('jipmer')) ||
+        (jobOrg.includes('kpsc') && examName.includes('kpsc')) ||
+        (jobOrg.includes('kerala') && examName.includes('kerala')) ||
+        (jobOrg.includes('maharashtra') && examName.includes('maharashtra')) ||
+        (jobOrg.includes('upums') && examName.includes('upums')) ||
+        (jobOrg.includes('west bengal') && examName.includes('wbhrb')) ||
+        (jobOrg.includes('bihar') && examName.includes('btsc')) ||
+        (jobOrg.includes('odisha') && examName.includes('osssc')) ||
+        (jobOrg.includes('gujarat') && examName.includes('ojas')) ||
+        (jobOrg.includes('madhya pradesh') && examName.includes('mp esb')) ||
+        (jobOrg.includes('national health mission') && examName.includes('nhm')) ||
+        examOrg.includes(jobOrg) ||
+        jobOrg.includes(examOrg)
+      );
+    });
+  }
 
   return (
     <div className="wide-container mobile-safe-bottom" style={{ paddingTop: '20px' }}>
@@ -220,6 +250,47 @@ export default async function JobDetailPage({
               {job.descriptionSimple}
             </div>
           </div>
+
+          {/* Linked Government Examination Banner */}
+          {linkedExam && (
+            <div
+              className="sc-card"
+              style={{
+                padding: '18px 20px',
+                background: 'linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%)',
+                border: '1.5px solid #86efac',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
+                <span style={{ fontSize: '1.1rem' }}>🎯</span>
+                <div style={{ fontSize: '0.78rem', fontWeight: 800, color: '#166534', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  Selection Examination Track
+                </div>
+              </div>
+              <div style={{ fontSize: '1.02rem', fontWeight: 800, color: 'var(--sc-navy-900)', marginBottom: '4px' }}>
+                {linkedExam.name}
+              </div>
+              <p style={{ fontSize: '0.84rem', color: 'var(--sc-ink-700)', lineHeight: 1.45, marginBottom: '12px' }}>
+                Selection for this {job.employer} cadre is determined through this examination. View full subject weightages, question breakdown, and marking scheme.
+              </p>
+              <Link
+                href={`/nursing/exams/${linkedExam.slug}`}
+                className="btn-navy"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  fontSize: '0.82rem',
+                  padding: '8px 14px',
+                  textDecoration: 'none',
+                  borderRadius: 'var(--radius-sm)'
+                }}
+              >
+                <span>View Exam Blueprint & Syllabus</span>
+                <ExternalLink size={14} />
+              </Link>
+            </div>
+          )}
 
           <TrustPanel
             source={job.source}
