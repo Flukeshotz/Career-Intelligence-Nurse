@@ -179,7 +179,7 @@ export default function JobsListPage() {
       </div>
 
       {/* ── Results Count ── */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
         <div style={{ fontSize: '0.86rem', color: 'var(--sc-ink-600)', fontWeight: 600 }}>
           Showing {jobs.length} verified {jobs.length === 1 ? 'vacancy' : 'vacancies'}
         </div>
@@ -187,13 +187,19 @@ export default function JobsListPage() {
 
       {/* ── Jobs Grid ── */}
       {loading ? (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-          {[1, 2, 3].map((n) => (
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '16px' }}>
+          {[1, 2, 3, 4].map((n) => (
             <div key={n} className="sc-card" style={{ padding: '24px', height: '140px', background: 'var(--sc-surface-secondary)' }} />
           ))}
         </div>
       ) : jobs.length > 0 ? (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
+            gap: '16px',
+          }}
+        >
           {jobs.map((job) => (
             <JobCard key={job.id} job={job} />
           ))}
