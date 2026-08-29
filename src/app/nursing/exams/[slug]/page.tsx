@@ -125,24 +125,25 @@ export default async function ExamDetailPage({
         />
       </div>
 
-      {/* ── 1. CLEAN HERO CARD ── */}
+      {/* ── 1. CLEAN HERO CARD (Pixel-Perfect Symmetrical Grid) ── */}
       <div
         style={{
-          background: 'linear-gradient(135deg, var(--sc-navy-900) 0%, var(--sc-navy-700) 100%)',
-          color: 'var(--sc-white)',
+          background: 'linear-gradient(135deg, #061e38 0%, #0a325e 100%)',
+          color: '#ffffff',
           borderRadius: '16px',
-          padding: '20px',
+          padding: '18px',
           marginBottom: '16px',
-          boxShadow: '0 4px 14px rgba(8, 50, 98, 0.15)',
+          boxShadow: '0 4px 14px rgba(6, 30, 56, 0.15)',
         }}
       >
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '8px', marginBottom: '10px' }}>
-          <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
-            <span style={{ fontSize: '0.70rem', fontWeight: 800, background: 'rgba(255,255,255,0.15)', color: '#ffffff', padding: '3px 8px', borderRadius: '4px', textTransform: 'uppercase', letterSpacing: '0.03em' }}>
+        {/* Top Badges Row */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '8px', marginBottom: '10px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <span style={{ fontSize: '0.68rem', fontWeight: 800, background: 'rgba(255,255,255,0.12)', color: '#93c5fd', padding: '2px 8px', borderRadius: '4px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
               🎯 {detailed?.officialCadre || 'National Exam'}
             </span>
-            <span style={{ fontSize: '0.70rem', fontWeight: 800, background: 'rgba(1,144,53,0.3)', color: '#86efac', padding: '3px 8px', borderRadius: '4px' }}>
-              ✓ Verified Blueprint
+            <span style={{ fontSize: '0.68rem', fontWeight: 800, background: 'rgba(34,197,94,0.2)', color: '#86efac', padding: '2px 8px', borderRadius: '4px' }}>
+              ✓ Verified
             </span>
           </div>
 
@@ -154,63 +155,69 @@ export default async function ExamDetailPage({
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '5px',
+                gap: '4px',
                 background: '#edb843',
                 color: '#002856',
-                padding: '6px 12px',
+                padding: '4px 10px',
                 borderRadius: '6px',
                 fontWeight: 800,
-                fontSize: '0.76rem',
+                fontSize: '0.72rem',
                 textDecoration: 'none',
+                flexShrink: 0,
               }}
             >
-              <span>Official Apply Portal</span>
-              <ExternalLink size={12} />
+              <span>Apply Portal</span>
+              <ExternalLink size={11} />
             </a>
           )}
         </div>
 
-        <h1 style={{ fontSize: '1.35rem', fontWeight: 800, lineHeight: 1.3, marginBottom: '4px' }}>
+        {/* Title & Organization */}
+        <h1 style={{ fontSize: '1.25rem', fontWeight: 800, lineHeight: 1.3, margin: '0 0 4px 0' }}>
           {exam.name}
         </h1>
 
-        <div style={{ fontSize: '0.84rem', color: '#cbd5e1', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '14px' }}>
-          <Building2 size={15} color="#94a3b8" />
+        <div style={{ fontSize: '0.80rem', color: '#cbd5e1', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '5px', marginBottom: '14px' }}>
+          <Building2 size={14} color="#94a3b8" />
           <span>{exam.organisation}</span>
         </div>
 
-        {/* 4 Clean Stats Chips */}
+        {/* Symmetrical 2x2 Metric Grid (Mobile) / 4-Col (Desktop) */}
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(115px, 1fr))',
+            gridTemplateColumns: 'repeat(2, 1fr)',
             gap: '8px',
             paddingTop: '12px',
             borderTop: '1px solid rgba(255,255,255,0.12)',
           }}
         >
-          <div style={{ background: 'rgba(255,255,255,0.08)', padding: '8px 10px', borderRadius: '8px' }}>
+          <div style={{ background: 'rgba(255,255,255,0.08)', padding: '8px 10px', borderRadius: '8px', minHeight: '56px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <div style={{ fontSize: '0.62rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 700 }}>Vacancies</div>
-            <div style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--sc-white)' }}>
+            <div style={{ fontSize: '0.98rem', fontWeight: 800, color: '#ffffff', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
               {exam.vacancies ? `${exam.vacancies.toLocaleString('en-IN')} Posts` : 'See Notice'}
             </div>
           </div>
 
-          <div style={{ background: 'rgba(255,255,255,0.08)', padding: '8px 10px', borderRadius: '8px' }}>
+          <div style={{ background: 'rgba(255,255,255,0.08)', padding: '8px 10px', borderRadius: '8px', minHeight: '56px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <div style={{ fontSize: '0.62rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 700 }}>Monthly Pay</div>
-            <div style={{ fontSize: '0.98rem', fontWeight: 800, color: '#f7d78e' }}>
-              {detailed?.grossSalaryMonthly ? detailed.grossSalaryMonthly.split('(')[0] : 'Level 7 (~₹80k)'}
+            <div style={{ fontSize: '0.98rem', fontWeight: 800, color: '#f7d78e', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              {detailed?.grossSalaryMonthly ? detailed.grossSalaryMonthly.split('(')[0].replace('/month', '/mo').replace('₹', '₹') : 'Level 7 (~₹80k)'}
             </div>
           </div>
 
-          <div style={{ background: 'rgba(255,255,255,0.08)', padding: '8px 10px', borderRadius: '8px' }}>
+          <div style={{ background: 'rgba(255,255,255,0.08)', padding: '8px 10px', borderRadius: '8px', minHeight: '56px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <div style={{ fontSize: '0.62rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 700 }}>Exam Date</div>
-            <div style={{ fontSize: '0.94rem', fontWeight: 800, color: 'var(--sc-white)' }}>{examDateFormatted}</div>
+            <div style={{ fontSize: '0.94rem', fontWeight: 800, color: '#ffffff', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              {examDateFormatted}
+            </div>
           </div>
 
-          <div style={{ background: 'rgba(255,255,255,0.08)', padding: '8px 10px', borderRadius: '8px' }}>
+          <div style={{ background: 'rgba(255,255,255,0.08)', padding: '8px 10px', borderRadius: '8px', minHeight: '56px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <div style={{ fontSize: '0.62rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 700 }}>Registration</div>
-            <div style={{ fontSize: '0.94rem', fontWeight: 800, color: '#fca5a5' }}>{deadlineFormatted}</div>
+            <div style={{ fontSize: '0.94rem', fontWeight: 800, color: '#fca5a5', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              {deadlineFormatted}
+            </div>
           </div>
         </div>
       </div>
