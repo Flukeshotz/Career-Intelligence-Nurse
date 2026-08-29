@@ -2,25 +2,19 @@
 
 export const dynamic = 'force-dynamic';
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import {
   Search,
   SlidersHorizontal,
-  Bell,
-  Sparkles,
   ChevronRight,
   Clock,
   CheckCircle2,
-  AlertTriangle,
-  Building2,
-  Award,
   FileText,
-  MessageSquare,
+  Globe,
   ArrowRight
 } from 'lucide-react';
 import { INITIAL_JOBS, INITIAL_EXAMS } from '@/lib/mock-data';
-import { EXAM_PAPERS, ExamPaper } from '@/lib/pyq-mock-data';
 import { getUserProfile, UserProfile } from '@/lib/user-store';
 import { GlobalSearchModal } from '@/components/layout/GlobalSearchModal';
 import { FilterDrawerModal } from '@/components/layout/FilterDrawerModal';
@@ -28,7 +22,6 @@ import { ResumeUploadModal } from '@/components/profile/ResumeUploadModal';
 import dynamicImport from 'next/dynamic';
 
 const MayaPanel = dynamicImport(() => import('@/components/maya/MayaPanel'), { ssr: false });
-const PaperViewerModal = dynamicImport(() => import('@/components/opportunity/PaperViewerModal').then((mod) => mod.PaperViewerModal), { ssr: false });
 
 export default function NursingGateway() {
   const [profile, setProfile] = useState<UserProfile | null>(null);
@@ -36,7 +29,6 @@ export default function NursingGateway() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [isMayaOpen, setIsMayaOpen] = useState(false);
-  const [selectedPaper, setSelectedPaper] = useState<ExamPaper | null>(null);
 
   useEffect(() => {
     setProfile(getUserProfile());
@@ -44,26 +36,21 @@ export default function NursingGateway() {
 
   const userName = profile?.fullName ? profile.fullName.split(' ')[0] : 'Pooja';
 
-  // Determine Personalized NORCET Eligibility State
-  const hasQualifications = Boolean(profile?.qualificationsList && profile.qualificationsList.length > 0);
-  const isRegistered = Boolean(profile?.registrationDetails?.isRegistered);
-  const isBsc = profile?.qualificationsList?.some(q => /bsc|b\.sc|post basic|msc/i.test(q.name || q.code));
-
   return (
     <div style={{ background: '#f8fafc', minHeight: '100vh', padding: '16px 16px 100px', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
       <div style={{ maxWidth: '640px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '16px' }}>
 
-        {/* ── 1. GREETING ── */}
-        <div style={{ paddingTop: '8px' }}>
+        {/* ── 1. GREETING HEADER ── */}
+        <div style={{ paddingTop: '4px' }}>
           <h1 style={{ fontSize: '1.4rem', fontWeight: 800, color: '#0f172a', margin: 0, letterSpacing: '-0.02em' }}>
             Good morning, {userName} 👋
           </h1>
           <div style={{ fontSize: '0.82rem', color: '#64748b', marginTop: '2px', fontWeight: 500 }}>
-            Your nursing career companion
+            Find your next nursing opportunity
           </div>
         </div>
 
-        {/* ── 2. SEARCH BAR & FILTER TRIGGER ── */}
+        {/* ── 2. SINGLE SEARCH BAR & FILTER TRIGGER ── */}
         <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
           <button
             type="button"
@@ -103,13 +90,14 @@ export default function NursingGateway() {
               justifyContent: 'center',
               cursor: 'pointer',
               color: '#334155',
+              boxShadow: '0 1px 3px rgba(0,0,0,0.02)',
             }}
           >
             <SlidersHorizontal size={18} />
           </button>
         </div>
 
-        {/* ── 3. URGENT ALERT CARD (AIIMS NORCET 2026) ── */}
+        {/* ── 3. URGENT RECRUITMENT ALERT (AIIMS NORCET 2026) ── */}
         <div
           style={{
             background: 'linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%)',
@@ -182,24 +170,24 @@ export default function NursingGateway() {
           </div>
         </div>
 
-        {/* ── 4. RECOMMENDED FOR YOU (PERSONALIZED DECISION CARD) ── */}
+        {/* ── 4. YOUR NEXT STEP (HIGH-TRUST DECISION SURFACE) ── */}
         <div>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
             <h2 style={{ fontSize: '0.96rem', fontWeight: 800, color: '#0f172a', margin: 0 }}>
-              Recommended for you
+              Your Next Step
             </h2>
-            <Link href="/nursing/exams" style={{ fontSize: '0.76rem', fontWeight: 700, color: '#2563eb', textDecoration: 'none' }}>
-              View all
+            <Link href="/profile" style={{ fontSize: '0.76rem', fontWeight: 700, color: '#2563eb', textDecoration: 'none' }}>
+              Career Passport ›
             </Link>
           </div>
 
           <div
             style={{
               background: '#ffffff',
-              border: '1px solid #dcfce7',
+              border: '1px solid #e2e8f0',
               borderRadius: '16px',
               padding: '16px',
-              boxShadow: '0 2px 8px rgba(16, 185, 129, 0.06)',
+              boxShadow: '0 2px 8px rgba(0, 0, 0, 0.03)',
             }}
           >
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
@@ -208,57 +196,59 @@ export default function NursingGateway() {
                   width: '36px',
                   height: '36px',
                   borderRadius: '50%',
-                  background: '#dcfce7',
+                  background: '#f0fdf4',
                   color: '#16a34a',
+                  border: '1px solid #bbf7d0',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   flexShrink: 0,
+                  fontSize: '1rem',
+                  fontWeight: 900,
                 }}
               >
-                <CheckCircle2 size={20} />
+                ✓
               </div>
 
               <div style={{ flex: 1, minWidth: 0 }}>
-                <h3 style={{ fontSize: '0.94rem', fontWeight: 800, color: '#166534', margin: 0 }}>
+                <h3 style={{ fontSize: '0.94rem', fontWeight: 800, color: '#0f172a', margin: 0 }}>
                   NORCET 2026 – Nursing Officer
                 </h3>
-                <div style={{ fontSize: '0.76rem', color: '#15803d', fontWeight: 700, marginTop: '2px' }}>
-                  You appear eligible
+                <div style={{ fontSize: '0.76rem', color: '#166534', fontWeight: 700, marginTop: '2px' }}>
+                  Eligibility almost confirmed (2 of 3 checks passed)
                 </div>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', margin: '8px 0 12px 0', fontSize: '0.74rem' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '5px', color: '#166534' }}>
-                    <span>✓</span>
-                    <span>Qualification matches (B.Sc. / GNM)</span>
+                    <span style={{ fontWeight: 900 }}>✓</span>
+                    <span>Qualification matches (B.Sc. Nursing / GNM)</span>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '5px', color: '#166534' }}>
-                    <span>✓</span>
-                    <span>State / INC Council Registration</span>
+                    <span style={{ fontWeight: 900 }}>✓</span>
+                    <span>Council registration matches</span>
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '5px', color: '#b45309' }}>
                     <span>⚠️</span>
-                    <span>Add DOB in Passport to verify age limit</span>
+                    <span>Add DOB to confirm age limit</span>
                   </div>
                 </div>
 
                 <Link
-                  href="/nursing/norcet"
+                  href="/profile"
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
                     gap: '4px',
-                    background: '#f0fdf4',
-                    border: '1px solid #86efac',
-                    color: '#166534',
-                    padding: '6px 12px',
+                    background: '#0f172a',
+                    color: '#ffffff',
+                    padding: '6px 14px',
                     borderRadius: '8px',
                     fontSize: '0.76rem',
                     fontWeight: 800,
                     textDecoration: 'none',
                   }}
                 >
-                  <span>Check eligibility</span>
+                  <span>Complete eligibility</span>
                   <ChevronRight size={14} />
                 </Link>
               </div>
@@ -266,56 +256,42 @@ export default function NursingGateway() {
           </div>
         </div>
 
-        {/* ── 5. EXPLORE SECTION (3 CLEAN EXPLORATION ACTIONS) ── */}
+        {/* ── 5. EXPLORE SECTION ── */}
         <div>
           <h2 style={{ fontSize: '0.96rem', fontWeight: 800, color: '#0f172a', margin: '0 0 10px 0' }}>
             Explore
           </h2>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            {/* Row 1: 2-Column Grid for Govt Exams & Hospital Jobs */}
+            {/* Row 1: 2-Column Grid for Government Exams & Hospital Jobs */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
               <Link
                 href="/nursing/exams"
                 style={{
                   background: '#ffffff',
-                  border: '1px solid #e0e7ff',
+                  border: '1px solid #e2e8f0',
                   borderRadius: '16px',
-                  padding: '12px',
+                  padding: '14px 12px',
                   display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  height: '76px',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  gap: '6px',
+                  minHeight: '84px',
                   textDecoration: 'none',
-                  boxShadow: '0 2px 6px rgba(0,0,0,0.02)',
+                  boxShadow: '0 1px 3px rgba(0,0,0,0.02)',
                   transition: 'all 0.12s ease',
-                  minWidth: 0,
-                  overflow: 'hidden',
                 }}
               >
-                <div
-                  style={{
-                    width: '36px',
-                    height: '36px',
-                    borderRadius: '50%',
-                    background: '#1e3a8a',
-                    color: '#ffffff',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    flexShrink: 0,
-                    fontSize: '1.05rem',
-                  }}
-                >
-                  🏛️
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <span style={{ fontSize: '1.2rem' }}>🏛️</span>
+                  <ChevronRight size={14} color="#94a3b8" />
                 </div>
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ fontSize: '0.80rem', fontWeight: 800, color: '#0f172a', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '2px' }}>
-                    <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>Govt Exams</span>
-                    <ChevronRight size={13} color="#94a3b8" style={{ flexShrink: 0 }} />
+                <div>
+                  <div style={{ fontSize: '0.84rem', fontWeight: 800, color: '#0f172a' }}>
+                    Government Exams
                   </div>
-                  <div style={{ fontSize: '0.68rem', color: '#64748b', marginTop: '2px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                    50 opportunities
+                  <div style={{ fontSize: '0.70rem', color: '#64748b', marginTop: '1px' }}>
+                    50 active opportunities
                   </div>
                 </div>
               </Link>
@@ -324,71 +300,58 @@ export default function NursingGateway() {
                 href="/nursing/jobs"
                 style={{
                   background: '#ffffff',
-                  border: '1px solid #f3e8ff',
+                  border: '1px solid #e2e8f0',
                   borderRadius: '16px',
-                  padding: '12px',
+                  padding: '14px 12px',
                   display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  height: '76px',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  gap: '6px',
+                  minHeight: '84px',
                   textDecoration: 'none',
-                  boxShadow: '0 2px 6px rgba(0,0,0,0.02)',
+                  boxShadow: '0 1px 3px rgba(0,0,0,0.02)',
                   transition: 'all 0.12s ease',
-                  minWidth: 0,
-                  overflow: 'hidden',
                 }}
               >
-                <div
-                  style={{
-                    width: '36px',
-                    height: '36px',
-                    borderRadius: '50%',
-                    background: '#7c3aed',
-                    color: '#ffffff',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    flexShrink: 0,
-                    fontSize: '1.05rem',
-                  }}
-                >
-                  🏥
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <span style={{ fontSize: '1.2rem' }}>🏥</span>
+                  <ChevronRight size={14} color="#94a3b8" />
                 </div>
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ fontSize: '0.80rem', fontWeight: 800, color: '#0f172a', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '2px' }}>
-                    <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>Hospital Jobs</span>
-                    <ChevronRight size={13} color="#94a3b8" style={{ flexShrink: 0 }} />
+                <div>
+                  <div style={{ fontSize: '0.84rem', fontWeight: 800, color: '#0f172a' }}>
+                    Hospital Jobs
                   </div>
-                  <div style={{ fontSize: '0.68rem', color: '#64748b', marginTop: '2px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                    23 verified posts
+                  <div style={{ fontSize: '0.70rem', color: '#64748b', marginTop: '1px' }}>
+                    23 verified openings
                   </div>
                 </div>
               </Link>
             </div>
 
-            {/* Row 2: Full-Width Abroad & Global Nursing Card */}
+            {/* Row 2: Full-Width International Opportunities Card (Subtle & Balanced) */}
             <Link
               href="/nursing/abroad"
               style={{
-                background: 'linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%)',
-                border: '1px solid #bae6fd',
+                background: '#ffffff',
+                border: '1px solid #e2e8f0',
                 borderRadius: '16px',
                 padding: '14px 16px',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '12px',
                 textDecoration: 'none',
-                boxShadow: '0 2px 6px rgba(14, 165, 233, 0.06)',
+                boxShadow: '0 1px 3px rgba(0, 0, 0, 0.02)',
                 transition: 'all 0.12s ease',
               }}
             >
               <div
                 style={{
-                  width: '38px',
-                  height: '38px',
+                  width: '36px',
+                  height: '36px',
                   borderRadius: '50%',
-                  background: '#0284c7',
-                  color: '#ffffff',
+                  background: '#f8fafc',
+                  border: '1px solid #e2e8f0',
+                  color: '#0f172a',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -396,18 +359,18 @@ export default function NursingGateway() {
                   fontSize: '1.05rem',
                 }}
               >
-                ✈️
+                🌍
               </div>
 
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                  <div style={{ fontSize: '0.88rem', fontWeight: 800, color: '#0f172a' }}>
-                    Abroad &amp; Global Nursing Jobs
+                  <div style={{ fontSize: '0.86rem', fontWeight: 800, color: '#0f172a' }}>
+                    International Opportunities
                   </div>
-                  <ChevronRight size={15} color="#0369a1" />
+                  <ChevronRight size={14} color="#94a3b8" />
                 </div>
-                <div style={{ fontSize: '0.74rem', color: '#0369a1', marginTop: '2px', fontWeight: 600 }}>
-                  🇮🇪 Ireland · 🇩🇪 Germany · 🇦🇪 UAE (₹32L–₹48L/yr)
+                <div style={{ fontSize: '0.74rem', color: '#64748b', marginTop: '2px' }}>
+                  Germany · UK · Ireland · UAE — Explore options abroad
                 </div>
               </div>
             </Link>
@@ -416,25 +379,26 @@ export default function NursingGateway() {
             <Link
               href="/nursing/pyq"
               style={{
-                background: 'linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%)',
-                border: '1px solid #fde68a',
+                background: '#ffffff',
+                border: '1px solid #e2e8f0',
                 borderRadius: '16px',
                 padding: '14px 16px',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '12px',
                 textDecoration: 'none',
-                boxShadow: '0 2px 6px rgba(245,158,11,0.06)',
+                boxShadow: '0 1px 3px rgba(0, 0, 0, 0.02)',
                 transition: 'all 0.12s ease',
               }}
             >
               <div
                 style={{
-                  width: '38px',
-                  height: '38px',
+                  width: '36px',
+                  height: '36px',
                   borderRadius: '50%',
-                  background: '#ea580c',
-                  color: '#ffffff',
+                  background: '#fef3c7',
+                  border: '1px solid #fde68a',
+                  color: '#b45309',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -447,12 +411,12 @@ export default function NursingGateway() {
 
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                  <div style={{ fontSize: '0.88rem', fontWeight: 800, color: '#0f172a' }}>
+                  <div style={{ fontSize: '0.86rem', fontWeight: 800, color: '#0f172a' }}>
                     Previous Papers &amp; PYQs
                   </div>
-                  <ChevronRight size={15} color="#b45309" />
+                  <ChevronRight size={14} color="#94a3b8" />
                 </div>
-                <div style={{ fontSize: '0.74rem', color: '#78350f', marginTop: '2px' }}>
+                <div style={{ fontSize: '0.74rem', color: '#64748b', marginTop: '2px' }}>
                   Practice all real exam papers with verified answer keys
                 </div>
               </div>
@@ -474,15 +438,6 @@ export default function NursingGateway() {
         onClose={() => setIsMayaOpen(false)}
         pageContext="general"
       />
-
-      {/* Direct PYQ Viewer Modal */}
-      {selectedPaper && (
-        <PaperViewerModal
-          paper={selectedPaper}
-          isOpen={Boolean(selectedPaper)}
-          onClose={() => setSelectedPaper(null)}
-        />
-      )}
 
       {/* Resume Upload Modal */}
       <ResumeUploadModal
