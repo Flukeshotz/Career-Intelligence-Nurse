@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import {
   ShieldCheck,
   Upload,
@@ -9,6 +10,7 @@ import {
   Check,
   ArrowRight,
   Award,
+  RefreshCw,
 } from 'lucide-react';
 import {
   UserProfile,
@@ -16,6 +18,7 @@ import {
   saveUserProfile,
   calculateProfileReadiness,
   calculateAge,
+  getTrackedOpportunities,
 } from '@/lib/user-store';
 import { ResumeUploadModal } from '@/components/profile/ResumeUploadModal';
 
@@ -60,6 +63,7 @@ export default function ProfilePage() {
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
   const [savedSuccess, setSavedSuccess] = useState(false);
+  const [trackedCount, setTrackedCount] = useState(0);
 
   useEffect(() => {
     const loaded = getUserProfile();
@@ -73,6 +77,8 @@ export default function ProfilePage() {
         qualificationsList: [{ code: 'bsc_nursing', name: 'B.Sc. Nursing', isPrimary: true }],
       }
     );
+    const tracked = getTrackedOpportunities();
+    setTrackedCount(tracked.length);
   }, []);
 
   if (!profile) return null;
@@ -167,6 +173,37 @@ export default function ProfilePage() {
           <span>Profile changes saved securely.</span>
         </div>
       )}
+
+      {/* ── Tracked Applications Gateway ── */}
+      <Link
+        href="/cycles"
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          padding: '14px 18px',
+          borderRadius: 'var(--radius-md)',
+          background: 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)',
+          border: '1px solid #bbf7d0',
+          textDecoration: 'none',
+          marginBottom: '16px',
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <div style={{ width: '36px', height: '36px', borderRadius: '50%', background: '#16a34a', color: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+            <RefreshCw size={18} />
+          </div>
+          <div>
+            <div style={{ fontSize: '0.90rem', fontWeight: 800, color: '#166534' }}>
+              My Tracked Applications ({trackedCount})
+            </div>
+            <div style={{ fontSize: '0.74rem', color: '#15803d' }}>
+              View application deadlines, reminders &amp; admit card alerts
+            </div>
+          </div>
+        </div>
+        <ArrowRight size={16} color="#166534" />
+      </Link>
 
       {/* ── 3. Ultra-Fast 3-Card Zero-Typing Matrix ── */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
