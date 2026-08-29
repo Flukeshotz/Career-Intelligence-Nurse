@@ -105,7 +105,30 @@ select:focus-visible {
   outline-offset: 2px;
 }
 
+
+/* ── Skip Navigation Link (WCAG 2.1 SC 2.4.1) ── */
+.skip-nav-link {
+  position: absolute;
+  left: -9999px;
+  top: 8px;
+  z-index: 9999;
+  padding: 10px 20px;
+  background: var(--sc-navy-900);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.92rem;
+  border-radius: 0 0 8px 8px;
+  text-decoration: none;
+}
+
+.skip-nav-link:focus-visible {
+  left: 12px;
+  outline: 2px solid #edb843;
+  outline-offset: 2px;
+}
+
 /* ── Container Layouts ── */
+
 .container {
   width: 100%;
   max-width: 860px;
@@ -434,6 +457,11 @@ select:focus-visible {
 .sc-tab-item.active {
   color: var(--sc-navy-700);
   font-weight: 700;
+}
+
+/* ── Main content area (used by root layout) ── */
+.content-area {
+  min-height: calc(100vh - 64px);
 }
 
 /* ── Mobile Layout Fixes ── */

@@ -1,20 +1,35 @@
 'use client';
 
+export const dynamic = 'force-dynamic';
+
 import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
-import { Search, GraduationCap, ArrowRight, ShieldCheck, Sparkles, Filter } from 'lucide-react';
+import { FileText, ArrowRight } from 'lucide-react';
 import { getExams } from '@/lib/data';
 import { MockExam } from '@/lib/mock-data';
 import { ExamCard } from '@/components/opportunity/ExamCard';
+import { PyqCard } from '@/components/opportunity/PyqCard';
+import { EXAM_PAPERS } from '@/lib/pyq-mock-data';
 import { FilterEmptyState } from '@/components/empty-states/EmptyState';
 
 type ExamSector = 'all' | 'central' | 'defense' | 'state' | 'entrance' | 'psu';
+type ViewMode = 'exams' | 'pyqs';
+
+const SECTORS: { id: ExamSector; label: string; emoji: string }[] = [
+  { id: 'all', label: 'All Exams', emoji: '⭐' },
+  { id: 'central', label: 'Central & INIs', emoji: '🏛️' },
+  { id: 'defense', label: 'Defense & Army', emoji: '🛡️' },
+  { id: 'state', label: 'State PSCs', emoji: '🗺️' },
+  { id: 'entrance', label: 'Entrances', emoji: '🎓' },
+  { id: 'psu', label: 'PSU / NHM', emoji: '⚛️' },
+];
 
 export default function ExamsListPage() {
   const [exams, setExams] = useState<MockExam[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedSector, setSelectedSector] = useState<ExamSector>('all');
+  const [viewMode, setViewMode] = useState<ViewMode>('exams');
 
   useEffect(() => {
     async function load() {
@@ -31,203 +46,173 @@ export default function ExamsListPage() {
     return exams.filter((e) => {
       const name = (e.name + ' ' + e.organisation).toLowerCase();
       if (selectedSector === 'central') {
-        return (
-          name.includes('aiims norcet') ||
-          name.includes('rrb') ||
-          name.includes('esic') ||
-          name.includes('dsssb') ||
-          name.includes('jipmer') ||
-          name.includes('pgimer') ||
-          name.includes('nimhans') ||
-          name.includes('sctimst') ||
-          name.includes('neigrihms') ||
-          name.includes('cnci') ||
-          name.includes('gmch')
-        );
+        return name.includes('aiims norcet') || name.includes('rrb') || name.includes('esic') || name.includes('dsssb') || name.includes('jipmer') || name.includes('pgimer') || name.includes('nimhans') || name.includes('sctimst') || name.includes('neigrihms') || name.includes('cnci') || name.includes('gmch');
       }
       if (selectedSector === 'defense') {
-        return (
-          name.includes('military nursing') ||
-          name.includes('mns') ||
-          name.includes('itbp') ||
-          name.includes('bsf') ||
-          name.includes('crpf') ||
-          name.includes('ssb')
-        );
+        return name.includes('military nursing') || name.includes('mns') || name.includes('itbp') || name.includes('bsf') || name.includes('crpf') || name.includes('ssb');
       }
       if (selectedSector === 'entrance') {
-        return (
-          name.includes('entrance') ||
-          name.includes('neet') ||
-          name.includes('wbjee') ||
-          name.includes('cnet') ||
-          name.includes('admission')
-        );
+        return name.includes('entrance') || name.includes('neet') || name.includes('wbjee') || name.includes('cnet') || name.includes('admission');
       }
       if (selectedSector === 'psu') {
-        return (
-          name.includes('isro') ||
-          name.includes('npcil') ||
-          name.includes('sail') ||
-          name.includes('community health') ||
-          name.includes('nhm')
-        );
+        return name.includes('isro') || name.includes('npcil') || name.includes('sail') || name.includes('community health') || name.includes('nhm');
       }
       if (selectedSector === 'state') {
-        return (
-          name.includes('uppsc') ||
-          name.includes('upums') ||
-          name.includes('ukmssb') ||
-          name.includes('rsmssb') ||
-          name.includes('tn mrb') ||
-          name.includes('mhsrb') ||
-          name.includes('kerala') ||
-          name.includes('kpsc') ||
-          name.includes('wbhrb') ||
-          name.includes('btsc') ||
-          name.includes('osssc') ||
-          name.includes('ojas') ||
-          name.includes('dhs') ||
-          name.includes('esb') ||
-          name.includes('hssc') ||
-          name.includes('bfuhs') ||
-          name.includes('jkssb') ||
-          name.includes('dme') ||
-          name.includes('hppsc') ||
-          name.includes('vyapam') ||
-          name.includes('jssc') ||
-          name.includes('gmc') ||
-          name.includes('igims') ||
-          name.includes('rims')
-        );
+        return name.includes('uppsc') || name.includes('upums') || name.includes('ukmssb') || name.includes('rsmssb') || name.includes('tn mrb') || name.includes('mhsrb') || name.includes('kerala') || name.includes('kpsc') || name.includes('wbhrb') || name.includes('btsc') || name.includes('osssc') || name.includes('ojas') || name.includes('dhs') || name.includes('esb') || name.includes('hssc') || name.includes('bfuhs') || name.includes('jkssb') || name.includes('dme') || name.includes('hppsc') || name.includes('vyapam') || name.includes('jssc') || name.includes('gmc') || name.includes('igims') || name.includes('rims');
       }
       return true;
     });
   }, [exams, selectedSector]);
 
+  const filteredPapers = useMemo(() => {
+    if (selectedSector === 'all' && !searchQuery) return EXAM_PAPERS;
+    return EXAM_PAPERS.filter(p => {
+      if (selectedSector !== 'all' && p.category !== selectedSector) return false;
+      if (searchQuery) {
+        const q = searchQuery.toLowerCase();
+        return p.title.toLowerCase().includes(q) || p.examName.toLowerCase().includes(q);
+      }
+      return true;
+    });
+  }, [selectedSector, searchQuery]);
+
   return (
-    <div className="wide-container mobile-safe-bottom" style={{ paddingTop: '24px', paddingBottom: '48px' }}>
-      {/* ── Page Header ── */}
-      <div style={{ marginBottom: '20px' }}>
-        <div style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--sc-navy-700)', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '2px' }}>
-          National & State Recruitment Tests
-        </div>
-        <h1 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--sc-navy-900)' }}>
-          Nursing Recruitment & Entrance Examinations
-        </h1>
-        <p style={{ fontSize: '0.90rem', color: 'var(--sc-ink-700)', marginTop: '2px' }}>
-          Verified schedules, multi-tier exam patterns, subject weightages, admit card slips, and official deep links across 50 examinations.
-        </p>
-      </div>
+    <div style={{ background: '#f8fafc', minHeight: '100vh', paddingBottom: '90px' }}>
 
-      {/* Flagship Callout Banner */}
-      <div
-        style={{
-          background: 'linear-gradient(135deg, var(--sc-navy-900) 0%, var(--sc-navy-700) 100%)',
-          color: 'var(--sc-white)',
-          padding: '20px 24px',
-          borderRadius: 'var(--radius-lg)',
-          marginBottom: '24px',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          flexWrap: 'wrap',
-          gap: '14px',
-        }}
-      >
-        <div>
-          <div style={{ fontSize: '0.75rem', fontWeight: 800, color: '#edb843', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
-            Flagship Examination
-          </div>
-          <div style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--sc-white)', marginTop: '2px' }}>
-            NORCET 2026 (AIIMS New Delhi & 20+ Participating AIIMS)
-          </div>
-          <div style={{ fontSize: '0.84rem', color: '#cbd5e1', marginTop: '2px' }}>
-            2,218 Vacancies • Stage 1 CBT: 12 September 2026 • Pay Level 7
-          </div>
-        </div>
-
-        <Link
-          href="/nursing/norcet"
-          className="btn-primary"
-          style={{ background: '#edb843', color: '#002856', border: 'none', padding: '10px 18px', fontWeight: 800, borderRadius: 'var(--radius-sm)' }}
-        >
-          <span>Open NORCET Authority Hub</span>
-          <ArrowRight size={15} />
-        </Link>
-      </div>
-
-      {/* ── Search & Sector Filter Ribbon ── */}
-      <div className="sc-card" style={{ padding: '16px 20px', marginBottom: '24px' }}>
-        <div style={{ position: 'relative', marginBottom: '14px' }}>
-          <Search size={16} color="var(--sc-ink-400)" style={{ position: 'absolute', left: '14px', top: '50%', transform: 'translateY(-50%)' }} />
+      {/* ── STICKY FILTER HEADER ── */}
+      <div style={{
+        background: '#ffffff',
+        borderBottom: '1.5px solid var(--sc-line-200)',
+        position: 'sticky', top: '64px', zIndex: 50,
+        padding: '12px 16px',
+        boxShadow: '0 2px 6px rgba(0,0,0,0.02)',
+      }}>
+        {/* Search bar */}
+        <div style={{ position: 'relative', marginBottom: '10px' }}>
           <input
-            type="text"
-            placeholder="Search 50 examinations (e.g. NORCET, RRB, ESIC, MNS, UPPSC, Kerala PSC, NEET)..."
+            type="search"
+            placeholder="Search 50 exams — NORCET, RRB, MNS, Kerala…"
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            onChange={e => setSearchQuery(e.target.value)}
             style={{
-              width: '100%',
-              background: 'var(--sc-surface-secondary)',
-              border: '1px solid var(--sc-line-200)',
-              borderRadius: 'var(--radius-md)',
-              padding: '10px 14px 10px 40px',
-              color: 'var(--sc-ink-900)',
-              fontSize: '0.88rem',
-              outline: 'none',
-              fontFamily: 'inherit',
+              width: '100%', padding: '10px 14px',
+              border: '1.5px solid #cbd5e1',
+              borderRadius: '10px', fontSize: '0.86rem',
+              background: '#f8fafc',
+              color: 'var(--sc-ink-900)', outline: 'none',
+              fontFamily: 'inherit', minHeight: '42px',
             }}
           />
         </div>
 
-        {/* Category Pills */}
-        <div style={{ display: 'flex', gap: '8px', overflowX: 'auto', paddingBottom: '4px' }}>
-          {[
-            { id: 'all', label: `All Exams (${exams.length})` },
-            { id: 'central', label: 'Central & INIs (11)' },
-            { id: 'defense', label: 'Defense & Paramilitary (5)' },
-            { id: 'state', label: 'State PSCs (25)' },
-            { id: 'entrance', label: 'Academic Entrances (5)' },
-            { id: 'psu', label: 'PSUs & NHM (4)' },
-          ].map((tab) => (
+        {/* View Mode Toggle: All Exams vs PYQ Papers */}
+        <div style={{ display: 'flex', gap: '8px', marginBottom: '8px' }}>
+          <button
+            type="button"
+            onClick={() => setViewMode('exams')}
+            style={{
+              flex: 1,
+              padding: '7px 10px',
+              borderRadius: '8px',
+              fontSize: '0.78rem',
+              fontWeight: viewMode === 'exams' ? 800 : 600,
+              background: viewMode === 'exams' ? 'var(--sc-navy-700)' : '#f1f5f9',
+              color: viewMode === 'exams' ? '#ffffff' : 'var(--sc-ink-700)',
+              border: 'none',
+              cursor: 'pointer',
+              transition: 'all 0.12s ease',
+            }}
+          >
+            🏛️ All Exams ({filteredExams.length})
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setViewMode('pyqs')}
+            style={{
+              flex: 1,
+              padding: '7px 10px',
+              borderRadius: '8px',
+              fontSize: '0.78rem',
+              fontWeight: viewMode === 'pyqs' ? 800 : 600,
+              background: viewMode === 'pyqs' ? 'var(--sc-blue-600)' : '#f1f5f9',
+              color: viewMode === 'pyqs' ? '#ffffff' : 'var(--sc-ink-700)',
+              border: 'none',
+              cursor: 'pointer',
+              transition: 'all 0.12s ease',
+            }}
+          >
+            📄 PYQs &amp; Mock Tests ({filteredPapers.length})
+          </button>
+        </div>
+
+        {/* Sector pills — horizontal scroll */}
+        <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', paddingBottom: '2px' }}>
+          {SECTORS.map(s => (
             <button
-              key={tab.id}
+              key={s.id}
               type="button"
-              onClick={() => setSelectedSector(tab.id as ExamSector)}
+              onClick={() => setSelectedSector(s.id)}
               style={{
-                padding: '6px 14px',
-                borderRadius: 'var(--radius-pill)',
-                fontSize: '0.80rem',
-                fontWeight: selectedSector === tab.id ? 800 : 600,
-                background: selectedSector === tab.id ? 'var(--sc-navy-700)' : 'var(--sc-surface-secondary)',
-                color: selectedSector === tab.id ? 'var(--sc-white)' : 'var(--sc-ink-700)',
-                border: selectedSector === tab.id ? '1px solid var(--sc-navy-700)' : '1px solid var(--sc-line-200)',
-                whiteSpace: 'nowrap',
-                transition: 'all 0.15s ease',
+                display: 'flex', alignItems: 'center', gap: '4px',
+                padding: '6px 12px', borderRadius: '100px',
+                fontSize: '0.76rem', fontWeight: selectedSector === s.id ? 800 : 600,
+                background: selectedSector === s.id ? '#0f172a' : '#f1f5f9',
+                color: selectedSector === s.id ? '#ffffff' : '#334155',
+                border: selectedSector === s.id ? '1px solid #0f172a' : '1px solid #e2e8f0',
+                cursor: 'pointer', whiteSpace: 'nowrap', flexShrink: 0,
+                transition: 'all 0.12s ease',
               }}
             >
-              {tab.label}
+              <span>{s.emoji}</span>
+              <span>{s.label}</span>
             </button>
           ))}
         </div>
       </div>
 
-      {/* ── Exams Grid ── */}
-      {loading ? (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-          {[1, 2, 3].map((n) => (
-            <div key={n} className="sc-card" style={{ padding: '24px', height: '140px', background: 'var(--sc-surface-secondary)' }} />
-          ))}
-        </div>
-      ) : exams.length === 0 ? (
-        <FilterEmptyState onResetFilters={() => setSearchQuery('')} />
-      ) : (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-          {exams.map((exam) => (
-            <ExamCard key={exam.id} exam={exam} />
-          ))}
-        </div>
-      )}
+      {/* ── CONTENT BODY ── */}
+      <div style={{ maxWidth: '960px', margin: '0 auto', padding: '16px 16px 0' }}>
+
+        {/* EXAMS VIEW */}
+        {viewMode === 'exams' && (
+          <div>
+            {loading ? (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                {[1, 2, 3].map(n => (
+                  <div key={n} style={{ height: '130px', background: '#e2e8f0', borderRadius: '14px' }} />
+                ))}
+              </div>
+            ) : filteredExams.length === 0 ? (
+              <FilterEmptyState onResetFilters={() => { setSearchQuery(''); setSelectedSector('all'); }} />
+            ) : (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                {filteredExams.map(exam => <ExamCard key={exam.id} exam={exam} />)}
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* PYQS VIEW */}
+        {viewMode === 'pyqs' && (
+          <div>
+            <div style={{ marginBottom: '12px' }}>
+              <div style={{ fontSize: '0.84rem', fontWeight: 800, color: 'var(--sc-navy-900)' }}>
+                Official Question Papers &amp; Full Mock Tests ({filteredPapers.length})
+              </div>
+              <div style={{ fontSize: '0.76rem', color: 'var(--sc-ink-600)' }}>
+                Real past papers with official answer keys for practice and time management.
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              {filteredPapers.map(paper => (
+                <PyqCard key={paper.id} paper={paper} />
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

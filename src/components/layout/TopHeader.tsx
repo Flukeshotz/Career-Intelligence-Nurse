@@ -1,227 +1,142 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { ShieldCheck, Compass, Briefcase, GraduationCap, RefreshCw, User, MessageSquare } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import dynamic from 'next/dynamic';
-import { getTrackedOpportunities } from '@/lib/user-store';
-
-const MayaPanel = dynamic(() => import('@/components/maya/MayaPanel'), { ssr: false });
+import { GlobalSearchModal } from './GlobalSearchModal';
 
 export function TopHeader() {
-  const pathname = usePathname();
-  const [trackedCount, setTrackedCount] = useState(0);
-  const [mayaOpen, setMayaOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
 
+  // Global ⌘K shortcut
   useEffect(() => {
-    const items = getTrackedOpportunities();
-    setTrackedCount(items.length);
-  }, [pathname]);
-
-  const isActive = (path: string) => {
-    if (path === '/nursing') {
-      return pathname === '/nursing' || pathname === '/';
-    }
-    return pathname.startsWith(path);
-  };
+    const handler = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        setSearchOpen(true);
+      }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, []);
 
   return (
-    <header className="sc-header">
-      <div
-        className="wide-container"
+    <>
+      <header
         style={{
-          height: '68px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
+          background: 'var(--sc-navy-900)',
+          borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+          position: 'sticky',
+          top: 0,
+          zIndex: 100,
+          height: '60px',
         }}
       >
-        {/* Left: Brand Identity */}
-        <Link href="/nursing" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <div
-            style={{
-              width: '36px',
-              height: '36px',
-              borderRadius: '10px',
-              background: '#ffffff',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontWeight: 800,
-              color: '#083262',
-              fontSize: '1.25rem',
-              boxShadow: '0 2px 8px rgba(0, 0, 0, 0.2)',
-            }}
-          >
-            S
-          </div>
-          <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ fontWeight: 800, fontSize: '1.2rem', letterSpacing: '-0.02em', color: '#ffffff' }}>
-                Skill<span style={{ color: '#edb843' }}>Case</span>
-              </span>
-              <span
-                style={{
-                  fontSize: '0.68rem',
-                  fontWeight: 700,
-                  textTransform: 'uppercase',
-                  padding: '2px 8px',
-                  background: 'rgba(255, 255, 255, 0.15)',
-                  color: '#ffffff',
-                  borderRadius: '200px',
-                  border: '1px solid rgba(255, 255, 255, 0.25)',
-                }}
-              >
-                Nursing
-              </span>
-            </div>
-            <div style={{ fontSize: '0.72rem', color: 'rgba(255, 255, 255, 0.75)', marginTop: '-1px' }}>
-              Career & Recruitment Intelligence
-            </div>
-          </div>
-        </Link>
-
-        {/* Desktop Navigation Links */}
-        <nav className="desktop-nav-links">
+        <div
+          style={{
+            height: '60px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '12px',
+            padding: '0 16px',
+            maxWidth: '1120px',
+            margin: '0 auto',
+          }}
+        >
+          {/* Brand */}
           <Link
             href="/nursing"
             style={{
-              fontSize: '0.9rem',
-              fontWeight: isActive('/nursing') ? 700 : 500,
-              color: isActive('/nursing') ? '#ffffff' : 'rgba(255, 255, 255, 0.8)',
-              borderBottom: isActive('/nursing') ? '2px solid #edb843' : '2px solid transparent',
-              padding: '6px 0',
-            }}
-          >
-            Home
-          </Link>
-
-          <Link
-            href="/nursing/jobs"
-            style={{
-              fontSize: '0.9rem',
-              fontWeight: isActive('/nursing/jobs') ? 700 : 500,
-              color: isActive('/nursing/jobs') ? '#ffffff' : 'rgba(255, 255, 255, 0.8)',
-              borderBottom: isActive('/nursing/jobs') ? '2px solid #edb843' : '2px solid transparent',
-              padding: '6px 0',
-            }}
-          >
-            Jobs
-          </Link>
-
-          <Link
-            href="/nursing/exams"
-            style={{
-              fontSize: '0.9rem',
-              fontWeight: isActive('/nursing/exams') ? 700 : 500,
-              color: isActive('/nursing/exams') ? '#ffffff' : 'rgba(255, 255, 255, 0.8)',
-              borderBottom: isActive('/nursing/exams') ? '2px solid #edb843' : '2px solid transparent',
-              padding: '6px 0',
-            }}
-          >
-            Exams
-          </Link>
-
-          <Link
-            href="/cycles"
-            style={{
-              fontSize: '0.9rem',
-              fontWeight: isActive('/cycles') ? 700 : 500,
-              color: isActive('/cycles') ? '#ffffff' : 'rgba(255, 255, 255, 0.8)',
-              borderBottom: isActive('/cycles') ? '2px solid #edb843' : '2px solid transparent',
-              padding: '6px 0',
               display: 'flex',
               alignItems: 'center',
-              gap: '6px',
+              gap: '8px',
+              textDecoration: 'none',
+              flexShrink: 0,
             }}
           >
-            <span>My Cycles</span>
-            {trackedCount > 0 && (
-              <span
-                style={{
-                  background: '#019035',
-                  color: '#ffffff',
-                  fontSize: '0.7rem',
-                  fontWeight: 800,
-                  padding: '1px 6px',
-                  borderRadius: '10px',
-                }}
-              >
-                {trackedCount}
-              </span>
-            )}
+            <div
+              style={{
+                width: '32px',
+                height: '32px',
+                borderRadius: '8px',
+                background: '#ffffff',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontWeight: 800,
+                color: '#083262',
+                fontSize: '1.1rem',
+                flexShrink: 0,
+                boxShadow: '0 2px 6px rgba(0,0,0,0.18)',
+              }}
+            >
+              S
+            </div>
+            <div style={{ lineHeight: 1.15 }}>
+              <div style={{ fontWeight: 800, fontSize: '1.05rem', letterSpacing: '-0.02em', color: '#ffffff' }}>
+                Skill<span style={{ color: '#edb843' }}>Case</span>
+              </div>
+              <div style={{ fontSize: '0.56rem', color: 'rgba(255,255,255,0.55)', fontWeight: 600, letterSpacing: '0.02em' }}>
+                NURSING
+              </div>
+            </div>
           </Link>
 
-          <Link
-            href="/profile"
-            style={{
-              fontSize: '0.9rem',
-              fontWeight: isActive('/profile') ? 700 : 500,
-              color: isActive('/profile') ? '#ffffff' : 'rgba(255, 255, 255, 0.8)',
-              borderBottom: isActive('/profile') ? '2px solid #edb843' : '2px solid transparent',
-              padding: '6px 0',
-            }}
-          >
-            Profile
-          </Link>
-        </nav>
-
-        {/* Right Action: Verified Trust Badge & Ask Maya */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          {/* ── Omnisearch Bar (Clean full-width field) ── */}
           <button
-            type="button"
-            onClick={() => setMayaOpen(true)}
+            onClick={() => setSearchOpen(true)}
             style={{
+              flex: 1,
               display: 'flex',
               alignItems: 'center',
-              gap: '6px',
-              padding: '6px 14px',
-              borderRadius: '200px',
-              background: 'linear-gradient(135deg, #019035 0%, #0baa45 100%)',
-              color: '#ffffff',
-              fontSize: '0.80rem',
-              fontWeight: 700,
-              border: 'none',
+              gap: '8px',
+              background: 'rgba(255, 255, 255, 0.08)',
+              border: '1px solid rgba(255, 255, 255, 0.14)',
+              borderRadius: '10px',
+              padding: '8px 12px',
               cursor: 'pointer',
-              boxShadow: '0 2px 8px rgba(1, 144, 53, 0.35)',
-              transition: 'transform 0.12s ease',
+              transition: 'background 0.12s ease',
+              height: '38px',
             }}
           >
-            <img
-              src="/maya-smiling.webp"
-              alt="Maya"
-              style={{ width: '22px', height: '22px', borderRadius: '50%', objectFit: 'cover', objectPosition: 'top' }}
-            />
-            <span>Ask Maya</span>
+            <Search size={14} color="rgba(255,255,255,0.55)" style={{ flexShrink: 0 }} />
+            <span
+              style={{
+                fontSize: '0.82rem',
+                color: 'rgba(255,255,255,0.55)',
+                fontFamily: 'inherit',
+                fontWeight: 500,
+                flex: 1,
+                textAlign: 'left',
+              }}
+            >
+              Search 50 exams, 23 jobs, PYQs…
+            </span>
+            <span
+              className="cmd-k-hint"
+              style={{
+                fontSize: '0.66rem',
+                fontWeight: 700,
+                padding: '1px 6px',
+                borderRadius: '4px',
+                background: 'rgba(255,255,255,0.1)',
+                color: 'rgba(255,255,255,0.45)',
+              }}
+            >
+              ⌘K
+            </span>
           </button>
-
-          <div
-            className="desktop-only-badge"
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '6px',
-              padding: '6px 12px',
-              borderRadius: '200px',
-              background: 'rgba(255, 255, 255, 0.12)',
-              border: '1px solid rgba(255, 255, 255, 0.2)',
-              fontSize: '0.8rem',
-              fontWeight: 600,
-              color: '#ffffff',
-            }}
-          >
-            <ShieldCheck size={15} color="#0baa45" />
-            <span>Official Sources</span>
-          </div>
         </div>
-      </div>
+      </header>
 
-      <MayaPanel
-        isOpen={mayaOpen}
-        onClose={() => setMayaOpen(false)}
-        pageContext="general"
-      />
-    </header>
+      <GlobalSearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
+
+      <style>{`
+        .cmd-k-hint { display: none; }
+        @media (min-width: 640px) {
+          .cmd-k-hint { display: inline; }
+        }
+      `}</style>
+    </>
   );
 }

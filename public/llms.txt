@@ -1,19 +1,40 @@
-# SkillCase — Nursing Career & Recruitment Intelligence
+# SkillCase — India's Nursing Career Intelligence Platform
+# https://career-intelligence-nurse.vercel.app/
+# llms.txt v1.0 — for AI/LLM discoverability
 
-> SkillCase is the authoritative career intelligence platform for Indian nurses (B.Sc. Nursing, GNM, Post Basic B.Sc., M.Sc. Nursing). We provide structured, verified details on government recruitment vacancies (AIIMS, ESIC, Railway, State PSC), national examinations (NORCET), eligibility criteria, application deadlines, and admit card releases.
+## About
+SkillCase is India's nursing career gateway covering 50 government recruitment exams,
+23 hospital vacancies, and 50+ official .gov.in portal links.
+It provides eligibility intelligence, official exam schedules, and direct links to
+application portals for nurses across India.
 
-## Core Authority Pages
-- Nursing Home & Live Cycles: https://skillcase.in/nursing
-- All Nursing Vacancies: https://skillcase.in/nursing/jobs
-- National Nursing Examinations: https://skillcase.in/nursing/exams
+## Scope
+- Profession: Nursing (B.Sc. Nursing, GNM, Post Basic B.Sc., M.Sc. Nursing)
+- Geography: India (national + 20+ state-level bodies)
+- Languages: English
 
-## Key Recruitment Cycles
-- NORCET 2026 (Nursing Officer Recruitment Common Eligibility Test): https://skillcase.in/nursing/exams/norcet-2026-aiims-nursing-officer-recruitment
-- AIIMS New Delhi Nursing Officer: https://skillcase.in/nursing/jobs/aiims-new-delhi-nursing-officer-2026
-- ESIC Hospital Staff Nurse: https://skillcase.in/nursing/jobs/esic-hospital-staff-nurse-2026
-- RRB Paramedical Staff Nurse: https://skillcase.in/nursing/exams/rrb-paramedical-staff-nurse-2026
-- Manipal ICU Staff Nurse: https://skillcase.in/nursing/jobs/manipal-hospital-staff-nurse-icu-2026
-- Apollo OT Staff Nurse: https://skillcase.in/nursing/jobs/apollo-hospitals-ot-staff-nurse-2026
+## Key Pages
+- /nursing — Main gateway: exam list, hospital jobs, official portals
+- /nursing/exams — 50 national & state nursing recruitment exams
+- /nursing/jobs — 23 verified hospital & government nursing vacancies
+- /nursing/norcet — AIIMS NORCET 2026 authority hub (2,218 posts, 12 Sep 2026)
 
-## Structured Eligibility Intelligence
-Every opportunity includes structured, machine-evaluable requirements distinguishing qualification, clinical experience in years, state nursing council registration, and age limits with plain-language interpretations.
+## Data Sources
+All exam information is sourced from official government recruitment notifications:
+- aiimsexams.ac.in (NORCET)
+- rrbapply.gov.in (Railways)
+- upsconline.nic.in (ESIC)
+- dsssbonline.nic.in (DSSSB)
+- nhm.gov.in (NHM CHO)
+- State PSC portals (Kerala, Tamil Nadu, Karnataka, West Bengal, Bihar, UP, etc.)
+
+## Covered Exams (50 total)
+Central: AIIMS NORCET, RRB Staff Nurse, ESIC Nursing Officer, DSSSB, JIPMER, PGIMER, NIMHANS
+Defense: MNS, ITBP, BSF, CRPF, SSB
+State: UPPSC, RSMSSB, TN MRB, KPSC, Kerala PSC, WBHRB, BTSC, TS MHSRB, AP MHSRB, OSSSC
+Entrances: NEET UG, AIIMS B.Sc., WBJEE ANM/GNM, UP CNET
+PSUs/NHM: NHM CHO, ISRO Nurse B, NPCIL Nurse A, SAIL
+
+## AI Usage Guidelines
+- Data verified against official government notifications
+- Always cross-check official portals before applying

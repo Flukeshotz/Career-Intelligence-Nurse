@@ -1,88 +1,130 @@
 import Link from 'next/link';
-import { Calendar, GraduationCap, ArrowRight } from 'lucide-react';
+import { ChevronRight, Calendar, GraduationCap, FileText } from 'lucide-react';
 import { MockExam } from '@/lib/mock-data';
 
 export function ExamCard({ exam }: { exam: MockExam }) {
-  const deadlineStr = exam.applicationDeadline
-    ? new Date(exam.applicationDeadline).toLocaleDateString('en-IN', {
-        day: 'numeric',
-        month: 'short',
-      })
+  const examDateStr = exam.examDate
+    ? new Date(exam.examDate).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })
     : null;
 
-  const examDateStr = exam.examDate
-    ? new Date(exam.examDate).toLocaleDateString('en-IN', {
-        day: 'numeric',
-        month: 'short',
-        year: 'numeric',
-      })
+  const deadlineStr = exam.applicationDeadline
+    ? new Date(exam.applicationDeadline).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })
     : null;
+
+  // Derive a sector color from name
+  const isCentral = exam.organisation?.toLowerCase().includes('aiims') || exam.organisation?.toLowerCase().includes('railway') || exam.organisation?.toLowerCase().includes('esic') || exam.organisation?.toLowerCase().includes('upsc');
+  const isDefense = (exam.name + exam.organisation).toLowerCase().includes('military') || (exam.name + exam.organisation).toLowerCase().includes('itbp') || (exam.name + exam.organisation).toLowerCase().includes('bsf');
+  const accentColor = isDefense ? '#4a5e2a' : isCentral ? '#083262' : '#1e5ca2';
 
   return (
     <Link
       href={`/${exam.professionCode}/exams/${exam.slug}`}
-      className="sc-card sc-card-interactive"
-      style={{ padding: '20px', display: 'flex', flexDirection: 'column', gap: '12px' }}
+      style={{ textDecoration: 'none', display: 'block' }}
     >
-      {/* Top Badges */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
-          <span className="badge-govt">🎯 National Exam</span>
-          <span className="badge-verified">✓ Verified Notice</span>
-        </div>
-
-        {exam.vacancies && (
-          <span style={{ fontSize: '0.78rem', fontWeight: 800, color: 'var(--sc-navy-700)', background: 'var(--sc-navy-50)', padding: '3px 8px', borderRadius: 'var(--radius-sm)' }}>
-            {exam.vacancies.toLocaleString('en-IN')} Vacancies
-          </span>
-        )}
-      </div>
-
-      {/* Title & Organisation */}
-      <div>
-        <h3 style={{ fontSize: '1.1rem', fontWeight: 700, color: 'var(--sc-navy-900)', lineHeight: 1.35, marginBottom: '4px' }}>
-          {exam.name}
-        </h3>
-        <div style={{ color: 'var(--sc-ink-700)', fontSize: '0.88rem', fontWeight: 600 }}>
-          {exam.organisation}
-        </div>
-      </div>
-
-      {/* Important Dates */}
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', fontSize: '0.82rem' }}>
-        {examDateStr && (
-          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', background: 'var(--sc-green-50)', color: 'var(--sc-green-600)', padding: '3px 8px', borderRadius: 'var(--radius-sm)', fontWeight: 700 }}>
-            <GraduationCap size={14} />
-            <span>Exam: {examDateStr}</span>
-          </div>
-        )}
-
-        {deadlineStr && (
-          <div style={{ display: 'flex', alignItems: 'center', gap: '4px', background: 'var(--sc-yellow-50)', color: '#92400e', padding: '3px 8px', borderRadius: 'var(--radius-sm)', fontWeight: 600 }}>
-            <Calendar size={13} />
-            <span>Apply by {deadlineStr}</span>
-          </div>
-        )}
-      </div>
-
-      {/* Footer */}
       <div
         style={{
-          borderTop: '1px solid var(--sc-line-100)',
-          paddingTop: '12px',
+          background: '#ffffff',
+          borderRadius: '16px',
+          border: '1.5px solid var(--sc-line-200)',
+          padding: '16px 18px',
           display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          marginTop: 'auto',
+          gap: '14px',
+          alignItems: 'flex-start',
+          transition: 'all 0.15s ease',
+          overflow: 'hidden',
+          position: 'relative',
+          boxShadow: '0 1px 3px rgba(0,0,0,0.02)',
+        }}
+        onMouseEnter={e => {
+          e.currentTarget.style.borderColor = 'var(--sc-navy-600)';
+          e.currentTarget.style.boxShadow = '0 4px 12px rgba(8,50,98,0.08)';
+        }}
+        onMouseLeave={e => {
+          e.currentTarget.style.borderColor = 'var(--sc-line-200)';
+          e.currentTarget.style.boxShadow = '0 1px 3px rgba(0,0,0,0.02)';
         }}
       >
-        <div style={{ fontSize: '0.82rem', color: 'var(--sc-ink-600)' }}>
-          {exam.qualification || 'B.Sc. / Post Basic / GNM'}
-        </div>
+        {/* Left accent bar */}
+        <div style={{
+          position: 'absolute', left: 0, top: 0, bottom: 0, width: '4px',
+          background: accentColor, borderRadius: '16px 0 0 16px',
+        }} />
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '4px', color: 'var(--sc-navy-700)', fontSize: '0.84rem', fontWeight: 700 }}>
-          <span>View Cycle Roadmap</span>
-          <ArrowRight size={14} />
+        {/* Content (with left-bar offset) */}
+        <div style={{ flex: 1, minWidth: 0, paddingLeft: '4px' }}>
+          {/* Row 1: badges + vacancies */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '6px', flexWrap: 'wrap', gap: '6px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <span style={{
+                fontSize: '0.68rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.04em',
+                color: accentColor, background: accentColor + '14',
+                padding: '3px 8px', borderRadius: '100px',
+              }}>
+                🎯 {isDefense ? 'Defense' : isCentral ? 'Central' : 'State Exam'}
+              </span>
+              <span style={{
+                fontSize: '0.68rem', fontWeight: 700,
+                color: 'var(--sc-blue-600)', background: 'rgba(16,102,200,0.08)',
+                padding: '3px 8px', borderRadius: '100px',
+                display: 'inline-flex', alignItems: 'center', gap: '3px',
+              }}>
+                <FileText size={10} />
+                PYQs & Mocks
+              </span>
+            </div>
+
+            {exam.vacancies && (
+              <span style={{ fontSize: '0.72rem', fontWeight: 800, color: 'var(--sc-navy-700)', background: 'var(--sc-navy-50)', padding: '3px 8px', borderRadius: '100px' }}>
+                {exam.vacancies.toLocaleString('en-IN')} Posts
+              </span>
+            )}
+          </div>
+
+          {/* Row 2: Title */}
+          <div style={{ fontSize: '0.98rem', fontWeight: 800, color: 'var(--sc-navy-900)', lineHeight: 1.35, marginBottom: '3px' }}>
+            {exam.name}
+          </div>
+
+          {/* Row 3: Organisation */}
+          <div style={{ fontSize: '0.78rem', color: 'var(--sc-ink-600)', fontWeight: 500, marginBottom: '10px' }}>
+            {exam.organisation}
+          </div>
+
+          {/* Row 4: date chips */}
+          <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+            {examDateStr && (
+              <span style={{
+                display: 'flex', alignItems: 'center', gap: '4px',
+                fontSize: '0.72rem', fontWeight: 700,
+                background: 'var(--sc-green-50)', color: 'var(--sc-green-600)',
+                padding: '4px 8px', borderRadius: '6px',
+              }}>
+                <GraduationCap size={12} />
+                Exam: {examDateStr}
+              </span>
+            )}
+            {deadlineStr && (
+              <span style={{
+                display: 'flex', alignItems: 'center', gap: '4px',
+                fontSize: '0.72rem', fontWeight: 700,
+                background: '#fef3c7', color: '#92400e',
+                padding: '4px 8px', borderRadius: '6px',
+              }}>
+                <Calendar size={12} />
+                Apply by {deadlineStr}
+              </span>
+            )}
+          </div>
+
+          {/* Row 5: Qualification + CTA */}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '12px', borderTop: '1px solid var(--sc-line-100)', paddingTop: '10px' }}>
+            <span style={{ fontSize: '0.74rem', color: 'var(--sc-ink-600)', fontWeight: 500 }}>
+              {exam.qualification || 'B.Sc. / GNM'}
+            </span>
+            <span style={{ fontSize: '0.80rem', fontWeight: 800, color: 'var(--sc-navy-700)', display: 'flex', alignItems: 'center', gap: '2px' }}>
+              Blueprint &amp; Papers <ChevronRight size={14} />
+            </span>
+          </div>
         </div>
       </div>
     </Link>
