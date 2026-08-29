@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { FileText, Download, CheckCircle2, Clock, HelpCircle, Eye, Sparkles } from 'lucide-react';
+import { FileText, Download, CheckCircle2, Clock, HelpCircle, Eye, ExternalLink, ShieldCheck } from 'lucide-react';
 import { ExamPaper } from '@/lib/pyq-mock-data';
 import { PaperViewerModal } from './PaperViewerModal';
 
@@ -10,6 +10,15 @@ export function PyqCard({ paper }: { paper: ExamPaper }) {
   const isMock = paper.type === 'mock';
   const badgeBg = isMock ? 'rgba(16, 102, 200, 0.1)' : 'rgba(1, 144, 53, 0.1)';
   const badgeColor = isMock ? 'var(--sc-blue-600)' : 'var(--sc-green-600)';
+
+  let sourceDomain = '';
+  try {
+    if (paper.officialSourceUrl && paper.officialSourceUrl !== '#') {
+      sourceDomain = new URL(paper.officialSourceUrl).hostname.replace('www.', '');
+    }
+  } catch (e) {
+    sourceDomain = '';
+  }
 
   return (
     <>
@@ -57,7 +66,7 @@ export function PyqCard({ paper }: { paper: ExamPaper }) {
                 letterSpacing: '0.04em',
               }}
             >
-              {isMock ? '🎯 Official Mock Test' : `📄 ${paper.year} Official Paper`}
+              {isMock ? '🎯 Official Mock Test' : `📄 ${paper.year} Official PYQ`}
             </span>
             {paper.shift && (
               <span style={{ fontSize: '0.72rem', color: 'var(--sc-ink-500)', fontWeight: 500 }}>
@@ -94,14 +103,31 @@ export function PyqCard({ paper }: { paper: ExamPaper }) {
               <Clock size={13} color="var(--sc-navy-600)" />
               <strong>{paper.durationMinutes}</strong> Mins
             </span>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-              <CheckCircle2 size={13} color="var(--sc-green-600)" />
+            <span style={{ display: 'flex', alignItems: 'center', gap: '4px', color: 'var(--sc-green-600)', fontWeight: 700 }}>
+              <ShieldCheck size={14} color="var(--sc-green-600)" />
               Official Key Verified
             </span>
-            {paper.fileSizeBytes && (
-              <span style={{ color: 'var(--sc-ink-400)', fontWeight: 600 }}>
-                PDF • {paper.fileSizeBytes}
-              </span>
+            {sourceDomain && (
+              <a
+                href={paper.officialSourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '3px',
+                  fontSize: '0.72rem',
+                  color: 'var(--sc-navy-700)',
+                  fontWeight: 600,
+                  textDecoration: 'none',
+                  background: '#f1f5f9',
+                  padding: '2px 6px',
+                  borderRadius: '4px',
+                }}
+              >
+                <span>🏛️ {sourceDomain}</span>
+                <ExternalLink size={10} />
+              </a>
             )}
           </div>
         </div>
@@ -110,7 +136,7 @@ export function PyqCard({ paper }: { paper: ExamPaper }) {
         {paper.keyHighlights && paper.keyHighlights.length > 0 && (
           <div style={{ background: 'var(--sc-surface-secondary)', borderRadius: '10px', padding: '10px 12px' }}>
             <div style={{ fontSize: '0.70rem', fontWeight: 800, color: 'var(--sc-ink-400)', textTransform: 'uppercase', letterSpacing: '0.04em', marginBottom: '4px' }}>
-              Paper Syllabus Focus
+              Official Paper Metadata
             </div>
             <ul style={{ margin: 0, paddingLeft: '16px', fontSize: '0.78rem', color: 'var(--sc-ink-700)', lineHeight: 1.5 }}>
               {paper.keyHighlights.map((h, i) => (
@@ -120,7 +146,7 @@ export function PyqCard({ paper }: { paper: ExamPaper }) {
           </div>
         )}
 
-        {/* Action Row — 100% In-App Direct Download & In-App Viewer (Zero external redirects!) */}
+        {/* Action Row — 100% In-App Direct Download & In-App Viewer */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginTop: '2px', paddingTop: '10px', borderTop: '1px solid var(--sc-line-100)' }}>
           <button
             type="button"

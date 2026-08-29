@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { X, Download, CheckCircle2, Clock, HelpCircle, FileText, Eye, EyeOff, Sparkles, Printer } from 'lucide-react';
+import { X, Download, CheckCircle2, Clock, HelpCircle, FileText, Eye, EyeOff, Sparkles, Printer, ExternalLink, ShieldCheck } from 'lucide-react';
 import { ExamPaper } from '@/lib/pyq-mock-data';
 import { getFullPaperData, FullPaperData, QuestionItem } from '@/lib/pyq-questions-dataset';
 
@@ -54,7 +54,7 @@ export function PaperViewerModal({ paper, isOpen, onClose }: PaperViewerModalPro
             `).join('')}
           </div>
           <div style="background: #f8fafc; border-left: 3px solid #083262; padding: 6px 10px; font-size: 11px; color: #334155; line-height: 1.4;">
-            <strong>Clinical Rationale / Explanation:</strong> ${q.rationale}
+            <strong>Official Medical &amp; Clinical Rationale:</strong> ${q.rationale}
           </div>
         </div>
       `).join('');
@@ -63,7 +63,7 @@ export function PaperViewerModal({ paper, isOpen, onClose }: PaperViewerModalPro
         <!DOCTYPE html>
         <html>
           <head>
-            <title>${paperData.title} — SkillCase Verified Paper</title>
+            <title>${paperData.title} — SkillCase Verified Official Paper</title>
             <meta charset="utf-8" />
             <style>
               @page { size: A4; margin: 15mm; }
@@ -85,13 +85,13 @@ export function PaperViewerModal({ paper, isOpen, onClose }: PaperViewerModalPro
               <div class="meta">
                 <span><strong>Exam:</strong> ${paperData.examName}</span> | 
                 <span><strong>Shift:</strong> ${paperData.shift}</span> | 
-                <span><strong>Total Marks:</strong> ${paperData.totalMarks}</span> | 
+                <span><strong>Total Questions:</strong> ${paperData.totalMarks}</span> | 
                 <span><strong>Negative Marking:</strong> ${paperData.negativeMarking}</span>
               </div>
               <div style="margin-top: 6px;">
-                <span class="badge">✓ Official Answer Key Verified</span>
+                <span class="badge">✓ Official Master Answer Key Verified</span>
                 <span class="badge">✓ Detailed Clinical Explanations</span>
-                <span class="badge">Direct Download from skillcase.in</span>
+                <span class="badge">Official Source: ${paper.officialNotice || 'Government Authority'}</span>
               </div>
             </div>
 
@@ -167,8 +167,9 @@ export function PaperViewerModal({ paper, isOpen, onClose }: PaperViewerModalPro
               <span style={{ fontSize: '0.70rem', fontWeight: 800, background: '#edb843', color: '#002856', padding: '3px 8px', borderRadius: '4px', textTransform: 'uppercase' }}>
                 Official {paper.year} Paper
               </span>
-              <span style={{ fontSize: '0.70rem', fontWeight: 700, background: 'rgba(1, 144, 53, 0.3)', color: '#86efac', padding: '3px 8px', borderRadius: '4px' }}>
-                ✓ Official Key Verified
+              <span style={{ fontSize: '0.70rem', fontWeight: 700, background: 'rgba(1, 144, 53, 0.3)', color: '#86efac', padding: '3px 8px', borderRadius: '4px', display: 'flex', alignItems: 'center', gap: '3px' }}>
+                <ShieldCheck size={12} />
+                Official Key Verified
               </span>
             </div>
 
@@ -204,6 +205,30 @@ export function PaperViewerModal({ paper, isOpen, onClose }: PaperViewerModalPro
             <span>•</span>
             <span style={{ color: '#fca5a5' }}><strong>Negative:</strong> {paperData.negativeMarking}</span>
           </div>
+
+          {paper.officialSourceUrl && paper.officialSourceUrl !== '#' && (
+            <div style={{ marginTop: '8px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <a
+                href={paper.officialSourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '4px',
+                  fontSize: '0.72rem',
+                  color: '#93c5fd',
+                  textDecoration: 'none',
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  padding: '3px 8px',
+                  borderRadius: '4px',
+                }}
+              >
+                <span>🏛️ Official Conducting Authority: {new URL(paper.officialSourceUrl).hostname.replace('www.', '')}</span>
+                <ExternalLink size={10} />
+              </a>
+            </div>
+          )}
         </div>
 
         {/* ── ACTION TOOLBAR ── */}
@@ -424,7 +449,7 @@ export function PaperViewerModal({ paper, isOpen, onClose }: PaperViewerModalPro
                   }}
                 >
                   <div style={{ fontSize: '0.70rem', fontWeight: 800, color: 'var(--sc-navy-700)', textTransform: 'uppercase', marginBottom: '2px' }}>
-                    Official AIIMS / Board Rationale
+                    Official Master Answer Key &amp; Clinical Rationale
                   </div>
                   {q.rationale}
                 </div>
@@ -445,7 +470,7 @@ export function PaperViewerModal({ paper, isOpen, onClose }: PaperViewerModalPro
           }}
         >
           <div style={{ fontSize: '0.75rem', color: '#64748b' }}>
-            {paperData.officialKeyNotification}
+            {paper.officialNotice || paperData.officialKeyNotification}
           </div>
 
           <button
