@@ -342,19 +342,22 @@ export default function NursingGateway() {
                   background: '#ffffff',
                   border: '1px solid #e0e7ff',
                   borderRadius: '16px',
-                  padding: '16px 14px',
+                  padding: '12px',
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '10px',
+                  gap: '8px',
+                  height: '76px',
                   textDecoration: 'none',
                   boxShadow: '0 2px 6px rgba(0,0,0,0.02)',
                   transition: 'all 0.12s ease',
+                  minWidth: 0,
+                  overflow: 'hidden',
                 }}
               >
                 <div
                   style={{
-                    width: '38px',
-                    height: '38px',
+                    width: '36px',
+                    height: '36px',
                     borderRadius: '50%',
                     background: '#1e3a8a',
                     color: '#ffffff',
@@ -362,17 +365,17 @@ export default function NursingGateway() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0,
-                    fontSize: '1.1rem',
+                    fontSize: '1.05rem',
                   }}
                 >
                   🏛️
                 </div>
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ fontSize: '0.86rem', fontWeight: 800, color: '#0f172a', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <span>Govt Exams</span>
-                    <ChevronRight size={14} color="#94a3b8" />
+                  <div style={{ fontSize: '0.80rem', fontWeight: 800, color: '#0f172a', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '2px' }}>
+                    <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>Govt Exams</span>
+                    <ChevronRight size={13} color="#94a3b8" style={{ flexShrink: 0 }} />
                   </div>
-                  <div style={{ fontSize: '0.70rem', color: '#64748b', marginTop: '2px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                  <div style={{ fontSize: '0.68rem', color: '#64748b', marginTop: '2px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                     50 opportunities
                   </div>
                 </div>
@@ -384,19 +387,22 @@ export default function NursingGateway() {
                   background: '#ffffff',
                   border: '1px solid #f3e8ff',
                   borderRadius: '16px',
-                  padding: '16px 14px',
+                  padding: '12px',
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '10px',
+                  gap: '8px',
+                  height: '76px',
                   textDecoration: 'none',
                   boxShadow: '0 2px 6px rgba(0,0,0,0.02)',
                   transition: 'all 0.12s ease',
+                  minWidth: 0,
+                  overflow: 'hidden',
                 }}
               >
                 <div
                   style={{
-                    width: '38px',
-                    height: '38px',
+                    width: '36px',
+                    height: '36px',
                     borderRadius: '50%',
                     background: '#7c3aed',
                     color: '#ffffff',
@@ -404,17 +410,17 @@ export default function NursingGateway() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0,
-                    fontSize: '1.1rem',
+                    fontSize: '1.05rem',
                   }}
                 >
                   🏥
                 </div>
                 <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ fontSize: '0.86rem', fontWeight: 800, color: '#0f172a', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                    <span>Hospital Jobs</span>
-                    <ChevronRight size={14} color="#94a3b8" />
+                  <div style={{ fontSize: '0.80rem', fontWeight: 800, color: '#0f172a', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '2px' }}>
+                    <span style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>Hospital Jobs</span>
+                    <ChevronRight size={13} color="#94a3b8" style={{ flexShrink: 0 }} />
                   </div>
-                  <div style={{ fontSize: '0.70rem', color: '#64748b', marginTop: '2px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                  <div style={{ fontSize: '0.68rem', color: '#64748b', marginTop: '2px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                     23 verified posts
                   </div>
                 </div>
