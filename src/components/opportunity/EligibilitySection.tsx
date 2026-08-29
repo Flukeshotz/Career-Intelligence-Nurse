@@ -114,25 +114,27 @@ export function EligibilitySection({
               <XCircle size={20} color="var(--sc-red-500)" />
             </div>
           ) : (
-            <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'var(--sc-yellow-50)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <HelpCircle size={20} color="#92400e" />
+            <div style={{ width: '32px', height: '32px', borderRadius: '50%', background: '#fef3c7', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <HelpCircle size={20} color="#b45309" />
             </div>
           )}
 
           <div>
-            <div style={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--sc-navy-900)' }}>
+            <div style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--sc-navy-900)' }}>
               {isEligible
                 ? 'You Appear Eligible'
                 : isNotEligible
-                ? 'Not Eligible for This Cycle'
+                ? 'Requirements Not Satisfied'
+                : result.missingFields.length > 0
+                ? `Check ${result.missingFields.length} Detail${result.missingFields.length > 1 ? 's' : ''} to Confirm Eligibility`
                 : 'Check Your Eligibility'}
             </div>
             <div style={{ fontSize: '0.78rem', color: 'var(--sc-ink-600)' }}>
               {isEligible
                 ? 'All mandatory requirements satisfied by your profile'
                 : isNotEligible
-                ? 'One or more mandatory requirements not satisfied'
-                : '1-tap below to check requirements against your profile'}
+                ? 'One or more mandatory criteria are currently unmet'
+                : 'Select your qualification or experience to verify your match'}
             </div>
           </div>
         </div>
@@ -165,10 +167,10 @@ export function EligibilitySection({
                 <div
                   key={path.pathwayId}
                   style={{
-                    background: isPathMet ? 'var(--sc-green-50)' : 'var(--sc-surface-secondary)',
+                    background: isPathMet ? 'var(--sc-green-50)' : isPathNotMet ? '#fef2f2' : 'var(--sc-surface-secondary)',
                     padding: '12px',
                     borderRadius: 'var(--radius-sm)',
-                    border: isPathMet ? '1px solid #bbf7d0' : '1px solid var(--sc-line-200)',
+                    border: isPathMet ? '1px solid #bbf7d0' : isPathNotMet ? '1px solid #fecaca' : '1px solid var(--sc-line-200)',
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '4px' }}>
@@ -181,7 +183,7 @@ export function EligibilitySection({
                         fontWeight: 800,
                         padding: '2px 6px',
                         borderRadius: 'var(--radius-pill)',
-                        background: isPathMet ? 'var(--sc-green-600)' : isPathNotMet ? 'var(--sc-red-500)' : '#fde68a',
+                        background: isPathMet ? 'var(--sc-green-600)' : isPathNotMet ? 'var(--sc-red-500)' : '#fef3c7',
                         color: isPathMet || isPathNotMet ? 'var(--sc-white)' : '#92400e',
                       }}
                     >

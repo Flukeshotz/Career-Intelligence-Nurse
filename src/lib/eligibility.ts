@@ -300,6 +300,7 @@ function evaluateSingleRequirement(
         remedy: remedyText || 'Check if your qualification or diploma is accepted in the official notification.',
         rawText,
         pathwayId: pathKey,
+        missingFieldKey: 'qualification',
       };
     }
 
@@ -321,11 +322,12 @@ function evaluateSingleRequirement(
           pathwayId: pathKey,
         };
       } else {
-        const userQualsFormatted = userQualCodes.map(formatQualName).join(', ');
+        // If user has other valid qualifications that don't match this specific pathway,
+        // it is not_met for this specific pathway.
         return {
           kind,
           status: 'not_met',
-          detail: simpleText || `Requires ${accepted.map(formatQualName).join(' or ')}; your profile has ${userQualsFormatted}`,
+          detail: simpleText || `Requires ${accepted.map(formatQualName).join(' or ')}`,
           remedy: remedyText || `Qualify with ${accepted.map(formatQualName).join(' or ')}`,
           rawText,
           pathwayId: pathKey,
