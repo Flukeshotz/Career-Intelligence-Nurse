@@ -29,15 +29,27 @@ interface PaperViewerModalProps {
   paper: ExamPaper | null;
   isOpen: boolean;
   onClose: () => void;
+  initialMode?: 'study' | 'cbt';
 }
 
 type ViewMode = 'study' | 'cbt' | 'results';
 
-export function PaperViewerModal({ paper, isOpen, onClose }: PaperViewerModalProps) {
-  const [viewMode, setViewMode] = useState<ViewMode>('study');
+export function PaperViewerModal({ paper, isOpen, onClose, initialMode = 'study' }: PaperViewerModalProps) {
+  const [viewMode, setViewMode] = useState<ViewMode>(initialMode);
   const [showAnswers, setShowAnswers] = useState(true);
   const [selectedSubject, setSelectedSubject] = useState<string>('all');
   const [isGeneratingPdf, setIsGeneratingPdf] = useState(false);
+
+  // Sync mode when modal opens or initialMode changes
+  useEffect(() => {
+    if (isOpen) {
+      if (initialMode === 'cbt') {
+        startCbtExam();
+      } else {
+        setViewMode('study');
+      }
+    }
+  }, [isOpen, initialMode]);
 
   // CBT Exam State
   const [currentQIndex, setCurrentQIndex] = useState(0);
