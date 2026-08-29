@@ -270,54 +270,78 @@ export function PaperViewerModal({ paper, isOpen, onClose, initialMode = 'study'
           overflow: 'hidden',
         }}
       >
-        {/* ── 1. TOP HEADER & MODE SWITCHER ── */}
+        {/* ── 1. TOP HEADER (Title + Close Button) ── */}
         <div
           style={{
-            padding: '14px 18px',
+            padding: '12px 16px 8px',
             borderBottom: '1px solid #e2e8f0',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            gap: '12px',
             background: '#ffffff',
             flexShrink: 0,
           }}
         >
-          <div style={{ flex: 1, minWidth: 0 }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '2px' }}>
-              <h3 style={{ fontSize: '1.02rem', fontWeight: 800, color: '#0f172a', margin: 0, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+          <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '8px', marginBottom: '8px' }}>
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '2px', flexWrap: 'wrap' }}>
+                <span style={{ fontSize: '0.68rem', fontWeight: 800, color: '#0369a1', background: '#e0f2fe', padding: '2px 6px', borderRadius: '4px' }}>
+                  {paper.year} {paper.shift || 'Official Paper'}
+                </span>
+                <span style={{ fontSize: '0.68rem', fontWeight: 700, color: '#15803d', background: '#f0fdf4', padding: '2px 6px', borderRadius: '4px' }}>
+                  ✓ {totalQuestions} Verified Qs
+                </span>
+              </div>
+              <h3 style={{ fontSize: '0.98rem', fontWeight: 800, color: '#0f172a', margin: 0, lineHeight: 1.25 }}>
                 {paper.title}
               </h3>
-              <span style={{ fontSize: '0.68rem', fontWeight: 700, color: '#15803d', background: '#f0fdf4', padding: '2px 6px', borderRadius: '4px', whiteSpace: 'nowrap' }}>
-                ✓ 100 Official Qs
-              </span>
+              <div style={{ fontSize: '0.70rem', color: '#64748b', marginTop: '2px' }}>
+                {paper.examName} · {paper.durationMinutes || 90} Mins · {paperData.negativeMarking}
+              </div>
             </div>
-            <div style={{ fontSize: '0.72rem', color: '#64748b' }}>
-              {paper.examName} · {totalQuestions} MCQs · {paper.durationMinutes || 90} Mins · {paperData.negativeMarking}
-            </div>
+
+            <button
+              type="button"
+              onClick={onClose}
+              style={{
+                width: '32px',
+                height: '32px',
+                borderRadius: '8px',
+                background: '#f1f5f9',
+                border: 'none',
+                color: '#64748b',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'pointer',
+                flexShrink: 0,
+              }}
+            >
+              <X size={18} />
+            </button>
           </div>
 
-          {/* Mode Selector Buttons */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          {/* ── Mode Segmented Control Tabs ── */}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '6px', background: '#f1f5f9', padding: '3px', borderRadius: '10px' }}>
             <button
               type="button"
               onClick={() => setViewMode('study')}
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: '4px',
-                padding: '6px 11px',
+                justifyContent: 'center',
+                gap: '5px',
+                padding: '7px',
                 borderRadius: '8px',
-                fontSize: '0.74rem',
-                fontWeight: viewMode === 'study' ? 700 : 500,
-                background: viewMode === 'study' ? '#0f172a' : '#f1f5f9',
-                color: viewMode === 'study' ? '#ffffff' : '#475569',
+                fontSize: '0.76rem',
+                fontWeight: viewMode === 'study' ? 800 : 600,
+                background: viewMode === 'study' ? '#ffffff' : 'transparent',
+                color: viewMode === 'study' ? '#0f172a' : '#64748b',
                 border: 'none',
                 cursor: 'pointer',
+                boxShadow: viewMode === 'study' ? '0 1px 3px rgba(0,0,0,0.1)' : 'none',
+                transition: 'all 0.12s ease',
               }}
             >
-              <BookOpen size={13} />
-              <span>Browse &amp; Key</span>
+              <BookOpen size={14} />
+              <span>Browse &amp; Key Mode</span>
             </button>
 
             <button
@@ -326,41 +350,22 @@ export function PaperViewerModal({ paper, isOpen, onClose, initialMode = 'study'
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: '4px',
-                padding: '6px 12px',
-                borderRadius: '8px',
-                fontSize: '0.74rem',
-                fontWeight: 800,
-                background: viewMode === 'cbt' ? '#0f766e' : '#f0fdfa',
-                color: viewMode === 'cbt' ? '#ffffff' : '#0f766e',
-                border: '1px solid #99f6e4',
-                cursor: 'pointer',
-              }}
-            >
-              <Play size={13} />
-              <span>{viewMode === 'cbt' ? 'CBT Active' : 'Attend CBT Test'}</span>
-            </button>
-
-            {/* Close Button */}
-            <button
-              onClick={onClose}
-              type="button"
-              style={{
-                width: '32px',
-                height: '32px',
-                borderRadius: '8px',
-                background: '#f1f5f9',
-                border: 'none',
-                color: '#475569',
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
                 justifyContent: 'center',
-                flexShrink: 0,
-                marginLeft: '4px',
+                gap: '5px',
+                padding: '7px',
+                borderRadius: '8px',
+                fontSize: '0.76rem',
+                fontWeight: viewMode === 'cbt' ? 800 : 600,
+                background: viewMode === 'cbt' ? '#16a34a' : 'transparent',
+                color: viewMode === 'cbt' ? '#ffffff' : '#64748b',
+                border: 'none',
+                cursor: 'pointer',
+                boxShadow: viewMode === 'cbt' ? '0 2px 6px rgba(22,163,74,0.3)' : 'none',
+                transition: 'all 0.12s ease',
               }}
             >
-              <X size={18} />
+              <Play size={14} />
+              <span>Timed CBT Test</span>
             </button>
           </div>
         </div>
