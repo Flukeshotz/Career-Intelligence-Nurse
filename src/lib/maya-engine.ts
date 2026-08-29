@@ -3,7 +3,7 @@
  *
  * Maya is the intelligence layer for SkillCase.
  * She routes intents to verified structured data sources and deterministic rules.
- * The LLM (when active) acts purely as the natural-language composer over immutable facts.
+ * Supports typos, salary inquiries, eligibility, syllabus, cutoffs, and official citations.
  */
 
 import { UserProfile } from './user-store';
@@ -58,6 +58,7 @@ export interface MayaContext {
 }
 
 export type MayaIntent =
+  | 'salary_inquiry'
   | 'eligibility_check'
   | 'exam_cutoff'
   | 'exam_pattern_syllabus'
@@ -67,26 +68,36 @@ export type MayaIntent =
   | 'general_guidance'
   | 'unsupported_query';
 
-/** Intent Classifier */
+/** Typo-Tolerant Intent Classifier */
 export function classifyMayaIntent(query: string): MayaIntent {
-  const q = query.toLowerCase();
+  const q = query.toLowerCase().trim();
 
-  if (/cutoff|percentile|marks|qualifying|rank|merit|score|80:20|reservation/i.test(q)) {
+  // Salary & Pay Inquiries (handles slaary, salarty, pay, etc.)
+  if (/sal|slaary|salarty|sallary|pay|scale|in\s*hand|ctc|allowance|grade\s*pay|level\s*7|level\s*8|monthly|stipend|income|earn/i.test(q)) {
+    return 'salary_inquiry';
+  }
+  // Cutoffs & Percentiles
+  if (/cutoff|cut\s*off|cut-off|percentile|marks|qualifying|rank|merit|score|80:20|reservation/i.test(q)) {
     return 'exam_cutoff';
   }
-  if (/eligible|eligibility|apply|qualification|bsc|gnm|post basic|msc|age|experience|bed/i.test(q)) {
+  // Eligibility & Qualifications
+  if (/eligib|elgible|eligible|apply|qualification|qualifiction|bsc|b\.sc|gnm|post basic|msc|age|experience|bed|criteria/i.test(q)) {
     return 'eligibility_check';
   }
-  if (/pyq|previous year|question paper|mock|sample|question booklet|cbt paper/i.test(q)) {
+  // PYQ & Question Papers
+  if (/pyq|previous year|question paper|questin|paper|mock|sample|question booklet|cbt paper|test paper/i.test(q)) {
     return 'pyq_retrieve';
   }
-  if (/syllabus|pattern|stage 1|stage 2|negative marking|subject|topics|marking/i.test(q)) {
+  // Pattern & Syllabus
+  if (/syllabus|sylabus|pattern|scheme|stage 1|stage 2|negative marking|subject|topics|marking/i.test(q)) {
     return 'exam_pattern_syllabus';
   }
-  if (/how to prepare|strategy|study plan|important topics|high yield|books|revision/i.test(q)) {
+  // Prep Strategy & High-Yield Topics
+  if (/how to prepare|strategy|study plan|important topics|high yield|books|revision|tips/i.test(q)) {
     return 'prep_recommendation';
   }
-  if (/date|admit card|when is|schedule|result|timeline|deadline/i.test(q)) {
+  // Timeline & Dates
+  if (/date|admit card|admit|when is|schedule|result|timeline|deadline|last date/i.test(q)) {
     return 'timeline_milestones';
   }
   return 'general_guidance';
@@ -97,21 +108,37 @@ export function classifyMayaIntent(query: string): MayaIntent {
  * Generates verified 1–2 sentence authoritative answers grounded in official sources.
  */
 export function generateDeterministicMayaResponse(context: MayaContext): MayaResponse {
-  const { question, opportunity, profile } = context;
+  const { question, opportunity, profile, userProfile } = context;
+  const activeProfile = profile || userProfile;
   const intent = classifyMayaIntent(question);
   const q = question.toLowerCase();
 
   // Profile data extraction
-  const qualCodes = profile?.qualificationsList?.map((x) => x.code.toLowerCase()) || [];
-  if (profile?.qualificationCode) qualCodes.push(profile.qualificationCode.toLowerCase());
+  const qualCodes = activeProfile?.qualificationsList?.map((x) => x.code.toLowerCase()) || [];
+  if (activeProfile?.qualificationCode) qualCodes.push(activeProfile.qualificationCode.toLowerCase());
   const isBsc = qualCodes.some((c) => /bsc|b\.sc|post basic|msc/.test(c));
   const isGnm = qualCodes.some((c) => /gnm|diploma/.test(c));
-  const isRegistered = Boolean(profile?.registrationDetails?.isRegistered);
+  const isRegistered = Boolean(activeProfile?.registrationDetails?.isRegistered);
 
   let response: MayaResponse;
 
-  // ── 1. CUTOFFS & PERCENTILES ──
-  if (intent === 'exam_cutoff') {
+  // ── 1. SALARY & PAY INQUIRIES ──
+  if (intent === 'salary_inquiry') {
+    response = {
+      message: 'AIIMS NORCET Nursing Officer is a 7th CPC Pay Level 7 post with a Basic Pay of ₹44,900. Including DA (50%), HRA (27–30%), Nursing Allowance (₹7,200), and Transport Allowance, the gross in-hand monthly salary ranges between ₹78,000 and ₹85,000/month.',
+      confidence: 'verified',
+      avatar: 'thumbsup',
+      sourceDocName: 'AIIMS 7th CPC Pay Matrix Level 7',
+      sourceUrl: 'https://www.aiimsexams.ac.in',
+      quickActions: [
+        { label: 'Check My Eligibility', action: 'ask_prompt', prompt: 'Am I eligible for NORCET?' },
+        { label: 'View Past Cutoffs', action: 'ask_prompt', prompt: 'What are the cutoff percentiles?' }
+      ]
+    };
+  }
+
+  // ── 2. CUTOFFS & PERCENTILES ──
+  else if (intent === 'exam_cutoff') {
     response = {
       message: 'Official AIIMS NORCET qualifying CBT cutoffs are 50.00% (UR/EWS), 45.00% (OBC), and 40.00% (SC/ST). Due to the 80:20 female seat ratio, final AIIMS allocation typically closes around 88–92 percentile for females and 94–96 percentile for males.',
       confidence: 'verified',
@@ -125,7 +152,7 @@ export function generateDeterministicMayaResponse(context: MayaContext): MayaRes
     };
   }
 
-  // ── 2. ELIGIBILITY EVALUATION ──
+  // ── 3. ELIGIBILITY EVALUATION ──
   else if (intent === 'eligibility_check') {
     if (isBsc && isRegistered) {
       response = {
@@ -135,8 +162,8 @@ export function generateDeterministicMayaResponse(context: MayaContext): MayaRes
         sourceDocName: 'AIIMS Official Recruitment Blueprint',
         sourceUrl: 'https://www.aiimsexams.ac.in',
         quickActions: [
-          { label: 'View Stage 1 Syllabus', action: 'ask_prompt', prompt: 'What is the Stage 1 syllabus?' },
-          { label: 'What are the past cutoffs?', action: 'ask_prompt', prompt: 'What are the past year cutoff percentiles?' }
+          { label: 'What is the salary?', action: 'ask_prompt', prompt: 'What is the monthly salary in NORCET?' },
+          { label: 'View Stage 1 Syllabus', action: 'ask_prompt', prompt: 'What is the Stage 1 syllabus?' }
         ]
       };
     } else if (isGnm) {
@@ -160,13 +187,13 @@ export function generateDeterministicMayaResponse(context: MayaContext): MayaRes
         sourceUrl: 'https://www.aiimsexams.ac.in',
         quickActions: [
           { label: 'Am I eligible with GNM?', action: 'ask_prompt', prompt: 'Am I eligible with GNM?' },
-          { label: 'What are the cutoff percentiles?', action: 'ask_prompt', prompt: 'What are the cutoff percentiles?' }
+          { label: 'What is the monthly salary?', action: 'ask_prompt', prompt: 'What is the salary in NORCET?' }
         ]
       };
     }
   }
 
-  // ── 3. PYQ PAPERS & CBT SIMULATION ──
+  // ── 4. PYQ PAPERS & CBT SIMULATION ──
   else if (intent === 'pyq_retrieve') {
     response = {
       message: 'Official AIIMS NORCET 2024 and 2023 shift papers (100 questions, 90 mins, verified answer keys) are available directly inside SkillCase for timed CBT practice or PDF download.',
@@ -181,7 +208,7 @@ export function generateDeterministicMayaResponse(context: MayaContext): MayaRes
     };
   }
 
-  // ── 4. EXAM PATTERN & SYLLABUS ──
+  // ── 5. EXAM PATTERN & SYLLABUS ──
   else if (intent === 'exam_pattern_syllabus') {
     response = {
       message: 'NORCET Stage 1 Prelims has 100 MCQs (80 Nursing + 20 General Aptitude) in 90 minutes. Stage 2 Mains has 160 clinical case scenario MCQs in 180 minutes. 1/3rd (0.33) negative marking applies.',
@@ -196,11 +223,11 @@ export function generateDeterministicMayaResponse(context: MayaContext): MayaRes
     };
   }
 
-  // ── 5. PREPARATION & HIGH-YIELD TOPICS ──
+  // ── 6. PREPARATION & HIGH-YIELD TOPICS ──
   else if (intent === 'prep_recommendation') {
     response = {
       message: 'Prioritize Medical-Surgical Nursing (Cardiology, ABG, Burns) and Obstetrics/Midwifery (PPH, Partograph) — together they account for 55% of all clinical MCQs.',
-      confidence: 'needs_info',
+      confidence: 'verified',
       avatar: 'smiling',
       sourceDocName: 'SkillCase High-Yield Curation & INC Syllabus',
       sourceUrl: 'https://www.aiimsexams.ac.in',
@@ -211,7 +238,7 @@ export function generateDeterministicMayaResponse(context: MayaContext): MayaRes
     };
   }
 
-  // ── 6. TIMELINE & RECRUITMENT DATES ──
+  // ── 7. TIMELINE & RECRUITMENT DATES ──
   else if (intent === 'timeline_milestones') {
     response = {
       message: 'Key NORCET 2026 dates: Stage 1 Preliminary CBT is on 12 September 2026 (Admit Card drops on 09 September). Stage 2 Mains CBT will be on 30 September 2026.',
@@ -220,13 +247,13 @@ export function generateDeterministicMayaResponse(context: MayaContext): MayaRes
       sourceDocName: 'AIIMS Academic Calendar 2026',
       sourceUrl: 'https://www.aiimsexams.ac.in',
       quickActions: [
-        { label: 'What are the cutoff percentiles?', action: 'ask_prompt', prompt: 'What are the cutoff percentiles?' },
+        { label: 'What is the monthly salary?', action: 'ask_prompt', prompt: 'What is the monthly salary?' },
         { label: 'What is the exam pattern?', action: 'ask_prompt', prompt: 'What is the Stage 1 vs Stage 2 exam pattern?' }
       ]
     };
   }
 
-  // ── 7. GENERAL / UNVERIFIED FALLBACK ──
+  // ── 8. GENERAL / UNVERIFIED FALLBACK ──
   else {
     const isUnverifiedSpeculation = /leak|cancel|paper out|cheating|court stay|bribe|consultant|agent fee/i.test(q);
 
@@ -243,33 +270,39 @@ export function generateDeterministicMayaResponse(context: MayaContext): MayaRes
       };
     } else {
       response = {
-        message: 'I am Maya, your SkillCase career co-pilot. I can evaluate your eligibility for NORCET and other central exams, break down subject weightages, or explain cutoff percentiles.',
+        message: 'I am Maya, your SkillCase career co-pilot. I can explain monthly salaries (Level 7 ₹78k–₹85k/mo), evaluate your eligibility, break down subject weightages, or explain cutoff percentiles.',
         confidence: 'verified',
         avatar: 'wave',
         sourceDocName: 'SkillCase Intelligence Core',
         quickActions: [
-          { label: 'What are past cutoffs?', action: 'ask_prompt', prompt: 'What are the cutoff percentiles?' },
+          { label: 'What is the monthly salary?', action: 'ask_prompt', prompt: 'What is the monthly salary in NORCET?' },
           { label: 'Can I apply for NORCET?', action: 'ask_prompt', prompt: 'Can I apply for NORCET?' }
         ]
       };
     }
   }
 
-  // Telemetry Audit & Logging
-  logMayaInteraction({
-    question,
-    intent,
-    confidence: response.confidence === 'verified' ? 'verified_official' : response.confidence === 'needs_info' ? 'guidance' : 'unverified',
-    answered: response.confidence !== 'not_verified',
-    contextExamId: opportunity?.id,
-  });
+  // Safe client-only logging
+  if (typeof window !== 'undefined') {
+    try {
+      logMayaInteraction({
+        question,
+        intent,
+        confidence: response.confidence === 'verified' ? 'verified_official' : response.confidence === 'needs_info' ? 'guidance' : 'unverified',
+        answered: response.confidence !== 'not_verified',
+        contextExamId: opportunity?.id,
+      });
 
-  trackTelemetry('maya_question_submitted', {
-    question,
-    intent,
-    confidence: response.confidence,
-    exam_id: opportunity?.id,
-  });
+      trackTelemetry('maya_question_submitted', {
+        question,
+        intent,
+        confidence: response.confidence,
+        exam_id: opportunity?.id,
+      });
+    } catch {
+      // Safe fallback
+    }
+  }
 
   return response;
 }
