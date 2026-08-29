@@ -96,7 +96,7 @@ export function TrackButton({
           <span style={{ width: '16px', height: '16px', borderRadius: '50%', background: '#16a34a', color: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.65rem', fontWeight: 900 }}>
             ✓
           </span>
-          <span>{currentStageObj?.short || 'Tracked'}</span>
+          <span>Tracking: {currentStageObj?.short || 'Applied'}</span>
           <ChevronDown size={14} />
         </button>
 
@@ -178,7 +178,7 @@ export function TrackButton({
       }}
     >
       <Bookmark size={15} />
-      <span>Track Cycle</span>
+      <span>Track {opportunityType === 'job' ? 'Job' : 'Exam'}</span>
     </button>
   );
 }
