@@ -81,5 +81,24 @@ Every individual opportunity record must be evaluated against this gate:
 | 12 | **Subject Weightages** | Med-Surg, OBG, Pediatrics relative frequency | *SkillCase Advisory Analysis* — marked as Non-Official Guidance | 💡 SkillCase Advisory |
 | 13 | **60-Day Revision Timeline** | Pacing recommendations for working hospital nurses | *SkillCase Advisory Guide* — marked as Non-Official Guidance | 💡 SkillCase Advisory |
 
-- **Audit**: Opportunity state transitions to `cancelled` (not `expired`). Detail page displays prominent cancellation banner with link to notice.
-- **Verdict**: ✅ **PASS**
+---
+
+## 5. Previous Year Question Paper (PYQ) & Answer Key Quality Gate
+
+> **Core Philosophy**: *"EMPTY BUT TRUE over FULL BUT FABRICATED"*.
+
+Every ingested PYQ booklet and question item must pass this 10-point audit before publication:
+
+| # | Check Item | Standard | Pass Criteria |
+|---|---|---|---|
+| 1 | **Approved Authority Domain** | Must originate from official whitelisted domain or gov archive | Whitelist domain matched |
+| 2 | **Explicit Examination Lineage** | Document explicitly states exam name, year, and conducting authority | Year and cycle verified |
+| 3 | **Source Tier Classification** | Strictly classified into Tiers 1–5 | No unverified source claiming Tier 1 |
+| 4 | **Untouched Original Text** | `question_text_original` preserves exact source extraction | No synthetic rewrites |
+| 5 | **Option Completeness** | All options (A, B, C, D) extracted from source | No manufactured options |
+| 6 | **Answer Key Provenance** | Answer key mapped to official circular with status tag | `OFFICIAL` or `VERIFIED_SECONDARY` |
+| 7 | **Incomplete Paper Auditing** | Explicit count comparison (`questions_available` vs `questions_expected`) | Missing questions not fabricated |
+| 8 | **Cryptographic Immutability** | SHA-256 hash computed and recorded | Tamper-evident checksum |
+| 9 | **Copyright / Redistribution Gate** | Document redistribution rights evaluated | `ALLOWED` or `LINK_ONLY` |
+| 10 | **Human Review Approval** | Flagged / low-confidence items validated by reviewer | `review_status = 'VERIFIED'` |
+
