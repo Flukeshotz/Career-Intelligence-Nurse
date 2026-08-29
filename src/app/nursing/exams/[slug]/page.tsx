@@ -353,7 +353,7 @@ export default async function ExamDetailPage({
                       </div>
                     </div>
 
-                    {stage.sections.length > 0 && (
+                    {stage.sections && stage.sections.length > 0 && (
                       <div style={{ borderTop: '1px solid rgba(0,0,0,0.06)', paddingTop: '8px' }}>
                         {stage.sections.map((sec, seci) => (
                           <div key={seci} style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.76rem', color: 'var(--sc-ink-700)', padding: '2px 0' }}>
