@@ -23,6 +23,7 @@ import { INITIAL_JOBS, INITIAL_EXAMS } from '@/lib/mock-data';
 import { EXAM_PAPERS, ExamPaper } from '@/lib/pyq-mock-data';
 import { getUserProfile, UserProfile } from '@/lib/user-store';
 import { GlobalSearchModal } from '@/components/layout/GlobalSearchModal';
+import { FilterDrawerModal } from '@/components/layout/FilterDrawerModal';
 import { ResumeUploadModal } from '@/components/profile/ResumeUploadModal';
 import dynamicImport from 'next/dynamic';
 
@@ -33,6 +34,7 @@ export default function NursingGateway() {
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [isMayaOpen, setIsMayaOpen] = useState(false);
   const [selectedPaper, setSelectedPaper] = useState<ExamPaper | null>(null);
 
@@ -152,7 +154,7 @@ export default function NursingGateway() {
 
           <button
             type="button"
-            onClick={() => setIsSearchOpen(true)}
+            onClick={() => setIsFilterOpen(true)}
             style={{
               width: '46px',
               height: '46px',
@@ -533,6 +535,9 @@ export default function NursingGateway() {
 
       {/* Global Search Modal */}
       <GlobalSearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+
+      {/* Filter & Sort Drawer Modal */}
+      <FilterDrawerModal isOpen={isFilterOpen} onClose={() => setIsFilterOpen(false)} />
 
       {/* Maya Drawer Panel */}
       <MayaPanel
