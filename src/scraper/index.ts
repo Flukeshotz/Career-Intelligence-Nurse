@@ -161,6 +161,22 @@ export const INITIAL_REQUIREMENTS: MockRequirement[] = ${JSON.stringify(requirem
 `;
 
   const mockDataPath = path.join(process.cwd(), 'src', 'lib', 'mock-data.ts');
+
+  // SAFETY: mock-data.ts holds hand-curated records that the scraper sources do not contain
+  // (the app ships 50 exams; sources/*.ts define only 5). Regenerating would silently delete them.
+  if (fs.existsSync(mockDataPath) && !process.argv.includes('--force')) {
+    const existing = fs.readFileSync(mockDataPath, 'utf-8');
+    const existingExams = (existing.match(/"id": "exam-/g) || []).length;
+    const existingJobs = (existing.match(/"id": "job-/g) || []).length;
+    if (exams.length < existingExams || jobs.length < existingJobs) {
+      console.error(
+        `❌ Refusing to overwrite src/lib/mock-data.ts: it has ${existingExams} exams / ${existingJobs} jobs, ` +
+          `but this run would produce ${exams.length} exams / ${jobs.length} jobs. ` +
+          `Re-run with --force only if you intend to discard the difference.`
+      );
+      process.exit(1);
+    }
+  }
   fs.writeFileSync(mockDataPath, mockDataContent, 'utf-8');
 
   console.log(`🎉 Market Seeding Complete!`);

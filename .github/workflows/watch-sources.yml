@@ -1,0 +1,42 @@
+name: Refresh data from official sources
+
+# Every 6 hours:
+#   1. refresh-data   re-reads every record's citations, and updates numbers/dates ONLY where >=2 sources agree
+#   2. watch-sources  checks that each cited page still loads and still shows our numbers (PDFs and
+#                     JavaScript-only pages are read too)
+# Results are committed to src/lib/*.json; Vercel redeploys on the commit, so the site updates itself.
+#
+# One-time setup (repo Settings): Actions enabled; secret GROQ_API_KEY; workflow permissions = read & write.
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    env:
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      WATCH_RENDER: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Install headless browser (for JavaScript-only pages)
+        run: |
+          npm i --no-save playwright
+          npx playwright install --with-deps chromium
+      - run: npx tsx scripts/refresh-data.ts --write
+      - run: npx tsx scripts/watch-sources.ts --write
+      - name: Commit if changed
+        run: |
+          git config user.name  "skillcase-data-refresh"
+          git config user.email "data-refresh@users.noreply.github.com"
+          git add src/lib/refreshed-data.json src/lib/source-checks.json
+          git diff --cached --quiet || (git commit -m "chore(data): refresh from official sources" && git push)

@@ -8,7 +8,8 @@ import { SlidersHorizontal, ArrowUpDown } from 'lucide-react';
 import { getJobs } from '@/lib/data';
 import { MockJob } from '@/lib/mock-data';
 import { JobCard } from '@/components/opportunity/JobCard';
-import { FilterEmptyState } from '@/components/empty-states/EmptyState';
+import { INITIAL_JOBS } from '@/lib/mock-data';
+import { FilterEmptyState, NothingVerifiedYet } from '@/components/empty-states/EmptyState';
 import { FilterDrawerModal } from '@/components/layout/FilterDrawerModal';
 
 type TypeFilter = 'all' | 'government' | 'private';
@@ -228,7 +229,7 @@ function JobsListContent() {
             ))}
           </div>
         ) : sortedJobs.length === 0 ? (
-          <FilterEmptyState onResetFilters={handleResetFilters} />
+          INITIAL_JOBS.length === 0 ? <NothingVerifiedYet /> : <FilterEmptyState onResetFilters={handleResetFilters} />
         ) : (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
             {sortedJobs.map((job) => (

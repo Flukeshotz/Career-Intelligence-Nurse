@@ -24,6 +24,7 @@
     "lucide-react": "^1.34.0",
     "nanoid": "^6.0.1",
     "next": "14.2.35",
+    "pdf-parse": "^1.1.1",
     "pg": "^8.23.0",
     "postgres": "^3.4.9",
     "posthog-js": "^1.422.1",

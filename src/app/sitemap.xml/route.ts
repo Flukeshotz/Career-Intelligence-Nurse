@@ -1,4 +1,5 @@
 import { INITIAL_JOBS, INITIAL_EXAMS } from '@/lib/mock-data';
+import { getTrust } from '@/lib/verification';
 
 export async function GET() {
   const baseUrl = 'https://skillcase.in';
@@ -10,14 +11,14 @@ export async function GET() {
     { url: `${baseUrl}/nursing/exams`, lastMod: now, changeFreq: 'daily', priority: '0.9' },
   ];
 
-  const jobUrls = INITIAL_JOBS.map((job) => ({
+  const jobUrls = INITIAL_JOBS.filter((job) => !getTrust(job.id).suppressFromListings).map((job) => ({
     url: `${baseUrl}/${job.professionCode}/jobs/${job.slug}`,
     lastMod: new Date(job.lastVerified).toISOString(),
     changeFreq: 'daily',
     priority: '0.8',
   }));
 
-  const examUrls = INITIAL_EXAMS.map((exam) => ({
+  const examUrls = INITIAL_EXAMS.filter((exam) => !getTrust(exam.id).suppressFromListings).map((exam) => ({
     url: `${baseUrl}/${exam.professionCode}/exams/${exam.slug}`,
     lastMod: new Date(exam.lastVerified).toISOString(),
     changeFreq: 'daily',

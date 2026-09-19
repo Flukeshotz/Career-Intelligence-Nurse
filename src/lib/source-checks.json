@@ -1,0 +1,233 @@
+{
+  "ranAt": "2026-09-19T13:05:24.627Z",
+  "checks": {
+    "exam-ap-mhsrb-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-assam-dme-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-bsf-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.891Z"
+    },
+    "exam-btsc-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-cg-vyapam-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-cnci-kolkata-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-crpf-nurse-2026": {
+      "outcome": "dead",
+      "checkedAt": "2026-09-19T13:05:13.891Z"
+    },
+    "exam-gmch-chd-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-goa-gmc-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-guj-ojas-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-hppsc-hp-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-hssc-har-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-igims-patna-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-isro-dos-nurse-2026": {
+      "outcome": "numbers_missing",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-itbp-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.891Z"
+    },
+    "exam-jipmer-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.891Z"
+    },
+    "exam-jkssb-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-jssc-jhk-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-kpsc-kar-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-maha-dhs-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-mns-ssc-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.891Z"
+    },
+    "exam-mp-esb-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-neigrihms-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-nhm-cho-panindia-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-nimhans-no-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.891Z"
+    },
+    "exam-osssc-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-pgimer-no-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.891Z"
+    },
+    "exam-punjab-bfuhs-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-rims-ranchi-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-rrb-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.891Z"
+    },
+    "exam-sail-med-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.918Z"
+    },
+    "exam-sctimst-nurse-2026": {
+      "outcome": "dead",
+      "checkedAt": "2026-09-19T13:05:13.916Z"
+    },
+    "exam-ssb-mha-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-tn-mrb-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.891Z"
+    },
+    "exam-ts-mhsrb-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.891Z"
+    },
+    "exam-ukmssb-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-up-upums-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.891Z"
+    },
+    "exam-uppsc-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "exam-wbhrb-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.917Z"
+    },
+    "job-apollo-blr-card-2026": {
+      "outcome": "unparseable",
+      "checkedAt": "2026-09-19T13:05:14.960Z"
+    },
+    "job-apollo-chn-ot-2026": {
+      "outcome": "unparseable",
+      "checkedAt": "2026-09-19T13:05:13.991Z"
+    },
+    "job-apollo-hyd-icu-2026": {
+      "outcome": "unparseable",
+      "checkedAt": "2026-09-19T13:05:14.532Z"
+    },
+    "job-esic-no-2026": {
+      "outcome": "numbers_missing",
+      "checkedAt": "2026-09-19T13:05:13.918Z"
+    },
+    "job-fortis-kol-ot-2026": {
+      "outcome": "dead",
+      "checkedAt": "2026-09-19T13:05:14.842Z"
+    },
+    "job-fortis-mum-cath-2026": {
+      "outcome": "dead",
+      "checkedAt": "2026-09-19T13:05:14.121Z"
+    },
+    "job-guj-gmc-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.988Z"
+    },
+    "job-kar-kpsc-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.988Z"
+    },
+    "job-maha-dhs-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.988Z"
+    },
+    "job-manipal-blr-icu-2026": {
+      "outcome": "error",
+      "checkedAt": "2026-09-19T13:05:13.988Z"
+    },
+    "job-manipal-jai-nurse-2026": {
+      "outcome": "error",
+      "checkedAt": "2026-09-19T13:05:14.624Z"
+    },
+    "job-max-delhi-er-2026": {
+      "outcome": "dead",
+      "checkedAt": "2026-09-19T13:05:14.069Z"
+    },
+    "job-medanta-gur-onco-2026": {
+      "outcome": "numbers_missing",
+      "checkedAt": "2026-09-19T13:05:14.330Z"
+    },
+    "job-mp-nhm-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.988Z"
+    },
+    "job-nh-blr-picu-2026": {
+      "outcome": "error",
+      "checkedAt": "2026-09-19T13:05:14.164Z"
+    },
+    "job-odisha-osssc-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.988Z"
+    },
+    "job-up-upums-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.988Z"
+    },
+    "job-wb-wbhrb-nurse-2026": {
+      "outcome": "homepage_only",
+      "checkedAt": "2026-09-19T13:05:13.988Z"
+    }
+  }
+}

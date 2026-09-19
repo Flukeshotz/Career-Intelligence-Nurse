@@ -1,4 +1,6 @@
 import { INITIAL_JOBS, INITIAL_EXAMS, INITIAL_REQUIREMENTS, MockJob, MockExam, MockRequirement } from './mock-data';
+import { deriveLifecycle } from './lifecycle';
+import { getTrust } from './verification';
 
 export { INITIAL_JOBS, INITIAL_EXAMS, INITIAL_REQUIREMENTS };
 
@@ -7,17 +9,14 @@ export { INITIAL_JOBS, INITIAL_EXAMS, INITIAL_REQUIREMENTS };
  * "open -> closed: deadline passed -> System, computed at read time — never trust source-reported status alone."
  */
 export function computeOpportunityStatus(item: {
+  applicationStart?: string;
   applicationDeadline?: string;
   examDate?: string;
   status: 'open' | 'upcoming' | 'closed' | 'expired';
 }): 'open' | 'upcoming' | 'closed' | 'expired' {
-  if (item.applicationDeadline) {
-    const deadlineTime = new Date(item.applicationDeadline).getTime();
-    if (!isNaN(deadlineTime) && Date.now() > deadlineTime) {
-      return 'closed';
-    }
-  }
-  return item.status;
+  // Derived from the record's own dates on every request. Handles upcoming, open and closed
+  // (the earlier version could only ever produce `closed`). See lifecycle.ts.
+  return deriveLifecycle(item).status;
 }
 
 export interface OpportunityFilters {
@@ -29,7 +28,7 @@ export interface OpportunityFilters {
 }
 
 export async function getJobs(filters: OpportunityFilters = {}): Promise<MockJob[]> {
-  let list = INITIAL_JOBS.map((j) => ({
+  let list = INITIAL_JOBS.filter((j) => !getTrust(j.id).suppressFromListings).map((j) => ({
     ...j,
     status: computeOpportunityStatus(j),
   }));
@@ -92,7 +91,10 @@ export async function getJobBySlug(profession: string, slug: string): Promise<Mo
 }
 
 export async function getExams(filters: { search?: string; status?: string } = {}): Promise<MockExam[]> {
-  let list = INITIAL_EXAMS.map((e) => ({
+  // Records whose details conflict with official reporting, or whose notification has not been
+  // published, are not presented as live opportunities. Their direct URLs still resolve and
+  // carry an explanatory banner (see TrustPanel), so shared links do not 404.
+  let list = INITIAL_EXAMS.filter((e) => !getTrust(e.id).suppressFromListings).map((e) => ({
     ...e,
     status: computeOpportunityStatus(e),
   }));

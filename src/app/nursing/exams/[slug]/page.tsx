@@ -11,6 +11,8 @@ import { getExamBySlug, getRequirementsForOpportunity, INITIAL_EXAMS } from '@/l
 import { generateExamJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { EligibilitySection } from '@/components/opportunity/EligibilitySection';
 import { TrustPanel } from '@/components/opportunity/TrustPanel';
+import { TrustBanner } from '@/components/opportunity/TrustBanner';
+import { getTrust } from '@/lib/verification';
 import { ShareButtons } from '@/components/opportunity/ShareButtons';
 import { TrackButton } from '@/components/opportunity/TrackButton';
 import { PyqCard } from '@/components/opportunity/PyqCard';
@@ -97,14 +99,19 @@ export default async function ExamDetailPage({
 
   return (
     <div className="wide-container mobile-safe-bottom" style={{ paddingTop: '16px', maxWidth: '860px', margin: '0 auto', paddingBottom: '90px' }}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(examJsonLd) }}
-      />
+      {/* Never feed search engines structured data we know is wrong or unpublished */}
+      {!getTrust(exam.id).suppressFromListings && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(examJsonLd) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }}
       />
+
+      <TrustBanner recordId={exam.id} />
 
       {/* ── TOP NAV BAR ── */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
@@ -242,6 +249,7 @@ export default async function ExamDetailPage({
       {/* ── 5. OFFICIAL CURATION & SOURCE TRUST PANEL ── */}
       <div style={{ marginBottom: '16px' }}>
         <TrustPanel
+          recordId={exam.id}
           source={exam.organisation}
           sourceType="official"
           lastVerified={exam.lastVerified}

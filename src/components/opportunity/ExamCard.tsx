@@ -1,16 +1,17 @@
 'use client';
 
 import Link from 'next/link';
+import { FreshnessLine } from './FreshnessLine';
 import { ChevronRight, Calendar, Users, MapPin } from 'lucide-react';
 import { MockExam } from '@/lib/mock-data';
 
 export function ExamCard({ exam }: { exam: MockExam }) {
   const examDateStr = exam.examDate
-    ? new Date(exam.examDate).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })
+    ? new Date(exam.examDate).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'Asia/Kolkata' })
     : null;
 
   const deadlineStr = exam.applicationDeadline
-    ? new Date(exam.applicationDeadline).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })
+    ? new Date(exam.applicationDeadline).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', timeZone: 'Asia/Kolkata' })
     : null;
 
   return (
@@ -76,6 +77,8 @@ export function ExamCard({ exam }: { exam: MockExam }) {
             Details <ChevronRight size={13} />
           </span>
         </div>
+        {/* Freshness — when this record was last actually checked, and how far to trust it */}
+        <FreshnessLine id={exam.id} lastVerified={exam.lastVerified} />
       </div>
     </Link>
   );

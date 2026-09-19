@@ -1,13 +1,14 @@
 'use client';
 
 import Link from 'next/link';
+import { FreshnessLine } from './FreshnessLine';
 import { MapPin, ChevronRight } from 'lucide-react';
 import { MockJob } from '@/lib/mock-data';
 
 export function JobCard({ job }: { job: MockJob }) {
   const isGov = job.type === 'government';
   const deadlineStr = job.applicationDeadline
-    ? new Date(job.applicationDeadline).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })
+    ? new Date(job.applicationDeadline).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', timeZone: 'Asia/Kolkata' })
     : null;
 
   return (
@@ -82,6 +83,8 @@ export function JobCard({ job }: { job: MockJob }) {
             Details <ChevronRight size={13} />
           </span>
         </div>
+        {/* Freshness — when this record was last actually checked, and how far to trust it */}
+        <FreshnessLine id={job.id} lastVerified={job.lastVerified} />
       </div>
     </Link>
   );

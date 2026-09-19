@@ -6,6 +6,8 @@ import { getJobBySlug, getRequirementsForOpportunity, INITIAL_JOBS, INITIAL_EXAM
 import { generateJobPostingJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { EligibilitySection } from '@/components/opportunity/EligibilitySection';
 import { TrustPanel } from '@/components/opportunity/TrustPanel';
+import { TrustBanner } from '@/components/opportunity/TrustBanner';
+import { getTrust } from '@/lib/verification';
 import { ShareButtons } from '@/components/opportunity/ShareButtons';
 import { TrackButton } from '@/components/opportunity/TrackButton';
 import { StructuredHighlights } from '@/components/opportunity/StructuredHighlights';
@@ -98,14 +100,19 @@ export default async function JobDetailPage({
 
   return (
     <div className="wide-container mobile-safe-bottom" style={{ paddingTop: '20px' }}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jobPostingJsonLd) }}
-      />
+      {/* Never feed Google Jobs a posting we know is wrong or unpublished */}
+      {!getTrust(job.id).suppressFromListings && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jobPostingJsonLd) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }}
       />
+
+      <TrustBanner recordId={job.id} />
 
       {/* Back Navigation */}
       <div style={{ marginBottom: '16px' }}>
@@ -263,6 +270,7 @@ export default async function JobDetailPage({
           )}
 
           <TrustPanel
+            recordId={job.id}
             source={job.source}
             sourceType={job.sourceType}
             lastVerified={job.lastVerified}

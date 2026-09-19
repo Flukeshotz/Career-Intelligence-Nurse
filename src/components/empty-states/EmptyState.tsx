@@ -124,3 +124,39 @@ export function AbroadWaitlistModal({
     </div>
   );
 }
+
+
+/**
+ * Shown when NO listings are published at all (not when filters exclude everything). Says what is
+ * true: we only list openings we could verify, and none have passed that check yet.
+ */
+export function NothingVerifiedYet({ what = 'job listings' }: { what?: string }) {
+  return (
+    <div className="sc-card" style={{ padding: '36px 20px', textAlign: 'center', margin: '20px 0' }}>
+      <div
+        style={{
+          width: '48px',
+          height: '48px',
+          borderRadius: '50%',
+          background: 'var(--sc-yellow-50)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          margin: '0 auto 14px',
+        }}
+      >
+        <RefreshCw size={22} color="#92400e" />
+      </div>
+      <h3 style={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--sc-navy-900)', marginBottom: '6px' }}>
+        We&apos;re verifying {what}
+      </h3>
+      <p style={{ fontSize: '0.88rem', color: 'var(--sc-ink-600)', maxWidth: '420px', margin: '0 auto 16px', lineHeight: 1.5 }}>
+        We only publish openings we can confirm against official notifications. None have passed that check yet, so rather than show
+        something unverified we&apos;re showing nothing. Government exams are available now.
+      </p>
+      <Link href="/nursing/exams" className="btn-secondary" style={{ fontSize: '0.85rem' }}>
+        View verified exams <ArrowRight size={13} />
+      </Link>
+    </div>
+  );
+}
