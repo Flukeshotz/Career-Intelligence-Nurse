@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-09-19T14:35:30.093Z",
+  "ranAt": "2026-09-19T19:49:55.877Z",
   "records": {
     "exam-norcet-2026": {
       "status": "consensus",
@@ -166,22 +166,22 @@
       "fields": {
         "vacancies": {
           "value": 1803,
-          "agreeing": 2,
-          "of": 2
+          "agreeing": 3,
+          "of": 3
         },
         "applicationStart": {
           "value": "2026-02-09",
           "agreeing": 2,
-          "of": 2
+          "of": 3
         },
         "applicationDeadline": {
           "value": "2026-02-23",
-          "agreeing": 2,
-          "of": 2
+          "agreeing": 3,
+          "of": 3
         }
       },
       "disagreements": [],
-      "sourcesRead": 2,
+      "sourcesRead": 3,
       "sourcesTried": 3
     },
     "exam-ap-mhsrb-nurse-2026": {
