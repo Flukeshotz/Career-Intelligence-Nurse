@@ -52,8 +52,8 @@ export async function generateMetadata({
 
 /** Pay is shown only when it was verified (verified-facts.ts); otherwise the tile says so. */
 function payTile(examId: string): string {
-  const pay = VERIFIED_FACTS[examId]?.pay;
-  return pay ? pay.split('(')[0].trim() : 'See notice';
+  const f = VERIFIED_FACTS[examId];
+  return f?.payShort ?? (f?.pay ? f.pay.split('(')[0].trim() : 'See notice');
 }
 
 export default async function ExamDetailPage({
@@ -194,7 +194,7 @@ export default async function ExamDetailPage({
 
           <div style={{ background: 'rgba(255,255,255,0.08)', padding: '8px 10px', borderRadius: '8px', minHeight: '56px', display: 'flex', flexDirection: 'column', justifyContent: 'center', minWidth: 0, overflow: 'hidden' }}>
             <div style={{ fontSize: '0.62rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 700 }}>Pay</div>
-            <div style={{ fontSize: '0.98rem', fontWeight: 800, color: '#f7d78e', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+            <div style={{ fontSize: '0.86rem', fontWeight: 800, color: '#f7d78e', lineHeight: 1.25 }}>
               {payTile(exam.id)}
             </div>
           </div>
