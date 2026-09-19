@@ -7,7 +7,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowUpDown, SlidersHorizontal, FileText, ArrowRight, X } from 'lucide-react';
 import { getExams } from '@/lib/data';
-import { MockExam } from '@/lib/mock-data';
+import { MockExam, INITIAL_EXAMS } from '@/lib/mock-data';
 import { ExamCard } from '@/components/opportunity/ExamCard';
 import { PyqCard } from '@/components/opportunity/PyqCard';
 import { EXAM_PAPERS } from '@/lib/pyq-mock-data';
@@ -133,7 +133,7 @@ function ExamsListContent() {
           <div style={{ position: 'relative', flex: 1 }}>
             <input
               type="search"
-              placeholder="Search 50 exams (NORCET, RRB, MNS, ESIC...)"
+              placeholder={`Search ${INITIAL_EXAMS.length} verified exams (NORCET, RRB, PGIMER...)`}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               style={{

@@ -163,7 +163,7 @@ export const INITIAL_REQUIREMENTS: MockRequirement[] = ${JSON.stringify(requirem
   const mockDataPath = path.join(process.cwd(), 'src', 'lib', 'mock-data.ts');
 
   // SAFETY: mock-data.ts holds hand-curated records that the scraper sources do not contain
-  // (the app ships 50 exams; sources/*.ts define only 5). Regenerating would silently delete them.
+  // (the app ships hand-verified exams that sources/*.ts do not define). Regenerating would silently delete them.
   if (fs.existsSync(mockDataPath) && !process.argv.includes('--force')) {
     const existing = fs.readFileSync(mockDataPath, 'utf-8');
     const existingExams = (existing.match(/"id": "exam-/g) || []).length;

@@ -217,7 +217,7 @@ export default function NorcetCommandCenterPage() {
           }}
         >
           <ArrowLeft size={15} />
-          <span>All 50 Exams</span>
+          <span>All Exams</span>
         </Link>
 
         <ShareButtons

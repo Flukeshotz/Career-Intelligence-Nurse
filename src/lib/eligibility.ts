@@ -69,14 +69,16 @@ export function evaluateEligibility(
   requirements: OpportunityRequirementItem[],
   profile: UserProfile | null
 ): EligibilityResult {
-  // If no requirements specified, treat as open
+  // No structured requirements recorded => we have NOT checked eligibility. That is "unknown",
+  // never "eligible": a nurse deciding whether to pay an application fee must not be told she
+  // qualifies for conditions we never looked at (build_spec Scenario D).
   if (!requirements || requirements.length === 0) {
     return {
-      confidence: 'likely',
-      label: 'Likely Eligible',
-      gap_summary: 'No specific restrictive eligibility criteria recorded for this vacancy.',
-      next_actions: ['Review official notification document and proceed to application portal.'],
-      eligible: true,
+      confidence: 'check_requirements',
+      label: "We couldn't confirm your eligibility",
+      gap_summary: "We haven't structured this notification's eligibility rules yet, so we can't tell you whether you qualify.",
+      next_actions: ['Read the eligibility section of the official notification before applying.'],
+      eligible: null,
       requirements: [],
       missingFields: [],
     };

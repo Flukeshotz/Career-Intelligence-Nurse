@@ -128,7 +128,7 @@ export default async function ExamDetailPage({
           }}
         >
           <ArrowLeft size={15} />
-          <span>All 50 Exams</span>
+          <span>All Exams</span>
         </Link>
 
         <ShareButtons

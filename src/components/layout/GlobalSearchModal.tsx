@@ -229,7 +229,7 @@ export function GlobalSearchModal({ isOpen, onClose }: GlobalSearchModalProps) {
               ))}
               <div style={{ padding: '14px 16px', background: 'var(--sc-surface-secondary)', margin: '8px 0 0' }}>
                 <div style={{ fontSize: '0.76rem', color: 'var(--sc-ink-500)' }}>
-                  Search across <strong>50 exams</strong>, <strong>23 vacancies</strong>, and <strong>50+ official portals</strong>
+                  Search across <strong>{INITIAL_EXAMS.length} verified exams</strong>{INITIAL_JOBS.length > 0 && <>, <strong>{INITIAL_JOBS.length} verified jobs</strong></>}
                 </div>
               </div>
             </div>

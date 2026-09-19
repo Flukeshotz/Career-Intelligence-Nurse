@@ -107,7 +107,7 @@ const websiteSchema = {
   '@type': 'WebSite',
   name: 'SkillCase Nursing',
   url: BASE_URL,
-  description: 'Verified nursing jobs, NORCET 2026, RRB, ESIC and 50 national recruitment exams with eligibility intelligence for nurses across India.',
+  description: 'Nursing recruitment exams checked against independent sources — NORCET 2026, RRB, PGIMER and more — with eligibility guidance for nurses across India.',
   potentialAction: {
     '@type': 'SearchAction',
     target: {

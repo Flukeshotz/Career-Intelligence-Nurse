@@ -127,6 +127,8 @@ export function EligibilitySection({
                 ? 'Requirements Not Satisfied'
                 : result.missingFields.length > 0
                 ? `Check ${result.missingFields.length} Detail${result.missingFields.length > 1 ? 's' : ''} to Confirm Eligibility`
+                : requirements.length === 0
+                ? "We couldn't confirm your eligibility"
                 : 'Check Your Eligibility'}
             </div>
             <div style={{ fontSize: '0.78rem', color: 'var(--sc-ink-600)' }}>
@@ -134,6 +136,8 @@ export function EligibilitySection({
                 ? 'All mandatory requirements satisfied by your profile'
                 : isNotEligible
                 ? 'One or more mandatory criteria are currently unmet'
+                : requirements.length === 0
+                ? 'Eligibility rules for this notice are not recorded yet. Check the official notification before applying.'
                 : 'Select your qualification or experience to verify your match'}
             </div>
           </div>
