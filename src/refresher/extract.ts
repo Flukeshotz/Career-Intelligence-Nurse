@@ -1,4 +1,4 @@
-import Groq from 'groq-sdk';
+import { chatJson } from './llm';
 
 export interface Extracted {
   matches: boolean; // does this page describe THIS recruitment
@@ -8,8 +8,6 @@ export interface Extracted {
   examDate: string | null;
   examEndDate: string | null; // last day of a multi-day exam
 }
-
-const MODEL = process.env.GROQ_MODEL || 'openai/gpt-oss-20b';
 
 /** Trim to the part of the page that actually talks about this recruitment. */
 function window(text: string, hints: string[]): string {
@@ -35,22 +33,9 @@ Rules:
 - examEndDate: the LAST day if the exam runs over several consecutive days (e.g. 22 and 23 September => examDate 22nd, examEndDate 23rd). null for a single-day exam or if no end is stated.`;
 
 export async function extractFacts(target: { name: string; organisation: string; hints: string[] }, pageText: string): Promise<Extracted | null> {
-  const key = process.env.GROQ_API_KEY;
-  if (!key) throw new Error('GROQ_API_KEY is not set');
-  const groq = new Groq({ apiKey: key, timeout: 30_000, maxRetries: 2 });
-
-  const res = await groq.chat.completions.create({
-    model: MODEL,
-    temperature: 0,
-    response_format: { type: 'json_object' },
-    messages: [
-      { role: 'system', content: SYSTEM },
-      { role: 'user', content: `Recruitment: ${target.name}\nBody: ${target.organisation}\n\nPAGE TEXT:\n${window(pageText, target.hints)}` },
-    ],
-  });
-
+  const raw = await chatJson(SYSTEM, `Recruitment: ${target.name}\nBody: ${target.organisation}\n\nPAGE TEXT:\n${window(pageText, target.hints)}`);
   try {
-    const j = JSON.parse(res.choices[0]?.message?.content || '{}');
+    const j = JSON.parse(raw || '{}');
     const isDate = (v: unknown) => (typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v) ? v : null);
     return {
       matches: j.matches === true,

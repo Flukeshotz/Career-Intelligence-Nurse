@@ -1,12 +1,15 @@
 name: Refresh data from official sources
 
 # Every 6 hours:
-#   1. refresh-data   re-reads every record's citations, and updates numbers/dates ONLY where >=2 sources agree
-#   2. watch-sources  checks that each cited page still loads and still shows our numbers (PDFs and
-#                     JavaScript-only pages are read too)
+#   1. refresh-data   re-reads every record's sources; updates numbers/dates ONLY where >=2 sources agree
+#   2. watch-sources  checks each cited page still loads and still shows our numbers
+#   3. discover       looks for recruitments we are not tracking yet (report only, never publishes)
+#   4. health         decides whether a human is needed at all
 # Results are committed to src/lib/*.json; Vercel redeploys on the commit, so the site updates itself.
+# You are only contacted (a GitHub issue -> email) when something needs a person. Silence = healthy.
 #
-# One-time setup (repo Settings): Actions enabled; secret GROQ_API_KEY; workflow permissions = read & write.
+# One-time setup (repo Settings): Actions enabled; secrets GROQ_API_KEY and/or DEEPSEEK_API_KEY;
+# workflow permissions = read & write.
 on:
   schedule:
     - cron: '0 */6 * * *'
@@ -14,13 +17,16 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
     env:
       GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
       WATCH_RENDER: '1'
+      GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -34,9 +40,36 @@ jobs:
           npx playwright install --with-deps chromium
       - run: npx tsx scripts/refresh-data.ts --write
       - run: npx tsx scripts/watch-sources.ts --write
-      - name: Commit if changed
+      - name: Discover new recruitments (report only)
+        continue-on-error: true
+        run: npx tsx scripts/discover.ts --write
+      - name: Commit data if changed
         run: |
           git config user.name  "skillcase-data-refresh"
           git config user.email "data-refresh@users.noreply.github.com"
           git add src/lib/refreshed-data.json src/lib/source-checks.json
-          git diff --cached --quiet || (git commit -m "chore(data): refresh from official sources" && git push)
+          git diff --cached --quiet || (git commit -m "chore(data): refresh from official sources" && git pull --rebase -q && git push)
+      - name: Health check
+        run: npx tsx scripts/health.ts
+      - name: Open, update or close the "data needs attention" issue
+        run: |
+          set -e
+          T="Data needs attention"
+          N=$(gh issue list --state open --search "\"$T\" in:title" --json number -q '.[0].number' || true)
+          if [ -s health-report.md ]; then
+            if [ -n "$N" ]; then gh issue edit "$N" --body-file health-report.md
+            else gh issue create --title "$T" --body-file health-report.md; fi
+          elif [ -n "$N" ]; then
+            gh issue close "$N" --comment "All live recruitments are healthy again."
+          fi
+      - name: Open or update the "new recruitments" issue
+        run: |
+          set -e
+          T="New nursing recruitments to review"
+          N=$(gh issue list --state open --search "\"$T\" in:title" --json number -q '.[0].number' || true)
+          if [ -s discovery-report.md ]; then
+            if [ -n "$N" ]; then gh issue edit "$N" --body-file discovery-report.md
+            else gh issue create --title "$T" --body-file discovery-report.md; fi
+          elif [ -n "$N" ]; then
+            gh issue close "$N" --comment "No untracked recruitments found."
+          fi
