@@ -1,57 +1,38 @@
 {
-  "ranAt": "2026-09-19T13:33:51.772Z",
+  "ranAt": "2026-09-19T13:48:45.578Z",
   "records": {
     "exam-norcet-2026": {
-      "status": "consensus",
+      "status": "no_consensus",
       "checkedAt": "2026-09-19",
       "fields": {
-        "vacancies": {
-          "value": 2218,
-          "agreeing": 3,
-          "of": 4
-        },
         "applicationStart": {
           "value": "2026-07-24",
-          "agreeing": 3,
-          "of": 3
+          "agreeing": 2,
+          "of": 2
         },
         "applicationDeadline": {
           "value": "2026-08-13",
-          "agreeing": 3,
-          "of": 3
+          "agreeing": 2,
+          "of": 2
         },
         "examDate": {
           "value": "2026-09-12",
-          "agreeing": 4,
-          "of": 4
+          "agreeing": 2,
+          "of": 2
         }
       },
-      "disagreements": [],
-      "sourcesRead": 4,
+      "disagreements": [
+        "vacancies"
+      ],
+      "sourcesRead": 2,
       "sourcesTried": 4
     },
     "exam-rrb-nurse-2026": {
-      "status": "consensus",
+      "status": "partial",
       "checkedAt": "2026-09-19",
-      "fields": {
-        "vacancies": {
-          "value": 365,
-          "agreeing": 3,
-          "of": 3
-        },
-        "applicationStart": {
-          "value": "2026-09-15",
-          "agreeing": 3,
-          "of": 3
-        },
-        "applicationDeadline": {
-          "value": "2026-10-14",
-          "agreeing": 3,
-          "of": 3
-        }
-      },
+      "fields": {},
       "disagreements": [],
-      "sourcesRead": 3,
+      "sourcesRead": 1,
       "sourcesTried": 3
     },
     "exam-pgimer-no-2026": {
@@ -60,80 +41,38 @@
       "fields": {
         "vacancies": {
           "value": 243,
-          "agreeing": 3,
-          "of": 3
+          "agreeing": 2,
+          "of": 2
         },
         "applicationStart": {
           "value": "2026-09-10",
-          "agreeing": 3,
-          "of": 3
+          "agreeing": 2,
+          "of": 2
         },
         "applicationDeadline": {
           "value": "2026-10-03",
-          "agreeing": 3,
-          "of": 3
+          "agreeing": 2,
+          "of": 2
         }
       },
       "disagreements": [],
-      "sourcesRead": 3,
+      "sourcesRead": 2,
       "sourcesTried": 3
     },
     "exam-osssc-nurse-2026": {
-      "status": "consensus",
+      "status": "partial",
       "checkedAt": "2026-09-19",
-      "fields": {
-        "vacancies": {
-          "value": 5989,
-          "agreeing": 3,
-          "of": 3
-        },
-        "applicationStart": {
-          "value": "2026-06-13",
-          "agreeing": 3,
-          "of": 3
-        },
-        "applicationDeadline": {
-          "value": "2026-08-19",
-          "agreeing": 3,
-          "of": 3
-        },
-        "examDate": {
-          "value": "2026-09-22",
-          "agreeing": 2,
-          "of": 3
-        }
-      },
+      "fields": {},
       "disagreements": [],
-      "sourcesRead": 3,
+      "sourcesRead": 1,
       "sourcesTried": 3
     },
     "exam-mp-esb-nurse-2026": {
-      "status": "consensus",
+      "status": "partial",
       "checkedAt": "2026-09-19",
-      "fields": {
-        "vacancies": {
-          "value": 2099,
-          "agreeing": 3,
-          "of": 3
-        },
-        "applicationStart": {
-          "value": "2026-04-06",
-          "agreeing": 3,
-          "of": 3
-        },
-        "applicationDeadline": {
-          "value": "2026-04-20",
-          "agreeing": 3,
-          "of": 3
-        },
-        "examDate": {
-          "value": "2026-05-15",
-          "agreeing": 3,
-          "of": 3
-        }
-      },
+      "fields": {},
       "disagreements": [],
-      "sourcesRead": 3,
+      "sourcesRead": 1,
       "sourcesTried": 3
     },
     "exam-ukmssb-nurse-2026": {
@@ -142,22 +81,22 @@
       "fields": {
         "vacancies": {
           "value": 196,
-          "agreeing": 3,
-          "of": 3
+          "agreeing": 2,
+          "of": 2
         },
         "applicationStart": {
           "value": "2026-06-12",
-          "agreeing": 3,
-          "of": 3
+          "agreeing": 2,
+          "of": 2
         },
         "applicationDeadline": {
           "value": "2026-07-02",
-          "agreeing": 3,
-          "of": 3
+          "agreeing": 2,
+          "of": 2
         }
       },
       "disagreements": [],
-      "sourcesRead": 3,
+      "sourcesRead": 2,
       "sourcesTried": 3
     },
     "exam-hssc-har-nurse-2026": {
@@ -185,27 +124,11 @@
       "sourcesTried": 3
     },
     "exam-ap-mhsrb-nurse-2026": {
-      "status": "consensus",
+      "status": "partial",
       "checkedAt": "2026-09-19",
-      "fields": {
-        "vacancies": {
-          "value": 419,
-          "agreeing": 3,
-          "of": 3
-        },
-        "applicationStart": {
-          "value": "2026-06-13",
-          "agreeing": 3,
-          "of": 3
-        },
-        "applicationDeadline": {
-          "value": "2026-06-30",
-          "agreeing": 3,
-          "of": 3
-        }
-      },
+      "fields": {},
       "disagreements": [],
-      "sourcesRead": 3,
+      "sourcesRead": 1,
       "sourcesTried": 3
     }
   }
