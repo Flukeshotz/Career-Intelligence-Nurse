@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-09-19T13:48:45.578Z",
+  "ranAt": "2026-09-19T13:52:53.778Z",
   "records": {
     "exam-norcet-2026": {
       "status": "no_consensus",
@@ -110,7 +110,7 @@
         },
         "applicationStart": {
           "value": "2026-02-09",
-          "agreeing": 3,
+          "agreeing": 2,
           "of": 3
         },
         "applicationDeadline": {
