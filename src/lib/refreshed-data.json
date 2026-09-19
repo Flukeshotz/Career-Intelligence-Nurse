@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-09-19T13:33:51.772Z",
+  "ranAt": "2026-09-19T13:57:27.066Z",
   "records": {
     "exam-norcet-2026": {
       "status": "consensus",
@@ -60,22 +60,22 @@
       "fields": {
         "vacancies": {
           "value": 243,
-          "agreeing": 3,
-          "of": 3
+          "agreeing": 2,
+          "of": 2
         },
         "applicationStart": {
           "value": "2026-09-10",
-          "agreeing": 3,
-          "of": 3
+          "agreeing": 2,
+          "of": 2
         },
         "applicationDeadline": {
           "value": "2026-10-03",
-          "agreeing": 3,
-          "of": 3
+          "agreeing": 2,
+          "of": 2
         }
       },
       "disagreements": [],
-      "sourcesRead": 3,
+      "sourcesRead": 2,
       "sourcesTried": 3
     },
     "exam-osssc-nurse-2026": {
@@ -142,22 +142,22 @@
       "fields": {
         "vacancies": {
           "value": 196,
-          "agreeing": 3,
-          "of": 3
+          "agreeing": 2,
+          "of": 2
         },
         "applicationStart": {
           "value": "2026-06-12",
-          "agreeing": 3,
-          "of": 3
+          "agreeing": 2,
+          "of": 2
         },
         "applicationDeadline": {
           "value": "2026-07-02",
-          "agreeing": 3,
-          "of": 3
+          "agreeing": 2,
+          "of": 2
         }
       },
       "disagreements": [],
-      "sourcesRead": 3,
+      "sourcesRead": 2,
       "sourcesTried": 3
     },
     "exam-hssc-har-nurse-2026": {
