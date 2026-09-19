@@ -8,6 +8,8 @@
  *    and never reflected that Prelims had been held and Mains was still ahead
  */
 
+import { examDateText } from './format-dates';
+
 export type LegacyStatus = 'open' | 'upcoming' | 'closed' | 'expired';
 
 export type LifecycleStage =
@@ -21,6 +23,8 @@ export interface LifecycleInput {
   applicationStart?: string;
   applicationDeadline?: string;
   examDate?: string;
+  examEndDate?: string;
+  examDateOpenEnded?: boolean;
   mainsDate?: string;
   status: LegacyStatus;
 }
@@ -47,6 +51,9 @@ export function deriveLifecycle(item: LifecycleInput, now: number = Date.now()):
   const deadline = ms(item.applicationDeadline);
   const exam = ms(item.examDate);
   const mains = ms(item.mainsDate);
+  const examEnd = ms(item.examEndDate);
+  // A multi-day exam is still running until the end of its last day.
+  const examLast = isNaN(examEnd) ? exam : examEnd;
 
   if (!isNaN(start) && now < start) {
     return { status: 'upcoming', stage: 'upcoming', label: `Applications open ${fmt(item.applicationStart!)}` };
@@ -65,13 +72,13 @@ export function deriveLifecycle(item: LifecycleInput, now: number = Date.now()):
   if (!isNaN(deadline) && now > deadline) {
     if (!isNaN(exam)) {
       // Exam runs through the end of its day.
-      if (now > exam + 86_400_000 && !isNaN(mains) && now < mains) {
+      if (now > examLast + 86_400_000 && !isNaN(mains) && now < mains) {
         return { status: 'closed', stage: 'applications_closed', label: `Stage 1 held — Mains ${fmt(item.mainsDate!)}` };
       }
-      if (now > exam + 86_400_000) {
-        return { status: 'closed', stage: 'exam_held', label: `Exam held ${fmt(item.examDate!)} — result awaited` };
+      if (now > examLast + 86_400_000) {
+        return { status: 'closed', stage: 'exam_held', label: item.examDateOpenEnded ? `Exam began ${fmt(item.examDate!)} — result awaited` : `Exam held ${examDateText(item)} — result awaited` };
       }
-      return { status: 'closed', stage: 'applications_closed', label: `Applications closed — exam ${fmt(item.examDate!)}` };
+      return { status: 'closed', stage: 'applications_closed', label: `Applications closed — exam ${examDateText(item)}` };
     }
     return { status: 'closed', stage: 'closed', label: `Applications closed ${fmt(item.applicationDeadline!)}` };
   }

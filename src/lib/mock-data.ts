@@ -42,6 +42,10 @@ export interface MockExam {
   applicationStart?: string;
   applicationDeadline?: string;
   examDate?: string;
+  /** Last day of a multi-day exam (examDate is the first day). */
+  examEndDate?: string;
+  /** True when the source says the exam runs "from" a date with no fixed end. */
+  examDateOpenEnded?: boolean;
   /** Second stage of a two-stage exam (NORCET Mains). examDate is the first stage. */
   mainsDate?: string;
   admitCardDate?: string;
@@ -166,6 +170,7 @@ const RAW_EXAMS: MockExam[] = [
     "applicationStart": "2026-06-13T00:00:00+05:30",
     "applicationDeadline": "2026-08-19T23:59:59+05:30",
     "examDate": "2026-09-22T09:00:00+05:30",
+    "examEndDate": "2026-09-23T09:00:00+05:30",
     "status": "open",
     "officialNotificationUrl": "https://www.osssc.gov.in",
     "applicationUrl": "https://www.osssc.gov.in",
@@ -205,6 +210,7 @@ const RAW_EXAMS: MockExam[] = [
     "applicationStart": "2026-04-06T00:00:00+05:30",
     "applicationDeadline": "2026-04-20T23:59:59+05:30",
     "examDate": "2026-05-15T09:00:00+05:30",
+    "examDateOpenEnded": true,
     "status": "open",
     "officialNotificationUrl": "https://esb.mp.gov.in",
     "applicationUrl": "https://esb.mp.gov.in",

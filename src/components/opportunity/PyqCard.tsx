@@ -6,6 +6,8 @@ import { ExamPaper } from '@/lib/pyq-mock-data';
 import { PaperViewerModal } from './PaperViewerModal';
 
 export function PyqCard({ paper }: { paper: ExamPaper }) {
+  // pdfDownloadUrl is '#' when no file is hosted; never present that as a working download.
+  const hasPdf = !!paper.pdfDownloadUrl && paper.pdfDownloadUrl !== '#';
   const [isViewerOpen, setIsViewerOpen] = useState(false);
   const isMock = paper.type === 'mock';
 
@@ -91,7 +93,7 @@ export function PyqCard({ paper }: { paper: ExamPaper }) {
           </button>
 
           <a
-            href={paper.pdfDownloadUrl || paper.officialSourceUrl || '#'}
+            href={hasPdf ? paper.pdfDownloadUrl : paper.officialSourceUrl || '#'}
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -109,8 +111,8 @@ export function PyqCard({ paper }: { paper: ExamPaper }) {
               gap: '6px',
             }}
           >
-            <Download size={14} />
-            <span>Download PDF</span>
+            {hasPdf ? <Download size={14} /> : <ExternalLink size={14} />}
+            <span>{hasPdf ? 'Download PDF' : 'Official source'}</span>
           </a>
         </div>
       </div>

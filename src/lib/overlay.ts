@@ -8,6 +8,7 @@
  */
 import type { MockExam } from './mock-data';
 import REFRESHED from './refreshed-data.json';
+import { applyWindowText, examDateText } from './format-dates';
 
 interface FieldConsensus {
   value: number | string;
@@ -20,17 +21,11 @@ interface RefreshRecord {
     applicationStart?: FieldConsensus;
     applicationDeadline?: FieldConsensus;
     examDate?: FieldConsensus;
+    examEndDate?: FieldConsensus;
   };
 }
 const RECORDS = (REFRESHED as unknown as { records: Record<string, RefreshRecord> }).records;
 
-const IST = { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Asia/Kolkata' } as const;
-const fmt = (iso: string) => new Date(iso).toLocaleDateString('en-IN', IST);
-
-/** Dates verified from sources but which are not part of the four refreshed fields. */
-const EXTRA_DATES: Record<string, string> = {
-  'exam-norcet-2026': 'Mains CBT on 30 September 2026.',
-};
 
 /**
  * The "Important dates" prose is rebuilt from the same structured fields the page shows, so a value
@@ -39,11 +34,8 @@ const EXTRA_DATES: Record<string, string> = {
  */
 function datesParagraph(e: MockExam): string {
   const parts: string[] = [];
-  if (e.applicationStart && e.applicationDeadline) parts.push(`Applications ${fmt(e.applicationStart)} to ${fmt(e.applicationDeadline)}.`);
-  else if (e.applicationDeadline) parts.push(`Last date to apply: ${fmt(e.applicationDeadline)}.`);
-  if (e.examDate) parts.push(`Exam on ${fmt(e.examDate)}.`);
-  else parts.push('Exam date not announced yet.');
-  if (EXTRA_DATES[e.id]) parts.push(EXTRA_DATES[e.id]);
+  if (e.applicationDeadline) parts.push(`Applications: ${applyWindowText(e)}.`);
+  parts.push(e.examDate ? `Exam: ${examDateText(e)}.` : 'Exam date not announced yet.');
   return parts.join(' ');
 }
 
@@ -65,6 +57,7 @@ export function applyExamOverlay(exams: MockExam[]): MockExam[] {
     if (typeof f.applicationStart?.value === 'string') next.applicationStart = `${f.applicationStart.value}T00:00:00+05:30`;
     if (typeof f.applicationDeadline?.value === 'string') next.applicationDeadline = `${f.applicationDeadline.value}T23:59:59+05:30`;
     if (typeof f.examDate?.value === 'string') next.examDate = `${f.examDate.value}T09:00:00+05:30`;
+    if (typeof f.examEndDate?.value === 'string') next.examEndDate = `${f.examEndDate.value}T09:00:00+05:30`;
     next.descriptionSimple = rewriteDescription(next);
     return next;
   });

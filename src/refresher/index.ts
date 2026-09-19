@@ -15,8 +15,8 @@ import { REFRESH_SOURCES, Citation } from './registry';
 import { fetchPageText } from './fetch-text';
 import { extractFacts, Extracted } from './extract';
 
-type FieldKey = 'vacancies' | 'applicationStart' | 'applicationDeadline' | 'examDate';
-const FIELDS: FieldKey[] = ['vacancies', 'applicationStart', 'applicationDeadline', 'examDate'];
+type FieldKey = 'vacancies' | 'applicationStart' | 'applicationDeadline' | 'examDate' | 'examEndDate';
+const FIELDS: FieldKey[] = ['vacancies', 'applicationStart', 'applicationDeadline', 'examDate', 'examEndDate'];
 
 export interface FieldConsensus {
   value: number | string;

@@ -18,6 +18,7 @@ import { TrackButton } from '@/components/opportunity/TrackButton';
 import { PyqCard } from '@/components/opportunity/PyqCard';
 import MayaCard from '@/components/maya/MayaCard';
 import { VERIFIED_FACTS } from '@/lib/verified-facts';
+import { examDateText, applyWindowText } from '@/lib/format-dates';
 import { VerifiedFactsCard } from '@/components/opportunity/VerifiedFactsCard';
 import { getPapersForExam } from '@/lib/pyq-mock-data';
 
@@ -200,15 +201,15 @@ export default async function ExamDetailPage({
 
           <div style={{ background: 'rgba(255,255,255,0.08)', padding: '8px 10px', borderRadius: '8px', minHeight: '56px', display: 'flex', flexDirection: 'column', justifyContent: 'center', minWidth: 0, overflow: 'hidden' }}>
             <div style={{ fontSize: '0.62rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 700 }}>Exam Date</div>
-            <div style={{ fontSize: '0.94rem', fontWeight: 800, color: '#ffffff', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-              {examDateFormatted}
+            <div style={{ fontSize: '0.86rem', fontWeight: 800, color: '#ffffff', lineHeight: 1.25 }}>
+              {examDateText(exam)}
             </div>
           </div>
 
           <div style={{ background: 'rgba(255,255,255,0.08)', padding: '8px 10px', borderRadius: '8px', minHeight: '56px', display: 'flex', flexDirection: 'column', justifyContent: 'center', minWidth: 0, overflow: 'hidden' }}>
-            <div style={{ fontSize: '0.62rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 700 }}>Registration</div>
-            <div style={{ fontSize: '0.94rem', fontWeight: 800, color: '#fca5a5', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-              {deadlineFormatted}
+            <div style={{ fontSize: '0.62rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 700 }}>Applications</div>
+            <div style={{ fontSize: '0.86rem', fontWeight: 800, color: '#fca5a5', lineHeight: 1.25 }}>
+              {applyWindowText(exam)}
             </div>
           </div>
         </div>

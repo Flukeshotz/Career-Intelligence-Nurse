@@ -2,13 +2,12 @@
 
 import Link from 'next/link';
 import { FreshnessLine } from './FreshnessLine';
+import { examDateText } from '@/lib/format-dates';
 import { ChevronRight, Calendar, Users, MapPin } from 'lucide-react';
 import { MockExam } from '@/lib/mock-data';
 
 export function ExamCard({ exam }: { exam: MockExam }) {
-  const examDateStr = exam.examDate
-    ? new Date(exam.examDate).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'Asia/Kolkata' })
-    : null;
+  const examDateStr = exam.examDate ? examDateText(exam) : null;
 
   const deadlineStr = exam.applicationDeadline
     ? new Date(exam.applicationDeadline).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', timeZone: 'Asia/Kolkata' })
