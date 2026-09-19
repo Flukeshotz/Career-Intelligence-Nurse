@@ -82,7 +82,7 @@ export default function PreviousYearPapersPage() {
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search by exam (NORCET, RRB Railways, ESIC, DSSSB...)"
+            placeholder="Search NORCET papers by year"
             style={{
               width: '100%',
               height: '42px',

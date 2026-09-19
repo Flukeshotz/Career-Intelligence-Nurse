@@ -16,10 +16,10 @@ import { getTrust } from '@/lib/verification';
 import { ShareButtons } from '@/components/opportunity/ShareButtons';
 import { TrackButton } from '@/components/opportunity/TrackButton';
 import { PyqCard } from '@/components/opportunity/PyqCard';
-import { ExamDetailAccordion } from '@/components/opportunity/ExamDetailAccordion';
 import MayaCard from '@/components/maya/MayaCard';
-import { DETAILED_EXAM_INTELLIGENCE } from '@/lib/exam-syllabus-data';
-import { getPapersForExam, EXAM_PAPERS } from '@/lib/pyq-mock-data';
+import { VERIFIED_FACTS } from '@/lib/verified-facts';
+import { VerifiedFactsCard } from '@/components/opportunity/VerifiedFactsCard';
+import { getPapersForExam } from '@/lib/pyq-mock-data';
 
 export const revalidate = 3600;
 
@@ -49,14 +49,10 @@ export async function generateMetadata({
   };
 }
 
-function formatCompactSalary(salaryText?: string): string {
-  if (!salaryText) return 'Level 7 (~₹80k)';
-  return salaryText
-    .split('(')[0]
-    .replace(/,000/g, 'k')
-    .replace(/\s*\/\s*month/i, ' / mo')
-    .replace(/\s*–\s*/g, '–')
-    .trim();
+/** Pay is shown only when it was verified (verified-facts.ts); otherwise the tile says so. */
+function payTile(examId: string): string {
+  const pay = VERIFIED_FACTS[examId]?.pay;
+  return pay ? pay.split('(')[0].trim() : 'See notice';
 }
 
 export default async function ExamDetailPage({
@@ -70,9 +66,7 @@ export default async function ExamDetailPage({
   }
 
   const requirements = await getRequirementsForOpportunity({ examId: exam.id });
-  const detailed = DETAILED_EXAM_INTELLIGENCE[exam.id];
   const papers = getPapersForExam(exam.id);
-  const fallbackPapers = papers.length > 0 ? papers : EXAM_PAPERS.slice(0, 2);
 
   const examJsonLd = generateExamJsonLd(exam);
   const breadcrumbsJsonLd = generateBreadcrumbJsonLd([
@@ -198,9 +192,9 @@ export default async function ExamDetailPage({
           </div>
 
           <div style={{ background: 'rgba(255,255,255,0.08)', padding: '8px 10px', borderRadius: '8px', minHeight: '56px', display: 'flex', flexDirection: 'column', justifyContent: 'center', minWidth: 0, overflow: 'hidden' }}>
-            <div style={{ fontSize: '0.62rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 700 }}>Monthly Pay</div>
+            <div style={{ fontSize: '0.62rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 700 }}>Pay</div>
             <div style={{ fontSize: '0.98rem', fontWeight: 800, color: '#f7d78e', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-              {formatCompactSalary(detailed?.grossSalaryMonthly)}
+              {payTile(exam.id)}
             </div>
           </div>
 
@@ -229,30 +223,33 @@ export default async function ExamDetailPage({
         />
       </div>
 
-      {/* ── 3. PREVIOUS YEAR PAPERS & MOCKS (Clean Cards) ── */}
-      <div style={{ marginBottom: '16px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-            <FileText size={18} color="var(--sc-navy-700)" />
-            <h2 style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--sc-navy-900)', margin: 0 }}>
-              Previous Year Papers &amp; Mocks
-            </h2>
+      {/* ── 3. PREVIOUS YEAR PAPERS — only real, extracted official papers are ever listed ── */}
+      {papers.length > 0 ? (
+        <div style={{ marginBottom: '16px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <FileText size={18} color="var(--sc-navy-700)" />
+              <h2 style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--sc-navy-900)', margin: 0 }}>
+                Previous Year Papers
+              </h2>
+            </div>
           </div>
-          <span style={{ fontSize: '0.70rem', fontWeight: 700, color: 'var(--sc-green-600)', background: 'var(--sc-green-50)', padding: '2px 7px', borderRadius: '100px' }}>
-            ✓ Verified Answer Keys
-          </span>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            {papers.map((p) => (
+              <PyqCard key={p.id} paper={p} />
+            ))}
+          </div>
         </div>
-
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-          {fallbackPapers.map(p => (
-            <PyqCard key={p.id} paper={p} />
-          ))}
+      ) : (
+        <div className="sc-card" style={{ padding: '16px', marginBottom: '16px', fontSize: '0.86rem', color: 'var(--sc-ink-700)' }}>
+          <strong style={{ color: 'var(--sc-navy-900)' }}>Previous year papers:</strong> not available for this exam yet. We only list
+          papers taken from the official question booklets.
         </div>
-      </div>
+      )}
 
       {/* ── 4. EXPANDABLE INTELLIGENCE ACCORDION (Syllabus, Pattern, Strategy) ── */}
       <div style={{ marginBottom: '16px' }}>
-        <ExamDetailAccordion detailed={detailed} />
+        <VerifiedFactsCard examId={exam.id} />
       </div>
 
       {/* ── 5. OFFICIAL CURATION & SOURCE TRUST PANEL ── */}

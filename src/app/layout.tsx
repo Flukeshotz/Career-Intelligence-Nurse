@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   // ── FAIL FIX: Meta description pixel width (was ~963px) → tightened ──
   description:
-    'India\'s nursing career gateway. NORCET 2026, RRB, ESIC, state PSC exams, hospital vacancies. Eligibility checks & official portal links.',
+    'Nursing recruitment exams checked against independent sources: NORCET 2026, RRB, PGIMER, state boards. Deadlines, vacancies and official links.',
 
   metadataBase: new URL(BASE_URL),
 
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     siteName: 'SkillCase Nursing',
     title: 'SkillCase — Nursing Jobs & Exam Intelligence',
     description:
-      'Verified nursing jobs, NORCET 2026, RRB, ESIC, state PSC exams & official portal links across India.',
+      'Nursing recruitment exams checked against independent sources: NORCET 2026, RRB, PGIMER and state boards, with official links.',
     images: [
       {
         url: `${BASE_URL}/og-image.png`,
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'SkillCase — Nursing Jobs & Exam Intelligence',
     description:
-      'Verified nursing jobs, NORCET 2026, RRB, ESIC, state PSC exams & official portal links across India.',
+      'Nursing recruitment exams checked against independent sources: NORCET 2026, RRB, PGIMER and state boards, with official links.',
     images: [`${BASE_URL}/og-image.png`],
   },
 
@@ -93,7 +93,7 @@ const organizationSchema = {
   name: 'SkillCase',
   url: BASE_URL,
   logo: `${BASE_URL}/favicon.ico`,
-  description: 'India\'s nursing career intelligence platform covering NORCET, RRB, ESIC and state nursing recruitment exams.',
+  description: 'Nursing recruitment exams across India, with dates and vacancies checked against independent sources.',
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer support',

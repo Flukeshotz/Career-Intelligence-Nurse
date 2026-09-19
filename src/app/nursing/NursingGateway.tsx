@@ -322,7 +322,7 @@ export default function NursingGateway() {
                     Hospital Jobs
                   </div>
                   <div style={{ fontSize: '0.70rem', color: '#64748b', marginTop: '1px' }}>
-                    23 verified openings
+                    {INITIAL_JOBS.length > 0 ? `${INITIAL_JOBS.length} verified openings` : 'Verifying listings'}
                   </div>
                 </div>
               </Link>
@@ -417,7 +417,7 @@ export default function NursingGateway() {
                   <ChevronRight size={14} color="#94a3b8" />
                 </div>
                 <div style={{ fontSize: '0.74rem', color: '#64748b', marginTop: '2px' }}>
-                  Practice all real exam papers with verified answer keys
+                  Practice real NORCET papers taken from the official booklets
                 </div>
               </div>
             </Link>

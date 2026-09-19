@@ -22,7 +22,21 @@ export interface ExamPaper {
   fileSizeBytes?: string;
 }
 
-export const EXAM_PAPERS: ExamPaper[] = [
+/**
+ * Only papers whose questions were extracted from the official question booklets may be listed.
+ * Every other entry below is a placeholder (its download link is '#') and, before this filter, was
+ * served the same generic 100-question set relabelled as that exam's "official paper".
+ */
+export const REAL_PAPER_IDS: ReadonlySet<string> = new Set([
+  'pyq-norcet-2020',
+  'pyq-norcet-2021',
+  'pyq-norcet-2022',
+  'pyq-norcet-2023',
+  'pyq-norcet-2024',
+  'pyq-norcet-2025-prelims',
+]);
+
+const ALL_PAPER_LISTINGS: ExamPaper[] = [
   {
     id: 'pyq-norcet-2024',
     examId: 'exam-norcet-2026',
@@ -2020,14 +2034,11 @@ export const EXAM_PAPERS: ExamPaper[] = [
   }
 ];
 
-export function getPapersForExam(examId: string): ExamPaper[] {
-  const exact = EXAM_PAPERS.filter(p => p.examId === examId);
-  if (exact.length > 0) return exact;
+export const EXAM_PAPERS: ExamPaper[] = ALL_PAPER_LISTINGS.filter((p) => REAL_PAPER_IDS.has(p.id));
 
-  const match = EXAM_PAPERS.filter(p =>
-    examId.toLowerCase().includes(p.examId.replace('exam-', '').split('-')[0])
-  );
-  return match.length > 0 ? match : EXAM_PAPERS.slice(0, 2);
+export function getPapersForExam(examId: string): ExamPaper[] {
+  // Exact match only. It used to fuzzy-match and, failing that, return another exam's papers.
+  return EXAM_PAPERS.filter((p) => p.examId === examId);
 }
 
 export function getAllPapers(filter?: { type?: 'pyq' | 'mock'; category?: string; year?: number; search?: string }): ExamPaper[] {
