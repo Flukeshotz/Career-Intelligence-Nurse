@@ -282,6 +282,13 @@ function ExamsListContent() {
       {/* ── CONTENT BODY ── */}
       <div style={{ maxWidth: '960px', margin: '0 auto', padding: '16px 16px 0' }}>
 
+        <Link
+          href="/nursing/upcoming-exams"
+          style={{ display: 'block', marginBottom: '12px', padding: '12px 14px', borderRadius: '12px', background: '#eff6ff', border: '1px solid #bfdbfe', color: '#1e40af', fontSize: '0.84rem', fontWeight: 700, textDecoration: 'none' }}
+        >
+          📋 Upcoming nursing exams &amp; vacancies — dates, posts and calendar in one table →
+        </Link>
+
         {/* EXAMS VIEW */}
         {viewMode === 'exams' && (
           <div>

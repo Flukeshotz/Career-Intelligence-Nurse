@@ -19,7 +19,7 @@ import { PyqCard } from '@/components/opportunity/PyqCard';
 import MayaCard from '@/components/maya/MayaCard';
 import { VERIFIED_FACTS } from '@/lib/verified-facts';
 import { examDateText, applyWindowText } from '@/lib/format-dates';
-import { VerifiedFactsCard } from '@/components/opportunity/VerifiedFactsCard';
+import { ExamArticle } from '@/components/opportunity/ExamArticle';
 import { getPapersForExam } from '@/lib/pyq-mock-data';
 
 export const revalidate = 3600;
@@ -38,12 +38,18 @@ export async function generateMetadata({
   const exam = await getExamBySlug('nursing', params.slug);
   if (!exam) return { title: 'Exam Not Found' };
 
+  const facts = [
+    exam.vacancies ? `${exam.vacancies.toLocaleString('en-IN')} posts` : null,
+    `applications ${applyWindowText(exam)}`,
+    `exam ${examDateText(exam)}`,
+  ].filter(Boolean).join(', ');
+
   return {
-    title: `${exam.name} — Syllabus, Pattern, PYQs & Eligibility | SkillCase`,
-    description: `Official syllabus, previous years question papers (PYQs), mock tests, exam pattern, and eligibility criteria for ${exam.name}.`,
+    title: `${exam.name}: Vacancies, Dates, Eligibility & Salary | SkillCase`,
+    description: `${exam.name}: ${facts}. Checked against independent sources and updated automatically.`,
     openGraph: {
       title: `${exam.name} | SkillCase Nursing`,
-      description: `Official exam pattern, full course syllabus, previous year papers, and application portal for ${exam.name}.`,
+      description: `Vacancies, application dates, exam date and eligibility for ${exam.name}.`,
       url: `https://skillcase.in/nursing/exams/${exam.slug}`,
       type: 'article',
     },
@@ -250,7 +256,7 @@ export default async function ExamDetailPage({
 
       {/* ── 4. EXPANDABLE INTELLIGENCE ACCORDION (Syllabus, Pattern, Strategy) ── */}
       <div style={{ marginBottom: '16px' }}>
-        <VerifiedFactsCard examId={exam.id} />
+        <ExamArticle exam={exam} />
       </div>
 
       {/* ── 5. OFFICIAL CURATION & SOURCE TRUST PANEL ── */}

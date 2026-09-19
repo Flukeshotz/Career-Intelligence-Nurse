@@ -9,6 +9,7 @@ export async function GET() {
     { url: `${baseUrl}/nursing`, lastMod: now, changeFreq: 'daily', priority: '1.0' },
     { url: `${baseUrl}/nursing/jobs`, lastMod: now, changeFreq: 'daily', priority: '0.9' },
     { url: `${baseUrl}/nursing/exams`, lastMod: now, changeFreq: 'daily', priority: '0.9' },
+    { url: `${baseUrl}/nursing/upcoming-exams`, lastMod: now, changeFreq: 'daily', priority: '0.9' },
   ];
 
   const jobUrls = INITIAL_JOBS.filter((job) => !getTrust(job.id).suppressFromListings).map((job) => ({
