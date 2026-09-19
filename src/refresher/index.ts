@@ -88,7 +88,12 @@ export async function refreshRecord(id: string, log: RefreshLog[] = []): Promise
   }
 
   const enough = answers.length >= 2 && fields.vacancies !== undefined && fields.applicationDeadline !== undefined;
-  const status: RefreshRecord['status'] = disagreements.length > 0 ? 'no_consensus' : enough ? 'consensus' : 'partial';
+  // A conflict needs enough independent readers to mean something. With fewer than 3 readable sources
+  // (others may be blocked, e.g. HTTP 403 from datacenter IPs) a 1-vs-1 split is just "not enough
+  // evidence" and must not overwrite an earlier result.
+  const MIN_READERS_FOR_CONFLICT = 3;
+  const status: RefreshRecord['status'] =
+    disagreements.length > 0 && answers.length >= MIN_READERS_FOR_CONFLICT ? 'no_consensus' : disagreements.length === 0 && enough ? 'consensus' : 'partial';
 
   return {
     status,

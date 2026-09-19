@@ -26,8 +26,18 @@ async function main() {
   if (write) {
     const file = path.join(process.cwd(), 'src', 'lib', 'refreshed-data.json');
     const prev = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf-8')) : { records: {} };
-    fs.writeFileSync(file, JSON.stringify({ ranAt, records: { ...prev.records, ...records } }, null, 2) + '\n');
-    console.log(`\nwrote ${Object.keys(records).length} records → src/lib/refreshed-data.json`);
+    // An inconclusive run (too few readable sources) keeps the previous result untouched.
+    const merged = { ...prev.records };
+    let kept = 0;
+    for (const [id, r] of Object.entries(records)) {
+      if (r.status === 'partial' && merged[id]) {
+        kept++;
+        continue;
+      }
+      merged[id] = r;
+    }
+    fs.writeFileSync(file, JSON.stringify({ ranAt, records: merged }, null, 2) + '\n');
+    console.log(`\nwrote ${Object.keys(records).length - kept} records, kept ${kept} previous (inconclusive run) → src/lib/refreshed-data.json`);
   }
 }
 main();
