@@ -157,7 +157,16 @@ export default async function ExamDetailPage({
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.72rem', fontWeight: 700, color: '#93c5fd', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
             <span>{exam.organisation.includes('AIIMS') ? 'Central Govt · AIIMS' : exam.organisation.includes('Railway') ? 'Central Govt · Railways' : 'Government Recruitment'}</span>
-            <span style={{ color: '#4ade80', fontSize: '0.68rem', fontWeight: 600 }}>● Verified Notice</span>
+            {(() => {
+              // Derived from the record's real verification state — never asserted unconditionally.
+              const trust = getTrust(exam.id);
+              const ok = trust.level === 'confirmed';
+              return (
+                <span style={{ color: ok ? '#4ade80' : '#fbbf24', fontSize: '0.68rem', fontWeight: 600 }}>
+                  ● {ok ? trust.badge : 'Confirm on official site'}
+                </span>
+              );
+            })()}
           </div>
         </div>
 
