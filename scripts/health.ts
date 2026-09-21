@@ -37,7 +37,12 @@ for (const e of INITIAL_EXAMS) {
   for (const c of (r?.official as { factChecks?: Array<{ fact: string; text: string; missing: string[] }> } | undefined)?.factChecks ?? []) {
     if (c.missing.length) problems.push(`**${e.name}** — our text for ${c.fact} ("${c.text.slice(0, 80)}") has figures not found in the official notice: ${c.missing.join(', ')}.`);
   }
-  if (live && r?.official && r.official.status === 'unreadable') problems.push(`**${e.name}** — the official notice could not be read (${r.official.note ?? 'unknown'}). The site falls back to cross-source checks.`);
+  // Some government sites refuse GitHub's (non-Indian) servers. A single failed read is fine: the last
+  // good result is kept. Only alert when the notice has gone unread for more than 10 days.
+  if (live && r?.official?.status === 'verified') {
+    const days = Math.floor((Date.now() - new Date(r.official.checkedAt).getTime()) / 86_400_000);
+    if (days > 10) problems.push(`**${e.name}** — the official notice has not been re-read for ${days} days (the site may block automated servers). Run \`npx tsx scripts/verify-official.ts --write\` on your computer and commit the result.`);
+  }
 
   if (r?.status === 'no_consensus') problems.push(`**${e.name}** — sources disagree on a number. Its confirmed badge was removed until they agree. Check the official notice.`);
   else if (live && t.level === 'stale') problems.push(`**${e.name}** — not re-confirmed for over 14 days (${lc.label}). The refresher could not read enough sources; add another source or check the official site.`);
