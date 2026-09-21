@@ -77,7 +77,7 @@ export const VERIFIED_FACTS: Record<string, VerifiedFacts> = {
     eligibility: 'B.Sc. Nursing (4 years) or Post Basic B.Sc. Nursing, with 12th in Physics, Chemistry and Biology, and valid registration with the MP Nursing Council',
     age: '18–40 years as on 1 Jan 2026 (up to 45 for reserved categories)',
     selection: 'Computer Based Test in two shifts a day from 15 May 2026',
-    posts: '2,099 Nursing Officer posts for women (2,317 including 218 Sister Tutor)',
+    posts: '2,099 Nursing Officer posts (2,317 including 218 Sister Tutor); 35% of posts are reserved for women',
   },
   'exam-ukmssb-nurse-2026': {
     pay: 'Pay Level 7 (₹44,900 – ₹1,42,400)',

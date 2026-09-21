@@ -15,6 +15,7 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { INITIAL_JOBS, INITIAL_EXAMS } from '@/lib/mock-data';
+import { deriveLifecycle } from '@/lib/lifecycle';
 import { getUserProfile, UserProfile } from '@/lib/user-store';
 import { GlobalSearchModal } from '@/components/layout/GlobalSearchModal';
 import { FilterDrawerModal } from '@/components/layout/FilterDrawerModal';
@@ -23,7 +24,16 @@ import dynamicImport from 'next/dynamic';
 
 const MayaPanel = dynamicImport(() => import('@/components/maya/MayaPanel'), { ssr: false });
 
+function pickSpotlight() {
+  const rows = INITIAL_EXAMS.map((exam) => ({ exam, life: deriveLifecycle(exam) }));
+  const open = rows.filter((r) => r.life.stage === 'applications_open').sort((x, y) => (x.life.daysToDeadline ?? 999) - (y.life.daysToDeadline ?? 999))[0];
+  if (open) return { ...open, tag: 'Applications open' };
+  const ahead = rows.filter((r) => r.life.stage === 'applications_closed' || r.life.stage === 'upcoming').sort((x, y) => (new Date(x.exam.examDate ?? '2100-01-01').getTime()) - (new Date(y.exam.examDate ?? '2100-01-01').getTime()))[0];
+  return ahead ? { ...ahead, tag: 'Coming up' } : undefined;
+}
+
 export default function NursingGateway() {
+  const spotlight = pickSpotlight();
   const [profile, setProfile] = useState<UserProfile | null>(null);
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -97,78 +107,35 @@ export default function NursingGateway() {
           </button>
         </div>
 
-        {/* ── 3. URGENT RECRUITMENT ALERT (AIIMS NORCET 2026) ── */}
-        <div
-          style={{
-            background: 'linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%)',
-            border: '1px solid #fde68a',
-            borderRadius: '16px',
-            padding: '16px',
-            boxShadow: '0 2px 8px rgba(245, 158, 11, 0.08)',
-          }}
-        >
-          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-            <div
-              style={{
-                width: '40px',
-                height: '40px',
-                borderRadius: '50%',
-                background: '#fef9c3',
-                border: '1.5px solid #fef08a',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexShrink: 0,
-                fontSize: '1.1rem',
-              }}
-            >
-              ⚡
+        {/* ── 3. NEXT DEADLINE — derived from the checked records, never hard-coded ── */}
+        {spotlight && (
+          <div
+            style={{
+              background: 'linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%)',
+              border: '1px solid #fde68a',
+              borderRadius: '16px',
+              padding: '16px',
+              boxShadow: '0 2px 8px rgba(245, 158, 11, 0.08)',
+            }}
+          >
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '6px', marginBottom: '2px' }}>
+              <h3 style={{ fontSize: '0.98rem', fontWeight: 800, color: '#0f172a', margin: 0 }}>{spotlight.exam.name.replace(/\s*\(.*?\)\s*/g, ' ').trim()}</h3>
+              <span style={{ fontSize: '0.66rem', fontWeight: 800, color: '#b45309', background: '#fef3c7', padding: '2px 6px', borderRadius: '4px' }}>
+                {spotlight.tag}
+              </span>
             </div>
-
-            <div style={{ flex: 1, minWidth: 0 }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '6px', marginBottom: '2px' }}>
-                <h3 style={{ fontSize: '0.98rem', fontWeight: 800, color: '#0f172a', margin: 0 }}>
-                  AIIMS NORCET 2026
-                </h3>
-                <span style={{ fontSize: '0.66rem', fontWeight: 800, color: '#b45309', background: '#fef3c7', padding: '2px 6px', borderRadius: '4px' }}>
-                  Important
-                </span>
-              </div>
-
-              <div style={{ fontSize: '0.78rem', color: '#475569', fontWeight: 600 }}>
-                Stage 1 CBT on 12 Sep 2026
-              </div>
-
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '10px', flexWrap: 'wrap', gap: '8px' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '0.74rem', color: '#dc2626', fontWeight: 700 }}>
-                  <Clock size={13} />
-                  <span>14 days to go</span>
-                </div>
-
-                <Link
-                  href="/nursing/norcet"
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '4px',
-                    background: '#fef08a',
-                    color: '#854d0e',
-                    border: '1px solid #fde047',
-                    padding: '6px 12px',
-                    borderRadius: '8px',
-                    fontSize: '0.76rem',
-                    fontWeight: 800,
-                    textDecoration: 'none',
-                    transition: 'all 0.12s ease',
-                  }}
-                >
-                  <span>Open NORCET Hub</span>
-                  <ChevronRight size={14} />
-                </Link>
-              </div>
+            <div style={{ fontSize: '0.78rem', color: '#475569', fontWeight: 600 }}>{spotlight.life.label}</div>
+            <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '10px' }}>
+              <Link
+                href={`/nursing/exams/${spotlight.exam.slug}`}
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', background: '#fef08a', color: '#854d0e', border: '1px solid #fde047', padding: '6px 12px', borderRadius: '8px', fontSize: '0.76rem', fontWeight: 800, textDecoration: 'none' }}
+              >
+                <span>See details</span>
+                <ChevronRight size={14} />
+              </Link>
             </div>
           </div>
-        </div>
+        )}
 
         {/* ── 4. YOUR NEXT STEP (HIGH-TRUST DECISION SURFACE) ── */}
         <div>
