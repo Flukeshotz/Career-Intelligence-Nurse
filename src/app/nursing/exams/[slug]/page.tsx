@@ -293,10 +293,9 @@ export default async function ExamDetailPage({
             descriptionSimple: exam.descriptionSimple,
           }}
           suggestedPrompts={[
-            '🎯 Past Cutoff Percentiles',
             '📋 Check My Eligibility',
-            '⏱️ CBT Exam Pattern',
-            '📚 High-Yield Topics'
+            '📅 Key dates',
+            '💰 Pay & posts'
           ]}
         />
       </div>

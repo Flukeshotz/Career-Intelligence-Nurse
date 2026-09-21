@@ -19,10 +19,9 @@ interface MayaCardProps {
 }
 
 const DEFAULT_PROMPTS = [
-  '🎯 Cutoffs & Percentiles',
   '📋 Check Eligibility',
-  '⏱️ Stage 1 & 2 Pattern',
-  '📚 High-Yield Topics',
+  '📅 Key dates',
+  '💰 Pay & posts',
 ];
 
 export default function MayaCard({
@@ -96,7 +95,7 @@ export default function MayaCard({
                 AI Career Co-Pilot
               </span>
               <span style={{ fontSize: '0.64rem', color: '#4ade80', fontWeight: 700 }}>
-                ● Verified Source Engine
+                ● Answers from this page only
               </span>
             </div>
             <h3 style={{ fontSize: '0.94rem', fontWeight: 800, color: '#ffffff', margin: '2px 0 0 0', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>

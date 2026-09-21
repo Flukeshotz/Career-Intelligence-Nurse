@@ -7,7 +7,8 @@
  */
 
 import { UserProfile } from './user-store';
-import { DETAILED_EXAM_INTELLIGENCE } from './exam-syllabus-data';
+import { INITIAL_EXAMS } from './mock-data';
+import { faqs } from './exam-content';
 import { logMayaInteraction, trackTelemetry } from './telemetry';
 
 export type MayaConfidence = 'verified' | 'needs_info' | 'not_verified';
@@ -104,180 +105,69 @@ export function classifyMayaIntent(query: string): MayaIntent {
 }
 
 /**
- * Deterministic Answer Composer
- * Generates verified 1–2 sentence authoritative answers grounded in official sources.
+ * Deterministic Answer Composer.
+ * Answers come only from the exam's own checked record (same source as the page's FAQs). Nothing
+ * here is exam-specific by hand: cut-offs, exam pattern, syllabus and prep advice are not
+ * available for any exam yet, so Maya says so instead of answering from memory.
  */
+const NOT_YET: Partial<Record<MayaIntent, string>> = {
+  exam_cutoff: "We don't have checked cut-off figures for this exam yet, so I won't guess. Please see the official result notice.",
+  exam_pattern_syllabus: "We don't have a checked exam pattern or syllabus for this exam yet. Please see the official notification.",
+  prep_recommendation: "We don't have checked preparation guidance for this exam yet.",
+  pyq_retrieve: 'Previous-year papers are listed on an exam page only when they come from the official question booklet.',
+};
+
+const FAQ_KEY: Partial<Record<MayaIntent, RegExp>> = {
+  salary_inquiry: /salary/i,
+  timeline_milestones: /last date|exam\?$|when is/i,
+};
+
 export function generateDeterministicMayaResponse(context: MayaContext): MayaResponse {
-  const { question, opportunity, profile, userProfile } = context;
-  const activeProfile = profile || userProfile;
+  const { question, opportunity } = context;
   const intent = classifyMayaIntent(question);
   const q = question.toLowerCase();
-
-  // Profile data extraction
-  const qualCodes = activeProfile?.qualificationsList?.map((x) => x.code.toLowerCase()) || [];
-  if (activeProfile?.qualificationCode) qualCodes.push(activeProfile.qualificationCode.toLowerCase());
-  const isBsc = qualCodes.some((c) => /bsc|b\.sc|post basic|msc/.test(c));
-  const isGnm = qualCodes.some((c) => /gnm|diploma/.test(c));
-  const isRegistered = Boolean(activeProfile?.registrationDetails?.isRegistered);
+  const exam = opportunity ? INITIAL_EXAMS.find((e) => e.id === opportunity.id) : undefined;
+  const officialUrl = exam?.officialNotificationUrl || opportunity?.officialNotificationUrl;
+  const official: MayaQuickAction[] = officialUrl ? [{ label: 'Open official website', action: 'open_url', url: officialUrl }] : [];
 
   let response: MayaResponse;
 
-  // ── 1. SALARY & PAY INQUIRIES ──
-  if (intent === 'salary_inquiry') {
+  if (!exam) {
     response = {
-      message: 'AIIMS NORCET Nursing Officer is a 7th CPC Pay Level 7 post with a Basic Pay of ₹44,900. Including DA (50%), HRA (27–30%), Nursing Allowance (₹7,200), and Transport Allowance, the gross in-hand monthly salary ranges between ₹78,000 and ₹85,000/month.',
-      confidence: 'verified',
-      avatar: 'thumbsup',
-      sourceDocName: 'AIIMS 7th CPC Pay Matrix Level 7',
-      sourceUrl: 'https://www.aiimsexams.ac.in',
-      quickActions: [
-        { label: 'Check My Eligibility', action: 'ask_prompt', prompt: 'Am I eligible for NORCET?' },
-        { label: 'View Past Cutoffs', action: 'ask_prompt', prompt: 'What are the cutoff percentiles?' }
-      ]
+      message: 'Open a specific recruitment page and I can answer from its checked details.',
+      confidence: 'needs_info',
+      avatar: 'wave',
+      quickActions: [],
     };
-  }
-
-  // ── 2. CUTOFFS & PERCENTILES ──
-  else if (intent === 'exam_cutoff') {
+  } else if (/leak|cancel|paper out|cheating|court stay|bribe|consultant|agent fee/i.test(q)) {
     response = {
-      message: 'Official AIIMS NORCET qualifying CBT cutoffs are 50.00% (UR/EWS), 45.00% (OBC), and 40.00% (SC/ST). Due to the 80:20 female seat ratio, final AIIMS allocation typically closes around 88–92 percentile for females and 94–96 percentile for males.',
-      confidence: 'verified',
-      avatar: 'thumbsup',
-      sourceDocName: 'AIIMS NORCET Notice No. 82/2026',
-      sourceUrl: 'https://www.aiimsexams.ac.in',
-      quickActions: [
-        { label: 'View CBT Exam Pattern', action: 'ask_prompt', prompt: 'What is the Stage 1 vs Stage 2 exam pattern?' },
-        { label: 'Check My Eligibility', action: 'ask_prompt', prompt: 'Can I apply for NORCET?' }
-      ]
+      message: "I can't verify that from the official notification. Please rely on the official website.",
+      confidence: 'not_verified',
+      avatar: 'shocked',
+      quickActions: official,
     };
-  }
-
-  // ── 3. ELIGIBILITY EVALUATION ──
-  else if (intent === 'eligibility_check') {
-    if (isBsc && isRegistered) {
+  } else if (NOT_YET[intent]) {
+    response = { message: NOT_YET[intent]!, confidence: 'not_verified', avatar: 'looking', quickActions: official };
+  } else {
+    const list = faqs(exam);
+    const dates = /date|deadline|last|admit|when|schedule|exam/i.test(q);
+    const key = intent === 'eligibility_check' ? /who can apply|age/i : FAQ_KEY[intent] ?? (dates ? /last date|exam/i : /vacanc/i);
+    const hits = list.filter((f) => key.test(f.q));
+    const chosen = intent === 'eligibility_check' ? hits : hits.slice(0, 2);
+    if (chosen.length) {
       response = {
-        message: 'You appear fully eligible for NORCET 2026 through Pathway 1 (B.Sc. Nursing + Council Registration with 0 experience). Age limit is 18–30 years with standard category relaxations.',
+        message: chosen.map((f) => f.a).join(' '),
         confidence: 'verified',
-        avatar: 'smiling',
-        sourceDocName: 'AIIMS Official Recruitment Blueprint',
-        sourceUrl: 'https://www.aiimsexams.ac.in',
-        quickActions: [
-          { label: 'What is the salary?', action: 'ask_prompt', prompt: 'What is the monthly salary in NORCET?' },
-          { label: 'View Stage 1 Syllabus', action: 'ask_prompt', prompt: 'What is the Stage 1 syllabus?' }
-        ]
-      };
-    } else if (isGnm) {
-      response = {
-        message: 'With GNM, AIIMS NORCET requires 2 years of clinical experience in a 50+ bedded hospital post-registration. However, RRB Railways and State PSCs accept GNM freshers with zero experience.',
-        confidence: 'verified',
-        avatar: 'looking',
-        sourceDocName: 'AIIMS Notice No. 82/2026 & RRB Notice 2026',
-        sourceUrl: 'https://www.aiimsexams.ac.in',
-        quickActions: [
-          { label: 'What about RRB Railways?', action: 'ask_prompt', prompt: 'Am I eligible for RRB Railways?' },
-          { label: 'View AIIMS NORCET Dates', action: 'ask_prompt', prompt: 'When is the admit card and exam?' }
-        ]
+        avatar: 'thumbsup',
+        sourceDocName: 'Official notification, as reported by independent sources',
+        quickActions: official,
       };
     } else {
       response = {
-        message: 'AIIMS NORCET accepts (1) B.Sc. Nursing with 0 experience, OR (2) GNM Diploma with 2 years experience in a 50-bed hospital. Nursing council registration is mandatory for both.',
-        confidence: 'verified',
-        avatar: 'wave',
-        sourceDocName: 'AIIMS Notification No. 82/2026',
-        sourceUrl: 'https://www.aiimsexams.ac.in',
-        quickActions: [
-          { label: 'Am I eligible with GNM?', action: 'ask_prompt', prompt: 'Am I eligible with GNM?' },
-          { label: 'What is the monthly salary?', action: 'ask_prompt', prompt: 'What is the salary in NORCET?' }
-        ]
-      };
-    }
-  }
-
-  // ── 4. PYQ PAPERS & CBT SIMULATION ──
-  else if (intent === 'pyq_retrieve') {
-    response = {
-      message: 'Official AIIMS NORCET 2024 and 2023 shift papers (100 questions, 90 mins, verified answer keys) are available directly inside SkillCase for timed CBT practice or PDF download.',
-      confidence: 'verified',
-      avatar: 'thumbsup',
-      sourceDocName: 'Verified Question Booklet & AIIMS Key',
-      sourceUrl: 'https://www.aiimsexams.ac.in',
-      quickActions: [
-        { label: 'What is the negative marking?', action: 'ask_prompt', prompt: 'What is the negative marking in NORCET?' },
-        { label: 'What are high yield topics?', action: 'ask_prompt', prompt: 'What are the high-yield topics to study?' }
-      ]
-    };
-  }
-
-  // ── 5. EXAM PATTERN & SYLLABUS ──
-  else if (intent === 'exam_pattern_syllabus') {
-    response = {
-      message: 'NORCET Stage 1 Prelims has 100 MCQs (80 Nursing + 20 General Aptitude) in 90 minutes. Stage 2 Mains has 160 clinical case scenario MCQs in 180 minutes. 1/3rd (0.33) negative marking applies.',
-      confidence: 'verified',
-      avatar: 'looking',
-      sourceDocName: 'AIIMS Official Examination Scheme',
-      sourceUrl: 'https://www.aiimsexams.ac.in',
-      quickActions: [
-        { label: 'What are high yield topics?', action: 'ask_prompt', prompt: 'What are the high-yield topics to study?' },
-        { label: 'What are the cutoff percentiles?', action: 'ask_prompt', prompt: 'What are the cutoff percentiles?' }
-      ]
-    };
-  }
-
-  // ── 6. PREPARATION & HIGH-YIELD TOPICS ──
-  else if (intent === 'prep_recommendation') {
-    response = {
-      message: 'Prioritize Medical-Surgical Nursing (Cardiology, ABG, Burns) and Obstetrics/Midwifery (PPH, Partograph) — together they account for 55% of all clinical MCQs.',
-      confidence: 'verified',
-      avatar: 'smiling',
-      sourceDocName: 'SkillCase High-Yield Curation & INC Syllabus',
-      sourceUrl: 'https://www.aiimsexams.ac.in',
-      quickActions: [
-        { label: 'What is the exam pattern?', action: 'ask_prompt', prompt: 'What is the Stage 1 vs Stage 2 exam pattern?' },
-        { label: 'When is the admit card and exam?', action: 'ask_prompt', prompt: 'When is the admit card and exam?' }
-      ]
-    };
-  }
-
-  // ── 7. TIMELINE & RECRUITMENT DATES ──
-  else if (intent === 'timeline_milestones') {
-    response = {
-      message: 'Key NORCET 2026 dates: Stage 1 Preliminary CBT is on 12 September 2026 (Admit Card drops on 09 September). Stage 2 Mains CBT will be on 30 September 2026.',
-      confidence: 'verified',
-      avatar: 'thumbsup',
-      sourceDocName: 'AIIMS Academic Calendar 2026',
-      sourceUrl: 'https://www.aiimsexams.ac.in',
-      quickActions: [
-        { label: 'What is the monthly salary?', action: 'ask_prompt', prompt: 'What is the monthly salary?' },
-        { label: 'What is the exam pattern?', action: 'ask_prompt', prompt: 'What is the Stage 1 vs Stage 2 exam pattern?' }
-      ]
-    };
-  }
-
-  // ── 8. GENERAL / UNVERIFIED FALLBACK ──
-  else {
-    const isUnverifiedSpeculation = /leak|cancel|paper out|cheating|court stay|bribe|consultant|agent fee/i.test(q);
-
-    if (isUnverifiedSpeculation) {
-      response = {
-        message: "I couldn't verify that from the official notification or court records. SkillCase only provides authoritative, government-verified intelligence.",
+        message: "I don't have a checked answer for that. Please see the official notification.",
         confidence: 'not_verified',
-        avatar: 'shocked',
-        sourceDocName: 'Unverified Community Query',
-        quickActions: [
-          { label: 'View Official Notification', action: 'open_url', url: opportunity?.officialNotificationUrl || 'https://www.aiimsexams.ac.in' },
-          { label: 'Check Exam Eligibility', action: 'ask_prompt', prompt: 'Can I apply for NORCET?' }
-        ]
-      };
-    } else {
-      response = {
-        message: 'I am Maya, your SkillCase career co-pilot. I can explain monthly salaries (Level 7 ₹78k–₹85k/mo), evaluate your eligibility, break down subject weightages, or explain cutoff percentiles.',
-        confidence: 'verified',
-        avatar: 'wave',
-        sourceDocName: 'SkillCase Intelligence Core',
-        quickActions: [
-          { label: 'What is the monthly salary?', action: 'ask_prompt', prompt: 'What is the monthly salary in NORCET?' },
-          { label: 'Can I apply for NORCET?', action: 'ask_prompt', prompt: 'Can I apply for NORCET?' }
-        ]
+        avatar: 'looking',
+        quickActions: official,
       };
     }
   }
