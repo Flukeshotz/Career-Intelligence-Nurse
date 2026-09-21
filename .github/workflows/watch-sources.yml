@@ -1,7 +1,8 @@
 name: Refresh data from official sources
 
-# Every 6 hours:
-#   1. refresh-data   re-reads every record's sources; updates numbers/dates ONLY where >=2 sources agree
+# Every day (02:00 IST):
+#   0. verify-official reads each official notice; a value is kept only if it appears word-for-word in it
+#   1. refresh-data   re-reads every record's sources; updates numbers/dates ONLY where >=2 sources agree (big jumps are held)
 #   2. watch-sources  checks each cited page still loads and still shows our numbers
 #   3. discover       looks for recruitments we are not tracking yet (report only, never publishes)
 #   4. health         decides whether a human is needed at all
@@ -12,7 +13,7 @@ name: Refresh data from official sources
 # workflow permissions = read & write.
 on:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '30 20 * * *'
   workflow_dispatch: {}
 
 permissions:
@@ -43,6 +44,8 @@ jobs:
           npm i --no-save playwright
           npx playwright install --with-deps chromium
       - run: npx tsx scripts/refresh-data.ts --write
+      - name: Verify against official notices
+        run: npx tsx scripts/verify-official.ts --write
       - run: npx tsx scripts/watch-sources.ts --write
       - name: Discover new recruitments (report only)
         continue-on-error: true

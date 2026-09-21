@@ -14,8 +14,14 @@ interface FieldConsensus {
   value: number | string;
   agreeing: number;
 }
+interface OfficialRecord {
+  status: 'verified' | 'partial' | 'unreadable';
+  fields?: Record<string, { value: number | string }>;
+}
 interface RefreshRecord {
   status: 'consensus' | 'partial' | 'no_consensus';
+  /** Values found word-for-word in the official notice. These outrank cross-source consensus. */
+  official?: OfficialRecord;
   fields?: {
     vacancies?: FieldConsensus;
     applicationStart?: FieldConsensus;
@@ -50,8 +56,10 @@ function rewriteDescription(e: MockExam): string {
 
 export function applyExamOverlay(exams: MockExam[]): MockExam[] {
   return exams.map((e) => {
-    const f = RECORDS[e.id]?.fields;
-    if (!f) return e;
+    const rec = RECORDS[e.id];
+    // The official notice, where it was readable, wins over agreement between third-party reports.
+    const f = { ...(rec?.fields ?? {}), ...(rec?.official?.fields ?? {}) } as NonNullable<RefreshRecord['fields']>;
+    if (!rec?.fields && !rec?.official?.fields) return e;
     const next = { ...e };
     if (typeof f.vacancies?.value === 'number') next.vacancies = f.vacancies.value;
     if (typeof f.applicationStart?.value === 'string') next.applicationStart = `${f.applicationStart.value}T00:00:00+05:30`;

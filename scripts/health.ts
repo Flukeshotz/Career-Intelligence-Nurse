@@ -11,7 +11,14 @@ import REFRESHED from '../src/lib/refreshed-data.json';
  *
  * Only live recruitments matter: a closed one going "stale" is not a problem.
  */
-const records = (REFRESHED as unknown as { records: Record<string, { status: string; checkedAt: string }> }).records;
+interface Rec {
+  status: string;
+  checkedAt: string;
+  fields?: Record<string, { value: number | string }>;
+  held?: string[];
+  official?: { status: string; checkedAt: string; fields?: Record<string, { value: number | string; quote: string }>; rejected?: string[]; note?: string };
+}
+const records = (REFRESHED as unknown as { records: Record<string, Rec> }).records;
 const problems: string[] = [];
 
 for (const e of INITIAL_EXAMS) {
@@ -19,6 +26,15 @@ for (const e of INITIAL_EXAMS) {
   const live = lc.stage === 'upcoming' || lc.stage === 'applications_open' || lc.stage === 'applications_closed';
   const t = getTrust(e.id);
   const r = records[e.id];
+
+  // Held changes: third-party sources moved a lot, the site kept the old value until the notice confirms.
+  if (r?.held?.length) problems.push(`**${e.name}** — a big change was NOT applied (${r.held.join('; ')}). Sources moved sharply; the site still shows the old value. Check the official notice.`);
+  // Official notice vs third-party agreement: the notice wins on the site, but someone should know.
+  for (const [k, ov] of Object.entries(r?.official?.fields ?? {})) {
+    const cv = r?.fields?.[k]?.value;
+    if (cv !== undefined && cv !== ov.value) problems.push(`**${e.name}** — the official notice says ${k}=${ov.value} ("${ov.quote.slice(0, 90)}") but independent reports say ${cv}. The site shows the official value.`);
+  }
+  if (live && r?.official && r.official.status === 'unreadable') problems.push(`**${e.name}** — the official notice could not be read (${r.official.note ?? 'unknown'}). The site falls back to cross-source checks.`);
 
   if (r?.status === 'no_consensus') problems.push(`**${e.name}** — sources disagree on a number. Its confirmed badge was removed until they agree. Check the official notice.`);
   else if (live && t.level === 'stale') problems.push(`**${e.name}** — not re-confirmed for over 14 days (${lc.label}). The refresher could not read enough sources; add another source or check the official site.`);

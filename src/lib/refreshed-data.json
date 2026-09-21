@@ -28,7 +28,15 @@
       },
       "disagreements": [],
       "sourcesRead": 4,
-      "sourcesTried": 4
+      "sourcesTried": 4,
+      "official": {
+        "status": "partial",
+        "checkedAt": "2026-09-21",
+        "url": "https://www.aiimsexams.ac.in/advertisement/6a6350f7e5a81c4267f4ff04",
+        "fields": {},
+        "rejected": [],
+        "note": "document does not match this recruitment"
+      }
     },
     "exam-rrb-nurse-2026": {
       "status": "consensus",
@@ -52,7 +60,27 @@
       },
       "disagreements": [],
       "sourcesRead": 3,
-      "sourcesTried": 3
+      "sourcesTried": 3,
+      "official": {
+        "status": "verified",
+        "checkedAt": "2026-09-21",
+        "url": "https://rrb.indianrailways.gov.in/-/image/1789382253677CEN_05_2026_Paramedical_Categories_English.pdf/examsDocuments",
+        "fields": {
+          "vacancies": {
+            "value": 365,
+            "quote": "Nursing Superintendent 7 44900 C1 20-40 365"
+          },
+          "applicationStart": {
+            "value": "2026-09-15",
+            "quote": "Opening date of Online application 15.09.2026"
+          },
+          "applicationDeadline": {
+            "value": "2026-10-14",
+            "quote": "Closing date for Submission of Online Application 14.10.2026 (23:59 hours)"
+          }
+        },
+        "rejected": []
+      }
     },
     "exam-pgimer-no-2026": {
       "status": "consensus",
@@ -158,7 +186,22 @@
       },
       "disagreements": [],
       "sourcesRead": 2,
-      "sourcesTried": 3
+      "sourcesTried": 3,
+      "official": {
+        "status": "partial",
+        "checkedAt": "2026-09-21",
+        "url": "https://ukmssb.org/wp-content/uploads/2026/06/Nursing-officer-Advertisment.pdf",
+        "fields": {
+          "vacancies": {
+            "value": 196,
+            "quote": "uflZax vf/kdkjh ¼efgyk@iq:”k½ fMIyksek/kkjd@fMxzh/kkjd ds dqy fjDr 196 inksa"
+          }
+        },
+        "rejected": [
+          "applicationStart",
+          "applicationDeadline"
+        ]
+      }
     },
     "exam-hssc-har-nurse-2026": {
       "status": "consensus",
@@ -182,7 +225,23 @@
       },
       "disagreements": [],
       "sourcesRead": 3,
-      "sourcesTried": 3
+      "sourcesTried": 3,
+      "official": {
+        "status": "partial",
+        "checkedAt": "2026-09-21",
+        "url": "https://hssc.gov.in/file/ac1f23cd-99c4-13a6-819c-32aaa1600063/advertisements",
+        "fields": {
+          "applicationStart": {
+            "value": "2026-02-09",
+            "quote": "Opening Date for submission of online application 09.02.2026"
+          },
+          "applicationDeadline": {
+            "value": "2026-02-23",
+            "quote": "Closing Date for Submission of online Application 23.02.2026 (11:59 PM)"
+          }
+        },
+        "rejected": []
+      }
     },
     "exam-ap-mhsrb-nurse-2026": {
       "status": "consensus",

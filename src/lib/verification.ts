@@ -74,6 +74,7 @@ export interface TrustSummary {
 interface RefreshRecord {
   status: 'consensus' | 'partial' | 'no_consensus';
   checkedAt: string;
+  official?: { status: 'verified' | 'partial' | 'unreadable'; checkedAt: string };
 }
 const REFRESH = (REFRESHED as unknown as { records: Record<string, RefreshRecord> }).records;
 
@@ -96,6 +97,18 @@ export function getTrust(id: string, now: number = Date.now()): TrustSummary {
   const auto = REFRESH[id];
   if (auto?.status === 'no_consensus') {
     return { level: 'unverified', badge: 'Confirm on official site', message: 'Sources disagree on some details. Check dates and vacancies on the official site before applying.', checkedAt: auto.checkedAt, suppressFromListings: false };
+  }
+
+  // Strongest state: the numbers were found word-for-word in the official notice itself.
+  if (auto?.official?.status === 'verified' && daysBetween(auto.official.checkedAt, now) <= CONFIRMATION_TTL_DAYS) {
+    const d = daysBetween(auto.official.checkedAt, now);
+    return {
+      level: 'confirmed',
+      badge: d <= 0 ? 'Checked with the official notice today' : `Checked with the official notice ${d} day${d === 1 ? '' : 's'} ago`,
+      message: 'Vacancies and application dates were read directly from the official notification.',
+      checkedAt: auto.official.checkedAt,
+      suppressFromListings: false,
+    };
   }
 
   const confirmedAt = auto?.status === 'consensus' ? auto.checkedAt : manual?.state === 'confirmed' ? manual.checkedAt : undefined;

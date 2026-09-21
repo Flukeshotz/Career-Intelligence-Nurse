@@ -34,7 +34,25 @@ async function main() {
         kept++;
         continue;
       }
-      merged[id] = r;
+      const before = merged[id];
+      const held: string[] = [];
+      // Safety gate: a big jump (>30% vacancies, or a date moving >45 days) is not applied on
+      // third-party agreement alone. The old value stays and a human is told (see health.ts).
+      // Once the official notice confirms the new value (verify-official), it goes through.
+      if (before?.fields) {
+        for (const [k, nv] of Object.entries(r.fields)) {
+          const ov = before.fields[k];
+          if (!ov || ov.value === nv!.value) continue;
+          const officialSays = before.official?.fields?.[k]?.value;
+          if (officialSays === nv!.value) continue;
+          const big = typeof ov.value === 'number' ? Math.abs((nv!.value as number) - ov.value) / ov.value > 0.3 : Math.abs(new Date(nv!.value as string).getTime() - new Date(ov.value as string).getTime()) > 45 * 86_400_000;
+          if (big) {
+            held.push(`${k}: ${ov.value} → ${nv!.value}`);
+            r.fields[k as keyof typeof r.fields] = ov;
+          }
+        }
+      }
+      merged[id] = { ...r, official: before?.official, ...(held.length ? { held } : {}) };
     }
     fs.writeFileSync(file, JSON.stringify({ ranAt, records: merged }, null, 2) + '\n');
     console.log(`\nwrote ${Object.keys(records).length - kept} records, kept ${kept} previous (inconclusive run) → src/lib/refreshed-data.json`);

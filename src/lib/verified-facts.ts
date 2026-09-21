@@ -90,7 +90,7 @@ export const VERIFIED_FACTS: Record<string, VerifiedFacts> = {
     payShort: 'Level 7 · ₹44,900–1,42,400',
     eligibility: 'B.Sc. Nursing or Diploma in General Nursing, registered with the Haryana Nurses & Nurse-Midwives Council',
     selection: 'Written exam (CET Phase-II Group C). No application fee.',
-    posts: '1,803 posts across Health, ESI and DMER',
+    posts: '1,803 posts in total: 1,791 Nurse / Staff Nurse (ESI 20, Health 296, DMER 1,475) and 12 Sister Tutor',
   },
   'exam-ap-mhsrb-nurse-2026': {
     pay: '₹27,675 per month, consolidated (contract; no other allowances)',

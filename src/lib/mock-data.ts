@@ -235,7 +235,7 @@ const RAW_EXAMS: MockExam[] = [
     "applicationUrl": "https://onetimeregn.haryana.gov.in",
     "source": "HSSC Panchkula",
     "sourceType": "official",
-    "descriptionSimple": "What is this?\nHaryana HSSC recruitment of 1,803 nursing posts under CET Phase-II Group C (Health, ESI and DMER). Notification 6 February 2026.\n\nWho can apply?\nB.Sc. Nursing or Diploma in General Nursing, registered with the Haryana Nurses & Nurse-Midwives Council.\n\nImportant dates:\nApplications 9–23 February 2026. A correction window ran 16–19 March 2026. Exam date not announced yet.\n\nWhat do you need?\nNursing Council registration, qualification certificates, and category/ID documents.\n\nWhat happens next?\nWritten exam followed by document verification. No application fee.",
+    "descriptionSimple": "What is this?\nHaryana HSSC recruitment of 1,803 posts under CET Phase-II Group C (Health, ESI and DMER): 1,791 Nurse / Staff Nurse and 12 Sister Tutor. Notification 6 February 2026.\n\nWho can apply?\nB.Sc. Nursing or Diploma in General Nursing, registered with the Haryana Nurses & Nurse-Midwives Council.\n\nImportant dates:\nApplications 9–23 February 2026. A correction window ran 16–19 March 2026. Exam date not announced yet.\n\nWhat do you need?\nNursing Council registration, qualification certificates, and category/ID documents.\n\nWhat happens next?\nWritten exam followed by document verification. No application fee.",
     "lastVerified": "2026-09-19T10:00:00Z"
   }
 ];
