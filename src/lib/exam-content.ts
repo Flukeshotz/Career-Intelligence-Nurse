@@ -111,6 +111,7 @@ export function faqs(e: MockExam): Faq[] {
   if (f.eligibility) out.push({ q: `Who can apply for ${short}?`, a: `${f.eligibility}.` });
   if (f.age) out.push({ q: `What is the age limit for ${short}?`, a: `${f.age}.` });
   if (f.pay) out.push({ q: `What is the salary for ${short}?`, a: `${f.pay}. This is the official pay scale, not take-home pay.` });
+  if (f.pattern) out.push({ q: `What is the exam pattern for ${short}?`, a: f.pattern.join(' ') });
   if (f.selection) out.push({ q: `How are candidates selected for ${short}?`, a: `${f.selection}.` });
 
   out.push({

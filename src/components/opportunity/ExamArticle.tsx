@@ -66,6 +66,7 @@ export function ExamArticle({ exam, siteUrl }: { exam: MockExam; siteUrl?: strin
     ...(f.posts ? ([['vacancy', 'Vacancy details']] as Array<[string, string]>) : []),
     ...(f.eligibility || f.age ? ([['eligibility', 'Eligibility']] as Array<[string, string]>) : []),
     ...(f.selection ? ([['selection', 'Selection process']] as Array<[string, string]>) : []),
+    ...(f.pattern ? ([['pattern', 'Exam pattern']] as Array<[string, string]>) : []),
     ...(f.pay ? ([['pay', 'Salary']] as Array<[string, string]>) : []),
     ['apply', 'How to apply'],
     ['faq', 'FAQs'],
@@ -122,6 +123,17 @@ export function ExamArticle({ exam, siteUrl }: { exam: MockExam; siteUrl?: strin
               ...(f.age ? [{ label: 'Age limit', value: f.age }] : []),
             ]}
           />
+        </section>
+      )}
+
+      {f.pattern && (
+        <section id="pattern" className="sc-card" style={{ padding: '18px', marginBottom: '16px', scrollMarginTop: '80px' }}>
+          <h2 style={h2}>Exam pattern</h2>
+          <ul style={{ margin: 0, paddingLeft: '18px', fontSize: '0.88rem', color: 'var(--sc-ink-700)', lineHeight: 1.7 }}>
+            {f.pattern.map((line) => (
+              <li key={line}>{line}</li>
+            ))}
+          </ul>
         </section>
       )}
 

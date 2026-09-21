@@ -343,6 +343,172 @@ export const INITIAL_REQUIREMENTS: MockRequirement[] = [
     "rawText": "20 to 40 years as on prescribed reference date",
     "simpleText": "Maximum age limit of 40 years (Central Railway rules)",
     "remedyText": "Verify OBC/SC/ST age relaxation in CEN 04/2026."
+  },
+  {
+    "id": "req-11",
+    "examId": "exam-osssc-nurse-2026",
+    "kind": "qualification",
+    "operator": "in",
+    "valueText": [
+      "gnm",
+      "bsc_nursing",
+      "post_basic",
+      "msc"
+    ],
+    "isMandatory": true,
+    "rawText": "GNM or B.Sc. Nursing",
+    "simpleText": "GNM diploma or B.Sc. Nursing degree",
+    "remedyText": "Complete GNM or B.Sc. Nursing."
+  },
+  {
+    "id": "req-12",
+    "examId": "exam-osssc-nurse-2026",
+    "kind": "age",
+    "operator": "lte",
+    "valueNumeric": 42,
+    "isMandatory": true,
+    "rawText": "21–42 years as on 12 June 2026",
+    "simpleText": "Age must be 42 years or under on 12 June 2026",
+    "remedyText": "Check age relaxation for your category in the official notification."
+  },
+  {
+    "id": "req-13",
+    "examId": "exam-ukmssb-nurse-2026",
+    "kind": "qualification",
+    "operator": "in",
+    "valueText": [
+      "gnm",
+      "bsc_nursing",
+      "post_basic",
+      "msc"
+    ],
+    "isMandatory": true,
+    "rawText": "GNM or B.Sc. Nursing",
+    "simpleText": "GNM diploma or B.Sc. Nursing degree",
+    "remedyText": "Complete GNM or B.Sc. Nursing."
+  },
+  {
+    "id": "req-14",
+    "examId": "exam-hssc-har-nurse-2026",
+    "kind": "qualification",
+    "operator": "in",
+    "valueText": [
+      "gnm",
+      "bsc_nursing",
+      "post_basic",
+      "msc"
+    ],
+    "isMandatory": true,
+    "rawText": "B.Sc. Nursing or Diploma in General Nursing",
+    "simpleText": "GNM diploma or B.Sc. Nursing degree",
+    "remedyText": "Complete GNM or B.Sc. Nursing."
+  },
+  {
+    "id": "req-15",
+    "examId": "exam-hssc-har-nurse-2026",
+    "kind": "registration",
+    "operator": "exists",
+    "isMandatory": true,
+    "rawText": "Registered with the Haryana Nurses & Nurse-Midwives Council",
+    "simpleText": "Registration with the Haryana Nurses & Nurse-Midwives Council",
+    "remedyText": "Register or renew with your State Nursing Council."
+  },
+  {
+    "id": "req-16",
+    "examId": "exam-ap-mhsrb-nurse-2026",
+    "kind": "qualification",
+    "operator": "in",
+    "valueText": [
+      "gnm",
+      "bsc_nursing",
+      "post_basic",
+      "msc"
+    ],
+    "isMandatory": true,
+    "rawText": "GNM or B.Sc. Nursing",
+    "simpleText": "GNM diploma or B.Sc. Nursing degree",
+    "remedyText": "Complete GNM or B.Sc. Nursing."
+  },
+  {
+    "id": "req-17",
+    "examId": "exam-ap-mhsrb-nurse-2026",
+    "kind": "other",
+    "isMandatory": true,
+    "rawText": "Residents of Andhra Pradesh",
+    "simpleText": "Only residents of Andhra Pradesh can apply",
+    "remedyText": "Read the official notification for the exact requirement."
+  },
+  {
+    "id": "req-18",
+    "examId": "exam-pgimer-no-2026",
+    "kind": "qualification",
+    "operator": "in",
+    "valueText": [
+      "bsc_nursing",
+      "post_basic",
+      "msc",
+      "gnm"
+    ],
+    "isMandatory": true,
+    "rawText": "B.Sc. Nursing (Hons) or diploma",
+    "simpleText": "B.Sc. Nursing (Hons) or a nursing diploma",
+    "remedyText": "Complete a B.Sc. Nursing degree or nursing diploma."
+  },
+  {
+    "id": "req-19",
+    "examId": "exam-pgimer-no-2026",
+    "kind": "age",
+    "operator": "lte",
+    "valueNumeric": 35,
+    "isMandatory": true,
+    "rawText": "18–35 years (relaxations apply)",
+    "simpleText": "Age must be 35 years or under",
+    "remedyText": "Check age relaxation for your category in the official notification."
+  },
+  {
+    "id": "req-20",
+    "examId": "exam-pgimer-no-2026",
+    "kind": "other",
+    "isMandatory": true,
+    "rawText": "Work experience as stated in the notification",
+    "simpleText": "Work experience as stated in the official notification",
+    "remedyText": "Read the official notification for the exact requirement."
+  },
+  {
+    "id": "req-21",
+    "examId": "exam-mp-esb-nurse-2026",
+    "kind": "qualification",
+    "operator": "in",
+    "valueText": [
+      "bsc_nursing",
+      "post_basic",
+      "msc"
+    ],
+    "isMandatory": true,
+    "rawText": "B.Sc. Nursing (4 years) or Post Basic B.Sc. Nursing, with 12th in Physics, Chemistry and Biology",
+    "simpleText": "B.Sc. Nursing or Post Basic B.Sc. Nursing",
+    "remedyText": "Complete a B.Sc. Nursing or Post Basic B.Sc. Nursing degree."
+  },
+  {
+    "id": "req-22",
+    "examId": "exam-mp-esb-nurse-2026",
+    "kind": "registration",
+    "operator": "exists",
+    "isMandatory": true,
+    "rawText": "Valid registration with the MP Nursing Council",
+    "simpleText": "Valid registration with the MP Nursing Council",
+    "remedyText": "Register or renew with the MP Nursing Council."
+  },
+  {
+    "id": "req-23",
+    "examId": "exam-mp-esb-nurse-2026",
+    "kind": "age",
+    "operator": "lte",
+    "valueNumeric": 40,
+    "isMandatory": true,
+    "rawText": "18–40 years as on 1 Jan 2026 (up to 45 for reserved categories)",
+    "simpleText": "Age must be 40 years or under on 1 Jan 2026",
+    "remedyText": "Reserved categories: check the age relaxation in the official notification."
   }
 ];
 
