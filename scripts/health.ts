@@ -34,6 +34,9 @@ for (const e of INITIAL_EXAMS) {
     const cv = r?.fields?.[k]?.value;
     if (cv !== undefined && cv !== ov.value) problems.push(`**${e.name}** — the official notice says ${k}=${ov.value} ("${ov.quote.slice(0, 90)}") but independent reports say ${cv}. The site shows the official value.`);
   }
+  for (const c of (r?.official as { factChecks?: Array<{ fact: string; text: string; missing: string[] }> } | undefined)?.factChecks ?? []) {
+    if (c.missing.length) problems.push(`**${e.name}** — our text for ${c.fact} ("${c.text.slice(0, 80)}") has figures not found in the official notice: ${c.missing.join(', ')}.`);
+  }
   if (live && r?.official && r.official.status === 'unreadable') problems.push(`**${e.name}** — the official notice could not be read (${r.official.note ?? 'unknown'}). The site falls back to cross-source checks.`);
 
   if (r?.status === 'no_consensus') problems.push(`**${e.name}** — sources disagree on a number. Its confirmed badge was removed until they agree. Check the official notice.`);

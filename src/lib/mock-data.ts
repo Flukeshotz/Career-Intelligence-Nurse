@@ -94,7 +94,7 @@ const RAW_EXAMS: MockExam[] = [
     "examDate": "2026-09-12T09:00:00+05:30",
     "mainsDate": "2026-09-30T09:00:00+05:30",
     "status": "open",
-    "officialNotificationUrl": "https://www.aiimsexams.ac.in/advertisement/6a6350f7e5a81c4267f4ff04",
+    "officialNotificationUrl": "https://www.aiimsexams.ac.in",
     "applicationUrl": "https://www.aiimsexams.ac.in",
     "source": "AIIMS Examination Section",
     "sourceType": "official",

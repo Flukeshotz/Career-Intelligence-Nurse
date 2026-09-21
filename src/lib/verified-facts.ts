@@ -86,8 +86,8 @@ export const VERIFIED_FACTS: Record<string, VerifiedFacts> = {
     posts: '196 Nursing Officer (Group C) posts, male and female',
   },
   'exam-hssc-har-nurse-2026': {
-    pay: 'Pay Level 7 (₹44,900 – ₹1,42,400)',
-    payShort: 'Level 7 · ₹44,900–1,42,400',
+    pay: 'Pay Level 7 (7th CPC pay matrix)',
+    payShort: 'Pay Level 7',
     eligibility: 'B.Sc. Nursing or Diploma in General Nursing, registered with the Haryana Nurses & Nurse-Midwives Council',
     selection: 'Written exam (CET Phase-II Group C). No application fee.',
     posts: '1,803 posts in total: 1,791 Nurse / Staff Nurse (ESI 20, Health 296, DMER 1,475) and 12 Sister Tutor',

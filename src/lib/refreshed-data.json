@@ -78,7 +78,34 @@
             "quote": "Closing date for Submission of Online Application 14.10.2026 (23:59 hours)"
           }
         },
-        "rejected": []
+        "rejected": [],
+        "factChecks": [
+          {
+            "fact": "pay",
+            "text": "Pay Level 7 (initial basic ₹44,900)",
+            "missing": []
+          },
+          {
+            "fact": "age",
+            "text": "20–40 years as on 1 Jan 2027 (relaxations apply)",
+            "missing": []
+          },
+          {
+            "fact": "pattern 1",
+            "text": "Single computer-based test: 100 objective questions, 100 marks, 90 minutes.",
+            "missing": []
+          },
+          {
+            "fact": "pattern 2",
+            "text": "Professional Ability 70, General Awareness 10, General Arithmetic, Intelligence & Reasoning 10, General Science 10.",
+            "missing": []
+          },
+          {
+            "fact": "pattern 3",
+            "text": "1/3 mark is deducted for every wrong answer.",
+            "missing": []
+          }
+        ]
       }
     },
     "exam-pgimer-no-2026": {
@@ -199,7 +226,8 @@
         "rejected": [
           "applicationStart",
           "applicationDeadline"
-        ]
+        ],
+        "factChecks": []
       }
     },
     "exam-hssc-har-nurse-2026": {
@@ -239,7 +267,14 @@
             "quote": "Closing Date for Submission of online Application 23.02.2026 (11:59 PM)"
           }
         },
-        "rejected": []
+        "rejected": [],
+        "factChecks": [
+          {
+            "fact": "pay",
+            "text": "Pay Level 7 (7th CPC pay matrix)",
+            "missing": []
+          }
+        ]
       }
     },
     "exam-ap-mhsrb-nurse-2026": {

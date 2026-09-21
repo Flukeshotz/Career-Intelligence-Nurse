@@ -8,6 +8,7 @@
  * mistake cannot reach the site. Values that pass are stored with their evidence.
  */
 import { INITIAL_EXAMS } from '../lib/mock-data';
+import { VERIFIED_FACTS } from '../lib/verified-facts';
 import { dateForms, vacancyForms } from '../lib/source-watch';
 import { OFFICIAL_DOCS } from './official-registry';
 import { fetchPageText } from './fetch-text';
@@ -28,6 +29,8 @@ export interface OfficialRecord {
   /** Fields the model gave but that could not be found in the document — discarded. */
   rejected: OfficialField[];
   note?: string;
+  /** Numbers in our hand-written text (pay, age, pattern…) that do NOT appear in the notice. */
+  factChecks?: Array<{ fact: string; text: string; missing: string[] }>;
 }
 
 const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
@@ -78,6 +81,23 @@ function ground(f: OfficialField, v: number | string, quote: string, docNorm: st
   return dateForms(v).some((form) => q.includes(form));
 }
 
+/** Every figure in a sentence must occur in the notice; returns the ones that do not. */
+export function missingNumbers(sentence: string, docText: string): string[] {
+  const doc = docText.replace(/(\d),(?=\d)/g, '$1');
+  const nums = (sentence.replace(/(\d),(?=\d)/g, '$1').match(/\d+(?:\.\d+)?/g) ?? []).filter((n) => n.length >= 2 && !/^20\d\d$/.test(n));
+  return Array.from(new Set(nums)).filter((n) => !new RegExp(`(^|[^0-9.])${n.replace('.', '\\.')}([^0-9]|$)`).test(doc));
+}
+
+function checkFacts(id: string, docText: string): NonNullable<OfficialRecord['factChecks']> {
+  const f = VERIFIED_FACTS[id];
+  if (!f) return [];
+  const lines: Array<[string, string]> = [];
+  if (f.pay) lines.push(['pay', f.pay]);
+  if (f.age) lines.push(['age', f.age]);
+  (f.pattern ?? []).forEach((l, i) => lines.push([`pattern ${i + 1}`, l]));
+  return lines.map(([fact, text]) => ({ fact, text, missing: missingNumbers(text, docText) }));
+}
+
 export async function verifyOfficial(id: string): Promise<OfficialRecord | null> {
   const doc = OFFICIAL_DOCS[id];
   const url = doc?.url;
@@ -111,5 +131,5 @@ export async function verifyOfficial(id: string): Promise<OfficialRecord | null>
   }
   // A record counts as verified against the notice only when the two figures that hurt most if wrong are grounded.
   const status = fields.vacancies && fields.applicationDeadline ? 'verified' : 'partial';
-  return { status, checkedAt, url, fields, rejected };
+  return { status, checkedAt, url, fields, rejected, factChecks: fields.applicationDeadline ? checkFacts(id, page.text) : [] };
 }

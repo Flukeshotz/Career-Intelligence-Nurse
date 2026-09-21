@@ -16,5 +16,4 @@ export const OFFICIAL_DOCS: Record<string, OfficialDoc> = {
     note: 'Advt. No. 04/2026 covers many Group C posts. The Nursing recruitment is the rows for Nurse / Staff Nurse (ESI, Health, DMER) and Sister Tutor. Report dates from the advertisement timeline; leave vacancies null because the notice lists them per department, not as one total.',
   },
   'exam-ukmssb-nurse-2026': { url: 'https://ukmssb.org/wp-content/uploads/2026/06/Nursing-officer-Advertisment.pdf' },
-  'exam-norcet-2026': { url: 'https://www.aiimsexams.ac.in/advertisement/6a6350f7e5a81c4267f4ff04' },
 };
