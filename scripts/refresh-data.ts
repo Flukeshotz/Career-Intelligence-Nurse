@@ -23,6 +23,14 @@ async function main() {
     console.log(`${r.status.toUpperCase().padEnd(13)} ${id.padEnd(28)} read ${r.sourcesRead}/${r.sourcesTried}  ${f}${r.disagreements.length ? '  DISAGREE: ' + r.disagreements.join(',') : ''}`);
   }
 
+  // A broken AI provider (bad key/endpoint) must not look like a healthy quiet run.
+  const llmFailures = log.filter((l) => /extract failed/.test(l.outcome));
+  const anyRead = Object.values(records).some((r) => r.sourcesRead > 0);
+  if (llmFailures.length > 0 && !anyRead) {
+    console.error(`\nAI provider failed on every page (${llmFailures[0].outcome.slice(0, 160)}). Check the API secrets.`);
+    process.exitCode = 1;
+  }
+
   if (write) {
     const file = path.join(process.cwd(), 'src', 'lib', 'refreshed-data.json');
     const prev = fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, 'utf-8')) : { records: {} };

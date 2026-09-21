@@ -17,6 +17,6 @@ for name in AZURE_AI_API_KEY AZURE_AI_ENDPOINT AZURE_AI_DEPLOYMENT AZURE_AI_API_
     echo "SKIPPED $name: not found in $ENV_FILE" >&2
     continue
   fi
-  printf '%s' "$value" | gh secret set "$name" --repo "$REPO" --body -
+  printf '%s' "$value" | gh secret set "$name" --repo "$REPO"
   echo "set $name (${#value} characters)"
 done
