@@ -1,3 +1,4 @@
+import { SITE_URL } from '@/lib/site';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -34,7 +35,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${job.title} | ${job.employer}`,
       description: `Apply before ${job.applicationDeadline ? new Date(job.applicationDeadline).toLocaleDateString('en-IN') : 'closing date'}. Check qualification & eligibility.`,
-      url: `https://skillcase.in/nursing/jobs/${job.slug}`,
+      url: `${SITE_URL}/nursing/jobs/${job.slug}`,
       type: 'article',
     },
   };

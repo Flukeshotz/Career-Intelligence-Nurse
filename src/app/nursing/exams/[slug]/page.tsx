@@ -1,3 +1,4 @@
+import { SITE_URL } from '@/lib/site';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -50,7 +51,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${exam.name} | SkillCase Nursing`,
       description: `Vacancies, application dates, exam date and eligibility for ${exam.name}.`,
-      url: `https://skillcase.in/nursing/exams/${exam.slug}`,
+      url: `${SITE_URL}/nursing/exams/${exam.slug}`,
       type: 'article',
     },
   };

@@ -1,3 +1,4 @@
+import { SITE_URL } from '@/lib/site';
 import type { Metadata, Viewport } from 'next';
 import { Suspense } from 'react';
 import Script from 'next/script';
@@ -6,7 +7,7 @@ import { TopHeader } from '@/components/layout/TopHeader';
 import { BottomNav } from '@/components/layout/BottomNav';
 import { PostHogProvider } from '@/components/layout/PostHogProvider';
 
-const BASE_URL = 'https://career-intelligence-nurse.vercel.app';
+const BASE_URL = SITE_URL;
 
 export const metadata: Metadata = {
   // ── FAIL FIX: Title too long (was 64 chars) → now 55 chars ──

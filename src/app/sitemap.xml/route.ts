@@ -1,8 +1,9 @@
+import { SITE_URL } from '@/lib/site';
 import { INITIAL_JOBS, INITIAL_EXAMS } from '@/lib/mock-data';
 import { getTrust } from '@/lib/verification';
 
 export async function GET() {
-  const baseUrl = 'https://skillcase.in';
+  const baseUrl = SITE_URL;
   const now = new Date().toISOString();
 
   const staticUrls = [

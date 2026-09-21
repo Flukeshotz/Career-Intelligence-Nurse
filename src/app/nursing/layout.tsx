@@ -1,6 +1,7 @@
+import { SITE_URL } from '@/lib/site';
 import type { Metadata } from 'next';
 
-const BASE_URL = 'https://career-intelligence-nurse.vercel.app';
+const BASE_URL = SITE_URL;
 
 export const metadata: Metadata = {
   title: 'Nursing Govt Exams India — NORCET 2026, RRB, PGIMER',

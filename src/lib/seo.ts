@@ -1,3 +1,5 @@
+import { SITE_URL } from './site';
+
 /**
  * SEO & GEO (Answer Engine Optimization) Structured Data Generators
  */
@@ -19,7 +21,7 @@ export interface JobPostingData {
   profession?: string;
 }
 
-export function generateJobPostingJsonLd(job: JobPostingData, baseUrl: string = 'https://skillcase.in') {
+export function generateJobPostingJsonLd(job: JobPostingData, baseUrl: string = SITE_URL) {
   const profession = job.profession || 'nursing';
   const url = `${baseUrl}/${profession}/jobs/${job.slug}`;
 
@@ -73,7 +75,7 @@ export function generateExamJsonLd(exam: {
   applicationDeadline?: string | null;
   examDate?: string | null;
   profession?: string;
-}, baseUrl: string = 'https://skillcase.in') {
+}, baseUrl: string = SITE_URL) {
   const profession = exam.profession || 'nursing';
   return {
     '@context': 'https://schema.org',
@@ -109,7 +111,7 @@ export function generateFAQPageJsonLd(faqs: Array<{ question: string; answer: st
 
 export function generateBreadcrumbJsonLd(
   items: Array<{ name: string; url: string }>,
-  baseUrl: string = 'https://skillcase.in'
+  baseUrl: string = SITE_URL
 ) {
   return {
     '@context': 'https://schema.org',

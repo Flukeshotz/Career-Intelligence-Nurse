@@ -69,7 +69,7 @@ export default function PreviousYearPapersPage() {
           Previous Year Question Papers
         </h1>
         <p style={{ fontSize: '0.82rem', color: '#64748b', margin: 0 }}>
-          Official shift booklets and full-length CBT mocks with verified keys
+          Question papers taken from the official booklets
         </p>
       </div>
 

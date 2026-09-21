@@ -1,3 +1,4 @@
+import { SITE_URL } from '@/lib/site';
 export async function GET() {
   const robotsTxt = `# SkillCase Robots Policy
 User-agent: *
@@ -24,7 +25,7 @@ Allow: /nursing/jobs/*
 Allow: /nursing/exams/*
 Allow: /llms.txt
 
-Sitemap: https://skillcase.in/sitemap.xml
+Sitemap: ${SITE_URL}/sitemap.xml
 `;
 
   return new Response(robotsTxt, {
