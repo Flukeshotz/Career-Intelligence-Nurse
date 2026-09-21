@@ -140,6 +140,14 @@ export async function verifyOfficial(id: string, prev?: OfficialRecord): Promise
       fields[f] = { value, quote: c.quote.trim() };
     } else rejected.push(f);
   }
+  // Same notice text as when earlier values were grounded: those quotes are still true, so a weaker
+  // AI reading today must not discard them.
+  if (prev && prev.contentHash === contentHash) {
+    for (const [k, v] of Object.entries(prev.fields)) {
+      if (!fields[k as OfficialField]) fields[k as OfficialField] = v;
+    }
+    for (let i = rejected.length - 1; i >= 0; i--) if (fields[rejected[i]]) rejected.splice(i, 1);
+  }
   // A record counts as verified against the notice only when the two figures that hurt most if wrong are grounded.
   const status = fields.vacancies && fields.applicationDeadline ? 'verified' : 'partial';
   return { status, checkedAt, url, fields, rejected, contentHash, factChecks: fields.applicationDeadline ? checkFacts(id, page.text) : [] };
