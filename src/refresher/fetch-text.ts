@@ -66,7 +66,7 @@ export async function fetchPageText(url: string): Promise<FetchedText> {
     return { ok: false, kind: 'unreadable', text: '', status: res.status, error: 'JavaScript-only page' };
   } catch (e) {
     const aborted = e instanceof Error && e.name === 'AbortError';
-    return { ok: false, kind: 'unreadable', text: '', error: aborted ? `Timed out after ${TIMEOUT_MS / 1000}s` : e instanceof Error ? e.message : String(e) };
+    return { ok: false, kind: 'unreadable', text: '', error: aborted ? `Timed out after ${TIMEOUT_MS / 1000}s` : e instanceof Error ? `${e.message}${(e as { cause?: { code?: string } }).cause?.code ? ` (${(e as { cause?: { code?: string } }).cause!.code})` : ''}` : String(e) };
   } finally {
     clearTimeout(timer);
   }
