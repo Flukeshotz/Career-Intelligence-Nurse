@@ -105,7 +105,18 @@ export async function verifyOfficial(id: string): Promise<OfficialRecord | null>
   if (!doc || !exam) return null;
   const checkedAt = new Date().toISOString().slice(0, 10);
 
-  const page = await fetchPageText(url);
+  let page = await fetchPageText(url);
+  // Blocked from outside India? Ask the Mumbai-hosted reader on our own site instead.
+  if (!page.ok && process.env.OFFICIAL_PROXY !== 'off') {
+    const base = (process.env.OFFICIAL_PROXY_URL || 'https://career-intelligence-nurse.vercel.app').replace(/\/+$/, '');
+    try {
+      const r = await fetch(`${base}/api/official-proxy?id=${encodeURIComponent(id)}`, { signal: AbortSignal.timeout(75_000), cache: 'no-store' });
+      const j = (await r.json()) as { ok: boolean; kind: 'html' | 'pdf' | 'rendered' | 'unreadable'; text: string; status?: number; error?: string };
+      if (j.ok) page = { ok: true, kind: j.kind, text: j.text, status: j.status };
+    } catch {
+      /* keep the direct failure below */
+    }
+  }
   if (!page.ok) return { status: 'unreadable', checkedAt, url, fields: {}, rejected: [], note: page.error };
 
   const hints = [exam.name.split('(')[0].trim(), exam.organisation.split('(')[0].trim(), 'Nursing'];
