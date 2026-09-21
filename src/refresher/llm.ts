@@ -6,14 +6,45 @@
  */
 import Groq from 'groq-sdk';
 
-export function llmProvider(): 'deepseek' | 'groq' {
+export function llmProvider(): 'azure' | 'deepseek' | 'groq' {
+  if (process.env.AZURE_AI_API_KEY && process.env.AZURE_AI_ENDPOINT) return 'azure';
   if (process.env.DEEPSEEK_API_KEY) return 'deepseek';
   if (process.env.GROQ_API_KEY) return 'groq';
-  throw new Error('Set DEEPSEEK_API_KEY or GROQ_API_KEY');
+  throw new Error('Set AZURE_AI_API_KEY + AZURE_AI_ENDPOINT, DEEPSEEK_API_KEY or GROQ_API_KEY');
+}
+
+/** Azure AI Foundry hosts the model at the resource root; strip any /api/projects/... suffix. */
+function azureUrl(): string {
+  const root = process.env.AZURE_AI_ENDPOINT!.replace(/\/api\/projects\/.*$/, '').replace(/\/+$/, '');
+  const version = process.env.AZURE_AI_API_VERSION || '2024-05-01-preview';
+  return `${root}/models/chat/completions?api-version=${version}`;
 }
 
 export async function chatJson(system: string, user: string): Promise<string> {
   const provider = llmProvider();
+
+  if (provider === 'azure') {
+    const key = process.env.AZURE_AI_API_KEY!;
+    const res = await fetch(azureUrl(), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'api-key': key, Authorization: `Bearer ${key}` },
+      body: JSON.stringify({
+        model: process.env.LLM_MODEL || process.env.AZURE_AI_DEPLOYMENT || 'deepseek-v4-pro',
+        temperature: 0,
+        max_tokens: 1500,
+        stream: false,
+        response_format: { type: 'json_object' },
+        messages: [
+          { role: 'system', content: `${system}\nRespond with a single JSON object.` },
+          { role: 'user', content: user },
+        ],
+      }),
+      signal: AbortSignal.timeout(90_000),
+    });
+    if (!res.ok) throw new Error(`Azure HTTP ${res.status}: ${(await res.text()).slice(0, 160)}`);
+    const j = await res.json();
+    return j.choices?.[0]?.message?.content ?? '';
+  }
 
   if (provider === 'deepseek') {
     const res = await fetch('https://api.deepseek.com/chat/completions', {
