@@ -74,8 +74,11 @@ export interface TrustSummary {
 interface RefreshRecord {
   status: 'consensus' | 'partial' | 'no_consensus';
   checkedAt: string;
-  official?: { status: 'verified' | 'partial' | 'unreadable'; checkedAt: string };
+  fields?: Record<string, { value: number | string }>;
+  official?: { status: 'verified' | 'partial' | 'unreadable'; checkedAt: string; fields?: Record<string, { value: number | string }> };
 }
+/** A notice does not go stale by itself; it stays trusted for this long between successful reads. */
+export const OFFICIAL_TTL_DAYS = 60;
 const REFRESH = (REFRESHED as unknown as { records: Record<string, RefreshRecord> }).records;
 
 function daysBetween(fromIso: string, now: number): number {
@@ -99,16 +102,24 @@ export function getTrust(id: string, now: number = Date.now()): TrustSummary {
     return { level: 'unverified', badge: 'Confirm on official site', message: 'Sources disagree on some details. Check dates and vacancies on the official site before applying.', checkedAt: auto.checkedAt, suppressFromListings: false };
   }
 
-  // Strongest state: the numbers were found word-for-word in the official notice itself.
-  if (auto?.official?.status === 'verified' && daysBetween(auto.official.checkedAt, now) <= CONFIRMATION_TTL_DAYS) {
-    const d = daysBetween(auto.official.checkedAt, now);
-    return {
-      level: 'confirmed',
-      badge: d <= 0 ? 'Checked with the official notice today' : `Checked with the official notice ${d} day${d === 1 ? '' : 's'} ago`,
-      message: 'Vacancies and application dates were read directly from the official notification.',
-      checkedAt: auto.official.checkedAt,
-      suppressFromListings: false,
-    };
+  // Strongest state: the numbers were found word-for-word in the official notice itself. A published
+  // notice is a fixed record, so this holds until independent reports contradict it (or it goes unread
+  // for a long time). A contradiction removes the badge and raises an alert (health.ts).
+  if (auto?.official?.status === 'verified' && daysBetween(auto.official.checkedAt, now) <= OFFICIAL_TTL_DAYS) {
+    const contradicted = Object.entries(auto.official.fields ?? {}).some(([k, ov]) => {
+      const cv = auto.fields?.[k]?.value;
+      return cv !== undefined && cv !== ov.value;
+    });
+    if (!contradicted) {
+      return {
+        level: 'confirmed',
+        badge: 'Verified with the official notice',
+        message: 'Vacancies and application dates were read directly from the official notification.',
+        checkedAt: auto.official.checkedAt,
+        suppressFromListings: false,
+      };
+    }
+    return { level: 'unverified', badge: 'Confirm on official site', message: 'Recent reports differ from the official notice we read. Check dates and vacancies on the official site before applying.', checkedAt: auto.official.checkedAt, suppressFromListings: false };
   }
 
   const confirmedAt = auto?.status === 'consensus' ? auto.checkedAt : manual?.state === 'confirmed' ? manual.checkedAt : undefined;

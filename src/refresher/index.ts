@@ -13,6 +13,7 @@
 import { INITIAL_EXAMS } from '../lib/mock-data';
 import { REFRESH_SOURCES, Citation } from './registry';
 import { fetchPageText } from './fetch-text';
+import { fetchViaIndia } from './via-india';
 import { extractFacts, Extracted } from './extract';
 
 type FieldKey = 'vacancies' | 'applicationStart' | 'applicationDeadline' | 'examDate' | 'examEndDate';
@@ -59,8 +60,14 @@ export async function refreshRecord(id: string, log: RefreshLog[] = []): Promise
   const hints = [exam.organisation.split('(')[0].trim(), exam.name.split('(')[0].trim()];
   const answers: Array<{ src: Citation; facts: Extracted }> = [];
 
-  for (const src of sources) {
-    const page = await fetchPageText(src.url);
+  for (let i = 0; i < sources.length; i++) {
+    const src = sources[i];
+    let page = await fetchPageText(src.url);
+    // Refused (e.g. HTTP 403 from GitHub's servers)? Try again from India.
+    if (!page.ok) {
+      const viaIndia = await fetchViaIndia(id, i);
+      if (viaIndia) page = viaIndia;
+    }
     if (!page.ok) {
       log.push({ id, source: src.url, outcome: `unreadable: ${page.error}` });
       continue;

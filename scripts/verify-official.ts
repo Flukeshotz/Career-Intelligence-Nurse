@@ -14,16 +14,17 @@ async function main() {
   const idArg = process.argv.slice(2).find((a) => !a.startsWith('--'));
   const ids = Object.keys(OFFICIAL_DOCS).filter((id) => !idArg || idArg.split(',').includes(id));
   const results: Record<string, Awaited<ReturnType<typeof verifyOfficial>>> = {};
+  const file = path.join(process.cwd(), 'src', 'lib', 'refreshed-data.json');
+  const previous = JSON.parse(fs.readFileSync(file, 'utf-8')).records as Record<string, { official?: never }>;
 
   for (const id of ids) {
-    const r = await verifyOfficial(id).catch((e) => ({ status: 'unreadable' as const, checkedAt: new Date().toISOString().slice(0, 10), url: OFFICIAL_DOCS[id].url, fields: {}, rejected: [], note: String(e).slice(0, 120) }));
+    const r = await verifyOfficial(id, previous[id]?.official).catch((e) => ({ status: 'unreadable' as const, checkedAt: new Date().toISOString().slice(0, 10), url: OFFICIAL_DOCS[id].url, fields: {}, rejected: [], note: String(e).slice(0, 120) }));
     results[id] = r;
     const f = Object.entries(r?.fields ?? {}).map(([k, v]) => `${k}=${(v as { value: unknown }).value}`).join(' ');
     console.log(`${(r?.status ?? '-').toUpperCase().padEnd(10)} ${id.padEnd(28)} ${f}${r?.rejected.length ? '  REJECTED(not in document): ' + r.rejected.join(',') : ''}${r?.note ? '  ' + r.note : ''}`);
   }
 
   if (write) {
-    const file = path.join(process.cwd(), 'src', 'lib', 'refreshed-data.json');
     const data = JSON.parse(fs.readFileSync(file, 'utf-8'));
     for (const [id, r] of Object.entries(results)) {
       if (!r) continue;

@@ -11,7 +11,9 @@ import { INITIAL_EXAMS } from '../lib/mock-data';
 import { VERIFIED_FACTS } from '../lib/verified-facts';
 import { dateForms, vacancyForms } from '../lib/source-watch';
 import { OFFICIAL_DOCS } from './official-registry';
+import { createHash } from 'crypto';
 import { fetchPageText } from './fetch-text';
+import { fetchViaIndia } from './via-india';
 import { chatJson } from './llm';
 
 export type OfficialField = 'vacancies' | 'applicationStart' | 'applicationDeadline' | 'examDate' | 'examEndDate';
@@ -30,6 +32,8 @@ export interface OfficialRecord {
   rejected: OfficialField[];
   note?: string;
   /** Numbers in our hand-written text (pay, age, pattern…) that do NOT appear in the notice. */
+  /** Fingerprint of the notice text. While it is unchanged the notice is a fixed record: no re-reading needed. */
+  contentHash?: string;
   factChecks?: Array<{ fact: string; text: string; missing: string[] }>;
 }
 
@@ -98,7 +102,7 @@ function checkFacts(id: string, docText: string): NonNullable<OfficialRecord['fa
   return lines.map(([fact, text]) => ({ fact, text, missing: missingNumbers(text, docText) }));
 }
 
-export async function verifyOfficial(id: string): Promise<OfficialRecord | null> {
+export async function verifyOfficial(id: string, prev?: OfficialRecord): Promise<OfficialRecord | null> {
   const doc = OFFICIAL_DOCS[id];
   const url = doc?.url;
   const exam = INITIAL_EXAMS.find((e) => e.id === id);
@@ -106,18 +110,14 @@ export async function verifyOfficial(id: string): Promise<OfficialRecord | null>
   const checkedAt = new Date().toISOString().slice(0, 10);
 
   let page = await fetchPageText(url);
-  // Blocked from outside India? Ask the Mumbai-hosted reader on our own site instead.
-  if (!page.ok && process.env.OFFICIAL_PROXY !== 'off') {
-    const base = (process.env.OFFICIAL_PROXY_URL || 'https://career-intelligence-nurse.vercel.app').replace(/\/+$/, '');
-    try {
-      const r = await fetch(`${base}/api/official-proxy?id=${encodeURIComponent(id)}`, { signal: AbortSignal.timeout(75_000), cache: 'no-store' });
-      const j = (await r.json()) as { ok: boolean; kind: 'html' | 'pdf' | 'rendered' | 'unreadable'; text: string; status?: number; error?: string };
-      if (j.ok) page = { ok: true, kind: j.kind, text: j.text, status: j.status };
-    } catch {
-      /* keep the direct failure below */
-    }
-  }
+  if (!page.ok) page = (await fetchViaIndia(id)) ?? page;
   if (!page.ok) return { status: 'unreadable', checkedAt, url, fields: {}, rejected: [], note: page.error };
+
+  const contentHash = createHash('sha256').update(page.text).digest('hex');
+  // Same notice as last time: keep the grounded values, refresh the date, skip the AI call.
+  if (prev && prev.status === 'verified' && prev.contentHash === contentHash) {
+    return { ...prev, checkedAt, url, factChecks: prev.fields.applicationDeadline ? checkFacts(id, page.text) : [] };
+  }
 
   const hints = [exam.name.split('(')[0].trim(), exam.organisation.split('(')[0].trim(), 'Nursing'];
   const raw = await chatJson(SYSTEM, `Recruitment: ${exam.name}\nBody: ${exam.organisation}\n${doc.note ? `Note: ${doc.note}\n` : ''}\nDOCUMENT TEXT:\n${excerpt(page.text, hints)}`);
@@ -142,5 +142,5 @@ export async function verifyOfficial(id: string): Promise<OfficialRecord | null>
   }
   // A record counts as verified against the notice only when the two figures that hurt most if wrong are grounded.
   const status = fields.vacancies && fields.applicationDeadline ? 'verified' : 'partial';
-  return { status, checkedAt, url, fields, rejected, factChecks: fields.applicationDeadline ? checkFacts(id, page.text) : [] };
+  return { status, checkedAt, url, fields, rejected, contentHash, factChecks: fields.applicationDeadline ? checkFacts(id, page.text) : [] };
 }
