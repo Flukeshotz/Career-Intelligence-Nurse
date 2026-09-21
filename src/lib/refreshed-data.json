@@ -79,6 +79,7 @@
           }
         },
         "rejected": [],
+        "contentHash": "0fcee9b9a2d9b954ab16ad6673e4547d3d46951a40e47f493eca00c584cd9161",
         "factChecks": [
           {
             "fact": "pay",
@@ -222,9 +223,13 @@
         "status": "partial",
         "checkedAt": "2026-09-21",
         "url": "https://ukmssb.org/wp-content/uploads/2026/06/Nursing-officer-Advertisment.pdf",
-        "fields": {},
+        "fields": {
+          "vacancies": {
+            "value": 196,
+            "quote": "uflZax vf/kdkjh ¼efgyk@iq:”k½ fMIyksek/kkjd@fMxzh/kkjd ds dqy fjDr 196 inksa"
+          }
+        },
         "rejected": [
-          "vacancies",
           "applicationStart",
           "applicationDeadline"
         ],
