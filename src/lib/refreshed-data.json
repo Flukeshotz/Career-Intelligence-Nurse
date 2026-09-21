@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-09-21T07:55:16.246Z",
+  "ranAt": "2026-09-21T08:43:25.565Z",
   "records": {
     "exam-norcet-2026": {
       "status": "consensus",
@@ -34,8 +34,7 @@
         "checkedAt": "2026-09-21",
         "url": "https://www.aiimsexams.ac.in/advertisement/6a6350f7e5a81c4267f4ff04",
         "fields": {},
-        "rejected": [],
-        "note": "document does not match this recruitment"
+        "rejected": []
       }
     },
     "exam-rrb-nurse-2026": {
