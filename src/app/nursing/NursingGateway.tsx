@@ -137,90 +137,12 @@ export default function NursingGateway() {
           </div>
         )}
 
-        {/* ── 4. YOUR NEXT STEP (HIGH-TRUST DECISION SURFACE) ── */}
-        <div>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-            <h2 style={{ fontSize: '0.96rem', fontWeight: 800, color: '#0f172a', margin: 0 }}>
-              Your Next Step
-            </h2>
-            <Link href="/profile" style={{ fontSize: '0.76rem', fontWeight: 700, color: '#2563eb', textDecoration: 'none' }}>
-              Career Passport ›
-            </Link>
-          </div>
-
-          <div
-            style={{
-              background: '#ffffff',
-              border: '1px solid #e2e8f0',
-              borderRadius: '16px',
-              padding: '16px',
-              boxShadow: '0 2px 8px rgba(0, 0, 0, 0.03)',
-            }}
-          >
-            <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-              <div
-                style={{
-                  width: '36px',
-                  height: '36px',
-                  borderRadius: '50%',
-                  background: '#f0fdf4',
-                  color: '#16a34a',
-                  border: '1px solid #bbf7d0',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  flexShrink: 0,
-                  fontSize: '1rem',
-                  fontWeight: 900,
-                }}
-              >
-                ✓
-              </div>
-
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <h3 style={{ fontSize: '0.94rem', fontWeight: 800, color: '#0f172a', margin: 0 }}>
-                  NORCET 2026 – Nursing Officer
-                </h3>
-                <div style={{ fontSize: '0.76rem', color: '#166534', fontWeight: 700, marginTop: '2px' }}>
-                  Eligibility almost confirmed (2 of 3 checks passed)
-                </div>
-
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', margin: '8px 0 12px 0', fontSize: '0.74rem' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '5px', color: '#166534' }}>
-                    <span style={{ fontWeight: 900 }}>✓</span>
-                    <span>Qualification matches (B.Sc. Nursing / GNM)</span>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '5px', color: '#166534' }}>
-                    <span style={{ fontWeight: 900 }}>✓</span>
-                    <span>Council registration matches</span>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '5px', color: '#b45309' }}>
-                    <span>⚠️</span>
-                    <span>Add DOB to confirm age limit</span>
-                  </div>
-                </div>
-
-                <Link
-                  href="/profile"
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '4px',
-                    background: '#0f172a',
-                    color: '#ffffff',
-                    padding: '6px 14px',
-                    borderRadius: '8px',
-                    fontSize: '0.76rem',
-                    fontWeight: 800,
-                    textDecoration: 'none',
-                  }}
-                >
-                  <span>Complete eligibility</span>
-                  <ChevronRight size={14} />
-                </Link>
-              </div>
-            </div>
-          </div>
+        {/* ── 4. PROFILE PROMPT — no per-exam match is claimed until the nurse's own details are entered ── */}
+        <div style={{ background: '#ffffff', border: '1px solid #e2e8f0', borderRadius: '16px', padding: '14px 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '10px' }}>
+          <div style={{ fontSize: '0.8rem', color: '#475569', fontWeight: 600 }}>Add your qualification and date of birth to check which recruitments you can apply for.</div>
+          <Link href="/profile" style={{ flexShrink: 0, background: '#0f172a', color: '#ffffff', padding: '6px 14px', borderRadius: '8px', fontSize: '0.76rem', fontWeight: 800, textDecoration: 'none' }}>
+            Add details
+          </Link>
         </div>
 
         {/* ── 5. EXPLORE SECTION ── */}
