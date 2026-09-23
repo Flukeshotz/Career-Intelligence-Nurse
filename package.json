@@ -30,6 +30,7 @@
     "posthog-js": "^1.422.1",
     "react": "^18",
     "react-dom": "^18",
+    "undici": "^7.29.1",
     "zod": "^4.4.3"
   },
   "devDependencies": {

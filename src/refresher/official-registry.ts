@@ -16,4 +16,8 @@ export const OFFICIAL_DOCS: Record<string, OfficialDoc> = {
     note: 'Advt. No. 04/2026 covers many Group C posts. The Nursing recruitment is the rows for Nurse / Staff Nurse (ESI, Health, DMER) and Sister Tutor. Report dates from the advertisement timeline; leave vacancies null because the notice lists them per department, not as one total.',
   },
   'exam-ukmssb-nurse-2026': { url: 'https://ukmssb.org/wp-content/uploads/2026/06/Nursing-officer-Advertisment.pdf' },
+  'exam-osssc-nurse-2026': {
+    url: 'https://www.osssc.gov.in/',
+    note: 'The homepage carries a running notice feed, not the advertisement PDF itself (the portal has no stable, fetchable link to it). Look for the line "SHORT ADVERTISEMENT No. IIE-54/2026-1896/OSSSC ... 5989 number of District Cadre posts of Nursing Officer-2026" and any later corrigendum/extension notices in the same feed for updated dates.',
+  },
 };

@@ -3,8 +3,23 @@
  * a headless browser when WATCH_RENDER=1 and Playwright is installed (the GitHub Action does this);
  * otherwise they come back as `unreadable` rather than as a guess.
  */
+import { Agent } from 'undici';
+
 const USER_AGENT = 'SkillCaseSourceCheck/1.0 (+https://career-intelligence-nurse.vercel.app; data-accuracy check)';
 const TIMEOUT_MS = 15_000;
+
+/**
+ * A few official Indian government sites serve an incomplete certificate chain (their server does not
+ * send the intermediate cert), which fails strict TLS verification even though the sites are genuine
+ * and reachable in an ordinary browser (browsers cache trusted intermediates; Node does not). Verified
+ * independently with `openssl s_client -connect <host>:443 -servername <host>` before listing a host
+ * here — each returns "unable to get local issuer certificate" / "unable to verify the first
+ * certificate" against a certificate whose subject is that government domain, not a mismatched or
+ * expired one. This is a read-only fetch of public information, never a channel for secrets, so
+ * accepting the risk is scoped to exactly these hostnames. Approved by the SkillCase owner, 2026-09-22.
+ */
+const SKIP_CERT_CHECK_HOSTS = new Set(['www.osssc.gov.in', 'osssc.gov.in', 'pgimer.edu.in', 'www.pgimer.edu.in', 'esb.mp.gov.in']);
+const insecureAgent = new Agent({ connect: { rejectUnauthorized: false } });
 
 export interface FetchedText {
   ok: boolean;
@@ -47,7 +62,9 @@ export async function fetchPageText(url: string): Promise<FetchedText> {
   const ctrl = new AbortController();
   const timer = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
   try {
-    const res = await fetch(url, { signal: ctrl.signal, redirect: 'follow', headers: { 'User-Agent': USER_AGENT }, cache: 'no-store' });
+    const host = new URL(url).hostname;
+    const dispatcher = SKIP_CERT_CHECK_HOSTS.has(host) ? insecureAgent : undefined;
+    const res = await fetch(url, { signal: ctrl.signal, redirect: 'follow', headers: { 'User-Agent': USER_AGENT }, cache: 'no-store', ...(dispatcher ? { dispatcher } : {}) });
     if (!res.ok) return { ok: false, kind: 'unreadable', text: '', status: res.status, error: `HTTP ${res.status}` };
 
     const type = res.headers.get('content-type') || '';
