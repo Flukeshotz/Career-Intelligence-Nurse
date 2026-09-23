@@ -21,6 +21,11 @@ export interface SidebarDownload {
 export function ArticleSidebar({ items, download }: { items: TocItem[]; download?: SidebarDownload }) {
   const [activeId, setActiveId] = useState(items[0]?.id);
 
+  // Keep the active chip visible in the phone chip row.
+  useEffect(() => {
+    document.querySelector(`.blog-chips a[href="#${activeId}"]`)?.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+  }, [activeId]);
+
   useEffect(() => {
     const sections = items.map((i) => document.getElementById(i.id)).filter((el): el is HTMLElement => !!el);
     if (sections.length === 0) return;
@@ -37,6 +42,14 @@ export function ArticleSidebar({ items, download }: { items: TocItem[]; download
   }, []);
 
   return (
+    <>
+    <nav aria-label="Sections" className="blog-chips">
+      {items.map((item) => (
+        <a key={item.id} href={`#${item.id}`} className={item.id === activeId ? 'active' : undefined}>
+          {item.label}
+        </a>
+      ))}
+    </nav>
     <aside className="blog-aside">
       <nav aria-label="On this page" className="blog-toc">
         <h4>On this page</h4>
@@ -68,5 +81,6 @@ export function ArticleSidebar({ items, download }: { items: TocItem[]; download
         </div>
       )}
     </aside>
+    </>
   );
 }

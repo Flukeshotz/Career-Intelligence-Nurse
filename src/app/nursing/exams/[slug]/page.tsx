@@ -129,7 +129,7 @@ export default async function ExamDetailPage({
                   </div>
                 ))}
               </div>
-              <div id="track" style={{ display: 'grid', gridTemplateColumns: exam.applicationUrl ? '1fr 1fr' : '1fr', gap: '10px', marginBottom: '22px', scrollMarginTop: '96px' }}>
+              <div id="track" className="blog-actions" style={{ display: 'grid', gridTemplateColumns: exam.applicationUrl ? '1fr 1fr' : '1fr', gap: '10px', marginBottom: '22px', scrollMarginTop: '96px' }}>
                 <TrackButton opportunityId={exam.id} opportunityType="exam" title={exam.name} employerOrOrg={exam.organisation} slug={exam.slug} nextStageName="Exam" nextStageDate={exam.examDate} />
                 {exam.applicationUrl && (
                   <a
@@ -138,7 +138,7 @@ export default async function ExamDetailPage({
                     rel="noopener noreferrer"
                     style={{ height: '44px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '6px', background: '#0e2d6b', color: '#fff', borderRadius: '10px', fontWeight: 600, fontSize: '0.86rem', textDecoration: 'none' }}
                   >
-                    Apply on Official Portal <ExternalLink size={14} />
+                    Apply on Official Site <ExternalLink size={14} />
                   </a>
                 )}
               </div>

@@ -1018,3 +1018,40 @@ select:focus-visible {
 .blog-rel-thumb img { height: 64px; width: auto; }
 .blog-rel-card b { font-size: 0.84rem; font-weight: 600; color: var(--blog-navy); line-height: 1.35; padding-right: 26px; }
 .blog-rel-go { position: absolute; right: 10px; bottom: 10px; width: 26px; height: 26px; border-radius: 50%; background: var(--blog-blue-50); color: var(--blog-blue); display: flex; align-items: center; justify-content: center; }
+
+/* ── Blog: phone layout ── */
+.blog-chips { display: none; }
+@media (max-width: 899px) {
+  .blog-chips {
+    display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none;
+    position: sticky; top: 62px; z-index: 30; order: 0;
+    margin: 0 -16px; padding: 10px 16px; background: rgba(244, 247, 253, 0.96);
+    backdrop-filter: blur(8px); border-bottom: 1px solid #e6ecf6;
+  }
+  .blog-chips::-webkit-scrollbar { display: none; }
+  .blog-chips a {
+    flex-shrink: 0; font-size: 0.8rem; font-weight: 500; color: var(--blog-navy); text-decoration: none;
+    background: #fff; border: 1px solid #dfe7f5; border-radius: 999px; padding: 7px 14px;
+  }
+  .blog-chips a.active { background: var(--blog-blue); border-color: var(--blog-blue); color: #fff; }
+  .blog-toc { display: none; }
+  .blog-sec { scroll-margin-top: 120px; }
+  .blog-intro { scroll-margin-top: 120px !important; }
+}
+@media (max-width: 639px) {
+  .blog-sec > details > summary { grid-template-columns: 30px 1fr 20px; column-gap: 12px; padding: 16px 14px; }
+  .blog-num { width: 30px; height: 30px; font-size: 0.85rem; }
+  .blog-sec-title { font-size: 1rem; }
+  .blog-chev { grid-row: 1; }
+  .blog-sec-row { grid-column: 1 / 4; gap: 12px; align-items: flex-start; }
+  .blog-sec-ico { width: 40px; height: 40px; border-radius: 10px; }
+  .blog-sec-ico svg { width: 20px; height: 20px; }
+  .blog-sec-body { padding: 14px; }
+  .blog-h1 { font-size: 1.55rem; }
+  .blog-cta { padding: 18px; gap: 12px; }
+  .blog-cta-art { width: 56px; height: 44px; }
+  .blog-cta-art::before { left: -24px; top: -20px; width: 90px; height: 84px; }
+  .blog-cta-art svg { width: 56px; height: 44px; }
+  .blog-cta a { margin-left: 0; width: 100%; justify-content: center; }
+  .blog-actions { grid-template-columns: 1fr !important; }
+}
