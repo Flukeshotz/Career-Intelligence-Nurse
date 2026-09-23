@@ -1,27 +1,22 @@
 import { SITE_URL } from '@/lib/site';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import Link from 'next/link';
-import {
-  Building2,
-  FileText,
-  ArrowLeft,
-  ExternalLink,
-} from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { getExamBySlug, getRequirementsForOpportunity, INITIAL_EXAMS } from '@/lib/data';
 import { generateExamJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
 import { EligibilitySection } from '@/components/opportunity/EligibilitySection';
 import { TrustPanel } from '@/components/opportunity/TrustPanel';
 import { TrustBanner } from '@/components/opportunity/TrustBanner';
 import { getTrust } from '@/lib/verification';
-import { ShareButtons } from '@/components/opportunity/ShareButtons';
 import { TrackButton } from '@/components/opportunity/TrackButton';
 import { PyqCard } from '@/components/opportunity/PyqCard';
 import MayaCard from '@/components/maya/MayaCard';
 import { VERIFIED_FACTS } from '@/lib/verified-facts';
-import { examDateText, applyWindowText } from '@/lib/format-dates';
+import { examDateText, applyWindowText, formatDay } from '@/lib/format-dates';
 import { ExamArticle } from '@/components/opportunity/ExamArticle';
 import { getPapersForExam } from '@/lib/pyq-mock-data';
+import { ArticleHeader } from '@/components/blog/ArticleHeader';
+import { ArticleHero } from '@/components/blog/ArticleHero';
 
 export const revalidate = 3600;
 
@@ -83,281 +78,117 @@ export default async function ExamDetailPage({
     { name: exam.name, url: `/nursing/exams/${exam.slug}` },
   ]);
 
-  const examDateFormatted = exam.examDate
-    ? new Date(exam.examDate).toLocaleDateString('en-IN', {
-        day: 'numeric',
-        month: 'short',
-        year: 'numeric',
-      })
-    : 'To be announced';
+  const trust = getTrust(exam.id);
+  const shortName = exam.name.replace(/\s*\(.*?\)\s*$/, '');
 
-  const deadlineFormatted = exam.applicationDeadline
-    ? new Date(exam.applicationDeadline).toLocaleDateString('en-IN', {
-        day: 'numeric',
-        month: 'short',
-        year: 'numeric',
-      })
-    : 'Closed / In Exam Phase';
+  const quickFacts: Array<[string, string, string]> = [
+    ['Vacancies', exam.vacancies ? `${exam.vacancies.toLocaleString('en-IN')} Posts` : 'See Notice', 'var(--blog-navy)'],
+    ['Pay', payTile(exam.id), 'var(--blog-navy)'],
+    ['Exam Date', examDateText(exam), 'var(--blog-navy)'],
+    ['Applications', applyWindowText(exam), 'var(--blog-blue)'],
+  ];
 
   return (
-    <div className="wide-container mobile-safe-bottom" style={{ paddingTop: '16px', maxWidth: '860px', margin: '0 auto', paddingBottom: '90px' }}>
-      {/* Never feed search engines structured data we know is wrong or unpublished */}
-      {!getTrust(exam.id).suppressFromListings && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(examJsonLd) }}
-        />
-      )}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }}
-      />
+    <div className="blog-page">
+      <ArticleHeader active="Resources" />
 
-      <TrustBanner recordId={exam.id} />
+      <div className="blog-shell">
+        {/* Never feed search engines structured data we know is wrong or unpublished */}
+        {!trust.suppressFromListings && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(examJsonLd) }} />}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }} />
 
-      {/* ── TOP NAV BAR ── */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
-        <Link
-          href="/nursing/exams"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '5px',
-            color: 'var(--sc-navy-700)',
-            fontSize: '0.82rem',
-            fontWeight: 700,
-            textDecoration: 'none',
-          }}
-        >
-          <ArrowLeft size={15} />
-          <span>All Exams</span>
-        </Link>
-
-        <ShareButtons
-          opportunityId={exam.id}
-          opportunityType="exams"
-          title={exam.name}
-          employerOrOrg={exam.organisation}
-          deadline={exam.applicationDeadline}
-          slug={exam.slug}
-          profession="nursing"
-        />
-      </div>
-
-      {/* ── 1. CLEAN HERO CARD (Pixel-Perfect Symmetrical Grid) ── */}
-      <div
-        style={{
-          background: 'linear-gradient(135deg, #061e38 0%, #0a325e 100%)',
-          color: '#ffffff',
-          borderRadius: '16px',
-          padding: '18px',
-          marginBottom: '16px',
-          boxShadow: '0 4px 14px rgba(6, 30, 56, 0.15)',
-        }}
-      >
-        {/* Clean Eyebrow Header */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.72rem', fontWeight: 700, color: '#93c5fd', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-            <span>{exam.organisation.includes('AIIMS') ? 'Central Govt · AIIMS' : exam.organisation.includes('Railway') ? 'Central Govt · Railways' : 'Government Recruitment'}</span>
-            {(() => {
-              // Derived from the record's real verification state — never asserted unconditionally.
-              const trust = getTrust(exam.id);
-              const ok = trust.level === 'confirmed';
-              return (
-                <span style={{ color: ok ? '#4ade80' : '#fbbf24', fontSize: '0.68rem', fontWeight: 600 }}>
-                  ● {ok ? trust.badge : 'Confirm on official site'}
-                </span>
-              );
-            })()}
-          </div>
-        </div>
-
-        {/* Title & Organization */}
-        <h1 style={{ fontSize: '1.25rem', fontWeight: 800, lineHeight: 1.3, margin: '0 0 4px 0' }}>
-          {exam.name}
-        </h1>
-
-        <div style={{ fontSize: '0.80rem', color: '#cbd5e1', fontWeight: 600, display: 'flex', alignItems: 'center', gap: '5px', marginBottom: '14px' }}>
-          <Building2 size={14} color="#94a3b8" />
-          <span>{exam.organisation}</span>
-        </div>
-
-        {/* Symmetrical 2x2 Metric Grid (Mobile) / 4-Col (Desktop) */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            gap: '8px',
-            paddingTop: '12px',
-            borderTop: '1px solid rgba(255,255,255,0.12)',
-          }}
-        >
-          <div style={{ background: 'rgba(255,255,255,0.08)', padding: '8px 10px', borderRadius: '8px', minHeight: '56px', display: 'flex', flexDirection: 'column', justifyContent: 'center', minWidth: 0, overflow: 'hidden' }}>
-            <div style={{ fontSize: '0.62rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 700 }}>Vacancies</div>
-            <div style={{ fontSize: '0.98rem', fontWeight: 800, color: '#ffffff', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-              {exam.vacancies ? `${exam.vacancies.toLocaleString('en-IN')} Posts` : 'See Notice'}
-            </div>
-          </div>
-
-          <div style={{ background: 'rgba(255,255,255,0.08)', padding: '8px 10px', borderRadius: '8px', minHeight: '56px', display: 'flex', flexDirection: 'column', justifyContent: 'center', minWidth: 0, overflow: 'hidden' }}>
-            <div style={{ fontSize: '0.62rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 700 }}>Pay</div>
-            <div style={{ fontSize: '0.86rem', fontWeight: 800, color: '#f7d78e', lineHeight: 1.25 }}>
-              {payTile(exam.id)}
-            </div>
-          </div>
-
-          <div style={{ background: 'rgba(255,255,255,0.08)', padding: '8px 10px', borderRadius: '8px', minHeight: '56px', display: 'flex', flexDirection: 'column', justifyContent: 'center', minWidth: 0, overflow: 'hidden' }}>
-            <div style={{ fontSize: '0.62rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 700 }}>Exam Date</div>
-            <div style={{ fontSize: '0.86rem', fontWeight: 800, color: '#ffffff', lineHeight: 1.25 }}>
-              {examDateText(exam)}
-            </div>
-          </div>
-
-          <div style={{ background: 'rgba(255,255,255,0.08)', padding: '8px 10px', borderRadius: '8px', minHeight: '56px', display: 'flex', flexDirection: 'column', justifyContent: 'center', minWidth: 0, overflow: 'hidden' }}>
-            <div style={{ fontSize: '0.62rem', color: '#94a3b8', textTransform: 'uppercase', fontWeight: 700 }}>Applications</div>
-            <div style={{ fontSize: '0.86rem', fontWeight: 800, color: '#fca5a5', lineHeight: 1.25 }}>
-              {applyWindowText(exam)}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* ── 2. ELIGIBILITY ENGINE SECTION ── */}
-      <div style={{ marginBottom: '16px' }}>
-        <EligibilitySection
-          opportunityId={exam.id}
-          requirements={requirements}
-          officialNotificationUrl={exam.officialNotificationUrl}
-        />
-      </div>
-
-      {/* ── 3. PREVIOUS YEAR PAPERS — only real, extracted official papers are ever listed ── */}
-      {papers.length > 0 ? (
-        <div style={{ marginBottom: '16px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <FileText size={18} color="var(--sc-navy-700)" />
-              <h2 style={{ fontSize: '1.05rem', fontWeight: 800, color: 'var(--sc-navy-900)', margin: 0 }}>
-                Previous Year Papers
-              </h2>
-            </div>
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            {papers.map((p) => (
-              <PyqCard key={p.id} paper={p} />
-            ))}
-          </div>
-        </div>
-      ) : (
-        <div className="sc-card" style={{ padding: '16px', marginBottom: '16px', fontSize: '0.86rem', color: 'var(--sc-ink-700)' }}>
-          <strong style={{ color: 'var(--sc-navy-900)' }}>Previous year papers:</strong> not available for this exam yet. We only list
-          papers taken from the official question booklets.
-        </div>
-      )}
-
-      {/* ── 4. EXPANDABLE INTELLIGENCE ACCORDION (Syllabus, Pattern, Strategy) ── */}
-      <div style={{ marginBottom: '16px' }}>
-        <ExamArticle exam={exam} />
-      </div>
-
-      {/* ── 5. OFFICIAL CURATION & SOURCE TRUST PANEL ── */}
-      <div style={{ marginBottom: '16px' }}>
-        <TrustPanel
-          recordId={exam.id}
-          source={exam.organisation}
-          sourceType="official"
-          lastVerified={exam.lastVerified}
-          officialNotificationUrl={exam.officialNotificationUrl}
-          applicationUrl={exam.applicationUrl}
-          status={exam.status}
-        />
-      </div>
-
-      {/* ── 6. CONTEXTUAL MAYA INTELLIGENCE CARD ── */}
-      <div style={{ marginBottom: '20px' }}>
-        <MayaCard
-          title={`Ask Maya about ${exam.name.split('(')[0].trim()}`}
-          pageContext="exam"
-          opportunity={{
-            id: exam.id,
-            title: exam.name,
-            organisation: exam.organisation,
-            type: 'exam',
-            vacancies: exam.vacancies,
-            applicationDeadline: exam.applicationDeadline,
-            examDate: exam.examDate,
-            admitCardDate: exam.admitCardDate,
-            qualification: exam.qualification,
-            officialNotificationUrl: exam.officialNotificationUrl,
-            lastVerified: exam.lastVerified,
-            requirements: requirements,
-            descriptionSimple: exam.descriptionSimple,
-          }}
-          suggestedPrompts={[
-            '📋 Check My Eligibility',
-            '📅 Key dates',
-            '💰 Pay & posts'
+        <ArticleHero
+          crumbs={[
+            { label: 'Home', href: '/nursing' },
+            { label: 'Resources', href: '/nursing/upcoming-exams' },
+            { label: 'Blogs', href: '/nursing/upcoming-exams' },
+            { label: shortName },
           ]}
-        />
-      </div>
-
-      {/* ── 7. SLEEK BOTTOM ACTION DOCK ── */}
-      <div
-        style={{
-          position: 'sticky',
-          bottom: '76px',
-          zIndex: 80,
-          background: 'rgba(255, 255, 255, 0.96)',
-          backdropFilter: 'blur(12px)',
-          border: '1px solid var(--sc-line-200)',
-          borderRadius: '14px',
-          padding: '10px 12px',
-          display: 'grid',
-          gridTemplateColumns: exam.applicationUrl ? '1fr 1fr' : '1fr',
-          alignItems: 'center',
-          gap: '8px',
-          boxShadow: '0 8px 24px rgba(0, 0, 0, 0.12)',
-        }}
-      >
-        <TrackButton
-          opportunityId={exam.id}
-          opportunityType="exam"
-          title={exam.name}
-          employerOrOrg={exam.organisation}
-          slug={exam.slug}
-          nextStageName="Stage 1 CBT"
-          nextStageDate={exam.examDate}
+          badge="Exam Guide"
+          title={`${shortName}:`}
+          titleAccent="Vacancies, Dates"
+          titleTail="& Eligibility"
+          subtitle={`Everything you need to know about the ${shortName} — important dates, eligibility, the exam paper, pay and how to apply.`}
+          updatedLabel={formatDay(trust.checkedAt ?? exam.lastVerified)}
+          readMinutes={6}
+          handwriting={['Your', 'next step', 'in nursing']}
+          shareTrackId={exam.id}
         />
 
-        {exam.applicationUrl && (
-          <a
-            href={exam.applicationUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              height: '44px',
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '6px',
-              background: 'var(--sc-navy-900)',
-              color: '#ffffff',
-              borderRadius: '10px',
-              fontWeight: 800,
-              fontSize: '0.78rem',
-              textDecoration: 'none',
-              whiteSpace: 'nowrap',
-              overflow: 'hidden',
-              textOverflow: 'ellipsis',
-              padding: '0 8px',
-              minWidth: 0,
-              boxShadow: '0 2px 6px rgba(8, 50, 98, 0.25)',
-            }}
-          >
-            <span style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>Apply on Portal</span>
-            <ExternalLink size={13} style={{ flexShrink: 0 }} />
-          </a>
-        )}
+        <TrustBanner recordId={exam.id} />
+
+        <ExamArticle
+          exam={exam}
+          actions={
+            <div>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '10px', marginBottom: '14px' }}>
+                {quickFacts.map(([label, value, color]) => (
+                  <div key={label} style={{ background: '#fff', border: '1px solid var(--blog-line)', borderRadius: '12px', padding: '12px 14px' }}>
+                    <div style={{ fontSize: '0.68rem', color: 'var(--blog-gray)', textTransform: 'uppercase', fontWeight: 600, letterSpacing: '0.03em' }}>{label}</div>
+                    <div style={{ fontSize: '0.92rem', fontWeight: 700, color, lineHeight: 1.3, marginTop: '2px' }}>{value}</div>
+                  </div>
+                ))}
+              </div>
+              <div id="track" style={{ display: 'grid', gridTemplateColumns: exam.applicationUrl ? '1fr 1fr' : '1fr', gap: '10px', marginBottom: '22px', scrollMarginTop: '96px' }}>
+                <TrackButton opportunityId={exam.id} opportunityType="exam" title={exam.name} employerOrOrg={exam.organisation} slug={exam.slug} nextStageName="Exam" nextStageDate={exam.examDate} />
+                {exam.applicationUrl && (
+                  <a
+                    href={exam.applicationUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ height: '44px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '6px', background: '#0e2d6b', color: '#fff', borderRadius: '10px', fontWeight: 600, fontSize: '0.86rem', textDecoration: 'none' }}
+                  >
+                    Apply on Official Portal <ExternalLink size={14} />
+                  </a>
+                )}
+              </div>
+            </div>
+          }
+          eligibility={<EligibilitySection opportunityId={exam.id} requirements={requirements} officialNotificationUrl={exam.officialNotificationUrl} />}
+          papers={
+            papers.length > 0 ? (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                {papers.map((p) => (
+                  <PyqCard key={p.id} paper={p} />
+                ))}
+              </div>
+            ) : undefined
+          }
+          source={
+            <TrustPanel
+              recordId={exam.id}
+              source={exam.organisation}
+              sourceType="official"
+              lastVerified={exam.lastVerified}
+              officialNotificationUrl={exam.officialNotificationUrl}
+              applicationUrl={exam.applicationUrl}
+              status={exam.status}
+            />
+          }
+          maya={
+            <MayaCard
+              title={`Ask Maya about ${exam.name.split('(')[0].trim()}`}
+              pageContext="exam"
+              variant="light"
+              opportunity={{
+                id: exam.id,
+                title: exam.name,
+                organisation: exam.organisation,
+                type: 'exam',
+                vacancies: exam.vacancies,
+                applicationDeadline: exam.applicationDeadline,
+                examDate: exam.examDate,
+                admitCardDate: exam.admitCardDate,
+                qualification: exam.qualification,
+                officialNotificationUrl: exam.officialNotificationUrl,
+                lastVerified: exam.lastVerified,
+                requirements: requirements,
+                descriptionSimple: exam.descriptionSimple,
+              }}
+              suggestedPrompts={['📋 Check My Eligibility', '📅 Key dates', '💰 Pay & posts']}
+            />
+          }
+        />
       </div>
     </div>
   );

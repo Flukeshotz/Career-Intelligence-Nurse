@@ -16,6 +16,8 @@ interface MayaCardProps {
   pageContext: 'norcet' | 'job' | 'exam' | 'profile' | 'cycles' | 'general';
   /** Opportunity context */
   opportunity?: MayaOpportunityContext;
+  /** 'light' matches the blog design system (exam guides); default is the dark app card. */
+  variant?: 'dark' | 'light';
 }
 
 const DEFAULT_PROMPTS = [
@@ -29,7 +31,9 @@ export default function MayaCard({
   suggestedPrompts = DEFAULT_PROMPTS,
   pageContext,
   opportunity,
+  variant = 'dark',
 }: MayaCardProps) {
+  const L = variant === 'light';
   const [open, setOpen] = useState(false);
   const [initialQuestion, setInitialQuestion] = useState<string | undefined>();
 
@@ -48,10 +52,10 @@ export default function MayaCard({
         tabIndex={0}
         onKeyDown={(e) => e.key === 'Enter' && openWithQuestion(undefined)}
         style={{
-          background: 'linear-gradient(135deg, #091b33 0%, #061528 100%)',
+          background: L ? '#ffffff' : 'linear-gradient(135deg, #091b33 0%, #061528 100%)',
           borderRadius: '16px',
           padding: '16px 18px',
-          border: '1px solid rgba(59, 130, 246, 0.25)',
+          border: L ? '1px solid var(--blog-line)' : '1px solid rgba(59, 130, 246, 0.25)',
           boxShadow: '0 4px 18px rgba(6, 21, 40, 0.3)',
           cursor: 'pointer',
           transition: 'all 0.15s ease',
@@ -71,7 +75,7 @@ export default function MayaCard({
                 height: '100%',
                 borderRadius: '50%',
                 objectFit: 'cover',
-                background: 'rgba(255,255,255,0.1)',
+                background: L ? 'var(--blog-blue-50)' : 'rgba(255,255,255,0.1)',
                 border: '1.5px solid #60a5fa',
               }}
             />
@@ -84,21 +88,21 @@ export default function MayaCard({
                 height: '10px',
                 borderRadius: '50%',
                 background: '#22c55e',
-                border: '2px solid #091b33',
+                border: L ? '2px solid #ffffff' : '2px solid #091b33',
               }}
             />
           </div>
 
           <div style={{ flex: 1, minWidth: 0 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <span style={{ fontSize: '0.66rem', fontWeight: 800, color: '#93c5fd', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+              <span style={{ fontSize: '0.66rem', fontWeight: 800, color: L ? 'var(--blog-blue)' : '#93c5fd', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
                 AI Career Co-Pilot
               </span>
-              <span style={{ fontSize: '0.64rem', color: '#4ade80', fontWeight: 700 }}>
+              <span style={{ fontSize: '0.64rem', color: L ? 'var(--sc-green-600)' : '#4ade80', fontWeight: 700 }}>
                 ● Answers from this page only
               </span>
             </div>
-            <h3 style={{ fontSize: '0.94rem', fontWeight: 800, color: '#ffffff', margin: '2px 0 0 0', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+            <h3 style={{ fontSize: '0.94rem', fontWeight: 800, color: L ? 'var(--blog-navy)' : '#ffffff', margin: '2px 0 0 0', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
               {title}
             </h3>
           </div>
@@ -107,8 +111,8 @@ export default function MayaCard({
         {/* Middle: Sleek Search Bar Mock */}
         <div
           style={{
-            background: 'rgba(255, 255, 255, 0.06)',
-            border: '1px solid rgba(255, 255, 255, 0.12)',
+            background: L ? 'var(--blog-card)' : 'rgba(255, 255, 255, 0.06)',
+            border: L ? '1px solid var(--blog-line)' : '1px solid rgba(255, 255, 255, 0.12)',
             borderRadius: '10px',
             padding: '8px 12px',
             display: 'flex',
@@ -128,7 +132,7 @@ export default function MayaCard({
               width: '24px',
               height: '24px',
               borderRadius: '6px',
-              background: '#3b82f6',
+              background: L ? 'var(--blog-blue)' : '#3b82f6',
               color: '#ffffff',
               display: 'flex',
               alignItems: 'center',
@@ -151,9 +155,9 @@ export default function MayaCard({
                 openWithQuestion(prompt);
               }}
               style={{
-                background: 'rgba(255, 255, 255, 0.08)',
-                border: '1px solid rgba(255, 255, 255, 0.12)',
-                color: '#e2e8f0',
+                background: L ? 'var(--blog-blue-50)' : 'rgba(255, 255, 255, 0.08)',
+                border: L ? '1px solid var(--blog-line)' : '1px solid rgba(255, 255, 255, 0.12)',
+                color: L ? 'var(--blog-navy)' : '#e2e8f0',
                 padding: '4px 10px',
                 borderRadius: '100px',
                 fontSize: '0.72rem',

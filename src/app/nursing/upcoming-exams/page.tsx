@@ -1,12 +1,19 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { CalendarPlus } from 'lucide-react';
+import { CalendarPlus, ClipboardCheck, Hourglass, History, CalendarDays, Layers, HelpCircle } from 'lucide-react';
+import { icsDataUrl, upcomingExamEvents } from '@/lib/ics';
 import { INITIAL_EXAMS } from '@/lib/mock-data';
 import { deriveLifecycle } from '@/lib/lifecycle';
 import { getTrust } from '@/lib/verification';
 import { applyWindowText, examDateText, formatDay } from '@/lib/format-dates';
 import { googleCalendarUrl } from '@/lib/exam-content';
 import { VERIFIED_FACTS } from '@/lib/verified-facts';
+import { ArticleHeader } from '@/components/blog/ArticleHeader';
+import { ArticleHero } from '@/components/blog/ArticleHero';
+import { ArticleSidebar, TocItem } from '@/components/blog/ArticleSidebar';
+import { ArticleSection } from '@/components/blog/ArticleSection';
+import { ArticleCTA } from '@/components/blog/ArticleCTA';
+import { RelatedGrid } from '@/components/blog/RelatedGrid';
 
 // Rebuilt hourly so "open now" and "days left" never go stale between data refreshes.
 export const revalidate = 3600;
@@ -18,8 +25,6 @@ export const metadata: Metadata = {
   alternates: { canonical: '/nursing/upcoming-exams' },
 };
 
-const h2: React.CSSProperties = { fontSize: '1.15rem', fontWeight: 800, color: 'var(--sc-navy-900)', margin: '0 0 12px' };
-const card: React.CSSProperties = { padding: '18px', marginBottom: '18px' };
 const th: React.CSSProperties = { textAlign: 'left', padding: '8px 10px', background: 'var(--sc-surface-secondary)', color: 'var(--sc-ink-600)', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.4px' };
 const td: React.CSSProperties = { padding: '9px 10px', verticalAlign: 'top', borderBottom: '1px solid var(--sc-line-100)', fontSize: '0.85rem' };
 
@@ -80,103 +85,132 @@ export default function UpcomingNursingExamsPage() {
   ];
   const faqJsonLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map((x) => ({ '@type': 'Question', name: x.q, acceptedAnswer: { '@type': 'Answer', text: x.a } })) };
 
+  const toc: TocItem[] = [
+    { id: 'introduction', label: 'Introduction' },
+    ...(open.length ? [{ id: 'open', label: 'Open for Applications' }] : []),
+    ...(examAhead.length ? [{ id: 'exam-ahead', label: 'Exam Ahead' }] : []),
+    ...(calendar.length ? [{ id: 'calendar', label: 'Important Dates' }] : []),
+    ...(concluded.length ? [{ id: 'concluded', label: 'Recently Concluded' }] : []),
+    { id: 'all', label: 'All Recruitments' },
+    { id: 'faq', label: 'FAQs' },
+  ];
+  const n = (id: string) => toc.findIndex((t) => t.id === id);
+  const short = (e: (typeof exams)[number]['e']) => e.name.replace(/\s*\(.*?\)\s*$/, '');
+  const bulletsFor = (list: typeof exams) => list.slice(0, 3).map(({ e, lc }) => `${short(e)} — ${lc.label}`);
+  const icsEvents = exams.flatMap(({ e }) => upcomingExamEvents(e, now));
+
   return (
-    <main className="wide-container mobile-safe-bottom" style={{ paddingTop: '20px', maxWidth: '960px', margin: '0 auto', padding: '20px 16px' }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+    <div className="blog-page">
+      <ArticleHeader active="Resources" />
+      <main className="blog-shell">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
-      <h1 style={{ fontSize: '1.5rem', fontWeight: 800, lineHeight: 1.25, color: 'var(--sc-navy-900)', margin: '0 0 6px' }}>
-        Upcoming Nursing Exams &amp; Vacancies in India
-      </h1>
-      <p style={{ margin: '0 0 18px', fontSize: '0.9rem', color: 'var(--sc-ink-600)', lineHeight: 1.6 }}>
-        Vacancies, application windows and exam dates for nursing recruitments, checked against independent sources and refreshed automatically.
-        {updatedIso ? ` Last checked ${formatDay(updatedIso)}.` : ''}
-      </p>
+        <ArticleHero
+          crumbs={[{ label: 'Home', href: '/nursing' }, { label: 'Resources', href: '/nursing/upcoming-exams' }, { label: 'Blogs', href: '/nursing/upcoming-exams' }, { label: 'Upcoming Nursing Exams' }]}
+          badge="Exam Guide"
+          title="Upcoming Nursing Exams:"
+          titleAccent="Vacancies, Dates"
+          titleTail="& Notifications"
+          subtitle="Every nursing recruitment we track in India — open applications, exam dates and vacancies, checked against independent sources and refreshed automatically."
+          updatedLabel={updatedIso ? formatDay(updatedIso) : 'recently'}
+          readMinutes={5}
+          handwriting={['Your', 'next exam', 'starts here']}
+        />
 
-      <section className="sc-card" style={card}>
-        <h2 style={h2}>Key highlights</h2>
-        <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-          <thead><tr><th style={th}>Particulars</th><th style={th}>Details</th></tr></thead>
-          <tbody>
-            {[
-              ['Recruitments tracked', String(exams.length)],
-              ['Open for applications now', open.length ? `${open.length} (${openPosts.toLocaleString('en-IN')} posts)` : 'None right now'],
-              ['Next application deadline', nextDeadline ? `${nextDeadline.e.name.replace(/\s*\(.*?\)\s*$/, '')} — ${formatDay(nextDeadline.e.applicationDeadline!)}` : '—'],
-              ['Exam coming up (applications closed)', examAhead.length ? examAhead.map((x) => `${x.e.name.replace(/\s*\(.*?\)\s*$/, '')} (${examDateText(x.e)})`).join('; ') : '—'],
-            ].map(([k, v]) => (
-              <tr key={k}><td style={{ ...td, fontWeight: 700, width: '38%' }}>{k}</td><td style={td}>{v}</td></tr>
-            ))}
-          </tbody>
-        </table>
-      </section>
+        <div className="blog-grid">
+          <ArticleSidebar
+            items={toc}
+            download={
+              icsEvents.length
+                ? { title: 'Download Nursing Exam Calendar', body: 'Every upcoming deadline and exam date, straight into your calendar.', buttonLabel: 'Download Calendar', href: icsDataUrl(icsEvents), fileName: 'nursing-exam-dates.ics' }
+                : undefined
+            }
+          />
 
-      {open.length > 0 && (
-        <section className="sc-card" style={card}>
-          <h2 style={h2}>Open for applications</h2>
-          {glance(open)}
-        </section>
-      )}
-      {examAhead.length > 0 && (
-        <section className="sc-card" style={card}>
-          <h2 style={h2}>Applications closed — exam ahead</h2>
-          {glance(examAhead)}
-        </section>
-      )}
-      {concluded.length > 0 && (
-        <section className="sc-card" style={card}>
-          <h2 style={h2}>Recently concluded</h2>
-          {glance(concluded)}
-        </section>
-      )}
+          <div style={{ minWidth: 0 }}>
+            <section id="introduction" className="blog-intro" style={{ scrollMarginTop: '96px' }}>
+              <h2>Introduction</h2>
+              <p>
+                We track {exams.length} nursing recruitments across India. {open.length ? `${open.length} ${open.length > 1 ? 'are' : 'is'} open for applications right now, with ${openPosts.toLocaleString('en-IN')} posts between them` : 'None is open for applications right now'}
+                {nextDeadline ? `, and the next deadline is ${formatDay(nextDeadline.e.applicationDeadline!)} for ${short(nextDeadline.e)}` : ''}. Open any section below for the full tables.
+              </p>
+            </section>
 
-      {calendar.length > 0 && (
-        <section className="sc-card" style={card}>
-          <h2 style={h2}>Calendar — add the dates that matter</h2>
-          <div style={{ overflowX: 'auto' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-              <thead><tr><th style={th}>Event</th><th style={th}>Date</th><th style={th}>Add to Google Calendar</th></tr></thead>
-              <tbody>
-                {calendar.map((c) => (
-                  <tr key={c.label}>
-                    <td style={{ ...td, fontWeight: 700 }}>{c.label}</td>
-                    <td style={td}>{c.text ?? formatDay(c.when)}</td>
-                    <td style={td}>
-                      <a href={c.url} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', color: 'var(--sc-navy-700)', fontWeight: 700 }}>
-                        <CalendarPlus size={14} /> Add
-                      </a>
-                    </td>
-                  </tr>
+            {open.length > 0 && (
+              <ArticleSection id="open" number={n('open')} icon={<ClipboardCheck size={26} />} title="Open for Applications" bullets={bulletsFor(open)}>
+                {glance(open)}
+              </ArticleSection>
+            )}
+            {examAhead.length > 0 && (
+              <ArticleSection id="exam-ahead" number={n('exam-ahead')} icon={<Hourglass size={26} />} title="Applications Closed — Exam Ahead" bullets={examAhead.slice(0, 3).map((x) => `${short(x.e)} — ${examDateText(x.e)}`)}>
+                {glance(examAhead)}
+              </ArticleSection>
+            )}
+
+            {calendar.length > 0 && (
+              <ArticleSection id="calendar" number={n('calendar')} icon={<CalendarDays size={26} />} title="Important Dates" bullets={calendar.slice(0, 3).map((c) => `${c.text ?? formatDay(c.when)} — ${c.label.split(' — ')[0]}`)}>
+                <div style={{ overflowX: 'auto' }}>
+                  <table style={{ width: '100%', borderCollapse: 'collapse' }}>
+                    <thead><tr><th style={th}>Event</th><th style={th}>Date</th><th style={th}>Add to Google Calendar</th></tr></thead>
+                    <tbody>
+                      {calendar.map((c) => (
+                        <tr key={c.label}>
+                          <td style={{ ...td, fontWeight: 600 }}>{c.label}</td>
+                          <td style={td}>{c.text ?? formatDay(c.when)}</td>
+                          <td style={td}>
+                            <a href={c.url} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', color: 'var(--blog-blue)', fontWeight: 600 }}>
+                              <CalendarPlus size={14} /> Add
+                            </a>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </ArticleSection>
+            )}
+
+            {concluded.length > 0 && (
+              <ArticleSection id="concluded" number={n('concluded')} icon={<History size={26} />} title="Recently Concluded" bullets={bulletsFor(concluded)}>
+                {glance(concluded)}
+              </ArticleSection>
+            )}
+
+            <ArticleSection id="all" number={n('all')} icon={<Layers size={26} />} title="All Recruitments" bullets={[`${exams.length} recruitments, each with a full guide`, 'Vacancies, dates and who can apply', 'Links to the official source']}>
+              <div style={{ display: 'grid', gap: '12px' }}>
+                {exams.map(({ e, lc }) => {
+                  const f = VERIFIED_FACTS[e.id] ?? {};
+                  return (
+                    <div key={e.id} style={{ paddingBottom: '12px', borderBottom: '1px solid var(--blog-line)' }}>
+                      <div style={{ fontSize: '0.92rem', fontWeight: 700, color: 'var(--blog-navy)', marginBottom: '4px' }}>{short(e)}</div>
+                      <p style={{ margin: '0 0 6px', fontSize: '0.86rem', color: 'var(--blog-gray)', lineHeight: 1.6 }}>
+                        {e.organisation}. {e.vacancies ? `${e.vacancies.toLocaleString('en-IN')} posts. ` : ''}Applications: {applyWindowText(e)}. Exam: {examDateText(e)}. {lc.label}.
+                        {f.eligibility ? ` Who can apply: ${f.eligibility}.` : ''}
+                      </p>
+                      <Link href={`/nursing/exams/${e.slug}`} style={{ fontSize: '0.84rem', fontWeight: 600, color: 'var(--blog-blue)' }}>Full details, dates and FAQs →</Link>
+                    </div>
+                  );
+                })}
+              </div>
+            </ArticleSection>
+
+            <ArticleSection id="faq" number={n('faq')} icon={<HelpCircle size={26} />} title="FAQs" bullets={faq.slice(0, 3).map((x) => x.q)}>
+              <div style={{ display: 'grid', gap: '8px' }}>
+                {faq.map((x) => (
+                  <details key={x.q} style={{ border: '1px solid var(--blog-line)', borderRadius: '10px', padding: '10px 12px', background: '#fff' }}>
+                    <summary style={{ cursor: 'pointer', fontWeight: 600, fontSize: '0.88rem', color: 'var(--blog-navy)' }}>{x.q}</summary>
+                    <p style={{ margin: '8px 0 0', fontSize: '0.86rem', color: 'var(--blog-gray)', lineHeight: 1.6 }}>{x.a}</p>
+                  </details>
                 ))}
-              </tbody>
-            </table>
+              </div>
+            </ArticleSection>
+
+            <ArticleCTA title="Prepare for Success" body="Join SkillCase and get your Career Passport, eligibility checks and deadline alerts for every nursing recruitment in one place." buttonLabel="Explore Our Programs" href="/nursing" />
+
+            <RelatedGrid items={open.concat(examAhead, concluded).slice(0, 3).map(({ e }) => ({ title: short(e), href: `/nursing/exams/${e.slug}` }))} moreHref="/nursing/exams" moreLabel="View All Exams" />
           </div>
-        </section>
-      )}
-
-      {exams.map(({ e, lc }) => {
-        const f = VERIFIED_FACTS[e.id] ?? {};
-        return (
-          <section key={e.id} className="sc-card" style={card}>
-            <h2 style={h2}>{e.name.replace(/\s*\(.*?\)\s*$/, '')}</h2>
-            <p style={{ margin: '0 0 8px', fontSize: '0.88rem', color: 'var(--sc-ink-700)', lineHeight: 1.6 }}>
-              {e.organisation}. {e.vacancies ? `${e.vacancies.toLocaleString('en-IN')} posts. ` : ''}Applications: {applyWindowText(e)}. Exam: {examDateText(e)}. {lc.label}.
-              {f.eligibility ? ` Who can apply: ${f.eligibility}.` : ''}
-            </p>
-            <Link href={`/nursing/exams/${e.slug}`} style={{ fontSize: '0.84rem', fontWeight: 700, color: 'var(--sc-navy-700)' }}>Full details, dates and FAQs →</Link>
-          </section>
-        );
-      })}
-
-      <section className="sc-card" style={card}>
-        <h2 style={h2}>Frequently asked questions</h2>
-        <div style={{ display: 'grid', gap: '8px' }}>
-          {faq.map((x) => (
-            <details key={x.q} style={{ border: '1px solid var(--sc-line-200)', borderRadius: '10px', padding: '10px 12px' }}>
-              <summary style={{ cursor: 'pointer', fontWeight: 700, fontSize: '0.88rem', color: 'var(--sc-navy-900)' }}>{x.q}</summary>
-              <p style={{ margin: '8px 0 0', fontSize: '0.86rem', color: 'var(--sc-ink-700)', lineHeight: 1.6 }}>{x.a}</p>
-            </details>
-          ))}
         </div>
-      </section>
-    </main>
+      </main>
+    </div>
   );
 }

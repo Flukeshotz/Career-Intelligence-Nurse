@@ -6,6 +6,11 @@ import { Search } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { GlobalSearchModal } from './GlobalSearchModal';
 
+/** Pages laid out in the blog design system: exam guides and the upcoming-exams roundup. */
+export function isArticlePage(pathname: string | null): boolean {
+  return !!pathname && (/^\/nursing\/exams\/[^/]+$/.test(pathname) || pathname === '/nursing/upcoming-exams');
+}
+
 export function TopHeader() {
   const [searchOpen, setSearchOpen] = useState(false);
   const pathname = usePathname();
@@ -22,6 +27,9 @@ export function TopHeader() {
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
   }, []);
+
+  // Article / blog pages carry their own light header (components/blog/ArticleHeader), with search.
+  if (isArticlePage(pathname)) return null;
 
   return (
     <>
