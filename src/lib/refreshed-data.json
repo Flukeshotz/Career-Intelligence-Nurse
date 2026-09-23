@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-09-23T13:59:33.714Z",
+  "ranAt": "2026-09-23T23:04:39.706Z",
   "records": {
     "exam-norcet-2026": {
       "status": "consensus",
@@ -213,22 +213,22 @@
       "fields": {
         "vacancies": {
           "value": 196,
-          "agreeing": 2,
-          "of": 2
+          "agreeing": 3,
+          "of": 3
         },
         "applicationStart": {
           "value": "2026-06-12",
-          "agreeing": 2,
-          "of": 2
+          "agreeing": 3,
+          "of": 3
         },
         "applicationDeadline": {
           "value": "2026-07-02",
-          "agreeing": 2,
-          "of": 2
+          "agreeing": 3,
+          "of": 3
         }
       },
       "disagreements": [],
-      "sourcesRead": 2,
+      "sourcesRead": 3,
       "sourcesTried": 3,
       "official": {
         "status": "partial",
