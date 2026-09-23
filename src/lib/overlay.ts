@@ -9,6 +9,7 @@
 import type { MockExam } from './mock-data';
 import REFRESHED from './refreshed-data.json';
 import { applyWindowText, examDateText } from './format-dates';
+import { VERIFIED_FACTS } from './verified-facts';
 
 interface FieldConsensus {
   value: number | string;
@@ -41,17 +42,24 @@ const RECORDS = (REFRESHED as unknown as { records: Record<string, RefreshRecord
 function datesParagraph(e: MockExam): string {
   const parts: string[] = [];
   if (e.applicationDeadline) parts.push(`Applications: ${applyWindowText(e)}.`);
-  parts.push(e.examDate ? `Exam: ${examDateText(e)}.` : 'Exam date not announced yet.');
+  parts.push(e.examDate ? `Exam: ${examDateText(e)}.` : 'Exam date not confirmed yet.');
   return parts.join(' ');
 }
 
-function rewriteDescription(e: MockExam): string {
-  const d = e.descriptionSimple;
-  if (!d) return d;
-  let out = d.replace(/(Important dates:\n)[\s\S]*?(\n\nWhat do you need\?)/, `$1${datesParagraph(e)}$2`);
-  // Keep the headline post count in step with the structured field.
-  if (e.vacancies) out = out.replace(/([\d,]{2,7})( (?:Nursing Officer |nursing |Nursing Superintendent |contract Staff Nurse )?posts?\b)/, `${e.vacancies.toLocaleString('en-IN')}$2`);
-  return out;
+/**
+ * The description is REBUILT from verified facts only. The hand-written descriptions stored in
+ * mock-data.ts contained unverified details (council names, admit-card dates, a GNM route MPESB does
+ * not allow), so none of that text is used any more.
+ */
+function buildDescription(e: MockExam): string {
+  const f = VERIFIED_FACTS[e.id] ?? {};
+  const posts = e.vacancies ? `${e.vacancies.toLocaleString('en-IN')} posts` : 'posts as per the official notification';
+  return [
+    `What is this?\n${e.organisation}: ${posts}.${f.notice ? ` ${f.notice}.` : ''}`,
+    `Who can apply?\n${f.eligibility ? `${f.eligibility}.` : 'See the official notification.'}${f.age ? ` Age: ${f.age}.` : ''}`,
+    `Important dates:\n${datesParagraph(e)}`,
+    `What happens next?\n${f.selection ? (/[.]$/.test(f.selection) ? f.selection : `${f.selection}.`) : 'See the official notification.'}`,
+  ].join('\n\n');
 }
 
 export function applyExamOverlay(exams: MockExam[]): MockExam[] {
@@ -59,14 +67,14 @@ export function applyExamOverlay(exams: MockExam[]): MockExam[] {
     const rec = RECORDS[e.id];
     // The official notice, where it was readable, wins over agreement between third-party reports.
     const f = { ...(rec?.fields ?? {}), ...(rec?.official?.fields ?? {}) } as NonNullable<RefreshRecord['fields']>;
-    if (!rec?.fields && !rec?.official?.fields) return e;
+    if (!rec?.fields && !rec?.official?.fields) return { ...e, descriptionSimple: buildDescription(e) };
     const next = { ...e };
     if (typeof f.vacancies?.value === 'number') next.vacancies = f.vacancies.value;
     if (typeof f.applicationStart?.value === 'string') next.applicationStart = `${f.applicationStart.value}T00:00:00+05:30`;
     if (typeof f.applicationDeadline?.value === 'string') next.applicationDeadline = `${f.applicationDeadline.value}T23:59:59+05:30`;
     if (typeof f.examDate?.value === 'string') next.examDate = `${f.examDate.value}T09:00:00+05:30`;
     if (typeof f.examEndDate?.value === 'string') next.examEndDate = `${f.examEndDate.value}T09:00:00+05:30`;
-    next.descriptionSimple = rewriteDescription(next);
+    next.descriptionSimple = buildDescription(next);
     return next;
   });
 }

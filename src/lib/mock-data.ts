@@ -191,8 +191,8 @@ const RAW_EXAMS: MockExam[] = [
     "applicationStart": "2026-06-13T00:00:00+05:30",
     "applicationDeadline": "2026-06-30T23:59:59+05:30",
     "status": "open",
-    "officialNotificationUrl": "https://mhsrb.ap.gov.in",
-    "applicationUrl": "https://mhsrb.ap.gov.in",
+    "officialNotificationUrl": "https://apmsrb.ap.gov.in/msrb/",
+    "applicationUrl": "https://apmsrb.ap.gov.in/msrb/",
     "source": "AP Medical Services Board",
     "sourceType": "official",
     "descriptionSimple": "What is this?\nAndhra Pradesh APMSRB Notification 10/2026: 419 contract Staff Nurse posts under NHM (529 posts including Pharmacist and Multi Rehabilitation Worker).\n\nWho can apply?\nResidents of Andhra Pradesh with GNM or B.Sc. Nursing, registered with the AP Nursing Council.\n\nImportant dates:\nApplications 13–30 June 2026.\n\nWhat do you need?\nNursing Council registration, qualification certificates, and category/ID documents.\n\nWhat happens next?\nMerit-based selection as per the notification.",
@@ -399,7 +399,7 @@ export const INITIAL_REQUIREMENTS: MockRequirement[] = [
       "msc"
     ],
     "isMandatory": true,
-    "rawText": "B.Sc. Nursing or Diploma in General Nursing",
+    "rawText": "B.Sc. (Hons) Nursing, B.Sc. (Post Basic) Nursing or Diploma in General Nursing with Midwife training (DMER Nurse: A-Grade Nurse with Midwifery training, or B.Sc. Nursing)",
     "simpleText": "GNM diploma or B.Sc. Nursing degree",
     "remedyText": "Complete GNM or B.Sc. Nursing."
   },
@@ -409,8 +409,8 @@ export const INITIAL_REQUIREMENTS: MockRequirement[] = [
     "kind": "registration",
     "operator": "exists",
     "isMandatory": true,
-    "rawText": "Registered with the Haryana Nurses & Nurse-Midwives Council",
-    "simpleText": "Registration with the Haryana Nurses & Nurse-Midwives Council",
+    "rawText": "Registered with the Haryana Nurses Registration Council",
+    "simpleText": "Registration with the Haryana Nurses Registration Council",
     "remedyText": "Register or renew with your State Nursing Council."
   },
   {
@@ -446,13 +446,13 @@ export const INITIAL_REQUIREMENTS: MockRequirement[] = [
     "valueText": [
       "bsc_nursing",
       "post_basic",
-      "msc",
-      "gnm"
+      "msc"
     ],
     "isMandatory": true,
-    "rawText": "B.Sc. Nursing (Hons) or diploma",
-    "simpleText": "B.Sc. Nursing (Hons) or a nursing diploma",
-    "remedyText": "Complete a B.Sc. Nursing degree or nursing diploma."
+    "rawText": "B.Sc. (Hons) Nursing / B.Sc. Nursing / Post Basic B.Sc. Nursing, registered with a State Nursing Council",
+    "simpleText": "B.Sc. Nursing (Hons, regular or Post Basic) — no experience needed",
+    "remedyText": "Complete a B.Sc. Nursing degree.",
+    "orGroup": "pgimer_path_bsc"
   },
   {
     "id": "req-19",
@@ -461,18 +461,23 @@ export const INITIAL_REQUIREMENTS: MockRequirement[] = [
     "operator": "lte",
     "valueNumeric": 35,
     "isMandatory": true,
-    "rawText": "18–35 years (relaxations apply)",
-    "simpleText": "Age must be 35 years or under",
+    "rawText": "18–35 years as on 3 Oct 2026 (relaxations apply)",
+    "simpleText": "Age must be 35 years or under on 3 Oct 2026",
     "remedyText": "Check age relaxation for your category in the official notification."
   },
   {
     "id": "req-20",
     "examId": "exam-pgimer-no-2026",
-    "kind": "other",
+    "kind": "qualification",
+    "operator": "in",
+    "valueText": [
+      "gnm"
+    ],
     "isMandatory": true,
-    "rawText": "Work experience as stated in the notification",
-    "simpleText": "Work experience as stated in the official notification",
-    "remedyText": "Read the official notification for the exact requirement."
+    "orGroup": "pgimer_path_gnm",
+    "rawText": "Diploma in General Nursing and Midwifery (GNM), registered with a State Nursing Council",
+    "simpleText": "GNM diploma holders (need 1 year of experience)",
+    "remedyText": "Complete GNM and gain 1 year of experience in a 50+ bed hospital."
   },
   {
     "id": "req-21",
@@ -509,6 +514,77 @@ export const INITIAL_REQUIREMENTS: MockRequirement[] = [
     "rawText": "18–40 years as on 1 Jan 2026 (up to 45 for reserved categories)",
     "simpleText": "Age must be 40 years or under on 1 Jan 2026",
     "remedyText": "Reserved categories: check the age relaxation in the official notification."
+  },
+  {
+    "id": "req-24",
+    "examId": "exam-pgimer-no-2026",
+    "kind": "experience",
+    "operator": "gte",
+    "valueNumeric": 1,
+    "isMandatory": true,
+    "orGroup": "pgimer_path_gnm",
+    "rawText": "One year of experience in a hospital with a minimum of 50 beds (GNM route)",
+    "simpleText": "1 year of experience in a hospital of at least 50 beds (GNM route)",
+    "remedyText": "Gain 1 year of experience in a hospital of at least 50 beds."
+  },
+  {
+    "id": "req-25",
+    "examId": "exam-pgimer-no-2026",
+    "kind": "registration",
+    "operator": "exists",
+    "isMandatory": true,
+    "rawText": "Registered with a State Nursing Council",
+    "simpleText": "Valid registration with a State Nursing Council",
+    "remedyText": "Register or renew with your State Nursing Council."
+  },
+  {
+    "id": "req-26",
+    "examId": "exam-hssc-har-nurse-2026",
+    "kind": "age",
+    "operator": "lte",
+    "valueNumeric": 42,
+    "isMandatory": true,
+    "rawText": "18–42 years (relaxations for Haryana residents of reserved categories)",
+    "simpleText": "Age must be 42 years or under",
+    "remedyText": "Check the age relaxation for your category in Appendix-L of the advertisement."
+  },
+  {
+    "id": "req-27",
+    "examId": "exam-hssc-har-nurse-2026",
+    "kind": "other",
+    "isMandatory": true,
+    "rawText": "Hindi or Sanskrit as one of the subjects in Matric or higher education",
+    "simpleText": "Hindi or Sanskrit as a subject in Matric or higher",
+    "remedyText": "This is required for all posts in the advertisement."
+  },
+  {
+    "id": "req-28",
+    "examId": "exam-hssc-har-nurse-2026",
+    "kind": "other",
+    "isMandatory": true,
+    "rawText": "Must have qualified the Common Eligibility Test (CET) Advt. No. 01/2025, Group C",
+    "simpleText": "Must have qualified CET 2025 (Group C)",
+    "remedyText": "Only CET 2025 Group C qualified candidates could apply."
+  },
+  {
+    "id": "req-29",
+    "examId": "exam-osssc-nurse-2026",
+    "kind": "other",
+    "isMandatory": true,
+    "rawText": "Knowledge of Odia (for example, passed Class VII or above with Odia as a language)",
+    "simpleText": "Must know Odia",
+    "remedyText": "See the official notification for the accepted ways of showing knowledge of Odia."
+  },
+  {
+    "id": "req-30",
+    "examId": "exam-ap-mhsrb-nurse-2026",
+    "kind": "age",
+    "operator": "lte",
+    "valueNumeric": 42,
+    "isMandatory": true,
+    "rawText": "18–42 years as on 1 Jan 2026 (5 years relaxation for SC/ST/BC/EWS, 10 years for persons with benchmark disabilities)",
+    "simpleText": "Age must be 42 years or under on 1 Jan 2026",
+    "remedyText": "Check the age relaxation for your category."
   }
 ];
 

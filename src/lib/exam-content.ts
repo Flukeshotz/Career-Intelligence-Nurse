@@ -67,7 +67,7 @@ export function importantDates(e: MockExam): Row[] {
       calendarUrl: future(e.examEndDate ?? e.examDate) ? googleCalendarUrl(`Exam: ${e.name}`, e.examDate, e.examEndDate) : undefined,
     });
   } else {
-    rows.push({ label: 'Exam', value: 'Not announced yet' });
+    rows.push({ label: 'Exam', value: 'Not confirmed yet — check the official website' });
   }
   if (e.mainsDate) {
     rows.push({
@@ -76,8 +76,10 @@ export function importantDates(e: MockExam): Row[] {
       calendarUrl: future(e.mainsDate) ? googleCalendarUrl(`Mains: ${e.name}`, e.mainsDate) : undefined,
     });
   }
-  rows.push({ label: 'Admit card', value: 'Not announced yet' });
-  rows.push({ label: 'Result', value: 'Not announced yet' });
+  // Only state an admit-card or result status we have verified; never assume "not announced".
+  const f = VERIFIED_FACTS[e.id] ?? {};
+  rows.push({ label: 'Admit card', value: f.admitCard ?? 'Check the official website' });
+  rows.push({ label: 'Result', value: f.result ?? 'Check the official website' });
   return rows;
 }
 
@@ -91,7 +93,7 @@ export function faqs(e: MockExam): Faq[] {
   const short = e.name.replace(/\s*\(.*?\)\s*/g, ' ').replace(/\s+/g, ' ').trim();
   const out: Faq[] = [];
 
-  if (e.vacancies) out.push({ q: `How many vacancies are there in ${short}?`, a: `${e.vacancies.toLocaleString('en-IN')} posts.${f.posts ? ` ${f.posts}.` : ''}` });
+  if (e.vacancies) out.push({ q: `How many vacancies are there in ${short}?`, a: `${e.vacancies.toLocaleString('en-IN')} posts.${f.posts ? ` ${/[.]$/.test(f.posts) ? f.posts : `${f.posts}.`}` : ''}` });
 
   if (e.applicationDeadline) {
     const closed = !future(e.applicationDeadline);
@@ -105,14 +107,29 @@ export function faqs(e: MockExam): Faq[] {
 
   out.push({
     q: `When is the ${short} exam?`,
-    a: e.examDate ? `${examDateText(e)}.` : 'The exam date has not been announced yet. Check the official website for updates.',
+    a: e.examDate ? `${examDateText(e)}.` : 'We have not confirmed an exam date yet. Check the official website for the latest notices.',
   });
 
-  if (f.eligibility) out.push({ q: `Who can apply for ${short}?`, a: `${f.eligibility}.` });
-  if (f.age) out.push({ q: `What is the age limit for ${short}?`, a: `${f.age}.` });
+  if (f.eligibility) out.push({ q: `Who can apply for ${short}?`, a: /[.)]$/.test(f.eligibility) && /[.]$/.test(f.eligibility) ? f.eligibility : `${f.eligibility}.` });
+  if (f.age) out.push({ q: `What is the age limit for ${short}?`, a: /[.)]$/.test(f.age) && /[.]$/.test(f.age) ? f.age : `${f.age}.` });
   if (f.pay) out.push({ q: `What is the salary for ${short}?`, a: `${f.pay}. This is the official pay scale, not take-home pay.` });
   if (f.pattern) out.push({ q: `What is the exam pattern for ${short}?`, a: f.pattern.join(' ') });
-  if (f.selection) out.push({ q: `How are candidates selected for ${short}?`, a: `${f.selection}.` });
+  if (f.selection) out.push({ q: `How are candidates selected for ${short}?`, a: /[.]$/.test(f.selection) ? f.selection : `${f.selection}.` });
+  if (f.fee) out.push({ q: `What is the application fee for ${short}?`, a: f.fee.join('. ').replace(/\.\./g, '.') + (/[.]$/.test(f.fee[f.fee.length - 1]) ? '' : '.') });
+  if (f.scoring) {
+    const s = f.scoring;
+    out.push({
+      q: `Is there negative marking in ${short}?`,
+      a: s.blankPenalty
+        ? `No marks are deducted for a wrong answer, but ${s.blankPenalty} mark is deducted for every question left unattempted unless the fifth circle is filled.`
+        : s.wrongPenalty > 0
+          ? `Yes. ${s.wrongPenalty === 0.25 ? '0.25' : '1/3'} mark is deducted for every wrong answer.`
+          : 'No.',
+    });
+  }
+  if (f.qualifying) out.push({ q: `What are the minimum qualifying marks for ${short}?`, a: `${f.qualifying}.` });
+  if (f.syllabus) out.push({ q: `What is the syllabus for ${short}?`, a: `The notice lists: ${f.syllabus.map((x) => x.section).join('; ')}. The full topic list is in the Syllabus section above.` });
+  if (f.notice) out.push({ q: `Which official notice is this based on?`, a: `${f.notice}. Always read the full official notice before applying.` });
 
   out.push({
     q: `Where do I apply for ${short}?`,

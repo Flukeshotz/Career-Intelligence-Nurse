@@ -76,7 +76,7 @@ export function deriveLifecycle(item: LifecycleInput, now: number = Date.now()):
         return { status: 'closed', stage: 'applications_closed', label: `Stage 1 held — Mains ${fmt(item.mainsDate!)}` };
       }
       if (now > examLast + 86_400_000) {
-        return { status: 'closed', stage: 'exam_held', label: item.examDateOpenEnded ? `Exam began ${fmt(item.examDate!)} — result awaited` : `Exam held ${examDateText(item)} — result awaited` };
+        return { status: 'closed', stage: 'exam_held', label: item.examDateOpenEnded ? `Exam began ${fmt(item.examDate!)}` : `Exam held ${examDateText(item)}` };
       }
       return { status: 'closed', stage: 'applications_closed', label: `Applications closed — exam ${examDateText(item)}` };
     }

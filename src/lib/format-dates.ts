@@ -30,7 +30,7 @@ export function formatRange(startIso: string, endIso: string): string {
 }
 
 export function examDateText(e: DateFields): string {
-  if (!e.examDate) return 'Not announced yet';
+  if (!e.examDate) return 'Not confirmed yet';
   if (e.mainsDate) return `Prelims ${formatDay(e.examDate, false)} · Mains ${formatDay(e.mainsDate)}`;
   if (e.examEndDate && e.examEndDate !== e.examDate) return formatRange(e.examDate, e.examEndDate);
   if (e.examDateOpenEnded) return `From ${formatDay(e.examDate)}`;
