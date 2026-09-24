@@ -13,6 +13,8 @@ import { PyqCard } from '@/components/opportunity/PyqCard';
 import { EXAM_PAPERS } from '@/lib/pyq-mock-data';
 import { FilterEmptyState } from '@/components/empty-states/EmptyState';
 import { FilterDrawerModal } from '@/components/layout/FilterDrawerModal';
+import { ArticleHero } from '@/components/blog/ArticleHero';
+import { AdSlot } from '@/components/blog/AdSlot';
 
 type ExamSector = 'all' | 'central' | 'railways' | 'defense' | 'state' | 'entrance' | 'psu';
 type SortOption = 'urgent' | 'vacancies' | 'exam_date' | 'alphabetical';
@@ -22,9 +24,7 @@ const SECTORS: { id: ExamSector; label: string; emoji: string }[] = [
   { id: 'all', label: 'All Exams', emoji: '⭐' },
   { id: 'central', label: 'Central & AIIMS', emoji: '🏛️' },
   { id: 'railways', label: 'Railways (RRB)', emoji: '🚆' },
-  { id: 'defense', label: 'Defense & Army', emoji: '🛡️' },
   { id: 'state', label: 'State PSCs', emoji: '🗺️' },
-  { id: 'entrance', label: 'Admissions', emoji: '🎓' },
 ];
 
 function ExamsListContent() {
@@ -114,7 +114,19 @@ function ExamsListContent() {
   }, [selectedSector, searchQuery]);
 
   return (
-    <div style={{ background: '#f8fafc', minHeight: '100vh', paddingBottom: '90px' }}>
+    <div className="blog-page" style={{ minHeight: '100vh', paddingBottom: '90px' }}>
+      <div className="blog-shell" style={{ paddingBottom: 0 }}>
+        <ArticleHero
+          crumbs={[{ label: 'Home', href: '/nursing' }, { label: 'Opportunities' }, { label: 'Government Exams' }]}
+          badge="Government exams"
+          title="Nursing recruitment exams"
+          titleAccent="across India"
+          subtitle="Every recruitment we track, with vacancies, dates and a full guide for each — checked against official notices and re-checked every day."
+          showShare={false}
+          handwriting={['Find', 'your next', 'exam']}
+        />
+        <AdSlot slot="article-top" />
+      </div>
 
       {/* ── STICKY FILTER HEADER ── */}
       <div
@@ -122,7 +134,7 @@ function ExamsListContent() {
           background: '#ffffff',
           borderBottom: '1.5px solid var(--sc-line-200)',
           position: 'sticky',
-          top: '60px',
+          top: '63px',
           zIndex: 50,
           padding: '12px 16px',
           boxShadow: '0 2px 6px rgba(0,0,0,0.02)',
@@ -212,7 +224,7 @@ function ExamsListContent() {
               transition: 'all 0.12s ease',
             }}
           >
-            📄 PYQs &amp; Mock Tests ({filteredPapers.length})
+            📄 Previous Year Papers ({filteredPapers.length})
           </button>
         </div>
 
@@ -280,7 +292,7 @@ function ExamsListContent() {
       </div>
 
       {/* ── CONTENT BODY ── */}
-      <div style={{ maxWidth: '960px', margin: '0 auto', padding: '16px 16px 0' }}>
+      <div style={{ maxWidth: '1120px', margin: '0 auto', padding: '16px 16px 0' }}>
 
         <Link
           href="/nursing/upcoming-exams"
@@ -315,10 +327,10 @@ function ExamsListContent() {
           <div>
             <div style={{ marginBottom: '12px' }}>
               <div style={{ fontSize: '0.84rem', fontWeight: 800, color: 'var(--sc-navy-900)' }}>
-                Official Question Papers &amp; Full Mock Tests ({filteredPapers.length})
+                Previous year papers from the official booklets ({filteredPapers.length})
               </div>
               <div style={{ fontSize: '0.76rem', color: 'var(--sc-ink-600)' }}>
-                Real past papers with official answer keys for practice and time management.
+                Taken from the official question booklets, for timed practice.
               </div>
             </div>
 

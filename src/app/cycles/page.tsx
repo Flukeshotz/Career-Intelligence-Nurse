@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { RefreshCw, ArrowRight, CheckCircle2, Clock, Check, ChevronRight } from 'lucide-react';
 import { getTrackedOpportunities, advanceStage, TrackedItem } from '@/lib/user-store';
 import { NoTrackedCyclesEmptyState } from '@/components/empty-states/EmptyState';
+import { ArticleHero } from '@/components/blog/ArticleHero';
+import { AdSlot } from '@/components/blog/AdSlot';
 
 const STAGE_ORDER: Array<{ key: TrackedItem['stage']; label: string; desc: string }> = [
   { key: 'interested', label: 'Interested', desc: 'Following updates and deadlines' },
@@ -38,20 +40,17 @@ export default function MyCyclesPage() {
   const concludedItems = items.filter((i) => i.outcome || i.stage === 'closed');
 
   return (
-    <div className="wide-container mobile-safe-bottom" style={{ paddingTop: '24px' }}>
-      {/* ── Header ── */}
-      <div style={{ marginBottom: '24px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '2px' }}>
-          <RefreshCw size={22} color="var(--sc-navy-700)" />
-          <h1 style={{ fontSize: '1.65rem', fontWeight: 800, color: 'var(--sc-navy-900)' }}>
-            My Recruitment Cycles
-          </h1>
-        </div>
-        <p style={{ fontSize: '0.9rem', color: 'var(--sc-ink-700)' }}>
-          Track active recruitment stages, admit card releases, exam dates, answer keys, and final merit lists.
-        </p>
-      </div>
-
+    <div className="blog-page"><div className="blog-shell">
+      <ArticleHero
+        crumbs={[{ label: 'Home', href: '/nursing' }, { label: 'My Recruitment Cycles' }]}
+        badge="Your tracker"
+        title="My recruitment"
+        titleAccent="cycles"
+        subtitle="The exams you are following. Update each one's stage — applied, admit card, exam, result — as you go."
+        showShare={false}
+        handwriting={['One place', 'for every', 'exam']}
+      />
+      <AdSlot slot="article-top" />
       {items.length === 0 ? (
         <NoTrackedCyclesEmptyState />
       ) : (
@@ -186,6 +185,6 @@ export default function MyCyclesPage() {
           )}
         </div>
       )}
-    </div>
+    </div></div>
   );
 }

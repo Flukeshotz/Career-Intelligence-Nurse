@@ -14,7 +14,7 @@ export function AdSlot({ slot }: { slot: AdSlotId }) {
     return (
       <aside className={`${cls} blog-ad--empty`} aria-label="Advertisement space">
         <span className="blog-ad-label">Advertisement</span>
-        <span className="blog-ad-empty-text">Your SkillCase promotion here</span>
+        <span className="blog-ad-empty-text">SkillCase Germany programme — ad space</span>
         <span className="blog-ad-size">{AD_SLOT_SIZE[slot]}</span>
       </aside>
     );

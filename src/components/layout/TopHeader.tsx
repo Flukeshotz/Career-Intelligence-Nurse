@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { Search } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { GlobalSearchModal } from './GlobalSearchModal';
+import { ArticleHeader, activeNavFor } from '@/components/blog/ArticleHeader';
 
 /** Pages laid out in the blog design system: exam guides and the upcoming-exams roundup. */
 export function isArticlePage(pathname: string | null): boolean {
@@ -28,8 +29,9 @@ export function TopHeader() {
     return () => window.removeEventListener('keydown', handler);
   }, []);
 
-  // Article / blog pages carry their own light header (components/blog/ArticleHeader), with search.
+  // Article / blog pages render their own header; every other page gets the same light header here.
   if (isArticlePage(pathname)) return null;
+  return <ArticleHeader active={activeNavFor(pathname)} />;
 
   return (
     <>

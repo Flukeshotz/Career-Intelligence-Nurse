@@ -28,7 +28,7 @@
 
   /* ── Neutrals & Surfaces ── */
   --sc-white: #ffffff;
-  --sc-bg-page: #f8fafc;
+  --sc-bg-page: #f4f7fd;          /* same as blog pages */
   --sc-surface-card: #ffffff;
   --sc-surface-secondary: #f1f5f9;
   --sc-surface-sunken: rgba(0, 0, 0, 0.04);
@@ -186,8 +186,8 @@ select:focus-visible {
 /* ── Editorial Surfaces & Cards ── */
 .sc-card {
   background: var(--sc-surface-card);
-  border: 1px solid var(--sc-line-200);
-  border-radius: var(--radius-lg);
+  border: 1px solid #e3e9f5;
+  border-radius: 14px;
   box-shadow: var(--shadow-xs);
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
@@ -1150,3 +1150,38 @@ select:focus-visible {
 .blog-ad-eyebrow { font-size: 0.72rem; font-weight: 700; color: var(--blog-blue); text-transform: uppercase; letter-spacing: 0.04em; }
 .blog-ad-cta { display: inline-flex; align-items: center; gap: 6px; background: var(--blog-yellow); color: var(--blog-navy); font-weight: 700; font-size: 0.88rem; padding: 10px 16px; border-radius: 10px; white-space: nowrap; }
 @media (max-width: 899px) { .blog-ad--sidebar { display: none; } }
+
+/* ══ Home (same design system) ═════════════════════════════════════════════ */
+.blog-kicker, .home-greet { font-family: var(--font-ui); font-size: 0.95rem; color: var(--blog-navy); margin: 0 0 10px; font-weight: 500; }
+.home-search { display: flex; gap: 10px; margin: 4px 0 14px; max-width: 560px; }
+.home-search-box { flex: 1; display: flex; align-items: center; gap: 10px; background: #fff; border: 1px solid #dfe7f5; border-radius: 12px; padding: 0 16px; min-height: 50px; color: #8a93a5; font: inherit; font-family: var(--font-ui); font-size: 0.95rem; text-align: left; cursor: pointer; box-shadow: 0 2px 8px rgba(21, 87, 214, 0.06); }
+.home-search-filter { width: 50px; min-height: 50px; border-radius: 12px; background: #fff; border: 1px solid #dfe7f5; color: var(--blog-navy); display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.home-stats { font-family: var(--font-ui); font-size: 0.9rem; color: var(--blog-gray); margin: 0 0 16px; }
+.home-stats strong { color: var(--blog-navy); }
+.home-section { margin: 8px 0 26px; }
+.home-cards { display: grid; grid-template-columns: 1fr; gap: 14px; }
+@media (min-width: 760px) { .home-cards { grid-template-columns: 1fr 1fr; } }
+.home-card { display: flex; flex-direction: column; gap: 6px; background: #fff; border: 1px solid #e3e9f5; border-radius: 14px; padding: 16px 18px; text-decoration: none; transition: border-color 0.15s ease, box-shadow 0.15s ease; }
+.home-card:hover { border-color: #b9ccf1; box-shadow: 0 6px 18px rgba(21, 87, 214, 0.08); }
+.home-card-org { font-family: var(--font-ui); font-size: 0.78rem; color: var(--blog-gray); }
+.home-card b { font-size: 1.05rem; color: var(--blog-navy); line-height: 1.3; }
+.home-card-facts { font-family: var(--font-ui); font-size: 0.92rem; color: #2a3345; }
+.home-card-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
+.home-pill { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 600; color: var(--blog-navy); background: var(--blog-blue-50); padding: 5px 10px; border-radius: 999px; }
+.home-pill--open { color: #0f6b35; background: #e5f7ec; }
+.home-card-go { display: inline-flex; align-items: center; gap: 6px; font-size: 0.86rem; font-weight: 600; color: var(--blog-blue); }
+.home-empty { font-family: var(--font-ui); color: #2a3345; background: #fff; border: 1px solid #e3e9f5; border-radius: 14px; padding: 16px 18px; margin: 0; }
+.home-explore { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 14px; }
+.home-tile { display: flex; flex-direction: column; gap: 6px; background: var(--blog-card); border: 1px solid var(--blog-line); border-radius: 14px; padding: 16px; text-decoration: none; transition: border-color 0.15s ease; }
+.home-tile:hover { border-color: #b9ccf1; }
+.home-tile-ico { width: 48px; height: 48px; border-radius: 12px; background: var(--blog-blue-100); color: var(--blog-blue); display: flex; align-items: center; justify-content: center; margin-bottom: 4px; }
+.home-tile b { color: var(--blog-navy); font-size: 1rem; }
+.home-tile span:last-child { font-family: var(--font-ui); font-size: 0.86rem; color: var(--blog-gray); line-height: 1.45; }
+.home-passport { margin: 0 0 8px; }
+.home-passport .blog-dl-top b { font-size: 1rem; }
+.home-passport .blog-dl-top p { font-size: 0.88rem; }
+@media (min-width: 760px) { .home-passport a { display: inline-block; padding: 11px 22px; } }
+
+/* Phones: the Maya button shrinks to its avatar so it stops covering card links. */
+@media (max-width: 640px) { .maya-fab-label { display: none; } }
+.blog-ad--empty { padding-top: 28px; }

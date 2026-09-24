@@ -2,6 +2,7 @@ import { SITE_URL } from '@/lib/site';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { AdSlot } from '@/components/blog/AdSlot';
 import { Building2, MapPin, Calendar, ExternalLink, ArrowLeft, Users, ShieldCheck, FileText, CheckCircle2 } from 'lucide-react';
 import { getJobBySlug, getRequirementsForOpportunity, INITIAL_JOBS, INITIAL_EXAMS } from '@/lib/data';
 import { generateJobPostingJsonLd, generateBreadcrumbJsonLd } from '@/lib/seo';
@@ -101,6 +102,7 @@ export default async function JobDetailPage({
 
   return (
     <div className="wide-container mobile-safe-bottom" style={{ paddingTop: '20px' }}>
+      <AdSlot slot="article-top" />
       {/* Never feed Google Jobs a posting we know is wrong or unpublished */}
       {!getTrust(job.id).suppressFromListings && (
         <script

@@ -1,5 +1,8 @@
 'use client';
 
+import { INITIAL_EXAMS } from '@/lib/mock-data';
+import { ArticleHero } from '@/components/blog/ArticleHero';
+import { AdSlot } from '@/components/blog/AdSlot';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import {
@@ -102,17 +105,22 @@ export default function ProfilePage() {
   };
 
   return (
-    <div className="container mobile-safe-bottom" style={{ paddingTop: '20px' }}>
+    <div className="blog-page"><div className="blog-shell">
+      <ArticleHero
+        crumbs={[{ label: 'Home', href: '/nursing' }, { label: 'Career Passport' }]}
+        badge="Career Passport"
+        title="Your career"
+        titleAccent="profile"
+        subtitle={`Add your qualification, council registration and date of birth once. Every exam guide then checks its rules against your details — across all ${INITIAL_EXAMS.length} recruitments we track.`}
+        showShare={false}
+        handwriting={['Fill it', 'once, use', 'everywhere']}
+      />
+      <AdSlot slot="article-top" />
       {/* ── 1. Scannable Header & Resume Upload CTA ── */}
       <div style={{ marginBottom: '20px' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '12px' }}>
           <div>
-            <h1 style={{ fontSize: '1.55rem', fontWeight: 800, color: 'var(--sc-navy-900)' }}>
-              Your Career Profile
-            </h1>
-            <p style={{ fontSize: '0.86rem', color: 'var(--sc-ink-600)', marginTop: '2px' }}>
-              Used to evaluate eligibility across 28 central, state, and hospital opportunities.
-            </p>
+            <h2 style={{ fontSize: '1.15rem', fontWeight: 700, color: 'var(--blog-navy)' }}>Your details</h2>
           </div>
 
           <button
@@ -421,6 +429,6 @@ export default function ProfilePage() {
           setIsResumeModalOpen(false);
         }}
       />
-    </div>
+    </div></div>
   );
 }

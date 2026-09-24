@@ -1,6 +1,7 @@
 'use client';
 
 import { analytics } from './posthog';
+import { INITIAL_REQUIREMENTS } from './mock-data';
 
 export interface QualificationItem {
   code: string; // 'gnm' | 'bsc_nursing' | 'post_basic' | 'msc' | 'other'
@@ -238,7 +239,8 @@ export function calculateProfileReadiness(profile: UserProfile | null): {
   return {
     isComplete: missingGovt.length === 0,
     score: Math.min(100, points),
-    readyOpportunitiesCount: points > 50 ? 24 : 8,
+    // Recruitments whose rules can actually be checked once the profile is filled in — a real count.
+    readyOpportunitiesCount: points > 50 ? new Set(INITIAL_REQUIREMENTS.map((r) => r.examId).filter(Boolean)).size : 0,
     missingForGovt: missingGovt,
     missingForExams: missingExams,
   };

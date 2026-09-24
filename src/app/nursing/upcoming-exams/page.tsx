@@ -14,6 +14,7 @@ import { ArticleSidebar, TocItem } from '@/components/blog/ArticleSidebar';
 import { ArticleSection } from '@/components/blog/ArticleSection';
 import { ArticleCTA } from '@/components/blog/ArticleCTA';
 import { RelatedGrid } from '@/components/blog/RelatedGrid';
+import { AdSlot } from '@/components/blog/AdSlot';
 
 // Rebuilt hourly so "open now" and "days left" never go stale between data refreshes.
 export const revalidate = 3600;
@@ -119,6 +120,7 @@ export default function UpcomingNursingExamsPage() {
 
         <div className="blog-grid">
           <ArticleSidebar
+            ad={<AdSlot slot="sidebar" />}
             items={toc}
             download={
               icsEvents.length
@@ -135,6 +137,8 @@ export default function UpcomingNursingExamsPage() {
                 {nextDeadline ? `, and the next deadline is ${formatDay(nextDeadline.e.applicationDeadline!)} for ${short(nextDeadline.e)}` : ''}. Open any section below for the full tables.
               </p>
             </section>
+
+            <AdSlot slot="article-top" />
 
             {open.length > 0 && (
               <ArticleSection id="open" number={n('open')} icon={<ClipboardCheck size={26} />} title="Open for Applications" bullets={bulletsFor(open)}>
@@ -204,6 +208,8 @@ export default function UpcomingNursingExamsPage() {
                 ))}
               </div>
             </ArticleSection>
+
+            <AdSlot slot="article-mid" />
 
             <ArticleCTA title="Prepare for Success" body="Join SkillCase and get your Career Passport, eligibility checks and deadline alerts for every nursing recruitment in one place." buttonLabel="Explore Our Programs" href="/nursing" />
 

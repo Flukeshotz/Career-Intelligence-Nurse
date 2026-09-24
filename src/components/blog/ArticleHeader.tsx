@@ -10,13 +10,23 @@ import { GlobalSearchModal } from '@/components/layout/GlobalSearchModal';
  * on these routes (see TopHeader.isArticlePage). Every link points at a real route.
  */
 const NAV_LINKS: Array<[string, string]> = [
-  ['Learn', '/nursing'],
+  ['Learn', '/nursing/pyq'],
   ['Opportunities', '/nursing/exams'],
   ['Resources', '/nursing/upcoming-exams'],
-  ['About', '/nursing'],
+  ['About', '/about'],
 ];
 
-export function ArticleHeader({ active = 'Resources' }: { active?: string }) {
+/** Which nav item a path belongs to. */
+export function activeNavFor(pathname: string | null): string | undefined {
+  if (!pathname) return undefined;
+  if (pathname.startsWith('/nursing/pyq')) return 'Learn';
+  if (pathname === '/nursing/upcoming-exams' || /^\/nursing\/exams\/[^/]+$/.test(pathname)) return 'Resources';
+  if (pathname.startsWith('/nursing/exams') || pathname.startsWith('/nursing/jobs') || pathname.startsWith('/nursing/abroad')) return 'Opportunities';
+  if (pathname.startsWith('/about')) return 'About';
+  return undefined;
+}
+
+export function ArticleHeader({ active }: { active?: string }) {
   const [searchOpen, setSearchOpen] = useState(false);
 
   // Same ⌘K shortcut as the app header this replaces on article pages.

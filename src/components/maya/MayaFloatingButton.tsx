@@ -82,7 +82,7 @@ export function MayaFloatingButton() {
             />
           </div>
 
-          <span style={{ fontSize: '0.76rem', fontWeight: 800, letterSpacing: '0.01em' }}>
+          <span className="maya-fab-label" style={{ fontSize: '0.76rem', fontWeight: 800, letterSpacing: '0.01em' }}>
             Ask Maya
           </span>
         </button>

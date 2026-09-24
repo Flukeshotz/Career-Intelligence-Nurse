@@ -1,5 +1,6 @@
 /**
- * House ads — promotions for SkillCase's own programmes, shown in fixed slots on blog pages.
+ * House ads — promotions for SkillCase's own programmes (first: the Germany programme for nurses),
+ * shown in a fixed slot on every page.
  *
  * To run an ad, fill in its slot below. A slot set to `null` shows a neutral "advertisement space"
  * placeholder, so the layout is visible before any campaign is ready.

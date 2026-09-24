@@ -11,6 +11,8 @@ import { JobCard } from '@/components/opportunity/JobCard';
 import { INITIAL_JOBS } from '@/lib/mock-data';
 import { FilterEmptyState, NothingVerifiedYet } from '@/components/empty-states/EmptyState';
 import { FilterDrawerModal } from '@/components/layout/FilterDrawerModal';
+import { ArticleHero } from '@/components/blog/ArticleHero';
+import { AdSlot } from '@/components/blog/AdSlot';
 
 type TypeFilter = 'all' | 'government' | 'private';
 type SortOption = 'urgent' | 'vacancies' | 'alphabetical';
@@ -74,7 +76,19 @@ function JobsListContent() {
   };
 
   return (
-    <div style={{ background: '#f8fafc', minHeight: '100vh', paddingBottom: '90px' }}>
+<div className="blog-page" style={{ minHeight: '100vh', paddingBottom: '90px' }}>
+      <div className="blog-shell" style={{ paddingBottom: 0 }}>
+        <ArticleHero
+          crumbs={[{ label: 'Home', href: '/nursing' }, { label: 'Opportunities' }, { label: 'Hospital Jobs' }]}
+          badge="Hospital jobs"
+          title="Nursing jobs"
+          titleAccent="in hospitals"
+          subtitle="Staff nurse and nursing officer openings, listed only once they are checked against the employer's own notice."
+          showShare={false}
+          handwriting={['Your', 'next', 'job']}
+        />
+        <AdSlot slot="article-top" />
+      </div>
 
       {/* ── STICKY FILTER HEADER ── */}
       <div
@@ -82,7 +96,7 @@ function JobsListContent() {
           background: '#ffffff',
           borderBottom: '1.5px solid var(--sc-line-200)',
           position: 'sticky',
-          top: '60px',
+          top: '63px',
           zIndex: 50,
           padding: '12px 16px',
           boxShadow: '0 2px 6px rgba(0,0,0,0.02)',
@@ -221,7 +235,7 @@ function JobsListContent() {
       </div>
 
       {/* ── JOBS LIST ── */}
-      <div style={{ maxWidth: '960px', margin: '0 auto', padding: '16px 16px 0' }}>
+      <div style={{ maxWidth: '1120px', margin: '0 auto', padding: '16px 16px 0' }}>
         {loading ? (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
             {[1, 2, 3].map((n) => (

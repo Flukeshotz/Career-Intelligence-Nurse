@@ -2,10 +2,12 @@
 
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Search, FileText } from 'lucide-react';
+import { Search, FileText } from 'lucide-react';
 import { EXAM_PAPERS, ExamPaper } from '@/lib/pyq-mock-data';
 import { PyqCard } from '@/components/opportunity/PyqCard';
 import { PaperViewerModal } from '@/components/opportunity/PaperViewerModal';
+import { ArticleHero } from '@/components/blog/ArticleHero';
+import { AdSlot } from '@/components/blog/AdSlot';
 
 type CategoryFilter = 'all' | 'central' | 'railways' | 'state';
 type TypeFilter = 'all' | 'pyq' | 'mock';
@@ -44,34 +46,17 @@ export default function PreviousYearPapersPage() {
   }, [searchQuery, categoryFilter, typeFilter]);
 
   return (
-    <div className="wide-container mobile-safe-bottom" style={{ paddingTop: '16px', maxWidth: '860px', margin: '0 auto', paddingBottom: '90px' }}>
-      
-      {/* ── TOP NAV & CALM HEADER ── */}
-      <div style={{ marginBottom: '16px' }}>
-        <Link
-          href="/nursing"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '5px',
-            color: 'var(--sc-navy-700)',
-            fontSize: '0.80rem',
-            fontWeight: 700,
-            textDecoration: 'none',
-            marginBottom: '8px',
-          }}
-        >
-          <ArrowLeft size={14} />
-          <span>Back to Home</span>
-        </Link>
-
-        <h1 style={{ fontSize: '1.35rem', fontWeight: 800, color: '#0f172a', margin: '0 0 2px 0', letterSpacing: '-0.02em' }}>
-          Previous Year Question Papers
-        </h1>
-        <p style={{ fontSize: '0.82rem', color: '#64748b', margin: 0 }}>
-          Question papers taken from the official booklets
-        </p>
-      </div>
+    <div className="blog-page"><div className="blog-shell">
+      <ArticleHero
+        crumbs={[{ label: 'Home', href: '/nursing' }, { label: 'Learn' }, { label: 'Previous Year Papers' }]}
+        badge="Practice"
+        title="Previous year"
+        titleAccent="question papers"
+        subtitle="Papers taken from the official question booklets, with timed practice. We only list a paper once it comes from the official booklet."
+        showShare={false}
+        handwriting={['Practise', 'the real', 'paper']}
+      />
+      <AdSlot slot="article-top" />
 
       {/* ── SEARCH & FILTER CONTROLS ── */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '16px' }}>
@@ -152,6 +137,6 @@ export default function PreviousYearPapersPage() {
           onClose={() => setSelectedPaper(null)}
         />
       )}
-    </div>
+    </div></div>
   );
 }

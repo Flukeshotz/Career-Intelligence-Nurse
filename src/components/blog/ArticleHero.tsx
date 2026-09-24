@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import Link from 'next/link';
 import { Calendar, Clock } from 'lucide-react';
 import { ShareIcons } from './ShareIcons';
@@ -19,7 +20,10 @@ export function ArticleHero({
   titleTail,
   subtitle,
   updatedLabel,
-  readMinutes = 6,
+  readMinutes,
+  showShare = true,
+  children,
+  kicker,
   handwriting = ['Your', 'next step', 'in nursing'],
   shareTrackId,
 }: {
@@ -32,14 +36,22 @@ export function ArticleHero({
   /** Rest of the second line, navy. */
   titleTail?: string;
   subtitle: string;
-  updatedLabel: string;
+  /** Omit on non-article pages; the meta row then shows only what is given. */
+  updatedLabel?: string;
   readMinutes?: number;
+  /** Hide the share buttons (e.g. on app pages). */
+  showShare?: boolean;
+  /** Extra content under the subtitle, e.g. a search bar. */
+  children?: ReactNode;
+  /** Small line above the badge, e.g. a greeting. */
+  kicker?: string;
   handwriting?: [string, string, string] | string[];
   shareTrackId?: string;
 }) {
   const shareTitle = [title, titleAccent, titleTail].filter(Boolean).join(' ');
   return (
     <section className="blog-hero">
+      {crumbs.length > 0 && (
       <nav aria-label="Breadcrumb" className="blog-crumbs">
         {crumbs.map((c, i) => (
           <span key={c.label} style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
@@ -48,6 +60,7 @@ export function ArticleHero({
           </span>
         ))}
       </nav>
+      )}
 
       <div className="blog-hero-art" aria-hidden="true">
         <div className="sun" />
@@ -66,6 +79,7 @@ export function ArticleHero({
       </div>
 
       <div className="blog-hero-body">
+        {kicker && <div className="blog-kicker">{kicker}</div>}
         <span className="blog-badge">{badge}</span>
         <h1 className="blog-h1">
           {title}
@@ -74,16 +88,23 @@ export function ArticleHero({
           {titleTail && <> {titleTail}</>}
         </h1>
         <p className="blog-sub">{subtitle}</p>
-        <div className="blog-meta">
-          <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-            <Calendar size={17} /> Updated {updatedLabel}
-          </span>
-          <span className="sep" aria-hidden="true" />
-          <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-            <Clock size={17} /> {readMinutes} min read
-          </span>
-          <ShareIcons title={shareTitle} trackId={shareTrackId} />
-        </div>
+        {children}
+        {(updatedLabel || readMinutes || showShare) && (
+          <div className="blog-meta">
+            {updatedLabel && (
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                <Calendar size={17} /> Updated {updatedLabel}
+              </span>
+            )}
+            {updatedLabel && readMinutes && <span className="sep" aria-hidden="true" />}
+            {readMinutes && (
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                <Clock size={17} /> {readMinutes} min read
+              </span>
+            )}
+            {showShare && <ShareIcons title={shareTitle} trackId={shareTrackId} />}
+          </div>
+        )}
       </div>
     </section>
   );
