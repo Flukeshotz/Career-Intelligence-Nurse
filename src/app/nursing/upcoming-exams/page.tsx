@@ -107,7 +107,7 @@ export default function UpcomingNursingExamsPage() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
         <ArticleHero
-          crumbs={[{ label: 'Home', href: '/nursing' }, { label: 'Resources', href: '/nursing/upcoming-exams' }, { label: 'Blogs', href: '/nursing/upcoming-exams' }, { label: 'Upcoming Nursing Exams' }]}
+          crumbs={[{ label: 'Home', href: '/nursing' }, { label: 'Resources', href: '/nursing/upcoming-exams' }, { label: 'Upcoming Nursing Exams' }]}
           badge="Exam Guide"
           title="Upcoming Nursing Exams:"
           titleAccent="Vacancies, Dates"
@@ -211,7 +211,7 @@ export default function UpcomingNursingExamsPage() {
 
             <AdSlot slot="article-mid" />
 
-            <ArticleCTA title="Prepare for Success" body="Join SkillCase and get your Career Passport, eligibility checks and deadline alerts for every nursing recruitment in one place." buttonLabel="Explore Our Programs" href="/nursing" />
+            <ArticleCTA title="Prepare for Success" body="Fill your Career Passport once and every exam guide checks your eligibility for you — free, and saved only on your device." buttonLabel="Fill your Career Passport" href="/profile" />
 
             <RelatedGrid items={open.concat(examAhead, concluded).slice(0, 3).map(({ e }) => ({ title: short(e), href: `/nursing/exams/${e.slug}` }))} moreHref="/nursing/exams" moreLabel="View All Exams" />
           </div>

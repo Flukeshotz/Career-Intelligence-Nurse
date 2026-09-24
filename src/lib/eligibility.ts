@@ -24,6 +24,8 @@ export interface EvaluatedRequirement {
   detail: string;
   remedy?: string;
   rawText?: string;
+  /** The requirement's plain-English line, for display. */
+  simpleText?: string;
   missingFieldKey?: 'qualification' | 'experience' | 'age' | 'dob' | 'registration' | 'category' | 'domicile';
   pathwayId?: string | null;
 }
@@ -92,6 +94,7 @@ export function evaluateEligibility(
       detail: r.simpleText || r.rawText || `${r.kind} requirement`,
       remedy: r.remedyText,
       rawText: r.rawText,
+      simpleText: r.simpleText,
       missingFieldKey: getMissingFieldKeyForKind(r.kind),
       pathwayId: r.pathwayId || r.orGroup || null,
     }));
@@ -108,9 +111,10 @@ export function evaluateEligibility(
   }
 
   // 1. Evaluate every single atomic requirement individually
-  const individualEvaluations: EvaluatedRequirement[] = requirements.map((req) =>
-    evaluateSingleRequirement(req, profile)
-  );
+  const individualEvaluations: EvaluatedRequirement[] = requirements.map((req) => ({
+    ...evaluateSingleRequirement(req, profile),
+    simpleText: req.simpleText,
+  }));
 
   // 2. P0.1: Partition requirements into Standalone Requirements and Atomic Compound Pathways
   const standaloneEvals: EvaluatedRequirement[] = [];
@@ -127,10 +131,24 @@ export function evaluateEligibility(
   });
 
   // Evaluate each pathway: ALL requirements in a pathway must be met for the pathway to be met
+  // Several qualification rows inside one pathway are alternatives (B.Sc. OR Post Basic), so they
+  // collapse to one status first; every other row in the pathway is still required.
   const pathwayEvaluations: PathwayEvaluation[] = Object.entries(pathwayMap).map(([pathKey, reqs]) => {
-    const hasNotMet = reqs.some((r) => r.status === 'not_met');
-    const hasUnknown = reqs.some((r) => r.status === 'unknown');
-    const allMet = reqs.every((r) => r.status === 'met');
+    const quals = reqs.filter((r) => r.kind === 'qualification');
+    const qualStatus: RequirementEvaluationStatus | null = quals.length === 0
+      ? null
+      : quals.some((r) => r.status === 'met')
+      ? 'met'
+      : quals.every((r) => r.status === 'not_met')
+      ? 'not_met'
+      : 'unknown';
+    const statuses = [
+      ...(qualStatus ? [qualStatus] : []),
+      ...reqs.filter((r) => r.kind !== 'qualification').map((r) => r.status),
+    ];
+    const hasNotMet = statuses.some((s) => s === 'not_met');
+    const hasUnknown = statuses.some((s) => s === 'unknown');
+    const allMet = statuses.every((s) => s === 'met');
 
     let status: RequirementEvaluationStatus = 'unknown';
     if (allMet) {

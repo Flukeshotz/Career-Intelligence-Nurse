@@ -43,7 +43,7 @@ export default function AboutPage() {
             Start with the <Link href="/nursing/upcoming-exams">upcoming nursing exams</Link>, or <Link href="/profile">build your Career Passport</Link> to check your eligibility.
           </p>
         </section>
-        <ArticleCTA title="Prepare for Success" body="Join SkillCase and get your Career Passport, eligibility checks and deadline alerts for every nursing recruitment in one place." buttonLabel="Explore Our Programs" href="/profile" />
+        <ArticleCTA title="Prepare for Success" body="Fill your Career Passport once and every exam guide checks your eligibility for you — free, and saved only on your device." buttonLabel="Fill your Career Passport" href="/profile" />
       </main>
     </div>
   );

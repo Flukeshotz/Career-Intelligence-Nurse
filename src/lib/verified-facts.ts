@@ -67,7 +67,7 @@ export const VERIFIED_FACTS: Record<string, VerifiedFacts> = {
     pay: 'Pay Level 7 (starts at ₹44,900 basic)',
     payShort: 'Level 7 · from ₹44,900',
     eligibility: 'B.Sc. Nursing / Post Basic B.Sc. Nursing, or GNM with 2 years of experience',
-    selection: 'Stage I Preliminary CBT (qualifying), Stage II Mains CBT (decides merit), document verification, medical examination',
+    selection: 'Stage I is a Preliminary CBT, which is qualifying only. Stage II is the Mains CBT, which decides the merit list. Shortlisted candidates then go through document verification and a medical examination.',
     fee: ['General / OBC: ₹3,000', 'SC / ST / EWS: ₹2,400', 'Persons with benchmark disabilities: exempt'],
     pattern: [
       'Stage 1 (Prelims): 100 MCQs in 90 minutes — 80 on nursing and 20 on general knowledge and aptitude. It is a qualifying stage.',

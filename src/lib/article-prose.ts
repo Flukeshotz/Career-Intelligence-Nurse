@@ -86,7 +86,7 @@ export function vacancyProse(e: MockExam, f: VerifiedFacts): string[] {
 export function eligibilityProse(f: VerifiedFacts): string[] {
   const out: string[] = [];
   if (f.eligibility) out.push(`In short: ${f.eligibility.replace(/\.$/, '')}.${f.age ? ` The age limit is ${f.age.replace(/\.$/, '')}.` : ''}`);
-  out.push('The checker below compares your profile with these rules. Anything it cannot confirm from your details is shown as "check the notice" — it never marks you eligible on a guess.');
+  out.push('The checker below compares these rules with your Career Passport. Anything it cannot confirm is marked **Need details** — it never marks you eligible on a guess.');
   return out;
 }
 
@@ -99,7 +99,8 @@ export function feeProse(f: VerifiedFacts): string[] {
 export function patternProse(f: VerifiedFacts): string[] {
   const out: string[] = [];
   const s = f.scoring;
-  for (const t of s?.timing ?? []) {
+  // The pattern bullets already state questions and minutes; only repeat timing when they are absent.
+  for (const t of f.pattern ? [] : s?.timing ?? []) {
     out.push(`${t.label}: **${t.questions} questions in ${t.minutes} minutes**.`);
   }
   if (f.qualifyingTable && f.totalMarks) {

@@ -288,7 +288,7 @@ export function PassportWizard() {
             <h2>{readiness.isComplete ? 'Your Career Passport is ready' : 'Almost there'}</h2>
             <p className="pw-help">
               {readiness.isComplete
-                ? 'Every exam guide now checks its rules against these details. Anything a notice asks for that isn’t here is shown as “check the notice” — never as eligible.'
+                ? 'Every exam guide now checks its rules against these details. Anything a notice asks for that isn’t here is marked “Need details” — never as eligible.'
                 : `Still needed: ${readiness.missingForGovt.join(', ')}.`}
             </p>
             <dl className="pw-review">

@@ -69,7 +69,7 @@ export default async function ExamDetailPage({
   }
 
   const requirements = await getRequirementsForOpportunity({ examId: exam.id });
-  const papers = getPapersForExam(exam.id);
+  const papers = [...getPapersForExam(exam.id)].sort((a, b) => b.year - a.year);
 
   const examJsonLd = generateExamJsonLd(exam);
   const breadcrumbsJsonLd = generateBreadcrumbJsonLd([
@@ -100,15 +100,14 @@ export default async function ExamDetailPage({
         <ArticleHero
           crumbs={[
             { label: 'Home', href: '/nursing' },
-            { label: 'Resources', href: '/nursing/upcoming-exams' },
-            { label: 'Blogs', href: '/nursing/upcoming-exams' },
+            { label: 'Exams', href: '/nursing/exams' },
             { label: shortName },
           ]}
           badge="Exam Guide"
           title={`${shortName}:`}
           titleAccent="Vacancies, Dates"
           titleTail="& Eligibility"
-          subtitle={`Everything you need to know about the ${shortName} — important dates, eligibility, the exam paper, pay and how to apply.`}
+          subtitle={`Dates, eligibility, the exam paper, pay and how to apply for ${shortName} — in one guide.`}
           updatedLabel={formatDay(trust.checkedAt ?? exam.lastVerified)}
           readMinutes={6}
           handwriting={['Your', 'next step', 'in nursing']}
@@ -186,7 +185,7 @@ export default async function ExamDetailPage({
                 requirements: requirements,
                 descriptionSimple: exam.descriptionSimple,
               }}
-              suggestedPrompts={['📋 Check My Eligibility', '📅 Key dates', '💰 Pay & posts']}
+              suggestedPrompts={['Am I eligible?', 'Key dates', 'Pay and posts']}
             />
           }
         />

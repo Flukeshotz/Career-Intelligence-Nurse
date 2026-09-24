@@ -158,7 +158,7 @@ export function ExamArticle({
     ? `Applications are **open now** (${applyWindowText(exam)}) — **${life.label.toLowerCase()}**.`
     : upcoming
       ? `Applications open soon: ${applyWindowText(exam)}.`
-      : `Applications ran ${applyWindowText(exam)}${/not confirmed/i.test(exDate) ? '. We have not confirmed an exam date yet — check the official website for the latest notices.' : `. Exam: **${exDate}**.`} Current status: **${life.label}**.`;
+      : `Applications closed after running ${applyWindowText(exam)}.${/not confirmed/i.test(exDate) ? ' The exam date is not confirmed yet — check the official website for the latest notices.' : ` The exam is on **${exDate}**.`}`;
   const covers = toc.slice(1, -2).map((t) => t.label.toLowerCase());
 
   const events2 = events.length
@@ -176,11 +176,11 @@ export function ExamArticle({
           <h2>Introduction</h2>
           <Prose
             paras={[
-              `${exam.organisation} is recruiting **${posts}** through the ${shortName}.`,
+              `${exam.organisation} is recruiting **${posts}** through ${shortName}.`,
               statusLine,
               f.fromNotice
                 ? 'Everything below is taken from the official notice itself.'
-                : 'Every detail below has been checked against independent reports of the official notice, and this page is re-checked every day.',
+                : 'Every figure below matches at least two independent reports of the official notice, and the page is re-checked daily.',
             ]}
           />
           {f.notice && (
@@ -287,17 +287,16 @@ export function ExamArticle({
           <h4>Step by step</h4>
           <ol>
             <li>
-              Open the official website of the conducting body
               {exam.officialNotificationUrl ? (
                 <>
-                  {' '}(
+                  Open the{' '}
                   <a href={exam.officialNotificationUrl} target="_blank" rel="noopener noreferrer">
-                    official site <ExternalLink size={12} style={{ verticalAlign: '-1px' }} />
+                    official website of {exam.organisation}
                   </a>
-                  ).
+                  .
                 </>
               ) : (
-                '.'
+                <>Open the official website of {exam.organisation}.</>
               )}
             </li>
             <li>Read the official notification fully before you register.</li>
@@ -361,7 +360,7 @@ export function ExamArticle({
 
         {maya && <div style={{ marginTop: '18px' }}>{maya}</div>}
 
-        <ArticleCTA title="Prepare for Success" body="Join SkillCase and get your Career Passport, eligibility checks and deadline alerts for every nursing recruitment in one place." buttonLabel="Explore Our Programs" href="/nursing" />
+        <ArticleCTA title="Prepare for Success" body="Fill your Career Passport once and every exam guide checks your eligibility for you — free, and saved only on your device." buttonLabel="Fill your Career Passport" href="/profile" />
 
         <AdSlot slot="article-bottom" />
 

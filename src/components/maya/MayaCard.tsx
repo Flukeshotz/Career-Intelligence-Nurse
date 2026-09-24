@@ -27,7 +27,7 @@ const DEFAULT_PROMPTS = [
 ];
 
 export default function MayaCard({
-  title = 'Ask Maya Career Co-Pilot',
+  title = 'Ask Maya',
   suggestedPrompts = DEFAULT_PROMPTS,
   pageContext,
   opportunity,
@@ -96,10 +96,10 @@ export default function MayaCard({
           <div style={{ flex: 1, minWidth: 0 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
               <span style={{ fontSize: '0.66rem', fontWeight: 800, color: L ? 'var(--blog-blue)' : '#93c5fd', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
-                AI Career Co-Pilot
+                Maya · AI assistant
               </span>
               <span style={{ fontSize: '0.64rem', color: L ? 'var(--sc-green-600)' : '#4ade80', fontWeight: 700 }}>
-                ● Answers from this page only
+                · Answers from this page
               </span>
             </div>
             <h3 style={{ fontSize: '0.94rem', fontWeight: 800, color: L ? 'var(--blog-navy)' : '#ffffff', margin: '2px 0 0 0', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
