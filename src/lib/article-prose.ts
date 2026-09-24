@@ -85,7 +85,16 @@ export function vacancyProse(e: MockExam, f: VerifiedFacts): string[] {
 
 export function eligibilityProse(f: VerifiedFacts): string[] {
   const out: string[] = [];
-  if (f.eligibility) out.push(`In short: ${f.eligibility.replace(/\.$/, '')}.${f.age ? ` The age limit is ${f.age.replace(/\.$/, '')}.` : ''}`);
+  if (f.eligibility) {
+    // Notices with several post groups read "Post A: rules. Post B: rules." — one labelled line each.
+    // Split only before a "Label:" so abbreviations like "B.Sc. (Hons)" stay intact.
+    const parts = f.eligibility.replace(/\.$/, '').split(/\.\s+(?=[A-Z][^.:]{1,45}:\s)/);
+    for (const part of parts) {
+      const m = part.match(/^([A-Z][^.:]{1,45}):\s+(.*)$/);
+      out.push(m ? `**${m[1]}:** ${m[2]}.` : `**Who can apply:** ${part}.`);
+    }
+  }
+  if (f.age) out.push(`**Age:** ${f.age.replace(/\.$/, '')}.`);
   out.push('The checker below compares these rules with your Career Passport. Anything it cannot confirm is marked **Need details** — it never marks you eligible on a guess.');
   return out;
 }
