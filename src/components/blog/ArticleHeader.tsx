@@ -28,6 +28,8 @@ export function activeNavFor(pathname: string | null): string | undefined {
 
 export function ArticleHeader({ active }: { active?: string }) {
   const [searchOpen, setSearchOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   // Same ⌘K shortcut as the app header this replaces on article pages.
   useEffect(() => {
@@ -41,9 +43,26 @@ export function ArticleHeader({ active }: { active?: string }) {
     return () => window.removeEventListener('keydown', handler);
   }, []);
 
+  // Shadow once the page scrolls; reading progress on long articles.
+  useEffect(() => {
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 4);
+      const article = document.querySelector('.blog-grid');
+      if (article) {
+        const top = article.getBoundingClientRect().top + y;
+        const span = article.scrollHeight - window.innerHeight;
+        setProgress(span > 0 ? Math.min(1, Math.max(0, (y - top + 120) / span)) : 0);
+      }
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <>
-      <header className="blog-header">
+      <header className={scrolled ? 'blog-header is-scrolled' : 'blog-header'}>
         <div className="blog-header-inner">
           <Link href="/nursing" className="blog-logo" aria-label="SkillCase home">
             <b>
@@ -69,6 +88,7 @@ export function ArticleHeader({ active }: { active?: string }) {
             <User size={18} />
           </Link>
         </div>
+        {progress > 0 && <span className="blog-progress" style={{ transform: `scaleX(${progress})` }} aria-hidden="true" />}
       </header>
       <GlobalSearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
     </>

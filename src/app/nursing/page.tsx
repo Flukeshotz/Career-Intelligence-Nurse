@@ -1,12 +1,11 @@
 import Link from 'next/link';
-import { ArrowRight, CalendarDays, FileText, Landmark, Hospital, Globe2, UserCheck } from 'lucide-react';
-import { INITIAL_EXAMS, INITIAL_JOBS } from '@/lib/mock-data';
+import { ArrowRight, CalendarDays, FileText, Landmark, ListChecks, UserCheck } from 'lucide-react';
+import { INITIAL_EXAMS } from '@/lib/mock-data';
 import { deriveLifecycle } from '@/lib/lifecycle';
 import { getTrust } from '@/lib/verification';
 import { applyWindowText, examDateText, formatDay } from '@/lib/format-dates';
 import { EXAM_PAPERS } from '@/lib/pyq-mock-data';
 import { ArticleHero } from '@/components/blog/ArticleHero';
-import { ArticleCTA } from '@/components/blog/ArticleCTA';
 import { RelatedGrid } from '@/components/blog/RelatedGrid';
 import { AdSlot } from '@/components/blog/AdSlot';
 import { HomeSearch } from './HomeSearch';
@@ -36,10 +35,10 @@ export default function NursingHome() {
         <ArticleHero
           crumbs={[]}
           badge="Nursing careers · India"
-          title="Every nursing recruitment in India,"
+          title="Every nursing recruitment,"
           titleAccent="checked"
           titleTail="and in one place"
-          subtitle="Vacancies, application dates, eligibility and pay for government nursing exams — read from official notices or confirmed by independent sources, and re-checked every day."
+          subtitle="Vacancies, dates, eligibility and pay for government nursing exams in India — checked against official notices, every day."
           showShare={false}
           handwriting={['Your', 'next step', 'in nursing']}
         >
@@ -130,15 +129,10 @@ export default function NursingHome() {
               <b>Previous year papers</b>
               <span>{EXAM_PAPERS.length} papers taken from the official question booklets</span>
             </Link>
-            <Link href="/nursing/jobs" className="home-tile">
-              <span className="home-tile-ico"><Hospital size={24} /></span>
-              <b>Hospital jobs</b>
-              <span>{INITIAL_JOBS.length ? `${INITIAL_JOBS.length} checked openings` : 'Being verified — no listings yet'}</span>
-            </Link>
-            <Link href="/nursing/abroad" className="home-tile">
-              <span className="home-tile-ico"><Globe2 size={24} /></span>
-              <b>Working abroad</b>
-              <span>Being verified — no listings yet</span>
+            <Link href="/cycles" className="home-tile">
+              <span className="home-tile-ico"><ListChecks size={24} /></span>
+              <b>My exams</b>
+              <span>Track every exam you are following, stage by stage</span>
             </Link>
           </div>
         </section>
@@ -155,13 +149,6 @@ export default function NursingHome() {
           </div>
           <Link href="/profile">Build your Career Passport</Link>
         </section>
-
-        <ArticleCTA
-          title="Prepare for Success"
-          body="Join SkillCase and get your Career Passport, eligibility checks and deadline alerts for every nursing recruitment in one place."
-          buttonLabel="Explore Our Programs"
-          href="/profile"
-        />
 
         <RelatedGrid title="Latest exam guides" items={guides.map(({ e }) => ({ title: short(e.name), href: `/nursing/exams/${e.slug}` }))} moreHref="/nursing/exams" moreLabel="All exams" />
       </main>

@@ -6,8 +6,12 @@ export interface RelatedItem {
   href: string;
 }
 
-// Brand illustrations stand in for article photos until each guide has its own image.
-const THUMBS = ['/maya-thumbsup.webp', '/maya-looking.webp', '/maya-wave.webp'];
+/** A monogram tile from the guide's first word (NORCET, RRB, PGIMER…) — tidier than repeating one illustration. */
+function monogram(title: string): string {
+  const first = title.split(/\s+/)[0].replace(/[^A-Za-z]/g, '');
+  return first.length <= 6 ? first.toUpperCase() : first.slice(0, 2).toUpperCase();
+}
+const TONES = ['linear-gradient(145deg,#1557d6,#0b2a5b)', 'linear-gradient(145deg,#0b2a5b,#1f4f9e)', 'linear-gradient(145deg,#f7c948,#e3a008)'];
 
 /** "Related Articles": three cards with a thumbnail, title and round arrow. */
 export function RelatedGrid({ title = 'Related Articles', items, moreHref, moreLabel = 'View All Blogs' }: { title?: string; items: RelatedItem[]; moreHref: string; moreLabel?: string }) {
@@ -23,9 +27,8 @@ export function RelatedGrid({ title = 'Related Articles', items, moreHref, moreL
       <div className="blog-rel">
         {items.slice(0, 3).map((item, i) => (
           <Link key={item.href} href={item.href} className="blog-rel-card">
-            <span className="blog-rel-thumb">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={THUMBS[i % THUMBS.length]} alt="" loading="lazy" />
+            <span className="blog-rel-thumb blog-rel-mono" style={{ background: TONES[i % TONES.length], color: i % TONES.length === 2 ? '#0b2a5b' : '#fff' }} aria-hidden="true">
+              {monogram(item.title)}
             </span>
             <b>{item.title}</b>
             <span className="blog-rel-go" aria-hidden="true">

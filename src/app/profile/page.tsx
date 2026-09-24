@@ -145,44 +145,28 @@ export default function ProfilePage() {
         </div>
       </div>
 
-      {/* ── 2. Prominent Readiness Indicator ── */}
-      <div
-        className="sc-card"
-        style={{
-          padding: '16px 20px',
-          marginBottom: '20px',
-          background: readiness.score >= 80 ? 'var(--sc-green-50)' : 'var(--sc-surface-card)',
-          border: readiness.score >= 80 ? '1px solid #bbf7d0' : '1px solid var(--sc-line-200)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          flexWrap: 'wrap',
-          gap: '10px',
-        }}
-      >
-        <div>
-          <div style={{ fontSize: '0.96rem', fontWeight: 800, color: 'var(--sc-navy-900)' }}>
-            🎯 {readiness.readyOpportunitiesCount} Opportunities Ready to Evaluate
+      {/* ── 2. Readiness ── */}
+      <div className="passport-progress">
+        <div className="passport-progress-top">
+          <div>
+            <b>
+              {readiness.score === 0
+                ? 'Start your Career Passport'
+                : readiness.readyOpportunitiesCount > 0
+                  ? `${readiness.readyOpportunitiesCount} exams can now check your eligibility`
+                  : 'Your Career Passport'}
+            </b>
+            <p>
+              {readiness.missingForGovt.length === 0
+                ? 'Your profile has everything the eligibility checks need.'
+                : `Still needed: ${readiness.missingForGovt.join(', ')}.`}
+            </p>
           </div>
-          <div style={{ fontSize: '0.80rem', color: 'var(--sc-ink-600)', marginTop: '1px' }}>
-            {readiness.missingForGovt.length === 0
-              ? '✓ Profile complete for all central & hospital eligibility checks.'
-              : `Add ${readiness.missingForGovt.join(', ')} below to unlock exact age & state quota checks.`}
-          </div>
+          <span className="passport-score">{readiness.score}%</span>
         </div>
-
-        <span
-          style={{
-            fontSize: '0.78rem',
-            fontWeight: 800,
-            padding: '4px 10px',
-            borderRadius: 'var(--radius-pill)',
-            background: readiness.score >= 80 ? 'var(--sc-green-600)' : 'var(--sc-navy-700)',
-            color: 'var(--sc-white)',
-          }}
-        >
-          {readiness.score}% Complete
-        </span>
+        <div className="passport-bar" role="progressbar" aria-valuenow={readiness.score} aria-valuemin={0} aria-valuemax={100} aria-label="Profile complete">
+          <span style={{ width: `${readiness.score}%` }} />
+        </div>
       </div>
 
       {savedSuccess && (
@@ -405,7 +389,7 @@ export default function ProfilePage() {
           }}
         >
           <div style={{ fontSize: '0.78rem', color: 'var(--sc-ink-600)' }}>
-            🔒 Profile stored on your device only for instant eligibility checks.
+            Profile stored on your device only for instant eligibility checks.
           </div>
 
           <button

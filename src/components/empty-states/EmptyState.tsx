@@ -66,7 +66,7 @@ export function NoTrackedCyclesEmptyState() {
         Track your live recruitment cycles
       </h3>
       <p style={{ fontSize: '0.88rem', color: 'var(--sc-ink-600)', maxWidth: '440px', margin: '0 auto 18px', lineHeight: 1.5 }}>
-        When you apply for a job or exam, tap <strong>&quot;Track Opportunity&quot;</strong>. SkillCase will monitor every stage for you: admit card releases, exam dates, answer keys, and results.
+        Open any exam guide and tap <strong>&quot;Track Exam&quot;</strong> to keep it here. Update its stage as you go — applied, admit card, exam, result — so every exam you are following is in one place.
       </p>
       <Link href="/nursing/jobs" className="btn-navy" style={{ fontSize: '0.88rem', display: 'inline-flex' }}>
         <Compass size={16} />

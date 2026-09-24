@@ -55,14 +55,25 @@ export function ArticleHero({
   return (
     <section className={compact ? 'blog-hero blog-hero--compact' : 'blog-hero'}>
       {crumbs.length > 0 && (
-      <nav aria-label="Breadcrumb" className="blog-crumbs">
-        {crumbs.map((c, i) => (
-          <span key={c.label} style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-            {i > 0 && <span aria-hidden="true">›</span>}
-            {c.href ? <Link href={c.href}>{c.label}</Link> : <span className="here">{c.label}</span>}
-          </span>
-        ))}
-      </nav>
+        <>
+          <nav aria-label="Breadcrumb" className="blog-crumbs">
+            {crumbs.map((c, i) => (
+              <span key={c.label} style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                {i > 0 && <span aria-hidden="true">›</span>}
+                {c.href ? <Link href={c.href}>{c.label}</Link> : <span className="here">{c.label}</span>}
+              </span>
+            ))}
+          </nav>
+          {/* Phones: one back link to the parent instead of a wrapping trail. */}
+          {(() => {
+            const parent = [...crumbs].reverse().find((c) => c.href);
+            return parent ? (
+              <Link href={parent.href!} className="blog-back">
+                ‹ {parent.label}
+              </Link>
+            ) : null;
+          })()}
+        </>
       )}
 
       <div className="blog-hero-art" aria-hidden="true">

@@ -1242,3 +1242,71 @@ select:focus-visible {
   .list-tabs .sc-hide-mobile { display: none; }
   .list-tabs .sc-hide-desktop { display: inline; }
 }
+
+/* ══ Premium mobile pass ═══════════════════════════════════════════════════ */
+/* Tab bar: glass, safe-area aware, pill behind the active icon. */
+.sc-tabbar { height: calc(64px + env(safe-area-inset-bottom, 0px)); padding: 6px 8px env(safe-area-inset-bottom, 0px); background: rgba(255, 255, 255, 0.9); backdrop-filter: saturate(180%) blur(18px); -webkit-backdrop-filter: saturate(180%) blur(18px); border-top: 1px solid rgba(11, 42, 91, 0.08); box-shadow: 0 -6px 24px rgba(11, 42, 91, 0.06); }
+@media (min-width: 900px) { .sc-tabbar { display: none; } }
+.sc-tab-item { font-family: var(--font-ui); font-size: 0.7rem; font-weight: 500; color: #5b6475; gap: 2px; flex: 1; -webkit-tap-highlight-color: transparent; }
+.sc-tab-ico { width: 48px; height: 28px; border-radius: 999px; display: flex; align-items: center; justify-content: center; transition: background 0.2s ease; }
+.sc-tab-item.active { color: var(--blog-navy); font-weight: 700; }
+.sc-tab-item.active .sc-tab-ico { background: var(--blog-blue-100); color: var(--blog-blue); }
+.sc-tab-search { background: none; border: 0; cursor: pointer; }
+.sc-tab-search-btn { width: 46px; height: 46px; margin-top: -18px; border-radius: 16px; background: linear-gradient(145deg, #1557d6, #0b2a5b); color: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(21, 87, 214, 0.35); }
+.sc-tab-search span:last-child { color: var(--blog-navy); font-weight: 600; }
+.blog-header { transition: box-shadow 0.2s ease; }
+.blog-header.is-scrolled { box-shadow: 0 6px 20px rgba(11, 42, 91, 0.07); border-bottom-color: transparent; }
+.blog-progress { position: absolute; left: 0; bottom: -1px; height: 3px; width: 100%; background: linear-gradient(90deg, #1557d6, #f7c948); transform-origin: left center; transition: transform 0.08s linear; }
+@media (max-width: 640px) {
+  .blog-header-inner { padding: 8px 16px; gap: 12px; }
+  .blog-logo b { font-size: 1.25rem; }
+  .blog-logo small { display: none; }
+  .blog-search, .blog-avatar { width: 40px; height: 40px; padding: 0; justify-content: center; }
+}
+.blog-back { display: none; }
+.blog-h1, .blog-card-title, .home-card b, .blog-sec-title { text-wrap: balance; }
+.blog-sub { text-wrap: pretty; }
+@media (max-width: 640px) {
+  .blog-crumbs { display: none; }
+  .blog-back { display: inline-flex; align-items: center; gap: 4px; font-family: var(--font-ui); font-size: 0.86rem; font-weight: 600; color: var(--blog-blue); text-decoration: none; margin-bottom: 12px; min-height: 32px; }
+  .blog-hero { padding-top: 12px; }
+  .blog-h1 { font-size: 1.62rem; line-height: 1.2; }
+  .blog-sub { font-size: 0.97rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .blog-meta { gap: 10px 14px; font-size: 0.82rem; }
+  .blog-meta .sep { display: none; }
+  .blog-share { margin-left: auto; gap: 8px; }
+  .blog-share > span { display: none; }
+  .blog-share-btn { width: 36px; height: 36px; }
+  .blog-chips { top: 56px; }
+}
+.blog-rel-mono { align-items: center !important; font-family: var(--font-display); font-weight: 800; font-size: 0.95rem; letter-spacing: 0.02em; }
+.home-card-org { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@media (max-width: 640px) {
+  .home-explore { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .home-tile { padding: 14px; }
+  .home-tile-ico { width: 40px; height: 40px; border-radius: 10px; }
+  .home-tile b { font-size: 0.95rem; }
+  .home-tile span:last-child { font-size: 0.8rem; }
+  .home-card { padding: 16px; }
+  .home-section { margin-bottom: 22px; }
+  .blog-rel-head h2 { font-size: 1.1rem; }
+  /* Ads: quieter on phones — same message, less screen. */
+  .blog-ad:not(.blog-ad--empty) { padding: 10px 14px 14px; }
+  .blog-ad-img { width: 56px; height: 56px; }
+  .blog-ad-copy { font-size: 0.86rem; }
+  .blog-ad-copy b { font-size: 0.96rem; }
+  .blog-ad-cta { width: 100%; justify-content: center; padding: 10px 14px; }
+}
+/* Tactile feedback on tap for every card-like link. */
+.home-card:active, .home-tile:active, .blog-rel-card:active, .blog-links a:active, .list-callout:active { transform: scale(0.99); }
+.passport-progress { background: #fff; border: 1px solid #e3e9f5; border-radius: 16px; padding: 16px 18px; margin-bottom: 18px; }
+.passport-progress-top { display: flex; justify-content: space-between; gap: 14px; align-items: flex-start; }
+.passport-progress b { font-size: 1.02rem; color: var(--blog-navy); display: block; }
+.passport-progress p { margin: 4px 0 0; font-family: var(--font-ui); font-size: 0.9rem; color: #4a5468; line-height: 1.5; }
+.passport-score { font-family: var(--font-display); font-weight: 800; font-size: 1.3rem; color: var(--blog-blue); }
+.passport-bar { margin-top: 12px; height: 8px; border-radius: 999px; background: #e8eefa; overflow: hidden; }
+.passport-bar span { display: block; height: 100%; border-radius: 999px; background: linear-gradient(90deg, #1557d6, #3f86f5); transition: width 0.4s ease; }
+@media (max-width: 560px) { .blog-kv td a { display: flex !important; width: fit-content; margin-top: 6px; } }
+.blog-prose table, .home-card-facts, .home-stats, .passport-score { font-variant-numeric: tabular-nums; }
+.home-cards > *, .home-explore > *, .blog-rel > * { min-width: 0; }
+.home-card, .home-card-org { max-width: 100%; }
