@@ -1,9 +1,9 @@
 {
-  "ranAt": "2026-09-23T23:04:39.706Z",
+  "ranAt": "2026-09-24T23:19:45.525Z",
   "records": {
     "exam-norcet-2026": {
       "status": "consensus",
-      "checkedAt": "2026-09-23",
+      "checkedAt": "2026-09-24",
       "fields": {
         "vacancies": {
           "value": 2218,
@@ -39,7 +39,7 @@
     },
     "exam-rrb-nurse-2026": {
       "status": "consensus",
-      "checkedAt": "2026-09-23",
+      "checkedAt": "2026-09-24",
       "fields": {
         "vacancies": {
           "value": 365,
@@ -111,7 +111,7 @@
     },
     "exam-pgimer-no-2026": {
       "status": "consensus",
-      "checkedAt": "2026-09-23",
+      "checkedAt": "2026-09-24",
       "fields": {
         "vacancies": {
           "value": 243,
@@ -135,7 +135,7 @@
     },
     "exam-osssc-nurse-2026": {
       "status": "consensus",
-      "checkedAt": "2026-09-23",
+      "checkedAt": "2026-09-24",
       "fields": {
         "vacancies": {
           "value": 5989,
@@ -168,19 +168,19 @@
       "sourcesTried": 3,
       "official": {
         "status": "partial",
-        "checkedAt": "2026-09-23",
+        "checkedAt": "2026-09-24",
         "url": "https://www.osssc.gov.in/",
         "fields": {},
         "rejected": [
           "vacancies"
         ],
-        "contentHash": "0427f8db3348a7e418e31992fcdefdc8072389a0cbabc392ccdb4ef32b94c6b9",
+        "contentHash": "dddb8773eabf2a2b4e8a5c48021f4ee707b181ac5440e4be0d7109ea6a48e714",
         "factChecks": []
       }
     },
     "exam-mp-esb-nurse-2026": {
       "status": "consensus",
-      "checkedAt": "2026-09-23",
+      "checkedAt": "2026-09-24",
       "fields": {
         "vacancies": {
           "value": 2099,
@@ -209,7 +209,7 @@
     },
     "exam-ukmssb-nurse-2026": {
       "status": "consensus",
-      "checkedAt": "2026-09-23",
+      "checkedAt": "2026-09-24",
       "fields": {
         "vacancies": {
           "value": 196,
@@ -250,30 +250,30 @@
     },
     "exam-hssc-har-nurse-2026": {
       "status": "consensus",
-      "checkedAt": "2026-09-23",
+      "checkedAt": "2026-09-24",
       "fields": {
         "vacancies": {
           "value": 1803,
-          "agreeing": 3,
-          "of": 3
+          "agreeing": 2,
+          "of": 2
         },
         "applicationStart": {
           "value": "2026-02-09",
-          "agreeing": 3,
-          "of": 3
+          "agreeing": 2,
+          "of": 2
         },
         "applicationDeadline": {
           "value": "2026-02-23",
-          "agreeing": 3,
-          "of": 3
+          "agreeing": 2,
+          "of": 2
         }
       },
       "disagreements": [],
-      "sourcesRead": 3,
+      "sourcesRead": 2,
       "sourcesTried": 3,
       "official": {
         "status": "partial",
-        "checkedAt": "2026-09-23",
+        "checkedAt": "2026-09-24",
         "url": "https://hssc.gov.in/file/ac1f23cd-99c4-13a6-819c-32aaa1600063/advertisements",
         "fields": {
           "applicationStart": {
@@ -318,7 +318,7 @@
     },
     "exam-ap-mhsrb-nurse-2026": {
       "status": "consensus",
-      "checkedAt": "2026-09-23",
+      "checkedAt": "2026-09-24",
       "fields": {
         "vacancies": {
           "value": 419,
