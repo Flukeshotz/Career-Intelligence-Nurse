@@ -1310,3 +1310,71 @@ select:focus-visible {
 .blog-prose table, .home-card-facts, .home-stats, .passport-score { font-variant-numeric: tabular-nums; }
 .home-cards > *, .home-explore > *, .blog-rel > * { min-width: 0; }
 .home-card, .home-card-org { max-width: 100%; }
+
+/* ══ Career Passport — step-by-step form ═══════════════════════════════════ */
+.pw-shell { max-width: 720px; margin: 0 auto 8px; scroll-margin-top: 80px; }
+.pw-loading { min-height: 420px; border-radius: 18px; background: linear-gradient(90deg, #eef3fc 25%, #f6f9ff 50%, #eef3fc 75%); background-size: 200% 100%; animation: pw-shimmer 1.4s infinite; }
+@keyframes pw-shimmer { to { background-position: -200% 0; } }
+.pw-progress { margin-bottom: 14px; }
+.pw-progress-head { display: flex; justify-content: space-between; align-items: center; font-family: var(--font-ui); font-size: 0.86rem; color: #4a5468; margin-bottom: 10px; }
+.pw-progress-head b { color: var(--blog-blue); font-family: var(--font-display); }
+.pw-saved { display: inline-flex; align-items: center; gap: 3px; margin-left: 10px; font-style: normal; font-weight: 600; color: #0f6b35; animation: pw-fade 1.2s ease; }
+@keyframes pw-fade { 0% { opacity: 0; } 15%, 80% { opacity: 1; } 100% { opacity: 0; } }
+.pw-steps { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
+.pw-step { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 0; background: none; border: 0; cursor: pointer; font-family: var(--font-ui); -webkit-tap-highlight-color: transparent; }
+.pw-step-dot { width: 100%; height: 6px; border-radius: 999px; background: #dfe7f5; display: flex; align-items: center; justify-content: center; color: transparent; transition: background 0.25s ease; }
+.pw-step-dot svg { display: none; }
+.pw-step.is-done .pw-step-dot { background: #7fa6ec; }
+.pw-step.is-current .pw-step-dot { background: var(--blog-blue); }
+.pw-step-label { font-size: 0.72rem; color: #5b6475; font-weight: 500; text-align: center; line-height: 1.2; }
+.pw-step.is-current .pw-step-label { color: var(--blog-navy); font-weight: 700; }
+@media (max-width: 640px) { .pw-step-label { display: none; } .pw-step.is-current .pw-step-label { display: block; position: absolute; opacity: 0; } }
+.pw-card { background: #fff; border: 1px solid #e3e9f5; border-radius: 20px; padding: 26px 24px; box-shadow: 0 10px 30px rgba(11, 42, 91, 0.06); animation: pw-in 0.28s ease; }
+@keyframes pw-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.pw-card h2 { font-size: 1.35rem; font-weight: 800; line-height: 1.25; color: var(--blog-navy); margin: 0 0 8px; text-wrap: balance; }
+.pw-help { font-family: var(--font-ui); font-size: 0.95rem; color: #4a5468; line-height: 1.6; margin: 0 0 20px; }
+.pw-options { display: grid; gap: 10px; }
+@media (min-width: 640px) { .pw-options { grid-template-columns: 1fr 1fr; } }
+.pw-options--two { grid-template-columns: 1fr 1fr; }
+.pw-option { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 64px; padding: 14px 16px; text-align: left; background: #fff; border: 1.5px solid #dfe7f5; border-radius: 14px; cursor: pointer; transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease; -webkit-tap-highlight-color: transparent; }
+.pw-option:hover { border-color: #b9ccf1; }
+.pw-option:active { transform: scale(0.99); }
+.pw-option b { display: block; font-size: 1rem; color: var(--blog-navy); }
+.pw-option small { display: block; margin-top: 2px; font-family: var(--font-ui); font-size: 0.84rem; color: #5b6475; }
+.pw-radio { width: 22px; height: 22px; border-radius: 50%; border: 2px solid #c6d3ea; flex-shrink: 0; position: relative; transition: border-color 0.15s ease; }
+.pw-option.is-selected { border-color: var(--blog-blue); background: #f3f7ff; box-shadow: 0 0 0 3px rgba(21, 87, 214, 0.1); }
+.pw-option.is-selected .pw-radio { border-color: var(--blog-blue); }
+.pw-option.is-selected .pw-radio::after { content: ''; position: absolute; inset: 3px; border-radius: 50%; background: var(--blog-blue); }
+.pw-resume { margin-top: 18px; display: inline-flex; align-items: center; gap: 8px; background: none; border: 0; padding: 8px 0; color: var(--blog-blue); font-family: var(--font-ui); font-size: 0.92rem; font-weight: 600; cursor: pointer; }
+.pw-field { display: block; margin-top: 18px; }
+.pw-field > span { display: block; font-family: var(--font-ui); font-size: 0.86rem; font-weight: 600; color: var(--blog-navy); margin-bottom: 8px; }
+.pw-field select, .pw-field input { width: 100%; min-height: 52px; padding: 0 14px; border: 1.5px solid #dfe7f5; border-radius: 12px; background: #fff; font-family: var(--font-ui); font-size: 1rem; color: #2a3345; outline: none; appearance: none; }
+.pw-field select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%231557d6' stroke-width='2'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 40px; }
+.pw-field select:focus, .pw-field input:focus { border-color: var(--blog-blue); box-shadow: 0 0 0 3px rgba(21, 87, 214, 0.12); }
+.pw-age { display: block; margin-top: 8px; font-family: var(--font-ui); font-style: normal; font-size: 0.88rem; color: var(--blog-blue); font-weight: 600; }
+.pw-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.pw-chips button { min-height: 42px; padding: 0 16px; border-radius: 999px; background: #fff; border: 1.5px solid #dfe7f5; font-family: var(--font-ui); font-size: 0.92rem; font-weight: 500; color: var(--blog-navy); cursor: pointer; }
+.pw-chips button.is-selected { background: var(--blog-blue); border-color: var(--blog-blue); color: #fff; }
+.pw-nav { display: flex; gap: 10px; margin-top: 14px; }
+.pw-back, .pw-next { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; border-radius: 14px; font-weight: 700; font-size: 0.98rem; cursor: pointer; }
+.pw-back { padding: 0 18px; background: #fff; border: 1.5px solid #dfe7f5; color: var(--blog-navy); }
+.pw-back:disabled { opacity: 0.4; cursor: default; }
+.pw-next { flex: 1; background: #0e2d6b; color: #fff; border: 0; box-shadow: 0 8px 20px rgba(14, 45, 107, 0.22); }
+@media (max-width: 640px) {
+  .pw-card { padding: 22px 18px; border-radius: 18px; }
+  .pw-card h2 { font-size: 1.25rem; }
+  /* Thumb-reach navigation, just above the tab bar. */
+  .pw-nav { position: sticky; bottom: calc(76px + env(safe-area-inset-bottom, 0px)); z-index: 20; padding: 10px; margin: 14px -6px 0; background: rgba(244, 247, 253, 0.94); backdrop-filter: blur(10px); border-radius: 18px; }
+}
+.pw-review { margin: 0 0 20px; border: 1px solid #e3e9f5; border-radius: 14px; overflow: hidden; }
+.pw-review-row { display: grid; grid-template-columns: 1fr auto; grid-template-rows: auto auto; column-gap: 12px; padding: 12px 14px; border-bottom: 1px solid #eef2f9; }
+.pw-review-row:last-child { border-bottom: 0; }
+.pw-review-row dt { font-family: var(--font-ui); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.03em; color: #5b6475; }
+.pw-review-row dd { margin: 2px 0 0; font-size: 0.98rem; font-weight: 600; color: var(--blog-navy); grid-column: 1; }
+.pw-review-row dd.is-missing { color: #b45309; font-weight: 500; }
+.pw-review-row button { grid-row: 1 / 3; grid-column: 2; align-self: center; width: 40px; height: 40px; border-radius: 10px; background: var(--blog-blue-50); color: var(--blog-blue); border: 0; display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.pw-review-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.pw-primary { flex: 1 1 240px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; border-radius: 14px; background: #0e2d6b; color: #fff; font-weight: 700; text-decoration: none; }
+.pw-secondary { flex: 0 1 auto; display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 18px; border-radius: 14px; background: #fff; border: 1.5px solid #dfe7f5; color: var(--blog-navy); font-weight: 700; text-decoration: none; }
+.pw-privacy { margin-top: 18px; display: flex; align-items: center; justify-content: space-between; gap: 10px; font-family: var(--font-ui); font-size: 0.84rem; color: #5b6475; }
+.pw-privacy button { display: inline-flex; align-items: center; gap: 5px; background: none; border: 0; color: #c2410c; font-weight: 600; cursor: pointer; font-size: 0.84rem; padding: 6px; }
