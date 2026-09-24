@@ -1,9 +1,9 @@
 import { SITE_URL } from '@/lib/site';
 import type { Metadata, Viewport } from 'next';
-import { Suspense } from 'react';
 import Script from 'next/script';
 import './globals.css';
 import { TopHeader } from '@/components/layout/TopHeader';
+import { SiteFooter } from '@/components/layout/SiteFooter';
 import { BottomNav } from '@/components/layout/BottomNav';
 import { PostHogProvider } from '@/components/layout/PostHogProvider';
 
@@ -145,7 +145,6 @@ export default function RootLayout({
           Skip to main content
         </a>
 
-        <Suspense fallback={null}>
           <PostHogProvider>
             {/* Landmark: header */}
             <header role="banner">
@@ -157,6 +156,8 @@ export default function RootLayout({
               {children}
             </main>
 
+            <SiteFooter />
+
             {/* Maya AI Guide Floating Action Button (bottom-right) */}
             <MayaFloatingButton />
 
@@ -165,7 +166,6 @@ export default function RootLayout({
               <BottomNav />
             </nav>
           </PostHogProvider>
-        </Suspense>
       </body>
     </html>
   );

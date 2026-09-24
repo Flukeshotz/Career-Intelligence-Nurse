@@ -48,6 +48,7 @@ export default function MyCyclesPage() {
         titleAccent="cycles"
         subtitle="The exams you are following. Update each one's stage — applied, admit card, exam, result — as you go."
         showShare={false}
+          compact
         handwriting={['One place', 'for every', 'exam']}
       />
       <AdSlot slot="article-top" />

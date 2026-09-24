@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-label="SkillCase Germany programme — placeholder image">
+  <rect width="320" height="320" rx="28" fill="#0b2a5b"/>
+  <circle cx="262" cy="58" r="70" fill="#f7c948" opacity="0.9"/>
+  <rect x="44" y="92" width="150" height="30" rx="4" fill="#111"/>
+  <rect x="44" y="122" width="150" height="30" fill="#dd0000"/>
+  <rect x="44" y="152" width="150" height="30" rx="4" fill="#ffce00"/>
+  <text x="44" y="226" font-family="Poppins, Arial, sans-serif" font-size="30" font-weight="800" fill="#ffffff">Day 1 → Germany</text>
+  <text x="44" y="258" font-family="Poppins, Arial, sans-serif" font-size="17" fill="#cfe0ff">German for nurses · SkillCase</text>
+  <text x="44" y="292" font-family="Arial, sans-serif" font-size="11" fill="#7f95bd">PLACEHOLDER IMAGE</text>
+</svg>

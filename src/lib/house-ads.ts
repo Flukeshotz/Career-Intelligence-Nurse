@@ -20,19 +20,21 @@ export interface HouseAd {
   image?: string;
 }
 
+/** The Germany programme — wording taken from its own page (learner.skillcase.in), no added claims. */
+const GERMANY: HouseAd = {
+  eyebrow: 'SkillCase Germany',
+  title: 'From Day 1 to Germany',
+  body: 'From your first German class to your first job in Germany — one platform for the whole journey.',
+  cta: 'Start Your Journey',
+  href: 'https://learner.skillcase.in/start-now',
+  image: '/ads/germany-placeholder.svg', // placeholder — replace with real artwork
+};
+
 export const HOUSE_ADS: Record<AdSlotId, HouseAd | null> = {
-  'article-top': null,
-  'article-mid': null,
-  'article-bottom': null,
-  sidebar: null,
-  // Example:
-  // 'article-mid': {
-  //   eyebrow: 'SkillCase German',
-  //   title: 'Planning to work as a nurse in Germany?',
-  //   body: 'Learn German for nursing with guided daily lessons.',
-  //   cta: 'Start learning',
-  //   href: 'https://…',
-  // },
+  'article-top': GERMANY,
+  'article-mid': GERMANY,
+  'article-bottom': GERMANY,
+  sidebar: GERMANY,
 };
 
 /** Recommended artwork size per slot, shown in the empty placeholder. */

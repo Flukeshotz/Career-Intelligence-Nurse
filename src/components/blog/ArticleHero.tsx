@@ -24,6 +24,7 @@ export function ArticleHero({
   showShare = true,
   children,
   kicker,
+  compact = false,
   handwriting = ['Your', 'next step', 'in nursing'],
   shareTrackId,
 }: {
@@ -45,12 +46,14 @@ export function ArticleHero({
   children?: ReactNode;
   /** Small line above the badge, e.g. a greeting. */
   kicker?: string;
+  /** Shorter hero on phones — for list and app pages where content should start sooner. */
+  compact?: boolean;
   handwriting?: [string, string, string] | string[];
   shareTrackId?: string;
 }) {
   const shareTitle = [title, titleAccent, titleTail].filter(Boolean).join(' ');
   return (
-    <section className="blog-hero">
+    <section className={compact ? 'blog-hero blog-hero--compact' : 'blog-hero'}>
       {crumbs.length > 0 && (
       <nav aria-label="Breadcrumb" className="blog-crumbs">
         {crumbs.map((c, i) => (

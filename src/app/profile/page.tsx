@@ -70,21 +70,30 @@ export default function ProfilePage() {
 
   useEffect(() => {
     const loaded = getUserProfile();
-    setProfile(
-      loaded || {
-        qualificationCode: 'bsc_nursing',
-        experienceBucket: '0-2',
-        hasRegistration: true,
-        preference: 'both',
-        citizenship: 'India',
-        qualificationsList: [{ code: 'bsc_nursing', name: 'B.Sc. Nursing', isPrimary: true }],
-      }
-    );
+    // A new visitor starts with an empty profile: nothing is pre-selected on their behalf, so the
+    // completeness score and eligibility checks only ever reflect what they actually entered.
+    setProfile(loaded || { citizenship: 'India', qualificationsList: [] });
     const tracked = getTrackedOpportunities();
     setTrackedCount(tracked.length);
   }, []);
 
-  if (!profile) return null;
+  if (!profile) {
+    return (
+      <div className="blog-page"><div className="blog-shell">
+      <ArticleHero
+        crumbs={[{ label: 'Home', href: '/nursing' }, { label: 'Career Passport' }]}
+        badge="Career Passport"
+        title="Your career"
+        titleAccent="profile"
+        subtitle={`Add your qualification, council registration and date of birth once. Every exam guide then checks its rules against your details — across all ${INITIAL_EXAMS.length} recruitments we track.`}
+        showShare={false}
+          compact
+        handwriting={['Fill it', 'once, use', 'everywhere']}
+      />
+      <AdSlot slot="article-top" />
+      </div></div>
+    );
+  }
 
   const readiness = calculateProfileReadiness(profile);
   const age = calculateAge(profile.dob);
@@ -113,6 +122,7 @@ export default function ProfilePage() {
         titleAccent="profile"
         subtitle={`Add your qualification, council registration and date of birth once. Every exam guide then checks its rules against your details — across all ${INITIAL_EXAMS.length} recruitments we track.`}
         showShare={false}
+          compact
         handwriting={['Fill it', 'once, use', 'everywhere']}
       />
       <AdSlot slot="article-top" />

@@ -21,6 +21,8 @@ export function AdSlot({ slot }: { slot: AdSlotId }) {
   }
 
   const external = /^https?:/.test(ad.href);
+  // Tag the link with the slot so sign-ups can be traced to the placement that drove them.
+  const href = external ? `${ad.href}${ad.href.includes('?') ? '&' : '?'}utm_source=skillcase_nursing&utm_medium=house_ad&utm_campaign=germany&utm_content=${slot}` : ad.href;
   const inner = (
     <>
       <span className="blog-ad-label">Advertisement</span>
@@ -41,7 +43,7 @@ export function AdSlot({ slot }: { slot: AdSlotId }) {
     </>
   );
   return external ? (
-    <a href={ad.href} className={cls} target="_blank" rel="noopener sponsored">
+    <a href={href} className={cls} target="_blank" rel="noopener">
       {inner}
     </a>
   ) : (

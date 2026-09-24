@@ -14,6 +14,7 @@ export default function AbroadNursingPage() {
           titleAccent="abroad"
           subtitle="We are verifying overseas nursing opportunities against the employers' and regulators' own notices. We only list what we can source, so nothing is shown here yet."
           showShare={false}
+          compact
           handwriting={['Your', 'next step', 'abroad']}
         />
         <AdSlot slot="article-top" />

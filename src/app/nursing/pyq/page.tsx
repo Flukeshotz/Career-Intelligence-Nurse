@@ -54,6 +54,7 @@ export default function PreviousYearPapersPage() {
         titleAccent="question papers"
         subtitle="Papers taken from the official question booklets, with timed practice. We only list a paper once it comes from the official booklet."
         showShare={false}
+          compact
         handwriting={['Practise', 'the real', 'paper']}
       />
       <AdSlot slot="article-top" />
