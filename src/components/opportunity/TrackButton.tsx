@@ -32,7 +32,8 @@ export function TrackButton({
     }
   }, [opportunityId]);
 
-  const handleInitialTrack = (stage: TrackedItem['stage'] = 'applied') => {
+  // Tracking means following the exam; only the nurse can say she has applied (via the stage menu).
+  const handleInitialTrack = (stage: TrackedItem['stage'] = 'interested') => {
     const res = trackOpportunityItem({
       opportunityId,
       opportunityType,
@@ -76,7 +77,7 @@ export function TrackButton({
           onClick={() => setShowStageSelector(!showStageSelector)}
           style={{
             width: '100%',
-            height: '44px',
+            minHeight: '44px',
             display: 'inline-flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -162,10 +163,12 @@ export function TrackButton({
   return (
     <button
       type="button"
-      onClick={() => handleInitialTrack('applied')}
+      onClick={() => handleInitialTrack('interested')}
       style={{
         flex: 1,
-        height: '44px',
+        width: '100%',
+        boxSizing: 'border-box',
+        minHeight: '44px',
         display: 'inline-flex',
         alignItems: 'center',
         justifyContent: 'center',

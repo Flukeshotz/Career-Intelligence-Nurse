@@ -29,6 +29,10 @@ export interface VerifiedFacts {
   notice?: string;
   /** Minimum qualifying marks. */
   qualifying?: string;
+  /** The same, structured, so the page can turn percentages into marks. */
+  qualifyingTable?: Array<{ group: string; pct: number }>;
+  /** Total marks of the (single / deciding) paper, where verified. */
+  totalMarks?: number;
   /** Syllabus as printed in the notice: section → topics. */
   syllabus?: Array<{ section: string; topics: string }>;
   /** Rules a candidate can lose marks or the application over. */
@@ -88,6 +92,8 @@ export const VERIFIED_FACTS: Record<string, VerifiedFacts> = {
       'Only candidates who attend the CBT get a refund. Last date for fee payment: 16 Oct 2026.',
     ],
     qualifying: 'UR / EWS 40%, OBC (NCL) and SC 30%, ST 25% (may be relaxed by 2 marks for PwBD if there is a shortage)',
+    qualifyingTable: [{ group: 'UR / EWS', pct: 40 }, { group: 'OBC (NCL) and SC', pct: 30 }, { group: 'ST', pct: 25 }],
+    totalMarks: 100,
     pattern: [
       'Single computer-based test: 100 objective questions, 100 marks, 90 minutes (120 minutes for PwBD candidates using a scribe).',
       'Professional Ability 70, General Awareness 10, General Arithmetic, Intelligence & Reasoning 10, General Science 10.',
@@ -135,6 +141,12 @@ export const VERIFIED_FACTS: Record<string, VerifiedFacts> = {
     posts: '243 posts: UR 99, SC 36, ST 18, OBC 66, EWS 24 (10 reserved for persons with benchmark disabilities)',
     fee: ['General / OBC / EWS: ₹1,500 + transaction charges', 'SC / ST: ₹800 + transaction charges', 'Persons with benchmark disabilities: exempt'],
     qualifying: 'General / EWS 40%, SC / ST / OBC 35%',
+    qualifyingTable: [{ group: 'General / EWS', pct: 40 }, { group: 'SC / ST / OBC', pct: 35 }],
+    totalMarks: 100,
+    vacancyTable: {
+      head: ['Category', 'Posts'],
+      rows: [['UR', '99'], ['SC', '36'], ['ST', '18'], ['OBC', '66'], ['EWS', '24'], ['Total', '243']],
+    },
     pattern: ['Online exam: 100 multiple-choice questions, 100 marks, 100 minutes, in English only.', '0.25 mark is deducted for every wrong answer.'],
     scoring: { wrongPenalty: 0.25, timing: [{ label: 'Online exam', questions: 100, minutes: 100 }] },
   },
@@ -147,6 +159,7 @@ export const VERIFIED_FACTS: Record<string, VerifiedFacts> = {
     eligibility: 'GNM or B.Sc. Nursing, and knowledge of Odia (for example, passing Class VII or above with Odia as a language)',
     selection: 'Written test (Computer Based Recruitment Examination), then document verification',
     posts: '5,989 district-cadre posts, 2,001 of them for women',
+    totalMarks: 100,
     pattern: [
       'Written test (CBRE mode): 100 MCQs, 100 marks, 2 hours.',
       'Nursing subjects 60, practical skills 25, arithmetic 10, English 5.',
@@ -168,6 +181,7 @@ export const VERIFIED_FACTS: Record<string, VerifiedFacts> = {
     selection: 'Computer Based Test (in two shifts a day from 15 May 2026), then document verification',
     posts: '2,099 Nursing Officer posts (2,317 including 218 Sister Tutor); 35% of posts are reserved for women',
     fee: ['General: ₹500', 'SC / ST / OBC / EWS / PwD (MP residents): ₹250', 'Plus portal charges: ₹20 as a registered user or ₹60 at a kiosk'],
+    totalMarks: 100,
     pattern: [
       'Computer based test: 100 MCQs, 100 marks, 2 hours.',
       'Part A — general subjects: 25 marks. Part B — nursing: 75 marks.',
@@ -210,6 +224,8 @@ export const VERIFIED_FACTS: Record<string, VerifiedFacts> = {
     posts: '1,803 posts in total: 1,791 Nurse / Staff Nurse (ESI 20, Health 296, DMER 1,475) and 12 Sister Tutor',
     fee: ['No fee for any candidate.'],
     qualifying: 'General 50%, reserved categories (vertical and horizontal) 40%',
+    qualifyingTable: [{ group: 'General', pct: 50 }, { group: 'reserved categories', pct: 40 }],
+    totalMarks: 100,
     pattern: [
       'Offline OMR written exam: 100 MCQs, 100 marks, 1 hour 45 minutes, in English and Hindi.',
       'Syllabus weightage: general awareness, reasoning, maths, science, Haryana-related history etc. 20%; computer basics 10%; nursing subjects 70%.',

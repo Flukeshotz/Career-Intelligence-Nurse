@@ -13,7 +13,7 @@ export function ArticleSection({
   title,
   bullets = [],
   children,
-  defaultOpen = false,
+  defaultOpen = true,
 }: {
   id: string;
   number: number;
@@ -40,7 +40,7 @@ export function ArticleSection({
             </ul>
           </span>
         </summary>
-        <div className="blog-sec-body">{children}</div>
+        <div className="blog-sec-body blog-prose">{children}</div>
       </details>
     </section>
   );

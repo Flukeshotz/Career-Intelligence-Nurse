@@ -18,7 +18,7 @@ export interface SidebarDownload {
 }
 
 /** Sticky "On this page" list with scroll-spy, and the yellow download card beneath it. */
-export function ArticleSidebar({ items, download }: { items: TocItem[]; download?: SidebarDownload }) {
+export function ArticleSidebar({ items, download, ad }: { items: TocItem[]; download?: SidebarDownload; ad?: React.ReactNode }) {
   const [activeId, setActiveId] = useState(items[0]?.id);
 
   // Keep the active chip visible in the phone chip row.
@@ -80,6 +80,7 @@ export function ArticleSidebar({ items, download }: { items: TocItem[]; download
           </a>
         </div>
       )}
+      {ad}
     </aside>
     </>
   );

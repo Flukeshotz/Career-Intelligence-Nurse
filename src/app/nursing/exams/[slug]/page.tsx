@@ -136,9 +136,10 @@ export default async function ExamDetailPage({
                     href={exam.applicationUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ height: '44px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '6px', background: '#0e2d6b', color: '#fff', borderRadius: '10px', fontWeight: 600, fontSize: '0.86rem', textDecoration: 'none' }}
+                    className="blog-btn-primary"
                   >
-                    Apply on Official Site <ExternalLink size={14} />
+                    <span>Apply on Official Site</span>
+                    <ExternalLink size={15} aria-hidden="true" />
                   </a>
                 )}
               </div>
