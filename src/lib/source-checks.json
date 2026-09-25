@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-09-24T23:22:08.160Z",
+  "ranAt": "2026-09-25T23:27:16.732Z",
   "checks": {
     "exam-ap-mhsrb-nurse-2026": {
       "outcome": "homepage_only",
@@ -107,7 +107,7 @@
     },
     "exam-pgimer-no-2026": {
       "outcome": "homepage_only",
-      "checkedAt": "2026-09-24T23:21:57.663Z"
+      "checkedAt": "2026-09-25T23:27:06.234Z"
     },
     "exam-punjab-bfuhs-nurse-2026": {
       "outcome": "homepage_only",
@@ -119,7 +119,7 @@
     },
     "exam-rrb-nurse-2026": {
       "outcome": "error",
-      "checkedAt": "2026-09-24T23:21:57.603Z"
+      "checkedAt": "2026-09-25T23:27:06.197Z"
     },
     "exam-sail-med-nurse-2026": {
       "outcome": "homepage_only",
