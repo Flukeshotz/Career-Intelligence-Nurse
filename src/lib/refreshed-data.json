@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-09-29T00:30:18.227Z",
+  "ranAt": "2026-09-29T23:54:15.161Z",
   "records": {
     "exam-norcet-2026": {
       "status": "consensus",
@@ -171,10 +171,8 @@
         "checkedAt": "2026-09-29",
         "url": "https://www.osssc.gov.in/",
         "fields": {},
-        "rejected": [
-          "vacancies"
-        ],
-        "contentHash": "8fb4ccf52e92ce6cbc72185be0baa1fe24a3890487a7068094d68398f3289a29",
+        "rejected": [],
+        "contentHash": "6e01b607871dc037cd3c31e03fc2d92a0f4c97cc8bb05bc4826b4a9dd121dc9e",
         "factChecks": []
       }
     },
