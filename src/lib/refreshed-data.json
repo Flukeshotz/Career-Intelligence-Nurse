@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-06T01:24:11.098Z",
+  "ranAt": "2026-10-06T23:59:43.366Z",
   "records": {
     "exam-norcet-2026": {
       "status": "consensus",
@@ -168,7 +168,7 @@
       "sourcesTried": 3,
       "official": {
         "status": "partial",
-        "checkedAt": "2026-10-06",
+        "checkedAt": "2026-10-07",
         "url": "https://www.osssc.gov.in/",
         "fields": {},
         "rejected": [
@@ -232,7 +232,7 @@
       "sourcesTried": 3,
       "official": {
         "status": "partial",
-        "checkedAt": "2026-10-06",
+        "checkedAt": "2026-10-07",
         "url": "https://ukmssb.org/wp-content/uploads/2026/06/Nursing-officer-Advertisment.pdf",
         "fields": {
           "vacancies": {
@@ -273,7 +273,7 @@
       "sourcesTried": 3,
       "official": {
         "status": "partial",
-        "checkedAt": "2026-10-06",
+        "checkedAt": "2026-10-07",
         "url": "https://hssc.gov.in/file/ac1f23cd-99c4-13a6-819c-32aaa1600063/advertisements",
         "fields": {
           "applicationStart": {
