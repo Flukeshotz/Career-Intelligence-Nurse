@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-27T00:00:41.194Z",
+  "ranAt": "2026-10-27T23:57:57.767Z",
   "records": {
     "exam-norcet-2026": {
       "status": "consensus",
@@ -189,7 +189,7 @@
         "rejected": [
           "vacancies"
         ],
-        "contentHash": "e6542b509079eb55533fd89631c70effd388e61b664a8b61fc9d5716a6c0f668",
+        "contentHash": "2d5975c83a7a32eeace55081e29c0ec68c218d60768e60550e74b3eb01f3e518",
         "factChecks": []
       }
     },
@@ -228,22 +228,22 @@
       "fields": {
         "vacancies": {
           "value": 196,
-          "agreeing": 3,
-          "of": 3
+          "agreeing": 2,
+          "of": 2
         },
         "applicationStart": {
           "value": "2026-06-12",
-          "agreeing": 3,
-          "of": 3
+          "agreeing": 2,
+          "of": 2
         },
         "applicationDeadline": {
           "value": "2026-07-02",
-          "agreeing": 3,
-          "of": 3
+          "agreeing": 2,
+          "of": 2
         }
       },
       "disagreements": [],
-      "sourcesRead": 3,
+      "sourcesRead": 2,
       "sourcesTried": 3,
       "official": {
         "status": "partial",
