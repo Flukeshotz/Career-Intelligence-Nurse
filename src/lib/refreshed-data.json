@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-10-30T00:07:15.662Z",
+  "ranAt": "2026-10-30T23:58:57.686Z",
   "records": {
     "exam-norcet-2026": {
       "status": "consensus",
@@ -189,7 +189,7 @@
         "rejected": [
           "vacancies"
         ],
-        "contentHash": "2d5975c83a7a32eeace55081e29c0ec68c218d60768e60550e74b3eb01f3e518",
+        "contentHash": "66a7fcff8e5105801630eb8268f0ff97fba52e581acb808383b34e4fec71e06e",
         "factChecks": []
       }
     },
