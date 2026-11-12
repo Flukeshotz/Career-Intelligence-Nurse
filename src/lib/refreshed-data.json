@@ -1,9 +1,9 @@
 {
-  "ranAt": "2026-11-11T00:48:44.694Z",
+  "ranAt": "2026-11-12T02:00:23.270Z",
   "records": {
     "exam-norcet-2026": {
       "status": "consensus",
-      "checkedAt": "2026-11-11",
+      "checkedAt": "2026-11-12",
       "fields": {
         "vacancies": {
           "value": 2218,
@@ -39,7 +39,7 @@
     },
     "exam-rrb-nurse-2026": {
       "status": "consensus",
-      "checkedAt": "2026-11-11",
+      "checkedAt": "2026-11-12",
       "fields": {
         "vacancies": {
           "value": 365,
@@ -121,7 +121,7 @@
     },
     "exam-pgimer-no-2026": {
       "status": "consensus",
-      "checkedAt": "2026-11-11",
+      "checkedAt": "2026-11-12",
       "fields": {
         "vacancies": {
           "value": 243,
@@ -150,7 +150,7 @@
     },
     "exam-osssc-nurse-2026": {
       "status": "consensus",
-      "checkedAt": "2026-11-11",
+      "checkedAt": "2026-11-12",
       "fields": {
         "vacancies": {
           "value": 5989,
@@ -183,7 +183,7 @@
       "sourcesTried": 3,
       "official": {
         "status": "partial",
-        "checkedAt": "2026-11-11",
+        "checkedAt": "2026-11-12",
         "url": "https://www.osssc.gov.in/",
         "fields": {},
         "rejected": [],
@@ -192,7 +192,7 @@
     },
     "exam-mp-esb-nurse-2026": {
       "status": "consensus",
-      "checkedAt": "2026-11-11",
+      "checkedAt": "2026-11-12",
       "fields": {
         "vacancies": {
           "value": 2099,
@@ -221,7 +221,7 @@
     },
     "exam-ukmssb-nurse-2026": {
       "status": "consensus",
-      "checkedAt": "2026-11-11",
+      "checkedAt": "2026-11-12",
       "fields": {
         "vacancies": {
           "value": 196,
@@ -244,7 +244,7 @@
       "sourcesTried": 3,
       "official": {
         "status": "partial",
-        "checkedAt": "2026-11-11",
+        "checkedAt": "2026-11-12",
         "url": "https://ukmssb.org/wp-content/uploads/2026/06/Nursing-officer-Advertisment.pdf",
         "fields": {
           "vacancies": {
@@ -262,7 +262,7 @@
     },
     "exam-hssc-har-nurse-2026": {
       "status": "consensus",
-      "checkedAt": "2026-11-11",
+      "checkedAt": "2026-11-12",
       "fields": {
         "vacancies": {
           "value": 1803,
@@ -285,7 +285,7 @@
       "sourcesTried": 3,
       "official": {
         "status": "partial",
-        "checkedAt": "2026-11-11",
+        "checkedAt": "2026-11-12",
         "url": "https://hssc.gov.in/file/ac1f23cd-99c4-13a6-819c-32aaa1600063/advertisements",
         "fields": {
           "applicationStart": {
@@ -330,7 +330,7 @@
     },
     "exam-ap-mhsrb-nurse-2026": {
       "status": "consensus",
-      "checkedAt": "2026-11-11",
+      "checkedAt": "2026-11-12",
       "fields": {
         "vacancies": {
           "value": 419,
